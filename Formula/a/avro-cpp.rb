@@ -1,10 +1,10 @@
 class AvroCpp < Formula
   desc "Data serialization system"
   homepage "https://avro.apache.org/"
-  url "https://www.apache.org/dyn/closer.lua?path=avro/avro-1.11.3/cpp/avro-cpp-1.11.3.tar.gz"
-  sha256 "fba242aef77ec819d07561fcba93751721956de8d0cae8e1f2f300b54b331bae"
+  url "https://www.apache.org/dyn/closer.lua?path=avro/avro-1.12.0/cpp/avro-cpp-1.12.0.tar.gz"
+  mirror "https://archive.apache.org/dist/avro/avro-1.12.0/cpp/avro-cpp-1.12.0.tar.gz"
+  sha256 "f2edf77126a75b0ec1ad166772be058351cea3d74448be7e2cef20050c0f98ab"
   license "Apache-2.0"
-  revision 6
 
   bottle do
     sha256 cellar: :any,                 arm64_sequoia: "82b1a0dea57a3a31212c4276544e531efba46f7d19b45a9fc0b99a0b4a68c9d0"
@@ -19,15 +19,13 @@ class AvroCpp < Formula
   depends_on "cmake" => :build
   depends_on "pkgconf" => :build
   depends_on "boost"
+  depends_on "fmt" # needed for headers
 
-  # Backport cmake_minimum_required update
-  patch :p3 do
-    url "https://github.com/apache/avro/commit/3aec6f413e3c47536b33631af5c18e685df0b608.patch?full_index=1"
-    sha256 "c3f7ec1915e63c0ad08f277cf3392217e31eb11b6b2822f3a21d241901f461c7"
-  end
+  # Fix compatibility for `fmt` version 11 and remove fetch_content
+  patch :DATA
 
   def install
-    system "cmake", "-S", ".", "-B", "build", "-DCMAKE_CXX_STANDARD=14", *std_cmake_args
+    system "cmake", "-S", ".", "-B", "build", *std_cmake_args
     system "cmake", "--build", "build"
     system "cmake", "--install", "build"
   end
@@ -58,3 +56,52 @@ class AvroCpp < Formula
     system "./test"
   end
 end
+
+__END__
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 19059a4..6b198db 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -82,15 +82,7 @@ endif ()
+ find_package (Boost 1.38 REQUIRED
+     COMPONENTS filesystem iostreams program_options regex system)
+ 
+-include(FetchContent)
+-FetchContent_Declare(
+-        fmt
+-        GIT_REPOSITORY  https://github.com/fmtlib/fmt.git
+-        GIT_TAG         10.2.1
+-        GIT_PROGRESS    TRUE
+-        USES_TERMINAL_DOWNLOAD TRUE
+-)
+-FetchContent_MakeAvailable(fmt)
++find_package(fmt REQUIRED)
+ 
+ find_package(Snappy)
+ if (SNAPPY_FOUND)
+diff --git a/include/avro/Node.hh b/include/avro/Node.hh
+index f76078b..7226d05 100644
+--- a/include/avro/Node.hh
++++ b/include/avro/Node.hh
+@@ -219,7 +219,7 @@ inline std::ostream &operator<<(std::ostream &os, const avro::Node &n) {
+ template<>
+ struct fmt::formatter<avro::Name> : fmt::formatter<std::string> {
+     template<typename FormatContext>
+-    auto format(const avro::Name &n, FormatContext &ctx) {
++    auto format(const avro::Name &n, FormatContext &ctx) const {
+         return fmt::formatter<std::string>::format(n.fullname(), ctx);
+     }
+ };
+diff --git a/include/avro/Types.hh b/include/avro/Types.hh
+index 84a3397..c0533f3 100644
+--- a/include/avro/Types.hh
++++ b/include/avro/Types.hh
+@@ -113,7 +113,7 @@ std::ostream &operator<<(std::ostream &os, const Null &null);
+ template<>
+ struct fmt::formatter<avro::Type> : fmt::formatter<std::string> {
+     template<typename FormatContext>
+-    auto format(avro::Type t, FormatContext &ctx) {
++    auto format(avro::Type t, FormatContext &ctx) const {
+         return fmt::formatter<std::string>::format(avro::toString(t), ctx);
+     }
+ };

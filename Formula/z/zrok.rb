@@ -29,7 +29,7 @@ class Zrok < Formula
 
     ldflags = %W[
       -s -w
-      -X github.com/openziti/zrok/build.Version=#{version}
+      -X github.com/openziti/zrok/build.Version=v#{version}
       -X github.com/openziti/zrok/build.Hash=#{tap.user}
     ]
     system "go", "build", *std_go_args(ldflags:), "./cmd/zrok"
@@ -50,7 +50,7 @@ class Zrok < Formula
     YAML
 
     version_output = shell_output("#{bin}/zrok version")
-    assert_match(version.to_s, version_output)
+    assert_match("v#{version}", version_output)
     assert_match(/[[a-f0-9]{40}]/, version_output)
 
     status_output = shell_output("#{bin}/zrok controller validate #{testpath}/ctrl.yml 2>&1")

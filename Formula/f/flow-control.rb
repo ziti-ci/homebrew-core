@@ -17,7 +17,7 @@ class FlowControl < Formula
     sha256 x86_64_linux:  "47791b0fb0591a8eeb5c87c6fdf37061ed0457c7a6ae61b289e551f3daece8bb"
   end
 
-  depends_on "zig"
+  depends_on "zig@0.14" => :build
 
   def install
     # Fix illegal instruction errors when using bottles on older CPUs.

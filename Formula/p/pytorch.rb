@@ -6,7 +6,7 @@ class Pytorch < Formula
   url "https://github.com/pytorch/pytorch/releases/download/v2.5.1/pytorch-v2.5.1.tar.gz"
   sha256 "740eb5fff95e33cfe699bad43be83523f569c7cc7f9c285c2a255416443dd266"
   license "BSD-3-Clause"
-  revision 4
+  revision 5
 
   livecheck do
     url :stable
@@ -122,6 +122,13 @@ class Pytorch < Formula
     ENV["USE_SYSTEM_PYBIND11"] = "ON"
     ENV["USE_SYSTEM_SLEEF"] = "ON"
     ENV["USE_MPS"] = "ON" if OS.mac?
+
+    # cmake 4 build patch for third parties
+    ENV["CMAKE_POLICY_VERSION_MINIMUM"] = "3.5"
+
+    # Workaround for
+    # error: a template argument list is expected after a name prefixed by the template keyword
+    ENV.append_to_cflags "-Wmissing-template-arg-list-after-template-kw"
 
     # Avoid references to Homebrew shims
     inreplace "caffe2/core/macros.h.in", "${CMAKE_CXX_COMPILER}", ENV.cxx

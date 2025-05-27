@@ -1,10 +1,10 @@
 class Openssh < Formula
   desc "OpenBSD freely-licensed SSH connectivity tools"
   homepage "https://www.openssh.com/"
-  url "https://cdn.openbsd.org/pub/OpenBSD/OpenSSH/portable/openssh-9.9p2.tar.gz"
-  mirror "https://cloudflare.cdn.openbsd.org/pub/OpenBSD/OpenSSH/portable/openssh-9.9p2.tar.gz"
-  version "9.9p2"
-  sha256 "91aadb603e08cc285eddf965e1199d02585fa94d994d6cae5b41e1721e215673"
+  url "https://cdn.openbsd.org/pub/OpenBSD/OpenSSH/portable/openssh-10.0p2.tar.gz"
+  mirror "https://cloudflare.cdn.openbsd.org/pub/OpenBSD/OpenSSH/portable/openssh-10.0p2.tar.gz"
+  version "10.0p2"
+  sha256 "021a2e709a0edf4250b1256bd5a9e500411a90dddabea830ed59cef90eb9d85c"
   license "SSH-OpenSSH"
 
   livecheck do
@@ -39,21 +39,6 @@ class Openssh < Formula
   uses_from_macos "libxcrypt"
   uses_from_macos "zlib"
 
-  on_macos do
-    # Both these patches are applied by Apple.
-    # https://github.com/apple-oss-distributions/OpenSSH/blob/main/openssh/sandbox-darwin.c#L66
-    patch do
-      url "https://raw.githubusercontent.com/Homebrew/patches/1860b0a745f1fe726900974845d1b0dd3c3398d6/openssh/patch-sandbox-darwin.c-apple-sandbox-named-external.diff"
-      sha256 "d886b98f99fd27e3157b02b5b57f3fb49f43fd33806195970d4567f12be66e71"
-    end
-
-    # https://github.com/apple-oss-distributions/OpenSSH/blob/main/openssh/sshd.c#L532
-    patch do
-      url "https://raw.githubusercontent.com/Homebrew/formula-patches/aa6c71920318f97370d74f2303d6aea387fb68e4/openssh/patch-sshd.c-apple-sandbox-named-external.diff"
-      sha256 "3f06fc03bcbbf3e6ba6360ef93edd2301f73efcd8069e516245aea7c4fb21279"
-    end
-  end
-
   on_linux do
     depends_on "linux-pam"
   end
@@ -66,10 +51,6 @@ class Openssh < Formula
   def install
     if OS.mac?
       ENV.append "CPPFLAGS", "-D__APPLE_SANDBOX_NAMED_EXTERNAL__"
-
-      # Ensure sandbox profile prefix is correct.
-      # We introduce this issue with patching, it's not an upstream bug.
-      inreplace "sandbox-darwin.c", "@PREFIX@/share/openssh", etc/"ssh"
 
       # FIXME: `ssh-keygen` errors out when this is built with optimisation.
       # Reported upstream at https://bugzilla.mindrot.org/show_bug.cgi?id=3584

@@ -1,10 +1,9 @@
 class PerconaServer < Formula
   desc "Drop-in MySQL replacement"
   homepage "https://www.percona.com"
-  url "https://downloads.percona.com/downloads/Percona-Server-8.4/Percona-Server-8.4.3-3/source/tarball/percona-server-8.4.3-3.tar.gz"
-  sha256 "dfb5b46fccd8284ad3a09054f9a62d0a6423a2b703b6fb86d186cec09cee660a"
+  url "https://downloads.percona.com/downloads/Percona-Server-8.4/Percona-Server-8.4.5-5/source/tarball/percona-server-8.4.5-5.tar.gz"
+  sha256 "8b47ff35dc2a6e7eaacaa2d204ae456c15b5d9953360ccb6250da8d68d98f6af"
   license "BSD-3-Clause"
-  revision 3
 
   livecheck do
     url "https://www.percona.com/products-api.php", post_form: {
@@ -69,11 +68,40 @@ class PerconaServer < Formula
     cause "Requires GCC 10 or newer"
   end
 
-  # Backport fix for CMake 4.0
-  patch do
-    url "https://github.com/Percona-Lab/coredumper/commit/715fa9da1d7958e39d69e9b959c7a23fec8650ab.patch?full_index=1"
-    sha256 "632a6aff4091d9cbe010ed600eeb548ae7762ac7e822113f9c93e3fef9aafb4f"
-    directory "extra/coredumper"
+  # FreeBSD patches to fix build with newer Clang
+  patch :p0 do
+    url "https://raw.githubusercontent.com/freebsd/freebsd-ports/86108d2ca4d7d22224b1a4161004c3bf292db0a2/databases/mysql84-server/files/patch-libs_mysql_serialization_serializer__default__impl.hpp"
+    sha256 "82706b5160fe3397ddfbeebeb24e2d1558cd54776b852b3277c94420e47c9ff4"
+  end
+
+  patch :p0 do
+    url "https://raw.githubusercontent.com/freebsd/freebsd-ports/86108d2ca4d7d22224b1a4161004c3bf292db0a2/databases/mysql84-server/files/patch-libs_mysql_serialization_serializer__impl.hpp"
+    sha256 "17c23e64fdb0481959812cc3aec0f5165372753d63266bd388a93d45c55902e0"
+  end
+
+  patch :p0 do
+    url "https://raw.githubusercontent.com/freebsd/freebsd-ports/86108d2ca4d7d22224b1a4161004c3bf292db0a2/databases/mysql84-server/files/patch-sql_binlog__ostream.cc"
+    sha256 "5bbb82ff9d9594ce1c19d34c83e22b088684057fca7c4357a0ba43dcb1ede0fc"
+  end
+
+  patch :p0 do
+    url "https://raw.githubusercontent.com/freebsd/freebsd-ports/86108d2ca4d7d22224b1a4161004c3bf292db0a2/databases/mysql84-server/files/patch-sql_mdl__context__backup.cc"
+    sha256 "557db2bb30ff8a985f8b4d016b1e2909b7127ea77fdcd2f7611fd66dcea58e4f"
+  end
+
+  patch :p0 do
+    url "https://raw.githubusercontent.com/freebsd/freebsd-ports/86108d2ca4d7d22224b1a4161004c3bf292db0a2/databases/mysql84-server/files/patch-sql_rpl__log__encryption.cc"
+    sha256 "f5e993a1b56ae86f3c63ea75799493c875d6a08c81f319fede707bbe16a2e59f"
+  end
+
+  patch :p0 do
+    url "https://raw.githubusercontent.com/freebsd/freebsd-ports/86108d2ca4d7d22224b1a4161004c3bf292db0a2/databases/mysql84-server/files/patch-sql_stream__cipher.cc"
+    sha256 "ac74c60f6051223993c88e7a11ddd9512c951ac1401d719a2c3377efe1bee3cf"
+  end
+
+  patch :p0 do
+    url "https://raw.githubusercontent.com/freebsd/freebsd-ports/86108d2ca4d7d22224b1a4161004c3bf292db0a2/databases/mysql84-server/files/patch-unittest_gunit_stream__cipher-t.cc"
+    sha256 "fe23c4098e1b8c5113486800e37bb74683be0b7dd61a9608603428f395588e96"
   end
 
   # Patch out check for Homebrew `boost`.
@@ -89,7 +117,7 @@ class PerconaServer < Formula
     # Remove bundled libraries other than explicitly allowed below.
     # `boost` and `rapidjson` must use bundled copy due to patches.
     # `lz4` is still needed due to xxhash.c used by mysqlgcs
-    keep = %w[boost coredumper duktape libbacktrace libcno libkmip lz4 opensslpp rapidjson unordered_dense]
+    keep = %w[boost coredumper duktape libbacktrace libcno libkmip lz4 opensslpp rapidjson unordered_dense xxhash]
     (buildpath/"extra").each_child { |dir| rm_r(dir) unless keep.include?(dir.basename.to_s) }
 
     # Find Homebrew OpenLDAP instead of the macOS framework
@@ -146,7 +174,10 @@ class PerconaServer < Formula
       # For Linux, disable failing on warning: "Setting thread 31563 nice to 0 failed"
       # Docker containers lack CAP_SYS_NICE capability by default.
       test_args << "--nowarnings" if OS.linux?
-      system "./mysql-test-run.pl", "status", *test_args
+      system "./mysql-test-run.pl", "check", *test_args
+    ensure
+      status_log_file = buildpath/"mysql-test-vardir/log/main.status/status.log"
+      logs.install status_log_file if status_log_file.exist?
     end
 
     # Remove the tests directory

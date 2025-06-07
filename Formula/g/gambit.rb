@@ -4,7 +4,7 @@ class Gambit < Formula
   url "https://github.com/gambitproject/gambit/archive/refs/tags/v16.3.0.tar.gz"
   sha256 "d72e991ce935a3dc893947c413410348e2c2eb9cd912ec3b083699a4ccae4d77"
   license all_of: ["GPL-2.0-or-later", "Zlib"]
-  revision 1
+  revision 2
 
   livecheck do
     url :stable
@@ -24,12 +24,14 @@ class Gambit < Formula
   depends_on "autoconf" => :build
   depends_on "automake" => :build
   depends_on "libtool" => :build
-  depends_on "wxwidgets"
+  depends_on "wxwidgets@3.2"
 
   def install
+    wxwidgets = deps.find { |dep| dep.name.match?(/^wxwidgets(@\d+(\.\d+)*)?$/) }.to_formula
+    wx_config = wxwidgets.opt_bin/"wx-config-#{wxwidgets.version.major_minor}"
     system "autoreconf", "--force", "--install", "--verbose"
     system "./configure", "--disable-silent-rules",
-                          "--with-wx-prefix=#{Formula["wxwidgets"].opt_prefix}",
+                          "--with-wx-config=#{wx_config}",
                           *std_configure_args
     system "make", "install"
 

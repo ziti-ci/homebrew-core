@@ -4,7 +4,7 @@ class Wxlua < Formula
   url "https://github.com/pkulchenko/wxlua/archive/refs/tags/v3.2.0.2.tar.gz"
   sha256 "62abe571803a9748e19e86e39cb0e254fd90a5925dc5f0e35669e693cbdb129e"
   license "LGPL-2.0-or-later" => { with: "WxWindows-exception-3.1" }
-  revision 1
+  revision 2
   head "https://github.com/pkulchenko/wxlua.git", branch: "master"
 
   no_autobump! because: :requires_manual_review
@@ -21,7 +21,7 @@ class Wxlua < Formula
 
   depends_on "cmake" => :build
   depends_on "lua"
-  depends_on "wxwidgets"
+  depends_on "wxwidgets@3.2"
 
   on_linux do
     depends_on "xorg-server" => :test
@@ -29,15 +29,16 @@ class Wxlua < Formula
 
   def install
     lua = Formula["lua"]
-    wxwidgets = Formula["wxwidgets"]
     lua_version = lua.version.major_minor
+    wxwidgets = deps.find { |dep| dep.name.match?(/^wxwidgets(@\d+(\.\d+)*)?$/) }.to_formula
+    wx_config = wxwidgets.opt_bin/"wx-config-#{wxwidgets.version.major_minor}"
 
     args = %W[
       -DCMAKE_POLICY_VERSION_MINIMUM=3.5
       -DwxLua_LUA_LIBRARY_VERSION=#{lua_version}
       -DwxLua_LUA_INCLUDE_DIR=#{lua.opt_include}/lua
       -DwxLua_LUA_LIBRARY=#{lua.opt_lib/shared_library("liblua")}
-      -DwxWidgets_CONFIG_EXECUTABLE=#{wxwidgets.opt_bin}/wx-config
+      -DwxWidgets_CONFIG_EXECUTABLE=#{wx_config}
       -DwxLua_LUA_LIBRARY_USE_BUILTIN=FALSE
     ]
     # Some components are not enabled in brew `wxwidgets`:

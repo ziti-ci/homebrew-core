@@ -4,7 +4,7 @@ class DiffPdf < Formula
   url "https://github.com/vslavik/diff-pdf/releases/download/v0.5.2/diff-pdf-0.5.2.tar.gz"
   sha256 "7d018f05e30050a2b49dee137f084584b43aec87c7f5ee9c3bbd14c333cbfd54"
   license "GPL-2.0-only"
-  revision 1
+  revision 2
 
   no_autobump! because: :requires_manual_review
 
@@ -26,14 +26,16 @@ class DiffPdf < Formula
   depends_on "cairo"
   depends_on "glib"
   depends_on "poppler"
-  depends_on "wxwidgets"
+  depends_on "wxwidgets@3.2"
 
   on_macos do
     depends_on "gettext"
   end
 
   def install
-    system "./configure", "--disable-silent-rules", *std_configure_args
+    wxwidgets = deps.find { |dep| dep.name.match?(/^wxwidgets(@\d+(\.\d+)*)?$/) }.to_formula
+    wx_config = wxwidgets.opt_bin/"wx-config-#{wxwidgets.version.major_minor}"
+    system "./configure", "--disable-silent-rules", "--with-wx-config=#{wx_config}", *std_configure_args
     system "make", "install"
   end
 

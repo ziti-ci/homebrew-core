@@ -15,6 +15,8 @@ class AdaUrl < Formula
   end
 
   depends_on "cmake" => :build
+  depends_on "cxxopts" => :build
+  depends_on "fmt"
 
   uses_from_macos "python" => :build
 
@@ -33,9 +35,24 @@ class AdaUrl < Formula
   end
 
   def install
-    ENV.llvm_clang if OS.mac? && DevelopmentTools.clang_build_version <= 1500
+    if OS.mac? && DevelopmentTools.clang_build_version <= 1500
+      ENV.llvm_clang
 
-    system "cmake", "-S", ".", "-B", "build", "-DBUILD_SHARED_LIBS=ON", *std_cmake_args
+      # ld: unknown options: --gc-sections
+      inreplace "tools/cli/CMakeLists.txt",
+                "target_link_options(adaparse PRIVATE \"-Wl,--gc-sections\")",
+                ""
+    end
+
+    args = %W[
+      -DCMAKE_INSTALL_RPATH=#{rpath}
+      -DBUILD_SHARED_LIBS=ON
+      -DADA_TOOLS=ON
+      -DCPM_USE_LOCAL_PACKAGES=ON
+      -DFETCHCONTENT_FULLY_DISCONNECTED=ON
+    ]
+
+    system "cmake", "-S", ".", "-B", "build", *args, *std_cmake_args
     system "cmake", "--build", "build"
     system "cmake", "--install", "build"
   end
@@ -61,5 +78,7 @@ class AdaUrl < Formula
     system ENV.cxx, "test.cpp", "-std=c++20",
            "-I#{include}", "-L#{lib}", "-lada", "-o", "test"
     assert_equal "http:", shell_output("./test").chomp
+
+    assert_match "search_start 25", shell_output("#{bin}/adaparse -d http://www.google.com/bal?a==11#fddfds")
   end
 end

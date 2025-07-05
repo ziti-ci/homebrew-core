@@ -1,8 +1,8 @@
 class Rex < Formula
   desc "Command-line tool which executes commands on remote servers"
   homepage "https://www.rexify.org"
-  url "https://cpan.metacpan.org/authors/id/F/FE/FERKI/Rex-1.16.0.tar.gz"
-  sha256 "d6d9657d29527e15995c6de33d7bf1111da7860d420ac95385c1161daaea2479"
+  url "https://cpan.metacpan.org/authors/id/F/FE/FERKI/Rex-1.16.1.tar.gz"
+  sha256 "b66ff756db8c8479ab99d2c9ec9827bf624b8bca2e96ef9ccf2395e279731662"
   license "Apache-2.0"
 
   bottle do
@@ -47,8 +47,8 @@ class Rex < Formula
     end
 
     resource "Scalar::Util" do
-      url "https://cpan.metacpan.org/authors/id/P/PE/PEVANS/Scalar-List-Utils-1.68.tar.gz"
-      sha256 "23317e4346fe8747f0167eccd1881d6369aa71023f014cd6f846988843295906"
+      url "https://cpan.metacpan.org/authors/id/P/PE/PEVANS/Scalar-List-Utils-1.69.tar.gz"
+      sha256 "49108037dc31ba4953aa8be57c1c72f3e922dde1fa328f1eb39a329f1e6314fc"
     end
 
     resource "YAML" do
@@ -117,8 +117,8 @@ class Rex < Formula
     end
 
     resource "Module::Build::Tiny" do
-      url "https://cpan.metacpan.org/authors/id/L/LE/LEONT/Module-Build-Tiny-0.051.tar.gz"
-      sha256 "74fdce35e8cd4d787bc2d4fc1d43a291b7bbced4e94dc5fc592bd81ca93a98e9"
+      url "https://cpan.metacpan.org/authors/id/L/LE/LEONT/Module-Build-Tiny-0.052.tar.gz"
+      sha256 "bd10452c9f24d4b4fe594126e3ad231bab6cebf16acda40a4e8dc784907eb87f"
     end
 
     resource "HTTP::Daemon" do
@@ -152,8 +152,8 @@ class Rex < Formula
     end
 
     resource "LWP::UserAgent" do
-      url "https://cpan.metacpan.org/authors/id/O/OA/OALDERS/libwww-perl-6.77.tar.gz"
-      sha256 "94a907d6b3ea8d966ef43deffd4fa31f5500142b4c00489bfd403860a5f060e4"
+      url "https://cpan.metacpan.org/authors/id/O/OA/OALDERS/libwww-perl-6.79.tar.gz"
+      sha256 "f2526e9a33ac96715cc47fbf5b4bec1a8c51720330b24e3974c2c5ae07a9c5e7"
     end
 
     resource "LWP::MediaTypes" do
@@ -192,8 +192,8 @@ class Rex < Formula
     end
 
     resource "URI" do
-      url "https://cpan.metacpan.org/authors/id/O/OA/OALDERS/URI-5.31.tar.gz"
-      sha256 "b9c4d58b2614b8611ae03a95a6d60ed996f4b311ef3cd5a937b92f1825ecc564"
+      url "https://cpan.metacpan.org/authors/id/O/OA/OALDERS/URI-5.32.tar.gz"
+      sha256 "9632067d34e14e0dae2da94631c4f25a387fcc48d06fa29330e8b3c04c4e913d"
     end
 
     resource "WWW::RobotRules" do

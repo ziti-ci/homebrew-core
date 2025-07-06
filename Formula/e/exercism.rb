@@ -12,12 +12,12 @@ class Exercism < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "6b311c3642def3e11ae44e4b6b90ee243f00bc59c663c3c6ab9cc1bc43cd9762"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "6b311c3642def3e11ae44e4b6b90ee243f00bc59c663c3c6ab9cc1bc43cd9762"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "6b311c3642def3e11ae44e4b6b90ee243f00bc59c663c3c6ab9cc1bc43cd9762"
-    sha256 cellar: :any_skip_relocation, sonoma:        "18e7eecdb457f42735e41d75c673eae542368dbff1ea53deb02e1b5cdc71da98"
-    sha256 cellar: :any_skip_relocation, ventura:       "18e7eecdb457f42735e41d75c673eae542368dbff1ea53deb02e1b5cdc71da98"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "466a70c1d2431a89d961596adc39ec2a1a99ae149426fe3884d52c44901f6b3a"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "9e05a72c32c108ebb2ffecd867d81b0d6116d389e0ad411ae74d7b130572a15d"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "9e05a72c32c108ebb2ffecd867d81b0d6116d389e0ad411ae74d7b130572a15d"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "9e05a72c32c108ebb2ffecd867d81b0d6116d389e0ad411ae74d7b130572a15d"
+    sha256 cellar: :any_skip_relocation, sonoma:        "26ee99039c774094e39d20d6054d5bd7513f10d89be4590ae9838001870576ae"
+    sha256 cellar: :any_skip_relocation, ventura:       "26ee99039c774094e39d20d6054d5bd7513f10d89be4590ae9838001870576ae"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "4c9cf023f91a032386239d7773de841367993543b7b7745d7ee6154b16b8deb5"
   end
 
   depends_on "go" => :build

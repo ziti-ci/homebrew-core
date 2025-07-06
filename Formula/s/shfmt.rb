@@ -1,8 +1,8 @@
 class Shfmt < Formula
   desc "Autoformat shell script source code"
   homepage "https://github.com/mvdan/sh"
-  url "https://github.com/mvdan/sh/archive/refs/tags/v3.11.0.tar.gz"
-  sha256 "69aebb0dd4bf5e62842c186ad38b76f6ec2e781188cd71cea33cb4e729086e94"
+  url "https://github.com/mvdan/sh/archive/refs/tags/v3.12.0.tar.gz"
+  sha256 "ac15f42feeba55af29bd07698a881deebed1cd07e937effe140d9300e79d5ceb"
   license "BSD-3-Clause"
   head "https://github.com/mvdan/sh.git", branch: "master"
 

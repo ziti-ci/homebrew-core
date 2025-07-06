@@ -1,8 +1,8 @@
 class Wayland < Formula
   desc "Protocol for a compositor to talk to its clients"
   homepage "https://wayland.freedesktop.org"
-  url "https://gitlab.freedesktop.org/wayland/wayland/-/releases/1.23.1/downloads/wayland-1.23.1.tar.xz"
-  sha256 "864fb2a8399e2d0ec39d56e9d9b753c093775beadc6022ce81f441929a81e5ed"
+  url "https://gitlab.freedesktop.org/wayland/wayland/-/releases/1.24.0/downloads/wayland-1.24.0.tar.xz"
+  sha256 "82892487a01ad67b334eca83b54317a7c86a03a89cfadacfef5211f11a5d0536"
   license "MIT"
 
   # Versions with a 90+ patch are unstable (e.g., 1.21.91 is an alpha release)

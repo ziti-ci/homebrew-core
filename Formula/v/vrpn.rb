@@ -1,12 +1,11 @@
 class Vrpn < Formula
   desc "Virtual reality peripheral network"
   homepage "https://github.com/vrpn/vrpn/wiki"
-  url "https://github.com/vrpn/vrpn/releases/download/version_07.35/vrpn_07.35.zip"
-  sha256 "06b74a40b0fb215d4238148517705d0075235823c0941154d14dd660ba25af19"
+  url "https://github.com/vrpn/vrpn.git",
+      tag:      "v07.36",
+      revision: "79deb000cc0b47ae49a80c92c78167c02d8a04d8"
   license "BSL-1.0"
   head "https://github.com/vrpn/vrpn.git", branch: "master"
-
-  no_autobump! because: :requires_manual_review
 
   bottle do
     rebuild 1

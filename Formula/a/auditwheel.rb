@@ -3,8 +3,8 @@ class Auditwheel < Formula
 
   desc "Auditing and relabeling cross-distribution Linux wheels"
   homepage "https://github.com/pypa/auditwheel"
-  url "https://files.pythonhosted.org/packages/fb/f3/b61e3b5ccceee2c25baff6c16146d031f6f5c75b1c09d598bfbfe498adec/auditwheel-6.4.0.tar.gz"
-  sha256 "20990ccb2416fdb81983ef654d10df72f9f25b388e30105bc3d97b06d6aecafb"
+  url "https://files.pythonhosted.org/packages/82/ee/f47444baa12788f95c05e015709d16e28e794fd36af7edf928dbcba71708/auditwheel-6.4.1.tar.gz"
+  sha256 "e66c3265d88320c8b2cac28487847f37f8dbe68ccd202a0d72e33228bf339c4c"
   license "MIT"
 
   bottle do

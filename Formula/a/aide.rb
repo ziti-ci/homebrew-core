@@ -1,19 +1,9 @@
 class Aide < Formula
   desc "File and directory integrity checker"
   homepage "https://aide.github.io/"
+  url "https://github.com/aide/aide/releases/download/v0.19.1/aide-0.19.1.tar.gz"
+  sha256 "6df8bf5f0403d74af7dbdb91eb3c8f61fe07e964669db8cfa1ee7e4ee3e90b52"
   license "GPL-2.0-or-later"
-
-  stable do
-    url "https://github.com/aide/aide/releases/download/v0.19/aide-0.19.tar.gz"
-    sha256 "e7fba0214be01299d76359bff2975233ed241332e4cfcfff59cd1b6a89aba5e4"
-
-    # Fix to missing MAGIC Constants for linux, remove in next release
-    # Issue ref: https://github.com/aide/aide/issues/192
-    patch do
-      url "https://github.com/aide/aide/commit/3a218b2a3affe034bb51506fd0b770eab723ca95.patch?full_index=1"
-      sha256 "6136c77d4242664a9df9ae9daa62a96809aadb21875655b705b4f2ea1e6cead8"
-    end
-  end
 
   bottle do
     sha256 cellar: :any,                 arm64_sequoia: "758e74004bbc5c324e8d762b0bdec6632d817125346c092126784efc5195a503"

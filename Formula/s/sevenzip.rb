@@ -1,9 +1,9 @@
 class Sevenzip < Formula
   desc "7-Zip is a file archiver with a high compression ratio"
   homepage "https://7-zip.org"
-  url "https://7-zip.org/a/7z2409-src.tar.xz"
-  version "24.09"
-  sha256 "49c05169f49572c1128453579af1632a952409ced028259381dac30726b6133a"
+  url "https://7-zip.org/a/7z2500-src.tar.xz"
+  version "25.00"
+  sha256 "bff9e69b6ca73a5b8715d7623870a39dc90ad6ce1f4d1070685843987af1af9b"
   license all_of: ["LGPL-2.1-or-later", "BSD-3-Clause"]
   head "https://github.com/ip7z/7zip.git", branch: "main"
 
@@ -12,7 +12,7 @@ class Sevenzip < Formula
     regex(/>\s*Download\s+7-Zip\s+v?(\d+(?:\.\d+)+)\s+\([^)]+?\)/im)
   end
 
-  no_autobump! because: :requires_manual_review
+  no_autobump! because: :incompatible_version_format
 
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_sequoia: "8af70077a765a3b8932830f8ac0bffe756ab09a01e9c4f1cceaf4b6ff67b73b6"

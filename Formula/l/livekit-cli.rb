@@ -1,8 +1,8 @@
 class LivekitCli < Formula
   desc "Command-line interface to LiveKit"
   homepage "https://livekit.io"
-  url "https://github.com/livekit/livekit-cli/archive/refs/tags/v2.4.12.tar.gz"
-  sha256 "9f0c6c6cff2e9293ff346b73ec20c2043c74d0c4c01664b77a94fb783b52ed28"
+  url "https://github.com/livekit/livekit-cli/archive/refs/tags/v2.4.13.tar.gz"
+  sha256 "23d4f6f8d14966782402f53020e1efe95c17dba2ffacdc45a76548b51fff571b"
   license "Apache-2.0"
   head "https://github.com/livekit/livekit-cli.git", branch: "main"
 
@@ -30,7 +30,7 @@ class LivekitCli < Formula
 
   test do
     output = shell_output("#{bin}/lk token create --list --api-key key --api-secret secret")
-    assert output.start_with?("valid for (mins):  5")
+    assert_match "valid for (mins):  5", output
     assert_match "lk version #{version}", shell_output("#{bin}/lk --version")
   end
 end

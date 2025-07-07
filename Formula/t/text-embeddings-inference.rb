@@ -1,8 +1,8 @@
 class TextEmbeddingsInference < Formula
   desc "Blazing fast inference solution for text embeddings models"
   homepage "https://huggingface.co/docs/text-embeddings-inference/quick_tour"
-  url "https://github.com/huggingface/text-embeddings-inference/archive/refs/tags/v1.7.3.tar.gz"
-  sha256 "64842ec3ed0b87663a628c493dede0cc62ca0377b387562c5db4d68287d4dd7a"
+  url "https://github.com/huggingface/text-embeddings-inference/archive/refs/tags/v1.7.4.tar.gz"
+  sha256 "62840db84a37fdcfdd8061b796c045a92afaa6591147df81deb621a1dd34bbd9"
   license "Apache-2.0"
 
   bottle do
@@ -26,9 +26,9 @@ class TextEmbeddingsInference < Formula
 
   test do
     port = free_port
-    fork do
-      exec bin/"text-embeddings-router", "-p", port.to_s, "--model-id", "sentence-transformers/all-MiniLM-L6-v2"
-    end
+    spawn bin/"text-embeddings-router", "-p", port.to_s, "--model-id", "sentence-transformers/all-MiniLM-L6-v2"
+
+    sleep 2 if OS.mac? && Hardware::CPU.intel?
 
     data = "{\"inputs\":\"What is Deep Learning?\"}"
     header = "Content-Type: application/json"

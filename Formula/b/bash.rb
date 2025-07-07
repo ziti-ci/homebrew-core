@@ -71,13 +71,14 @@ class Bash < Formula
   no_autobump! because: :requires_manual_review
 
   bottle do
-    sha256 arm64_sequoia: "723934ac97d4b285aeb4affee7ba7a31e72a474acef004d6aeb92b4df8bae977"
-    sha256 arm64_sonoma:  "bc8795842e2c19eede790b547c10c40b4dd336a3d1e6e1d601ae5edf91344d34"
-    sha256 arm64_ventura: "8e1d33f7baa3de156603bb4daa7d13c06fcc29b8d6429968bbb3e1f1de61d71e"
-    sha256 sonoma:        "6c62f0c1b81f993609b9af155b9c12deb9dfa18a1953288a39dde6a0dce980c7"
-    sha256 ventura:       "b2371eb2fb503353d8d4e08d2cbc01d3ba37787d18f4d37dd4bb66f5bccbcbf3"
-    sha256 arm64_linux:   "c8e157285b6dea819d05f8e2a5dd2d7ee7d108cd57a5216dc01fbab896e3173f"
-    sha256 x86_64_linux:  "a9eff69172dee2372bd323ec6c28a266fde92bb69bedf16d9cafa56fdcdfd5a7"
+    rebuild 1
+    sha256 arm64_sequoia: "0cb8fa2fef54f0215e01137dae12119af693da6f9d468c8eb882c979dcee91a0"
+    sha256 arm64_sonoma:  "fe8e711dbad1902aea7b1237a93addb1cbd4fd643144ee2fa860800972e15b8d"
+    sha256 arm64_ventura: "d97833da4ac2bce736f63168162707cdaa3c57547e63b2ef39c2500be4e2a4b9"
+    sha256 sonoma:        "03e937973106a6bce6cf3830e6cc21b48250bfd79c0b93899404328008296d68"
+    sha256 ventura:       "0afa527fcb68b0182c63f395ac25474e42d90c7dae8e009c4c8a4c8a1baa20ee"
+    sha256 arm64_linux:   "3bc02cf84788f354c443bd15218b2bdacbce4fcd4364852afed1caf2a25ef30c"
+    sha256 x86_64_linux:  "505c5c1260fe9a3a7251baa06dc0acecd0274bdda4686edb04202385523279e6"
   end
 
   depends_on "gettext"

@@ -2,8 +2,8 @@ class KubernetesCliAT131 < Formula
   desc "Kubernetes command-line interface"
   homepage "https://kubernetes.io/docs/reference/kubectl/"
   url "https://github.com/kubernetes/kubernetes.git",
-      tag:      "v1.31.9",
-      revision: "8f3800390d488f54f74111f22973059e133f9cba"
+      tag:      "v1.31.10",
+      revision: "61183587c03f420214aac57f81dc0ecb43e1b0d6"
   license "Apache-2.0"
 
   livecheck do

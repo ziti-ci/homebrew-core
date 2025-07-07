@@ -1,8 +1,8 @@
 class Gwenhywfar < Formula
   desc "Utility library required by aqbanking and related software"
   homepage "https://www.aquamaniac.de/rdm/projects/gwenhywfar"
-  url "https://www.aquamaniac.de/rdm/attachments/download/529/gwenhywfar-5.12.0.tar.gz"
-  sha256 "0ad5f1447703211f1610053a94bce1e82abceda2222a2ecc9cf45b148395d626"
+  url "https://www.aquamaniac.de/rdm/attachments/download/533/gwenhywfar-5.12.1.tar.gz"
+  sha256 "d188448b9c3a9709721422ee0134b9d0b7790ab7514058d99e04399e39465dda"
   license "LGPL-2.1-or-later"
 
   livecheck do
@@ -10,7 +10,7 @@ class Gwenhywfar < Formula
     regex(/href=.*?gwenhywfar[._-]v?(\d+(?:\.\d+)+)\.t/i)
   end
 
-  no_autobump! because: :requires_manual_review
+  no_autobump! because: :incompatible_version_format
 
   bottle do
     sha256 arm64_sequoia: "36e7bb5dd979060e85491ba7abad1220aeb8b69b00340cf6c162edf7bb9ab63d"
@@ -35,12 +35,6 @@ class Gwenhywfar < Formula
   end
 
   conflicts_with "go-size-analyzer", because: "both install `gsa` binaries"
-
-  # Fix -flat_namespace being used on Big Sur and later.
-  patch do
-    url "https://raw.githubusercontent.com/Homebrew/formula-patches/03cf8088210822aa2c1ab544ed58ea04c897d9c4/libtool/configure-big_sur.diff"
-    sha256 "35acd6aebc19843f1a2b3a63e880baceb0f5278ab1ace661e57a502d9d78c93c"
-  end
 
   # Fix endianness handling for macos builds, emailed upstream about this patch
   patch :DATA

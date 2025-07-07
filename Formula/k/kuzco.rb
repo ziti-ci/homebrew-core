@@ -9,12 +9,12 @@ class Kuzco < Formula
   no_autobump! because: :requires_manual_review
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "843597dc532c472bbc088673a68e60a58902e9084dbdc2c115ad29cf45a48e2a"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "843597dc532c472bbc088673a68e60a58902e9084dbdc2c115ad29cf45a48e2a"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "843597dc532c472bbc088673a68e60a58902e9084dbdc2c115ad29cf45a48e2a"
-    sha256 cellar: :any_skip_relocation, sonoma:        "0350b15b9784103662da14cf4bb05684ca2b48d2e85124b5d43198e4c41f024e"
-    sha256 cellar: :any_skip_relocation, ventura:       "0350b15b9784103662da14cf4bb05684ca2b48d2e85124b5d43198e4c41f024e"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "1e40231c893f224e21d1d430c7286c2adceadf4cff0eb12d2322d4c7bbcbd9f6"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "26eece27906eb49889a1b76d70603f685477b22a2495775a404dc22d09d2ca5c"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "26eece27906eb49889a1b76d70603f685477b22a2495775a404dc22d09d2ca5c"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "26eece27906eb49889a1b76d70603f685477b22a2495775a404dc22d09d2ca5c"
+    sha256 cellar: :any_skip_relocation, sonoma:        "557afc5d2c6de2a01cf1aae676cb080fd7070a7b71e94ad90269c7d9bac0e229"
+    sha256 cellar: :any_skip_relocation, ventura:       "557afc5d2c6de2a01cf1aae676cb080fd7070a7b71e94ad90269c7d9bac0e229"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "ff3aa0de79900251e6d627f8c368bb35678e3dca7f3b71fc33ce76871d2bd41a"
   end
 
   depends_on "go" => :build

@@ -1,8 +1,8 @@
 class Television < Formula
   desc "General purpose fuzzy finder TUI"
   homepage "https://github.com/alexpasmantier/television"
-  url "https://github.com/alexpasmantier/television/archive/refs/tags/0.11.9.tar.gz"
-  sha256 "be58e6011ce1228afa1c6ba15f33023484b1bc8673c466f186ac2a130bb25bdb"
+  url "https://github.com/alexpasmantier/television/archive/refs/tags/0.12.0.tar.gz"
+  sha256 "3b1d4338a242cc091863df16be3abd573c86613b2161c7a40e288d4d9c5e2a29"
   license "MIT"
   head "https://github.com/alexpasmantier/television.git", branch: "main"
 
@@ -28,7 +28,7 @@ class Television < Formula
   test do
     assert_match version.to_s, shell_output("#{bin}/tv -V")
 
-    output = shell_output("#{bin}/tv list-channels")
-    assert_match "Builtin channels", output
+    output = shell_output("#{bin}/tv help")
+    assert_match "Cross-platform", output
   end
 end

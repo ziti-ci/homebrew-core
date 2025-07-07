@@ -3,8 +3,8 @@ class PodmanCompose < Formula
 
   desc "Alternative to docker-compose using podman"
   homepage "https://github.com/containers/podman-compose"
-  url "https://files.pythonhosted.org/packages/14/85/7f9ea7574a35226cb20022f5f206380d61cec9014be86df3cac0aa6a8899/podman_compose-1.4.0.tar.gz"
-  sha256 "c2d63410ef56af481d62c7264cf0653e1d0fefefdcee89c858a916f0f2e5f51f"
+  url "https://files.pythonhosted.org/packages/cc/03/da068b60e240b08bc54f177ca6259c33af1b0eefab1d3591a63eec70a250/podman_compose-1.4.1.tar.gz"
+  sha256 "fc91801443cae5515ca55e72d6a961ab8524cd5483eec99230c7ac7591b841a9"
   license "GPL-2.0-only"
 
   bottle do
@@ -21,8 +21,8 @@ class PodmanCompose < Formula
   depends_on "python@3.13"
 
   resource "python-dotenv" do
-    url "https://files.pythonhosted.org/packages/88/2c/7bb1416c5620485aa793f2de31d3df393d3686aa8a8506d11e10e13c5baf/python_dotenv-1.1.0.tar.gz"
-    sha256 "41f90bc6f5f177fb41f53e87666db362025010eb28f60a01c9143bfa33a2b2d5"
+    url "https://files.pythonhosted.org/packages/f6/b0/4bc07ccd3572a2f9df7e6782f52b0c6c90dcbb803ac4a167702d7d0dfe1e/python_dotenv-1.1.1.tar.gz"
+    sha256 "a8a6399716257f45be6a007360200409fce5cda2661e3dec71d23dc15f6189ab"
   end
 
   resource "pyyaml" do

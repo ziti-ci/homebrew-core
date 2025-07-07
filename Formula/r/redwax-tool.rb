@@ -1,8 +1,8 @@
 class RedwaxTool < Formula
   desc "Universal certificate conversion tool"
   homepage "https://redwax.eu/rt/"
-  url "https://redwax.eu/dist/rt/redwax-tool-0.9.9.tar.bz2"
-  sha256 "f5f8149bba0e4af190235edb6e4664d1a96016324f8a2da5dd60637e03d45630"
+  url "https://redwax.eu/dist/rt/redwax-tool-1.0.0.tar.bz2"
+  sha256 "dd2d7e6ce1ee9b78bc3a2d076f4c1b282b61e9a3a20456566d3e62d32dc12d5e"
   license "Apache-2.0"
 
   livecheck do

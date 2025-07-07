@@ -1,8 +1,8 @@
 class GatewayGo < Formula
   desc "GateWay Client for OpenIoTHub"
   homepage "https://github.com/OpenIoTHub"
-  url "https://github.com/OpenIoTHub/gateway-go/archive/refs/tags/v2.0.1.tar.gz"
-  sha256 "b6f5f7a5aa12ce3179fe754b54bcb56fab4e5a1ab6610f987506f90abc6e5e88"
+  url "https://github.com/OpenIoTHub/gateway-go/archive/refs/tags/v2.0.2.tar.gz"
+  sha256 "3cd1ccc97c5ee1a0e039ee5b4f9054718c8da64861f3086e24d98e076f1b7bbc"
   license "MIT"
   head "https://github.com/OpenIoTHub/gateway-go.git", branch: "master"
 

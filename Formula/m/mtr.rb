@@ -1,8 +1,8 @@
 class Mtr < Formula
   desc "'traceroute' and 'ping' in a single tool"
   homepage "https://www.bitwizard.nl/mtr/"
-  url "https://github.com/traviscross/mtr/archive/refs/tags/v0.95.tar.gz"
-  sha256 "12490fb660ba5fb34df8c06a0f62b4f9cbd11a584fc3f6eceda0a99124e8596f"
+  url "https://github.com/traviscross/mtr/archive/refs/tags/v0.96.tar.gz"
+  sha256 "73e6aef3fb6c8b482acb5b5e2b8fa7794045c4f2420276f035ce76c5beae632d"
   # Main license is GPL-2.0-only but some compatibility code is under other licenses:
   # 1. portability/queue.h is BSD-3-Clause
   # 2. portability/error.* is LGPL-2.0-only (only used on macOS)

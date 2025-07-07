@@ -95,7 +95,7 @@ class Bash < Formula
       "/usr/pkg/lib/bash",
       "/opt/pkg/lib/bash",
       ".",
-    ].join(":")
+    ].uniq.join(":")
   end
 
   def install

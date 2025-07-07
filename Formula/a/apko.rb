@@ -1,8 +1,8 @@
 class Apko < Formula
   desc "Build OCI images from APK packages directly without Dockerfile"
   homepage "https://github.com/chainguard-dev/apko"
-  url "https://github.com/chainguard-dev/apko/archive/refs/tags/v0.29.1.tar.gz"
-  sha256 "f7c446fca31b5e1933875f2c17e881885f034fc801ef8893d8a3883e66aaae7d"
+  url "https://github.com/chainguard-dev/apko/archive/refs/tags/v0.29.2.tar.gz"
+  sha256 "543ecdc24e364869e5a99bcd1fd2d66a83d8a6dc8ec74c48e8ffffc52b2d6382"
   license "Apache-2.0"
   head "https://github.com/chainguard-dev/apko.git", branch: "main"
 

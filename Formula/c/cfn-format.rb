@@ -1,8 +1,8 @@
 class CfnFormat < Formula
   desc "Command-line tool for formatting AWS CloudFormation templates"
   homepage "https://github.com/aws-cloudformation/rain"
-  url "https://github.com/aws-cloudformation/rain/archive/refs/tags/v1.23.0.tar.gz"
-  sha256 "820724a0cde1066345982b81b42921af86906966d0e51151ed24a6e3c1f08740"
+  url "https://github.com/aws-cloudformation/rain/archive/refs/tags/v1.23.1.tar.gz"
+  sha256 "37fb974ee0eb36ceb80f38f13141883f3779a81c79562d0ad15afcd74753485e"
   license "Apache-2.0"
   head "https://github.com/aws-cloudformation/rain.git", branch: "main"
 

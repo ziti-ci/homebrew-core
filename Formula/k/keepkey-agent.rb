@@ -11,13 +11,14 @@ class KeepkeyAgent < Formula
   no_autobump! because: :requires_manual_review
 
   bottle do
-    sha256 cellar: :any,                 arm64_sequoia: "fe5abb6df497d25c25cf54b6cf0c05fdeb0b2e817c61369f9346a6b933ea21a6"
-    sha256 cellar: :any,                 arm64_sonoma:  "c94113694b5d5a191955f05d762bd0732725dc22dfaae7f068ed38ffbd537511"
-    sha256 cellar: :any,                 arm64_ventura: "8738cb6ce778923090a459caa936ab7f012540d0092b0b5b6e5f169bd5747cd5"
-    sha256 cellar: :any,                 sonoma:        "434950972d0df313af660009690495417b31d716265315c8066298a4cbd642b7"
-    sha256 cellar: :any,                 ventura:       "0660b8f20b7913e819bd76384dbd916d1085d410e8deca21c9dd5afedb529992"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "e625e5ada8aff887dc167996135b08292e6924c4275345d3798ae748222bf7e7"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "2da29e6aa62b6209aa42aff8a56319a7e8916772a19f7dcfefa129d00308f91a"
+    rebuild 1
+    sha256 cellar: :any,                 arm64_sequoia: "4ef9604e5cdd45c1cd054e8e9d3be0cc25b7473a784a276129d621d7dd316114"
+    sha256 cellar: :any,                 arm64_sonoma:  "d5204bced64588374c8271149e09a929ac222cb83a39ce82992f18600afc36a8"
+    sha256 cellar: :any,                 arm64_ventura: "13776ec6e720d1df734940c512c73ebaa4c2990080c0e8d6414f40e806a1f78d"
+    sha256 cellar: :any,                 sonoma:        "71cd7cb34c99602040d7f5055f76a6e69a8dceaa01120677c03c546bca3b3f78"
+    sha256 cellar: :any,                 ventura:       "f004387f6363861d62f69eb4773835f28176dad695ef6d95f15d1899616406e4"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "45959a29c69d70cbd6ba9e6d375368d1cc858236b1b3445d838a79c22bcffde9"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "8ff47e5fe6dec3c9699dac2ade4f5682ade18531e1d2371eb9e1379ef1a3f2c4"
   end
 
   depends_on "pkgconf" => :build # for hidapi resource

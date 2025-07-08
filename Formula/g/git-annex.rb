@@ -31,9 +31,7 @@ class GitAnnex < Formula
 
   def install
     system "cabal", "v2-update"
-    # Work around https://github.com/yesodweb/yesod/issues/1854 with constraint
-    # TODO: Remove once fixed upstream
-    system "cabal", "v2-install", *std_cabal_v2_args, "--flags=+S3", "--constraint=wai-extra<3.1.17"
+    system "cabal", "v2-install", *std_cabal_v2_args, "--flags=+S3 +Servant"
     bin.install_symlink "git-annex" => "git-annex-shell"
   end
 

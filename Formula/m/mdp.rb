@@ -1,12 +1,10 @@
 class Mdp < Formula
   desc "Command-line based markdown presentation tool"
   homepage "https://github.com/visit1985/mdp"
-  url "https://github.com/visit1985/mdp/archive/refs/tags/1.0.15.tar.gz"
-  sha256 "3edc8ea1551fdf290d6bba721105e2e2c23964070ac18c13b4b8d959cdf6116f"
+  url "https://github.com/visit1985/mdp/archive/refs/tags/1.0.16.tar.gz"
+  sha256 "df0828a3c3d232a52dde1fa3e77a238b38101489e787a15ae3f955bef74d8708"
   license "GPL-3.0-or-later"
   head "https://github.com/visit1985/mdp.git", branch: "master"
-
-  no_autobump! because: :requires_manual_review
 
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_sequoia:  "e9f0539ae98eb89b4de2ae0048c6d79bedfe28757a11d09ef99879fa6ab2dd04"
@@ -27,6 +25,12 @@ class Mdp < Formula
   end
 
   uses_from_macos "ncurses"
+
+  # version patch, upstream pr ref, https://github.com/visit1985/mdp/pull/172
+  patch do
+    url "https://github.com/visit1985/mdp/commit/c680ce83e668771baab25185eaf42f077656088e.patch?full_index=1"
+    sha256 "c5bdff5c11b534009281fda41f1be74183a6c259dbec22c5fd798e0c61e5c8a6"
+  end
 
   def install
     system "make"

@@ -2,8 +2,8 @@ class Onnxruntime < Formula
   desc "Cross-platform, high performance scoring engine for ML models"
   homepage "https://github.com/microsoft/onnxruntime"
   url "https://github.com/microsoft/onnxruntime.git",
-      tag:      "v1.22.0",
-      revision: "f217402897f40ebba457e2421bc0a4702771968e"
+      tag:      "v1.22.1",
+      revision: "89746dc19a0a1ae59ebf4b16df9acab8f99f3925"
   license "MIT"
 
   livecheck do

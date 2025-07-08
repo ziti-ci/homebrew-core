@@ -12,13 +12,14 @@ class HomeassistantCli < Formula
   no_autobump! because: :requires_manual_review
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "686ebf7592d8aa13f28a8c77c486e125235838b58be49ccabec14a886d016725"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "50de04efe64b3ad063963979ee99aa5c3567f4785d246149bd18894697ebbb7d"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "70781f95a6f1011bf3c21490822a644d33bf4ebd018d0e6919492ed0bac840f6"
-    sha256 cellar: :any_skip_relocation, sonoma:        "cd9350f48a7149e078c69390b38e6b978cf08be79dea9de90d0497630fa5b646"
-    sha256 cellar: :any_skip_relocation, ventura:       "9b9123363fac8a300c57959807f5397300922ab6475e5dd7a5154f2fe91399d2"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "42fe4722accd0ca6e96e32cf8777afec0d3866378125f4298aca5869f06b655a"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "5c65662a6d73bd47c3942ecf51dc5c15d02b3db0c39ec240572702595e0bcf89"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "532fdbfa1fd0ab793db6f69f918e92c4cdc4ebc344ce9e6a8cfcc342b3430789"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "680fa2d3fc49e8d6e029b79ed3cac8f803b739469be57b6a60eb06787e6e887a"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "fc709b3119117842175d0145afe957a19a7174c287a3cc6e789ff93eee65fd7c"
+    sha256 cellar: :any_skip_relocation, sonoma:        "84d60b9d401a5c5543c13e6e5f384ac52c24b975418fb68de32168e5b368d1e2"
+    sha256 cellar: :any_skip_relocation, ventura:       "ab023c6d393385716e7621bdd16be0e00aee52a833da39cdb8d7c89265f018fd"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "f426b5be1589660625222a5f892433488b03ece7ccc4a23ae8bb3a0c9b5a33d4"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "c171bbc37cad686513e7bdef4d360b36adc25f87ecc4415ddff737e7a1d79dad"
   end
 
   depends_on "python@3.13"

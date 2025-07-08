@@ -3,8 +3,8 @@ class Schemathesis < Formula
 
   desc "Testing tool for web applications with specs"
   homepage "https://schemathesis.readthedocs.io/"
-  url "https://files.pythonhosted.org/packages/bb/05/a7a1f61cbde53d73fa3825436ee2ea55b1257c9bc17fd5146a2cfe36d6e5/schemathesis-4.0.6.tar.gz"
-  sha256 "f99cda5ad55d6ee2d91c2b9ef233f3835111c973f3c0aaa31c960ff98f0fdeab"
+  url "https://files.pythonhosted.org/packages/40/10/07dae635909814d84e3f7c71389ee79834612d03111c6287ba8fef267947/schemathesis-4.0.7.tar.gz"
+  sha256 "2cebaf8ffcdc18681a2ff197a7efc073ff6c6b9a1917d650da68525ecb38cf5e"
   license "MIT"
 
   bottle do
@@ -255,8 +255,8 @@ class Schemathesis < Formula
   end
 
   resource "types-python-dateutil" do
-    url "https://files.pythonhosted.org/packages/ef/88/d65ed807393285204ab6e2801e5d11fbbea811adcaa979a2ed3b67a5ef41/types_python_dateutil-2.9.0.20250516.tar.gz"
-    sha256 "13e80d6c9c47df23ad773d54b2826bd52dbbb41be87c3f339381c1700ad21ee5"
+    url "https://files.pythonhosted.org/packages/c9/95/6bdde7607da2e1e99ec1c1672a759d42f26644bbacf939916e086db34870/types_python_dateutil-2.9.0.20250708.tar.gz"
+    sha256 "ccdbd75dab2d6c9696c350579f34cffe2c281e4c5f27a585b2a2438dd1d5c8ab"
   end
 
   resource "typing-extensions" do

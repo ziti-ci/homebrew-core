@@ -13,7 +13,7 @@ class GitGui < Formula
   no_autobump! because: :requires_manual_review
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "8987dadc8d08a9b6e66afeffad3e8cd704c7b9f03017480c79ec92fabfb9d686"
+    sha256 cellar: :any_skip_relocation, all: "47b3646a5929563330e69235b3df3533599c2e79bb486906a782a520544a369e"
   end
 
   depends_on "tcl-tk@8"

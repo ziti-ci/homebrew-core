@@ -174,8 +174,8 @@ class CharmTools < Formula
   end
 
   resource "stuf" do
-    url "https://files.pythonhosted.org/packages/76/62/171e06b6d2d3072ea333de19632c61a44f83199e20cbf4924d12827cf66a/stuf-0.9.16.tar.bz2"
-    sha256 "e61d64a2180c19111e129d36bfae66a0cb9392e1045827d6495db4ac9cb549b0"
+    url "https://files.pythonhosted.org/packages/f0/d6/6779cb5874630c21845d345306f60a7a5ecd9263fa09f85df745c54e3356/stuf-0.9.16.tar.gz"
+    sha256 "080a88b940ca844474c239cc7aab0c530187e637a9dc6df111a99e2955bb35db"
   end
 
   resource "translationstring" do

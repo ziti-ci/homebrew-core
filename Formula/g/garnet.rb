@@ -6,12 +6,12 @@ class Garnet < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any,                 arm64_sequoia: "74e624ee3b52edd838f5b351fb8873b0b5487f413521e58cd6e2bf36f623b8cf"
-    sha256 cellar: :any,                 arm64_sonoma:  "2162519194d708642cf4c0068ba78883a2c4435b8aec5df92a05420973e1b7d6"
-    sha256 cellar: :any,                 arm64_ventura: "5e431ca4d21200758bf1f991fd3881124dec55dc4fa224953db0410637feeb4e"
-    sha256 cellar: :any,                 ventura:       "ba586becf6475583944d6ffbc1d50d2c605057992832aeec855f53aa7d263545"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "82d50c65805d849a8e502b3f8adb028a5c2ac2a28bd2b66669494a653b95cc43"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "d21951c538069a4e8dce1ee4e3c295976fb9e34e4b6bcfdbf1281a464bbfc5ba"
+    sha256 cellar: :any,                 arm64_sequoia: "8fe5312f669d717990f2e95a3ed9437f7f2d83204e9406d2562520274a15fa34"
+    sha256 cellar: :any,                 arm64_sonoma:  "3ed050e67a3cc015018ee3ff055e315e77c08af1713a29395a2ed9d841ff733a"
+    sha256 cellar: :any,                 arm64_ventura: "5f7d834464a4b39beff00db371cba22848a0c12e135fa1e0c5b5c79db3e690be"
+    sha256 cellar: :any,                 ventura:       "0ff97ce70e50301b6692ecd240791cdace46482a54dc6984ec9815de7104a1df"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "297aafe81bc3b8e6977bb282889132551b508f4bde7a8ff28178af5090ab1bcf"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "73b1d7c2e4b3ddd93b2413aa60b6bef571107d628409bda00322e23f6d2f24cf"
   end
 
   depends_on "valkey" => :test

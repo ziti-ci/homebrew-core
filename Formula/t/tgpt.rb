@@ -1,8 +1,8 @@
 class Tgpt < Formula
   desc "AI Chatbots in terminal without needing API keys"
   homepage "https://github.com/aandrew-me/tgpt"
-  url "https://github.com/aandrew-me/tgpt/archive/refs/tags/v2.10.0.tar.gz"
-  sha256 "0e312176908d581eeb7f0df8fcd0524a4aa4702029d50f553f0f75d6c15bc0d9"
+  url "https://github.com/aandrew-me/tgpt/archive/refs/tags/v2.10.1.tar.gz"
+  sha256 "a0fc596fd2b8aabac222e22e96fc02709e185031e31a15b522f4c5c59db892d9"
   license "GPL-3.0-only"
   head "https://github.com/aandrew-me/tgpt.git", branch: "main"
 
@@ -16,6 +16,10 @@ class Tgpt < Formula
   end
 
   depends_on "go" => :build
+
+  on_linux do
+    depends_on "libx11"
+  end
 
   def install
     system "go", "build", *std_go_args(ldflags: "-s -w")

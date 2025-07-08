@@ -3,10 +3,9 @@ class Streamlink < Formula
 
   desc "CLI for extracting streams from various websites to a video player"
   homepage "https://streamlink.github.io/"
-  url "https://files.pythonhosted.org/packages/07/83/8779287122de41b79763810204ce52bf644542396dd0273ad2fa177db80d/streamlink-7.4.0.tar.gz"
-  sha256 "2cc90e5a978800c9e5b113d0b26db1079451f43441a0476255c2e99fd65e60bb"
+  url "https://files.pythonhosted.org/packages/5d/8c/1ea74183b0fce32c4c36b403bca41b798122522012c0f04919a81fc6c0b4/streamlink-7.5.0.tar.gz"
+  sha256 "c091bc77a3cc8e129a232db3e2c8d8bae2dfef96813fcdec62ee020794068fb9"
   license "BSD-2-Clause"
-  revision 2
   head "https://github.com/streamlink/streamlink.git", branch: "master"
 
   bottle do
@@ -53,8 +52,8 @@ class Streamlink < Formula
   end
 
   resource "lxml" do
-    url "https://files.pythonhosted.org/packages/76/3d/14e82fc7c8fb1b7761f7e748fd47e2ec8276d137b6acfe5a4bb73853e08f/lxml-5.4.0.tar.gz"
-    sha256 "d12832e1dbea4be280b22fd0ea7c9b87f0d8fc51ba06e92dc62d52f804f78ebd"
+    url "https://files.pythonhosted.org/packages/c5/ed/60eb6fa2923602fba988d9ca7c5cdbd7cf25faa795162ed538b527a35411/lxml-6.0.0.tar.gz"
+    sha256 "032e65120339d44cdc3efc326c9f660f5f7205f3a535c1fdbf898b29ea01fb72"
   end
 
   resource "outcome" do

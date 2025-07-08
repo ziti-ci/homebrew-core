@@ -11,8 +11,8 @@ class Fprettify < Formula
   no_autobump! because: :requires_manual_review
 
   bottle do
-    rebuild 3
-    sha256 cellar: :any_skip_relocation, all: "f9d9e214fb3810e34036e058e5dd26087ff761ff4ff07d993badd0eeb2de2de5"
+    rebuild 4
+    sha256 cellar: :any_skip_relocation, all: "8a69f7e9e359b9e8e37d3a5704f5ec38c58986e1f32ea9df82c39a9f0d6d0840"
   end
 
   depends_on "gcc" => :test

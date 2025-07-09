@@ -9,14 +9,13 @@ class Theharvester < Formula
   head "https://github.com/laramies/theHarvester.git", branch: "master"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any,                 arm64_sequoia: "65c45640b77c5927eacb2c07964ca32403711f7e3d774e3863d61b706f8a3d37"
-    sha256 cellar: :any,                 arm64_sonoma:  "19ded5ba292afe840fc82c86803d9e4f76d5f0101993df99f50b4e412f2d6a55"
-    sha256 cellar: :any,                 arm64_ventura: "225f1e1c8d7264264ebe82c3f7c5862ccbf72808e30cfc58b37a7f35634f9e23"
-    sha256 cellar: :any,                 sonoma:        "933acb2e6e00889b4bb7214767f856d16869af3d604887f0b055fc381f408f1b"
-    sha256 cellar: :any,                 ventura:       "4e0843c61e2ef7a6ce29ca3956a1541aa80f5cdf69b8a506843237a8ca693c44"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "f2ed35d748c67cafa6839743dda34637ea428d4f98d8825e7f83a1433513c6ba"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "08bfd6c3077721654d9e692723486a00dd51c2e96ff6759030f169a46b44e33c"
+    sha256 cellar: :any,                 arm64_sequoia: "cd9517b6b86ea416a78583a3fe6550fb95e3aec580f2614a722441c308fc2f6a"
+    sha256 cellar: :any,                 arm64_sonoma:  "48c972070ada89b6e33c9099ca93f854991bf6f076f061be320cf961e237623a"
+    sha256 cellar: :any,                 arm64_ventura: "d9930c783d3f78fc77f996ef3626973444488c422f36081d0a7e2d63b4532d6d"
+    sha256 cellar: :any,                 sonoma:        "b88a5504cfcff42bc9b11dbcd9e4e94ef408a16a64c568939b8bdb903b321ff0"
+    sha256 cellar: :any,                 ventura:       "eb1c007efbc5f838ae99d2a5a4e2db200ff53de9ee94b4c82d0c5a41ed396205"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "d27dea333be4a17ed6faf315a5beded3f56938950eb7c29fe551def37d4a3405"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "0a8c6f03036b2b739b7fdb2ff354d7e7497ec1682f8db581e0883de5ba0343ae"
   end
 
   depends_on "rust" => :build

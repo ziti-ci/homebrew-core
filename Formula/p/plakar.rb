@@ -11,6 +11,7 @@ class Plakar < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura: "29a8efbd837ae8cad28f1277874986c322cd0ca7b67f99c5afd2daea7a284127"
     sha256 cellar: :any_skip_relocation, sonoma:        "a2add9d606281bb8e8dad8d56c6595c54a8b39e6b9e919f92bbe3cf91515546b"
     sha256 cellar: :any_skip_relocation, ventura:       "6534cdb920a75202b6e628ac89ff7033bea173bce0feae6d7785622eca5da494"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "4daedd3b463cf677e5880c5e856a17bcc89d40c55d8fbf5222a3ca59afa3b9db"
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "7c40095f2780cc9fbdba1b8b20708599b9903484c306b375ec4a94d57cdfc2f8"
   end
 

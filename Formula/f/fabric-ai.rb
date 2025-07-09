@@ -1,8 +1,8 @@
 class FabricAi < Formula
   desc "Open-source framework for augmenting humans using AI"
   homepage "https://danielmiessler.com/p/fabric-origin-story"
-  url "https://github.com/danielmiessler/fabric/archive/refs/tags/v1.4.240.tar.gz"
-  sha256 "e4d43947aec29e3e35d567774d66bf03b9ace7e219beef8753abd798bf764a09"
+  url "https://github.com/danielmiessler/fabric/archive/refs/tags/v1.4.242.tar.gz"
+  sha256 "df0b941705121e7cae386debf83045e16de32f94feb1abb7d5b46c334a3f12e2"
   license "MIT"
   head "https://github.com/danielmiessler/fabric.git", branch: "main"
 
@@ -18,7 +18,7 @@ class FabricAi < Formula
   depends_on "go" => :build
 
   def install
-    system "go", "build", *std_go_args(ldflags: "-s -w")
+    system "go", "build", *std_go_args(ldflags: "-s -w"), "./cmd/fabric"
   end
 
   test do

@@ -1,8 +1,8 @@
 class FabricAi < Formula
   desc "Open-source framework for augmenting humans using AI"
   homepage "https://danielmiessler.com/p/fabric-origin-story"
-  url "https://github.com/danielmiessler/fabric/archive/refs/tags/v1.4.242.tar.gz"
-  sha256 "df0b941705121e7cae386debf83045e16de32f94feb1abb7d5b46c334a3f12e2"
+  url "https://github.com/danielmiessler/fabric/archive/refs/tags/v1.4.244.tar.gz"
+  sha256 "308f1eec49a96f0c36db5010a392216f659e1527063b54de71e52c6cb9bfdd2e"
   license "MIT"
   head "https://github.com/danielmiessler/fabric.git", branch: "main"
 
@@ -25,7 +25,7 @@ class FabricAi < Formula
     assert_match version.to_s, shell_output("#{bin}/fabric-ai --version")
 
     (testpath/".config/fabric/.env").write("t\n")
-    output = shell_output("#{bin}/fabric-ai --dry-run < /dev/null 2>&1")
+    output = pipe_output("#{bin}/fabric-ai --dry-run 2>&1", "", 1)
     assert_match "error loading .env file: unexpected character", output
   end
 end

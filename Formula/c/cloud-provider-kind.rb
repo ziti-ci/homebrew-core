@@ -1,8 +1,8 @@
 class CloudProviderKind < Formula
   desc "Cloud provider for KIND clusters"
   homepage "https://github.com/kubernetes-sigs/cloud-provider-kind"
-  url "https://github.com/kubernetes-sigs/cloud-provider-kind/archive/refs/tags/v0.6.0.tar.gz"
-  sha256 "61f7efdd17f2b1100f153c162494eba240f4bace459ec3d76fc5348d829e5f78"
+  url "https://github.com/kubernetes-sigs/cloud-provider-kind/archive/refs/tags/v0.7.0.tar.gz"
+  sha256 "0dd74003639198dbb6742987410c7eb5365e7bd2d46ded1d22a5ce8980731195"
   license "Apache-2.0"
   head "https://github.com/kubernetes-sigs/cloud-provider-kind.git", branch: "main"
 

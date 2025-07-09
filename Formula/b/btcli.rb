@@ -3,8 +3,8 @@ class Btcli < Formula
 
   desc "Bittensor command-line tool"
   homepage "https://docs.bittensor.com/btcli"
-  url "https://files.pythonhosted.org/packages/28/d2/94ea4c86fbc3396fe7d63706a7d0003b080c38c521e432122f03d31422ca/bittensor_cli-9.8.0.tar.gz"
-  sha256 "1a9e42d44ec82eca433ee40a50d7b71eeb94b5538622bb95a7c64354d637c390"
+  url "https://files.pythonhosted.org/packages/fb/34/94e03af3242ac7e8322d8460c552d1efc07e743a9a3cb01fd7f7266ea248/bittensor_cli-9.8.1.tar.gz"
+  sha256 "75c46e8794c01f52993704c06467ee8359b86bfe383caa7ca47957cc85c777e6"
   license "MIT"
   head "https://github.com/opentensor/btcli.git", branch: "main"
 
@@ -301,20 +301,16 @@ class Btcli < Formula
     expected_balance = {
       "balances" => {
         "brew-test" => {
-          "coldkey"              => ss58_address,
-          "free"                 => 0.0,
-          "staked"               => 0.0,
-          "staked_with_slippage" => 0.0,
-          "total"                => 0.0,
-          "total_with_slippage"  => 0.0,
+          "coldkey" => ss58_address,
+          "free"    => 0.0,
+          "staked"  => 0.0,
+          "total"   => 0.0,
         },
       },
       "totals"   => {
-        "free"                 => 0.0,
-        "staked"               => 0.0,
-        "staked_with_slippage" => 0.0,
-        "total"                => 0.0,
-        "total_with_slippage"  => 0.0,
+        "free"   => 0.0,
+        "staked" => 0.0,
+        "total"  => 0.0,
       },
     }
 

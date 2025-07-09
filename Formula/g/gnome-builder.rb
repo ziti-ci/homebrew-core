@@ -1,8 +1,8 @@
 class GnomeBuilder < Formula
   desc "Develop software for GNOME"
   homepage "https://apps.gnome.org/Builder/"
-  url "https://download.gnome.org/sources/gnome-builder/48/gnome-builder-48.0.tar.xz"
-  sha256 "7afe9a7a3b3c6621768bc46a61d698dd788b3653fb46a708238bdccf4de67ba4"
+  url "https://download.gnome.org/sources/gnome-builder/48/gnome-builder-48.2.tar.xz"
+  sha256 "ec1280d47e814a313b74cb927d5a059380544aa0f56e87552978397d6c74cc63"
   license "GPL-3.0-or-later"
   head "https://gitlab.gnome.org/GNOME/gnome-builder.git", branch: "main"
 

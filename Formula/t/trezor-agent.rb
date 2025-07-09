@@ -14,14 +14,13 @@ class TrezorAgent < Formula
   no_autobump! because: :requires_manual_review
 
   bottle do
-    rebuild 3
-    sha256 cellar: :any,                 arm64_sequoia: "d30a423e7bb16cb85bd82c747656b8cf5f565f22322153f65e3f680c599b943b"
-    sha256 cellar: :any,                 arm64_sonoma:  "0ac21208ac317825a5fdd587048a1391270b5cdc97df69607e2b381d0c5c9606"
-    sha256 cellar: :any,                 arm64_ventura: "ee85d4ac6e1a6951e37cfa77ec7ff46eac91fb9cb0c858feb51dc0c5dba69db5"
-    sha256 cellar: :any,                 sonoma:        "7aaad0a948426ba6ae82128e18501ebed5f2279c9e3d1f0dfd00f0fa38e79fb6"
-    sha256 cellar: :any,                 ventura:       "ff6bd171a518ccbd6aaa4d6f8f6c1e0b9b14f843cebf10268c556fededd98984"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "700035e02dda5a8198db4d54383d8a2bbc2549df3273089fcd024c170d633a95"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "ea07ce42c9c3de33f2c307f30522d41a43809ad90096078f3d48657be95b1942"
+    sha256 cellar: :any,                 arm64_sequoia: "6b23b65aed9a20adc1193f1b07f212d15ec1cc63fe4063f812215269bf4469ac"
+    sha256 cellar: :any,                 arm64_sonoma:  "e7b9a2a27fd2238cde20aed214f6cb064007042259c15c1957fccbf665186f87"
+    sha256 cellar: :any,                 arm64_ventura: "55f846a42ee2c928e2f66ea869bb7917140c48e840d44b45b0d6647075f5bcba"
+    sha256 cellar: :any,                 sonoma:        "c0f8bbc7635eda97aa25146ca2e17549ede47f1e30419838d9990799bafdbf4a"
+    sha256 cellar: :any,                 ventura:       "bab1f3dfe9854c67284980c76694ddcdf0cf710daddf1500f8307db4da493c50"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "ddc51755c0f96548ca7185eec4295f81842e78f5610d63707ea41650532c5224"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "fe96b06a580d7571359bcd236c58a2eeb85f67983734a598f4775aaf7e916eb8"
   end
 
   depends_on "pkgconf" => :build # for hidapi resource

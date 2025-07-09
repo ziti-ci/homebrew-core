@@ -72,6 +72,8 @@ jobs:
       pull-requests: write
     if: always() && github.repository_owner == 'Homebrew'
     runs-on: ubuntu-latest
+    container:
+      image: ghcr.io/homebrew/ubuntu22.04:main
     env:
       HOMEBREW_DISABLE_LOAD_FORMULA: 1
       PR: ${{ github.event.number }}

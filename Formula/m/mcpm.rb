@@ -3,8 +3,8 @@ class Mcpm < Formula
 
   desc "Open source, community-driven MCP server and client manager"
   homepage "https://mcpm.sh/"
-  url "https://files.pythonhosted.org/packages/12/3f/c3ddedc1441f5154d6dccd83e9715369e54a44939bec13f14fc740ad5c7f/mcpm-2.1.0.tar.gz"
-  sha256 "9d3c750d16119fd0ab7d2e0af221f6bd103a39a292041342613587235a1f7ef4"
+  url "https://files.pythonhosted.org/packages/36/c5/991ccb04827cb1e6b662d480568955bddf50830bdca5616e95a567cc3ff9/mcpm-2.2.0.tar.gz"
+  sha256 "96b9423e1c4d56547eabe0d7f59e9160efffb933d1b3f593222e1930827ec994"
   license "MIT"
 
   bottle do
@@ -68,8 +68,8 @@ class Mcpm < Formula
   end
 
   resource "duckdb" do
-    url "https://files.pythonhosted.org/packages/35/ab/d89a4dd14311d5a0081711bc66db3fad73f7645fa7eb3844c423d2fa0a17/duckdb-1.3.1.tar.gz"
-    sha256 "8e101990a879533b1d33f003df2eb2a3c4bc7bdf976bd7ef7c32342047935327"
+    url "https://files.pythonhosted.org/packages/47/24/a2e7fb78fba577641c286fe33185789ab1e1569ccdf4d142e005995991d2/duckdb-1.3.2.tar.gz"
+    sha256 "c658df8a1bc78704f702ad0d954d82a1edd4518d7a04f00027ec53e40f591ff5"
   end
 
   resource "email-validator" do
@@ -163,8 +163,8 @@ class Mcpm < Formula
   end
 
   resource "openai" do
-    url "https://files.pythonhosted.org/packages/5e/a8/e4427729da048cb33bda15e70f09f7520bdf3577bafc546b135ecb36af7d/openai-1.93.1.tar.gz"
-    sha256 "11eb8932965d0f79ecc4cb38a60a0c4cef4bcd5fcf08b99fc9a399fa5f1e50ab"
+    url "https://files.pythonhosted.org/packages/18/2b/0d93a981afe76b4e89c57b69bf421b5f15878983fccbad321f142ba6e89b/openai-1.93.2.tar.gz"
+    sha256 "4a7312b426b5e4c98b78dfa1148b5683371882de3ad3d5f7c8e0c74f3cc90778"
   end
 
   resource "openapi-pydantic" do

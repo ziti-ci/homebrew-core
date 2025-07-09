@@ -17,7 +17,7 @@ module Homebrew
       end
 
       UNCHECKED_COMMIT_AUTHORS = ["BrewTestBot"].freeze
-      MODIFIED_BOTTLE_BLOCK_REGEX = /^(\+|-)\s*(bottle do|sha256.*"\h{64}")/
+      MODIFIED_BOTTLE_BLOCK_REGEX = /^(\+|-)\s*(bottle do|sha256.*:\s+"\h{64}")/
 
       def get_pull_request_commits(pull_request)
         owner, repo = ENV.fetch("GITHUB_REPOSITORY").split("/")

@@ -12,13 +12,13 @@ class NewrelicCli < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "bf0d199fc3c3ec5a787e16883d3ac8434d7adb603813c4f377131252ca5eceaa"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "a0c7bc4df40d77eae1c09c10ec7849068d39c4389e9b563e742f5cc25e2897c0"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "aac00ffb3923233c0a1b176c83fc654c6e208fb0d9e817806f8d6ef679e2793f"
-    sha256 cellar: :any_skip_relocation, sonoma:        "2285390a15bb971b38614703421408d724209e4c8ee15d74ef29934c6052b7b4"
-    sha256 cellar: :any_skip_relocation, ventura:       "aa4078b339fa8b2a68ff10d9af4b34ef28204d3a4fd0e3f1948dc1819c5d50df"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "8d5ec2b63d1234d2c0faa91a056ec00a742c814ad2b6293a04ba8e2ad698a9d3"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "c560a0bb8325945e4a52e08c723a9075cbad943340ac5a316a50b902f4eaccd9"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "b3429e9f387cbb6669848c0c8b4eb469a3b95004a39fd3c78c304ac337496ea5"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "cdd2d1426cfa2eca223a7d69b17587cb05ef9cfae1cec1b8f51ada16c75f9507"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "24f2c2ac407248a085e5ab829f3407af53b4c012ff5c16464c062d1c5e07dba2"
+    sha256 cellar: :any_skip_relocation, sonoma:        "46186725ad2b48a066daa5c0ebe2974f285eb359ec298b6b25ea14fb43a3c6b6"
+    sha256 cellar: :any_skip_relocation, ventura:       "f89175041bd614e594d9da3b6389d69abccbbc415a6ec6a64c02a6c187819da6"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "e936301808e4df0533351ae883de607e21a81ee9f872e868bb6cee4888459bb7"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "31a0047e1dc203750eb96328561c681584bdf0af3fa35debb0c365db396ccff8"
   end
 
   depends_on "go" => :build

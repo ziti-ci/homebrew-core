@@ -11,6 +11,15 @@ class Lutgen < Formula
     regex(/^(?:lutgen[._-])?v?(\d+(?:\.\d+)+)$/i)
   end
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "c73ad8ebc351acb49f31bdc6e46a480fc4ca8b788f728a07d5c813afd2ef5142"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "d28ecbf589261b5f70b99f94fe1066f82fc92f075a91d49111fc5d055be95943"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "cfdae02120487b9fdf526d5a599c169144adf1358f1f3e2a54ed6696060aec10"
+    sha256 cellar: :any_skip_relocation, sonoma:        "6f450e1b1ccae1c0015e8c67debeb200d439931651b25fc8b7b232fd429e8cee"
+    sha256 cellar: :any_skip_relocation, ventura:       "b4d999a19d71079a5cf05495dcbccd38b7b979c591587abd320df7aed8dc9a67"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "3a7819713a140640e8d7e92fbd98f7da430cd7696873048565f71872ce566cb1"
+  end
+
   depends_on "rust" => :build
 
   def install

@@ -3,8 +3,8 @@ class Mcpm < Formula
 
   desc "Open source, community-driven MCP server and client manager"
   homepage "https://mcpm.sh/"
-  url "https://files.pythonhosted.org/packages/36/c5/991ccb04827cb1e6b662d480568955bddf50830bdca5616e95a567cc3ff9/mcpm-2.2.0.tar.gz"
-  sha256 "96b9423e1c4d56547eabe0d7f59e9160efffb933d1b3f593222e1930827ec994"
+  url "https://files.pythonhosted.org/packages/82/3a/2aa88fd4eeeda198d97775a48f5e0e7c3b7fb3341cb1cb70fb5819e359f0/mcpm-2.3.0.tar.gz"
+  sha256 "a500e6b5111ba7440bff9bf3752a3da9a80b37263189f18586e7ff0bd196386a"
   license "MIT"
 
   bottle do
@@ -305,6 +305,16 @@ class Mcpm < Formula
   resource "thefuzz" do
     url "https://files.pythonhosted.org/packages/81/4b/d3eb25831590d6d7d38c2f2e3561d3ba41d490dc89cd91d9e65e7c812508/thefuzz-0.22.1.tar.gz"
     sha256 "7138039a7ecf540da323792d8592ef9902b1d79eb78c147d4f20664de79f3680"
+  end
+
+  resource "tomli" do
+    url "https://files.pythonhosted.org/packages/18/87/302344fed471e44a87289cf4967697d07e532f2421fdaf868a303cbae4ff/tomli-2.2.1.tar.gz"
+    sha256 "cd45e1dc79c835ce60f7404ec8119f2eb06d38b1deba146f07ced3bbc44505ff"
+  end
+
+  resource "tomli-w" do
+    url "https://files.pythonhosted.org/packages/19/75/241269d1da26b624c0d5e110e8149093c759b7a286138f4efd61a60e75fe/tomli_w-1.2.0.tar.gz"
+    sha256 "2dd14fac5a47c27be9cd4c976af5a12d87fb1f0b4512f81d69cce3b35ae25021"
   end
 
   resource "tqdm" do

@@ -7,13 +7,13 @@ class Shepherd < Formula
   license "GPL-3.0-or-later"
 
   bottle do
-    sha256 arm64_sequoia: "3f6a310d4f6d89dbfde112dbfc77e4645fc01abb871e1726bb7972aaa5405b02"
-    sha256 arm64_sonoma:  "3f6a310d4f6d89dbfde112dbfc77e4645fc01abb871e1726bb7972aaa5405b02"
-    sha256 arm64_ventura: "3f6a310d4f6d89dbfde112dbfc77e4645fc01abb871e1726bb7972aaa5405b02"
-    sha256 sonoma:        "04cffb4fb608ef2560a2c43eac9a501990e8ffcfee62325b910624ec304ea2c9"
-    sha256 ventura:       "04cffb4fb608ef2560a2c43eac9a501990e8ffcfee62325b910624ec304ea2c9"
-    sha256 arm64_linux:   "63cab7b806076518b16193ed9303f6ce777b07d5b515dddaef81028a4864c6bb"
-    sha256 x86_64_linux:  "8cfc61fa0dfc40ac143e61c8bee46023f12659e0648fa9700f446ad0afa3b566"
+    sha256 arm64_sequoia: "dda15a8992f9da1097edf9f80e60b209ffc16af10811b31a132577e79d77b69b"
+    sha256 arm64_sonoma:  "dda15a8992f9da1097edf9f80e60b209ffc16af10811b31a132577e79d77b69b"
+    sha256 arm64_ventura: "dda15a8992f9da1097edf9f80e60b209ffc16af10811b31a132577e79d77b69b"
+    sha256 sonoma:        "4af0ab3dc56f5b8e22c3e00bb3e71721952fce09446c85c021ab1ac6c32cd1be"
+    sha256 ventura:       "4af0ab3dc56f5b8e22c3e00bb3e71721952fce09446c85c021ab1ac6c32cd1be"
+    sha256 arm64_linux:   "d7aaba6f12e4caa47f1bb698e5c061744b7d940b66facb90390c3e2fd0c6ed18"
+    sha256 x86_64_linux:  "b72c526c73811d2e697aa70424f54e695982068b253bf0225101d78bc09f7918"
   end
 
   depends_on "pkgconf" => :build

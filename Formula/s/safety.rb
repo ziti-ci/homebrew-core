@@ -3,10 +3,9 @@ class Safety < Formula
 
   desc "Checks Python dependencies for known vulnerabilities and suggests remediations"
   homepage "https://safetycli.com/product/safety-cli"
-  url "https://files.pythonhosted.org/packages/33/af/f135abb8d147629e9a27f436db5135314adc864a98b62922b33d6f05c836/safety-3.5.2.tar.gz"
-  sha256 "ecbb2e76f9574284f2c0e168e71ec92b39018ae9516b3b00f132de57ecaa09cb"
+  url "https://files.pythonhosted.org/packages/04/c0/832778e8f53e922f1939455cab4149339ca66c4f06e3c67599511d857279/safety-3.6.0.tar.gz"
+  sha256 "a820f827699f83d3d5c2faab24c0ac4d094911931503180847d97942c0a6f7e3"
   license "MIT"
-  revision 2
   head "https://github.com/pyupio/safety.git", branch: "main"
 
   bottle do
@@ -46,8 +45,8 @@ class Safety < Formula
   end
 
   resource "click" do
-    url "https://files.pythonhosted.org/packages/b9/2e/0090cbf739cee7d23781ad4b89a9894a41538e4fcf4c31dcdd705b78eb8b/click-8.1.8.tar.gz"
-    sha256 "ed53c9d8990d83c2a27deae68e4ee337473f6330c040a31d4225c9574d16096a"
+    url "https://files.pythonhosted.org/packages/60/6c/8ca2efa64cf75a977a0d7fac081354553ebe483345c734fb6b6515d96bbc/click-8.2.1.tar.gz"
+    sha256 "27c491cc05d968d271d5a1db13e3b5a184636d9d930f148c50b038f0d0646202"
   end
 
   resource "dparse" do
@@ -136,8 +135,8 @@ class Safety < Formula
   end
 
   resource "pygments" do
-    url "https://files.pythonhosted.org/packages/7c/2d/c3338d48ea6cc0feb8446d8e6937e1408088a72a39937982cc6111d17f84/pygments-2.19.1.tar.gz"
-    sha256 "61c16d2a8576dc0649d9f39e089b5f02bcd27fba10d8fb4dcc28173f7a45151f"
+    url "https://files.pythonhosted.org/packages/b0/77/a5b8c569bf593b0140bde72ea885a803b82086995367bf2037de0159d924/pygments-2.19.2.tar.gz"
+    sha256 "636cb2477cec7f8952536970bc533bc43743542f70392ae026374600add5b887"
   end
 
   resource "regex" do
@@ -206,8 +205,8 @@ class Safety < Formula
   end
 
   resource "typing-extensions" do
-    url "https://files.pythonhosted.org/packages/d1/bc/51647cd02527e87d05cb083ccc402f93e441606ff1f01739a62c8ad09ba5/typing_extensions-4.14.0.tar.gz"
-    sha256 "8676b788e32f02ab42d9e7c61324048ae4c6d844a399eebace3d4979d75ceef4"
+    url "https://files.pythonhosted.org/packages/98/5a/da40306b885cc8c09109dc2e1abd358d5684b1425678151cdaed4731c822/typing_extensions-4.14.1.tar.gz"
+    sha256 "38b39f4aeeab64884ce9f74c94263ef78f3c22467c8724005483154c26648d36"
   end
 
   resource "urllib3" do

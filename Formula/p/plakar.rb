@@ -5,6 +5,11 @@ class Plakar < Formula
   sha256 "425f551c5ade725bb93e3e33840b1d16187a6f8ec47abfe4830deefc5b70b2f8"
   license "ISC"
 
+  livecheck do
+    url :stable
+    strategy :github_latest
+  end
+
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_sequoia: "f6c118923f5445e2110ec660827f6646dc64faac90017d3e11421ed9a59a5947"
     sha256 cellar: :any_skip_relocation, arm64_sonoma:  "4e133471b318f9fe36e580557417545e05919220f7a0e3d53169e32cdf32c3fb"

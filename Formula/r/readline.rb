@@ -79,6 +79,12 @@ class Readline < Formula
 
   uses_from_macos "ncurses"
 
+  # fixed issue https://github.com/Homebrew/homebrew-core/issues/229296
+  patch :p0 do
+    url "https://lists.gnu.org/archive/html/bug-readline/2025-07/txtTYu28QVKRX.txt"
+    sha256 "171dd70c961eb856597ff379e17d1ada3f00721c9b1acf95a5acf2640165b92c"
+  end
+
   def install
     system "./configure", "--prefix=#{prefix}", "--with-curses"
     # FIXME: Setting `SHLIB_LIBS` should not be needed, but, on Linux,

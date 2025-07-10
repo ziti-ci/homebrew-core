@@ -2,8 +2,8 @@ class Batt < Formula
   desc "Control and limit battery charging on Apple Silicon MacBooks"
   homepage "https://github.com/charlie0129/batt"
   url "https://github.com/charlie0129/batt.git",
-      tag:      "v0.3.7",
-      revision: "0292e5913c404f5d752f72bd340e161e3030c28c"
+      tag:      "v0.4.0",
+      revision: "34d7c1b7507089832a15d7bf0933c5d8606e5c3d"
   license "GPL-2.0-only"
   head "https://github.com/charlie0129/batt.git", branch: "master"
 
@@ -52,10 +52,11 @@ class Batt < Formula
   end
 
   test do
-    # NB: assumes first run of batt, with no previous config.
-    assert_match "config file #{etc}/batt.json does not exist, using default config",
+    # batt is only meaningful on Mac laptops. There is not much we can test
+    # in a VM.
+    assert_match "operation not permitted", # Non-root daemon cannot listen in /var/run
       shell_output("#{bin}/batt daemon --config=#{etc}/batt.json 2>&1", 1) # Non-root daemon exits with 1
-    assert_match "failed to connect to unix socket.",
+    assert_match "batt daemon is not running",
       shell_output("#{bin}/batt status 2>&1", 1) # Cannot connect to daemon
   end
 end

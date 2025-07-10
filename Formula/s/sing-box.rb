@@ -4,6 +4,7 @@ class SingBox < Formula
   url "https://github.com/SagerNet/sing-box/archive/refs/tags/v1.11.15.tar.gz"
   sha256 "97d58dd873d7cf9b5e4b4aca5516568f3b2e6f5c3dbc93241c82fff5e4a609fd"
   license "GPL-3.0-or-later"
+  revision 1
   head "https://github.com/SagerNet/sing-box.git", branch: "dev-next"
 
   bottle do
@@ -19,7 +20,8 @@ class SingBox < Formula
 
   def install
     ldflags = "-s -w -X github.com/sagernet/sing-box/constant.Version=#{version} -buildid="
-    tags = "with_gvisor,with_quic,with_wireguard,with_utls,with_reality_server,with_clash_api"
+    tags = "with_gvisor,with_dhcp,with_wireguard,with_reality_server,with_clash_api,with_quic," \
+           "with_utls,with_acme,with_ech"
     system "go", "build", *std_go_args(ldflags:, tags:), "./cmd/sing-box"
     generate_completions_from_executable(bin/"sing-box", "completion")
   end

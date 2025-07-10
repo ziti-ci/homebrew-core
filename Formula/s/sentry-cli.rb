@@ -7,13 +7,13 @@ class SentryCli < Formula
   head "https://github.com/getsentry/sentry-cli.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "7da89ac606667a40338012b27cf303f4f9c4354752386ad5d2eb55596ff574cd"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "81a2c48146be930e3afff6163c4bec471076645d66a14d837832012e6d428db4"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "a511db75c5b7cc7a4b3fae779cd1e00b33555b4a973c113ab63c46bb45621979"
-    sha256 cellar: :any_skip_relocation, sonoma:        "4006029304324cf229de6b674ae287ccc5f51cae7d938eea730c8599b808edfa"
-    sha256 cellar: :any_skip_relocation, ventura:       "4b8ea2d4efc000e1f21626ce1ce23519b6376e5704c769d479319c773d25724b"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "a2ce7bab6e424741909ba67d7d6e2d6d4b347fdce8f114dff77c49c55a7d66f8"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "e11439501e145c7bdd4af4abb3827e18da777f07df9e4f9abe25b8230b2e07b6"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "502f65f9bbb119170b38925a53b6e6b42f6cfc32a7536be6cd5e05a05f9d9ef9"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "e14afb22ab9728634a5fe52eecf65db6746b22f843cf86e7063398a0f070f465"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "26744a9ff01e85aaaa3d190a9bee396cf1eda1d0518986d1de36aeb5a7dde446"
+    sha256 cellar: :any_skip_relocation, sonoma:        "8c53a9ded296d05965fbf749498de44684d77c858a13dec83a7065f863c780f3"
+    sha256 cellar: :any_skip_relocation, ventura:       "076269f6a248e8c8853d669780ef4c8abf722d7ac4c45f888157e91aa63fe2a9"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "92712ba7993149b712e9287ec6725bae545de2b271952856b34c6e41d1794289"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "96a79e9d44827b7cbead3315382013245b3f891f9de19171b010559fa4746483"
   end
 
   depends_on "pkgconf" => :build

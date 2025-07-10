@@ -1,8 +1,8 @@
 class AzureCoreCpp < Formula
   desc "Primitives, abstractions and helpers for Azure SDK client libraries"
   homepage "https://github.com/Azure/azure-sdk-for-cpp/tree/main/sdk/core/azure-core"
-  url "https://github.com/Azure/azure-sdk-for-cpp/archive/refs/tags/azure-core_1.15.0.tar.gz"
-  sha256 "f13b41b1cf5ae8618909b2d30387cc83d9bbbf8fb7746e9d35196a524efcd3d9"
+  url "https://github.com/Azure/azure-sdk-for-cpp/archive/refs/tags/azure-core_1.16.0.tar.gz"
+  sha256 "7f8ba547ef67290075ce148ba1769cf43aa9c7aeed1a62ac5f7ab521f6e68724"
   license "MIT"
 
   livecheck do

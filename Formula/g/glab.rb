@@ -2,8 +2,8 @@ class Glab < Formula
   desc "Open-source GitLab command-line tool"
   homepage "https://gitlab.com/gitlab-org/cli"
   url "https://gitlab.com/gitlab-org/cli.git",
-    tag:      "v1.61.0",
-    revision: "ef3ade5e9d4bd7edb8205489b0e29f486b6f0309"
+    tag:      "v1.62.0",
+    revision: "1df2df0d0eb78a74351ca2d963c7b6c0671eda64"
   license "MIT"
   head "https://gitlab.com/gitlab-org/cli.git", branch: "main"
 

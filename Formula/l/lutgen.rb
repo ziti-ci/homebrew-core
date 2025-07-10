@@ -17,6 +17,7 @@ class Lutgen < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura: "cfdae02120487b9fdf526d5a599c169144adf1358f1f3e2a54ed6696060aec10"
     sha256 cellar: :any_skip_relocation, sonoma:        "6f450e1b1ccae1c0015e8c67debeb200d439931651b25fc8b7b232fd429e8cee"
     sha256 cellar: :any_skip_relocation, ventura:       "b4d999a19d71079a5cf05495dcbccd38b7b979c591587abd320df7aed8dc9a67"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "4eb44214f2e8eb17fe10c0e7177f8ca20220b714bf7d90aefd040c213139f7fe"
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "3a7819713a140640e8d7e92fbd98f7da430cd7696873048565f71872ce566cb1"
   end
 

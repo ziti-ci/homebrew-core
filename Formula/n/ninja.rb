@@ -1,8 +1,8 @@
 class Ninja < Formula
   desc "Small build system for use with gyp or CMake"
   homepage "https://ninja-build.org/"
-  url "https://github.com/ninja-build/ninja/archive/refs/tags/v1.13.0.tar.gz"
-  sha256 "f08641d00099a9e40d44ec0146f841c472ae58b7e6dd517bee3945cfd923cedf"
+  url "https://github.com/ninja-build/ninja/archive/refs/tags/v1.13.1.tar.gz"
+  sha256 "f0055ad0369bf2e372955ba55128d000cfcc21777057806015b45e4accbebf23"
   license "Apache-2.0"
   head "https://github.com/ninja-build/ninja.git", branch: "master"
 

@@ -8,13 +8,14 @@ class Sqlfluff < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any,                 arm64_sequoia: "e4ad36c8b7ae6c9a7ad90a1cdae9ed75b4e64e88b40480bbade5be1248f2902f"
-    sha256 cellar: :any,                 arm64_sonoma:  "1c2db9b2b6ef9ff644e44c7443db38ab93cd78216118bc5e1fffc16ff27ca68a"
-    sha256 cellar: :any,                 arm64_ventura: "af07ffd171de43d3c78306b01f35ee62bd8e6afa9ceec0c7a9c867a3021350be"
-    sha256 cellar: :any,                 sonoma:        "308bbc3de915d52b57f836dd4e4e513e34e09fffd2fc9ed946f17dcc39412a22"
-    sha256 cellar: :any,                 ventura:       "2c5ec51f5af2ab974d06c0ba1dd8e345eadbf50913a5309f7c94ec37db50c0dc"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "073ea38f566c4d067837b4a4b5957e441a71eb70408a6663013a41220e0175da"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "c7fe17c8e4012a3ce76acd0aceb6a2b09cb6bcb2ef2aeb75cc68f689950d2dce"
+    rebuild 1
+    sha256 cellar: :any,                 arm64_sequoia: "00df0b59a44577d15dcc95a8e4b5617bccb6e75a295dd9eb8657c390777af705"
+    sha256 cellar: :any,                 arm64_sonoma:  "e9fddc0b6af20e56f98800f11e76eeceabcbd30ed5a3f5a8fb7f720e56622f7d"
+    sha256 cellar: :any,                 arm64_ventura: "1b218c47a9af7040becd822b270dd4130fbe725a9501f2c973a2ba1184e59000"
+    sha256 cellar: :any,                 sonoma:        "b01712f83ceb61b57ec3b3794d3e2b8877a4db0ca9208b83f8ba125b11403f8f"
+    sha256 cellar: :any,                 ventura:       "8f2725e03f95fe805d932b977c648e562d1cde26fd5554952c8fecd1ae43c343"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "7483805504dcf40c6c3088824e6fe7052c3fd26b5484011f0225b6469c1426eb"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "4f1f99740cac004bdd8374ee0e55bdc8ac0f1fa71487735c41ce51dbecf47546"
   end
 
   depends_on "libyaml"
@@ -108,7 +109,7 @@ class Sqlfluff < Formula
   def install
     virtualenv_install_with_resources
 
-    generate_completions_from_executable(bin/"sqlfluff", shells: [:fish, :zsh], shell_parameter_format: :click)
+    generate_completions_from_executable(bin/"sqlfluff", shells: [:bash, :fish, :zsh], shell_parameter_format: :click)
   end
 
   test do

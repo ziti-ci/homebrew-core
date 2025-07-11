@@ -69,7 +69,7 @@ class Knot < Formula
     <<~EOS
       server:
         rundir: "#{var}/knot"
-        listen: [ "0.0.0.0@53", "::@53" ]
+        listen: [ "127.0.0.1@53", "::@53" ]
 
       log:
         - target: "stderr"

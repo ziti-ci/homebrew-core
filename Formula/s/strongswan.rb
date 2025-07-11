@@ -54,6 +54,7 @@ class Strongswan < Formula
       --enable-eap-mschapv2
       --enable-ikev1
       --enable-ikev2
+      --enable-kdf
       --enable-kernel-pfkey
       --enable-nonce
       --enable-openssl

@@ -11,6 +11,7 @@ class BacklogMd < Formula
     sha256                               arm64_ventura: "8b51d310e260f2e32cfd5fb16b2d70aa01382b512f98a356cc12bb0e5594b56a"
     sha256 cellar: :any_skip_relocation, sonoma:        "b5d3e2a7aadce3121f6856440fcc1b02a07d8fef14d0df26fc98a96e08516b37"
     sha256 cellar: :any_skip_relocation, ventura:       "b5d3e2a7aadce3121f6856440fcc1b02a07d8fef14d0df26fc98a96e08516b37"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "2cb0b4903d1c279469aa989f4da7ce7f64c7b36d6e360b09a110543a29683918"
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "6fb09cdc203f00dc244749a0742e772fd9f77bb02a53e9d9b9eb68058aaee8d5"
   end
 

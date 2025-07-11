@@ -1,8 +1,8 @@
 class Cpm < Formula
   desc "Fast CPAN module installer"
   homepage "https://metacpan.org/pod/cpm"
-  url "https://cpan.metacpan.org/authors/id/S/SK/SKAJI/App-cpm-0.997023.tar.gz"
-  sha256 "5185cfba03bd48e9554663721172a387d66c81dc5e1a1f83b967aabd04614c95"
+  url "https://cpan.metacpan.org/authors/id/S/SK/SKAJI/App-cpm-0.997024.tar.gz"
+  sha256 "df02d482d90332ed61dd2a7c80732395e941eb915374f00af546e1c079542805"
   license any_of: ["Artistic-1.0-Perl", "GPL-1.0-or-later"]
   head "https://github.com/skaji/cpm.git", branch: "master"
 
@@ -21,8 +21,8 @@ class Cpm < Formula
   conflicts_with "yaze-ag", because: "both install `cpm` binaries"
 
   resource "Module::Build::Tiny" do
-    url "https://cpan.metacpan.org/authors/id/L/LE/LEONT/Module-Build-Tiny-0.051.tar.gz"
-    sha256 "74fdce35e8cd4d787bc2d4fc1d43a291b7bbced4e94dc5fc592bd81ca93a98e9"
+    url "https://cpan.metacpan.org/authors/id/L/LE/LEONT/Module-Build-Tiny-0.052.tar.gz"
+    sha256 "bd10452c9f24d4b4fe594126e3ad231bab6cebf16acda40a4e8dc784907eb87f"
   end
 
   resource "CPAN::Common::Index" do
@@ -51,8 +51,8 @@ class Cpm < Formula
   end
 
   resource "Command::Runner" do
-    url "https://cpan.metacpan.org/authors/id/S/SK/SKAJI/Command-Runner-0.200.tar.gz"
-    sha256 "5ad26d06111bfecd53c8f5bb5dea94bf2025f6c78e95f6d8012e4cfa89e29f26"
+    url "https://cpan.metacpan.org/authors/id/S/SK/SKAJI/Command-Runner-0.201.tar.gz"
+    sha256 "38e3294ae9ffd015625d7746a0803cc329de92fb0f0edae9a29cd8232cf458d3"
   end
 
   resource "Darwin::InitObjC" do
@@ -126,8 +126,8 @@ class Cpm < Formula
   end
 
   resource "Parallel::Pipes" do
-    url "https://cpan.metacpan.org/authors/id/S/SK/SKAJI/Parallel-Pipes-0.200.tar.gz"
-    sha256 "88b9850eacc9d618f3e91a51caa386c4a64e82cc187350335244e349b8111106"
+    url "https://cpan.metacpan.org/authors/id/S/SK/SKAJI/Parallel-Pipes-0.201.tar.gz"
+    sha256 "b73cbdd4202b29eab97e0c08dcd59d9273633610e8721cf449078656bd591a7c"
   end
 
   resource "Parse::PMFile" do
@@ -146,8 +146,8 @@ class Cpm < Formula
   end
 
   resource "URI" do
-    url "https://cpan.metacpan.org/authors/id/O/OA/OALDERS/URI-5.31.tar.gz"
-    sha256 "b9c4d58b2614b8611ae03a95a6d60ed996f4b311ef3cd5a937b92f1825ecc564"
+    url "https://cpan.metacpan.org/authors/id/O/OA/OALDERS/URI-5.32.tar.gz"
+    sha256 "9632067d34e14e0dae2da94631c4f25a387fcc48d06fa29330e8b3c04c4e913d"
   end
 
   resource "Win32::ShellQuote" do

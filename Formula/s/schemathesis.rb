@@ -8,13 +8,14 @@ class Schemathesis < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any,                 arm64_sequoia: "a83f019980c8b0c24e3e72fb3bd78daea6861278118a8610de23b3dda03bac61"
-    sha256 cellar: :any,                 arm64_sonoma:  "68ce271a33e01d0af02f8976f012dd1eebc9a3c1389ff6351a19485e7f56c738"
-    sha256 cellar: :any,                 arm64_ventura: "5bb8d6fcaa0a758cffcc99569ec1eb7891c2b444498842d588c7b028e2dbea8a"
-    sha256 cellar: :any,                 sonoma:        "be4cd90f1f11b842d08edb113622733acfee7b75031547f4ddba7dfd649cd3ba"
-    sha256 cellar: :any,                 ventura:       "ffb3848b46807740dcf7fa25e937ef126dee31bbba9ec0fd5c8f2f6c85d6e3b5"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "e3ad51cbdefe799ce4e1c47bba7c83b520a060c53d798609fc2ecc6d34104176"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "796675fab833b56398a7df8d30945e49fb93e7676ef31a206ab37b071805210d"
+    rebuild 1
+    sha256 cellar: :any,                 arm64_sequoia: "229bf48f0944e3cdc645aee20403333459ec84d76ff829d24e3f8689b5bef833"
+    sha256 cellar: :any,                 arm64_sonoma:  "5b65dba4633b247654fd0ac55c4a79f4ae9d7db9cf47d336e1380ad77e19bae4"
+    sha256 cellar: :any,                 arm64_ventura: "71fbc0c5168dfb794d40705b14f508eb4b98386fa03247fb9780aa01f5511e4a"
+    sha256 cellar: :any,                 sonoma:        "49e3a301ee046905afc25dea9ab7a8dac2d24b6dd09bb09a65683d420874183e"
+    sha256 cellar: :any,                 ventura:       "d3bd0b8df5e638cd494407e1d2df5a03f5a6f086d5b9163fd0de6882b608bd9c"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "351126b74c8293e88ec87feb4bbd0314d2d2b4da27b39c8589fa2ddf05bf9d78"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "eb5997e44420c08c9110b6225626c4c92d7d5a8d0d794a460f423a6f9dc2b468"
   end
 
   depends_on "rust" => :build # for rpds-py
@@ -287,7 +288,7 @@ class Schemathesis < Formula
   def install
     virtualenv_install_with_resources
 
-    generate_completions_from_executable(bin/"st", shells: [:fish, :zsh], shell_parameter_format: :click)
+    generate_completions_from_executable(bin/"st", shells: [:bash, :fish, :zsh], shell_parameter_format: :click)
   end
 
   test do

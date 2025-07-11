@@ -37,7 +37,7 @@ class Qsv < Formula
     # see discussion at https://github.com/briansmith/ring/discussions/2528#discussioncomment-13196576
     ENV["RUSTFLAGS"] = "-C target-cpu=apple-m1" if OS.mac? && Hardware::CPU.arm?
 
-    system "cargo", "install", *std_cargo_args, "--features", "apply,luau,feature_capable"
+    system "cargo", "install", *std_cargo_args, "--features", "apply,lens,luau,feature_capable"
     bash_completion.install "contrib/completions/examples/qsv.bash" => "qsv"
     fish_completion.install "contrib/completions/examples/qsv.fish"
     zsh_completion.install "contrib/completions/examples/qsv.zsh" => "_qsv"
@@ -45,14 +45,10 @@ class Qsv < Formula
 
   test do
     (testpath/"test.csv").write("first header,second header")
-    assert_equal <<~EOS, shell_output("#{bin}/qsv stats --dataset-stats test.csv")
-      field,type,is_ascii,sum,min,max,range,sort_order,sortiness,min_length,max_length,sum_length,avg_length,stddev_length,variance_length,cv_length,mean,sem,geometric_mean,harmonic_mean,stddev,variance,cv,nullcount,max_precision,sparsity,qsv__value
-      first header,NULL,,,,,,,,,,,,,,,,,,,,,,0,,,
-      second header,NULL,,,,,,,,,,,,,,,,,,,,,,0,,,
-      qsv__rowcount,,,,,,,,,,,,,,,,,,,,,,,,,,0
-      qsv__columncount,,,,,,,,,,,,,,,,,,,,,,,,,,2
-      qsv__filesize_bytes,,,,,,,,,,,,,,,,,,,,,,,,,,26
-      qsv__fingerprint_hash,,,,,,,,,,,,,,,,,,,,,,,,,,589aa48c29e0a4abf207a0ff266da0903608c1281478acd75457c8f8ccea455a
+    assert_equal <<~EOS, shell_output("#{bin}/qsv stats test.csv")
+      field,type,is_ascii,sum,min,max,range,sort_order,sortiness,min_length,max_length,sum_length,avg_length,stddev_length,variance_length,cv_length,mean,sem,geometric_mean,harmonic_mean,stddev,variance,cv,nullcount,max_precision,sparsity
+      first header,NULL,,,,,,,,,,,,,,,,,,,,,,0,,
+      second header,NULL,,,,,,,,,,,,,,,,,,,,,,0,,
     EOS
   end
 end

@@ -1,8 +1,8 @@
 class Mosquitto < Formula
   desc "Message broker implementing the MQTT protocol"
   homepage "https://mosquitto.org/"
-  url "https://mosquitto.org/files/source/mosquitto-2.0.21.tar.gz"
-  sha256 "7ad5e84caeb8d2bb6ed0c04614b2a7042def961af82d87f688ba33db857b899d"
+  url "https://mosquitto.org/files/source/mosquitto-2.0.22.tar.gz"
+  sha256 "2f752589ef7db40260b633fbdb536e9a04b446a315138d64a7ff3c14e2de6b68"
   # # dual-licensed under EPL-1.0 and EDL-1.0 (Eclipse Distribution License v1.0),
   # EDL-1.0 is pretty the same as BSD-3-Clause,
   # see discussions in https://github.com/spdx/license-list-XML/issues/1149
@@ -66,7 +66,7 @@ class Mosquitto < Formula
   end
 
   test do
-    assert_match "Usage: mosquitto ", shell_output("#{sbin}/mosquitto -h", 3)
+    assert_match "Usage: mosquitto ", shell_output("#{sbin}/mosquitto -h")
     assert_match "Dynamic Security module", shell_output("#{bin}/mosquitto_ctrl dynsec help")
     system bin/"mosquitto_passwd", "-c", "-b", testpath/"mosquitto.pass", "foo", "bar"
     assert_match(/^foo:/, (testpath/"mosquitto.pass").read)

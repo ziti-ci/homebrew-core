@@ -10,8 +10,8 @@ class Gitlint < Formula
   no_autobump! because: :requires_manual_review
 
   bottle do
-    rebuild 5
-    sha256 cellar: :any_skip_relocation, all: "7b347048bcc8bd14d3d1e1cb1ab96d19753c4ccf52c9b37f4fd1f353db79bfc0"
+    rebuild 6
+    sha256 cellar: :any_skip_relocation, all: "36439a03cc83049977c6ff628f75a76a33dd727ebbfc7f824f46329f6f880440"
   end
 
   depends_on "python@3.13"

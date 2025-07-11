@@ -17,11 +17,11 @@ class Kdoctools < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_sonoma:  "a3dcf7e137221f20b24d99743c6b629f9cad20466a1e0f8ed48f2fcbd4c20196"
-    sha256 cellar: :any,                 arm64_ventura: "58d2018fb464154886db3a2456a91de6d870c8923b063fc689125ef3317637a3"
-    sha256 cellar: :any,                 sonoma:        "422fc7677abb52e9f4dfc8f0f4a23601e91b09c6abda2f241813a20b92afcdc9"
-    sha256 cellar: :any,                 ventura:       "66125449564ccbe7d89d2d8b6263d821d5f56304edb09b3b52d9f083d2b63f4d"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "fc01903300ad90f595bbe766cfac97c8f8e80ddf02bb82601361dce81771a218"
+    sha256 cellar: :any,                 arm64_sonoma:  "8d7efaff525811b62abb0316288a73e618cbfd7f6c96e4bef48bd1f79a8e604a"
+    sha256 cellar: :any,                 arm64_ventura: "dfba835e98c136797a3c1fd45841a1190b6d9785408e29ccf6ebd96b738d6a14"
+    sha256 cellar: :any,                 sonoma:        "9a93e956736b717755b8bebd21953c5a1481d623561cde97b7e185c7d0d38a4d"
+    sha256 cellar: :any,                 ventura:       "0d2047c8416cf079f0475618d5833f72796d8d671dc46b1c9f0360dbe4fe4513"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "e0e4cd4f78b5eb2b728eb9d4f6e6a6385cf6a973ddb1cae5659fa0ba99b0495c"
   end
 
   depends_on "cmake" => [:build, :test]

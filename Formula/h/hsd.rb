@@ -23,6 +23,10 @@ class Hsd < Formula
   depends_on "node"
   depends_on "unbound"
 
+  on_sonoma :or_older do
+    depends_on "gmp"
+  end
+
   def install
     system "npm", "install", *std_npm_args
     bin.install_symlink Dir[libexec/"bin/*"]

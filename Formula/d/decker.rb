@@ -11,6 +11,7 @@ class Decker < Formula
     sha256 cellar: :any,                 arm64_ventura: "78bebccdfbb44a85d0bd0bbfd4f27645464ca33cafa944fcce15610c258dc71b"
     sha256 cellar: :any,                 sonoma:        "210cb074001ff2128e36ff58e083db477a0bfbf9935c8410448f40dff7a77e6e"
     sha256 cellar: :any,                 ventura:       "a94c0dd0f340892b5e6a18745983065196f9c103017095c9f8f5c2a18f764b14"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "47e6ea41cbdeccb22bb40b323eb48350913702e9f078d85b14940832ad6ddc44"
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "492440a007d4c501ea67c46ec3c8be713a6b26ec794ee300101e86d8fccc55d6"
   end
 

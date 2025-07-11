@@ -64,7 +64,7 @@ class Varnish < Formula
 
   service do
     run [opt_sbin/"varnishd", "-n", var/"varnish", "-f", etc/"varnish/default.vcl", "-s", "malloc,1G", "-T",
-         "127.0.0.1:2000", "-a", "0.0.0.0:8080", "-F"]
+         "127.0.0.1:2000", "-a", "127.0.0.1:8080", "-F"]
     keep_alive true
     working_dir HOMEBREW_PREFIX
     log_path var/"varnish/varnish.log"

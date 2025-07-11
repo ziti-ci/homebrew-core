@@ -17,11 +17,11 @@ class Karchive < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_sonoma:  "df12ce74ad9623a81b7d100976cb759f294eea9439414f40ff9933acfb000e43"
-    sha256 cellar: :any,                 arm64_ventura: "fa2b4bfa772bb3c41aaea512bc094865395586d9af38b707797eb0e78ae0c18f"
-    sha256 cellar: :any,                 sonoma:        "54d5608c4fdbdb3e3d3e93971a7481b0486140cbb8432952d1b4f9d3e628424b"
-    sha256 cellar: :any,                 ventura:       "89684eb4879323d489bd083c90fc47fb6f475759a218a18a29a753049aa4ad22"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "e72edc3d9a7d622694cb88a5635180e5483acc42febe6b0d97a0d4e93fd06538"
+    sha256 cellar: :any,                 arm64_sonoma:  "ed6273e3bb28e54914cde5680887b024463b7559591af3f809b3934336ddf85c"
+    sha256 cellar: :any,                 arm64_ventura: "12ebb7b5d3b1679e1385da3ccde3fef728e388bb6f5c821591af958baea24b11"
+    sha256 cellar: :any,                 sonoma:        "d812b7044b5d430599b1bb8b795730e36ab346e22e4b79a94394c78f31ce018c"
+    sha256 cellar: :any,                 ventura:       "5e3db0a94a50abab114e5287263db59b25fd0c458fcfdb2a8614c95e3263fb9d"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "ef53da18f4fda8f1b522efd2a65c246063bd10551c6f6b15369ddce1ba053e2c"
   end
 
   depends_on "cmake" => [:build, :test]

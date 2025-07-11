@@ -6,7 +6,7 @@ class Certifi < Formula
   license "MPL-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "3b1caaeadc51017a1030d7a9a77b6c69bdbbea8c273e9ee01a3e3b79ac6350d1"
+    sha256 cellar: :any_skip_relocation, all: "053d23da93b97d87cd4fdc479b8f9f4d650457a99652f3fdd5caea85c8ae4cc3"
   end
 
   depends_on "python@3.12" => [:build, :test]

@@ -7,12 +7,12 @@ class Mods < Formula
   head "https://github.com/charmbracelet/mods.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "4d6a77c6fae2724572a0eca25aa00f98e7fbc496256f9c4f13c2aa96adf07fb2"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "4d6a77c6fae2724572a0eca25aa00f98e7fbc496256f9c4f13c2aa96adf07fb2"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "4d6a77c6fae2724572a0eca25aa00f98e7fbc496256f9c4f13c2aa96adf07fb2"
-    sha256 cellar: :any_skip_relocation, sonoma:        "b7eaae99ede15ebbe76c50e8d5f3648fc1b71bce725c8838ea10e702893cb368"
-    sha256 cellar: :any_skip_relocation, ventura:       "b7eaae99ede15ebbe76c50e8d5f3648fc1b71bce725c8838ea10e702893cb368"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "83cfb78160e71b154cb9b047d42cc5d10bad3affa8fbcc5b0a735e540e73637b"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "679478d8a2130c41981b35df3755dc526696b284912031d86dc09f75db788fee"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "679478d8a2130c41981b35df3755dc526696b284912031d86dc09f75db788fee"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "679478d8a2130c41981b35df3755dc526696b284912031d86dc09f75db788fee"
+    sha256 cellar: :any_skip_relocation, sonoma:        "75cacca99fb5c70b31d0b59fb23ba8572fa49d8f995cd3d666c3fdd37ae4d0fd"
+    sha256 cellar: :any_skip_relocation, ventura:       "75cacca99fb5c70b31d0b59fb23ba8572fa49d8f995cd3d666c3fdd37ae4d0fd"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "0e5dd968e08dfe368e4f6e098671a827afe2904be869cea0499d9ec25e562cde"
   end
 
   depends_on "go" => :build

@@ -3,19 +3,18 @@ class Schemathesis < Formula
 
   desc "Testing tool for web applications with specs"
   homepage "https://schemathesis.readthedocs.io/"
-  url "https://files.pythonhosted.org/packages/40/10/07dae635909814d84e3f7c71389ee79834612d03111c6287ba8fef267947/schemathesis-4.0.7.tar.gz"
-  sha256 "2cebaf8ffcdc18681a2ff197a7efc073ff6c6b9a1917d650da68525ecb38cf5e"
+  url "https://files.pythonhosted.org/packages/1a/f3/c078ef7d7f82e4e013a5df90c276a658bc41ef0ec56fd383d87d1c7988e2/schemathesis-4.0.8.tar.gz"
+  sha256 "96935bbcb26f875ded2ad156258cb5d869539bfd8a8733cbd71af90a2b67527e"
   license "MIT"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any,                 arm64_sequoia: "229bf48f0944e3cdc645aee20403333459ec84d76ff829d24e3f8689b5bef833"
-    sha256 cellar: :any,                 arm64_sonoma:  "5b65dba4633b247654fd0ac55c4a79f4ae9d7db9cf47d336e1380ad77e19bae4"
-    sha256 cellar: :any,                 arm64_ventura: "71fbc0c5168dfb794d40705b14f508eb4b98386fa03247fb9780aa01f5511e4a"
-    sha256 cellar: :any,                 sonoma:        "49e3a301ee046905afc25dea9ab7a8dac2d24b6dd09bb09a65683d420874183e"
-    sha256 cellar: :any,                 ventura:       "d3bd0b8df5e638cd494407e1d2df5a03f5a6f086d5b9163fd0de6882b608bd9c"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "351126b74c8293e88ec87feb4bbd0314d2d2b4da27b39c8589fa2ddf05bf9d78"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "eb5997e44420c08c9110b6225626c4c92d7d5a8d0d794a460f423a6f9dc2b468"
+    sha256 cellar: :any,                 arm64_sequoia: "2dca8476eadd80f1a1fe8eb85ea33b0db70a746858ebcb6dd942466b4a2725b8"
+    sha256 cellar: :any,                 arm64_sonoma:  "289d2fbe7485a260de6e433da40fc800b504a58238576bf8307d91b70677c2ec"
+    sha256 cellar: :any,                 arm64_ventura: "776e0128cb7e9e8800c60fb2c01d1b9b59fe2b6a3ceea5438b2ae378a1265406"
+    sha256 cellar: :any,                 sonoma:        "3dbd26f1d06a030d73ec93fa5622538a66714491acaa2597cbfd109d1bc0c154"
+    sha256 cellar: :any,                 ventura:       "88d2ea0fb95f87dcb964eb8576bed3d3677e3c11c59c6739955c07800ba2b341"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "778222d7707e957621f93ad44111b8d6efb81505466f23b7282648a1651f4a54"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "471fedb2af6cbcb1c35f488e7eb799d809f690e28dd2bfe4b5b8c17b2125c5e2"
   end
 
   depends_on "rust" => :build # for rpds-py

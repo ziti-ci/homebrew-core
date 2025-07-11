@@ -3,18 +3,21 @@ class Readline < Formula
   homepage "https://tiswww.case.edu/php/chet/readline/rltop.html"
   url "https://ftp.gnu.org/gnu/readline/readline-8.3.tar.gz"
   mirror "https://ftpmirror.gnu.org/readline/readline-8.3.tar.gz"
+  version "8.3.1"
   sha256 "fe5383204467828cd495ee8d1d3c037a7eba1389c22bc6a041f627976f9061cc"
   license "GPL-3.0-or-later"
 
   # Add new patches using this format:
   #
   # patch_checksum_pairs = %w[
-  #   001 <checksum for 8.3.1>
-  #   002 <checksum for 8.3.2>
+  #   001 <checksum for <major>.<minor>.1>
+  #   002 <checksum for <major>.<minor>.2>
   #   ...
   # ]
 
-  patch_checksum_pairs = %w[]
+  patch_checksum_pairs = %w[
+    001 21f0a03106dbe697337cd25c70eb0edbaa2bdb6d595b45f83285cdd35bac84de
+  ]
 
   patch_checksum_pairs.each_slice(2) do |p, checksum|
     patch :p0 do
@@ -79,12 +82,6 @@ class Readline < Formula
   keg_only :shadowed_by_macos, "macOS provides BSD libedit"
 
   uses_from_macos "ncurses"
-
-  # fixed issue https://github.com/Homebrew/homebrew-core/issues/229296
-  patch :p0 do
-    url "https://lists.gnu.org/archive/html/bug-readline/2025-07/txtTYu28QVKRX.txt"
-    sha256 "171dd70c961eb856597ff379e17d1ada3f00721c9b1acf95a5acf2640165b92c"
-  end
 
   def install
     system "./configure", "--prefix=#{prefix}", "--with-curses"

@@ -39,7 +39,7 @@ class LaunchSocketServer < Formula
     require_root true
     error_log_path var/"log/launch_socket_server.log"
     log_path var/"log/launch_socket_server.log"
-    sockets "tcp://0.0.0.0:80"
+    sockets "tcp://127.0.0.1:80"
   end
 
   test do

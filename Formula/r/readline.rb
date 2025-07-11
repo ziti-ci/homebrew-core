@@ -65,19 +65,26 @@ class Readline < Formula
   no_autobump! because: :incompatible_version_format
 
   bottle do
-    sha256 cellar: :any,                 arm64_sequoia: "a517cb70e4efb6a1d061fc5da61aefd9390b86fbe21024cef18b5697f5f7af94"
-    sha256 cellar: :any,                 arm64_sonoma:  "875c8524ef5514ba0368040d2355fce741ef00206c214a661d5bec1e66979b38"
-    sha256 cellar: :any,                 arm64_ventura: "e63fe588d7dc5ddf30351150c325be8dbd474e20d469a1632542bcf62531000f"
-    sha256 cellar: :any,                 sequoia:       "f4e77a529e80700170d7de8f1cea5e7773e8fbadfab69669465761170f8f0b47"
-    sha256 cellar: :any,                 sonoma:        "f861e9241d7b5b53457a64f45cd128be2bca6c93c4769caba1dc7ca04c7f8eed"
-    sha256 cellar: :any,                 ventura:       "ed7497b20408ad2447e3451adcff05133bc07c8a56f49b6ea0fae730919e49ee"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "5d2c6882b7c79962109f46af7855600d157508be3ffba9f29af442dc337829bd"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "9fedfb81316e643182df350f4861dcde21bb2d19f0f533ec9a76b03754ba07dd"
+    rebuild 1
+    sha256 cellar: :any,                 arm64_sequoia: "2b2a7b035021c228b2e5dc392a0764174c0efb3dbb673fd06ee1b7a8eaa2cc25"
+    sha256 cellar: :any,                 arm64_sonoma:  "5f5c9d9954dbd01bd160080f9a40f09146e72ffee718c6c1d2807125c6ef8c9f"
+    sha256 cellar: :any,                 arm64_ventura: "360d6bdde7b80fad0d8b0c14c4ddf2eb067d30699cd738bc44b9ca6c6ec34eb0"
+    sha256 cellar: :any,                 sequoia:       "c1a8c74eb55d439ab7fac968f13e01e7f46983dbaaa8366b564302132788443e"
+    sha256 cellar: :any,                 sonoma:        "901f1230403f81ce7436db17c2cff1b8856fee17353635ba016774a4389b4d46"
+    sha256 cellar: :any,                 ventura:       "93522b52a1220c62fb1aba282b60e2820b4118e56fbe9812fe51c3cdc7def4f3"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "7252c80cfdf7f67036cdbea02915b8fd8f6a4a4c3af5564e9cbdb4de643135d7"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "10dd3fcccedba84bb3392ce97dc50b28ea73ce83707d48ac73b9e35b326d9cea"
   end
 
   keg_only :shadowed_by_macos, "macOS provides BSD libedit"
 
   uses_from_macos "ncurses"
+
+  # fixed issue https://github.com/Homebrew/homebrew-core/issues/229296
+  patch :p0 do
+    url "https://lists.gnu.org/archive/html/bug-readline/2025-07/txtTYu28QVKRX.txt"
+    sha256 "171dd70c961eb856597ff379e17d1ada3f00721c9b1acf95a5acf2640165b92c"
+  end
 
   def install
     system "./configure", "--prefix=#{prefix}", "--with-curses"

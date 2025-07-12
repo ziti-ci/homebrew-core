@@ -1,11 +1,9 @@
 class Miniprot < Formula
   desc "Align proteins to genomes with splicing and frameshift"
   homepage "https://lh3.github.io/miniprot/"
-  url "https://github.com/lh3/miniprot/archive/refs/tags/v0.17.tar.gz"
-  sha256 "afdad05d18290756a7056ca7f67a91bd55d56006100653fd3dd956652206a415"
+  url "https://github.com/lh3/miniprot/archive/refs/tags/v0.18.tar.gz"
+  sha256 "e1b5c08571fa3a4aa225da8ec9c6e744cd116b4dc50d9e187114cffe336921ee"
   license "MIT"
-
-  no_autobump! because: :requires_manual_review
 
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_sequoia: "b9fdb99ed4c69aa105f0a39f5d204dd70df9f509cfa75821c8a7cefd9708d9bb"

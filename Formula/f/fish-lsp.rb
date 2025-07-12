@@ -1,11 +1,9 @@
 class FishLsp < Formula
   desc "LSP implementation for the fish shell language"
   homepage "https://www.fish-lsp.dev"
-  url "https://registry.npmjs.org/fish-lsp/-/fish-lsp-1.0.9-1.tgz"
-  sha256 "c28799ee8b7e3a17b7892aa3f9d80ebe638313b9bce772ac364faee3ced5d43a"
+  url "https://registry.npmjs.org/fish-lsp/-/fish-lsp-1.0.10.tgz"
+  sha256 "8658f4568796fbc1736774c332b6cf8199bf1218a32297930153bb1a239cd2e5"
   license "MIT"
-
-  no_autobump! because: :requires_manual_review
 
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_sequoia: "fd0aa44217f04dce7a0016c07e1f232552092de2958a862b3dbba59ff98e5d4e"

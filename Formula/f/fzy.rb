@@ -1,12 +1,10 @@
 class Fzy < Formula
   desc "Fast, simple fuzzy text selector with an advanced scoring algorithm"
   homepage "https://github.com/jhawthorn/fzy"
-  url "https://github.com/jhawthorn/fzy/releases/download/1.0/fzy-1.0.tar.gz"
-  sha256 "80257fd74579e13438b05edf50dcdc8cf0cdb1870b4a2bc5967bd1fdbed1facf"
+  url "https://github.com/jhawthorn/fzy/archive/refs/tags/1.1.tar.gz"
+  sha256 "93d300d9c6c7063b2c6bda4e08a9704a029ec33f609718cd95443d1a890aff4e"
   license "MIT"
   head "https://github.com/jhawthorn/fzy.git", branch: "master"
-
-  no_autobump! because: :requires_manual_review
 
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_sequoia:  "8cbf2b486b0abed29cf5fb45fc5580fc74881ceacae68cd11e53bdbeabae52ea"

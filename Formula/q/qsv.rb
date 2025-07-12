@@ -1,8 +1,8 @@
 class Qsv < Formula
   desc "Ultra-fast CSV data-wrangling toolkit"
   homepage "https://qsv.dathere.com/"
-  url "https://github.com/dathere/qsv/archive/refs/tags/5.1.0.tar.gz"
-  sha256 "9bed0898cce8de237a0a04f8d28947720dbb6d0b2919cf297007a1a57569dfd2"
+  url "https://github.com/dathere/qsv/archive/refs/tags/6.0.0.tar.gz"
+  sha256 "7e63eebc78aedf1b3cd1452b631a8255099feafebd5242bb700e2b6e1b311b0e"
   license any_of: ["MIT", "Unlicense"]
   head "https://github.com/dathere/qsv.git", branch: "master"
 
@@ -15,14 +15,13 @@ class Qsv < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "9c9a267fd7703ce64040ed07cd967e05d7852f198fcdf0a8bb9d3cdf093f737d"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "778b552af9b6c5896ed67e49eea45575e950635a661b3549f37627909b20f2a8"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "ea8ce4eefbbb7240e8203e4979fdb46e044d48c5bc0c12cd1b84bf8ad4d2983b"
-    sha256 cellar: :any_skip_relocation, sonoma:        "12d9dc6f10e54ccfd6fb74e26a3313404db8a8dbdbe8a5be5cdd3624a77d3e84"
-    sha256 cellar: :any_skip_relocation, ventura:       "092dbe2634f6613266c88837868bde82f400753ef07d8402e027e41dc56ef9c5"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "cdfd821dc64fc067b2eef24b1a2ec49b25e74d53b5cec1c1dfbfef36ce07271f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "ed9c71032e08aa04795c9a869e8d5333d8a3cdd94d4158a6b0d4d44eb412f655"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "e690cd9294e4c17250b9a4877704e6029368fd2df387541e46ddedbd02dede5a"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "5f4e5f5951413a069cdf78e3da06ffca737a08e8d4c7420237da60cbf57b81dc"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "f053b8599daec356f7e672829cf3b59ac5e0f59482bed10dbac8892c90329dca"
+    sha256 cellar: :any_skip_relocation, sonoma:        "5aed889c839985373e9d5c889fea8e90b3ddfe13a7568c513315b3f242edcd00"
+    sha256 cellar: :any_skip_relocation, ventura:       "34f07782cf43050b9fc52bf6d5dc5ffea9702201dfd77194a73dfd87d64ad244"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "93a474faa277544ee9c02bc1fd15b5d80d632d00275cedd55d498a55d3750d8b"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "69e885b583e64f15fb9f4fd7fd8b392a8a3b6e5b0151cb302b3d8e5ae92e1afb"
   end
 
   depends_on "cmake" => :build # for libz-ng-sys

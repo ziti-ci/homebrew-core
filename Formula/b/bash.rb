@@ -2,6 +2,7 @@ class Bash < Formula
   desc "Bourne-Again SHell, a UNIX command interpreter"
   homepage "https://www.gnu.org/software/bash/"
   license "GPL-3.0-or-later"
+  revision 1
   head "https://git.savannah.gnu.org/git/bash.git", branch: "master"
 
   stable do
@@ -81,10 +82,14 @@ class Bash < Formula
     sha256 x86_64_linux:  "505c5c1260fe9a3a7251baa06dc0acecd0274bdda4686edb04202385523279e6"
   end
 
-  depends_on "gettext"
   # System ncurses lacks functionality
   # https://github.com/Homebrew/homebrew-core/issues/158667
   depends_on "ncurses"
+  depends_on "readline"
+
+  on_macos do
+    depends_on "gettext"
+  end
 
   def bash_loadables_path
     [
@@ -110,7 +115,7 @@ class Bash < Formula
 
     ENV.append_to_cflags "-DDEFAULT_LOADABLE_BUILTINS_PATH='\"#{bash_loadables_path}\"'"
 
-    system "./configure", "--prefix=#{prefix}", "--with-curses", "--without-included-gettext"
+    system "./configure", "--prefix=#{prefix}", "--with-curses", "--with-installed-readline"
     system "make", "install"
 
     (include/"bash/builtins").install lib/"bash/loadables.h"

@@ -1,8 +1,8 @@
 class Kuzu < Formula
   desc "Embeddable graph database management system built for query speed & scalability"
   homepage "https://kuzudb.com/"
-  url "https://github.com/kuzudb/kuzu/archive/refs/tags/v0.10.1.tar.gz"
-  sha256 "b1aa4eb4f542e4dc2f2e25bf02cac827da7c416bd5b431cfde9a1b0281afe85d"
+  url "https://github.com/kuzudb/kuzu/archive/refs/tags/v0.11.0.tar.gz"
+  sha256 "445872031fd41153dd5a35a3d471354f1a98f853df5aad45a0a47154c69eaf2f"
   license "MIT"
   head "https://github.com/kuzudb/kuzu.git", branch: "master"
 
@@ -58,7 +58,7 @@ class Kuzu < Formula
   end
 
   test do
-    db_path = testpath/"testdb/"
+    db_path = testpath/"testdb.kuzu"
     cypher_path = testpath/"test.cypher"
     cypher_path.write <<~EOS
       CREATE NODE TABLE Person(name STRING, age INT64, PRIMARY KEY(name));

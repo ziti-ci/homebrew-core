@@ -71,7 +71,7 @@ jobs:
       contents: read
       issues: write
       pull-requests: write
-    if: always() && github.repository_owner == 'Homebrew'
+    if: always() && github.repository_owner == 'Homebrew' && github.actor != 'BrewTestBot'
     runs-on: ubuntu-latest
     container:
       image: ghcr.io/homebrew/ubuntu22.04:main

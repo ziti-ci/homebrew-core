@@ -1,8 +1,8 @@
 class Dockerfilegraph < Formula
   desc "Visualize your multi-stage Dockerfiles"
   homepage "https://github.com/patrickhoefler/dockerfilegraph"
-  url "https://github.com/patrickhoefler/dockerfilegraph/archive/refs/tags/v0.18.0.tar.gz"
-  sha256 "8ddc643850658a6370e83012d3eace4a84db2052ad584ce98e7522edc2482a2f"
+  url "https://github.com/patrickhoefler/dockerfilegraph/archive/refs/tags/v0.19.0.tar.gz"
+  sha256 "1e1013c9482e7cf55b5e4bb9ca7fefbab02c1cb311220b86e665a1ac3a4f73b7"
   license "MIT"
   head "https://github.com/patrickhoefler/dockerfilegraph.git", branch: "main"
 

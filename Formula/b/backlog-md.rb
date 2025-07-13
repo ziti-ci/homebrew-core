@@ -1,8 +1,8 @@
 class BacklogMd < Formula
   desc "Markdown‑native Task Manager & Kanban visualizer for any Git repository"
   homepage "https://github.com/MrLesk/Backlog.md"
-  url "https://registry.npmjs.org/backlog.md/-/backlog.md-1.2.6.tgz"
-  sha256 "ee3c5c638690a4c1eddf5a5f247c07fe0f0ceb44d21fadd0cc76821c5d7a05e3"
+  url "https://registry.npmjs.org/backlog.md/-/backlog.md-1.3.0.tgz"
+  sha256 "4cc08d0ec4e464d18f1d02aa33a7fb7a22bf1f56f82aebd47912571a5225fe8e"
   license "MIT"
 
   bottle do
@@ -32,7 +32,18 @@ class BacklogMd < Formula
       # Test backlog init command requires interactive input
       require "open3"
       Open3.popen3("#{bin}/backlog", "init", "test") do |stdin, _stdout, _stderr, wait_thr|
-        stdin.puts "\n" # Send enter to proceed
+        stdin.puts "y"
+        sleep 1
+        stdin.puts "y"
+        sleep 1
+        stdin.puts "n"
+        sleep 1
+        stdin.puts "n"
+        sleep 1
+        stdin.puts "\n"
+        sleep 1
+        stdin.puts "\n"
+        sleep 1
         stdin.close
         wait_thr.value # Wait for process to complete
       end

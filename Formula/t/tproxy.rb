@@ -7,12 +7,12 @@ class Tproxy < Formula
   head "https://github.com/kevwan/tproxy.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "d8ec0fe223603e2b5f100a9aefd415c8e7c27c7db92aadade292812d0cd14d66"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "d8ec0fe223603e2b5f100a9aefd415c8e7c27c7db92aadade292812d0cd14d66"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "d8ec0fe223603e2b5f100a9aefd415c8e7c27c7db92aadade292812d0cd14d66"
-    sha256 cellar: :any_skip_relocation, sonoma:        "6f8605f431b78c3cbf0792d2764aed057479af3c93428e872e7aa36249155331"
-    sha256 cellar: :any_skip_relocation, ventura:       "6f8605f431b78c3cbf0792d2764aed057479af3c93428e872e7aa36249155331"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "123df9d7f9259ef84639a7ab4dd1c75e9f1844d1c3044848aad74fec24be5d27"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "f712de225051b2d0321080046ad650ae2c5b6b978514b371582780eaf33a1cb1"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "f712de225051b2d0321080046ad650ae2c5b6b978514b371582780eaf33a1cb1"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "f712de225051b2d0321080046ad650ae2c5b6b978514b371582780eaf33a1cb1"
+    sha256 cellar: :any_skip_relocation, sonoma:        "7568f803d5ed42f93f629f5132a3e9bc48deb6f345f600bb43fac27a12f2d78b"
+    sha256 cellar: :any_skip_relocation, ventura:       "7568f803d5ed42f93f629f5132a3e9bc48deb6f345f600bb43fac27a12f2d78b"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "a2753876622eab4735d7d5c380464e18626ba7d22a89c99036aa9030e080402a"
   end
 
   depends_on "go" => :build

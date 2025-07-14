@@ -16,11 +16,11 @@ class Rtabmap < Formula
   no_autobump! because: :requires_manual_review
 
   bottle do
-    sha256                               arm64_sonoma:  "fbf0965fd170b388c8fdd66a91b179cb9c7c3f3b3f7d2b68146766cb9c7e4710"
-    sha256                               arm64_ventura: "e03225f05160f3d002063c02fdf651a2eb9ee7ee35c6d375b69a43f428c42a9f"
-    sha256                               sonoma:        "8354568d383a42537112a71c0ec7d8f9404138643a645c07c1209a79dbd63756"
-    sha256                               ventura:       "1f1090acdf8d7aa10ae0e7c951b7d9f93c8c5d60973da1f85cc7ec1725f36e4b"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "0d346715818367390b00615de1cb0b98a9f886ac9f4f61d2c42f07e5e129d2c3"
+    sha256                               arm64_sonoma:  "7d07e047154cac3c4082dd8a12de2653aa2757390da44b7a49be5eb3301e26de"
+    sha256                               arm64_ventura: "bdb459b342d1af80c0635a12ca97418c921debe4ead8ad52984bd138eba5a40a"
+    sha256                               sonoma:        "61e0cbce3a79be584d75630eba028a7055220b0a43230bc5e0c84b8a69f025dc"
+    sha256                               ventura:       "2d83cd2bec5642f3b7e5b770f2ceb4d2de669e1857eaeef6f10e23991008d67b"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "ef6fc92de2311a138ad9c404f667d3f9892a2cad5771558bcd0099d7314660d0"
   end
 
   depends_on "cmake" => [:build, :test]

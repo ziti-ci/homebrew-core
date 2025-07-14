@@ -114,6 +114,9 @@ class Bash < Formula
 
     ENV.append_to_cflags "-DDEFAULT_LOADABLE_BUILTINS_PATH='\"#{bash_loadables_path}\"'"
 
+    # Avoid crashes on macOS 15.0-15.4.
+    ENV["bash_cv_func_strchrnul_works"] = "no" if OS.mac? && MacOS.version <= :sequoia
+
     system "./configure", "--prefix=#{prefix}", "--with-curses", "--with-installed-readline"
     system "make", "install"
 
@@ -130,5 +133,9 @@ class Bash < Formula
     # If the following assertion breaks, then it's likely the configuration of `DEFAULT_LOADABLE_BUILTINS_PATH`
     # is broken. Changing the test below will probably hide that breakage.
     assert_equal "csv is a shell builtin\n", shell_output("#{bin}/bash -c 'enable csv; type csv'")
+
+    return if OS.linux? || MacOS.version > :sequoia
+
+    refute_match "U _strchrnul", shell_output("nm #{bin}/bash")
   end
 end

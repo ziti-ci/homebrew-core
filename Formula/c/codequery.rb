@@ -1,11 +1,9 @@
 class Codequery < Formula
   desc "Code-understanding, code-browsing or code-search tool"
   homepage "https://ruben2020.github.io/codequery/"
-  url "https://github.com/ruben2020/codequery/archive/refs/tags/v1.0.0.tar.gz"
-  sha256 "b0776adeae2963f197e3b9a57eb7ca405542da5f6413e06063e8d68f8246baa8"
+  url "https://github.com/ruben2020/codequery/archive/refs/tags/v1.0.1.tar.gz"
+  sha256 "40781a7499adddddcb9b7ab2d1d840453aed08f91f5ebc7c339c2f13f63a9403"
   license "MPL-2.0"
-
-  no_autobump! because: :requires_manual_review
 
   bottle do
     sha256 cellar: :any,                 arm64_sonoma:   "4e4fb0e6e4d1171bff615afc316580b9fa839da228349d9ceae861da9f184004"

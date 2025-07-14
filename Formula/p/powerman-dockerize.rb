@@ -7,12 +7,12 @@ class PowermanDockerize < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "da2232bef02bf8029796b6e9cd47a721dbd3a5add7ef3eca2d8992ad68e13f1f"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "da2232bef02bf8029796b6e9cd47a721dbd3a5add7ef3eca2d8992ad68e13f1f"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "da2232bef02bf8029796b6e9cd47a721dbd3a5add7ef3eca2d8992ad68e13f1f"
-    sha256 cellar: :any_skip_relocation, sonoma:        "b25fdf74eb0fc715fd1b0c1c7449429ece0232b291205a050a452d01f07805f2"
-    sha256 cellar: :any_skip_relocation, ventura:       "b25fdf74eb0fc715fd1b0c1c7449429ece0232b291205a050a452d01f07805f2"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "d6d1224444b23fe2cec6d510547ac834a6cc67abb73d37f0a0cd83f9ce42d687"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "f965d80fdc381a9376899e804f28ec6aa64a668376e79e5fddeaffd4c384f237"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "f965d80fdc381a9376899e804f28ec6aa64a668376e79e5fddeaffd4c384f237"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "f965d80fdc381a9376899e804f28ec6aa64a668376e79e5fddeaffd4c384f237"
+    sha256 cellar: :any_skip_relocation, sonoma:        "1fcae88f9e8d59cdb081ff181cf4fae45d076b217015dd3635350bcf16ada09f"
+    sha256 cellar: :any_skip_relocation, ventura:       "1fcae88f9e8d59cdb081ff181cf4fae45d076b217015dd3635350bcf16ada09f"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "9f4ee377d76ec7b6a72e724f5c7c412cff5a49a9b371c83a7bee4ec28c759485"
   end
 
   depends_on "go" => :build

@@ -3,8 +3,8 @@ class Mcpm < Formula
 
   desc "Open source, community-driven MCP server and client manager"
   homepage "https://mcpm.sh/"
-  url "https://files.pythonhosted.org/packages/43/83/c8aa10af5aac718ccdad2ce7ff356c5083fd1242985637f6f0b205812daa/mcpm-2.4.0.tar.gz"
-  sha256 "3d89f64296b54fafefc7392251a066beeb6d98584c228d014209ede0dbd090d0"
+  url "https://files.pythonhosted.org/packages/09/c9/9dd8fb1aac1bd75f00723e97426a029503e148e36f8b1ff3b90b45ae013d/mcpm-2.5.0.tar.gz"
+  sha256 "81f5093a7eb8d7dcc2900e948fd95dc958aba2f4734bd67e2993d26a48a407eb"
   license "MIT"
 
   bottle do
@@ -153,8 +153,8 @@ class Mcpm < Formula
   end
 
   resource "mcp" do
-    url "https://files.pythonhosted.org/packages/7c/68/63045305f29ff680a9cd5be360c755270109e6b76f696ea6824547ddbc30/mcp-1.10.1.tar.gz"
-    sha256 "aaa0957d8307feeff180da2d9d359f2b801f35c0c67f1882136239055ef034c2"
+    url "https://files.pythonhosted.org/packages/3a/f5/9506eb5578d5bbe9819ee8ba3198d0ad0e2fbe3bab8b257e4131ceb7dfb6/mcp-1.11.0.tar.gz"
+    sha256 "49a213df56bb9472ff83b3132a4825f5c8f5b120a90246f08b0dac6bedac44c8"
   end
 
   resource "mdurl" do
@@ -163,8 +163,8 @@ class Mcpm < Formula
   end
 
   resource "openai" do
-    url "https://files.pythonhosted.org/packages/e0/66/fadc0cad6a229c6a85c3aa5f222a786ec4d9bf14c2a004f80ffa21dbaf21/openai-1.93.3.tar.gz"
-    sha256 "488b76399238c694af7e4e30c58170ea55e6f65038ab27dbe95b5077a00f8af8"
+    url "https://files.pythonhosted.org/packages/a1/a3/70cd57c7d71086c532ce90de5fdef4165dc6ae9dbf346da6737ff9ebafaa/openai-1.95.1.tar.gz"
+    sha256 "f089b605282e2a2b6776090b4b46563ac1da77f56402a222597d591e2dcc1086"
   end
 
   resource "openapi-pydantic" do

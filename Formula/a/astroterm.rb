@@ -1,8 +1,8 @@
 class Astroterm < Formula
   desc "Planetarium for your terminal"
   homepage "https://github.com/da-luce/astroterm"
-  url "https://github.com/da-luce/astroterm/archive/refs/tags/v1.0.7.tar.gz"
-  sha256 "3b8b1597afb31d1cb8ad54030b5766652b4d3f42f0a3d510bbc3191c0c6a4aa5"
+  url "https://github.com/da-luce/astroterm/archive/refs/tags/v1.0.8.tar.gz"
+  sha256 "d7205aeca4a8de372938b103c4ed787a8430150f7d4254151e2148434e9d4430"
   license "MIT"
   head "https://github.com/da-luce/astroterm.git", branch: "main"
 

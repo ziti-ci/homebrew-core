@@ -1,8 +1,8 @@
 class Ipsw < Formula
   desc "Research tool for iOS & macOS devices"
   homepage "https://blacktop.github.io/ipsw"
-  url "https://github.com/blacktop/ipsw/archive/refs/tags/v3.1.621.tar.gz"
-  sha256 "bde0adeb91f076aa4e34e0c0e520ae9e3e4edc3f58a654bb245ecdea22f5a73c"
+  url "https://github.com/blacktop/ipsw/archive/refs/tags/v3.1.622.tar.gz"
+  sha256 "277eb2b3419aa9274877a781891b0f8475d5569e1226dce14eb8dd8209125b36"
   license "MIT"
   head "https://github.com/blacktop/ipsw.git", branch: "master"
 
@@ -36,6 +36,6 @@ class Ipsw < Formula
   test do
     assert_match version.to_s, shell_output(bin/"ipsw version")
 
-    assert_match "MacFamily20,1", shell_output(bin/"ipsw device-list")
+    assert_match "iPad Pro (12.9-inch) (6th gen)", shell_output(bin/"ipsw device-list")
   end
 end

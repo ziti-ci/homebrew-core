@@ -7,13 +7,13 @@ class Redka < Formula
   head "https://github.com/nalgeon/redka.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "d76c91050ffe415ee014050dac28fedb3983a99ddda83e6a04c4009b7a100313"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "2afe1b51f17c267bd70f8ced5c96f3d4f3895852883fa19eaba5145c9df7bc62"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "8be640a9fe22bb2c23b00fbd7932235ed62dc3aad5fe1dabb1bcc9c9f0ae4e17"
-    sha256 cellar: :any_skip_relocation, sonoma:        "41ce5588bf143a988a41ef0ee17c6e4d581a8e326372c74accd54bcebe1529b1"
-    sha256 cellar: :any_skip_relocation, ventura:       "bb78c4e52d6177cebaf0f1d1afabaf3da46c85841b6feb0e312a605123035d82"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "8043e1f6e3e88f408e482c41fd195db76126720f546449358728eff9ef6ddc57"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "a518059a8ea13f550bc38204414142a839adba3458eb31808b17e1a438a59d0e"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "7369c85e3dd72b92099608984ea0fbab5d2e54bfdca89184f6f843c5e46c6d45"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "e477b72b5298b8a1f198c27b470567ebeb117c1f5bf5e5c0c3144c9cc827c085"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "7ad393f56c26de9ef969ad9ccec620c369447267b55c8e5ab1967c15ed52d9dd"
+    sha256 cellar: :any_skip_relocation, sonoma:        "a8609f1f2f966c9340054ff03d194f2ba8c2093d3ff02030f582433574fdb0e6"
+    sha256 cellar: :any_skip_relocation, ventura:       "3bf7ad1ccb15e6ab17d46509a843db68f4a27fc327982e0622f808158841f693"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "a684c766952001e2853f8b343d8873e583c7d9ca92fbbe669b0ad06690059e86"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "bb41ebb4b8424561c5666d214b33d25e9a02a2837e708fb2d78c1b0c9873bb24"
   end
 
   depends_on "go" => :build

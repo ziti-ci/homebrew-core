@@ -5,6 +5,15 @@ class KafkactlAzurePlugin < Formula
   sha256 "9fcab4135e68ffba6af40db21ab4c36f798a502be402f6c2d6557d316084b445"
   license "Apache-2.0"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "2b97afe54ae1f03eb046716a66ec69d64c74aae7305a2267181f41224fcdf2b0"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "2b97afe54ae1f03eb046716a66ec69d64c74aae7305a2267181f41224fcdf2b0"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "2b97afe54ae1f03eb046716a66ec69d64c74aae7305a2267181f41224fcdf2b0"
+    sha256 cellar: :any_skip_relocation, sonoma:        "862703df9342e028fdf0270979fc813ab430e5911e40562cf1e07e08b83510a0"
+    sha256 cellar: :any_skip_relocation, ventura:       "862703df9342e028fdf0270979fc813ab430e5911e40562cf1e07e08b83510a0"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "f5287bc5567ffa87f2b5e16f8515046d68b98f4becc838cbd081a50eff08ef32"
+  end
+
   depends_on "go" => :build
   depends_on "kafkactl"
 

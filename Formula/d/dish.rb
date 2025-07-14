@@ -1,8 +1,8 @@
 class Dish < Formula
   desc "Lightweight monitoring service that efficiently checks socket connections"
   homepage "https://github.com/thevxn/dish"
-  url "https://github.com/thevxn/dish/archive/refs/tags/v1.11.5.tar.gz"
-  sha256 "3dc5d0b2eadd71b5290d26f1494be10b4ceab65314ded90508f210403a6b8ac1"
+  url "https://github.com/thevxn/dish/archive/refs/tags/v1.12.tar.gz"
+  sha256 "34ec121544c4c762668fb5cfb4fd7eb4b90f22fc5b31389e3b7a1b0f944d7f05"
   license "MIT"
   head "https://github.com/thevxn/dish.git", branch: "master"
 

@@ -6,7 +6,7 @@ class Zx < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "566fcf2b7fd28abaf0922929454676e8f1af527628e291989b04c45f3b284299"
+    sha256 cellar: :any_skip_relocation, all: "cdb6da9d8da9e13091eafff3e13bc3d7ef23c17cebad08114fe1123d1882af53"
   end
 
   depends_on "node"

@@ -1,8 +1,8 @@
 class Amfora < Formula
   desc "Fancy terminal browser for the Gemini protocol"
   homepage "https://github.com/makew0rld/amfora"
-  url "https://github.com/makew0rld/amfora/archive/refs/tags/v1.10.0.tar.gz"
-  sha256 "0bc9964ccefb3ea0d66944231492f66c3b0009ab0040e19cc115d0b4cd9b8078"
+  url "https://github.com/makew0rld/amfora/archive/refs/tags/v1.11.0.tar.gz"
+  sha256 "76ae120bdae9a1882acbb2b07a873a52e40265b3ef4c8291de0934c1e9b5982c"
   license all_of: [
     "GPL-3.0-only",
     any_of: ["GPL-3.0-only", "MIT"], # rr

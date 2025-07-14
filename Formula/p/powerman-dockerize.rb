@@ -1,8 +1,9 @@
 class PowermanDockerize < Formula
   desc "Utility to simplify running applications in docker containers"
   homepage "https://github.com/powerman/dockerize"
-  url "https://github.com/powerman/dockerize/archive/refs/tags/v0.22.2.tar.gz"
-  sha256 "8cc5e74d6785c6928adacf6fc70fc712b75b0f5bb1dc1e42e27e976acfef1818"
+  url "https://github.com/powerman/dockerize.git",
+      tag:      "v0.23.0",
+      revision: "70a40e0c2787e60ce70662c32a8e5c4c91fa79bb"
   license "MIT"
 
   bottle do
@@ -18,7 +19,7 @@ class PowermanDockerize < Formula
   conflicts_with "dockerize", because: "powerman-dockerize and dockerize install conflicting executables"
 
   def install
-    system "go", "build", *std_go_args(output: bin/"dockerize", ldflags: "-s -w -X main.ver=#{version}")
+    system "go", "build", *std_go_args(output: bin/"dockerize", ldflags: "-s -w")
   end
 
   test do

@@ -1,10 +1,10 @@
 class Mvfst < Formula
   desc "QUIC transport protocol implementation"
   homepage "https://github.com/facebook/mvfst"
-  # TODO: add back to `synced_versions_formula.json` when possible.
   url "https://github.com/facebook/mvfst/archive/refs/tags/v2025.07.14.00.tar.gz"
   sha256 "47c4e37da80dda05b1ef59cf65fd9963c6479c724283f3b629bb05d0cd6c4edc"
   license "MIT"
+  revision 1
   head "https://github.com/facebook/mvfst.git", branch: "main"
 
   bottle do

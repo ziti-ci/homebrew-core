@@ -12,6 +12,7 @@ class Nixfmt < Formula
     sha256 cellar: :any,                 arm64_ventura: "0c59ac82a04449e01a61ea4e7023beb51d7ad05c5b5e24148efdc2c4141efda4"
     sha256 cellar: :any,                 sonoma:        "44c8e8e19e4a38cde001adbf0c6d5c89c87528f5f95fbb59dd6a352403f2a173"
     sha256 cellar: :any,                 ventura:       "5cf5df5111472befdc3589aa20c700219575fe81433ae26ed6f7ac52a0902ea1"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "438de159b30484830799d5a02539e62ae9c8f78337d59e6463462c338e825768"
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "4cbd063abc7c0dfbbbcf327135cc7dad0594470fa19c27542fdb1aae789d4f9f"
   end
 

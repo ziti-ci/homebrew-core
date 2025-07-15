@@ -3,10 +3,9 @@ class Cfripper < Formula
 
   desc "Library and CLI tool to analyse CloudFormation templates for security issues"
   homepage "https://cfripper.readthedocs.io"
-  url "https://files.pythonhosted.org/packages/5b/5f/a6b15acb08f9c9d95786c5c38e5f8421027cf8ec6f0ce49c4765f7013c69/cfripper-1.17.2.tar.gz"
-  sha256 "cc46bede7651eaac793e022065ff7dad7676e940184e245d81c40424657fde7a"
+  url "https://files.pythonhosted.org/packages/fd/1e/a27bad490eff8d1d32db795ee1dbd664e33b727f7e45b5bd44a2bfdc978a/cfripper-1.18.0.tar.gz"
+  sha256 "755bcbaf4ab8d923ffe8b02c36a3b6b74770c6c4a16b0c0917bb104e49e05656"
   license "Apache-2.0"
-  revision 1
 
   bottle do
     rebuild 1
@@ -29,13 +28,13 @@ class Cfripper < Formula
   end
 
   resource "boto3" do
-    url "https://files.pythonhosted.org/packages/70/b0/a35b320e5084821de69a66962513dcc8aa37b7a5bc80e761685533e97be9/boto3-1.38.39.tar.gz"
-    sha256 "22cca12cfe1b24670de53e3b8f4c69bdf34a2bd3e3363f72393b6b03bb0d78bc"
+    url "https://files.pythonhosted.org/packages/6a/1f/b7510dcd26eb14735d6f4b2904e219b825660425a0cf0b6f35b84c7249b0/boto3-1.39.4.tar.gz"
+    sha256 "6c955729a1d70181bc8368e02a7d3f350884290def63815ebca8408ee6d47571"
   end
 
   resource "botocore" do
-    url "https://files.pythonhosted.org/packages/09/61/20eceeccdce79ca238453389e9a8a9147a79417a07e22fa6715f1abd6421/botocore-1.38.39.tar.gz"
-    sha256 "2305f688e9328af473a504197584112f228513e06412038d83205ce8d1456f40"
+    url "https://files.pythonhosted.org/packages/e6/9f/21c823ea2fae3fa5a6c9e8caaa1f858acd55018e6d317505a4f14c5bb999/botocore-1.39.4.tar.gz"
+    sha256 "e662ac35c681f7942a93f2ec7b4cde8f8b56dd399da47a79fa3e370338521a56"
   end
 
   resource "cfn-flip" do
@@ -99,8 +98,8 @@ class Cfripper < Formula
   end
 
   resource "typing-extensions" do
-    url "https://files.pythonhosted.org/packages/d1/bc/51647cd02527e87d05cb083ccc402f93e441606ff1f01739a62c8ad09ba5/typing_extensions-4.14.0.tar.gz"
-    sha256 "8676b788e32f02ab42d9e7c61324048ae4c6d844a399eebace3d4979d75ceef4"
+    url "https://files.pythonhosted.org/packages/98/5a/da40306b885cc8c09109dc2e1abd358d5684b1425678151cdaed4731c822/typing_extensions-4.14.1.tar.gz"
+    sha256 "38b39f4aeeab64884ce9f74c94263ef78f3c22467c8724005483154c26648d36"
   end
 
   resource "typing-inspection" do

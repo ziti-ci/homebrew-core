@@ -6,6 +6,15 @@ class Nixfmt < Formula
   license "MPL-2.0"
   head "https://github.com/NixOS/nixfmt.git", branch: "master"
 
+  bottle do
+    sha256 cellar: :any,                 arm64_sequoia: "a567dd22a8efbdc8b1f4f630cf2136fa483178d50a05b9ee514f87e2c56cafa4"
+    sha256 cellar: :any,                 arm64_sonoma:  "2b3d63bdd233c9bbcd48af30dd461e3a295d6e537690f27fa048730aa5550dcb"
+    sha256 cellar: :any,                 arm64_ventura: "0c59ac82a04449e01a61ea4e7023beb51d7ad05c5b5e24148efdc2c4141efda4"
+    sha256 cellar: :any,                 sonoma:        "44c8e8e19e4a38cde001adbf0c6d5c89c87528f5f95fbb59dd6a352403f2a173"
+    sha256 cellar: :any,                 ventura:       "5cf5df5111472befdc3589aa20c700219575fe81433ae26ed6f7ac52a0902ea1"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "4cbd063abc7c0dfbbbcf327135cc7dad0594470fa19c27542fdb1aae789d4f9f"
+  end
+
   depends_on "cabal-install" => :build
   depends_on "ghc" => :build
 

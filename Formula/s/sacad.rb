@@ -11,13 +11,13 @@ class Sacad < Formula
   no_autobump! because: :requires_manual_review
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "209abcc3e86b84f3b8fb42814f6ed486528f4a80eda90f39bc498ebfb1c0f851"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "f186d3996c26173edf0f409a7ae1a6142085d2640250c115fb3e94510730301d"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "1db21b5d97acc6eda7c4228b2b2beaff2c72526151b823931db678a67f878f8b"
-    sha256 cellar: :any_skip_relocation, sonoma:        "cc399147b8a49e0655641cd97b524543b24d16bd75b0bcc9f34bebad81cc3d07"
-    sha256 cellar: :any_skip_relocation, ventura:       "d45c054900915a504c447c0c287202975039feb33cbe2169496bc64a4a3e915a"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "d3c59d39a3064b7bbcd88b1027e78bd8eb1b1e327db3128d6c80ac84f0e3e4a8"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "37b39ab05560f6440cdbb02e6cca68b5d0ee0f71ba5c3dba66c9fa6f4a923802"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "48cebf9ff9a2da62bce32788aff038da02e286e588e028abf01b60d624ebc5d7"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "942e5564cb50b42ae8b1975b435269e777ac698d696c6c504b5dbaac11b6e156"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "d96332e46f3377dbf8c969957f13e8880efbc65ee7635f7acfcae6f8e577d364"
+    sha256 cellar: :any_skip_relocation, sonoma:        "e7090ec7fa22ba6761510913d99f20801b47e22e015c2809d45c5f1bd0ab39f1"
+    sha256 cellar: :any_skip_relocation, ventura:       "4f40951172445dba06adcf3fb95b6470574e789dca03aeb721b771f072c2c3e8"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "83fc77af351f292459b39bdc99cb18be17d78b589800a662a4b1c49fa2b9bbce"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "85edbf13b739f9d72757ac3d21d895ae65dee2dfc7e3f5e54056ff3c3031ab85"
   end
 
   depends_on "pillow"

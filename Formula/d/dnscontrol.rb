@@ -1,8 +1,8 @@
 class Dnscontrol < Formula
   desc "Synchronize your DNS to multiple providers from a simple DSL"
   homepage "https://dnscontrol.org/"
-  url "https://github.com/StackExchange/dnscontrol/archive/refs/tags/v4.21.0.tar.gz"
-  sha256 "fb28227d0b94e0fa645989ea811dde9ec1ba272fb8ed5b1011788a710ffde3a8"
+  url "https://github.com/StackExchange/dnscontrol/archive/refs/tags/v4.22.0.tar.gz"
+  sha256 "3fac9a6e229d2c8d74f4b398f6d8bc2753df613a4d92010cede222333a295551"
   license "MIT"
   version_scheme 1
   head "https://github.com/StackExchange/dnscontrol.git", branch: "main"
@@ -27,7 +27,11 @@ class Dnscontrol < Formula
   depends_on "go" => :build
 
   def install
-    system "go", "build", *std_go_args(ldflags: "-s -w -X main.version=#{version}")
+    ldflags = %W[
+      -s -w
+      -X github.com/StackExchange/dnscontrol/v4/pkg/version.version=#{version}
+    ]
+    system "go", "build", *std_go_args(ldflags: ldflags)
 
     generate_completions_from_executable(bin/"dnscontrol", "shell-completion", shells: [:bash, :zsh])
   end

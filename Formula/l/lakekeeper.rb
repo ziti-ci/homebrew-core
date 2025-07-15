@@ -6,6 +6,15 @@ class Lakekeeper < Formula
   license "Apache-2.0"
   head "https://github.com/lakekeeper/lakekeeper.git", branch: "main"
 
+  bottle do
+    sha256 cellar: :any,                 arm64_sequoia: "c0fa5a90d67cb682bb86aeda90bcc9eeb401ea5b23c29e4deb1a96f711054a2c"
+    sha256 cellar: :any,                 arm64_sonoma:  "415eeac806a17163df776577ccccf9d1b563e6fea14b3c1e8ba2fdce080fe723"
+    sha256 cellar: :any,                 arm64_ventura: "74be363ec979cb61a8fff6df7748b7fbf1a65bc8b2cdade9a5d590358c0dd941"
+    sha256 cellar: :any,                 sonoma:        "ca749b0b25ed835cd689ccf863088d94de4ff137237b47d28dc635f94c517cae"
+    sha256 cellar: :any,                 ventura:       "ab8621f0fcd75d386e0b127472c35b2043819c4de818abcc9309ba42ad635fdf"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "8db376229cfb85fb924828e9e582369ea53cf7439b510d7befd53daab15c1403"
+  end
+
   depends_on "cmake" => :build
   depends_on "rust" => :build
   depends_on "postgresql@17" => :test

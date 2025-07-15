@@ -8,7 +8,7 @@ class Ktlint < Formula
   no_autobump! because: :requires_manual_review
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "778789c98fd46753ea4176df0a91970a6739ffe1169de393ef5f03aa894801cf"
+    sha256 cellar: :any_skip_relocation, all: "26caa0f95757c4b4e2425cfe4d4655e520b55bad6bec7076bcbb5877203b5a61"
   end
 
   depends_on "openjdk"

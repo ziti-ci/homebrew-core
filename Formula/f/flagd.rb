@@ -2,8 +2,8 @@ class Flagd < Formula
   desc "Feature flag daemon with a Unix philosophy"
   homepage "https://github.com/open-feature/flagd"
   url "https://github.com/open-feature/flagd.git",
-      tag:      "flagd/v0.12.5",
-      revision: "23e15540a737265c1244e4bf7ddcf04a9c5c60af"
+      tag:      "flagd/v0.12.6",
+      revision: "961f9a6e131d0025ef6b9385d9d0ceb37744b0b9"
   license "Apache-2.0"
   head "https://github.com/open-feature/flagd.git", branch: "main"
 
@@ -17,15 +17,13 @@ class Flagd < Formula
     regex(%r{^flagd/v?(\d+(?:[.-]\d+)+)$}i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "89fcdf347ff89ad6523896f13caa2c631e88b5950f23a59422d127ef90e84f09"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "715f588ee2e41625f928b1f1ffe602ebae636f93da2087987665e655cab166e9"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "0dca190752fb6cd11e4a820a219c26e9260f9129fd83b47744aa8f1455925fae"
-    sha256 cellar: :any_skip_relocation, sonoma:        "58c466f59438c7000e6762e6b3c5e911144feac0adc149d14c8259d4e524fa87"
-    sha256 cellar: :any_skip_relocation, ventura:       "b93a8fec44b9e4346c77a71844e8b77fdbe2404827bb77e498b0f2e42987a5fa"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "9ccfa9a1d4a76f3cbf692f3a868832a7373be78ffd2a019fe4fd7a4a9bb1de88"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "d2ef065289a7ebfc4f1d3523b27eb6d604903a812a021a645e0a016bc1b1efd5"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "83ab4ad19a692105576397fd06e24affde082b835d424af887ed86928a5a9f28"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "e0a83747ddea7d6aad83852e8863c3bf216353452f92d65c3c45ef436e5d1e78"
+    sha256 cellar: :any_skip_relocation, sonoma:        "c5d2fb3928fee36d97715a56ba0165edd17ca6df0fa10cfd1e8416a4c36eb3ae"
+    sha256 cellar: :any_skip_relocation, ventura:       "04aeafa0d137a8fe338ef7b73d84fc7d08644a3c2ef197dcbffda7ca8e91ff74"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "00de6562b9c30bb4c660b597a736b78e2c9f157ff2e92b0a2c1b545d3668db23"
   end
 
   depends_on "go" => :build

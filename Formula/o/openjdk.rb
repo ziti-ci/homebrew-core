@@ -1,8 +1,8 @@
 class Openjdk < Formula
   desc "Development kit for the Java programming language"
   homepage "https://openjdk.java.net/"
-  url "https://github.com/openjdk/jdk24u/archive/refs/tags/jdk-24.0.1-ga.tar.gz"
-  sha256 "2ccaaf7c5f03b6f689347df99e6e34cd6d3b30bc56af815c8c152a6eeb6a6c25"
+  url "https://github.com/openjdk/jdk24u/archive/refs/tags/jdk-24.0.2-ga.tar.gz"
+  sha256 "d5a1b364de4335d86590d2e91eb8fce0560ade28759734c531915b8293e502e8"
   license "GPL-2.0-only" => { with: "Classpath-exception-2.0" }
 
   livecheck do
@@ -80,6 +80,11 @@ class Openjdk < Formula
     boot_jdk /= "Contents/Home" if OS.mac?
     java_options = ENV.delete("_JAVA_OPTIONS")
 
+    # Remove the offending ISO-8859-1 resource (JDK-8354449)
+    # upstream pr ref, https://github.com/openjdk/jdk24u/pull/220
+    rm "src/java.xml.crypto/share/classes/com/sun/org/apache/xml/internal/security/resource/xmlsecurity_de.properties"
+    odie "Remove the above resource patch" if build.stable? && version.major > "24"
+
     args = %W[
       --disable-warnings-as-errors
       --with-boot-jdk-jvmargs=#{java_options}
@@ -133,18 +138,6 @@ class Openjdk < Formula
     # Workaround for Xcode 16 bug: https://bugs.openjdk.org/browse/JDK-8340341.
     if DevelopmentTools.clang_build_version == 1600
       args << "--with-extra-cflags=-mllvm -enable-constraint-elimination=0"
-    end
-
-    # Temporary workaround for the "sed: RE error: illegal byte sequence" issue on macOS 15 and later (on_arm).
-    # See https://bugs.openjdk.org/browse/JDK-8353948 for more details.
-    # Could be removed in openjdk@25, though it might be resolved earlier if plans change.
-    # References:
-    # - Related bug: https://bugs.openjdk.org/browse/JDK-8354449
-    # - Upstream PR: https://github.com/openjdk/jdk/pull/24601
-    if OS.mac? && MacOS.version >= :sequoia && Hardware::CPU.arm?
-      (buildpath/"src/java.xml.crypto/share/classes" /
-        "com/sun/org/apache/xml/internal/security/resource" /
-        "xmlsecurity_de.properties").unlink
     end
 
     system "bash", "configure", *args

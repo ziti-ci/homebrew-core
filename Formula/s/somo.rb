@@ -11,6 +11,7 @@ class Somo < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura: "10f3e4c9fde2db017da386b5531e59b9f822b1cfed1ea5fba5e018e45caddba3"
     sha256 cellar: :any_skip_relocation, sonoma:        "f0bcc7ffd62ef40c29c54be0c4b2d561b53a622bf97210465729fc3db0b8ca12"
     sha256 cellar: :any_skip_relocation, ventura:       "3fdd3ede9694025e2f26482f85c690b749db5602c6f2559b7fb8db3eb76c59ce"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "0869f3c0b349ba88d6a0094ee4ab758eb59d7c3747b7820dbbb1f8f1c146c694"
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "4a353a71e91ebc13d27f31f624097d4a3b5b38481fe8e8be730cf3ebdfbd1176"
   end
 

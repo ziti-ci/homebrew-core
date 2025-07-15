@@ -2,8 +2,8 @@ class Flagd < Formula
   desc "Feature flag daemon with a Unix philosophy"
   homepage "https://github.com/open-feature/flagd"
   url "https://github.com/open-feature/flagd.git",
-      tag:      "flagd/v0.12.5",
-      revision: "23e15540a737265c1244e4bf7ddcf04a9c5c60af"
+      tag:      "flagd/v0.12.6",
+      revision: "961f9a6e131d0025ef6b9385d9d0ceb37744b0b9"
   license "Apache-2.0"
   head "https://github.com/open-feature/flagd.git", branch: "main"
 
@@ -16,8 +16,6 @@ class Flagd < Formula
     url :stable
     regex(%r{^flagd/v?(\d+(?:[.-]\d+)+)$}i)
   end
-
-  no_autobump! because: :requires_manual_review
 
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_sequoia: "89fcdf347ff89ad6523896f13caa2c631e88b5950f23a59422d127ef90e84f09"

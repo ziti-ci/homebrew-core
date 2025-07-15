@@ -11,15 +11,14 @@ class Twtxt < Formula
   no_autobump! because: :requires_manual_review
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "969b8713e890189a067c53f5a782ed7066116a877cdf11b5c998151aaec1afcc"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "4ea88e47ac13dacef608d4e4c0108d6668624027ac7ee935b52dc4eba24f634b"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "0089b0c2e58c09ef427e9eff9f64a6b4f8c9909676c3a84c31d23c590d433b99"
-    sha256 cellar: :any_skip_relocation, sequoia:       "741bcde7e895ee2787f3a926be30c8c07433298e5b7a7d1dd4df8094a39dfcb8"
-    sha256 cellar: :any_skip_relocation, sonoma:        "82237838b5d8e4a308433ff9087f17bb79cf9ad8a09c87fd2e01b66e0bcbd8e5"
-    sha256 cellar: :any_skip_relocation, ventura:       "b06daa93502419d9781add8fc806b60d60b18f781590e3c3baf2d87f5bb1b307"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "5473c1d33da38697f7373a0e4e6441794b5cdd8edc1a51db6b78ade3b8a23696"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "5d222898652fa5abc40f17c06e6dffda758e8b39b84602e1e66c1796b0b406a9"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "29cc2de20dc895c385ac0a63e44855b00dbde6e2bc5731b8a2e1a7cfc032e928"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "d5b10bcf1dbbaab2d9a31cac9ac6aeace17f927b3962940c772229213675f1de"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "45ccbfb3032ae02b0c63bb81cb193951b02686289a3c9587b7ef4f2ff1555e4e"
+    sha256 cellar: :any_skip_relocation, sequoia:       "657122f063434a21eda3925652a7308c196fdef8cb9f492aa758142fa76097f6"
+    sha256 cellar: :any_skip_relocation, sonoma:        "d70b5429efc89db1aa8820be9b1d89a7a80d9e4c139279650529006ba071d5a6"
+    sha256 cellar: :any_skip_relocation, ventura:       "38eba811f1499a3bfe7ee08315da847d3cc9c2f83e26fec1c321bb5736042a77"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "17a929882929f239219e1e9325a9dd9a845a3a811467b470db31d7e4e0cc984e"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "abcbe4536337494e6441e9d3abbbe8d16de129ca6a9f37096f3e5fe5344718ce"
   end
 
   depends_on "python@3.13"

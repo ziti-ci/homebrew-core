@@ -4,6 +4,7 @@ class Fakeroot < Formula
   url "https://deb.debian.org/debian/pool/main/f/fakeroot/fakeroot_1.37.1.2.orig.tar.gz"
   sha256 "959496928c8a676ec8377f665ff6a19a707bfad693325f9cc4a4126642f53224"
   license "GPL-3.0-or-later"
+  revision 1
 
   livecheck do
     url "https://deb.debian.org/debian/pool/main/f/fakeroot/"
@@ -29,11 +30,11 @@ class Fakeroot < Formula
     depends_on "libcap" => :build
   end
 
-  # https://salsa.debian.org/clint/fakeroot/-/merge_requests/17
-  patch :p0 do
-    # The MR has a typo, so we use MacPorts' version.
-    url "https://raw.githubusercontent.com/macports/macports-ports/0ffd857cab7b021f9dbf2cbc876d8025b6aefeff/sysutils/fakeroot/files/patch-message.h.diff"
-    sha256 "6540eef1c31ffb4ed636c1f4750ee668d2effdfe308d975d835aa518731c72dc"
+  # https://salsa.debian.org/clint/fakeroot/-/merge_requests/34/
+  patch :p1 do
+    # Fix for macOS
+    url "https://salsa.debian.org/clint/fakeroot/-/merge_requests/34/diffs.diff"
+    sha256 "0517ce18112d08cec2268dd2a5d78f033917454c68882665125d9e70c26983fc"
   end
 
   def install

@@ -11,6 +11,7 @@ class Pgslice < Formula
     sha256 cellar: :any,                 arm64_ventura: "9bfb63ca6237c991d5574fd9a09b7fb3740463404842c964a6a4344c27a662e4"
     sha256 cellar: :any,                 sonoma:        "5b685150986b534cc9bb106f9245c41acc3c6986a921f7fc82be9b9712cbdddf"
     sha256 cellar: :any,                 ventura:       "534bc973ce2bda628733c8e11316c855cd5041f68ebff74130631650a0144761"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "943abfd392aee8abc83669227069d7be37967bc9976bc3af73b718560ef79563"
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "beabbe412cd4ec6c471b408aed0c2834ae2eaa7d2804226ca4ca44aa1c063774"
   end
 

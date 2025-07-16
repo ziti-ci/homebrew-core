@@ -12,13 +12,13 @@ class Fakeroot < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_sequoia: "63ce046cb14a93fb98404df474b78719690cac86466b66b3cf0af93e2a16cf80"
-    sha256 cellar: :any,                 arm64_sonoma:  "8ea63218b4c5fdb3065b1b8e0523a41285d92ea9bda60b1aa2a13e187676a74c"
-    sha256 cellar: :any,                 arm64_ventura: "516f46bd515171543b2d7c61bda37d5d777932ed480bc2115c4aa62282ae02db"
-    sha256 cellar: :any,                 sonoma:        "81d3b0da803e489894fae1d290d78ba1abffbc384f70fc99d3e95d41aebbb4fa"
-    sha256 cellar: :any,                 ventura:       "b1ca3e8b74313638583ba460578349747d83aca0fd02d9fab62c499cb5104cc5"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "ffd98968fac850868f65247322949c7b2f9ea381f025ad25a3eecbc518f29a72"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "8c8783d27616cc745b74cd2d25b851c38592ebcd2a5f6c60f577087d032a7ce1"
+    sha256 cellar: :any,                 arm64_sequoia: "ab29a59c3530a716bfa3151bed5458ece1bb6b136dd2a316f54f88ff031e1f52"
+    sha256 cellar: :any,                 arm64_sonoma:  "1aadc43f4ce3f17a1a609750a139f412205a71b1abc068b06874e83e40fcd7f3"
+    sha256 cellar: :any,                 arm64_ventura: "1c11f5d0a36d1d27fb51c32f3989802f4c385796b56959da1472c3a97a42c687"
+    sha256 cellar: :any,                 sonoma:        "2c240e8fb51287a6e2304c2aca7dc0e0c0bf7103f72b3f36872abaa23d62c0d0"
+    sha256 cellar: :any,                 ventura:       "f67ebe96d1e957f934e9de9cb936671f7fef7780e6e12011828265ec2547ccb1"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "7f239b1a7a44fed02417a5230512a0a1f06d3c84bd27aff90db9c9a1a5704dc9"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "41acec3bc608043a4a49fcca0008b90bbc45abc655d9b1c13b74577df13297a2"
   end
 
   # Needed to apply patches below. Remove when no longer needed.

@@ -6,13 +6,13 @@ class Atuin < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "dda899508bbe0f400bb2bc9b8458913a063d10d6758ce0faa22832387b951040"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "177478e59dd52ba59eb70d315c923fd9b76408e8c50281881cd0ff9a75924302"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "04320cdce2d761ded726760a1523501f369b167d5bba2219d32d3d9d21eef497"
-    sha256 cellar: :any_skip_relocation, sonoma:        "b772098c12ff5499ecee84c33dddb9de834e1d8b1829a7b42e44d7a8827ed13d"
-    sha256 cellar: :any_skip_relocation, ventura:       "aa2b9f010b9c1f4a22d5a06bdeec04f7ad13012da43e7a9849f2a562a6f82aef"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "10144dbe33feb80072c06d9aa629e5af237b9f6ff6fa7b70ecafe071b621f8d4"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "bbb4922d831f3b0e433485ffbedd36d9e121d58e0c622bb20aa39c8c79893de8"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "33cb87eb764426649ec229f17d553ede55785acb573bd96f6a6e8ed90b350643"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "f6c098366627a94020870a808893138c9c303d759e8facdd27fa915ae20c88cd"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "29b6a31b8c8419e3c38faaea2adbf2b22884e50cfd51264a4608d854aca8e2d0"
+    sha256 cellar: :any_skip_relocation, sonoma:        "c9b821ec481dcf76f1d32c82002964bcfb64b5b685dddffa671754f060d84224"
+    sha256 cellar: :any_skip_relocation, ventura:       "5b86ba9a9aa4fffc55f8d67b80f7fee1deab417ee8951723a38a6faabd85f7e8"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "367ce0c1321338ce6ea4654ef524387595a2012a98c223a30023688ff0249893"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "fd8768a279baa3ca00fd39f29c1769b05e8b2533115e844ec025b3f61162abee"
   end
 
   depends_on "protobuf" => :build

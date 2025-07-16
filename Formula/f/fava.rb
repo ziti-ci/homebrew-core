@@ -3,8 +3,8 @@ class Fava < Formula
 
   desc "Web interface for the double-entry bookkeeping software Beancount"
   homepage "https://beancount.github.io/fava/"
-  url "https://files.pythonhosted.org/packages/86/30/71c189588c09ae627bcd0a9deb64f0b9d2eebad9e99c5679f7b1154321d4/fava-1.30.4.tar.gz"
-  sha256 "f8f9ef4abc35b2abb6b9e45ab6ecadd839c04636e39c67c05c90937af6825a61"
+  url "https://files.pythonhosted.org/packages/4f/e5/c3dd51471c46559e9c2e86a1d51152bf72b79cd36d230f1910402ec5daeb/fava-1.30.5.tar.gz"
+  sha256 "a5f9d136101ccae6051ea3c1174a82acaef0d4f26230e7585c21a3fb15e2eae4"
   license "MIT"
   head "https://github.com/beancount/fava.git", branch: "main"
 
@@ -185,8 +185,8 @@ class Fava < Formula
   end
 
   resource "typing-extensions" do
-    url "https://files.pythonhosted.org/packages/d1/bc/51647cd02527e87d05cb083ccc402f93e441606ff1f01739a62c8ad09ba5/typing_extensions-4.14.0.tar.gz"
-    sha256 "8676b788e32f02ab42d9e7c61324048ae4c6d844a399eebace3d4979d75ceef4"
+    url "https://files.pythonhosted.org/packages/98/5a/da40306b885cc8c09109dc2e1abd358d5684b1425678151cdaed4731c822/typing_extensions-4.14.1.tar.gz"
+    sha256 "38b39f4aeeab64884ce9f74c94263ef78f3c22467c8724005483154c26648d36"
   end
 
   resource "watchfiles" do

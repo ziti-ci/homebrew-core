@@ -1,10 +1,9 @@
 class FancyCat < Formula
   desc "PDF reader for terminal emulators using the Kitty image protocol"
   homepage "https://github.com/freref/fancy-cat"
-  url "https://github.com/freref/fancy-cat/archive/refs/tags/v0.4.0.tar.gz"
-  sha256 "bce101d5eb009ec9057f7b87f6ad767ee96238abcee8854a9db7febd0229a2bf"
+  url "https://github.com/freref/fancy-cat/archive/refs/tags/v0.4.1.tar.gz"
+  sha256 "d264dbaf05f8713a4c52ce0c74a8d5e900989ec815fac1bbfec7d7b385bc1dd5"
   license "AGPL-3.0-or-later"
-  revision 6
 
   bottle do
     sha256 cellar: :any,                 arm64_sequoia: "15810142f9215adf37090e4e547e948953cfd167263056761c196d12936f6b17"
@@ -18,12 +17,6 @@ class FancyCat < Formula
 
   depends_on "zig" => :build
   depends_on "mupdf"
-
-  # Upstream fix for hash mismatch of dependencies
-  patch do
-    url "https://github.com/freref/fancy-cat/commit/c16075f5c5760a40f5b9d855dc6fe4ab5c91f2b2.patch?full_index=1"
-    sha256 "8f4540ff942c5175df6d87bbe8c70312634a0f5237d3970e1ea5e7a9e55eba12"
-  end
 
   def install
     # Fix illegal instruction errors when using bottles on older CPUs.
@@ -41,7 +34,7 @@ class FancyCat < Formula
   end
 
   test do
-    # fancy-cat is a TUI application, unfortunately we cannot test it properly
+    # fancy-cat is a TUI application
     assert_match version.to_s, shell_output("#{bin}/fancy-cat --version")
   end
 end

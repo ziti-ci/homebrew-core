@@ -1,15 +1,15 @@
 class Jenv < Formula
   desc "Manage your Java environment"
   homepage "https://github.com/jenv/jenv"
-  url "https://github.com/jenv/jenv/archive/refs/tags/0.5.8.tar.gz"
-  sha256 "7fa8034dc0900ca01413f94d6d674ad64120c4efd5736828ced54de9f83669ff"
+  url "https://github.com/jenv/jenv/archive/refs/tags/0.5.9.tar.gz"
+  sha256 "137361c8a25eeabe6f90f435048a698e1c93e5718e0b57069e69f9e2b9ece63c"
   license "MIT"
   head "https://github.com/jenv/jenv.git", branch: "master"
 
   no_autobump! because: :requires_manual_review
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "0854f8b2d434e292fc9b63a9d59e3bc2643cb7638c5b710db7b0ac2fc5a55128"
+    sha256 cellar: :any_skip_relocation, all: "b454f9bfe4726a30422faed10c3fa103050a5dcb0fa39f366691bda94269cd9f"
   end
 
   def install

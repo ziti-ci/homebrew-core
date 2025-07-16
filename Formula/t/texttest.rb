@@ -3,8 +3,8 @@ class Texttest < Formula
 
   desc "Tool for text-based Approval Testing"
   homepage "https://www.texttest.org/"
-  url "https://files.pythonhosted.org/packages/57/df/27a7fab4593b4f39f0664631af6fb14768014f04b033262409c8a2bf1fa7/texttest-4.4.3.1.tar.gz"
-  sha256 "9916452bcc1b8413547142b0966f8710c2feeb32822c553bc9b3265fe8f29314"
+  url "https://files.pythonhosted.org/packages/2c/86/5287f0801f09ce6f380569516ae2928274234016ae25cf24b5719814973f/texttest-4.4.4.tar.gz"
+  sha256 "0ea7ce2846ef261c8de575775b4f64471d0a2d0714719237216bbb1bfb5a995f"
   license "LGPL-2.1-or-later"
 
   bottle do

@@ -1,12 +1,10 @@
 class ZshFastSyntaxHighlighting < Formula
   desc "Feature-rich syntax highlighting for Zsh"
   homepage "https://github.com/zdharma-continuum/fast-syntax-highlighting"
-  url "https://github.com/zdharma-continuum/fast-syntax-highlighting/archive/refs/tags/v1.55.tar.gz"
-  sha256 "d06cea9c047ce46ad09ffd01a8489a849fc65b8b6310bd08f8bcec9d6f81a898"
+  url "https://github.com/zdharma-continuum/fast-syntax-highlighting/archive/refs/tags/v1.56.tar.gz"
+  sha256 "9e5045510ef86beae658b5fcf58e7b6c76f5b63788498b956d54bc1038faa806"
   license "BSD-3-Clause"
   head "https://github.com/zdharma-continuum/fast-syntax-highlighting.git", branch: "master"
-
-  no_autobump! because: :requires_manual_review
 
   bottle do
     rebuild 1

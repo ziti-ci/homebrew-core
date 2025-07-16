@@ -1,8 +1,8 @@
 class Apko < Formula
   desc "Build OCI images from APK packages directly without Dockerfile"
   homepage "https://github.com/chainguard-dev/apko"
-  url "https://github.com/chainguard-dev/apko/archive/refs/tags/v0.29.4.tar.gz"
-  sha256 "bdf5db49f38e2faa1ed85862e194611a4004a8b016144bc52588a1af465d0b76"
+  url "https://github.com/chainguard-dev/apko/archive/refs/tags/v0.29.5.tar.gz"
+  sha256 "49ca0a82c979ce57024ceecd62f52bd63214530ec004eb9334616a52bc307e95"
   license "Apache-2.0"
   head "https://github.com/chainguard-dev/apko.git", branch: "main"
 
@@ -15,12 +15,12 @@ class Apko < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "5b1af0ab914313eaf6787814096708fed92e532a0647f9bb79c6d3c9dbbb682c"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "8a851acde1a645eab8e30c76b35ec404b58cdded6d99e50d13830100a57ddc05"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "75a81cf687e88f484b796d47517c28cf58cafd25397efbae41dec7fa0cd0e80c"
-    sha256 cellar: :any_skip_relocation, sonoma:        "199a1c2de2ff7e83120dc2cc141fbb7c9a4e9570ffc635d37bd9eb73b754a849"
-    sha256 cellar: :any_skip_relocation, ventura:       "f74456fd057d88b37963c0e016e3558dfb00d7e733100d8b0b54619ddaa8c503"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "bdd08ddd11637165171e9f7abce75e8c9ed6de0ab789421e25c0b3619a4553bb"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "f43b4af4da330dfa3560c04a7e7efc724c170a429d539cc69dd2b33b05cc7d2f"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "dc279786352d18d6e496a6414a73f3e5758296937090cd06a7f329204734da38"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "a524c98fd3c6deefdae513d51385af9ad62daee68c6ce9c1d9f0091d8e308e4b"
+    sha256 cellar: :any_skip_relocation, sonoma:        "d8a57366adcf54b1ce047d2287af0a26cd4beb6e6ffca6845d675fd27ce5331c"
+    sha256 cellar: :any_skip_relocation, ventura:       "663de046c7f9b3fd31c6618bcf6961ba08e15404041ba993a1de7f95bcb748bf"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "ec40e107b8b7e5ca3258ed529920d482da0c7526f730d89a978b7fd43ff7cfcc"
   end
 
   depends_on "go" => :build

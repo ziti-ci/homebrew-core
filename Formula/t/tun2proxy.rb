@@ -1,8 +1,8 @@
 class Tun2proxy < Formula
   desc "Tunnel (TUN) interface for SOCKS and HTTP proxies"
   homepage "https://github.com/tun2proxy/tun2proxy"
-  url "https://github.com/tun2proxy/tun2proxy/archive/refs/tags/v0.7.11.tar.gz"
-  sha256 "0452e8995447f458544b005f80c34961da11fe926f1d17c5833d09ab77ff4019"
+  url "https://github.com/tun2proxy/tun2proxy/archive/refs/tags/v0.7.12.tar.gz"
+  sha256 "b0e23f7a1bc502db2b25803bd9a2cc53529e2649bec3e4e461f133b2751e3261"
   license "MIT"
   head "https://github.com/tun2proxy/tun2proxy.git", branch: "master"
 

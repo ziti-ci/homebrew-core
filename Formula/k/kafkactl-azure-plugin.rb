@@ -1,8 +1,8 @@
 class KafkactlAzurePlugin < Formula
   desc "Azure Plugin for kafkactl"
   homepage "https://deviceinsight.github.io/kafkactl/"
-  url "https://github.com/deviceinsight/kafkactl-plugins/archive/refs/tags/v1.3.0.tar.gz"
-  sha256 "9fcab4135e68ffba6af40db21ab4c36f798a502be402f6c2d6557d316084b445"
+  url "https://github.com/deviceinsight/kafkactl-plugins/archive/refs/tags/v1.3.1.tar.gz"
+  sha256 "f7f5b961061c863131a9f84e8a6aa7d7273a16b1c3ad4fb86888edebda345eb1"
   license "Apache-2.0"
 
   bottle do

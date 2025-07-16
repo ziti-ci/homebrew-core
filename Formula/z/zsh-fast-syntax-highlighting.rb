@@ -7,14 +7,13 @@ class ZshFastSyntaxHighlighting < Formula
   head "https://github.com/zdharma-continuum/fast-syntax-highlighting.git", branch: "master"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "2b63cd29b30d65b5f15e12a53ecf2b8f78b8eae1e0a32ac5761d88933cb00ad8"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "2b63cd29b30d65b5f15e12a53ecf2b8f78b8eae1e0a32ac5761d88933cb00ad8"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "2b63cd29b30d65b5f15e12a53ecf2b8f78b8eae1e0a32ac5761d88933cb00ad8"
-    sha256 cellar: :any_skip_relocation, sonoma:        "5b0435113e89b05900636a678cb33a9e0d44382a005da60cc072ec944a613d2e"
-    sha256 cellar: :any_skip_relocation, ventura:       "5b0435113e89b05900636a678cb33a9e0d44382a005da60cc072ec944a613d2e"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "2b63cd29b30d65b5f15e12a53ecf2b8f78b8eae1e0a32ac5761d88933cb00ad8"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "2b63cd29b30d65b5f15e12a53ecf2b8f78b8eae1e0a32ac5761d88933cb00ad8"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "92d65197b6bbc546272e39daecc43aec0a884213f6fee5d4b44982e8dc57242e"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "92d65197b6bbc546272e39daecc43aec0a884213f6fee5d4b44982e8dc57242e"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "92d65197b6bbc546272e39daecc43aec0a884213f6fee5d4b44982e8dc57242e"
+    sha256 cellar: :any_skip_relocation, sonoma:        "9ef6826ede6de08521db68f3088cf67f4de7b5026f9df28a4ec53b48aa11a54b"
+    sha256 cellar: :any_skip_relocation, ventura:       "9ef6826ede6de08521db68f3088cf67f4de7b5026f9df28a4ec53b48aa11a54b"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "92d65197b6bbc546272e39daecc43aec0a884213f6fee5d4b44982e8dc57242e"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "92d65197b6bbc546272e39daecc43aec0a884213f6fee5d4b44982e8dc57242e"
   end
 
   uses_from_macos "zsh" => [:build, :test]

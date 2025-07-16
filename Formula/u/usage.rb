@@ -1,12 +1,10 @@
 class Usage < Formula
   desc "Tool for working with usage-spec CLIs"
   homepage "https://usage.jdx.dev/"
-  url "https://github.com/jdx/usage/archive/refs/tags/v2.2.0.tar.gz"
-  sha256 "eb9dbc135a28b53a3eb359a4170416128a2424c47c80ba823415989350c7021e"
+  url "https://github.com/jdx/usage/archive/refs/tags/v2.2.2.tar.gz"
+  sha256 "76dfbe9b31769d386f8932ead95afd98f60efd0ac0069879e86e45274e5e93fe"
   license "MIT"
   head "https://github.com/jdx/usage.git", branch: "main"
-
-  no_autobump! because: :requires_manual_review
 
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_sequoia: "008ac24d0675df1e098d15ac9dba4a887d372b4c52ed0151e822dacb1f973127"

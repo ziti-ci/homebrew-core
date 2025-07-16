@@ -11,7 +11,7 @@ class OpenlibertyMicroprofile4 < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "0c7f48a2a8b733bfff5b7091282fa8ab71563467ed6029039dd8fb8e8925c41b"
+    sha256 cellar: :any_skip_relocation, all: "59b893621276c4e1b54d46475347ef187948df76412e68997c85ad79cb506d8a"
   end
 
   depends_on "openjdk"

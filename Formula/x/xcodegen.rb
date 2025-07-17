@@ -1,8 +1,8 @@
 class Xcodegen < Formula
   desc "Generate your Xcode project from a spec file and your folder structure"
   homepage "https://github.com/yonaskolb/XcodeGen"
-  url "https://github.com/yonaskolb/XcodeGen/archive/refs/tags/2.43.0.tar.gz"
-  sha256 "d79a89ea056ccc3cf84b736ee52c7b5184a560e54808e51f418f34d292869d66"
+  url "https://github.com/yonaskolb/XcodeGen/archive/refs/tags/2.44.0.tar.gz"
+  sha256 "dbf90102f66891f3236250a19a5208524e6905323dd56f770dd65dc5a007a7e7"
   license "MIT"
   head "https://github.com/yonaskolb/XcodeGen.git", branch: "master"
 
@@ -14,7 +14,7 @@ class Xcodegen < Formula
     sha256 cellar: :any_skip_relocation, ventura:       "6efa069b3f9ade5e77b7d0dd1fa76b3dae8d3914d45a3da5ff48a8e79e3a5f75"
   end
 
-  depends_on xcode: ["14.0", :build]
+  depends_on xcode: ["15.3", :build]
   depends_on :macos
 
   uses_from_macos "swift"

@@ -9,13 +9,13 @@ class AnsibleLint < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any,                 arm64_sequoia: "8532272fb86762a641b6dd047190a525908c58f7288c3eef93e81e70dd9e0320"
-    sha256 cellar: :any,                 arm64_sonoma:  "1969cfb0dff40632e98307f1ecb048bffdb13ad322f9c77fd60c4d59218f2ea5"
-    sha256 cellar: :any,                 arm64_ventura: "58fdcfb21d6854c270e556830c64dc40d2b3251efd0df37f0614a63d13f3843d"
-    sha256 cellar: :any,                 sonoma:        "268acb949368bea60f1c278292a9bf2484cb99d318a70cf5bf3771a20af8eced"
-    sha256 cellar: :any,                 ventura:       "b75027c42dea77419d1a523e833bc372cbe94c228bc95818995b47b07b89a0f9"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "0f51cc11f13d6b489cdf39d0b1c032f92733f16486d8a7b480e7d8f573a3beee"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "4b40a7bba187836219683a80cbe3b667565f461783a1982c443c746245d6a29d"
+    sha256 cellar: :any,                 arm64_sequoia: "0622645eb0ca604b99a63c46709a54b6906f61506325b384bae5b223e158e05f"
+    sha256 cellar: :any,                 arm64_sonoma:  "2085caf25baf51cce27559714a1bb9c09dabec10913e0bd093ac0a4737b6322c"
+    sha256 cellar: :any,                 arm64_ventura: "7b97f4b2873741884ba63e6410f0b237f422fe0988464cedd8af08a581dd6233"
+    sha256 cellar: :any,                 sonoma:        "b12c18a3679cd9d00d59980ab3020c720b539c7d02127f3baf2b743911a9da7b"
+    sha256 cellar: :any,                 ventura:       "363b27d0a50cbab8fb6bae8e9babd8f1412d3951ff8631cbd49eb187c9d73c27"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "55574b63a5ca87482ebe2f313a22ec56cf6f01730c902246351cac631119b707"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "b01072352644993ed53cfad128c3f404ade0aa2c777670b9a30c51b8e92fdb1e"
   end
 
   depends_on "pkgconf" => :build

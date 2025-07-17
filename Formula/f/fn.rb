@@ -7,12 +7,12 @@ class Fn < Formula
   head "https://github.com/fnproject/cli.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "bc75dcc9e25a754b2496f20be3e7ca5a0f2a169aeb161e001b1901b743742b16"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "bc75dcc9e25a754b2496f20be3e7ca5a0f2a169aeb161e001b1901b743742b16"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "bc75dcc9e25a754b2496f20be3e7ca5a0f2a169aeb161e001b1901b743742b16"
-    sha256 cellar: :any_skip_relocation, sonoma:        "1be537487a7c5e06b6294e7f0bdd909577be3ac20bc24f86a1492e5d141ca2dd"
-    sha256 cellar: :any_skip_relocation, ventura:       "1be537487a7c5e06b6294e7f0bdd909577be3ac20bc24f86a1492e5d141ca2dd"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "94c8785d4558767d638fa87b3086a8f2aa43e223165c991e092e62a8106d2ba2"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "e284eabf4799ad4175683065ccbd8856a01e7726950ffec1b3137080ead1edeb"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "e284eabf4799ad4175683065ccbd8856a01e7726950ffec1b3137080ead1edeb"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "e284eabf4799ad4175683065ccbd8856a01e7726950ffec1b3137080ead1edeb"
+    sha256 cellar: :any_skip_relocation, sonoma:        "95800a2b61242016d9af1066ed1ce21e1dddca3fb37c7a897b847ce3620017c4"
+    sha256 cellar: :any_skip_relocation, ventura:       "95800a2b61242016d9af1066ed1ce21e1dddca3fb37c7a897b847ce3620017c4"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "2b9b603653b1e11e063c8657dde89cea7a0fc8fac2cea5014bc2c07a6aa05cd2"
   end
 
   depends_on "go" => :build

@@ -7,6 +7,15 @@ class Badread < Formula
   sha256 "236dee5ac99b8d0c1997c482df5b805908b0c34f75277ef706e897af71db1f9a"
   license "GPL-3.0-or-later"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "5938c3cea8d94f65b2a7b6c72766f127c81c9a6b0fc96fe5ed2f8d820898d5b0"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "c297b72a55ad77e5d55265960b8c18eac6558cab393c00d35585201317df19ef"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "b40ec3e8905345b20c7c70f723dddb18217421511fe188ab0fbf3b665b60f46a"
+    sha256 cellar: :any_skip_relocation, sonoma:        "1f6c2d20d2f85961db238a4bea9316fb46153c354d71b77b4325baf7105c97f0"
+    sha256 cellar: :any_skip_relocation, ventura:       "19885698a620d42a588f5e91421e978f470b016587cc7e907de3867bf0e891c1"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "7486cdbdd9b1c62830833a9dbef4abc4c25594860367bfd52f97266fdd867e2c"
+  end
+
   depends_on "numpy"
   depends_on "python@3.13"
   depends_on "scipy"

@@ -1,10 +1,10 @@
 class OpenjdkAT8 < Formula
   desc "Development kit for the Java programming language"
   homepage "https://openjdk.java.net/"
-  url "https://github.com/openjdk/jdk8u/archive/refs/tags/jdk8u452-ga.tar.gz"
-  version "1.8.0-452"
-  BUILD_NUMBER = "b09".freeze # Please update when a new GA release is available: https://wiki.openjdk.org/display/jdk8u.
-  sha256 "cf1009e18b6332ef2b4a54257a6087611970bcdab5368907ac67ada1e9709676"
+  url "https://github.com/openjdk/jdk8u/archive/refs/tags/jdk8u462-ga.tar.gz"
+  version "1.8.0-462"
+  BUILD_NUMBER = "b08".freeze # Please update when a new GA release is available: https://wiki.openjdk.org/display/jdk8u.
+  sha256 "5341fe5275046100d9795078a1d6e1a9cabdf3e7df334592a35c91c66976168b"
   license "GPL-2.0-only"
 
   livecheck do
@@ -72,7 +72,7 @@ class OpenjdkAT8 < Formula
     end
   end
 
-  # NOTE: Since macOS Sonoma or newer don’t include the required headers for JNF (JavaNativeFoundation.framework),
+  # NOTE: Since macOS Sonoma or newer don't include the required headers for JNF (JavaNativeFoundation.framework),
   # we will use the headers provided at https://github.com/apple/openjdk.
   resource "JavaNativeFoundation" do
     on_sonoma :or_newer do

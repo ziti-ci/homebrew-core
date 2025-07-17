@@ -1,8 +1,8 @@
 class VueLanguageServer < Formula
   desc "Vue.js language server"
   homepage "https://github.com/vuejs/language-tools"
-  url "https://registry.npmjs.org/@vue/language-server/-/language-server-3.0.1.tgz"
-  sha256 "91226013de0ed6a61d77f62845ec7c0894a9ad2d793e96e84f30a12a7623da71"
+  url "https://registry.npmjs.org/@vue/language-server/-/language-server-3.0.2.tgz"
+  sha256 "d1726ebc809980e71dfe586fbfbe5d908c282b8ebccbdafe976c53659fd26963"
   license "MIT"
 
   bottle do

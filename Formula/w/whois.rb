@@ -33,10 +33,7 @@ class Whois < Formula
       "HAVE_ICONV=0"
     end
 
-    system "make", "whois", have_iconv
-    bin.install "whois"
-    man1.install "whois.1"
-    man5.install "whois.conf.5"
+    system "make", "install-whois", "prefix=#{prefix}", have_iconv
   end
 
   test do

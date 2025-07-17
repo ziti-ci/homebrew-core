@@ -10,11 +10,6 @@ class Libplacebo < Formula
     url "https://code.videolan.org/videolan/libplacebo/-/archive/v7.351.0/libplacebo-v7.351.0.tar.bz2"
     sha256 "d68159280842a7f0482dcea44a440f4c9a8e9403b82eccf185e46394dfc77e6a"
 
-    resource "fast_float" do
-      url "https://github.com/fastfloat/fast_float/archive/refs/tags/v8.0.1.tar.gz"
-      sha256 "18f868f0117b359351f2886be669ce9cda9ea281e6bf0bcc020226c981cc3280"
-    end
-
     resource "glad2" do
       url "https://files.pythonhosted.org/packages/6e/5a/d62b24fe1c7c2f34e15c2aa4418a5327a8550fdc272999a59e0dddebc3ee/glad2-2.0.8.tar.gz"
       sha256 "b84079b9fa404f37171b961bdd1d8da21370e6c818defb8481c5b3fe3d6436da"
@@ -41,6 +36,7 @@ class Libplacebo < Formula
     sha256               x86_64_linux:  "0b416df707aa5920f94b8a9e8b016b545dbdb157d2ad066103190bdf9821d6a9"
   end
 
+  depends_on "fast_float" => :build
   depends_on "meson" => :build
   depends_on "ninja" => :build
   depends_on "pkgconf" => :build
@@ -63,6 +59,9 @@ class Libplacebo < Formula
 
       r.stage(Pathname("3rdparty")/dir_name)
     end
+
+    # Use Homebrew `fast_float`.
+    inreplace "src/meson.build", "../3rdparty/fast_float/include", Formula["fast_float"].opt_include
 
     system "meson", "setup", "build",
                     "-Dvulkan-registry=#{Formula["vulkan-headers"].share}/vulkan/registry/vk.xml",

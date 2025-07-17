@@ -3,8 +3,8 @@ class LanggraphCli < Formula
 
   desc "Command-line interface for deploying apps to the LangGraph platform"
   homepage "https://www.github.com/langchain-ai/langgraph"
-  url "https://files.pythonhosted.org/packages/fe/ee/41f54032b2ab64c06e66e7f5e7a6c22d9159f2bff6bf08a38c9f11f84753/langgraph_cli-0.3.4.tar.gz"
-  sha256 "6300df4fc6f7106fd5fcdba2cbec9e8b1158daa6760d41333d1b3b5999280ad0"
+  url "https://files.pythonhosted.org/packages/3e/65/08017703a6a2ee6abb999308f85ebe8efde2da42e3acd6b5d0394c23b8ed/langgraph_cli-0.3.5.tar.gz"
+  sha256 "6120c037bdbdd779a1a80bf6d408ab4643cdc52e594a07caad5221a923fd3b78"
   license "MIT"
 
   bottle do
@@ -27,8 +27,8 @@ class LanggraphCli < Formula
   end
 
   resource "certifi" do
-    url "https://files.pythonhosted.org/packages/73/f7/f14b46d4bcd21092d7d3ccef689615220d8a08fb25e564b65d20738e672e/certifi-2025.6.15.tar.gz"
-    sha256 "d747aa5a8b9bbbb1bb8c22bb13e22bd1f18e9796defa16bab421f7f7a317323b"
+    url "https://files.pythonhosted.org/packages/b3/76/52c535bcebe74590f296d6c77c86dabf761c41980e1347a2422e4aa2ae41/certifi-2025.7.14.tar.gz"
+    sha256 "8ea99dbdfaaf2ba2f9bac77b9249ef62ec5218e7c2b2e903378ed5fccf765995"
   end
 
   resource "click" do
@@ -57,13 +57,13 @@ class LanggraphCli < Formula
   end
 
   resource "langgraph-sdk" do
-    url "https://files.pythonhosted.org/packages/c0/a6/cf13ace9bc7f0e8b13852ced0b37ece97f3140e232821c28bc852f8c1ea2/langgraph_sdk-0.1.72.tar.gz"
-    sha256 "396d8195881830700e2d54a0a9ee273e8b1173428e667502ef9c182a3cec7ab7"
+    url "https://files.pythonhosted.org/packages/ba/e8/daf0271f91e93b10566533955c00ee16e471066755c2efd1ba9a887a7eab/langgraph_sdk-0.1.73.tar.gz"
+    sha256 "6e6dcdf66bcf8710739899616856527a72a605ce15beb76fbac7f4ce0e2ad080"
   end
 
   resource "orjson" do
-    url "https://files.pythonhosted.org/packages/81/0b/fea456a3ffe74e70ba30e01ec183a9b26bec4d497f61dcfce1b601059c60/orjson-3.10.18.tar.gz"
-    sha256 "e8da3947d92123eda795b68228cafe2724815621fe35e8e320a9e9593a4bcd53"
+    url "https://files.pythonhosted.org/packages/29/87/03ababa86d984952304ac8ce9fbd3a317afb4a225b9a81f9b606ac60c873/orjson-3.11.0.tar.gz"
+    sha256 "2e4c129da624f291bcc607016a99e7f04a353f6874f3bd8d9b47b88597d5f700"
   end
 
   resource "sniffio" do

@@ -1,12 +1,12 @@
 class Cmocka < Formula
   desc "Unit testing framework for C"
   homepage "https://cmocka.org/"
-  url "https://cmocka.org/files/1.1/cmocka-1.1.7.tar.xz"
-  sha256 "810570eb0b8d64804331f82b29ff47c790ce9cd6b163e98d47a4807047ecad82"
+  url "https://cmocka.org/files/1.1/cmocka-1.1.8.tar.xz"
+  sha256 "58435b558766d7f4c729ba163bdf3aec38bed3bc766dab684e3526ed0aa7c780"
   license "Apache-2.0"
   head "https://git.cryptomilk.org/projects/cmocka.git", branch: "master"
 
-  no_autobump! because: :requires_manual_review
+  no_autobump! because: :incompatible_version_format
 
   bottle do
     sha256 cellar: :any,                 arm64_sequoia:  "f59c0f3dcb57570a55bc13e96ac8d5b7710dd61289c9b75d1bf038d0866648ed"

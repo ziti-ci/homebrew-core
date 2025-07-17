@@ -1,8 +1,8 @@
 class SpirvTools < Formula
   desc "API and commands for processing SPIR-V modules"
   homepage "https://github.com/KhronosGroup/SPIRV-Tools"
-  url "https://github.com/KhronosGroup/SPIRV-Tools/archive/refs/tags/vulkan-sdk-1.4.313.0.tar.gz"
-  sha256 "6b60f723345ceed5291cceebbcfacf7fea9361a69332261fa08ae57e2a562005"
+  url "https://github.com/KhronosGroup/SPIRV-Tools/archive/refs/tags/vulkan-sdk-1.4.321.0.tar.gz"
+  sha256 "8327fb8f3e9472346a004c91dbb83a6e5f3b36c3846c142cf8c0dc8fac8710f3"
   license "Apache-2.0"
   version_scheme 1
   head "https://github.com/KhronosGroup/SPIRV-Tools.git", branch: "main"
@@ -31,7 +31,7 @@ class SpirvTools < Formula
   resource "spirv-headers" do
     # revision number could be found as `spirv_headers_revision` in `./DEPS`
     url "https://github.com/KhronosGroup/SPIRV-Headers.git",
-        revision: "aa6cef192b8e693916eb713e7a9ccadf06062ceb"
+        revision: "2a611a970fdbc41ac2e3e328802aed9985352dca"
   end
 
   def install

@@ -1,9 +1,9 @@
 class Nauty < Formula
   desc "Automorphism groups of graphs and digraphs"
   homepage "https://pallini.di.uniroma1.it/"
-  url "https://pallini.di.uniroma1.it/nauty2_8_9.tar.gz"
-  mirror "https://users.cecs.anu.edu.au/~bdm/nauty/nauty2_8_9.tar.gz"
-  sha256 "c97ab42bf48796a86a598bce3e9269047ca2b32c14fc23e07208a244fe52c4ee"
+  url "https://pallini.di.uniroma1.it/nauty2_9_0.tar.gz"
+  mirror "https://users.cecs.anu.edu.au/~bdm/nauty/nauty2_9_0.tar.gz"
+  sha256 "7b38834c7cefe17d25e05eef1ef3882fa9cd1933f582b9eb9de7477411956053"
   license "Apache-2.0"
   version_scheme 1
 
@@ -15,7 +15,7 @@ class Nauty < Formula
     end
   end
 
-  no_autobump! because: :requires_manual_review
+  no_autobump! because: :incompatible_version_format
 
   bottle do
     sha256 cellar: :any,                 arm64_sequoia:  "578e9a6a33dacc5574586019c8a22244879573c241e7a1be9ad7183cd4c91aa4"
@@ -27,12 +27,6 @@ class Nauty < Formula
     sha256 cellar: :any,                 monterey:       "129084aaac09aac1e749cf4ed1eb0c716afc2c6c9d7689a877b96bdf12e5c837"
     sha256 cellar: :any_skip_relocation, arm64_linux:    "844934bff50859c4bb0add9d80cc6e07cdf22c967fdea1a3950cfee0e33b35b1"
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "6858f23478175ad58d2aa59eaa599ab3610476043c9b8062e6ef4d897051d412"
-  end
-
-  # Fix -flat_namespace being used on Big Sur and later.
-  patch do
-    url "https://raw.githubusercontent.com/Homebrew/formula-patches/03cf8088210822aa2c1ab544ed58ea04c897d9c4/libtool/configure-big_sur.diff"
-    sha256 "35acd6aebc19843f1a2b3a63e880baceb0f5278ab1ace661e57a502d9d78c93c"
   end
 
   def install

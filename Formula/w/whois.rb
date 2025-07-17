@@ -1,8 +1,8 @@
 class Whois < Formula
   desc "Lookup tool for domain names and other internet resources"
   homepage "https://github.com/rfc1036/whois"
-  url "https://github.com/rfc1036/whois/archive/refs/tags/v5.6.2.tar.gz"
-  sha256 "0773cf51fc9a980af3954fb3859c7673f8bb7901c5be4041a12c926609edeb89"
+  url "https://github.com/rfc1036/whois/archive/refs/tags/v5.6.3.tar.gz"
+  sha256 "5bdaf291465ef185384d9b5c4482f377a8040c008433b51d3cb8a4627f7aab14"
   license "GPL-2.0-or-later"
   head "https://github.com/rfc1036/whois.git", branch: "next"
 

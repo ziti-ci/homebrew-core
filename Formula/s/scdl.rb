@@ -5,7 +5,7 @@ class Scdl < Formula
   homepage "https://github.com/scdl-org/scdl"
   url "https://github.com/scdl-org/scdl/archive/refs/tags/v2.12.4.tar.gz"
   sha256 "e75b09ee8fdb553fd7a34061023f1c33b6981e02cbd03229f693235e279d6d65"
-  license "GPL-2.0-or-later"
+  license "GPL-2.0-only"
 
   bottle do
     sha256 cellar: :any_skip_relocation, all: "38f82509874a32624fff314d260cec58e04a22d2369d96d9a3373a5ea37da816"

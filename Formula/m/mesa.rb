@@ -3,8 +3,8 @@ class Mesa < Formula
 
   desc "Graphics Library"
   homepage "https://www.mesa3d.org/"
-  url "https://archive.mesa3d.org/mesa-25.1.7.tar.xz"
-  sha256 "4afd26a3cc93c3dd27183d4c4845f1ca7d683f6343900b54995809b3271ebed6"
+  url "https://archive.mesa3d.org/mesa-25.2.0.tar.xz"
+  sha256 "7c726b21c074d14d31d253d638b741422f3c0a497ce7f1b4aaaa917d10bd8d4f"
   license all_of: [
     "MIT",
     "Apache-2.0", # include/{EGL,GLES*,vk_video,vulkan}, src/egl/generate/egl.xml, src/mapi/glapi/registry/gl.xml
@@ -70,6 +70,7 @@ class Mesa < Formula
     depends_on "gzip" => :build
     depends_on "libva" => :build
     depends_on "libvdpau" => :build
+    depends_on "pycparser" => :build
     depends_on "valgrind" => :build
     depends_on "wayland-protocols" => :build
 
@@ -80,10 +81,6 @@ class Mesa < Formula
     depends_on "libxxf86vm"
     depends_on "lm-sensors"
     depends_on "wayland"
-
-    on_arm do
-      depends_on "pycparser" => :build
-    end
 
     on_intel do
       depends_on "cbindgen" => :build
@@ -137,45 +134,56 @@ class Mesa < Formula
 
     args = %w[
       -Db_ndebug=true
+      -Dgallium-rusticl=true
+      -Dllvm=enabled
       -Dopengl=true
       -Dstrip=true
-      -Dllvm=enabled
-
       -Dvideo-codecs=all
-      -Dgallium-rusticl=true
     ]
     args += if OS.mac?
       %W[
         -Dgallium-drivers=llvmpipe,zink
-        -Dvulkan-drivers=swrast
-        -Dvulkan-layers=intel-nullhw,overlay,screenshot
-        -Dtools=etnaviv,glsl,nir,nouveau,imagination,dlclose-skip
         -Dmoltenvk-dir=#{Formula["molten-vk"].prefix}
+        -Dtools=etnaviv,glsl,nir,nouveau,imagination,dlclose-skip
+        -Dvulkan-drivers=swrast
+        -Dvulkan-layers=intel-nullhw,overlay,screenshot,vram-report-limit
       ]
     else
       %w[
         -Degl=enabled
-        -Dgallium-drivers=auto
         -Dgallium-extra-hud=true
-        -Dgallium-nine=true
         -Dgallium-va=enabled
         -Dgallium-vdpau=enabled
-        -Dgallium-xa=enabled
         -Dgbm=enabled
         -Dgles1=enabled
         -Dgles2=enabled
         -Dglx=dri
         -Dintel-clc=enabled
+        -Dintel-rt=enabled
         -Dlmsensors=enabled
         -Dmicrosoft-clc=disabled
         -Dplatforms=x11,wayland
-        -Dshared-glapi=enabled
-        -Dtools=drm-shim,dlclose-skip,etnaviv,freedreno,glsl,intel,lima,nir,nouveau,asahi,imagination
+        -Dtools=drm-shim,etnaviv,freedreno,glsl,intel,nir,nouveau,lima,panfrost,asahi,imagination,dlclose-skip
         -Dvalgrind=enabled
-        -Dvulkan-drivers=auto
-        -Dvulkan-layers=device-select,intel-nullhw,overlay,screenshot
-        --force-fallback-for=indexmap,paste,pest_generator,roxmltree,syn
+        -Dvulkan-layers=device-select,intel-nullhw,overlay,screenshot,vram-report-limit
+        --force-fallback-for=indexmap,paste,pest_generator,roxmltree,rustc-hash,syn
       ]
+    end
+
+    # Not all supported drivers are being auto-enabled on x86 Linux.
+    # TODO: Determine the explicit drivers list for ARM Linux.
+    if OS.linux?
+      args += if Hardware::CPU.intel?
+        %w[
+          -Dgallium-drivers=all
+          -Dvulkan-drivers=all
+        ]
+      else
+        %w[
+          -Dgallium-drivers=auto
+          -Dvulkan-drivers=auto
+        ]
+      end
     end
 
     system "meson", "setup", "build", *args, *std_meson_args
@@ -201,8 +209,8 @@ class Mesa < Formula
 
   test do
     resource "glxgears.c" do
-      url "https://gitlab.freedesktop.org/mesa/demos/-/raw/8ecad14b04ccb3d4f7084122ff278b5032afd59a/src/xdemos/glxgears.c"
-      sha256 "cbb5a797cf3d2d8b3fce01cfaf01643d6162ca2b0e97d760cc2e5aec8d707601"
+      url "https://gitlab.freedesktop.org/mesa/demos/-/raw/a533acd00ed0b6d1beda7df0c68a59a873dba2b3/src/xdemos/glxgears.c"
+      sha256 "36376674e73fb0657fd56a3738c330b828da6731c934e2b29d75253dc02ad03b"
     end
 
     resource "gl_wrap.h" do

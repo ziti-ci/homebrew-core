@@ -13,6 +13,7 @@ class Badread < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura: "b40ec3e8905345b20c7c70f723dddb18217421511fe188ab0fbf3b665b60f46a"
     sha256 cellar: :any_skip_relocation, sonoma:        "1f6c2d20d2f85961db238a4bea9316fb46153c354d71b77b4325baf7105c97f0"
     sha256 cellar: :any_skip_relocation, ventura:       "19885698a620d42a588f5e91421e978f470b016587cc7e907de3867bf0e891c1"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "8196a5a5cd8ac1211b0413d6ace9c8c82ec2467d737ec8224438d0098ec91aa1"
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "7486cdbdd9b1c62830833a9dbef4abc4c25594860367bfd52f97266fdd867e2c"
   end
 

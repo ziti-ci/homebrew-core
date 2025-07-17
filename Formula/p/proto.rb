@@ -1,8 +1,8 @@
 class Proto < Formula
   desc "Pluggable multi-language version manager"
   homepage "https://moonrepo.dev/proto"
-  url "https://github.com/moonrepo/proto/archive/refs/tags/v0.50.5.tar.gz"
-  sha256 "9482fb7321d886c9a2faef16fdf0e1f0514e58fc4ef3478143d04facc30ab72f"
+  url "https://github.com/moonrepo/proto/archive/refs/tags/v0.51.0.tar.gz"
+  sha256 "e6e529d1b1ad84d46927bbb48d35f95bc18647413423ac298ecab18278e24e02"
   license "MIT"
   head "https://github.com/moonrepo/proto.git", branch: "master"
 
@@ -27,6 +27,7 @@ class Proto < Formula
   uses_from_macos "bzip2"
 
   on_linux do
+    depends_on "openssl@3"
     depends_on "xz"
   end
 

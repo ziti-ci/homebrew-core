@@ -2,8 +2,8 @@ class Koka < Formula
   desc "Compiler for the Koka language"
   homepage "http://koka-lang.org"
   url "https://github.com/koka-lang/koka.git",
-    tag:      "v3.1.3",
-    revision: "acce6267bf0c35da37610a70b7ecf9d3c7fc4b94"
+    tag:      "v3.2.0",
+    revision: "1a63e4c167f7a2df5520e4fae001eed0d220e42f"
   license "Apache-2.0"
   head "https://github.com/koka-lang/koka.git", branch: "dev"
 

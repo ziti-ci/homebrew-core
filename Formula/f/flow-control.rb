@@ -3,12 +3,10 @@ class FlowControl < Formula
   homepage "https://flow-control.dev/"
   # version is used to build by `git describe --always --tags`
   url "https://github.com/neurocyte/flow.git",
-      tag:      "v0.3.3",
-      revision: "fb5cd46d0b1fd277d6de3ded0a9d1d99bd73d643"
+      tag:      "v0.4.0",
+      revision: "7177da5a89e3deb1f40b81be19056aca7c2be6e2"
   license "MIT"
   head "https://github.com/neurocyte/flow.git", branch: "master"
-
-  no_autobump! because: :requires_manual_review
 
   bottle do
     sha256 arm64_sequoia: "6ed1b2aaf297e50e5782d85c71a6fd23bd8705043e79281e194d68520661e11f"
@@ -29,13 +27,10 @@ class FlowControl < Formula
     else Hardware.oldest_cpu
     end
 
-    args = %W[
-      --prefix #{prefix}
-      -Doptimize=ReleaseFast
-    ]
+    args = []
     args << "-Dcpu=#{cpu}" if build.bottle?
 
-    system "zig", "build", *args
+    system "zig", "build", *args, *std_zig_args
   end
 
   test do

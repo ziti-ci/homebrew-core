@@ -1,8 +1,8 @@
 class Opam < Formula
   desc "OCaml package manager"
   homepage "https://opam.ocaml.org"
-  url "https://github.com/ocaml/opam/releases/download/2.3.0/opam-full-2.3.0.tar.gz"
-  sha256 "506ba76865dc315b67df9aa89e7abd5c1a897a7f0a92d7b2694974fdc532b346"
+  url "https://github.com/ocaml/opam/releases/download/2.4.0/opam-full-2.4.0.tar.gz"
+  sha256 "119f41efb1192dad35f447fbf1c6202ffc331105e949d2980a75df8cb2c93282"
   license "LGPL-2.1-only"
   head "https://github.com/ocaml/opam.git", branch: "master"
 
@@ -32,7 +32,6 @@ class Opam < Formula
   end
 
   depends_on "ocaml" => [:build, :test]
-  depends_on "gpatch"
 
   uses_from_macos "unzip"
 

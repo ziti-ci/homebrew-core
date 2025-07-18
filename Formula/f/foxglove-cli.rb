@@ -1,12 +1,10 @@
 class FoxgloveCli < Formula
   desc "Foxglove command-line tool"
   homepage "https://github.com/foxglove/foxglove-cli"
-  url "https://github.com/foxglove/foxglove-cli/archive/refs/tags/v1.0.23.tar.gz"
-  sha256 "d03e708033cf7665ddec02625fc97380dbbb06177807f3c8b4d27f6a696bb348"
+  url "https://github.com/foxglove/foxglove-cli/archive/refs/tags/v1.0.24.tar.gz"
+  sha256 "fbc7cb7665a7286f3f79455652ae45e97be5f17fa398bc240d9090ebdf31fd21"
   license "MIT"
   head "https://github.com/foxglove/foxglove-cli.git", branch: "main"
-
-  no_autobump! because: :requires_manual_review
 
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_sequoia: "5f868121298b783e4e1927a784877025ba11502f91f49914959b1f07b6851a66"

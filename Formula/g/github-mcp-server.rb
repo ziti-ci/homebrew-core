@@ -7,12 +7,12 @@ class GithubMcpServer < Formula
   head "https://github.com/github/github-mcp-server.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "dfb8db2d5000955a2498efbc749b6242e79edb70e0f1848e570e8555b9ee7b0e"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "dfb8db2d5000955a2498efbc749b6242e79edb70e0f1848e570e8555b9ee7b0e"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "dfb8db2d5000955a2498efbc749b6242e79edb70e0f1848e570e8555b9ee7b0e"
-    sha256 cellar: :any_skip_relocation, sonoma:        "0704b2fbc2a98f50a67c5a98166596599530d6144169dbfc61fefe1a886728c6"
-    sha256 cellar: :any_skip_relocation, ventura:       "0704b2fbc2a98f50a67c5a98166596599530d6144169dbfc61fefe1a886728c6"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "85c01f81e507435d2b707f59fa09fe31a3ea9e18ebd15d344b8e73e87714a78f"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "c54908baf35f2adbeb31c28ee67f11a5776b77b81dcfe1dd0101d2a1794be069"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "c54908baf35f2adbeb31c28ee67f11a5776b77b81dcfe1dd0101d2a1794be069"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "c54908baf35f2adbeb31c28ee67f11a5776b77b81dcfe1dd0101d2a1794be069"
+    sha256 cellar: :any_skip_relocation, sonoma:        "28be78c85481020e0f2b477f647ada8edc66ad2598bea97a29a878d246a35803"
+    sha256 cellar: :any_skip_relocation, ventura:       "28be78c85481020e0f2b477f647ada8edc66ad2598bea97a29a878d246a35803"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "fbbba95ec5cd0c9db71f82dbb04d2e858e1d6f30a4380c59a71560c32e7437cc"
   end
 
   depends_on "go" => :build

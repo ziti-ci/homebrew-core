@@ -18,15 +18,13 @@ class Nauty < Formula
   no_autobump! because: :incompatible_version_format
 
   bottle do
-    sha256 cellar: :any,                 arm64_sequoia:  "578e9a6a33dacc5574586019c8a22244879573c241e7a1be9ad7183cd4c91aa4"
-    sha256 cellar: :any,                 arm64_sonoma:   "022ba063976e84dd4e0712d6931a0958db497c4f2f4e561ec518172ff26d2eeb"
-    sha256 cellar: :any,                 arm64_ventura:  "fa1634a9e589d67b2df80daca50f4417d46a26f9c03fe0ac3a9acbe59dacfdd0"
-    sha256 cellar: :any,                 arm64_monterey: "3d521857063e06e2e1bbd12a7fc139b4402288ba388a37606c5df19c885942e5"
-    sha256 cellar: :any,                 sonoma:         "f44e77ba13875fdfd450ca378080aa6be8a7e48d6082623846b18a3f525d7d1a"
-    sha256 cellar: :any,                 ventura:        "4a288706331ed1966319cbe0aced25c694e426c587ed56167a2905cfbf2ba584"
-    sha256 cellar: :any,                 monterey:       "129084aaac09aac1e749cf4ed1eb0c716afc2c6c9d7689a877b96bdf12e5c837"
-    sha256 cellar: :any_skip_relocation, arm64_linux:    "844934bff50859c4bb0add9d80cc6e07cdf22c967fdea1a3950cfee0e33b35b1"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "6858f23478175ad58d2aa59eaa599ab3610476043c9b8062e6ef4d897051d412"
+    sha256 cellar: :any,                 arm64_sequoia: "dfd808185ff5ca8b384dd1e7595a4c663ea60dfc2d9753a0b7b9e89e58468de0"
+    sha256 cellar: :any,                 arm64_sonoma:  "fe36b481ad6fd48ccb984c2b6490f589ab752dc9533b7df2e607c69badaac5d0"
+    sha256 cellar: :any,                 arm64_ventura: "e8e7503b16e1f881eb8c5d79afccdd8f8d29f6f8e6d5e8e864ea5ad00e2c062d"
+    sha256 cellar: :any,                 sonoma:        "503471db07b08a390c6b976a207caba8491d4172e95cc5f487be5e1681421a22"
+    sha256 cellar: :any,                 ventura:       "dac0d277931c08200e75f57a423974cdfb129f8641bc38e82fdf737c9867b088"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "4ffc0831b4883e02ab3dc8b32ff79492a2044b3ab2bf4cef4f49fb22cdae007c"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "8cbaedd6109b9d51d5e96830b8a2e8d925b0914cc7d66490102bd588ddc6c0b3"
   end
 
   def install

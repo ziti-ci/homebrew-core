@@ -1,8 +1,8 @@
 class Youtubeuploader < Formula
   desc "Scripted uploads to Youtube"
   homepage "https://github.com/porjo/youtubeuploader"
-  url "https://github.com/porjo/youtubeuploader/archive/refs/tags/v1.25.1.tar.gz"
-  sha256 "729d3cb5a6ff6a09742d9d9371a9c84fc21961d972c24694abed3b048c3d1b83"
+  url "https://github.com/porjo/youtubeuploader/archive/refs/tags/v1.25.3.tar.gz"
+  sha256 "77d862f38e007939810b1b2b703f9c377e1db5108dd15d7ac953ee80eb2d8595"
   license "Apache-2.0"
   version_scheme 1
   head "https://github.com/porjo/youtubeuploader.git", branch: "master"
@@ -62,6 +62,6 @@ class Youtubeuploader < Formula
     JSON
 
     output = shell_output("#{bin}/youtubeuploader -filename #{test_fixtures("test.m4a")} 2>&1", 1)
-    assert_match 'oauth2: "invalid_client" "The OAuth client was not found."', output
+    assert_match 'oauth2: \"invalid_client\" \"The OAuth client was not found.\"', output
   end
 end

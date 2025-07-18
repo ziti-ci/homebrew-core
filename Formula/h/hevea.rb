@@ -1,8 +1,8 @@
 class Hevea < Formula
   desc "LaTeX-to-HTML translator"
   homepage "https://hevea.inria.fr/"
-  url "https://hevea.inria.fr/old/hevea-2.36.tar.gz"
-  sha256 "5d6759d7702a295c76a12c1b2a1a16754ab0ec1ffed73fc9d0b138b41e720648"
+  url "https://hevea.inria.fr/old/hevea-2.37.tar.gz"
+  sha256 "b6e93f07f58179d65b4eb7e8c4a5d5f68b4a25f104c029a62fc9154e93e1af59"
   license all_of: [
     "QPL-1.0", # source files
     "GPL-2.0-only", # binaries
@@ -12,8 +12,6 @@ class Hevea < Formula
     url "https://hevea.inria.fr/old/"
     regex(/href=.*?hevea[._-]v?(\d+(?:\.\d+)+)\.t/i)
   end
-
-  no_autobump! because: :requires_manual_review
 
   bottle do
     sha256 arm64_sequoia:  "bdfe564bb63675879e20d1f8d2958a658b10a062010af2cb2634ba08987ae135"

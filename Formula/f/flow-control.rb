@@ -9,12 +9,12 @@ class FlowControl < Formula
   head "https://github.com/neurocyte/flow.git", branch: "master"
 
   bottle do
-    sha256 arm64_sequoia: "6ed1b2aaf297e50e5782d85c71a6fd23bd8705043e79281e194d68520661e11f"
-    sha256 arm64_sonoma:  "2ddcea938d0eb9f7aa4560991d7a4d2f3fe89e322d4cac67ed5b70f7e04e73f8"
-    sha256 arm64_ventura: "8920bb92cd7af18d0083540e6f82fe331e66ca3fa22f1c7da0bddd7dfe1333dd"
-    sha256 sonoma:        "3dbbd4c191c10a804a204e128c8a2d5b68a929eada6350ca925cf4ded0fc8e1e"
-    sha256 ventura:       "8d451e9e64769726bf5a84998c97d9af902b0f01db2f41223ef22a36f8cfcf0b"
-    sha256 x86_64_linux:  "020d09612e1d13fe77f68f55bf14f6b47e3a26cbbdbe7af42228f3e4e602af78"
+    sha256 arm64_sequoia: "0a5d3cc9d785b501f466207718ffb97cffce91db129afcfb6dfaa503d2fe59ce"
+    sha256 arm64_sonoma:  "12a3b4911b97ff46e78c61011ca776c6ee1c77129688406fc4c94a6acd3ad55b"
+    sha256 arm64_ventura: "8a12557177dfc3921fb157cd0b17585d71d8ba28ee4beb7e6d0d36e6cfb86a0d"
+    sha256 sonoma:        "c7df526005ca5773b016d939085a5226e90155ef85bfb52bf20c5a75d7842c8c"
+    sha256 ventura:       "40b97484294f02f7db53af753f7056c7655a4503a1cd7e02a9b8be6fb5adb779"
+    sha256 x86_64_linux:  "78ef081b9598566457de7e28b52521e72dae6114f9ecd152933bb463b10ebf6b"
   end
 
   depends_on "zig"

@@ -1,9 +1,9 @@
 class Re2 < Formula
   desc "Alternative to backtracking PCRE-style regular expression engines"
   homepage "https://github.com/google/re2"
-  url "https://github.com/google/re2/archive/refs/tags/2025-06-26.tar.gz"
-  version "20250626"
-  sha256 "6090fc23a189e1a04a0e751b4f285922a794a39b6ecc6670b6141af74c82fe08"
+  url "https://github.com/google/re2/archive/refs/tags/2025-07-17.tar.gz"
+  version "20250717"
+  sha256 "41bea2a95289d112e7c2ccceeb60ee03d54269e7fe53e3a82bab40babdfa51ef"
   license "BSD-3-Clause"
   head "https://github.com/google/re2.git", branch: "main"
 
@@ -18,7 +18,7 @@ class Re2 < Formula
     end
   end
 
-  no_autobump! because: :requires_manual_review
+  no_autobump! because: :incompatible_version_format
 
   bottle do
     sha256 cellar: :any,                 arm64_sequoia: "9e6630eec99984adf3adb3e846ca1cb9edb93f2e7da45bb2af33455cfd59a622"

@@ -1,8 +1,8 @@
 class Eza < Formula
   desc "Modern, maintained replacement for ls"
   homepage "https://github.com/eza-community/eza"
-  url "https://github.com/eza-community/eza/archive/refs/tags/v0.22.1.tar.gz"
-  sha256 "148eafa3e5eae4bdddd8cc7b2e666fc17853d43fbcc8f985dde0b22b58357916"
+  url "https://github.com/eza-community/eza/archive/refs/tags/v0.23.0.tar.gz"
+  sha256 "119973d58aef7490f6c553f818cfde142998f5e93205f53f94981a9631b50310"
   license "EUPL-1.2"
 
   bottle do
@@ -45,11 +45,13 @@ class Eza < Formula
   test do
     testfile = "test.txt"
     touch testfile
-    assert_match testfile, shell_output(bin/"eza")
+    # `eza` is broken when not passed a file or directory name.
+    # https://github.com/eza-community/eza/issues/1568
+    assert_match testfile, shell_output("#{bin}/eza #{testpath}")
 
     # Test git integration
     flags = "--long --git --no-permissions --no-filesize --no-user --no-time --color=never"
-    eza_output = proc { shell_output("#{bin}/eza #{flags}").lines.grep(/#{testfile}/).first.split.first }
+    eza_output = proc { shell_output("#{bin}/eza #{flags} #{testpath}").lines.grep(/#{testfile}/).first.split.first }
     system "git", "init"
     assert_equal "-N", eza_output.call
     system "git", "add", testfile

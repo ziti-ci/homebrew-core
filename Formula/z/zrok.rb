@@ -1,8 +1,8 @@
 class Zrok < Formula
   desc "Geo-scale, next-generation sharing platform built on top of OpenZiti"
   homepage "https://zrok.io"
-  url "https://github.com/openziti/zrok/releases/download/v1.0.6/source-v1.0.6.tar.gz"
-  sha256 "cce522bd8e0ec39f279e92aaba1599cd8504f9d1eebbce833c30f10047f971ca"
+  url "https://github.com/openziti/zrok/releases/download/v1.0.7/source-v1.0.7.tar.gz"
+  sha256 "a4f94b95ee7e6464fea5c43a3779219cf41aec14265e5ad12fdad449005b27ce"
   # The main license is Apache-2.0. ACKNOWLEDGEMENTS.md lists licenses for parts of code
   license all_of: ["Apache-2.0", "BSD-3-Clause", "MIT"]
   head "https://github.com/openziti/zrok.git", branch: "main"

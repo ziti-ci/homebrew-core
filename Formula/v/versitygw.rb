@@ -1,8 +1,8 @@
 class Versitygw < Formula
   desc "Versity S3 Gateway"
   homepage "https://www.versity.com/products/versitygw/"
-  url "https://github.com/versity/versitygw/archive/refs/tags/v1.0.15.tar.gz"
-  sha256 "b1d877a30ea5b1d06cd50fd66500470664a1963b02fe4366d5fa8f301083b7db"
+  url "https://github.com/versity/versitygw/archive/refs/tags/v1.0.16.tar.gz"
+  sha256 "d652720a93855167f3bef39f64612d3088b5fade1d210f1988e24bc5f7f962fe"
   license "Apache-2.0"
   head "https://github.com/versity/versitygw.git", branch: "main"
 

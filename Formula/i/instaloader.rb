@@ -8,7 +8,7 @@ class Instaloader < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "084bbde5b63607e0e3b84bb4fc8c3447422a5ad409d37fc6baa6eb42a9e5b94e"
+    sha256 cellar: :any_skip_relocation, all: "3d5b432b721f0130c9cedf643d0d1e4264f8917ef02ef1085fb3a3d1bdfdeff0"
   end
 
   depends_on "certifi"

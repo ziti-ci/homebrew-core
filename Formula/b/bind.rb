@@ -11,6 +11,7 @@ class Bind < Formula
   url "https://downloads.isc.org/isc/bind9/9.20.11/bind-9.20.11.tar.xz"
   sha256 "4da2d532e668bc21e883f6e6d9d3d81794d9ec60b181530385649a56f46ee17a"
   license "MPL-2.0"
+  revision 1
   version_scheme 1
   head "https://gitlab.isc.org/isc-projects/bind9.git", branch: "main"
 
@@ -50,6 +51,11 @@ class Bind < Formula
   end
 
   def install
+    # Apply macOS 15+ libxml2 deprecation to all macOS versions.
+    # This allows our macOS 14-built Intel bottle to work on macOS 15+
+    # and also cover the case where a user on macOS 14- updates to macOS 15+.
+    ENV.append_to_cflags "-DLIBXML_HAS_DEPRECATED_MEMORY_ALLOCATION_FUNCTIONS" if OS.mac?
+
     args = [
       "--prefix=#{prefix}",
       "--sysconfdir=#{pkgetc}",

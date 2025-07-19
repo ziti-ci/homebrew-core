@@ -16,13 +16,13 @@ class Nss < Formula
   no_autobump! because: :incompatible_version_format
 
   bottle do
-    sha256 cellar: :any,                 arm64_sequoia: "fdea505585252257661eb4d72cf867381bdbe5c97c21a69dd7d5fa54e2452eb3"
-    sha256 cellar: :any,                 arm64_sonoma:  "686c0fbc7123453c6b1ffd18e576e1167b46689e3b021ba5c702b10cde3be65b"
-    sha256 cellar: :any,                 arm64_ventura: "71379675a0c549e5f3b8d58a30175806f08f48e87e849d678b0424a9c0ad74f0"
-    sha256 cellar: :any,                 sonoma:        "b7bfd5b20426eb1f7d07b6287f6e2bc146197de3dbe4040c2fb562241ffc9480"
-    sha256 cellar: :any,                 ventura:       "9353174d336d9be23059571eeabf809e6c1e1a9904f1ca1be0111067e2a1fcd9"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "3912dc84056410724b397eb5f3b451b74e0828fe3faf1a75276bf0e9c7a1c6ff"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "8c202c797802eebbaa78c2724a723383cfea2b41b524dae0abb53c9aac2b9726"
+    sha256 cellar: :any,                 arm64_sequoia: "960035ae7cff43892d5bf406a8a902dc8f8681360762ceda57ef5aa27217d4f4"
+    sha256 cellar: :any,                 arm64_sonoma:  "e073674eb3800b0a2dc5d8e08c1151879aff8ea28bd40c986844a6ce9a84631e"
+    sha256 cellar: :any,                 arm64_ventura: "40f1ccafdf50479bf1ff7b1094f9d40230515c7d9452605052406d4a47575643"
+    sha256 cellar: :any,                 sonoma:        "26c86b0b230bb98a1933cbbb5f993b5fb78363d97afa705ba840dcafe2d7c9e1"
+    sha256 cellar: :any,                 ventura:       "e295a34ad6358080e47a945a5fd582581fa6dfc04ffe51a82ef1dd9f1e24eebb"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "bbfa6206b990dbfd2460656d2982c3199936fc179150545ab7591c6d297cfe3d"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "a644dd6062598af8a068ff17b768bb4b9530bf8c37d30fc8bbe4fe606a163f86"
   end
 
   depends_on "nspr"

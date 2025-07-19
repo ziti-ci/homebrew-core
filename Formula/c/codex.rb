@@ -1,8 +1,8 @@
 class Codex < Formula
   desc "OpenAI's coding agent that runs in your terminal"
   homepage "https://github.com/openai/codex"
-  url "https://github.com/openai/codex/archive/refs/tags/rust-v0.7.0.tar.gz"
-  sha256 "7fbaf0a051d3e4b3179fce8d414754532c7551ba10ca415daca7f67f19c37194"
+  url "https://github.com/openai/codex/archive/refs/tags/rust-v0.8.0.tar.gz"
+  sha256 "f8cfe4d38efc0e297d44f33cb17c744977b25076e7c4d85e3d038c402bc36441"
   license "Apache-2.0"
   head "https://github.com/openai/codex.git", branch: "main"
 

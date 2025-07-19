@@ -2,11 +2,9 @@ class Kopia < Formula
   desc "Fast and secure open-source backup"
   homepage "https://kopia.io"
   url "https://github.com/kopia/kopia.git",
-      tag:      "v0.20.1",
-      revision: "1ee24977ceb09c02329eaebac718ec5a950c5d83"
+      tag:      "v0.21.0",
+      revision: "3a38279bcd7ace79369fc657b4b5d968d4b5b2f2"
   license "Apache-2.0"
-
-  no_autobump! because: :requires_manual_review
 
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_sequoia: "fef8724dc38183165b2d95d432d734a40b228d299615c5c2358ef6429b23f1d8"
@@ -20,14 +18,11 @@ class Kopia < Formula
   depends_on "go" => :build
 
   def install
-    # removed github.com/kopia/kopia/repo.BuildGitHubRepo to disable
-    # update notifications
     ldflags = %W[
       -s -w
       -X github.com/kopia/kopia/repo.BuildInfo=#{Utils.git_head}
       -X github.com/kopia/kopia/repo.BuildVersion=#{version}
     ]
-
     system "go", "build", *std_go_args(ldflags:)
 
     generate_completions_from_executable(bin/"kopia", shells:                 [:bash, :zsh],
@@ -38,15 +33,12 @@ class Kopia < Formula
   end
 
   test do
+    assert_match version.to_s, shell_output("#{bin}/kopia --version")
+
     mkdir testpath/"repo"
     (testpath/"testdir/testfile").write("This is a test.")
 
     ENV["KOPIA_PASSWORD"] = "dummy"
-
-    output = shell_output("#{bin}/kopia --version").strip
-
-    # verify version output, note we're unable to verify the git hash in tests
-    assert_match(%r{#{version} build: .* from:}, output)
 
     system bin/"kopia", "repository", "create", "filesystem", "--path", testpath/"repo", "--no-persist-credentials"
     assert_path_exists testpath/"repo/kopia.repository.f"

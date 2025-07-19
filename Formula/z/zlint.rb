@@ -1,8 +1,8 @@
 class Zlint < Formula
   desc "X.509 Certificate Linter focused on Web PKI standards and requirements"
   homepage "https://zmap.io/"
-  url "https://github.com/zmap/zlint/archive/refs/tags/v3.6.6.tar.gz"
-  sha256 "ca1155915d68772566d8be4c4061129b15eb7055ea9aaa939cc92d3966ba10f6"
+  url "https://github.com/zmap/zlint/archive/refs/tags/v3.6.7.tar.gz"
+  sha256 "3d7c1cc380369c73361a4c6b75e7e880daaad23efcc0107656f0f011168e07d3"
   license "Apache-2.0"
   head "https://github.com/zmap/zlint.git", branch: "master"
 

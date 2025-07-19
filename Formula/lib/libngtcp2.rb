@@ -6,6 +6,15 @@ class Libngtcp2 < Formula
   license "MIT"
   head "https://github.com/ngtcp2/ngtcp2.git", branch: "main"
 
+  bottle do
+    sha256 cellar: :any,                 arm64_sequoia: "b8cb59471c72f95b769458e78a83f2d82f5cf9652672aa8c8302e8a7d1d7b342"
+    sha256 cellar: :any,                 arm64_sonoma:  "88ac1897796458703680bcae5cd4b306766a114e86c79cda15481fa3acccd17c"
+    sha256 cellar: :any,                 arm64_ventura: "2da23c98a4cf07eab8401b0e01c1cb1e86e01299b4ea9faa9d71fec9e5ee85a3"
+    sha256 cellar: :any,                 sonoma:        "4cbe22b930abf9239cbecca925b09531f4f23127bddac06155ed0063ad8e97f4"
+    sha256 cellar: :any,                 ventura:       "3125a751bbb8db07c23e4c6b6540c0bf2bd26e0744a1b7da54564faaff11db4a"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "03b8d48fd1c5357ccb1b518d27ec70786ff7994b9de90b2b7736767377079906"
+  end
+
   depends_on "pkgconf" => :build
   depends_on "openssl@3"
 

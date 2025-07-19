@@ -1,8 +1,8 @@
 class Weechat < Formula
   desc "Extensible IRC client"
   homepage "https://weechat.org/"
-  url "https://weechat.org/files/src/weechat-4.6.3.tar.xz"
-  sha256 "5c0b5efa969b873c4be582019b18523ee403e7430b8223825bcdb44a89f5815d"
+  url "https://weechat.org/files/src/weechat-4.7.0.tar.xz"
+  sha256 "45dc0396060c863169868349ec280af1c6f4ac524aa492580e1a065e142c2cd8"
   license "GPL-3.0-or-later"
   head "https://github.com/weechat/weechat.git", branch: "master"
 
@@ -40,15 +40,7 @@ class Weechat < Formula
     depends_on "libgpg-error"
   end
 
-  def python3
-    which("python3.13")
-  end
-
   def install
-    pyver = Language::Python.major_minor_version python3
-    # Help pkgconf find python as we only provide `python3-embed` for aliased python formula
-    inreplace "cmake/FindPython.cmake", " python3-embed ", " python-#{pyver}-embed "
-
     args = %W[
       -DENABLE_MAN=ON
       -DENABLE_GUILE=OFF

@@ -10,6 +10,15 @@ class Lesspipe < Formula
     any_of: ["Artistic-1.0-Perl", "GPL-1.0-or-later"], # vimcolor
   ]
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "ba151d7b9a0525b3782c1b06315166e45d7b60acb95459aff6731705e2b23b46"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "ba151d7b9a0525b3782c1b06315166e45d7b60acb95459aff6731705e2b23b46"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "ba151d7b9a0525b3782c1b06315166e45d7b60acb95459aff6731705e2b23b46"
+    sha256 cellar: :any_skip_relocation, sonoma:        "ba151d7b9a0525b3782c1b06315166e45d7b60acb95459aff6731705e2b23b46"
+    sha256 cellar: :any_skip_relocation, ventura:       "ba151d7b9a0525b3782c1b06315166e45d7b60acb95459aff6731705e2b23b46"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "ed1c9414decbfbdb557090c3a85590bbf60ed504c2fb6e4665c4e9af7d82d408"
+  end
+
   uses_from_macos "perl"
 
   on_macos do

@@ -1,8 +1,8 @@
 class CargoDist < Formula
   desc "Tool for building final distributable artifacts and uploading them to an archive"
   homepage "https://opensource.axo.dev/cargo-dist/"
-  url "https://github.com/axodotdev/cargo-dist/archive/refs/tags/v0.28.0.tar.gz"
-  sha256 "ef9b7cd1eba124fce752d1bd8414bfa123e06074d370066cb2621992c67d0af4"
+  url "https://github.com/axodotdev/cargo-dist/archive/refs/tags/v0.28.1.tar.gz"
+  sha256 "b4c020a737f1a01615ea76baf4814f00667015d4b1e6931ccc9b35bfdf4d2b84"
   license any_of: ["Apache-2.0", "MIT"]
   head "https://github.com/axodotdev/cargo-dist.git", branch: "main"
 

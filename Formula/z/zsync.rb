@@ -1,9 +1,8 @@
 class Zsync < Formula
   desc "File transfer program"
-  # `zsync.moria.org.uk` is no longer accessible, use internet archive urls instead
-  homepage "https://web.archive.org/web/20241223233525/http://zsync.moria.org.uk/"
-  url "https://web.archive.org/web/20241223233525/http://zsync.moria.org.uk/download/zsync-0.6.2.tar.bz2"
-  sha256 "0b9d53433387aa4f04634a6c63a5efa8203070f2298af72a705f9be3dda65af2"
+  homepage "https://zsync.moria.org.uk/"
+  url "https://zsync.moria.org.uk/download/zsync-0.6.3.tar.bz2"
+  sha256 "293b6191821641d3ed6248206f8f9df0bf46e6ee2cf8b4dd97cfd1d5909edb9a"
   license all_of: [
     "Artistic-2.0",
     "Zlib", # zlib/
@@ -29,10 +28,17 @@ class Zsync < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "1961843c2195ae143b2f2ece7e26f91aa4c5a0acc67721441c221b5ae3404150"
   end
 
-  # `zsync.moria.org.uk` is no longer accessible
-  deprecate! date: "2025-01-12", because: :repo_removed
+  head do
+    url "https://github.com/cph6/zsync.git", branch: "master"
+    depends_on "autoconf" => :build
+    depends_on "automake" => :build
+  end
 
   def install
+    if head?
+      cd "c"
+      system "autoreconf", "--force", "--install", "--verbose"
+    end
     # Fix compile with newer Clang
     ENV.append_to_cflags "-Wno-implicit-function-declaration" if DevelopmentTools.clang_build_version >= 1403
 

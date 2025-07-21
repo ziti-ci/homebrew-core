@@ -1,8 +1,8 @@
 class Echidna < Formula
   desc "Ethereum smart contract fuzzer"
   homepage "https://github.com/crytic/echidna"
-  url "https://github.com/crytic/echidna/archive/refs/tags/v2.2.6.tar.gz"
-  sha256 "699e6f6369e7bd35f0324767c60005ae10ad7c71dc3ac682dd3a3294cd34a8e9"
+  url "https://github.com/crytic/echidna/archive/refs/tags/v2.2.7.tar.gz"
+  sha256 "d1977efb56969daf3df4011e6acd694ad88fc639575f7fe2998c2c291e5c8236"
   license "AGPL-3.0-only"
   head "https://github.com/crytic/echidna.git", branch: "master"
 
@@ -21,7 +21,7 @@ class Echidna < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "22c09f288e1586ba70df669311ec7ecb02acdd378970fbfd731a76033eacd751"
   end
 
-  depends_on "ghc@9.6" => :build # GHC 9.8 PR: https://github.com/crytic/echidna/pull/1334
+  depends_on "ghc@9.8" => :build
   depends_on "haskell-stack" => :build
 
   depends_on "truffle" => :test

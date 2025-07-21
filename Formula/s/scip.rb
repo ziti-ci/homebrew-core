@@ -1,8 +1,8 @@
 class Scip < Formula
   desc "Solver for mixed integer programming and mixed integer nonlinear programming"
   homepage "https://scipopt.org"
-  url "https://scipopt.org/download/release/scip-9.2.2.tgz"
-  sha256 "07c237f2f694c8f24ec9a1b22bcd7cef530b74446f46cfb13905b1a2c3759e5e"
+  url "https://scipopt.org/download/release/scip-9.2.3.tgz"
+  sha256 "6f5e81a643bba22d9b4e43cd97583529587c64eafe83b93bb864b07f9f16fab7"
   license "Apache-2.0"
 
   livecheck do

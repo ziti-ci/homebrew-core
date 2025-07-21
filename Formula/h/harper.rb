@@ -1,8 +1,8 @@
 class Harper < Formula
   desc "Grammar Checker for Developers"
   homepage "https://writewithharper.com/"
-  url "https://github.com/Automattic/harper/archive/refs/tags/v0.51.0.tar.gz"
-  sha256 "57c39f0f5c24144f11dd0f62043b0ded9b7efbd0efc785ff291cef9c54bd5a2b"
+  url "https://github.com/Automattic/harper/archive/refs/tags/v0.52.0.tar.gz"
+  sha256 "125dd08ce276a3c6b797a431a5abf158a23fd353d4bc7a50e450bba1db32c087"
   license "Apache-2.0"
   head "https://github.com/Automattic/harper.git", branch: "master"
 

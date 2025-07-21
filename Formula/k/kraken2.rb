@@ -1,12 +1,15 @@
 class Kraken2 < Formula
   desc "Taxonomic sequence classification system"
   homepage "https://github.com/DerrickWood/kraken2"
-  url "https://github.com/DerrickWood/kraken2/archive/refs/tags/v2.1.5.tar.gz"
-  sha256 "6feb9b1e0840a574598b84a3134a25622e5528ac6d0f4c756cdab629275d8f42"
+  url "https://github.com/DerrickWood/kraken2/archive/refs/tags/v2.1.6.tar.gz"
+  sha256 "5bbd79392ff7c530124986dfdfe126bf638477db94fb7a901ec2daf9261707f3"
   license "MIT"
   head "https://github.com/DerrickWood/kraken2.git", branch: "master"
 
-  no_autobump! because: :requires_manual_review
+  livecheck do
+    url :stable
+    strategy :github_latest
+  end
 
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_sequoia: "3ee275caf279a788ea6a7bce93190ab31165bbdc79fd1dc812ba120336a1918f"

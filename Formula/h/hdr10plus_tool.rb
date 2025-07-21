@@ -11,6 +11,15 @@ class Hdr10plusTool < Formula
     regex(/^v?(\d+(?:\.\d+)+)$/i)
   end
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "5dfeac19a6b661e94df935d27fa225dc73338b93f1b6b8b47b2c4990905ef1b0"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "65b805124a49edf9db43f55cbecb47cd7a79b5dfb9b2dd6eb665ca5a82fc9489"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "b7c7ff273efa5264c458d146a7a8a063ac0484043332b62dcac2feb63d8c74ce"
+    sha256 cellar: :any_skip_relocation, sonoma:        "942613e0a0a9fcc2636d63df7a992f20a61c1060ac127f7d7132daa9012bee17"
+    sha256 cellar: :any_skip_relocation, ventura:       "0243742abe39f9b62b887608e8844d2474fbe57645037f36c7143bbccfef3833"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "d6b11863c103ed0f67eba0ea2aa044bfaad6d95a1cb6dee3e03796ca5f1c60dc"
+  end
+
   depends_on "pkgconf" => :build
   depends_on "rust" => :build
 

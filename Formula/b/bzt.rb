@@ -3,8 +3,8 @@ class Bzt < Formula
 
   desc "BlazeMeter Taurus"
   homepage "https://gettaurus.org/"
-  url "https://files.pythonhosted.org/packages/ff/87/e5b351ffd9941662f004b8d88df2a3e74e36fbe738388cbe71daebab53ce/bzt-1.16.44.tar.gz"
-  sha256 "a6a259fd1d2f068b98b473cd8fc1677dba71247669df296da51d9bee627e6d17"
+  url "https://files.pythonhosted.org/packages/0b/79/c397c0853d273e8c780a6bf0219b799aec675b7f941e77f19e4f90a0feba/bzt-1.16.45.tar.gz"
+  sha256 "3a505b92d4af68fa578c0a36c23694743cee363919781886d4db56a24f1c46c1"
   license "Apache-2.0"
   head "https://github.com/Blazemeter/taurus.git", branch: "master"
 
@@ -211,8 +211,8 @@ class Bzt < Formula
   end
 
   resource "setuptools" do
-    url "https://files.pythonhosted.org/packages/18/5d/3bf57dcd21979b887f014ea83c24ae194cfcd12b9e0fda66b957c69d1fca/setuptools-80.9.0.tar.gz"
-    sha256 "f36b47402ecde768dbfafc46e8e4207b4360c654f1f3bb84475f0a28628fb19c"
+    url "https://files.pythonhosted.org/packages/bb/71/b6365e6325b3290e14957b2c3a804a529968c77a049b2ed40c095f749707/setuptools-79.0.1.tar.gz"
+    sha256 "128ce7b8f33c3079fd1b067ecbb4051a66e8526e7b65f6cec075dfc650ddfa88"
   end
 
   resource "simple-websocket" do

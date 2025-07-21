@@ -6,6 +6,15 @@ class SoxNg < Formula
   license "GPL-2.0-only"
   head "https://codeberg.org/sox_ng/sox_ng.git", branch: "main"
 
+  bottle do
+    sha256 cellar: :any,                 arm64_sequoia: "5e0559da2b8e1b5a113af3d4ab2915d2f5c9961946446dc0a33b4874129ab4b0"
+    sha256 cellar: :any,                 arm64_sonoma:  "ae0f664586fb57a14550b2712415bfee5ef16d7fcc34043bd961e7baddc8489a"
+    sha256 cellar: :any,                 arm64_ventura: "7aa67d78b2b74ec90dae269a84534074acad4587839e57f05363c4720d94ccd9"
+    sha256 cellar: :any,                 sonoma:        "cb9d728e8b85c6262600e8530b17688ed379c97731ceb42eab9314784b3ffb31"
+    sha256 cellar: :any,                 ventura:       "a962c312a0b72bc61dc4494991dbc3d2dd65a46ce05922b31a7eac0b651fd984"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "00390a1c4e03d6649cd550d5e119bbab38d324d91f3246bb4bb42db7ca714b06"
+  end
+
   depends_on "pkgconf" => :build
   depends_on "flac"
   depends_on "lame"

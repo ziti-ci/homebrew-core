@@ -1,8 +1,8 @@
 class Fbthrift < Formula
   desc "Facebook's branch of Apache Thrift, including a new C++ server"
   homepage "https://github.com/facebook/fbthrift"
-  url "https://github.com/facebook/fbthrift/archive/refs/tags/v2025.07.14.00.tar.gz"
-  sha256 "9c2df5c98d73eccbda695983d9961578bb21706338f4ffe7dfca562d490e780b"
+  url "https://github.com/facebook/fbthrift/archive/refs/tags/v2025.07.21.00.tar.gz"
+  sha256 "e5b48881c376829e691ef5e866790cf1875d042a2a8cb81089b7e112c19056c0"
   license "Apache-2.0"
   head "https://github.com/facebook/fbthrift.git", branch: "main"
 
@@ -45,12 +45,6 @@ class Fbthrift < Formula
   fails_with :clang do
     build 1100
     cause "error: 'asm goto' constructs are not supported yet"
-  end
-
-  # https://github.com/facebook/fbthrift/pull/663
-  patch do
-    url "https://github.com/facebook/fbthrift/commit/60858d74ded0ec39e33546c472ec65ad6208a6d5.patch?full_index=1"
-    sha256 "0b91dcdf0a37ea8e885d10bb9762c481a3250a0d09a87ece69b53a3fa0268d7a"
   end
 
   def install

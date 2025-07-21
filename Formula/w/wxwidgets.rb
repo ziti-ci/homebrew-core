@@ -1,8 +1,8 @@
 class Wxwidgets < Formula
   desc "Cross-platform C++ GUI toolkit"
   homepage "https://www.wxwidgets.org"
-  url "https://github.com/wxWidgets/wxWidgets/releases/download/v3.2.8/wxWidgets-3.2.8.tar.bz2"
-  sha256 "c74784904109d7229e6894c85cfa068f1106a4a07c144afd78af41f373ee0fe6"
+  url "https://github.com/wxWidgets/wxWidgets/releases/download/v3.3.1/wxWidgets-3.3.1.tar.bz2"
+  sha256 "f936c8d694f9c49a367a376f99c751467150a4ed7cbf8f4723ef19b2d2d9998d"
   license "LGPL-2.0-or-later" => { with: "WxWindows-exception-3.1" }
   head "https://github.com/wxWidgets/wxWidgets.git", branch: "master"
 
@@ -26,6 +26,7 @@ class Wxwidgets < Formula
   depends_on "libpng"
   depends_on "libtiff"
   depends_on "pcre2"
+  depends_on "webp"
 
   uses_from_macos "expat"
   uses_from_macos "zlib"
@@ -49,7 +50,7 @@ class Wxwidgets < Formula
 
   def install
     # Remove all bundled libraries excluding `nanosvg` which isn't available as formula
-    %w[catch pcre].each { |l| rm_r(buildpath/"3rdparty"/l) }
+    %w[catch pcre libwebp].each { |l| rm_r(buildpath/"3rdparty"/l) }
     %w[expat jpeg png tiff zlib].each { |l| rm_r(buildpath/"src"/l) }
 
     args = [
@@ -59,14 +60,13 @@ class Wxwidgets < Formula
       "--enable-display",
       "--enable-dnd",
       "--enable-graphics_ctx",
-      "--enable-std_string",
       "--enable-svg",
-      "--enable-unicode",
       "--enable-webviewwebkit",
       "--with-expat",
       "--with-libjpeg",
       "--with-libpng",
       "--with-libtiff",
+      "--with-libwebp",
       "--with-opengl",
       "--with-zlib",
       "--disable-tests",

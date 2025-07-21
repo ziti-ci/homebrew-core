@@ -121,15 +121,13 @@ class NodeAT22 < Formula
     ].map { |library| "--shared-#{library}" }
 
     configure_help = Utils.safe_popen_read("./configure", "--help")
-    shared_flag_regex = /\[(?<flag>--shared-[^ ]+)\]/
-    configure_help.each_line do |line|
-      matchdata = line.strip.match(shared_flag_regex)
-      next if matchdata.nil?
+    shared_flag_regex = /\[(--shared-[^ \]]+)\]/
+    configure_help.scan(shared_flag_regex) do |matches|
+      matches.each do |flag|
+        next if args.include?(flag) || ignored_shared_flags.include?(flag)
 
-      flag = matchdata[:flag]
-      next if args.include?(flag) || ignored_shared_flags.include?(flag)
-
-      odie "Unused `--shared-*` flag: #{flag}"
+        odie "Unused `--shared-*` flag: #{flag}"
+      end
     end
 
     system "./configure", *args

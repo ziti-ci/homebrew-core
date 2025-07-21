@@ -1,11 +1,9 @@
 class Netmask < Formula
   desc "IP address netmask generation utility"
   homepage "https://github.com/tlby/netmask/blob/master/README"
-  url "https://github.com/tlby/netmask/archive/refs/tags/v2.4.4.tar.gz"
-  sha256 "7e4801029a1db868cfb98661bcfdf2152e49d436d41f8748f124d1f4a3409d83"
+  url "https://github.com/tlby/netmask/archive/refs/tags/v2.4.5.tar.gz"
+  sha256 "7d4adef47e5c9aba919d099640f1f08aa88f8de9538c43a13233c1af44644be2"
   license "GPL-2.0-only"
-
-  no_autobump! because: :requires_manual_review
 
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_sequoia:  "34b5efeb5d392402b007185b47d974e9a664dad743bcc135dae35e9db685c2b9"
@@ -23,14 +21,18 @@ class Netmask < Formula
   end
 
   depends_on "autoconf" => :build
+  depends_on "autoconf-archive" => :build
   depends_on "automake" => :build
+  depends_on "pkgconf" => :build
+
+  depends_on "check"
 
   on_system :linux, macos: :ventura_or_newer do
     depends_on "texinfo" => :build
   end
 
   def install
-    system "./autogen"
+    system "./bootstrap"
     system "./configure"
     system "make"
     bin.install "netmask"

@@ -12,6 +12,7 @@ class SoxNg < Formula
     sha256 cellar: :any,                 arm64_ventura: "7aa67d78b2b74ec90dae269a84534074acad4587839e57f05363c4720d94ccd9"
     sha256 cellar: :any,                 sonoma:        "cb9d728e8b85c6262600e8530b17688ed379c97731ceb42eab9314784b3ffb31"
     sha256 cellar: :any,                 ventura:       "a962c312a0b72bc61dc4494991dbc3d2dd65a46ce05922b31a7eac0b651fd984"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "adf6c28874d21ede25e95ef9bc4dbfa50108ca2d5927645a82605ce30ca430cd"
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "00390a1c4e03d6649cd550d5e119bbab38d324d91f3246bb4bb42db7ca714b06"
   end
 

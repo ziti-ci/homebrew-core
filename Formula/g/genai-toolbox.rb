@@ -10,6 +10,15 @@ class GenaiToolbox < Formula
     strategy :github_latest
   end
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "19f6dc79592239860bf263acf6415305d3b1bc4084dc823a543a353888e735ed"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "19f6dc79592239860bf263acf6415305d3b1bc4084dc823a543a353888e735ed"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "19f6dc79592239860bf263acf6415305d3b1bc4084dc823a543a353888e735ed"
+    sha256 cellar: :any_skip_relocation, sonoma:        "d3c6681281d19afedc28753085b6fa2ef3bc1802300dae995a237b7f22bf4faa"
+    sha256 cellar: :any_skip_relocation, ventura:       "d3c6681281d19afedc28753085b6fa2ef3bc1802300dae995a237b7f22bf4faa"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "d7d83f9bbb5d627cdca667f903b5712de59e31057b0dbd978e9327d1557dccfd"
+  end
+
   depends_on "go" => :build
 
   def install

@@ -6,6 +6,15 @@ class Rqbit < Formula
   license "Apache-2.0"
   head "https://github.com/ikatson/rqbit.git", branch: "main"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "92e638e63d0887e92e07f9269a0780efc424b129c2c6c77defeeb475815733b6"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "abde32ab711dfb6e35b4820298f253cde4f4a3d7f1004b269dccff61869754ad"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "535aff6ec35570430fd0c2cf2032a1beffc33b381855e5ebb4a4946e343cab43"
+    sha256 cellar: :any_skip_relocation, sonoma:        "0738b342798a9e02ce8e754e5bec29167e05bffe04c3877e4ab90111ef58488a"
+    sha256 cellar: :any_skip_relocation, ventura:       "5e46d0d0d6ddec3d97d0ff3aee5ce554439edc45f009e9f3646c6df2633a3de1"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "6392ea3522c23a0c05d5fffb972545fbbd38a32eee31883f64a4e59d87970580"
+  end
+
   depends_on "node" => :build
   depends_on "pkgconf" => :build
   depends_on "rust" => :build

@@ -7,12 +7,12 @@ class Kubecm < Formula
   head "https://github.com/sunny0826/kubecm.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "13643edd76ccfd2122c2c60fb9fc4aee73a45f7cedfd3ee0b95d4108c3edb848"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "13643edd76ccfd2122c2c60fb9fc4aee73a45f7cedfd3ee0b95d4108c3edb848"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "13643edd76ccfd2122c2c60fb9fc4aee73a45f7cedfd3ee0b95d4108c3edb848"
-    sha256 cellar: :any_skip_relocation, sonoma:        "8f453c725f95b8516df976d255b4b7ca052904b53771dae175162c8c84a5bfc6"
-    sha256 cellar: :any_skip_relocation, ventura:       "8f453c725f95b8516df976d255b4b7ca052904b53771dae175162c8c84a5bfc6"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "4e645b9de456ad66f084ac983eb98fcb2eed017ca6dd20967af5f44b41e112e7"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "c51fbb3083b295f06961456070cbecb9e4bd98771ef175ee9146a6b5e97a6190"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "c51fbb3083b295f06961456070cbecb9e4bd98771ef175ee9146a6b5e97a6190"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "c51fbb3083b295f06961456070cbecb9e4bd98771ef175ee9146a6b5e97a6190"
+    sha256 cellar: :any_skip_relocation, sonoma:        "7d61ddf8bd9166e502ae088f4d0ac02f1f03498e529d5b01a8b1f9b0ac0ebd53"
+    sha256 cellar: :any_skip_relocation, ventura:       "7d61ddf8bd9166e502ae088f4d0ac02f1f03498e529d5b01a8b1f9b0ac0ebd53"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "f411c58816d4ced391cec7df8677fd7e5415ff245d027330a3d2b64652a92fff"
   end
 
   depends_on "go" => :build

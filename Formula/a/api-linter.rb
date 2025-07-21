@@ -1,8 +1,8 @@
 class ApiLinter < Formula
   desc "Linter for APIs defined in protocol buffers"
   homepage "https://linter.aip.dev/"
-  url "https://github.com/googleapis/api-linter/archive/refs/tags/v1.70.0.tar.gz"
-  sha256 "46aff27153be59a2c9f672f90d6521a2985782b13af120a1e28db31a53e90fd6"
+  url "https://github.com/googleapis/api-linter/archive/refs/tags/v1.70.1.tar.gz"
+  sha256 "38f4e72c9018ed44e3ccb879f55b50183217e7a23cffad8b9bbc1c23cfb9c2b5"
   license "Apache-2.0"
   head "https://github.com/googleapis/api-linter.git", branch: "main"
 

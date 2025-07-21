@@ -32,6 +32,8 @@ class Node < Formula
   depends_on "libuv"
   depends_on "openssl@3"
   depends_on "simdjson"
+  depends_on "sqlite" # Fails with macOS sqlite.
+  depends_on "zstd"
 
   uses_from_macos "python", since: :catalina
   uses_from_macos "zlib"
@@ -90,7 +92,9 @@ class Node < Formula
       --shared-ngtcp2
       --shared-openssl
       --shared-simdjson
+      --shared-sqlite
       --shared-zlib
+      --shared-zstd
       --shared-brotli-includes=#{Formula["brotli"].include}
       --shared-brotli-libpath=#{Formula["brotli"].lib}
       --shared-cares-includes=#{Formula["c-ares"].include}
@@ -107,9 +111,41 @@ class Node < Formula
       --shared-openssl-libpath=#{Formula["openssl@3"].lib}
       --shared-simdjson-includes=#{Formula["simdjson"].include}
       --shared-simdjson-libpath=#{Formula["simdjson"].lib}
+      --shared-sqlite-includes=#{Formula["sqlite"].include}
+      --shared-sqlite-libpath=#{Formula["sqlite"].lib}
+      --shared-zstd-includes=#{Formula["zstd"].include}
+      --shared-zstd-libpath=#{Formula["zstd"].lib}
       --openssl-use-def-ca-store
     ]
     args << "--tag=head" if build.head?
+
+    # TODO: Try to devendor these libraries.
+    # - `--shared-ada` needs the `ada-url` formula, but requires C++20
+    # - `--shared-simdutf` seems to result in build failures.
+    # - `--shared-http-parser` and `--shared-uvwasi` are not available as dependencies in Homebrew.
+    ignored_shared_flags = %w[
+      ada
+      http-parser
+      simdutf
+      uvwasi
+    ].map { |library| "--shared-#{library}" }
+
+    configure_help = Utils.safe_popen_read("./configure", "--help")
+    shared_flag_regex = /\[(?<flag>--shared-[^ ]+)\]/
+    configure_help.each_line do |line|
+      matchdata = line.strip.match(shared_flag_regex)
+      next if matchdata.nil?
+
+      flag = matchdata[:flag]
+      next if args.include?(flag) || ignored_shared_flags.include?(flag)
+
+      message = "Unused `--shared-*` flag: #{flag}"
+      if build.head?
+        opoo message
+      else
+        odie message
+      end
+    end
 
     # Enabling LTO errors on Linux with:
     # terminate called after throwing an instance of 'std::out_of_range'

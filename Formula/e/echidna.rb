@@ -4,6 +4,7 @@ class Echidna < Formula
   url "https://github.com/crytic/echidna/archive/refs/tags/v2.2.7.tar.gz"
   sha256 "d1977efb56969daf3df4011e6acd694ad88fc639575f7fe2998c2c291e5c8236"
   license "AGPL-3.0-only"
+  revision 1
   head "https://github.com/crytic/echidna.git", branch: "master"
 
   livecheck do

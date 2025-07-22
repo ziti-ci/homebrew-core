@@ -6,6 +6,7 @@ class Erlang < Formula
   url "https://github.com/erlang/otp/releases/download/OTP-28.0.2/otp_src_28.0.2.tar.gz"
   sha256 "ce43dc8a29ad6bc1b6dbfc97f053d2e850b4a4c290eca065058d6b33ce476db5"
   license "Apache-2.0"
+  revision 1
 
   livecheck do
     url :stable
@@ -31,7 +32,7 @@ class Erlang < Formula
 
   depends_on "openssl@3"
   depends_on "unixodbc"
-  depends_on "wxwidgets" # for GUI apps like observer
+  depends_on "wxwidgets@3.2" # for GUI apps like observer
 
   uses_from_macos "libxslt" => :build
   uses_from_macos "ncurses"
@@ -69,11 +70,14 @@ class Erlang < Formula
     # Do this if building from a checkout to generate configure
     system "./otp_build", "autoconf" unless File.exist? "configure"
 
+    wxwidgets = deps.find { |dep| dep.name.match?(/^wxwidgets(@\d+(\.\d+)*)?$/) }.to_formula
+    wx_config = wxwidgets.opt_bin/"wx-config-#{wxwidgets.version.major_minor}"
     args = %W[
       --enable-dynamic-ssl-lib
       --with-odbc=#{Formula["unixodbc"].opt_prefix}
       --with-ssl=#{Formula["openssl@3"].opt_prefix}
       --without-javac
+      --with-wx-config=#{wx_config}
     ]
 
     if OS.mac?
@@ -81,6 +85,9 @@ class Erlang < Formula
       args << "--enable-kernel-poll" if MacOS.version > :el_capitan
       args << "--with-dynamic-trace=dtrace" if MacOS::CLT.installed?
     end
+
+    # The definition of `WX_CC` does not use our configuration of `--with-wx-config`, unfortunately.
+    inreplace "lib/wx/configure", "WX_CC=`wx-config --cc`", "WX_CC=`#{wx_config} --cc`"
 
     system "./configure", *std_configure_args, *args
     system "make"

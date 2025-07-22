@@ -10,6 +10,16 @@ class WxwidgetsAT32 < Formula
     regex(/^v?(3\.2(?:\.\d+)+)$/i)
   end
 
+  bottle do
+    sha256 cellar: :any,                 arm64_sequoia: "ec45e3e5e02d16a6537e0f33418d2e8ad40dbd0b1d20525e29fc1a5f2bdd4f48"
+    sha256 cellar: :any,                 arm64_sonoma:  "3c2b1903ba956493d1b5a9a7a9f79ebbf8968170ee8640b5436d654a9d8a06f2"
+    sha256 cellar: :any,                 arm64_ventura: "ebb596139692e2e9c6047b3ba1268a602edff349ee4c4ff923e6a594c0b17cb5"
+    sha256 cellar: :any,                 sonoma:        "72f5dce2843bcb25beec6ebf4d8e55b9325015b9e8c702083cfcdf684981da9b"
+    sha256 cellar: :any,                 ventura:       "0d09b38a290cf6798efbd00f82ed1b513b8db600c02047bd264d2cc01d5b49de"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "83fe2c541bbf30248e0bf59b63c46f4a2e2330fc41e048a9cfe57cb5faf8fc52"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "f6b195d22757c5f52750e8a891e489570340749c0d5c9206292e4ab1ae1e2eb5"
+  end
+
   depends_on "pkgconf" => :build
   depends_on "jpeg-turbo"
   depends_on "libpng"

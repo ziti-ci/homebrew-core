@@ -10,13 +10,13 @@ class Wxlua < Formula
   no_autobump! because: :requires_manual_review
 
   bottle do
-    sha256 cellar: :any,                 arm64_sequoia: "5ab53a21ffd382cb7d53a884b4eb09df5484c36d106c452f03c75f8841726d5c"
-    sha256 cellar: :any,                 arm64_sonoma:  "c00c2ef44ed734d26861a29d800555455f86c7fd8d846f12ecc6b4f0d151bd37"
-    sha256 cellar: :any,                 arm64_ventura: "e4c38bdfbbd990e273116a570fe63200cc78fbd6fa1e1b051b45d5a699060168"
-    sha256 cellar: :any,                 sonoma:        "3f5fd12035ae6a1f09efbefc9e5c7658898a48c228c5383a836d6d975833cced"
-    sha256 cellar: :any,                 ventura:       "debb18bebc1fe2d3ef3fd6ca8810c141ecb94cd6d0d1666112366e604a396307"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "2e29b1f1b1629fb2324d601f1e7d8054da3fbbc0050b841d9da48db9857bae5e"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "3e6c83b3e941528b906e9007ec23d4fec5506953aa6b77dc5877037ab2ec229e"
+    sha256 cellar: :any,                 arm64_sequoia: "bab4b714917c8eaa227c442ec73933b7a7366a9a0b12194775f5d5ed51afad32"
+    sha256 cellar: :any,                 arm64_sonoma:  "c5fad089244f71343cbb95de5a40af99d9bfaa9d74eea565945794c0a6b3a9fd"
+    sha256 cellar: :any,                 arm64_ventura: "850b90ff67e8cf4d2ff3c4be320a639e289a5a89edc0f0e2835baab13a5ece9c"
+    sha256 cellar: :any,                 sonoma:        "3c3912fba2919d8b041b502c10f077c54cba423e30c2d055606d341077d693bf"
+    sha256 cellar: :any,                 ventura:       "f2edee1dfc8cc68afa93490705f6250dbc688a0a004e723fa8e6429b6614da39"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "148fb602637b776ef7e3d48eae4c4289de06f3985166176e9d8eee98ff86f6c7"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "b7f08d50a654d1506fd6e0212b629e49a1b8bd3ff910b0317826540ff4a03832"
   end
 
   depends_on "cmake" => :build

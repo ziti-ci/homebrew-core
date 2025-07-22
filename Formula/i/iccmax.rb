@@ -7,13 +7,14 @@ class Iccmax < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any,                 arm64_sequoia: "f2c2abaa5454315b73d20938ebc2adf6559fdfa07b0fc37b185e1dc0625c5850"
-    sha256 cellar: :any,                 arm64_sonoma:  "acbf2b5e38b5c9dd8fd9b036587722debdab74b26642d3d29b924d3fb694f364"
-    sha256 cellar: :any,                 arm64_ventura: "a8bd2bd5f0567f58b99696cb53e049f8e59f42c8d10afce54b5dfb3f4b824672"
-    sha256 cellar: :any,                 sonoma:        "972543a7e586fa2c0fbe2198b0443f0dec6afdf814823d150f1685eb77ed6cc9"
-    sha256 cellar: :any,                 ventura:       "5854e3df89553f5605c391f99312809ed0e2897c746c9ab086f61b1355679f14"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "d46b9a7e1e2991ba3bf8f4e14e1e575c75b9e84273148a98c5e61d617bdaf26d"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "3dc874e26d747908e2190ea44491861d8018e694e662599fa6d95e18647a3937"
+    rebuild 1
+    sha256 cellar: :any,                 arm64_sequoia: "3463c07de594a7655097127df1650220d350c21a2451c641a89de4830912ed0b"
+    sha256 cellar: :any,                 arm64_sonoma:  "74a5e9869622d29ec0628d8b2e4a0876b6c76cef459996e8b95149916cfff7e3"
+    sha256 cellar: :any,                 arm64_ventura: "c07f73bb98c6cc9e528a045c4b4791fa7e8d52ab8c75b2d70589176617bda59e"
+    sha256 cellar: :any,                 sonoma:        "a0f7907faf006e2c1ca69fde725ae4ee0f30cfd0fb9f78bb6493e3e93c568acc"
+    sha256 cellar: :any,                 ventura:       "87c9c63c090e892ac479df95c0f9691e0baf4cd8546184838a651bd6cff1ae36"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "ee8834db2b2d8ef5414dafca1f900ca8b2ea607256030a00c625bb3cf9c83bbd"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "72258b3eb9987fe029fa91a98ac52d5b988c716d7b1f77cbe58d626505a84c3f"
   end
 
   depends_on "cmake" => :build

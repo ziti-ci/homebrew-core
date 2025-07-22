@@ -1,12 +1,10 @@
 class PipeRename < Formula
   desc "Rename your files using your favorite text editor"
   homepage "https://github.com/marcusbuffett/pipe-rename"
-  url "https://github.com/marcusbuffett/pipe-rename/archive/refs/tags/1.6.5.tar.gz"
-  sha256 "41edf419ab3d7b3c16d2efe209b3ca3d3f7104a3365f61fe821a59caac31810b"
+  url "https://github.com/marcusbuffett/pipe-rename/archive/refs/tags/1.6.6.tar.gz"
+  sha256 "bf33a2bba9b2d7ca4b13d35a0e49889ba77d8295314dd187f9709fe5ae6ac629"
   license "MIT"
   head "https://github.com/marcusbuffett/pipe-rename.git", branch: "master"
-
-  no_autobump! because: :requires_manual_review
 
   bottle do
     rebuild 1

@@ -34,8 +34,12 @@ class Lcm < Formula
 
   def install
     # Adding RPATH in #{lib}/lua/X.Y/lcm.so and some #{bin}/*.
+    lua_lib = lib/"lua"/Formula["lua"].version.major_minor
+    lcm_site_packages = prefix/Language::Python.site_packages("python3")/"lcm"
+    rpaths = [rpath, rpath(source: lua_lib), rpath(source: lcm_site_packages)]
+
     args = %W[
-      -DCMAKE_INSTALL_RPATH=#{lib}
+      -DCMAKE_INSTALL_RPATH=#{rpaths.join(";")}
       -DLCM_ENABLE_EXAMPLES=OFF
       -DLCM_ENABLE_TESTS=OFF
       -DLCM_JAVA_TARGET_VERSION=8

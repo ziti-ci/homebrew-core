@@ -5,6 +5,15 @@ class Libdbusmenu < Formula
   sha256 "b9cc4a2acd74509435892823607d966d424bd9ad5d0b00938f27240a1bfa878a"
   license any_of: ["GPL-3.0-only", "LGPL-2.1-or-later"]
 
+  bottle do
+    sha256                               arm64_sequoia: "4be53eedb4aa1203f4b6d3e4df0504481f8346db6fc0f6e9e8a27bfbe6f52108"
+    sha256                               arm64_sonoma:  "8846a649af9c8584a60204c64f1f83f0590dfdc6739626e77bf6300cec3849c5"
+    sha256                               arm64_ventura: "39825e9c8c327dd481f21068e93082328e01d188d61fe87108178c259b6a0354"
+    sha256                               sonoma:        "5ad05ed20555b243ad099282e0ac5c910abbc93bb300a30b935cca2f0a26cb03"
+    sha256                               ventura:       "febe49bc4a5cc4c94b9b39ecb5acac91d5d8f3f4123a3c3e62c76bc0ffdf8f8c"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "ca161cab45f55b72eeaff556883bf7c38338f3eb120a9a1ab1806caa54aa3801"
+  end
+
   depends_on "fontconfig" => :build
   depends_on "freetype" => :build
   depends_on "fribidi" => :build

@@ -13,13 +13,13 @@ class Echidna < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_sequoia: "c202ef8b9b824b25dbfcb077661791e479070d972250e7c6ac0b5baf61395f0e"
-    sha256 cellar: :any,                 arm64_sonoma:  "dd58a75a9135efc12fe129daeffaf1f639a64d34ef238a47d7c2e4e2bed991e7"
-    sha256 cellar: :any,                 arm64_ventura: "ba49676f81a95d8f3a97f43421f22fc3973a402eee419a7a795e0475960d9b56"
-    sha256 cellar: :any,                 sonoma:        "923057174e82462ccff4e3a2340bf275dce0f56e93fdd8978e1b08ba1b725e0d"
-    sha256 cellar: :any,                 ventura:       "6703a3bc7adc7596955f1ba07cc97f0daf85bf728feebd7aab482ce2ee0de4eb"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "5781ffa6f71ef4413b3cc28761ffc32536540aac247e0e70ba03668ba96a93b0"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "f536d90b2756e575a6b6b74c22251b91ad5fe132ccf9286c46dae5a237310a24"
+    sha256 cellar: :any,                 arm64_sequoia: "9f656148996de051b6c650ac8a4e0bda0776b7cd7bdb7a3dd7fe5c12ff9b7b1d"
+    sha256 cellar: :any,                 arm64_sonoma:  "c8a49a687794a368c0d4a08c418e2d19731b9c9a34b4e8161be69aba4aa33631"
+    sha256 cellar: :any,                 arm64_ventura: "95eb1e24a25981be6e48143cfc873f6d11f32578de0161b966adcf24ad0a681e"
+    sha256 cellar: :any,                 sonoma:        "d819faadfba9489eead88647f7a67d6216506dc540d8f20ce615e0c484ecfea7"
+    sha256 cellar: :any,                 ventura:       "4177319f1e989e91ead219bca0e42a3294392bcfdf2c53f566164d3089be5434"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "297f764859d6e4338ad34b64492cb4b674d59c585cf9e9561f62d55875cd59cf"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "450d22a5f95ff25c09bcf37ddbbc87516faafd7e09ef2ba2159bf3e37ace0bb2"
   end
 
   depends_on "ghc@9.8" => :build

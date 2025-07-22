@@ -19,6 +19,7 @@ class Lesspipe < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "ed1c9414decbfbdb557090c3a85590bbf60ed504c2fb6e4665c4e9af7d82d408"
   end
 
+  uses_from_macos "zsh" => :build # needed to guarantee installation of zsh completions
   uses_from_macos "perl"
 
   on_macos do
@@ -26,8 +27,7 @@ class Lesspipe < Formula
   end
 
   def install
-    system "./configure", "--prefix=#{prefix}"
-    man1.mkpath
+    system "./configure", "--prefix=#{prefix}", "--shell=#{which("bash")}"
     system "make", "install"
   end
 

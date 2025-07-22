@@ -1,8 +1,8 @@
 class Proto < Formula
   desc "Pluggable multi-language version manager"
   homepage "https://moonrepo.dev/proto"
-  url "https://github.com/moonrepo/proto/archive/refs/tags/v0.51.3.tar.gz"
-  sha256 "d77b498e5bdc347678ad63c44cc1bf0c736e9636003ee93e17de4c8af450fc00"
+  url "https://github.com/moonrepo/proto/archive/refs/tags/v0.51.4.tar.gz"
+  sha256 "5a55cd763f8782201c259c6009468178605586d671f13e3e838a96d03f595e7f"
   license "MIT"
   head "https://github.com/moonrepo/proto.git", branch: "master"
 

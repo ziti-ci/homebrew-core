@@ -1,8 +1,8 @@
 class FuncE < Formula
   desc "Easily run Envoy"
   homepage "https://func-e.io"
-  url "https://github.com/tetratelabs/func-e/archive/refs/tags/v1.1.5.tar.gz"
-  sha256 "ddf3aadf2b52dfbc9f59a8d3cd7324441cacf71491a58b501d74267d497938aa"
+  url "https://github.com/tetratelabs/func-e/archive/refs/tags/v1.2.0.tar.gz"
+  sha256 "e9c0d130d90e4852ee0f7da71438632e9d12bb58f117fc4aff28bcd6e506dbd1"
   license "Apache-2.0"
   head "https://github.com/tetratelabs/func-e.git", branch: "master"
 
@@ -25,7 +25,7 @@ class FuncE < Formula
       -s -w
       -X main.version=#{version}
     ]
-    system "go", "build", *std_go_args(ldflags:)
+    system "go", "build", *std_go_args(ldflags:), "./cmd/func-e"
   end
 
   test do

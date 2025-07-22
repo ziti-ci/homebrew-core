@@ -17,10 +17,10 @@ class Iccmax < Formula
   end
 
   depends_on "cmake" => :build
+  depends_on "nlohmann-json" => :build
   depends_on "jpeg"
   depends_on "libpng"
   depends_on "libtiff"
-  depends_on "nlohmann-json"
   depends_on "wxwidgets"
 
   uses_from_macos "libxml2"
@@ -34,7 +34,7 @@ class Iccmax < Formula
 
   def install
     args = %W[
-      -DCMAKE_INSTALL_RPATH=#{opt_lib}
+      -DCMAKE_INSTALL_RPATH=#{rpath}
       -DENABLE_TOOLS=ON
       -DENABLE_SHARED_LIBS=ON
       -DENABLE_INSTALL_RIM=ON

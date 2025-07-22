@@ -30,20 +30,16 @@ class CloudflareQuiche < Formula
   def install
     system "cargo", "install", *std_cargo_args(path: "apps")
 
-    system "cargo", "build", "-j", "1", "--lib", "--features", "ffi,pkg-config-meta", "--release"
+    system "cargo", "build", "--jobs", ENV.make_jobs, "--lib", "--features", "ffi,pkg-config-meta", "--release"
     lib.install "target/release/libquiche.a"
     include.install "quiche/include/quiche.h"
 
     # install dylib with version and symlink
-    lib.install "target/release/#{shared_library("libquiche")}"
-    if OS.mac?
-      mv "#{lib}/libquiche.dylib", "#{lib}/libquiche.#{version.major_minor_patch}.dylib"
-      lib.install_symlink "#{lib}/libquiche.#{version.major_minor_patch}.dylib" => "#{lib}/libquiche.dylib"
-    else
-      mv "#{lib}/libquiche.so", "#{lib}/libquiche.so.#{version.major_minor_patch}"
-      lib.install_symlink "#{lib}/libquiche.so.#{version.major_minor_patch}" => "#{lib}/libquiche.so.#{version.major}"
-      lib.install_symlink "#{lib}/libquiche.so.#{version.major_minor_patch}" => "#{lib}/libquiche.so"
-    end
+    full_versioned_dylib = shared_library("libquiche", version.major_minor_patch.to_s)
+    lib.install "target/release/#{shared_library("libquiche")}" => full_versioned_dylib
+    lib.install_symlink full_versioned_dylib => shared_library("libquiche")
+    lib.install_symlink full_versioned_dylib => shared_library("libquiche", version.major.to_s)
+    lib.install_symlink full_versioned_dylib => shared_library("libquiche", version.major_minor.to_s)
 
     # install pkgconfig file
     pc_path = "target/release/quiche.pc"

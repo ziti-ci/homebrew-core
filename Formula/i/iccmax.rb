@@ -4,15 +4,16 @@ class Iccmax < Formula
   url "https://github.com/InternationalColorConsortium/DemoIccMAX/archive/refs/tags/v2.2.6.tar.gz"
   sha256 "dcb66f84016f6abe6033e71e2206e662b40e581dce9d208c9c7d60515f185dfe"
   license "MIT"
+  revision 1
 
   bottle do
-    sha256 cellar: :any,                 arm64_sequoia: "848ee717590c4281070e64950f3bb50448876eb5eb9e0befa3281e551d796c59"
-    sha256 cellar: :any,                 arm64_sonoma:  "a890aae068114d8001fbb51009a03e67ab874381e8a8d4d6493cee21c84fb8e9"
-    sha256 cellar: :any,                 arm64_ventura: "b1c7ca97f7911d654eddb1d020c85a274dbaf1694928818679772e5ed283bd1b"
-    sha256 cellar: :any,                 sonoma:        "2b189c5b3c1b92d0cad6b64d7d942c15dee808d1faf97a431eaa05d6721ece1b"
-    sha256 cellar: :any,                 ventura:       "e2c1c60c29a8f2551b7c634039e28db0dd81bca3474784490c9622104284b5d4"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "20ee1858ed79286e4b4c3b367cc7960b5bc8f9cd4265650e5612860f0ed62039"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "73820992ae2d259462278125bb555843ab3cccd767fba192903a2f082b1da32c"
+    sha256 cellar: :any,                 arm64_sequoia: "f2c2abaa5454315b73d20938ebc2adf6559fdfa07b0fc37b185e1dc0625c5850"
+    sha256 cellar: :any,                 arm64_sonoma:  "acbf2b5e38b5c9dd8fd9b036587722debdab74b26642d3d29b924d3fb694f364"
+    sha256 cellar: :any,                 arm64_ventura: "a8bd2bd5f0567f58b99696cb53e049f8e59f42c8d10afce54b5dfb3f4b824672"
+    sha256 cellar: :any,                 sonoma:        "972543a7e586fa2c0fbe2198b0443f0dec6afdf814823d150f1685eb77ed6cc9"
+    sha256 cellar: :any,                 ventura:       "5854e3df89553f5605c391f99312809ed0e2897c746c9ab086f61b1355679f14"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "d46b9a7e1e2991ba3bf8f4e14e1e575c75b9e84273148a98c5e61d617bdaf26d"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "3dc874e26d747908e2190ea44491861d8018e694e662599fa6d95e18647a3937"
   end
 
   depends_on "cmake" => :build

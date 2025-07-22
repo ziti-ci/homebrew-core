@@ -1,12 +1,12 @@
 class Lammps < Formula
   desc "Molecular Dynamics Simulator"
   homepage "https://docs.lammps.org/"
-  url "https://github.com/lammps/lammps/archive/refs/tags/stable_29Aug2024_update3.tar.gz"
+  url "https://github.com/lammps/lammps/archive/refs/tags/stable_22Jul2025.tar.gz"
   # lammps releases are named after their release date. We transform it to
   # YYYY-MM-DD (year-month-day) so that we get a sane version numbering.
   # We only track stable releases as announced on the LAMMPS homepage.
-  version "20240829-update3"
-  sha256 "75a9fb55d3c10f44cbc7b30313351ce9b12ab3003c1400147fa3590b6d651c73"
+  version "20250722"
+  sha256 "38d7ab508433f33a53e11f0502aa0253945ce45d5595baf69665961c0a76da26"
   license "GPL-2.0-only"
 
   # The `strategy` block below is used to massage upstream tags into the
@@ -51,6 +51,7 @@ class Lammps < Formula
   depends_on "voro++"
 
   uses_from_macos "curl"
+  uses_from_macos "python"
 
   on_macos do
     depends_on "libomp"

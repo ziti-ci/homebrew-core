@@ -6,6 +6,7 @@ class Mcpm < Formula
   url "https://files.pythonhosted.org/packages/f4/28/85839faf322b69bd294ea6739f91840ec66d39da4343471d279ca54dc7e6/mcpm-2.6.0.tar.gz"
   sha256 "1e2171a14463881ede41e79c4931fb9716d83ccc10fe6be49a51c38fbbe0cc52"
   license "MIT"
+  revision 1
 
   bottle do
     sha256 cellar: :any,                 arm64_sequoia: "346fbb06b328a3ffd55534db74c86fc9d3a9916faf6887bd7f5b340dc80cf7d5"
@@ -38,8 +39,8 @@ class Mcpm < Formula
   end
 
   resource "authlib" do
-    url "https://files.pythonhosted.org/packages/a2/9d/b1e08d36899c12c8b894a44a5583ee157789f26fc4b176f8e4b6217b56e1/authlib-1.6.0.tar.gz"
-    sha256 "4367d32031b7af175ad3a323d571dc7257b7099d55978087ceae4a0d88cd3210"
+    url "https://files.pythonhosted.org/packages/8e/a1/d8d1c6f8bc922c0b87ae0d933a8ed57be1bef6970894ed79c2852a153cd3/authlib-1.6.1.tar.gz"
+    sha256 "4dffdbb1460ba6ec8c17981a4c67af7d8af131231b5a36a88a1e8c80c111cdfd"
   end
 
   resource "charset-normalizer" do
@@ -128,8 +129,8 @@ class Mcpm < Formula
   end
 
   resource "jsonschema" do
-    url "https://files.pythonhosted.org/packages/f1/6e/35174c1d3f30560848c82d3c233c01420e047d70925c897a4d6e932b4898/jsonschema-4.24.1.tar.gz"
-    sha256 "fe45a130cc7f67cd0d67640b4e7e3e2e666919462ae355eda238296eafeb4b5d"
+    url "https://files.pythonhosted.org/packages/d5/00/a297a868e9d0784450faa7365c2172a7d6110c763e30ba861867c32ae6a9/jsonschema-4.25.0.tar.gz"
+    sha256 "e63acf5c11762c0e6672ffb61482bdf57f0876684d8d249c0fe2d730d48bc55f"
   end
 
   resource "jsonschema-specifications" do
@@ -298,8 +299,8 @@ class Mcpm < Formula
   end
 
   resource "starlette" do
-    url "https://files.pythonhosted.org/packages/0a/69/662169fdb92fb96ec3eaee218cf540a629d629c86d7993d9651226a6789b/starlette-0.47.1.tar.gz"
-    sha256 "aef012dd2b6be325ffa16698f9dc533614fb1cebd593a906b90dc1025529a79b"
+    url "https://files.pythonhosted.org/packages/04/57/d062573f391d062710d4088fa1369428c38d51460ab6fedff920efef932e/starlette-0.47.2.tar.gz"
+    sha256 "6ae9aa5db235e4846decc1e7b79c4f346adf41e9777aebeb49dfd09bbd7023d8"
   end
 
   resource "thefuzz" do

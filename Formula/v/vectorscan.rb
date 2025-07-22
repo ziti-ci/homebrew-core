@@ -1,13 +1,10 @@
 class Vectorscan < Formula
   desc "High-performance regular expression matching library"
   homepage "https://github.com/VectorCamp/vectorscan"
-  url "https://github.com/VectorCamp/vectorscan/archive/refs/tags/vectorscan/5.4.11.tar.gz"
-  sha256 "905f76ad1fa9e4ae0eb28232cac98afdb96c479666202c5a4c27871fb30a2711"
+  url "https://github.com/VectorCamp/vectorscan/archive/refs/tags/vectorscan/5.4.12.tar.gz"
+  sha256 "1ac4f3c038ac163973f107ac4423a6b246b181ffd97fdd371696b2517ec9b3ed"
   license "BSD-3-Clause"
-  revision 1
   head "https://github.com/VectorCamp/vectorscan.git", branch: "develop"
-
-  no_autobump! because: :requires_manual_review
 
   bottle do
     sha256 cellar: :any,                 arm64_sequoia:  "b360fb4b6e842de1f1aa4599528a0b2bb899f960b6f380fa3acdfaad54f4cec3"
@@ -22,21 +19,17 @@ class Vectorscan < Formula
   end
 
   depends_on "boost" => :build
+  depends_on "ccache" => :build
   depends_on "cmake" => :build
   depends_on "pcre" => :build # PCRE2 issue: https://github.com/VectorCamp/vectorscan/issues/320
   depends_on "pkgconf" => :build
   depends_on "ragel" => :build
 
-  # fix SQLite requirement check; included in next release
-  patch do
-    url "https://github.com/VectorCamp/vectorscan/commit/d9ebb20010b3f90a7a5c7bf4a5edff2eb58f2a4f.patch?full_index=1"
-    sha256 "e61de5f0321e9020871912883dadcdc1f49cd423dab37de67b6c1e8d07115162"
-  end
-
   def install
     cmake_args = [
       "-DBUILD_STATIC_LIBS=ON",
       "-DBUILD_SHARED_LIBS=ON",
+      "-DFAT_RUNTIME=OFF",
     ]
 
     system "cmake", "-S", ".", "-B", "build", *cmake_args, *std_cmake_args

@@ -1,17 +1,14 @@
 class AzureStorageBlobsCpp < Formula
   desc "Microsoft Azure Storage Blobs SDK for C++"
   homepage "https://github.com/Azure/azure-sdk-for-cpp/tree/main/sdk/storage/azure-storage-blobs"
-  url "https://github.com/Azure/azure-sdk-for-cpp/archive/refs/tags/azure-storage-blobs_12.13.0.tar.gz"
-  sha256 "300bbd1d6bc50b8988b3dda29d6d627574a4f3e25a7e00a6986da5d3965f679a"
+  url "https://github.com/Azure/azure-sdk-for-cpp/archive/refs/tags/azure-storage-blobs_12.14.0.tar.gz"
+  sha256 "5ebd63d6d5c22702b504efef1acf0265ceff90dcf96b9c1e52c418bbd7c5deb4"
   license "MIT"
-  revision 3
 
   livecheck do
     url :stable
     regex(/^azure-storage-blobs[._-]v?(\d+(?:\.\d+)+)$/i)
   end
-
-  no_autobump! because: :requires_manual_review
 
   bottle do
     sha256 cellar: :any,                 arm64_sequoia: "b2166f66228e15dbfec5a4b3a9b018315894999a3dd964307911b5204c678a13"

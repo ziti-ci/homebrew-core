@@ -1,11 +1,9 @@
 class Pgbackrest < Formula
   desc "Reliable PostgreSQL Backup & Restore"
   homepage "https://pgbackrest.org"
-  url "https://github.com/pgbackrest/pgbackrest/archive/refs/tags/release/2.55.1.tar.gz"
-  sha256 "5f050ad751feb5b506cf3c58a5cf1674a7b502328abcb50b37756175f80990e9"
+  url "https://github.com/pgbackrest/pgbackrest/archive/refs/tags/release/2.56.0.tar.gz"
+  sha256 "e4ed91be1c518817fd2909c99edc0d3661126fde86abf77a0d470da09741447f"
   license "MIT"
-
-  no_autobump! because: :requires_manual_review
 
   bottle do
     sha256 cellar: :any, arm64_sequoia: "14f05c57dcf96a4e1096fe8b9b924d1439cd21ccb4737d334232235b091ed3da"

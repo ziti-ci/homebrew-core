@@ -7,13 +7,13 @@ class Wxpython < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any, arm64_sequoia: "3e47059dc4a8710a730dc27af12a6251244b4a82a0b42957c661c583b7212928"
-    sha256 cellar: :any, arm64_sonoma:  "299ffa3f6406ce0dfe2a75b24c61d46cfdabd35bffc7d6effe4e6e634945f88e"
-    sha256 cellar: :any, arm64_ventura: "9cbc4877d65c9d55d2161d756a167884d330a69e12f6dbc970119cdf8bd17413"
-    sha256 cellar: :any, sonoma:        "c3e8445d7fe4d231909c6462812c02818e2b27aa7079de9dab8b7540e2f36d7b"
-    sha256 cellar: :any, ventura:       "27267b1cf5018724f9a91fa7e6aae443da2ce43d11828c7ddc5d302aff97b770"
-    sha256               arm64_linux:   "fe385dac180bc47d7ac80b4757daa4a247899cf377677553769944a8cb890e7f"
-    sha256               x86_64_linux:  "a0532b1d4ad738222a8e3e39909ce259c048b3977cfbd509f2d131f07a734ed8"
+    sha256 cellar: :any, arm64_sequoia: "2507889ef35df2ea5539226cb11ea7036ce898c72d16a42f7acc05a154e5aada"
+    sha256 cellar: :any, arm64_sonoma:  "2b421f7072141f279b42af8d63e96fa62fef03f68c1437f7007117aef07c10ae"
+    sha256 cellar: :any, arm64_ventura: "533da5d3db0f8ee7650a59368679ff5a5a30aabeb81c04729bd9d19ef024765e"
+    sha256 cellar: :any, sonoma:        "a870b3b8197cc1044eaf7d010642fd04d3b322c51e0e26f3214b0b92b26747bf"
+    sha256 cellar: :any, ventura:       "6f07c4cc17affc2e9f1c3370218c6d8551b9a0096f799a2cbcc92184403c45d3"
+    sha256               arm64_linux:   "457db6b343eeb4be025a86d46c26e6ffc9b79917025ba77ba73bcb43254f5c65"
+    sha256               x86_64_linux:  "ffc761ef66d256d59c4711bf5d041ab7cb229d3172ef2bb009e13837cb27ac0a"
   end
 
   depends_on "doxygen" => :build

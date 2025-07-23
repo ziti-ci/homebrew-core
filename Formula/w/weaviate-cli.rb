@@ -3,8 +3,8 @@ class WeaviateCli < Formula
 
   desc "Command-line interface for managing and interacting with Weaviate"
   homepage "https://pypi.org/project/weaviate-cli/"
-  url "https://files.pythonhosted.org/packages/a6/cb/7255e61bbc1ac8498ad57633d4b7b84196d62fb241fde2a798628b1dedd4/weaviate_cli-3.2.2.tar.gz"
-  sha256 "33367e3c445e631835ac423570237ed130ee8713348a3283e32fd03abb463157"
+  url "https://files.pythonhosted.org/packages/c9/c5/2d1129ff8515e037c77bbaca2df691352d7406579d96cd1b791323153093/weaviate_cli-3.2.3.tar.gz"
+  sha256 "286bdeaefde91a93863f3b3f200f5eae8e07f94fa1c7e996f4c5d48091084294"
   license "BSD-3-Clause"
 
   bottle do

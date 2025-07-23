@@ -25,6 +25,7 @@ class GithubRelease < Formula
     assert_match "github-release v#{version}", shell_output("#{bin}/github-release --version")
 
     system bin/"github-release", "info", "--user", "github-release",
-                                            "--repo", "github-release"
+                                         "--repo", "github-release",
+                                         "--tag",  "v#{version}"
   end
 end

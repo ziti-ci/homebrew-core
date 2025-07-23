@@ -3,8 +3,8 @@ class Atlas < Formula
   homepage "https://atlasgo.io/"
   # Upstream may not mark patch releases as latest on GitHub; it is fine to ship them.
   # See https://github.com/ariga/atlas/issues/1090#issuecomment-1225258408
-  url "https://github.com/ariga/atlas/archive/refs/tags/v0.36.0.tar.gz"
-  sha256 "87ca8bd4719454905dab64760918d705ce400db7d669de987002fac94198c2af"
+  url "https://github.com/ariga/atlas/archive/refs/tags/v0.36.1.tar.gz"
+  sha256 "632a08a22b0b2be71e48eca10c8a67d6e72d21023cf3eea2673373c6a7c68055"
   license "Apache-2.0"
   head "https://github.com/ariga/atlas.git", branch: "master"
 

@@ -6,6 +6,15 @@ class Uvwasi < Formula
   license "MIT"
   head "https://github.com/nodejs/uvwasi.git", branch: "main"
 
+  bottle do
+    sha256 cellar: :any,                 arm64_sequoia: "e9bc1d223efb41a0bee91c928bf2d85a57179c0ab37713dfd6941f046f3f50e9"
+    sha256 cellar: :any,                 arm64_sonoma:  "957553fa84683816e9e111fcfeb9ef2199b2d0fc26cdccc4e9927e5e7aa84aab"
+    sha256 cellar: :any,                 arm64_ventura: "28edfaafaf6fa3cea2414466622439a65d5d4ab98ddb4610ee3b16c62d25d65a"
+    sha256 cellar: :any,                 sonoma:        "075cf1c7a4ded621c47d59adaee755993f7aeb5bc282b42dcffcf7478fdb66bd"
+    sha256 cellar: :any,                 ventura:       "688985b4bedff51f9f0f26a94a694ea2cfe9b88c932e1ef3ae741e92ff1b835a"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "0af054bb833db53e6ee07eed754630fcd7c24abcd088a8fe15b8c9f76a9c6065"
+  end
+
   depends_on "cmake" => :build
   depends_on "libuv"
 

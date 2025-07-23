@@ -1,8 +1,8 @@
 class Slumber < Formula
   desc "Terminal-based HTTP/REST client"
   homepage "https://slumber.lucaspickering.me/"
-  url "https://github.com/LucasPickering/slumber/archive/refs/tags/v3.2.0.tar.gz"
-  sha256 "dcd3f5d74abc6fa764164ead0cd52368d92122f395353ed43091ad1f02498d95"
+  url "https://github.com/LucasPickering/slumber/archive/refs/tags/v3.3.0.tar.gz"
+  sha256 "64435435fb27fc2dc7267fa967f333fb4c671e5c8b6ee9010bb0290834941daf"
   license "MIT"
   head "https://github.com/LucasPickering/slumber.git", branch: "master"
 
@@ -31,6 +31,8 @@ class Slumber < Formula
       # https://slumber.lucaspickering.me/book/getting_started.html
       # For all collection options, see:
       # https://slumber.lucaspickering.me/book/api/request_collection/index.html
+
+      name: My Collection
 
       # Profiles are groups of data you can easily switch between. A common usage is
       # to define profiles for various environments of a REST service

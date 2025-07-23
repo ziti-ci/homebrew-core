@@ -1,8 +1,8 @@
 class Aqbanking < Formula
   desc "Generic online banking interface"
   homepage "https://www.aquamaniac.de/rdm/projects/aqbanking"
-  url "https://www.aquamaniac.de/rdm/attachments/download/531/aqbanking-6.6.0.tar.gz"
-  sha256 "37634487b95bad72b1b21397bce08cb4b15e13cb253886767c98f31712e40bfb"
+  url "https://www.aquamaniac.de/rdm/attachments/download/535/aqbanking-6.6.1.tar.gz"
+  sha256 "3250fa6d893f816d29c19af35fe5fccb74c080e21753fd9e52579a792dd48567"
   license "GPL-2.0-or-later"
 
   livecheck do
@@ -10,7 +10,7 @@ class Aqbanking < Formula
     regex(/href=.*?aqbanking[._-](\d+(?:\.\d+)+)\.t/i)
   end
 
-  no_autobump! because: :requires_manual_review
+  no_autobump! because: :incompatible_version_format
 
   bottle do
     sha256 arm64_sequoia: "867da1207bd6888e0ccaff9e5a590a550496c75a3c108268eb735a72d88f4b63"

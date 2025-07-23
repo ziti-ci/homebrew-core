@@ -1,8 +1,8 @@
 class Traefik < Formula
   desc "Modern reverse proxy"
   homepage "https://traefik.io/"
-  url "https://github.com/traefik/traefik/releases/download/v3.4.5/traefik-v3.4.5.src.tar.gz"
-  sha256 "4fbbf905d65ac647be5cc5f9471c9d72feba829018f5331fe27ba05afbaa494d"
+  url "https://github.com/traefik/traefik/releases/download/v3.5.0/traefik-v3.5.0.src.tar.gz"
+  sha256 "e5db23a9f9b8bc2c3a334fda83ba8291a8246e9d37f4e332f02fb86c5db6f7ba"
   license "MIT"
   head "https://github.com/traefik/traefik.git", branch: "master"
 
@@ -16,18 +16,22 @@ class Traefik < Formula
   end
 
   depends_on "go" => :build
-  depends_on "node@22" => :build
-  depends_on "yarn" => :build
+  depends_on "node" => :build
 
   def install
+    ENV["COREPACK_ENABLE_DOWNLOAD_PROMPT"] = "0"
+
+    system "corepack", "enable", "--install-directory", buildpath
+
+    cd "webui" do
+      system buildpath/"yarn", "install"
+      system buildpath/"yarn", "build"
+    end
+
     ldflags = %W[
       -s -w
       -X github.com/traefik/traefik/v#{version.major}/pkg/version.Version=#{version}
     ]
-    cd "webui" do
-      system "yarn", "install", "--immutable"
-      system "yarn", "build"
-    end
     system "go", "generate"
     system "go", "build", *std_go_args(ldflags:), "./cmd/traefik"
   end
@@ -68,7 +72,7 @@ class Traefik < Formula
 
       # Make sure webui assets for dashboard are present at expected destination
       cmd_ui = "curl -XGET http://127.0.0.1:#{ui_port}/dashboard/"
-      assert_match "<title>Traefik</title>", shell_output(cmd_ui)
+      assert_match "<title>Traefik Proxy</title>", shell_output(cmd_ui)
     ensure
       Process.kill(9, pid)
       Process.wait(pid)

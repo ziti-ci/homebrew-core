@@ -2,7 +2,6 @@ class Bash < Formula
   desc "Bourne-Again SHell, a UNIX command interpreter"
   homepage "https://www.gnu.org/software/bash/"
   license "GPL-3.0-or-later"
-  revision 1
   head "https://git.savannah.gnu.org/git/bash.git", branch: "master"
 
   stable do
@@ -11,6 +10,7 @@ class Bash < Formula
     mirror "https://mirrors.kernel.org/gnu/bash/bash-5.3.tar.gz"
     mirror "https://mirrors.ocf.berkeley.edu/gnu/bash/bash-5.3.tar.gz"
     sha256 "62dd49c44c399ed1b3f7f731e87a782334d834f08e098a35f2c87547d5dbb269"
+    version "5.3.3"
 
     # Add new patches using this format:
     #
@@ -20,7 +20,11 @@ class Bash < Formula
     #   ...
     # ]
 
-    patch_checksum_pairs = %w[]
+    patch_checksum_pairs = %w[
+      001 1f608434364af86b9b45c8b0ea3fb3b165fb830d27697e6cdfc7ac17dee3287f
+      002 e385548a00130765ec7938a56fbdca52447ab41fabc95a25f19ade527e282001
+      003 f245d9c7dc3f5a20d84b53d249334747940936f09dc97e1dcb89fc3ab37d60ed
+    ]
 
     patch_checksum_pairs.each_slice(2) do |p, checksum|
       patch :p0 do
@@ -69,7 +73,7 @@ class Bash < Formula
     end
   end
 
-  no_autobump! because: :requires_manual_review
+  no_autobump! because: :incompatible_version_format
 
   bottle do
     rebuild 1

@@ -76,14 +76,13 @@ class Bash < Formula
   no_autobump! because: :incompatible_version_format
 
   bottle do
-    rebuild 1
-    sha256 arm64_sequoia: "2d1976d5fa23c6baf0774bcc5bc9ebb2aa77d16dbff77d8dee0361425239079b"
-    sha256 arm64_sonoma:  "57b38131c47227f0ba3099b361aadb108d8deec5d89df10a5c5b700322018215"
-    sha256 arm64_ventura: "21e31f58fd13fe5016314325eb3270e25ea5f35aadc8407cb8e2aead098e5805"
-    sha256 sonoma:        "c4d09853a3e4e327df66f97e7a53a72cce00538111c15ee79c5bcf9050f2dcbe"
-    sha256 ventura:       "495c6ba5b1ba92cb2886f644e0da5bdea8f52104c3355e50e566278ec132f257"
-    sha256 arm64_linux:   "a45194e6fbdead6482335c49140c266db5a95dcabbf94c0c48544afae4131e53"
-    sha256 x86_64_linux:  "88873cd509c50164b914cd2e6beea5709f9bbb14c6774cedc7e601fab6092faf"
+    sha256 arm64_sequoia: "4320a344c3026bdc04760002504da6bab0186f5dba723a88e3d53d8652e96c34"
+    sha256 arm64_sonoma:  "5715c825e5f9b57b5bb88e73f7c725b9918eca118f430bfa52d30ba5f5491b69"
+    sha256 arm64_ventura: "beaca9b0eb3ab41bb69b85e6e27674d99ab0c46ea017d9bcb435f5fbc6390dc2"
+    sha256 sonoma:        "bbdabe48035a64e989c9da9f01308891af5363c6db77e2c736d7335142de8316"
+    sha256 ventura:       "92c424100bfd0c5305f8d06b5e1485f9670cbca0040ac725c3fee477ec9f9642"
+    sha256 arm64_linux:   "8540aa00c510c4f969c219e6302e7ba5083797724590383eee115117f6b210ee"
+    sha256 x86_64_linux:  "8526a9a3fc80caddd4f2c583e3a9c9934d646d77fa95fa943b48e943c789475e"
   end
 
   # System ncurses lacks functionality

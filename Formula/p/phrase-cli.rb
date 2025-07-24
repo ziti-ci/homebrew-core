@@ -8,12 +8,12 @@ class PhraseCli < Formula
   no_autobump! because: :requires_manual_review
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "40a85216d071cc0129c32a618e922ebee381f7e890405746564c0c6ad3854fcd"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "40a85216d071cc0129c32a618e922ebee381f7e890405746564c0c6ad3854fcd"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "40a85216d071cc0129c32a618e922ebee381f7e890405746564c0c6ad3854fcd"
-    sha256 cellar: :any_skip_relocation, sonoma:        "2748539bd77253aac2a8dcedc16a1db076a6b33e8ea1fa2fcb733d25aa018eb5"
-    sha256 cellar: :any_skip_relocation, ventura:       "2748539bd77253aac2a8dcedc16a1db076a6b33e8ea1fa2fcb733d25aa018eb5"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "7a3f2f4e32103d78cf43870808a801610fc724390591359cd3322884cb969b53"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "8f7cc421dfbb934d00aa95e26e31796de67dbc2841f5ee3dfd32a7417b207fba"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "8f7cc421dfbb934d00aa95e26e31796de67dbc2841f5ee3dfd32a7417b207fba"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "8f7cc421dfbb934d00aa95e26e31796de67dbc2841f5ee3dfd32a7417b207fba"
+    sha256 cellar: :any_skip_relocation, sonoma:        "974a8855cc20c34a6f445a56dca33e71981703ba903b9b9e3dcff98fe200d3ec"
+    sha256 cellar: :any_skip_relocation, ventura:       "974a8855cc20c34a6f445a56dca33e71981703ba903b9b9e3dcff98fe200d3ec"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "62b1df332f5e63fdbc508860f0b9f380275fd1d3735967a084283097874dd80d"
   end
 
   depends_on "go" => :build

@@ -1,8 +1,8 @@
 class Anubis < Formula
   desc "Protect resources from scraper bots"
   homepage "https://anubis.techaro.lol"
-  url "https://github.com/TecharoHQ/anubis/archive/refs/tags/v1.21.1.tar.gz"
-  sha256 "0196f0a867685109917b4ef9ee3414d212bcf2675f940edd5ef2ef121a7a71d6"
+  url "https://github.com/TecharoHQ/anubis/archive/refs/tags/v1.21.2.tar.gz"
+  sha256 "4ae64e7ae54820059f64083a2f87e8bbb6504d8159b541647150cc83c58377c5"
   license "MIT"
   head "https://github.com/TecharoHQ/anubis.git", branch: "main"
 

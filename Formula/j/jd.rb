@@ -18,10 +18,12 @@ class Jd < Formula
   depends_on "go" => :build
 
   def install
-    system "go", "build", *std_go_args(ldflags: "-s -w")
+    system "go", "build", *std_go_args(ldflags: "-s -w"), "./v2/jd/main.go"
   end
 
   test do
+    assert_match version.to_s, shell_output("#{bin}/jd --version")
+
     (testpath/"a.json").write('{"foo":"bar"}')
     (testpath/"b.json").write('{"foo":"baz"}')
     (testpath/"c.json").write('{"foo":"baz"}')

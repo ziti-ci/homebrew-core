@@ -1,8 +1,8 @@
 class Crun < Formula
   desc "Fast and lightweight fully featured OCI runtime and C library"
   homepage "https://github.com/containers/crun"
-  url "https://github.com/containers/crun/releases/download/1.21/crun-1.21.tar.zst"
-  sha256 "d3a4ce8af89125851b2bbfe2375f4050c7eca837021043c5628172feacdb88a4"
+  url "https://github.com/containers/crun/releases/download/1.23/crun-1.23.tar.zst"
+  sha256 "e8d3744e8b7391efa438fbd45b5e2c8532f39df98e8e810ea90671d85f467f5b"
   license any_of: ["GPL-2.0-or-later", "LGPL-2.1-or-later"]
 
   bottle do
@@ -31,6 +31,6 @@ class Crun < Formula
   end
 
   test do
-    assert_empty shell_output("#{bin}/crun --rootless=true list -q").strip
+    assert_empty shell_output("#{bin}/crun --root=#{testpath} list -q").strip
   end
 end

@@ -1,8 +1,8 @@
 class Pkl < Formula
   desc "CLI for the Pkl programming language"
   homepage "https://pkl-lang.org"
-  url "https://github.com/apple/pkl/archive/refs/tags/0.28.2.tar.gz"
-  sha256 "b63a0c672a7b810daf4606d37dc18d37b012a0fc011df5c5c2c96d708227a18b"
+  url "https://github.com/apple/pkl/archive/refs/tags/0.29.0.tar.gz"
+  sha256 "bbab5066f7d29187ac4fe48e935c96b2f27fc178d5d93193862dff7ac47896d9"
   license "Apache-2.0"
 
   bottle do
@@ -24,7 +24,7 @@ class Pkl < Formula
     ENV["JAVA_HOME"] = Formula["openjdk@21"].opt_prefix
 
     arch = Hardware::CPU.arm? ? "aarch64" : "amd64"
-    job_name = "#{OS.mac? ? "mac" : "linux"}Executable#{arch.capitalize}"
+    job_name = "pkl-cli:#{OS.mac? ? "mac" : "linux"}Executable#{arch.capitalize}"
 
     args = %W[
       --no-daemon

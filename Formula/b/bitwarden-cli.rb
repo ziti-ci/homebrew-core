@@ -1,8 +1,8 @@
 class BitwardenCli < Formula
   desc "Secure and free password manager for all of your devices"
   homepage "https://bitwarden.com/"
-  url "https://github.com/bitwarden/clients/archive/refs/tags/cli-v2025.6.1.tar.gz"
-  sha256 "73d620b95e3554ed980a582f36e5f8a62d7a5839841179281470bc2b973ad96c"
+  url "https://github.com/bitwarden/clients/archive/refs/tags/cli-v2025.7.0.tar.gz"
+  sha256 "a3e603683504e7e56c839b7408cacfc1a5a19cb0310f7431ec18c254224d82bc"
   license "GPL-3.0-only"
   head "https://github.com/bitwarden/clients.git", branch: "main"
 
@@ -25,12 +25,6 @@ class BitwardenCli < Formula
   depends_on "node"
 
   def install
-    # Fix to build error with xcode 16.3 for `argon2`
-    # Issue ref:
-    # - https://github.com/bitwarden/clients/issues/15000
-    # - https://github.com/ranisalt/node-argon2/issues/448
-    inreplace ["package.json", "apps/cli/package.json"], '"argon2": "0.41.1"', '"argon2": "0.43.0"'
-
     system "npm", "install", *std_npm_args(prefix: false), "--ignore-scripts"
     cd buildpath/"apps/cli" do
       # The `oss` build of Bitwarden is a GPL backed build
@@ -38,13 +32,6 @@ class BitwardenCli < Formula
       system "npm", "install", *std_npm_args
     end
     bin.install_symlink libexec.glob("bin/*")
-
-    # Remove incompatible pre-built `argon2` binaries
-    os = OS.kernel_name.downcase
-    arch = Hardware::CPU.intel? ? "x64" : Hardware::CPU.arch.to_s
-    node_modules = libexec/"lib/node_modules/@bitwarden/cli/node_modules"
-    node_modules.glob("argon2/prebuilds/linux-*/argon2*.musl.node").map(&:unlink)
-    (node_modules/"argon2/prebuilds").each_child { |dir| rm_r(dir) if dir.basename.to_s != "#{os}-#{arch}" }
 
     generate_completions_from_executable(bin/"bw", "completion", "--shell", shells: [:zsh])
   end

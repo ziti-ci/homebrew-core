@@ -19,7 +19,7 @@ class ZshFastSyntaxHighlighting < Formula
   uses_from_macos "zsh" => [:build, :test]
 
   def install
-    pkgshare.install Dir["*"]
+    pkgshare.install Dir["*", ".fast-*"]
   end
 
   def caveats

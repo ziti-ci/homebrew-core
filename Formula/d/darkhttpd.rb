@@ -1,8 +1,8 @@
 class Darkhttpd < Formula
   desc "Small static webserver without CGI"
   homepage "https://unix4lyfe.org/darkhttpd/"
-  url "https://github.com/emikulic/darkhttpd/archive/refs/tags/v1.16.tar.gz"
-  sha256 "ab97ea3404654af765f78282aa09cfe4226cb007d2fcc59fe1a475ba0fef1981"
+  url "https://github.com/emikulic/darkhttpd/archive/refs/tags/v1.17.tar.gz"
+  sha256 "4fee9927e2d8bb0a302f0dd62f9ff1e075748fa9f5162c9481a7a58b41462b56"
   license "ISC"
 
   bottle do

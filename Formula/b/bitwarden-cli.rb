@@ -12,14 +12,13 @@ class BitwardenCli < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256                               arm64_sequoia: "9772c36c8aab4b81715e436afb5f4a399ee14f1fb32be9d89a50c5619761b5a5"
-    sha256                               arm64_sonoma:  "f086ee3c0bfbd5f1bcb5b94182f52e3c083dd85bfd8733f7eca99b7a1ff61199"
-    sha256                               arm64_ventura: "6b49cb1f49bc906daacdc85bc93a41d909aed4d3c7d243fc95a854f7ffa938df"
-    sha256                               sonoma:        "b92e64400f954245970ce1ca7b6c020f7419e77751cd3828b00977dacb06a393"
-    sha256                               ventura:       "708dc028144ae0e45acf31ddd80f52d3e8f135f18128b594058e38e40068f640"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "49d41e45a26c550bcadda01c1557fc314c5acdcb8b4a7e71c5463bec829611ac"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "cf2c06a2c6880a18b3bb29ae69ae4c9476082de7f2a949332db1ef2920773c29"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "8b1f9d8e9f2a11e128d811b25f500ff8c5f3b1403b66d7d6b43e0bac9c55791d"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "8b1f9d8e9f2a11e128d811b25f500ff8c5f3b1403b66d7d6b43e0bac9c55791d"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "8b1f9d8e9f2a11e128d811b25f500ff8c5f3b1403b66d7d6b43e0bac9c55791d"
+    sha256 cellar: :any_skip_relocation, sonoma:        "11a4044c2d6407e4ba53a962163d2528e2c20f6afa05cbfb7ab216870b9a55eb"
+    sha256 cellar: :any_skip_relocation, ventura:       "11a4044c2d6407e4ba53a962163d2528e2c20f6afa05cbfb7ab216870b9a55eb"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "8b1f9d8e9f2a11e128d811b25f500ff8c5f3b1403b66d7d6b43e0bac9c55791d"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "8b1f9d8e9f2a11e128d811b25f500ff8c5f3b1403b66d7d6b43e0bac9c55791d"
   end
 
   depends_on "node"

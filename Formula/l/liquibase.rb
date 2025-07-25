@@ -14,13 +14,13 @@ class Liquibase < Formula
   no_autobump! because: :requires_manual_review
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "3e3cdb5d8dd61a55e73793b4ac48e75c198d9ec82fd07290e7215855aa2f89f2"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "3e3cdb5d8dd61a55e73793b4ac48e75c198d9ec82fd07290e7215855aa2f89f2"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "3e3cdb5d8dd61a55e73793b4ac48e75c198d9ec82fd07290e7215855aa2f89f2"
-    sha256 cellar: :any_skip_relocation, sonoma:        "7694432ffb6cd54bb60b52ba39b5bcaec8c1a82e966576ec73691509a770878f"
-    sha256 cellar: :any_skip_relocation, ventura:       "7694432ffb6cd54bb60b52ba39b5bcaec8c1a82e966576ec73691509a770878f"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "3e3cdb5d8dd61a55e73793b4ac48e75c198d9ec82fd07290e7215855aa2f89f2"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "3e3cdb5d8dd61a55e73793b4ac48e75c198d9ec82fd07290e7215855aa2f89f2"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "222519225b5374762241360ed0c6720d11f31a6b996c2df9268fe321bf7917aa"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "222519225b5374762241360ed0c6720d11f31a6b996c2df9268fe321bf7917aa"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "222519225b5374762241360ed0c6720d11f31a6b996c2df9268fe321bf7917aa"
+    sha256 cellar: :any_skip_relocation, sonoma:        "7181fa982b8c07cdc61e486770ea6f0f12b642eb4a85c9f01bf9e4a8bf764e0e"
+    sha256 cellar: :any_skip_relocation, ventura:       "7181fa982b8c07cdc61e486770ea6f0f12b642eb4a85c9f01bf9e4a8bf764e0e"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "222519225b5374762241360ed0c6720d11f31a6b996c2df9268fe321bf7917aa"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "222519225b5374762241360ed0c6720d11f31a6b996c2df9268fe321bf7917aa"
   end
 
   depends_on "openjdk"

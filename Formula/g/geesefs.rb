@@ -1,8 +1,8 @@
 class Geesefs < Formula
   desc "FUSE FS implementation over S3"
   homepage "https://github.com/yandex-cloud/geesefs"
-  url "https://github.com/yandex-cloud/geesefs/archive/refs/tags/v0.43.0.tar.gz"
-  sha256 "ec4331ab6756f255cfb1d2042696b35bd51600659e43982fef9929f9a96fa503"
+  url "https://github.com/yandex-cloud/geesefs/archive/refs/tags/v0.43.1.tar.gz"
+  sha256 "29d780c69ac67cc73914b45261d9a58d55ceafd4f666d6de3e503f5f98869421"
   license "Apache-2.0"
   head "https://github.com/yandex-cloud/geesefs.git", branch: "master"
 
@@ -23,6 +23,7 @@ class Geesefs < Formula
 
   test do
     assert_match "geesefs version #{version}", shell_output("#{bin}/geesefs --version 2>&1")
-    assert_match "Mount: stat test: no such file or directory", shell_output("#{bin}/geesefs test test 2>&1", 1)
+    output = shell_output("#{bin}/geesefs test test 2>&1", 1)
+    assert_match "FATAL Mounting file system: Unable to access 'test'", output
   end
 end

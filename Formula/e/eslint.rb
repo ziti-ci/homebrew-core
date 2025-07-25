@@ -7,13 +7,13 @@ class Eslint < Formula
   head "https://github.com/eslint/eslint.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "f5652cc1ae38e7e72fc7af24176d51e3e51cb3db707b29038dbb65e8250f0cfe"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "f5652cc1ae38e7e72fc7af24176d51e3e51cb3db707b29038dbb65e8250f0cfe"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "f5652cc1ae38e7e72fc7af24176d51e3e51cb3db707b29038dbb65e8250f0cfe"
-    sha256 cellar: :any_skip_relocation, sonoma:        "7caed69c422aa01d3cecd53ea3f18b6085d6064185e58f74d1810f3629edc8f9"
-    sha256 cellar: :any_skip_relocation, ventura:       "7caed69c422aa01d3cecd53ea3f18b6085d6064185e58f74d1810f3629edc8f9"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "f5652cc1ae38e7e72fc7af24176d51e3e51cb3db707b29038dbb65e8250f0cfe"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "f5652cc1ae38e7e72fc7af24176d51e3e51cb3db707b29038dbb65e8250f0cfe"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "3d8c96a787cf262ac6747ef3400c34a2141a535fdc6767c7940433d451d066e7"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "3d8c96a787cf262ac6747ef3400c34a2141a535fdc6767c7940433d451d066e7"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "3d8c96a787cf262ac6747ef3400c34a2141a535fdc6767c7940433d451d066e7"
+    sha256 cellar: :any_skip_relocation, sonoma:        "298887f569292147140e76b19c8046df73eb6e153eab50fa6668686d08276171"
+    sha256 cellar: :any_skip_relocation, ventura:       "298887f569292147140e76b19c8046df73eb6e153eab50fa6668686d08276171"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "3d8c96a787cf262ac6747ef3400c34a2141a535fdc6767c7940433d451d066e7"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "3d8c96a787cf262ac6747ef3400c34a2141a535fdc6767c7940433d451d066e7"
   end
 
   depends_on "node"

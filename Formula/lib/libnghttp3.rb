@@ -1,9 +1,9 @@
 class Libnghttp3 < Formula
   desc "HTTP/3 library written in C"
   homepage "https://nghttp2.org/nghttp3/"
-  url "https://github.com/ngtcp2/nghttp3/releases/download/v1.10.1/nghttp3-1.10.1.tar.xz"
-  mirror "http://fresh-center.net/linux/www/nghttp3-1.10.1.tar.xz"
-  sha256 "e6b8ebaadf8e57cba77a3e34ee8de465fe952481fbf77c4f98d48737bdf50e03"
+  url "https://github.com/ngtcp2/nghttp3/releases/download/v1.11.0/nghttp3-1.11.0.tar.xz"
+  mirror "http://fresh-center.net/linux/www/nghttp3-1.11.0.tar.xz"
+  sha256 "27d084518f06d78279b050cc9cdff2418f80fb753da019427ce853cec920f33f"
   license "MIT"
   head "https://github.com/ngtcp2/nghttp3.git", branch: "main"
 

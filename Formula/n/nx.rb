@@ -6,13 +6,13 @@ class Nx < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any,                 arm64_sequoia: "f70ebf86f515f4f0873e12ae542e3e1450b6b411cb932160030e0ed2ac47e98c"
-    sha256 cellar: :any,                 arm64_sonoma:  "f70ebf86f515f4f0873e12ae542e3e1450b6b411cb932160030e0ed2ac47e98c"
-    sha256 cellar: :any,                 arm64_ventura: "f70ebf86f515f4f0873e12ae542e3e1450b6b411cb932160030e0ed2ac47e98c"
-    sha256 cellar: :any,                 sonoma:        "d2811fc8244f22a07c16535f3c30d26b27b246af87bf2571f773348875b6716a"
-    sha256 cellar: :any,                 ventura:       "d2811fc8244f22a07c16535f3c30d26b27b246af87bf2571f773348875b6716a"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "62fac1d52c24de56daf99a8f4d3a80a6a274f1e770a8afee27ca3d029b27a26f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "bf80f4c94d04f00bf135e0a2dc9640e21d2fc884453083dfe06a5435fcecc270"
+    sha256 cellar: :any,                 arm64_sequoia: "919d0f76dd3ea4241add0072b489a88f8ebc1ba85c4f7343341cbfa9bc7a2516"
+    sha256 cellar: :any,                 arm64_sonoma:  "919d0f76dd3ea4241add0072b489a88f8ebc1ba85c4f7343341cbfa9bc7a2516"
+    sha256 cellar: :any,                 arm64_ventura: "919d0f76dd3ea4241add0072b489a88f8ebc1ba85c4f7343341cbfa9bc7a2516"
+    sha256 cellar: :any,                 sonoma:        "b64e68193e349da25f23ab86c35496bd14f07cada8cf783aaa22ef033ce66d8f"
+    sha256 cellar: :any,                 ventura:       "b64e68193e349da25f23ab86c35496bd14f07cada8cf783aaa22ef033ce66d8f"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "550a4569f868f3f5b6256a3e76e83d7f0bb7a5eee100f1a8c6437edac769ccaa"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "6394f9efde8e7272b3094318a17fc6ba371d06bced921736035836717ad14928"
   end
 
   depends_on "node"

@@ -1,8 +1,8 @@
 class Gci < Formula
   desc "Control Golang package import order and make it always deterministic"
   homepage "https://github.com/daixiang0/gci"
-  url "https://github.com/daixiang0/gci/archive/refs/tags/v0.13.6.tar.gz"
-  sha256 "89946f56773269dce0776b5c6c978790ccf006c116c9692f545500dec54affdd"
+  url "https://github.com/daixiang0/gci/archive/refs/tags/v0.13.7.tar.gz"
+  sha256 "b5863303eb0899bcbbc87995f1935d3594e3fa1eaea37d3f77de284c6a5a49e3"
   license "BSD-3-Clause"
   head "https://github.com/daixiang0/gci.git", branch: "master"
 

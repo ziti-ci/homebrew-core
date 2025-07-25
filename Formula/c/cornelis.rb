@@ -1,12 +1,10 @@
 class Cornelis < Formula
   desc "Neovim support for Agda"
   homepage "https://github.com/agda/cornelis"
-  url "https://github.com/agda/cornelis/archive/refs/tags/v2.7.1.tar.gz"
-  sha256 "b75d20ecf50b7a87108d9a9e343c863c2cf6fbf51323954827738ddc0081eff3"
+  url "https://github.com/agda/cornelis/archive/refs/tags/v2.8.0.tar.gz"
+  sha256 "41787428319dbde15b51ce427451d4a48f14d54a7c42902d004458e232ca3022"
   license "BSD-3-Clause"
   head "https://github.com/agda/cornelis.git", branch: "master"
-
-  no_autobump! because: :requires_manual_review
 
   bottle do
     sha256 cellar: :any,                 arm64_sequoia: "5469975994b43e45788ff4b27058dc3284fa90f63be85001603abc5228dd76d3"

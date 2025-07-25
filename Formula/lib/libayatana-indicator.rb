@@ -5,6 +5,10 @@ class LibayatanaIndicator < Formula
   sha256 "a18d3c682e29afd77db24366f8475b26bda22b0e16ff569a2ec71cd6eb4eac95"
   license "GPL-3.0-or-later"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "38823b368d0eb88a0cbaff12fe3d6dae2e78ac39092214bad70a290d44ccb7c1"
+  end
+
   depends_on "cmake" => :build
   depends_on "gobject-introspection" => :build
   depends_on "pkgconf" => [:build, :test]

@@ -4,6 +4,7 @@ class Liquibase < Formula
   url "https://github.com/liquibase/liquibase/releases/download/v4.33.0/liquibase-4.33.0.tar.gz"
   sha256 "689acfcdc97bad0d4c150d1efab9c851e251b398cb3d6326f75e8aafe40ed578"
   license "Apache-2.0"
+  revision 1
 
   livecheck do
     url :stable
@@ -29,8 +30,9 @@ class Liquibase < Formula
 
     chmod 0755, "liquibase"
     libexec.install Dir["*"]
+    bash_completion.install libexec/"lib/liquibase_autocomplete.sh" => "liquibase"
+    zsh_completion.install libexec/"lib/liquibase_autocomplete.zsh" => "_liquibase"
     (bin/"liquibase").write_env_script libexec/"liquibase", Language::Java.overridable_java_home_env
-    (libexec/"lib").install_symlink Dir["#{libexec}/sdk/lib-sdk/slf4j*"]
   end
 
   def caveats

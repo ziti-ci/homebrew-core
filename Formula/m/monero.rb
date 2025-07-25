@@ -1,10 +1,9 @@
 class Monero < Formula
   desc "Official Monero wallet and CPU miner"
   homepage "https://www.getmonero.org/downloads/#cli"
-  url "https://downloads.getmonero.org/cli/monero-source-v0.18.4.0.tar.bz2"
-  sha256 "fe982ced4603aa7e54989326e3d1830ac1a1387e99722c419e2b103b8e8aa1a0"
+  url "https://downloads.getmonero.org/cli/monero-source-v0.18.4.1.tar.bz2"
+  sha256 "e70e44cae986123c39b77a89a9ee5db431c050a55cc64442993482d085104103"
   license "BSD-3-Clause"
-  revision 1
 
   livecheck do
     url "https://downloads.getmonero.org/cli/source"
@@ -41,11 +40,6 @@ class Monero < Formula
   conflicts_with "wownero", because: "both install a wallet2_api.h header"
 
   def install
-    # Partial backport for CMake 4 compatibility
-    # https://github.com/monero-project/monero/commit/eb083ca423c6dc7431d3f1e2992307cfccec4a9f
-    inreplace "CMakeLists.txt", "cmake_minimum_required(VERSION 3.1)",
-                                "cmake_minimum_required(VERSION 3.5)"
-
     system "cmake", "-S", ".", "-B", "build", *std_cmake_args
     system "cmake", "--build", "build"
     system "cmake", "--install", "build"

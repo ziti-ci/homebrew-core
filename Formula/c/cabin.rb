@@ -1,8 +1,8 @@
 class Cabin < Formula
   desc "Package manager and build system for C++"
   homepage "https://github.com/cabinpkg/cabin"
-  url "https://github.com/cabinpkg/cabin/archive/refs/tags/0.12.1.tar.gz"
-  sha256 "a8e038452b28880a464885dcbfe515441e0a066e673d3cce5df46871ad4fa38f"
+  url "https://github.com/cabinpkg/cabin/archive/refs/tags/0.13.0.tar.gz"
+  sha256 "f9115bb0566800beedb41106e00f44a7eaf1dea0fa6528281e31de5f80864177"
   license "Apache-2.0"
   head "https://github.com/cabinpkg/cabin.git", branch: "main"
 
@@ -54,7 +54,7 @@ class Cabin < Formula
     ENV.llvm_clang if OS.mac? && (DevelopmentTools.clang_build_version <= 1499 || MacOS.version == :ventura)
     # Avoid cloning `toml11` at build-time.
     (buildpath/"build/DEPS/toml11").install_symlink Formula["toml11"].opt_include
-    system "make", "RELEASE=1", "PREFIX=#{prefix}", "install"
+    system "make", "BUILD=release", "PREFIX=#{prefix}", "install"
   end
 
   test do

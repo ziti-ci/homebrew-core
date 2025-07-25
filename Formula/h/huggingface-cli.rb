@@ -3,17 +3,17 @@ class HuggingfaceCli < Formula
 
   desc "Client library for huggingface.co hub"
   homepage "https://huggingface.co/docs/huggingface_hub/guides/cli"
-  url "https://files.pythonhosted.org/packages/02/16/5716d03e2b48bcc8e32d9b18ed7e55d2ae52e3d5df146cced9fe0581b5ff/huggingface_hub-0.33.5.tar.gz"
-  sha256 "814097e475646d170c44be4c38f7d381ccc4539156a5ac62a54f53aaf1602ed8"
+  url "https://files.pythonhosted.org/packages/15/77/a9e27cdb6a2f8387c7b8f7e6a107458b7b96f156a5a78fab922d0d563df8/huggingface_hub-0.34.0.tar.gz"
+  sha256 "2c6f373fac66b1afc2fe47efd8e603a876935dbd669f966231f265da5c353e25"
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any,                 arm64_sequoia: "e64c2e8440ef904a7e7396eb1879126438bca140321affbf67e27bbea50bf046"
-    sha256 cellar: :any,                 arm64_sonoma:  "d41080531e5335b9d6e416cbed83abd0d53ce0a4e0295b235ad457180f2d89ed"
-    sha256 cellar: :any,                 arm64_ventura: "3b33274de493d1cf891fa6fd99e7b6d1515e9f1a04329b729b48f39fc58d8066"
-    sha256 cellar: :any,                 sonoma:        "fc137a581ca89b52fb3145d7fd7e95bae2bc4f1f2c5ce6320a46d98819b5c44f"
-    sha256 cellar: :any,                 ventura:       "50415a94357ec203cb54192c2a070e1db53019ce14e5a784018a323b088a917e"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "faed0a0d765d8e23cf6c490b0a38bd61f56c7c41e781cf0bfba2eb5677ee6191"
+    sha256 cellar: :any,                 arm64_sequoia: "0981d30a93758016f7562bdeed4c1238d19b2c9114fd9d68d0c6204e8a735754"
+    sha256 cellar: :any,                 arm64_sonoma:  "d9f8ed7a11c7fdde0eaf1bb9961f3208b672f596ae7d988731810585add582a8"
+    sha256 cellar: :any,                 arm64_ventura: "6cf842207804f171a3392f2153f2759992753231edc5228d5cd0106accf10202"
+    sha256 cellar: :any,                 sonoma:        "bc9936d8456852cffe7e75985a09598412b605816be19116fe1c354db3eb4b2f"
+    sha256 cellar: :any,                 ventura:       "5239df31ff517774b40d4b85f1d3a84828b9a5a342b231cbdcfdb40236b4198b"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "10c463a4ecd1f068f621ede6d5ff2e31c0e4dba0c3b0023840bd6b82c82a8e0f"
   end
 
   depends_on "pkgconf" => :build

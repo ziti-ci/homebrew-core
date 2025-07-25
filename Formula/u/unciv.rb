@@ -1,9 +1,9 @@
 class Unciv < Formula
   desc "Open-source Android/Desktop remake of Civ V"
   homepage "https://github.com/yairm210/Unciv"
-  url "https://github.com/yairm210/Unciv/releases/download/4.17.8-patch1/Unciv.jar"
-  version "4.17.8-patch1"
-  sha256 "e8e442776798f757f257af38e80ab810e4a2bcf261cf5bf595289f194bb8354b"
+  url "https://github.com/yairm210/Unciv/releases/download/4.17.9-patch1/Unciv.jar"
+  version "4.17.9-patch1"
+  sha256 "516527e53cbce44890e060be936784d2324adba4a1fb60cc21f3f318d964f833"
   license "MPL-2.0"
 
   livecheck do
@@ -12,7 +12,7 @@ class Unciv < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "1e16d97e7aff8c988a991f1fc6f0d9662cb3e1016d2a0aa737dbefbf7ae057fa"
+    sha256 cellar: :any_skip_relocation, all: "c8f9ea410f9f44380d9bd001f579d19fdf0864722c47054e2323318b0e83d4c2"
   end
 
   depends_on "openjdk"

@@ -3,8 +3,8 @@ class Snakemake < Formula
 
   desc "Pythonic workflow system"
   homepage "https://snakemake.readthedocs.io/"
-  url "https://files.pythonhosted.org/packages/1d/d2/ab229ab89a84680d150007e47d868871a9e4d977048a59e7727cb011b646/snakemake-9.8.1.tar.gz"
-  sha256 "2b2e5b6bac1078e38a0cc1b995e6c10f283a7270e2537520cd6afa73d1c0c961"
+  url "https://files.pythonhosted.org/packages/61/35/ae395df4ca7b77cf9eaf3143b5511eb8dfdf86f13599d77f118cc0c6cd89/snakemake-9.8.2.tar.gz"
+  sha256 "231613364b44e0c9f16322b3595bbc59cced36089bca6ebac87b4b06b12d9fd8"
   license "MIT"
   head "https://github.com/snakemake/snakemake.git", branch: "main"
 
@@ -80,8 +80,8 @@ class Snakemake < Formula
   end
 
   resource "gitpython" do
-    url "https://files.pythonhosted.org/packages/c0/89/37df0b71473153574a5cdef8f242de422a0f5d26d7a9e231e6f169b4ad14/gitpython-3.1.44.tar.gz"
-    sha256 "c87e30b26253bf5418b01b0660f818967f3c503193838337fe5e573331249269"
+    url "https://files.pythonhosted.org/packages/9a/c8/dd58967d119baab745caec2f9d853297cec1989ec1d63f677d3880632b88/gitpython-3.1.45.tar.gz"
+    sha256 "85b0ee964ceddf211c41b9f27a49086010a190fd8132a24e21f362a4b36a791c"
   end
 
   resource "humanfriendly" do
@@ -185,8 +185,8 @@ class Snakemake < Formula
   end
 
   resource "snakemake-interface-common" do
-    url "https://files.pythonhosted.org/packages/a1/d7/32bc152afe18e952f0710e32f2aa28aa371c5eea1ebf863c113c6f9944c9/snakemake_interface_common-1.20.2.tar.gz"
-    sha256 "2857fc1f0baefd77d3bfa98938e1954d94f8b68df1f7910b92d1279153c84688"
+    url "https://files.pythonhosted.org/packages/a0/d6/f28dab9c084d01ac8b916e835f35838ce801cdc7176c5ed59cf1b39b42c1/snakemake_interface_common-1.21.0.tar.gz"
+    sha256 "0b6f0ef2c1a19fa8c20d676f4e355b8ba7058e142640a1c3c36fd1b9e110ef53"
   end
 
   resource "snakemake-interface-executor-plugins" do
@@ -195,8 +195,8 @@ class Snakemake < Formula
   end
 
   resource "snakemake-interface-logger-plugins" do
-    url "https://files.pythonhosted.org/packages/b2/30/96e98e0d3feedcaf40820f7604cc86dfb9a0174408e7f70a7fd876a9b8c8/snakemake_interface_logger_plugins-1.2.3.tar.gz"
-    sha256 "9228cc01f2cc0b35e9144c02d10f71cc9874296272896aeb86f9fac7db5e2c69"
+    url "https://files.pythonhosted.org/packages/9b/d4/3cb00ef9a65bdb7f533f42df04873f96e08b8ef39eaf33c69db2e6f87f8b/snakemake_interface_logger_plugins-1.2.4.tar.gz"
+    sha256 "09193b07c260b3efc88a75a0d33767820705f66e85c14d4f0d0e562b123c3c58"
   end
 
   resource "snakemake-interface-report-plugins" do

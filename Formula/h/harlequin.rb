@@ -8,7 +8,7 @@ class Harlequin < Formula
   license "MIT"
   revision 1
 
-  no_autobump! because: :requires_manual_review
+  no_autobump! because: "has non-PyPI resources"
 
   bottle do
     rebuild 1

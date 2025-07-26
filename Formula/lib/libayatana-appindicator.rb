@@ -5,6 +5,10 @@ class LibayatanaAppindicator < Formula
   sha256 "884a6bc77994c0b58c961613ca4c4b974dc91aa0f804e70e92f38a542d0d0f90"
   license any_of: ["GPL-3.0-or-later", "LGPL-2.1-or-later"]
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "589e5c203dbcf5befc48f6e13e0e2e723312ceb2f59b65c7490b6f2e80587dab"
+  end
+
   depends_on "at-spi2-core" => :build
   depends_on "cmake" => :build
   depends_on "gobject-introspection" => :build

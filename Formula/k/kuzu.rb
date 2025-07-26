@@ -1,8 +1,8 @@
 class Kuzu < Formula
   desc "Embeddable graph database management system built for query speed & scalability"
   homepage "https://kuzudb.com/"
-  url "https://github.com/kuzudb/kuzu/archive/refs/tags/v0.11.0.tar.gz"
-  sha256 "445872031fd41153dd5a35a3d471354f1a98f853df5aad45a0a47154c69eaf2f"
+  url "https://github.com/kuzudb/kuzu/archive/refs/tags/v0.11.1.tar.gz"
+  sha256 "479a9943ad9db3b9a28925438c05563a00e7eb72eaeff07ca21b9d3378069eb7"
   license "MIT"
   head "https://github.com/kuzudb/kuzu.git", branch: "master"
 

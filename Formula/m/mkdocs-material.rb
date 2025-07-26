@@ -2,8 +2,8 @@ class MkdocsMaterial < Formula
   include Language::Python::Virtualenv
   desc "Material Design theme for MkDocs"
   homepage "https://squidfunk.github.io/mkdocs-material/"
-  url "https://files.pythonhosted.org/packages/95/c1/f804ba2db2ddc2183e900befe7dad64339a34fa935034e1ab405289d0a97/mkdocs_material-9.6.15.tar.gz"
-  sha256 "64adf8fa8dba1a17905b6aee1894a5aafd966d4aeb44a11088519b0f5ca4f1b5"
+  url "https://files.pythonhosted.org/packages/dd/84/aec27a468c5e8c27689c71b516fb5a0d10b8fca45b9ad2dd9d6e43bc4296/mkdocs_material-9.6.16.tar.gz"
+  sha256 "d07011df4a5c02ee0877496d9f1bfc986cfb93d964799b032dd99fe34c0e9d19"
   license "MIT"
 
   bottle do
@@ -32,8 +32,8 @@ class MkdocsMaterial < Formula
   end
 
   resource "certifi" do
-    url "https://files.pythonhosted.org/packages/73/f7/f14b46d4bcd21092d7d3ccef689615220d8a08fb25e564b65d20738e672e/certifi-2025.6.15.tar.gz"
-    sha256 "d747aa5a8b9bbbb1bb8c22bb13e22bd1f18e9796defa16bab421f7f7a317323b"
+    url "https://files.pythonhosted.org/packages/b3/76/52c535bcebe74590f296d6c77c86dabf761c41980e1347a2422e4aa2ae41/certifi-2025.7.14.tar.gz"
+    sha256 "8ea99dbdfaaf2ba2f9bac77b9249ef62ec5218e7c2b2e903378ed5fccf765995"
   end
 
   resource "charset-normalizer" do

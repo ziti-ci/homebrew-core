@@ -1,8 +1,8 @@
 class Nvc < Formula
   desc "VHDL compiler and simulator"
   homepage "https://www.nickg.me.uk/nvc/"
-  url "https://github.com/nickg/nvc/releases/download/r1.17.0/nvc-1.17.0.tar.gz"
-  sha256 "8c551c15f283c6a47570883e41b7c3846a4af93e08e6dc82e96dcaf9010c2305"
+  url "https://github.com/nickg/nvc/releases/download/r1.17.1/nvc-1.17.1.tar.gz"
+  sha256 "6afcbcc860c755d6166abb0582cf72038985b7fad1af84565b13e156570209c4"
   license "GPL-3.0-or-later"
 
   bottle do
@@ -33,12 +33,6 @@ class Nvc < Formula
 
   on_linux do
     depends_on "elfutils"
-  end
-
-  # Fix to arm build error, remove in next release
-  patch do
-    url "https://github.com/nickg/nvc/commit/4a94efdb8f314732d59368ade364d2e03b424e14.patch?full_index=1"
-    sha256 "714b54403a494ec85c340bdf9b371957288c43f3b49dcf4fb5817dcd6d6a581a"
   end
 
   def install

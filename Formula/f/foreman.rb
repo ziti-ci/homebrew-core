@@ -1,8 +1,8 @@
 class Foreman < Formula
   desc "Manage Procfile-based applications"
   homepage "https://ddollar.github.io/foreman/"
-  url "https://github.com/ddollar/foreman/archive/refs/tags/v0.88.1.tar.gz"
-  sha256 "78826feb7c7a580f4d4e6cb15f0d4373d8ec71eedaf67ae3263c36398c926c70"
+  url "https://github.com/ddollar/foreman/archive/refs/tags/v0.89.1.tar.gz"
+  sha256 "49d058ce2ac5dc8a05478dcfefd98d25a6740d29314924cc481f185663f51974"
   license "MIT"
 
   bottle do
@@ -19,8 +19,20 @@ class Foreman < Formula
 
   uses_from_macos "ruby"
 
+  resource "thor" do
+    url "https://rubygems.org/gems/thor-1.4.0.gem"
+    sha256 "8763e822ccb0f1d7bee88cde131b19a65606657b847cc7b7b4b82e772bcd8a3d"
+  end
+
   def install
     ENV["GEM_HOME"] = libexec
+
+    resources.each do |r|
+      r.fetch
+      system "gem", "install", r.cached_download, "--ignore-dependencies",
+             "--no-document", "--install-dir", libexec
+    end
+
     system "gem", "build", "#{name}.gemspec"
     system "gem", "install", "#{name}-#{version}.gem"
     bin.install libexec/"bin/#{name}"

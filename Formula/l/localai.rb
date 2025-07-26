@@ -3,18 +3,18 @@ class Localai < Formula
 
   desc "OpenAI alternative"
   homepage "https://localai.io"
-  url "https://github.com/mudler/LocalAI/archive/refs/tags/v3.2.1.tar.gz"
-  sha256 "b9403986568d46583a0238bc2d8888cde307bb24d5f439c0e2ee897bbc055781"
+  url "https://github.com/mudler/LocalAI/archive/refs/tags/v3.2.2.tar.gz"
+  sha256 "9bdf68d1da47fd3b40d30e433b2be92343b20f8dd8f239631a0b0afc67dee45c"
   license "MIT"
   head "https://github.com/mudler/LocalAI.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "bfcf2439be77a5982e3809e249d6b7d9be6b28aec2a1a2b106b8c2d32c04b021"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "4723fd5eeb93fff39ae64277a6cbc137242cbfdfb8c59c6128cc620b71afdf85"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "c1ae790b106209b979deb09afb86cf6a37e40d1265e468d17aa04c8fad24ef13"
-    sha256 cellar: :any_skip_relocation, sonoma:        "dfe3e6af758fc3d25ce5aa3a95e7c9930bfff70acd9add7401ca1218593c1cab"
-    sha256 cellar: :any_skip_relocation, ventura:       "9c7421a0b959696ad53a577500def5d7a68edab599e1f8f89a90e237aeaf30c3"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "a72c3d63868144f1d65934cb2444e688b56f52241880bfbe717d87a81b0cf5c9"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "aceb97fce888c38c29bc3a5c4b0856ce0995901156c07e6bfb530c6de7062fd7"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "116dd0badd8dd8a0bd6a52db203aeb326b473af6fa58aedfe4be3b535b0446dc"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "cb389339a9ce14a345b07244b3a81d21e900ed6b3013bd8dd10c091cb8409955"
+    sha256 cellar: :any_skip_relocation, sonoma:        "b092dd23cdafde3b2caa6f093b490f44fafbc2a9090a29318ac17253e6f461bf"
+    sha256 cellar: :any_skip_relocation, ventura:       "63f12d1e03fcb11d36997fd98ebb6da29b312b9c2fd3bda97c28687dabf0c0ad"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "e438e805b4fc6b9606455171f8915a4e14f84cea959de812c2302b4e9b93f3cd"
   end
 
   depends_on "abseil" => :build

@@ -1,8 +1,8 @@
 class Netmask < Formula
   desc "IP address netmask generation utility"
   homepage "https://github.com/tlby/netmask/blob/master/README"
-  url "https://github.com/tlby/netmask/archive/refs/tags/v2.4.5.tar.gz"
-  sha256 "7d4adef47e5c9aba919d099640f1f08aa88f8de9538c43a13233c1af44644be2"
+  url "https://github.com/tlby/netmask/archive/refs/tags/v2.5.0.tar.gz"
+  sha256 "f352d8117a4f9377a15919d9ad4989cfba8816958718a914abf1414242a9f636"
   license "GPL-2.0-only"
 
   bottle do

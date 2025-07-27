@@ -17,6 +17,7 @@ class Apigeecli < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura: "498a7ccc309d4d391e5ed215937bc461438c4ff94449eeb75a7ce726355c8028"
     sha256 cellar: :any_skip_relocation, sonoma:        "6769094dfa947b204f4fca357ed7af5ad35d8b5ced4a4cfd181e8f36bbaf87f3"
     sha256 cellar: :any_skip_relocation, ventura:       "6769094dfa947b204f4fca357ed7af5ad35d8b5ced4a4cfd181e8f36bbaf87f3"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "be1b087aa21bf3dc2011b030f15ac1324f01c0010e02539fb29d3de1d4148d9d"
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "b4fad1d8ce752aa79e4c7433aa12f5c5a2e1a3b4e50c7af29a9d79d830ade158"
   end
 

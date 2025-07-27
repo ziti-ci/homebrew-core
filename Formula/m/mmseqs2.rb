@@ -1,9 +1,9 @@
 class Mmseqs2 < Formula
   desc "Software suite for very fast sequence search and clustering"
   homepage "https://mmseqs.com/"
-  url "https://github.com/soedinglab/MMseqs2/archive/refs/tags/17-b804f.tar.gz"
-  version "17-b804f"
-  sha256 "300ebd14bf4e007b339037e5f73d8ff9c4e34f8495204c4a8c59c7672b689db2"
+  url "https://github.com/soedinglab/MMseqs2/archive/refs/tags/18-8cc5c.tar.gz"
+  version "18-8cc5c"
+  sha256 "3541b67322aee357fd9ca529750d36cb1426aa9bcd1efb2dc916e35219e1a41c"
   license "MIT"
   head "https://github.com/soedinglab/MMseqs2.git", branch: "master"
 
@@ -35,14 +35,11 @@ class Mmseqs2 < Formula
   # `git ls-remote https://github.com/soedinglab/MMseqs2.wiki.git HEAD`
   resource "documentation" do
     url "https://github.com/soedinglab/MMseqs2.wiki.git",
-        revision: "b1ccffcaf6be0f857e37670a260311f2416b6794"
+        revision: "67ba9c6637b4b5121a73e5de034dd0c3414d2b81"
   end
 
   def install
-    odie "Remove cmake 4 build patch" if build.stable? && version > "17-b804f"
-
     args = %W[
-      -DCMAKE_POLICY_VERSION_MINIMUM=3.5
       -DHAVE_TESTS=0
       -DHAVE_MPI=0
       -DVERSION_OVERRIDE=#{version}

@@ -1,8 +1,8 @@
 class GitCliff < Formula
   desc "Highly customizable changelog generator"
   homepage "https://git-cliff.org/"
-  url "https://github.com/orhun/git-cliff/archive/refs/tags/v2.9.1.tar.gz"
-  sha256 "dd5a707fba4549ab4ea5e9e95ea7ed302852eb1916b93a1a369019f005ad4cc4"
+  url "https://github.com/orhun/git-cliff/archive/refs/tags/v2.10.0.tar.gz"
+  sha256 "5983409377bb34337ee930af53afb522737d87b9ba15096eae30ced3484b12a2"
   license all_of: ["Apache-2.0", "MIT"]
 
   bottle do
@@ -49,9 +49,7 @@ class GitCliff < Formula
     system "git", "add", "cliff.toml"
     system "git", "commit", "-m", "chore: initial commit"
 
-    assert_match <<~EOS, shell_output("git cliff")
-      All notable changes to this project will be documented in this file.
-
+    assert_equal <<~EOS, shell_output("git cliff")
       ## [unreleased]
 
       ### ⚙️ Miscellaneous Tasks

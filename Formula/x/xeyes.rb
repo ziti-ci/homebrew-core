@@ -1,11 +1,9 @@
 class Xeyes < Formula
   desc "Follow the mouse X demo using the X SHAPE extension"
   homepage "https://gitlab.freedesktop.org/xorg/app/xeyes"
-  url "https://www.x.org/archive/individual/app/xeyes-1.3.0.tar.xz"
-  sha256 "0950c600bf33447e169a539ee6655ef9f36d6cebf2c1be67f7ab55dacb753023"
+  url "https://www.x.org/archive/individual/app/xeyes-1.3.1.tar.xz"
+  sha256 "5608d76b7b1aac5ed7f22f1b6b5ad74ef98c8693220f32b4b87dccee4a956eaa"
   license "X11"
-
-  no_autobump! because: :requires_manual_review
 
   bottle do
     sha256 cellar: :any,                 arm64_sequoia: "819f815762f42fe4c83c16a8ab3b52374e86f5769012e7ad063b0f024348ebb0"

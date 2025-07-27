@@ -4,6 +4,7 @@ class Inchi < Formula
   url "https://github.com/IUPAC-InChI/InChI/releases/download/v1.07.3/INCHI-1-SRC.zip"
   sha256 "b42d828b5d645bd60bc43df7e0516215808d92e5a46c28e12b1f4f75dfaae333"
   license "MIT"
+  revision 1
 
   bottle do
     sha256 cellar: :any,                 arm64_sequoia: "f8c679765ab69cc6aae5b2fa81f6bbeea4c903826060410d0b36f4794211f005"
@@ -32,12 +33,14 @@ class Inchi < Formula
     lib.install_symlink libinchi => shared_library("libinchi", version.major.to_s)
     lib.install_symlink shared_library("libinchi", version.major.to_s) => shared_library("libinchi")
 
-    # Install the same headers as Debian[^1] and Fedora[^2]. Some are needed by `open-babel`[^3].
+    # Install the same headers as Debian[^1] and Fedora[^2]. Some are needed by `open-babel`[^3]
+    # and `rdkit`[^4].
     #
     # [^1]: https://packages.debian.org/sid/amd64/libinchi-dev/filelist
     # [^2]: https://packages.fedoraproject.org/pkgs/inchi/inchi-devel/fedora-rawhide.html#files
     # [^3]: https://github.com/openbabel/openbabel/blob/master/cmake/modules/FindInchi.cmake
-    (include/"inchi").install %w[ichisize.h inchi_api.h ixa.h].map { |header| "INCHI_BASE/src/#{header}" }
+    # [^4]: https://github.com/rdkit/rdkit/blob/master/External/INCHI-API/inchi.cpp
+    (include/"inchi").install %w[bcf_s.h ichisize.h inchi_api.h ixa.h].map { |header| "INCHI_BASE/src/#{header}" }
   end
 
   test do

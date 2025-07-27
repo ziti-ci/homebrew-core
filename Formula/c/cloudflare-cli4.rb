@@ -3,10 +3,10 @@ class CloudflareCli4 < Formula
 
   desc "CLI for Cloudflare API v4"
   homepage "https://github.com/cloudflare/python-cloudflare-cli4"
-  url "https://github.com/cloudflare/python-cloudflare-cli4/archive/refs/tags/2.19.4.tar.gz"
-  sha256 "7a3e9b71cad0a995d59b0c3e285e1cf16bd08d9998509f44d7c321abe803d22b"
+  url "https://files.pythonhosted.org/packages/77/fd/87b3e026dcee2a6b891f2b6c98b8f0bc98a175c4b731c046b528298c07c5/cloudflare_cli4-2.19.4.post3.tar.gz"
+  sha256 "36efe09d188678e8c99e654b79162758594107342d11f88192423aa47fd6c0b8"
   license "MIT"
-  revision 4
+  head "https://github.com/cloudflare/python-cloudflare-cli4.git", branch: "main"
 
   bottle do
     sha256 cellar: :any,                 arm64_sequoia: "4e99d97a47fb49afe45a6fd735a925e194e343e21891d0bfd9cbf0fdf5ccb838"
@@ -76,6 +76,6 @@ class CloudflareCli4 < Formula
 
     output = shell_output("#{bin}/cli4 --profile Work /zones 2>&1", 1)
     assert_match "cli4: /zones - 6111 Invalid format for Authorization header", output
-    assert_match version.to_s, shell_output("#{bin}/cli4 --version 2>&1", 1)
+    assert_match version.major_minor_patch.to_s, shell_output("#{bin}/cli4 --version 2>&1", 1)
   end
 end

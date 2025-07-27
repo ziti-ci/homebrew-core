@@ -1,10 +1,10 @@
 class Nodenv < Formula
-  desc "Manage multiple NodeJS versions"
+  desc "Node.js version manager"
   homepage "https://github.com/nodenv/nodenv"
-  url "https://github.com/nodenv/nodenv/archive/refs/tags/v1.5.0.tar.gz"
-  sha256 "f11bd5acd3ff99c5a1b4df3f0cc6bca0814ec03df658ad90f53e5f2f173a25e8"
+  url "https://github.com/nodenv/nodenv/archive/refs/tags/v1.6.1.tar.gz"
+  sha256 "7e61b32bc4bdfeced5eb6143721baaa0c7ec7dc67cdd0b2ef4b0142dcec2bcc8"
   license "MIT"
-  head "https://github.com/nodenv/nodenv.git", branch: "master"
+  head "https://github.com/nodenv/nodenv.git", branch: "main"
 
   no_autobump! because: :requires_manual_review
 
@@ -20,21 +20,13 @@ class Nodenv < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "506fa918399e018d9492f86a2caa5bfe58ec4fe42561cfcd46c3a4c34e3bc81c"
   end
 
+  depends_on "node" => :test
+
   depends_on "node-build"
 
   def install
-    inreplace "libexec/nodenv" do |s|
-      s.gsub! "/usr/local", HOMEBREW_PREFIX
-      s.gsub! '"${BASH_SOURCE%/*}"/../libexec', libexec
-    end
-
-    %w[--version hooks versions].each do |cmd|
-      inreplace "libexec/nodenv-#{cmd}", "${BASH_SOURCE%/*}", libexec
-    end
-
-    # Compile bash extension
-    system "src/configure"
-    system "make", "-C", "src"
+    # Build an `:all` bottle.
+    inreplace "libexec/nodenv", "/usr/local", HOMEBREW_PREFIX
 
     if build.head?
       # Record exact git revision for `nodenv --version` output
@@ -42,10 +34,30 @@ class Nodenv < Formula
                                            "\\1--g#{Utils.git_short_head}"
     end
 
-    prefix.install "bin", "completions", "libexec"
+    prefix.install ["bin", "libexec", "nodenv.d"]
+    bash_completion.install "completions/nodenv.bash"
+    zsh_completion.install "completions/_nodenv"
+    man1.install "share/man/man1/nodenv.1"
   end
 
   test do
-    shell_output("eval \"$(#{bin}/nodenv init -)\" && nodenv --version")
+    # Create a fake node version and executable.
+    nodenv_root = Pathname(shell_output("#{bin}/nodenv root").strip)
+    node_bin = nodenv_root/"versions/1.2.3/bin"
+    foo_script = node_bin/"foo"
+    foo_script.write "echo hello"
+    chmod "+x", foo_script
+
+    # Test versions. The second `nodenv` call is a shell function; do not add a `bin` prefix.
+    versions = shell_output("eval \"$(#{bin}/nodenv init -)\" && nodenv versions").split("\n")
+    assert_equal 2, versions.length
+    assert_match(/\* system/, versions[0])
+    assert_equal("  1.2.3", versions[1])
+
+    # Test rehash.
+    system bin/"nodenv", "rehash"
+    refute_match "Cellar", (nodenv_root/"shims/foo").read
+    # The second `nodenv` call is a shell function; do not add a `bin` prefix.
+    assert_equal "hello", shell_output("eval \"$(#{bin}/nodenv init -)\" && nodenv shell 1.2.3 && foo").chomp
   end
 end

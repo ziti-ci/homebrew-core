@@ -2,13 +2,13 @@ class BuildpulseTestReporter < Formula
   desc "Connect your CI to BuildPulse to detect, track, and rank flaky tests"
   homepage "https://buildpulse.io"
   url "https://github.com/buildpulse/test-reporter/archive/refs/tags/v0.29.0.tar.gz"
-  sha256 "4235de52b6068f9f3d2d04f3b43ca8d2de1d1e421ae3cfbcdbcef2629d9b8263"
+  sha256 "605e87f4d566f14455f6c1e609eabd3fc2337a09d695fafc489011ce48b02035"
   license "MIT"
   head "https://github.com/buildpulse/test-reporter.git", branch: "main"
 
   livecheck do
     url :stable
-    regex(/^v?(\d+(?:\.\d+)+)$/i)
+    strategy :github_latest
   end
 
   bottle do

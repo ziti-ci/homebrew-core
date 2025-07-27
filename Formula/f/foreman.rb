@@ -6,15 +6,13 @@ class Foreman < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:  "126259e9cf4cd9a74ed3ed9b5c42bf7999c3ba21109fa356a9a5da96e133d6a4"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "22db09f18f3ccbfec2cc743a006a1b1590ca09ec7561158b9cb7fc1f7bfd5ab1"
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "22db09f18f3ccbfec2cc743a006a1b1590ca09ec7561158b9cb7fc1f7bfd5ab1"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "22db09f18f3ccbfec2cc743a006a1b1590ca09ec7561158b9cb7fc1f7bfd5ab1"
-    sha256 cellar: :any_skip_relocation, sonoma:         "22db09f18f3ccbfec2cc743a006a1b1590ca09ec7561158b9cb7fc1f7bfd5ab1"
-    sha256 cellar: :any_skip_relocation, ventura:        "22db09f18f3ccbfec2cc743a006a1b1590ca09ec7561158b9cb7fc1f7bfd5ab1"
-    sha256 cellar: :any_skip_relocation, monterey:       "22db09f18f3ccbfec2cc743a006a1b1590ca09ec7561158b9cb7fc1f7bfd5ab1"
-    sha256 cellar: :any_skip_relocation, arm64_linux:    "4bd3bde94b4e935314cccb59fefcc7b32d2297290c9f872122e59ee0308520cc"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "99fd4a76113c004e871f65c3d553b56168528ffa6d332fd944beecba1c244751"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "77ed065a7aff5e0a13b9645db33d36916f925d9b5943abd9c84b4d7f434bc329"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "77ed065a7aff5e0a13b9645db33d36916f925d9b5943abd9c84b4d7f434bc329"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "77ed065a7aff5e0a13b9645db33d36916f925d9b5943abd9c84b4d7f434bc329"
+    sha256 cellar: :any_skip_relocation, sonoma:        "77ed065a7aff5e0a13b9645db33d36916f925d9b5943abd9c84b4d7f434bc329"
+    sha256 cellar: :any_skip_relocation, ventura:       "77ed065a7aff5e0a13b9645db33d36916f925d9b5943abd9c84b4d7f434bc329"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "933a0892b69de4221ed745cd8ef0258d78b49c3e4bc63e4d920789600d4071bf"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "933a0892b69de4221ed745cd8ef0258d78b49c3e4bc63e4d920789600d4071bf"
   end
 
   uses_from_macos "ruby"

@@ -4,6 +4,7 @@ class Skopeo < Formula
   url "https://github.com/containers/skopeo/archive/refs/tags/v1.19.0.tar.gz"
   sha256 "043e9f568440accf1aafca122a25c4d21441f16de49475192ec4abeef7430358"
   license "Apache-2.0"
+  revision 1
 
   bottle do
     sha256 arm64_sequoia: "b92bf9e74a3f729b3ee4022b1b26f4ce9b459d8c1919a438b45ddf61ccee08f9"

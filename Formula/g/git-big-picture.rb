@@ -3,11 +3,10 @@ class GitBigPicture < Formula
 
   desc "Visualization tool for Git repositories"
   homepage "https://github.com/git-big-picture/git-big-picture"
-  url "https://github.com/git-big-picture/git-big-picture/archive/refs/tags/v1.3.0.tar.gz"
-  sha256 "cccbd3e35dfe6d0ce86d06079e80cf9219cb25f887c7a782e2808e740dc23c3a"
+  url "https://files.pythonhosted.org/packages/bb/df/15392f049576f9b3989ffe9d5ec12135f8d9618c089a6259c5a2c16556c9/git-big-picture-1.3.0.tar.gz"
+  sha256 "a36539d20059d24516bcb6bbf6bca0a6932a7a8ac480b4b5b68e9e863a2666a5"
   license "GPL-3.0-or-later"
-
-  no_autobump! because: :requires_manual_review
+  head "https://github.com/git-big-picture/git-big-picture.git", branch: "main"
 
   bottle do
     rebuild 3

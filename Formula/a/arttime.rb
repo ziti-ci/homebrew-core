@@ -7,14 +7,12 @@ class Arttime < Formula
   head "https://github.com/poetaman/arttime.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:  "43985c6cd993f1bd61ef7e392e923b2f9a296dda090156677671cc121cfe67da"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "a002dd260415fe51b3081fddd4abb65768af8bd3e0d88033a85401c87571abc2"
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "a002dd260415fe51b3081fddd4abb65768af8bd3e0d88033a85401c87571abc2"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "a002dd260415fe51b3081fddd4abb65768af8bd3e0d88033a85401c87571abc2"
-    sha256 cellar: :any_skip_relocation, sonoma:         "844c38065113abb83934b48df9931113ac1ed289245d94a6f329a4afdeb5690f"
-    sha256 cellar: :any_skip_relocation, ventura:        "844c38065113abb83934b48df9931113ac1ed289245d94a6f329a4afdeb5690f"
-    sha256 cellar: :any_skip_relocation, monterey:       "844c38065113abb83934b48df9931113ac1ed289245d94a6f329a4afdeb5690f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "970e94cdf754fdf21c8e6d05a7281eb9d8b04ac18d7f14282d3fc4356c6da193"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "0f1c1e43694a6d11b3b352e7da96257c31d87b3e9519916f4771e89838fa16d1"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "0f1c1e43694a6d11b3b352e7da96257c31d87b3e9519916f4771e89838fa16d1"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "0f1c1e43694a6d11b3b352e7da96257c31d87b3e9519916f4771e89838fa16d1"
+    sha256 cellar: :any_skip_relocation, sonoma:        "c02a8f8636056b9fe573246399be2a8763ae60277261f2b4dd1e8f087c33a68c"
+    sha256 cellar: :any_skip_relocation, ventura:       "c02a8f8636056b9fe573246399be2a8763ae60277261f2b4dd1e8f087c33a68c"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "0f1c1e43694a6d11b3b352e7da96257c31d87b3e9519916f4771e89838fa16d1"
   end
 
   depends_on "fzf"

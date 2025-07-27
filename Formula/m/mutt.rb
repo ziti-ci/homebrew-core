@@ -13,6 +13,7 @@ class Mutt < Formula
   url "https://bitbucket.org/mutt/mutt/downloads/mutt-2.2.14.tar.gz"
   sha256 "d162fb6d491e3af43d6f62f949b7e687bb0c7c2584da52c99a99354a25de14ef"
   license "GPL-2.0-or-later"
+  revision 1
 
   # Livecheck uses GitLab tags to determine current version.
   # They all have `-rel` suffix which needs to be omitted.

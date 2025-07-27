@@ -1,8 +1,8 @@
 class Foreman < Formula
   desc "Manage Procfile-based applications"
   homepage "https://ddollar.github.io/foreman/"
-  url "https://github.com/ddollar/foreman/archive/refs/tags/v0.89.1.tar.gz"
-  sha256 "49d058ce2ac5dc8a05478dcfefd98d25a6740d29314924cc481f185663f51974"
+  url "https://github.com/ddollar/foreman/archive/refs/tags/v0.90.0.tar.gz"
+  sha256 "d9428f9ab4c2e2b4f9e22a35d19237f5ad6789e2e71110cfe26f8715f4e3a58a"
   license "MIT"
 
   bottle do

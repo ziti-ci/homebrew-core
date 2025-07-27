@@ -1,8 +1,8 @@
 class Lunasvg < Formula
   desc "SVG rendering and manipulation library in C++"
   homepage "https://github.com/sammycage/lunasvg"
-  url "https://github.com/sammycage/lunasvg/archive/refs/tags/v3.3.0.tar.gz"
-  sha256 "06045afc30dbbdd87e219e0f5bc0526214a9d8059087ac67ce9df193a682c4b3"
+  url "https://github.com/sammycage/lunasvg/archive/refs/tags/v3.4.0.tar.gz"
+  sha256 "6ef03a7471fe4288def39e9fe55dfe2dbfb4041792d81a7e07e362f649cc7a0b"
   license "MIT"
 
   bottle do

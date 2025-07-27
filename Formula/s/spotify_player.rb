@@ -1,8 +1,8 @@
 class SpotifyPlayer < Formula
   desc "Command driven spotify player"
   homepage "https://github.com/aome510/spotify-player"
-  url "https://github.com/aome510/spotify-player/archive/refs/tags/v0.20.6.tar.gz"
-  sha256 "87c3529a5b711a9c79bb0bac21fb65d280eec943f836920e0c02e8d9d17c75dd"
+  url "https://github.com/aome510/spotify-player/archive/refs/tags/v0.20.7.tar.gz"
+  sha256 "8b4c7ec7855fb2af8862a1ca8818307f2befcb00c02e9e5da570b1a5b3b908c1"
   license "MIT"
   head "https://github.com/aome510/spotify-player.git", branch: "master"
 

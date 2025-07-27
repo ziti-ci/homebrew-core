@@ -1,9 +1,19 @@
 class Profanity < Formula
   desc "Console based XMPP client"
   homepage "https://profanity-im.github.io"
-  url "https://profanity-im.github.io/tarballs/profanity-0.15.0.tar.gz"
-  sha256 "4a9f578f750ec9a7c2a4412ba22e601811b92bba877c636631cc3ccc7ceac7fb"
   license "GPL-3.0-or-later"
+  revision 1
+
+  stable do
+    url "https://profanity-im.github.io/tarballs/profanity-0.15.0.tar.gz"
+    sha256 "4a9f578f750ec9a7c2a4412ba22e601811b92bba877c636631cc3ccc7ceac7fb"
+
+    # Fix for `gpgme` >= 2.0.0 compatibility
+    patch do
+      url "https://github.com/profanity-im/profanity/commit/606eaac31dfb97df16b0d2ba9466a3a67bec122a.patch?full_index=1"
+      sha256 "e850acc776819b654640db0a0cc6bfcc190936fc27b34b3e6675179d831cb7c7"
+    end
+  end
 
   bottle do
     sha256 arm64_sequoia: "a125f864203c3d6baa3e2498257ac7bae373dd91ac737a0a098d2e9f9d4b1ab5"

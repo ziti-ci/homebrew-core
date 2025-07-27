@@ -1,16 +1,14 @@
 class Vipsdisp < Formula
   desc "Viewer for large images"
   homepage "https://github.com/jcupitt/vipsdisp"
-  url "https://github.com/jcupitt/vipsdisp/releases/download/v4.0.0/vipsdisp-4.0.0.tar.xz"
-  sha256 "7bbb6740b13d0b211af2efab83d3a0d6e4646b15f57a038ac44ad67f446c5b64"
+  url "https://github.com/jcupitt/vipsdisp/releases/download/v4.1.0/vipsdisp-4.1.0.tar.xz"
+  sha256 "51a1105f27e495fdd8e55a8628c4f688f28f900475efc479c9a7202ba59f09c2"
   license "MIT"
 
   livecheck do
     url :stable
     strategy :github_releases
   end
-
-  no_autobump! because: :requires_manual_review
 
   bottle do
     sha256 cellar: :any, arm64_sequoia: "0f455d9ae47cdd745f618db40f4b80122781d5e2a3ee8ad07e545e268882c04a"
@@ -29,6 +27,7 @@ class Vipsdisp < Formula
   depends_on "cairo"
   depends_on "gdk-pixbuf"
   depends_on "glib"
+  depends_on "graphene"
   depends_on "gtk4"
   depends_on "hicolor-icon-theme"
   depends_on "vips"

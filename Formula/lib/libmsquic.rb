@@ -6,6 +6,11 @@ class Libmsquic < Formula
       revision: "4922536a9b0b5d1d5c14f907eb3bd0977201123d"
   license "MIT"
 
+  livecheck do
+    url :stable
+    strategy :github_latest
+  end
+
   bottle do
     sha256 cellar: :any,                 arm64_sequoia: "c47a15dea5086c543f5e151ebc0c1c7f81a35efdc92afad98b8831b44e693cbc"
     sha256 cellar: :any,                 arm64_sonoma:  "a015334cbb4a87a0cb7eb21f907dec2d437b179762b3cfa2849ae45945f19a52"

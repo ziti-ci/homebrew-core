@@ -11,6 +11,15 @@ class Apigeecli < Formula
     strategy :github_latest
   end
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "498a7ccc309d4d391e5ed215937bc461438c4ff94449eeb75a7ce726355c8028"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "498a7ccc309d4d391e5ed215937bc461438c4ff94449eeb75a7ce726355c8028"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "498a7ccc309d4d391e5ed215937bc461438c4ff94449eeb75a7ce726355c8028"
+    sha256 cellar: :any_skip_relocation, sonoma:        "6769094dfa947b204f4fca357ed7af5ad35d8b5ced4a4cfd181e8f36bbaf87f3"
+    sha256 cellar: :any_skip_relocation, ventura:       "6769094dfa947b204f4fca357ed7af5ad35d8b5ced4a4cfd181e8f36bbaf87f3"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "b4fad1d8ce752aa79e4c7433aa12f5c5a2e1a3b4e50c7af29a9d79d830ade158"
+  end
+
   depends_on "go" => :build
 
   def install

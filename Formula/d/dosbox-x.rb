@@ -67,7 +67,7 @@ class DosboxX < Formula
     ]
 
     system "./autogen.sh"
-    system "./configure", *args, *std_configure_args
+    system "./configure", *args, *std_configure_args.reject { |s| s["--disable-debug"] }
     system "make" # Needs to be called separately from `make install`.
     system "make", "install"
   end

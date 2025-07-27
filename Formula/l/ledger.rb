@@ -2,7 +2,7 @@ class Ledger < Formula
   desc "Command-line, double-entry accounting tool"
   homepage "https://ledger-cli.org/"
   license "BSD-3-Clause"
-  revision 8
+  revision 9
   head "https://github.com/ledger/ledger.git", branch: "master"
 
   stable do
@@ -40,6 +40,17 @@ class Ledger < Formula
       url "https://github.com/ledger/ledger/commit/5320c9f719a309ddacdbe77181cabeb351949013.patch?full_index=1"
       sha256 "9794113b28eabdcfc8b900eafc8dc2c0698409c0b3d856083ed5e38818289ba1"
     end
+
+    # CMakeLists.txt update for use of `CMAKE_CXX_STANDARD`
+    # It is set to 17 but we have to use 14 for compatibility issue with other sources
+    patch do
+      url "https://github.com/ledger/ledger/commit/8e64a1cf7009bbe7b89dc8bcb7abd00e39815b0b.patch?full_index=1"
+      sha256 "116cc2c4d716df516c2ad89241bc9fed6943013aacdfcd03757745202416bc72"
+    end
+    patch do
+      url "https://github.com/ledger/ledger/commit/19b0553dfbcd65c3c601b89e7020bff8013cb461.patch?full_index=1"
+      sha256 "9f70e40ca3eec216959a02e7f4ea626d265957443c2ec5d5219977ed2e525332"
+    end
   end
 
   livecheck do
@@ -64,6 +75,7 @@ class Ledger < Formula
   depends_on "boost"
   depends_on "gmp"
   depends_on "gpgme"
+  depends_on "gpgmepp"
   depends_on "mpfr"
   depends_on "python@3.13"
 
@@ -82,7 +94,6 @@ class Ledger < Formula
                                   "cmake_minimum_required(VERSION 3.5)"
     end
 
-    ENV.cxx11
     ENV.prepend_path "PATH", Formula["python@3.13"].opt_libexec/"bin"
 
     args = %W[
@@ -96,6 +107,7 @@ class Ledger < Formula
       -DBoost_NO_BOOST_CMAKE=ON
       -DPython_FIND_VERSION_MAJOR=3
       -DUSE_GPGME=1
+      -DCMAKE_CXX_STANDARD=14
     ] + std_cmake_args
 
     system "./acprep", "opt", "make", *args

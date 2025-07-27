@@ -3,8 +3,8 @@ class Wtfis < Formula
 
   desc "Passive hostname, domain, and IP lookup tool"
   homepage "https://github.com/pirxthepilot/wtfis"
-  url "https://files.pythonhosted.org/packages/73/3f/d415009b6ca935d1e5cb5b864fb5d11c052564e32cb109d2662557be2f37/wtfis-0.12.0.tar.gz"
-  sha256 "1aa26783db9cb05b6ee5e932c9bc4b302c82462452d9e90c3d1d7b2a353b5922"
+  url "https://files.pythonhosted.org/packages/52/ca/d0d14844dbb54444318843b8e346ba3b8aa3fc6f8d2f4fcd474e7d5f3291/wtfis-0.13.0.tar.gz"
+  sha256 "44169d937373e8f34d919c86c3ad71c1fc08b5e06a02a853f6fe5990aba99cff"
   license "MIT"
   head "https://github.com/pirxthepilot/wtfis.git", branch: "main"
 
@@ -98,8 +98,8 @@ class Wtfis < Formula
   end
 
   resource "rich" do
-    url "https://files.pythonhosted.org/packages/a1/53/830aa4c3066a8ab0ae9a9955976fb770fe9c6102117c8ec4ab3ea62d89e8/rich-14.0.0.tar.gz"
-    sha256 "82f1bc23a6a21ebca4ae0c45af9bdbc492ed20231dcb63f297d6d1021a9d5725"
+    url "https://files.pythonhosted.org/packages/fe/75/af448d8e52bf1d8fa6a9d089ca6c07ff4453d86c65c145d0a300bb073b9b/rich-14.1.0.tar.gz"
+    sha256 "e497a48b844b0320d45007cdebfeaeed8db2a4f4bcf49f15e455cfc4af11eaa8"
   end
 
   resource "shodan" do

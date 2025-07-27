@@ -5,6 +5,7 @@ class Fwknop < Formula
   mirror "https://github.com/mrash/fwknop/releases/download/2.6.11/fwknop-2.6.11.tar.gz"
   sha256 "bcb4e0e2eb5fcece5083d506da8471f68e33fb6b17d9379c71427a95f9ca1ec8"
   license "GPL-2.0-or-later"
+  revision 1
   head "https://github.com/mrash/fwknop.git", branch: "master"
 
   livecheck do

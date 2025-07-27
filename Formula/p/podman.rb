@@ -4,6 +4,7 @@ class Podman < Formula
   url "https://github.com/containers/podman/archive/refs/tags/v5.5.2.tar.gz"
   sha256 "a2dbd8280cd92d4741f32f5a99d385d7fc6f0dd36bc9cc90a7273767e26d43d9"
   license all_of: ["Apache-2.0", "GPL-3.0-or-later"]
+  revision 1
   head "https://github.com/containers/podman.git", branch: "main"
 
   # There can be a notable gap between when a version is tagged and a

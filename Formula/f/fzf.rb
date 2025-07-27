@@ -20,7 +20,16 @@ class Fzf < Formula
   uses_from_macos "ncurses"
 
   def install
-    system "go", "build", *std_go_args(ldflags: "-s -w -X main.version=#{version} -X main.revision=brew")
+    ldflags = %W[
+      -s -w
+      -X main.version=#{version}
+      -X main.revision=brew
+    ]
+
+    # FIXME: we shouldn't need this, but patchelf.rb does not seem to work well with the layout of Aarch64 ELF files
+    ldflags += ["-extld", ENV.cc] if OS.linux? && Hardware::CPU.arm?
+
+    system "go", "build", *std_go_args(ldflags:)
     man1.install "man/man1/fzf.1", "man/man1/fzf-tmux.1"
     bin.install "bin/fzf-tmux"
     bin.install "bin/fzf-preview.sh"

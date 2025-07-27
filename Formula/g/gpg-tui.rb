@@ -4,6 +4,7 @@ class GpgTui < Formula
   url "https://github.com/orhun/gpg-tui/archive/refs/tags/v0.11.1.tar.gz"
   sha256 "ecc232b42ff07888eb12a43daf5a956791a21efc85f6e71fbed9b9769ec50b50"
   license "MIT"
+  revision 1
 
   bottle do
     sha256 cellar: :any,                 arm64_sequoia: "b8b285a56c068c4613ddf7febc02f54f3f93e5b981e767d9e780e46c222da68f"

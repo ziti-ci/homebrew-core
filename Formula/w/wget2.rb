@@ -4,6 +4,7 @@ class Wget2 < Formula
   url "https://ftp.gnu.org/gnu/wget/wget2-2.2.0.tar.gz"
   sha256 "2b3b9c85b7fb26d33ca5f41f1f8daca71838d869a19b406063aa5c655294d357"
   license "GPL-3.0-or-later"
+  revision 1
 
   livecheck do
     url :stable

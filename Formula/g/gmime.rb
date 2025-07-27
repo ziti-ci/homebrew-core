@@ -4,6 +4,7 @@ class Gmime < Formula
   url "https://github.com/jstedfast/gmime/releases/download/3.2.15/gmime-3.2.15.tar.xz"
   sha256 "84cd2a481a27970ec39b5c95f72db026722904a2ccf3fdbd57b280cf2d02b5c4"
   license "LGPL-2.1-or-later"
+  revision 1
 
   bottle do
     sha256                               arm64_sequoia:  "458bcb6ae4fd091fd35b48f9917ff52d2f38254a480164416b682049ae9d083b"

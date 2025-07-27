@@ -12,6 +12,7 @@ class Endlessh < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura: "1285873a9b0adb281b223cf5882c8c6db728d166e1d164098a4a72d955f84b30"
     sha256 cellar: :any_skip_relocation, sonoma:        "1843db59ceda7ca7621e2e75aacc879646b3879470ed8e6490ed87d44f56e562"
     sha256 cellar: :any_skip_relocation, ventura:       "74d2b7f51ca9545accd50203e78fe3302241f4b0213b3db6bf84c9b1be198f8c"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "5138b259981ac0f9924e16a5e48a7338b9d5869e5455c5015074ec56f960e4a5"
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "8cb6ceb337489733e34cdaec8bc65c95f115b020b00a9c2e371d8537938c0552"
   end
 

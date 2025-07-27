@@ -4,6 +4,7 @@ class Envio < Formula
   url "https://github.com/envio-cli/envio/archive/refs/tags/v0.6.1.tar.gz"
   sha256 "24cd7c485226be7f7921a95ae4edaf3cb510c90a339c51e51423c3eb4deee6dc"
   license any_of: ["Apache-2.0", "MIT"]
+  revision 1
   head "https://github.com/envio-cli/envio.git", branch: "main"
 
   bottle do

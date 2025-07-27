@@ -1,8 +1,8 @@
 class Stormy < Formula
   desc "Minimal, customizable and neofetch-like weather CLI based on rainy"
   homepage "https://github.com/ashish0kumar/stormy"
-  url "https://github.com/ashish0kumar/stormy/archive/refs/tags/v0.3.2.tar.gz"
-  sha256 "c9eeb65dafcc34b884d4fc895ed16d748be31ba735db12b73288fd1a1a7cb62e"
+  url "https://github.com/ashish0kumar/stormy/archive/refs/tags/v0.3.3.tar.gz"
+  sha256 "b53d479643599c733090ebf54eebd582eb3fe5faf5148015770f0ab594dc6464"
   license "MIT"
   head "https://github.com/ashish0kumar/stormy.git", branch: "main"
 

@@ -1,11 +1,9 @@
 class Dexter < Formula
   desc "Automatic indexer for Postgres"
   homepage "https://github.com/ankane/dexter"
-  url "https://github.com/ankane/dexter/archive/refs/tags/v0.6.1.tar.gz"
-  sha256 "77b9d2b28689dfd3b2a16c94ef8e20bf16cd0bf4dcc62b6d350ee8257d0763db"
+  url "https://github.com/ankane/dexter/archive/refs/tags/v0.6.2.tar.gz"
+  sha256 "481f914ead1e7ad1c2a83df111d6ebfa8d23e48119c35e57fff6649bbb27379e"
   license "MIT"
-
-  no_autobump! because: :requires_manual_review
 
   bottle do
     sha256 cellar: :any,                 arm64_sequoia: "4b4ad039afe5f9b48429c2d50e4ca30224fd82c3dbfaa1a7843ca9dc2b5c2432"
@@ -27,8 +25,8 @@ class Dexter < Formula
   end
 
   resource "pg" do
-    url "https://rubygems.org/gems/pg-1.5.9.gem"
-    sha256 "761efbdf73b66516f0c26fcbe6515dc7500c3f0aa1a1b853feae245433c64fdc"
+    url "https://rubygems.org/gems/pg-1.6.0.gem"
+    sha256 "26ea1694e4ed2e387a8292373acbb62ff9696d691d3a1b8b76cf56eb1d9bd40b"
   end
 
   resource "pg_query" do

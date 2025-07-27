@@ -4,6 +4,7 @@ class BowerMail < Formula
   url "https://github.com/wangp/bower/archive/refs/tags/1.1.1.tar.gz"
   sha256 "4c041681332d355710aa2f2a935ea56fbb2ba8d614be81dee594c431a1d493d9"
   license "GPL-3.0-or-later"
+  revision 1
   head "https://github.com/wangp/bower.git", branch: "master"
 
   no_autobump! because: :requires_manual_review

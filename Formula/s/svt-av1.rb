@@ -1,8 +1,8 @@
 class SvtAv1 < Formula
   desc "AV1 encoder"
   homepage "https://gitlab.com/AOMediaCodec/SVT-AV1"
-  url "https://gitlab.com/AOMediaCodec/SVT-AV1/-/archive/v3.0.2/SVT-AV1-v3.0.2.tar.bz2"
-  sha256 "7548a380cd58a46998ab4f1a02901ef72c37a7c6317c930cde5df2e6349e437b"
+  url "https://gitlab.com/AOMediaCodec/SVT-AV1/-/archive/v3.1.0/SVT-AV1-v3.1.0.tar.bz2"
+  sha256 "8231b63ea6c50bae46a019908786ebfa2696e5743487270538f3c25fddfa215a"
   license "BSD-3-Clause"
   head "https://gitlab.com/AOMediaCodec/SVT-AV1.git", branch: "master"
 
@@ -19,42 +19,13 @@ class SvtAv1 < Formula
   depends_on "cmake" => :build
   depends_on "nasm" => :build
 
-  # Match the version of cpuinfo specified in https://gitlab.com/AOMediaCodec/SVT-AV1/-/blob/master/cmake/cpuinfo.cmake
-  resource "cpuinfo" do
-    url "https://github.com/1480c1/cpuinfo/archive/e649baaa95efeb61517c06cc783287d4942ffe0e.tar.gz"
-    sha256 "f89abf172b93d75a79a5456fa778a401ab2fc4ef84d538f5c4df7c6938591c6f"
-  end
-
   def install
     # Features are enabled based on compiler support, and then the appropriate
     # implementations are chosen at runtime.
     # See https://gitlab.com/AOMediaCodec/SVT-AV1/-/blob/master/Source/Lib/Codec/common_dsp_rtcd.c
     ENV.runtime_cpu_detection
 
-    (buildpath/"cpuinfo").install resource("cpuinfo")
-
-    cd "cpuinfo" do
-      args = %W[
-        -DCPUINFO_BUILD_TOOLS=OFF
-        -DCPUINFO_BUILD_UNIT_TESTS=OFF
-        -DCPUINFO_BUILD_MOCK_TESTS=OFF
-        -DCPUINFO_BUILD_BENCHMARKS=OFF
-        -DCMAKE_INSTALL_PREFIX=#{buildpath}/cpuinfo-install
-        -DCMAKE_POSITION_INDEPENDENT_CODE=ON
-      ] + std_cmake_args.reject { |arg| arg.start_with? "-DCMAKE_INSTALL_PREFIX=" }
-
-      system "cmake", "-S", ".", "-B", "cpuinfo-build", *args
-      system "cmake", "--build", "cpuinfo-build"
-      system "cmake", "--install", "cpuinfo-build"
-    end
-
-    args = %W[
-      -DCMAKE_INSTALL_RPATH=#{rpath}
-      -DUSE_CPUINFO=SYSTEM
-      -Dcpuinfo_DIR=#{buildpath/"cpuinfo-install/share/cpuinfo"}
-    ]
-
-    system "cmake", "-S", ".", "-B", "build", *args, *std_cmake_args
+    system "cmake", "-S", ".", "-B", "build", "-DCMAKE_INSTALL_RPATH=#{rpath}", *std_cmake_args
     system "cmake", "--build", "build"
     system "cmake", "--install", "build"
   end

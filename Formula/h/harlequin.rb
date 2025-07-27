@@ -11,14 +11,13 @@ class Harlequin < Formula
   no_autobump! because: :requires_manual_review
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any,                 arm64_sequoia: "01c5e9fe952509f9b96d0c4ba8c2ee281ff78468b8b2b592fdce56651668b4af"
-    sha256 cellar: :any,                 arm64_sonoma:  "b112a33bd6b243721fd6840ff708ade2b3d6d4e2243bbcf506afb0b9b8b2fd4c"
-    sha256 cellar: :any,                 arm64_ventura: "2ea06f29225b9e6b4704ce40745e7248e657f57f92a26c71d07a42e0a8498dcc"
-    sha256 cellar: :any,                 sonoma:        "dd8ad67c59e82c13cfcd47f52285510f58a6d4a5a672c00e36d0e7b52a965558"
-    sha256 cellar: :any,                 ventura:       "d17251ae7ccd8b439fee9752b0212f6cc8cb0d5bca60f1669c03c646ded3e6dd"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "5b4d97ceda03a65200fe247f823ab0a51df334fa4e7fa88afeebe96df5b08793"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "838bea24ca085fb4632d4c3dc626a2c111888eb08dd9174185cea4931bedb333"
+    sha256 cellar: :any,                 arm64_sequoia: "2f7e3c61da5c81a62731f891a510abfccc254fe528820ca084f93abeaadfc34d"
+    sha256 cellar: :any,                 arm64_sonoma:  "0afc3f95b075c49d580459b1c3fec8c7415da9c788acda94e3c670512594c038"
+    sha256 cellar: :any,                 arm64_ventura: "e6131391ceea6874c3e8134e73440fff9a0cdbe5c1db466849e5cb9e4d1173ab"
+    sha256 cellar: :any,                 sonoma:        "46b3302037b95e8f2779433078b0cc1a8463e1ca9cca4feb126f4be4acd9a201"
+    sha256 cellar: :any,                 ventura:       "7a371895dc1c0c52e8b8058196f1ed5848cf31e8e3335a2ce9f08c1666132661"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "3883647e606c055fb2cece85ea5ed8d9daf136e447c1c608bfda13d798b5a785"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "54cc03802b670a1c403427fd0923d0703c968abf907c467fab434227b5100fd2"
   end
 
   depends_on "cmake" => :build

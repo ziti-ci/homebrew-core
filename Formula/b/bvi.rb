@@ -1,11 +1,9 @@
 class Bvi < Formula
   desc "Vi-like binary file (hex) editor"
   homepage "https://bvi.sourceforge.net/"
-  url "https://downloads.sourceforge.net/project/bvi/bvi/1.4.2/bvi-1.4.2.src.tar.gz"
-  sha256 "4bba16c2b496963a9b939336c0abcc8d488664492080ae43a86da18cf4ce94f2"
+  url "https://downloads.sourceforge.net/project/bvi/bvi/1.5.0/bvi-1.5.0.src.tar.gz"
+  sha256 "6540716a1a3b2b9711635108da14b26baea488881d4a682121c0bddbba6b74cb"
   license "GPL-3.0-or-later"
-
-  no_autobump! because: :requires_manual_review
 
   bottle do
     sha256 arm64_sequoia:  "155c163fed69d7c9468c119e2714fbf9cf0ddaa1a6af01efb6932127ce08ec11"

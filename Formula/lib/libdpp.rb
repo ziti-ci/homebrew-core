@@ -1,8 +1,8 @@
 class Libdpp < Formula
   desc "C++ Discord API Bot Library"
   homepage "https://github.com/brainboxdotcc/DPP"
-  url "https://github.com/brainboxdotcc/DPP/releases/download/v10.1.2/DPP-10.1.2.tar.gz"
-  sha256 "587ef044775e6bdd560ec17afc302c1048ebb3454455116d7241431fbb16a823"
+  url "https://github.com/brainboxdotcc/DPP/archive/refs/tags/v10.1.3.tar.gz"
+  sha256 "a32d94dcd6b23430afff82918234e4e28e0616bd2ddf743c5ab2f1778c5a600b"
   license "Apache-2.0"
 
   bottle do

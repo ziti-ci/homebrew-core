@@ -1,8 +1,8 @@
 class Yices2 < Formula
   desc "Yices SMT Solver"
   homepage "https://yices.csl.sri.com/"
-  url "https://github.com/SRI-CSL/yices2/archive/refs/tags/Yices-2.6.5.tar.gz"
-  sha256 "46a93225c1e14ee105e573bb5aae69c8d75b5c65d71e4491fac98203cb0182f3"
+  url "https://github.com/SRI-CSL/yices2/archive/refs/tags/yices-2.7.0.tar.gz"
+  sha256 "584db72abf6643927b2c3ba98ff793f602216b452b8ff2f34a8851d35904804a"
   license "GPL-3.0-only"
   head "https://github.com/SRI-CSL/yices2.git", branch: "master"
 
@@ -47,6 +47,7 @@ class Yices2 < Formula
       ;; Print the model
       (get-model)
     EOF
-    assert_match "sat\n(= x 2)\n(= y (- 1))\n", shell_output("#{bin}/yices-smt2 #{testpath}/lra.smt2")
+    output = shell_output("#{bin}/yices-smt2 #{testpath}/lra.smt2")
+    assert_match "sat\n((define-fun x () Real 2.0)\n (define-fun y () Real (- 1.0)))\n", output
   end
 end

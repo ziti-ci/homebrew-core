@@ -1,8 +1,8 @@
 class Findomain < Formula
   desc "Cross-platform subdomain enumerator"
   homepage "https://github.com/Findomain/Findomain"
-  url "https://github.com/Findomain/Findomain/archive/refs/tags/9.0.4.tar.gz"
-  sha256 "98c142e2e6ed67726bdea7a1726a54fb6773a8d1ccaa262e008804432af29190"
+  url "https://github.com/Findomain/Findomain/archive/refs/tags/10.0.1.tar.gz"
+  sha256 "2562943c29a9b3ce1b76685d9e7de1ad5109f80a35c6941e7853b31fb92641fa"
   license "GPL-3.0-or-later"
 
   bottle do
@@ -20,12 +20,6 @@ class Findomain < Formula
   depends_on "pkgconf" => :build
   depends_on "rust" => :build
   depends_on "openssl@3"
-
-  # bump traitobject to build against rust 1.87
-  patch do
-    url "https://github.com/Findomain/Findomain/commit/1c246de8300ef6dee7096bad2d2a1a239549c7f0.patch?full_index=1"
-    sha256 "b200ac84d9542af1f7c8cfd6b462f01e2dc8c1468cadb0ec74a49703f2b42e31"
-  end
 
   def install
     # Ensure that the `openssl` crate picks up the intended library.

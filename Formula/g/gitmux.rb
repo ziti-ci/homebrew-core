@@ -11,6 +11,7 @@ class Gitmux < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura: "94802a69e31ec9c017fb332eef1427d91c17e87b657db245817a83f5362b3b21"
     sha256 cellar: :any_skip_relocation, sonoma:        "47f6304b35b33a7c5ffd896df4879fe25fba51b51b9701170f63b31d1f420bff"
     sha256 cellar: :any_skip_relocation, ventura:       "47f6304b35b33a7c5ffd896df4879fe25fba51b51b9701170f63b31d1f420bff"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "72dcb9a4cc65c6949ad3e2cb1d41ae0da46b6c3788e3e92b0efec8b4ea73e443"
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "40b685c802a8ccbb422f1e60541c12236b8be7c2c28f275247f2a41d4425e29f"
   end
 

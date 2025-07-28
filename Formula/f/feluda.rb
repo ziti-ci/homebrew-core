@@ -15,13 +15,13 @@ class Feluda < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_sequoia: "7e5d5ffe04a61b5a2be726c0d33955b4dd396ac079ac51c53989cf66bf158551"
-    sha256 cellar: :any,                 arm64_sonoma:  "2684a98b4166644cce073427df959de870322677951f169dc2c9177682d1df6f"
-    sha256 cellar: :any,                 arm64_ventura: "22c15356dc7fbb1d50a015b638d0cca1db7846fc5b1d1c38c521b9af82bb3b38"
-    sha256 cellar: :any,                 sonoma:        "bcedc4844a1b9de4cfecf625d055793aab33a80b4a9f627d31a2c71691e5a378"
-    sha256 cellar: :any,                 ventura:       "758820c3d717503668641fc5964c96df74b26abdb768915652a7b7eae28e2f27"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "94c6a7bc2d8ac6628b86135a34498611ce1f5db541dfdda687ce3c1c1e3f66a7"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "7d6dc544d9ad47de8fc92e360870a417ed62adb69bc228f3ac7b7c2c74e9f06e"
+    sha256 cellar: :any,                 arm64_sequoia: "beb7e39a620102aca4bbf4ff99649d16e0c497ea78cec50cb9478842013cf96d"
+    sha256 cellar: :any,                 arm64_sonoma:  "6f411b8e372d99f99189394594e21dfcf3081754d9b4c44637bf790ff21ee2db"
+    sha256 cellar: :any,                 arm64_ventura: "6472ec97eabe8e98a692086ef80b137c6eaae1757d99aea65e163f35d31e1eea"
+    sha256 cellar: :any,                 sonoma:        "e541e0c2a66cd3bfcca240d094f1e04595444822635f9039fd51d046bc08ffd7"
+    sha256 cellar: :any,                 ventura:       "c293a4b76f885d32545fe78e60a23bfd3be87b25d4da6f56c8591624c14bd752"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "de3655a3d0435ecbe5cbc8155c892f61b9b4f26ece47de895962e5863bbc0706"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "4900a3f719415074f59f05e99ff8bbc3de1e8b93bcb3e78978a1a86cd60fdf95"
   end
 
   depends_on "pkgconf" => :build

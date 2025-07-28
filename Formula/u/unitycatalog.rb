@@ -5,6 +5,15 @@ class Unitycatalog < Formula
   sha256 "fae708a22f1e38e19f754aca22925d66016a7efeaab680ce87c27496c75078d1"
   license "Apache-2.0"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "19b009e2d141df4fca169ea68b5c1d01938e9f65e7b8433472e72a2aec9abd80"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "19b009e2d141df4fca169ea68b5c1d01938e9f65e7b8433472e72a2aec9abd80"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "19b009e2d141df4fca169ea68b5c1d01938e9f65e7b8433472e72a2aec9abd80"
+    sha256 cellar: :any_skip_relocation, sonoma:        "19b009e2d141df4fca169ea68b5c1d01938e9f65e7b8433472e72a2aec9abd80"
+    sha256 cellar: :any_skip_relocation, ventura:       "19b009e2d141df4fca169ea68b5c1d01938e9f65e7b8433472e72a2aec9abd80"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "bb4fb9ab2d49654bf9a56b439a6ce891283e6360662251f77a6ff7b67c4d57a9"
+  end
+
   depends_on "sbt" => :build
   depends_on "openjdk@21"
 

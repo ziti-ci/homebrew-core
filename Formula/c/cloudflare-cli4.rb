@@ -9,13 +9,13 @@ class CloudflareCli4 < Formula
   head "https://github.com/cloudflare/python-cloudflare-cli4.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any,                 arm64_sequoia: "4e99d97a47fb49afe45a6fd735a925e194e343e21891d0bfd9cbf0fdf5ccb838"
-    sha256 cellar: :any,                 arm64_sonoma:  "969f4fd193ad16b357fe7735b8c7b57ee30f73fcb72e589b3ddb3cea49306638"
-    sha256 cellar: :any,                 arm64_ventura: "3c950067b3eb8e30490517c2a9748efc70268a684a8d06076afbf55510f0b1bf"
-    sha256 cellar: :any,                 sonoma:        "0f2cb4d70b64dd89b87a3e7f790832947469c4fb57499370bfbc7f2e74c1358a"
-    sha256 cellar: :any,                 ventura:       "f7e35e54ef1a37338e06ff732ac3bb2c210d81d55599d51d1c59a503ecc3cc19"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "715ebdabb650dcbb0bd8d3de3699df7b28ee21296263996a6616c7b892b300bf"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "850653460cd609ad8f95815c088bf75010007cc5339ca9d5bdc8e039deed9795"
+    sha256 cellar: :any,                 arm64_sequoia: "a4ea671519a015aa1461a55902277b9ffe90fb3cb135ec0f5b0c85d454319edb"
+    sha256 cellar: :any,                 arm64_sonoma:  "07a144a0eff0274b0b0d22c7df614c3118b0b7ae6b84fd2ee96837d70d446538"
+    sha256 cellar: :any,                 arm64_ventura: "448ecdbfa0f9c227df6645aaf4b857003fe96cf8e46d0fb57818704a4d99d631"
+    sha256 cellar: :any,                 sonoma:        "cc7bb5f7a61c6a33140bd91c71513b6e6e4eee349d251764566ccf360a23b83e"
+    sha256 cellar: :any,                 ventura:       "1a800d011cdc5aae6e81335e91cb870ba094169c0a4350fae600ac0a0c1a9853"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "fcb86705fe2897ed6d925c8e7e804c5fc927834d8cbb248fb7c20e20c693cd6c"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "17868324b74f3fe0e33ad3dbdf455694ff3a93927b25b1cf75dd7bd138ba74eb"
   end
 
   depends_on "libyaml"

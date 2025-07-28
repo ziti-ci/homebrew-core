@@ -34,6 +34,7 @@ class Pkl < Formula
 
     system "gradle", *args, job_name
     bin.install "pkl-cli/build/executable/pkl-#{OS.mac? ? "macos" : "linux"}-#{arch}" => "pkl"
+    generate_completions_from_executable(bin/"pkl", "shell-completion")
   end
 
   test do

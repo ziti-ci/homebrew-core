@@ -142,17 +142,17 @@ class Vineyard < Formula
     system "cmake", "-S", ".", "-B", "build", *std_cmake_args
     system "cmake", "--build", "build"
 
+    vineyard_sock = testpath/"vineyard.sock"
     # prepare vineyardd
     vineyardd_pid = spawn bin/"vineyardd", "--norpc",
                                            "--meta=local",
-                                           "--socket=#{testpath}/vineyard.sock"
+                                           "--socket=#{vineyard_sock}"
 
     # sleep to let vineyardd get its wits about it
-    sleep 10
-    sleep 10 if OS.mac? && Hardware::CPU.intel?
+    sleep 10 until vineyard_sock.exist? && vineyard_sock.socket?
 
     assert_equal("vineyard instance is: 0\n",
-                 shell_output("#{testpath}/build/vineyard-test #{testpath}/vineyard.sock"))
+                 shell_output("#{testpath}/build/vineyard-test #{vineyard_sock}"))
   ensure
     # clean up the vineyardd process before we leave
     Process.kill("HUP", vineyardd_pid)

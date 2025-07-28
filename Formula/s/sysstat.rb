@@ -7,8 +7,8 @@ class Sysstat < Formula
   head "https://github.com/sysstat/sysstat.git", branch: "master"
 
   bottle do
-    sha256 arm64_linux:  "2e0adedc7b2589ccd60c3746a1c332d065b5f6ec918aaabfefad447dae8942ac"
-    sha256 x86_64_linux: "9a16492c63de99d15d0122c052d8e659b5df18dcc35c07d5d6ddc10cb88bd42a"
+    sha256 arm64_linux:  "6f45fccdd8224cb2f832366a9a83cba933d89d61a086594f120485438361a88d"
+    sha256 x86_64_linux: "5a882f72e346c88bea61b53c2aeedf689e3fa0284f1b2bdea079bdec8cf653f7"
   end
 
   depends_on :linux

@@ -4,6 +4,7 @@ class FancyCat < Formula
   url "https://github.com/freref/fancy-cat/archive/refs/tags/v0.4.1.tar.gz"
   sha256 "d264dbaf05f8713a4c52ce0c74a8d5e900989ec815fac1bbfec7d7b385bc1dd5"
   license "AGPL-3.0-or-later"
+  revision 1
 
   bottle do
     sha256 cellar: :any,                 arm64_sequoia: "28be4cc3f727ed15ab555b774c78c2d4376f4de67cf694f05b5980c638b088d2"

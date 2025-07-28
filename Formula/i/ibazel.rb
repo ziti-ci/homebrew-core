@@ -7,12 +7,12 @@ class Ibazel < Formula
   head "https://github.com/bazelbuild/bazel-watcher.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "8bb04ac62d6273c93aeef58aef9e1fc1ce58c354fd84e3a5982d215b97e2a169"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "bcfcaaf9524723c3873c533105ed5c4a7e87c2b7265d7f5eee0fc0a3269b7790"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "741f21a4dd02aa73065f01b8d6c7b9415615aa57e3976a56efdf280163f6b22d"
-    sha256 cellar: :any_skip_relocation, sonoma:        "6e363da17828db7234a01550283d544d9ecc4cfd970c58829f8995b8b872c9c3"
-    sha256 cellar: :any_skip_relocation, ventura:       "670485681c2f15cd74ea520bfa50e4305442f8650a1ce9ce85163db556a1bb6d"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "23bd7d5d8f727dffbdb5d13ac16f92d7668c5b51b13e9e095d939642844a00c0"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "2bd659b68e396d690701a7236ab80722837c297d86520009ae92baaaad9f5c59"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "d2f230900503dc84cc0524cbb650f467084f33f8393c279a80352de8fbd36e8e"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "e5ffc6d9abf79713edeed24b73a0ad1cd395cafd930db17cfbc79786c2e95176"
+    sha256 cellar: :any_skip_relocation, sonoma:        "9111bbe3d3b9f9e2521090388d5e058c7e401747961f78d301fb3d265da843d0"
+    sha256 cellar: :any_skip_relocation, ventura:       "06f731b5a938688069911aa334a48a683bc925d9decf9dae939e6728c30b2146"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "2b73d975fecde2f8110fc86def4da524bd2b0ce8226e6386010f7db9b65d7b55"
   end
 
   depends_on "go" => [:build, :test]

@@ -1,8 +1,8 @@
 class Iproute2 < Formula
   desc "Linux routing utilities"
   homepage "https://wiki.linuxfoundation.org/networking/iproute2"
-  url "https://mirrors.edge.kernel.org/pub/linux/utils/net/iproute2/iproute2-6.15.0.tar.xz"
-  sha256 "8041854a882583ad5263466736c9c8c68c74b1a35754ab770d23343f947528fb"
+  url "https://mirrors.edge.kernel.org/pub/linux/utils/net/iproute2/iproute2-6.16.0.tar.xz"
+  sha256 "5900ccc15f9ac3bf7b7eae81deb5937123df35e99347a7f11a22818482f0a8d0"
   license "GPL-2.0-only"
   head "https://git.kernel.org/pub/scm/network/iproute2/iproute2.git", branch: "main"
 

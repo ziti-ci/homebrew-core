@@ -29,13 +29,13 @@ class WasiLibc < Formula
   no_autobump! because: :incompatible_version_format
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "a754b6e9a71c5f06a2489dea882a36265c186182134db12395124d96288b863b"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "a754b6e9a71c5f06a2489dea882a36265c186182134db12395124d96288b863b"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "a754b6e9a71c5f06a2489dea882a36265c186182134db12395124d96288b863b"
-    sha256 cellar: :any_skip_relocation, sonoma:        "a754b6e9a71c5f06a2489dea882a36265c186182134db12395124d96288b863b"
-    sha256 cellar: :any_skip_relocation, ventura:       "a754b6e9a71c5f06a2489dea882a36265c186182134db12395124d96288b863b"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "3fafccb8cd85eef822881f2ca25d3756a67b09f8176968056c3db83b31019ccf"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "3fafccb8cd85eef822881f2ca25d3756a67b09f8176968056c3db83b31019ccf"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "f3f302ae2ace8f8c4ec65ae1945ac3bf3ac191dcbb9bd591750ad0c99f5e707b"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "f3f302ae2ace8f8c4ec65ae1945ac3bf3ac191dcbb9bd591750ad0c99f5e707b"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "f3f302ae2ace8f8c4ec65ae1945ac3bf3ac191dcbb9bd591750ad0c99f5e707b"
+    sha256 cellar: :any_skip_relocation, sonoma:        "f3f302ae2ace8f8c4ec65ae1945ac3bf3ac191dcbb9bd591750ad0c99f5e707b"
+    sha256 cellar: :any_skip_relocation, ventura:       "f3f302ae2ace8f8c4ec65ae1945ac3bf3ac191dcbb9bd591750ad0c99f5e707b"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "cb897cf5452150158acd426d3bd4ada857e4e751d503aeff9e877bd216e25a57"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "cb897cf5452150158acd426d3bd4ada857e4e751d503aeff9e877bd216e25a57"
   end
 
   depends_on "llvm" => [:build, :test]

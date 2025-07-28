@@ -7,13 +7,13 @@ class Muon < Formula
   head "https://git.sr.ht/~lattis/muon", branch: "master"
 
   bottle do
-    sha256 cellar: :any, arm64_sequoia: "05431b97ae9d2bf393df1d39f1c2d8c97621a279ddb5c3ed2d77d5bc0828fa44"
-    sha256 cellar: :any, arm64_sonoma:  "629d8cb5edf13fad83e4a70630e11cd8469ba537a5c27f6aa424d96293018b27"
-    sha256 cellar: :any, arm64_ventura: "54d1a923f1982fd68822da1028df83fb0d7c7416897db97f487d4fc4908b1975"
-    sha256 cellar: :any, sonoma:        "74d720c90af24ce5e64621d2ca8667fedcd26a93c1a1302b1defdeec0afa01a8"
-    sha256 cellar: :any, ventura:       "95af6152a893fb24cbb4e98637e3f3c22c3de42286007ed4c88d20abf72ef74a"
-    sha256               arm64_linux:   "d1b978c1b67aea55a70b7abea468c1502869b69dcab423a99a0f839ad9fd45b9"
-    sha256               x86_64_linux:  "d1a74d5b71d07ab521b750a889c385849e1fe68fcf2eb00a5fe1e7b4a4526837"
+    sha256 cellar: :any, arm64_sequoia: "830db56ee195c9fc5541176c4ff9abaf02e255440879c089f66e91582c720915"
+    sha256 cellar: :any, arm64_sonoma:  "34a03c29eafa2fed72cd8f065b6339b562019e3a84a7d1455be2b4748c6cb57d"
+    sha256 cellar: :any, arm64_ventura: "fc1623b314de7b4d3e138d0bed0fe271ae2da205eb032bc5da2462bd6927d318"
+    sha256 cellar: :any, sonoma:        "7b84b3449e6fab539f2a740c055419775388cf9155711adf63c88f3fe140d0ad"
+    sha256 cellar: :any, ventura:       "525804c85af78bda0109ba747ec613d6089312f9bc4d157d2fd1b0dde86c9d71"
+    sha256               arm64_linux:   "23221d5b0b3fe07ec7510852ed6cd065326204d26b95bd2ac254d07507cdd07b"
+    sha256               x86_64_linux:  "333c9fadf69b0e182ccca75f781c8017e5a5dbc2f0bde8924f6e59b0b1a47ac5"
   end
 
   depends_on "meson" => :build

@@ -9,13 +9,14 @@ class Ranger < Formula
   head "https://github.com/ranger/ranger.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "97ec1aa9eb07127348df0acbbe74ee70530e3c42b2b34b318d275a5b939b108c"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "97ec1aa9eb07127348df0acbbe74ee70530e3c42b2b34b318d275a5b939b108c"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "97ec1aa9eb07127348df0acbbe74ee70530e3c42b2b34b318d275a5b939b108c"
-    sha256 cellar: :any_skip_relocation, sonoma:        "9805b7b6198dac4993bf90919395a37d7e26dea6c1a059c87a82f30c56b915af"
-    sha256 cellar: :any_skip_relocation, ventura:       "9805b7b6198dac4993bf90919395a37d7e26dea6c1a059c87a82f30c56b915af"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "25694caeb635a9e43026ce07350d8d0bbaef2ffa959e910dde876f97e32959c7"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "97ec1aa9eb07127348df0acbbe74ee70530e3c42b2b34b318d275a5b939b108c"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "4d937afc532b5425bffd43796600b48d0dcd454c48f32869ae4e1e44a75922d7"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "4d937afc532b5425bffd43796600b48d0dcd454c48f32869ae4e1e44a75922d7"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "4d937afc532b5425bffd43796600b48d0dcd454c48f32869ae4e1e44a75922d7"
+    sha256 cellar: :any_skip_relocation, sonoma:        "e2a970d351d3fb560bc75e5ced7cf8165e70ef7ba1fee4fa36c698b87a4f88e8"
+    sha256 cellar: :any_skip_relocation, ventura:       "e2a970d351d3fb560bc75e5ced7cf8165e70ef7ba1fee4fa36c698b87a4f88e8"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "4d937afc532b5425bffd43796600b48d0dcd454c48f32869ae4e1e44a75922d7"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "4d937afc532b5425bffd43796600b48d0dcd454c48f32869ae4e1e44a75922d7"
   end
 
   depends_on "python@3.13"

@@ -1,8 +1,8 @@
 class Feluda < Formula
   desc "Detect license usage restrictions in your project"
   homepage "https://github.com/anistark/feluda"
-  url "https://github.com/anistark/feluda/archive/refs/tags/1.8.5.tar.gz"
-  sha256 "9e86ac73fe7aaada534992523b4f0a2ea7bbe44d5e89d0eec9dd898f77101bb4"
+  url "https://github.com/anistark/feluda/archive/refs/tags/1.9.7.tar.gz"
+  sha256 "31afcdd2a822ebd74bca98fc9d0f3b63e3b36ffd6a7497040dac37a00e55aefc"
   license "MIT"
   head "https://github.com/anistark/feluda.git", branch: "main"
 
@@ -38,6 +38,6 @@ class Feluda < Formula
     assert_match version.to_s, shell_output("#{bin}/feluda --version")
 
     output = shell_output("#{bin}/feluda --path #{testpath}")
-    assert_match " All dependencies passed the license check!", output
+    assert_match "❌ No supported project files found.", output
   end
 end

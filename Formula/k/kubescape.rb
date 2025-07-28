@@ -1,8 +1,8 @@
 class Kubescape < Formula
   desc "Kubernetes testing according to Hardening Guidance by NSA and CISA"
   homepage "https://kubescape.io"
-  url "https://github.com/kubescape/kubescape/archive/refs/tags/v3.0.36.tar.gz"
-  sha256 "11c48d8788993d0aa9e745753e663ac6a92ba1c421094e82520965ea75545ef0"
+  url "https://github.com/kubescape/kubescape/archive/refs/tags/v3.0.37.tar.gz"
+  sha256 "9da14e426fa0c43255d23a4221a9b07c61bfa8a1f64962956be962ee5b67c790"
   license "Apache-2.0"
   head "https://github.com/kubescape/kubescape.git", branch: "master"
 

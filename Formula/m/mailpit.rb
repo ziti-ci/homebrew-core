@@ -6,12 +6,12 @@ class Mailpit < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "d7364eca6d437b390012da0a67501d9e1e3d9321e6329dcd2047694fbda2c0ed"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "922e9eeca4cd843ccccae54920dbb37d9a8314a6bed427a291e4fe46d4e14a72"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "041660a7f81d1c8e72c6501b4af1ee8ae367eeefdca4af369f651d7d1568a757"
-    sha256 cellar: :any_skip_relocation, sonoma:        "46bb70bdace6999a056448e18ab35d531652845be9e7719e9c7a4634aff24fe1"
-    sha256 cellar: :any_skip_relocation, ventura:       "48efd68bce434d541bd8d4e08477f2a420c2c6fe8332375a99b791b609eac909"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "90295f5d8d7208c5a4edaad9b7ae395a9f2d6242812ae17e184c2297bc645a21"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "03e918986c8d60cf1ba09329559ff538f3bb80e6ae9dca6c3496cd834ff3bfd5"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "e3042856cf7847cf6922ed644fa4b085184c51be07bd66023d533da9027c9505"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "7df01b392027aaf6b683e979ebe7f00588e520dcdb2ef90c0bd66c789182fedd"
+    sha256 cellar: :any_skip_relocation, sonoma:        "00bc1c3e8692453e9462e73bb2fdb6cfbaabd8e68667ed9169df1f6fb777c292"
+    sha256 cellar: :any_skip_relocation, ventura:       "8ac5cfb5d7c5953dbf677d19ff98fd6bb1c3775fa0452442b950988557daf09d"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "ad519c06339653edb04a88dc2925d014f3bff45b27947334777703859ff252e4"
   end
 
   depends_on "go" => :build

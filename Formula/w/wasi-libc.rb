@@ -9,24 +9,15 @@ class WasiLibc < Formula
   head "https://github.com/WebAssembly/wasi-libc.git", branch: "main"
 
   stable do
-    # Check the commit hash of `src/wasi-libc` corresponding to the latest tag at:
-    # https://github.com/WebAssembly/wasi-sdk
-    url "https://github.com/WebAssembly/wasi-libc/archive/3f7eb4c7d6ede4dde3c4bffa6ed14e8d656fe93f.tar.gz"
-    version "27"
-    sha256 "6bb86e09dc5ed43260e81176537d702568689cf4203b8beb1f505609c4139ca5"
+    url "https://github.com/WebAssembly/wasi-libc/archive/refs/tags/wasi-sdk-27.tar.gz"
+    sha256 "00850da0742670d5ad7fd556bf7bc5452512bac79f17ac76d5cfaa3b74526898"
 
     resource "WASI" do
-      # Check the commit hash of `tools/wasi-headers/WASI` from the commit hash above.
+      # Check the commit hash of `tools/wasi-headers/WASI` from the commit of the tag above.
       url "https://github.com/WebAssembly/WASI/archive/59cbe140561db52fc505555e859de884e0ee7f00.tar.gz"
       sha256 "fc78b28c2c06b64e0233544a65736fc5c515c5520365d6cf821408eadedaf367"
     end
   end
-
-  livecheck do
-    url "https://github.com/WebAssembly/wasi-sdk.git"
-  end
-
-  no_autobump! because: :incompatible_version_format
 
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_sequoia: "f3f302ae2ace8f8c4ec65ae1945ac3bf3ac191dcbb9bd591750ad0c99f5e707b"

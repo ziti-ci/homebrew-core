@@ -1,8 +1,8 @@
 class Ipopt < Formula
   desc "Interior point optimizer"
   homepage "https://coin-or.github.io/Ipopt/"
-  url "https://github.com/coin-or/Ipopt/archive/refs/tags/releases/3.14.17.tar.gz"
-  sha256 "17ab8e9a6059ab11172c184e5947e7a7dda9fed0764764779c27e5b8e46f3d75"
+  url "https://github.com/coin-or/Ipopt/archive/refs/tags/releases/3.14.18.tar.gz"
+  sha256 "a3e94b409871f84487c9f452e85d512848f536a2306bf7c02a3e1c691d77ac6b"
   license "EPL-2.0"
   head "https://github.com/coin-or/Ipopt.git", branch: "stable/3.14"
 
@@ -40,16 +40,6 @@ class Ipopt < Formula
         sha256 "13125be766a22aec395166bf015973f5e4d82cd3329c87895646f0aefda9e78e"
       end
     end
-  end
-
-  resource "test" do
-    url "https://github.com/coin-or/Ipopt/archive/refs/tags/releases/3.14.17.tar.gz"
-    sha256 "17ab8e9a6059ab11172c184e5947e7a7dda9fed0764764779c27e5b8e46f3d75"
-  end
-
-  resource "miniampl" do
-    url "https://github.com/dpo/miniampl/archive/refs/tags/v1.0.tar.gz"
-    sha256 "b836dbf1208426f4bd93d6d79d632c6f5619054279ac33453825e036a915c675"
   end
 
   def install
@@ -93,6 +83,16 @@ class Ipopt < Formula
   end
 
   test do
+    resource "test" do
+      url "https://github.com/coin-or/Ipopt/archive/refs/tags/releases/3.14.18.tar.gz"
+      sha256 "a3e94b409871f84487c9f452e85d512848f536a2306bf7c02a3e1c691d77ac6b"
+    end
+
+    resource "miniampl" do
+      url "https://github.com/dpo/miniampl/archive/refs/tags/v1.0.tar.gz"
+      sha256 "b836dbf1208426f4bd93d6d79d632c6f5619054279ac33453825e036a915c675"
+    end
+
     testpath.install resource("test")
     pkgconf_flags = shell_output("pkgconf --cflags --libs ipopt").chomp.split
     system ENV.cxx, "examples/hs071_cpp/hs071_main.cpp", "examples/hs071_cpp/hs071_nlp.cpp", *pkgconf_flags

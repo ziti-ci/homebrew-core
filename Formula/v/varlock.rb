@@ -1,0 +1,32 @@
+class Varlock < Formula
+  desc "Add declarative schema to .env files using @env-spec decorator comments"
+  homepage "https://varlock.dev"
+  url "https://registry.npmjs.org/varlock/-/varlock-0.0.6.tgz"
+  sha256 "ada6b2a938351f4f6b1ffeec7a1b4a97b3f9a35c586e44e7dfa7fec94fc47e36"
+  license "MIT"
+
+  depends_on "node"
+
+  def install
+    system "npm", "install", *std_npm_args
+    bin.install_symlink Dir["#{libexec}/bin/*"]
+  end
+
+  test do
+    assert_match version.to_s, shell_output("#{bin}/varlock --version")
+
+    (testpath/".env.schema").write <<~TEXT
+      # This is the header, and may contain root decorators
+      # @envFlag=APP_ENV
+      # @defaultSensitive=false @defaultRequired=false
+      # @generateTypes(lang=ts, path=env.d.ts)
+      # ---
+
+      # This is a config item comment block and may contain decorators which affect only the item
+      # @required @type=enum(dev, test, staging, prod)
+      APP_ENV=dev
+    TEXT
+
+    assert_match "dev", shell_output("#{bin}/varlock load 2>&1")
+  end
+end

@@ -9,8 +9,6 @@ class Iconsur < Formula
   sha256 "d732df6bbcaf1418c6f46f9148002cbc1243814692c1c0e5c0cebfcff001c4a1"
   license "MIT"
 
-  no_autobump! because: :requires_manual_review
-
   bottle do
     rebuild 3
     sha256 cellar: :any_skip_relocation, arm64_sequoia: "ba4be0ff656530a2a787c34d2b8c9502a0bb6448dd3d76198ff9d9a295769303"
@@ -28,21 +26,18 @@ class Iconsur < Formula
   # this causes issues if a user has Homebrew Python installed (EXTERNALLY-MANAGED).
   # We instead prepare a virtualenv with all missing packages.
   on_monterey :or_newer do
+    depends_on "llvm" => :build if DevelopmentTools.clang_build_version <= 1699
     depends_on "python@3.13"
   end
 
   resource "pyobjc-core" do
-    url "https://files.pythonhosted.org/packages/b7/40/a38d78627bd882d86c447db5a195ff307001ae02c1892962c656f2fd6b83/pyobjc_core-10.3.1.tar.gz"
-    sha256 "b204a80ccc070f9ab3f8af423a3a25a6fd787e228508d00c4c30f8ac538ba720"
+    url "https://files.pythonhosted.org/packages/e8/e9/0b85c81e2b441267bca707b5d89f56c2f02578ef8f3eafddf0e0c0b8848c/pyobjc_core-11.1.tar.gz"
+    sha256 "b63d4d90c5df7e762f34739b39cc55bc63dbcf9fb2fb3f2671e528488c7a87fe"
   end
 
   resource "pyobjc-framework-cocoa" do
-    url "https://files.pythonhosted.org/packages/a7/6c/b62e31e6e00f24e70b62f680e35a0d663ba14ff7601ae591b5d20e251161/pyobjc_framework_cocoa-10.3.1.tar.gz"
-    sha256 "1cf20714daaa986b488fb62d69713049f635c9d41a60c8da97d835710445281a"
-
-    # Backport commit to avoid Xcode.app dependency. Remove in the next release
-    # https://github.com/ronaldoussoren/pyobjc/commit/864a21829c578f6479ac6401d191fb759215175e
-    patch :DATA
+    url "https://files.pythonhosted.org/packages/4b/c5/7a866d24bc026f79239b74d05e2cf3088b03263da66d53d1b4cf5207f5ae/pyobjc_framework_cocoa-11.1.tar.gz"
+    sha256 "87df76b9b73e7ca699a828ff112564b59251bb9bbe72e610e670a4dc9940d038"
   end
 
   def install
@@ -51,6 +46,8 @@ class Iconsur < Formula
     if MacOS.version >= :monterey
       # Help `pyobjc-framework-cocoa` pick correct SDK after removing -isysroot from Python formula
       ENV.append_to_cflags "-isysroot #{MacOS.sdk_path}"
+      # pyobjc-core uses "-fdisable-block-signature-string" introduced in clang 17
+      ENV.llvm_clang if DevelopmentTools.clang_build_version <= 1699
 
       venv = virtualenv_create(libexec/"venv", "python3.13")
       venv.pip_install resources
@@ -68,22 +65,3 @@ class Iconsur < Formula
     system bin/"iconsur", "unset", testpath/"Test.app"
   end
 end
-
-__END__
---- a/pyobjc_setup.py
-+++ b/pyobjc_setup.py
-@@ -510,15 +510,6 @@ def Extension(*args, **kwds):
-             % (tuple(map(int, os_level.split(".")[:2])))
-         )
- 
--    # XCode 15 has a bug w.r.t. weak linking for older macOS versions,
--    # fall back to older linker when using that compiler.
--    # XXX: This should be in _fixup_compiler but doesn't work there...
--    lines = subprocess.check_output(["xcodebuild", "-version"], text=True).splitlines()
--    if lines[0].startswith("Xcode"):
--        xcode_vers = int(lines[0].split()[-1].split(".")[0])
--        if xcode_vers >= 15:
--            ldflags.append("-Wl,-ld_classic")
--
-     if os_level == "10.4":
-         cflags.append("-DNO_OBJC2_RUNTIME")

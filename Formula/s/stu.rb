@@ -12,6 +12,7 @@ class Stu < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura: "c54544ed4d9ebc82bf9107b9c6d6cb561a3abaf994cdfa28ea506439bdb14ac2"
     sha256 cellar: :any_skip_relocation, sonoma:        "8c4bc78930d12cdc0e0ea6f22a4ad1dc09cac0516cf1adf4fda2907aa0b6136c"
     sha256 cellar: :any_skip_relocation, ventura:       "f9e2a0932304f3e304e1940c7635a47070da2521c594e533cfb098282e5d56a9"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "08855c2c1c75850b31a195091d2c604f2631b615c1e090f609b2d7e9b051406a"
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "c85289acaaffefc89cb0fb2c5f2f7149a191fd99decc6cf92f47bdf39788d3ae"
   end
 

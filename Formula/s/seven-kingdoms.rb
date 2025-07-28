@@ -1,16 +1,14 @@
 class SevenKingdoms < Formula
   desc "Real-time strategy game developed by Trevor Chan of Enlight Software"
   homepage "https://7kfans.com"
-  url "https://downloads.sourceforge.net/project/skfans/7KAA%202.15.6/7kaa-2.15.6.tar.gz"
-  sha256 "2c79b98dc04d79e87df7f78bcb69c1668ce72b22df0384f84b87bc550a654095"
+  url "https://downloads.sourceforge.net/project/skfans/7KAA%202.15.7/7kaa-2.15.7.tar.gz"
+  sha256 "fb85ac682f86edd8ccf14667d652413ba222cd0f45b80b2a00c49a0d69dcfe19"
   license "GPL-2.0-only"
 
   livecheck do
     url :stable
     regex(%r{url=.*?/7kaa[._-]v?(\d+(?:\.\d+)+)\.t}i)
   end
-
-  no_autobump! because: :requires_manual_review
 
   bottle do
     rebuild 1

@@ -1,8 +1,8 @@
 class FlowCli < Formula
   desc "Command-line interface that provides utilities for building Flow applications"
   homepage "https://onflow.org"
-  url "https://github.com/onflow/flow-cli/archive/refs/tags/v2.2.19.tar.gz"
-  sha256 "3823fadaf15b74bbbb586f8898da6526a4b9abbbe911eaa032f268d8a84b0b82"
+  url "https://github.com/onflow/flow-cli/archive/refs/tags/v2.3.1.tar.gz"
+  sha256 "23c36f5051c4acf90ff2d0f2e33945e267c76e2c4618fa9ee9a44c1779eaf4d7"
   license "Apache-2.0"
   head "https://github.com/onflow/flow-cli.git", branch: "master"
 
@@ -10,8 +10,6 @@ class FlowCli < Formula
     url :stable
     strategy :github_latest
   end
-
-  no_autobump! because: :requires_manual_review
 
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_sequoia: "68b78bc5c7204d17b7821069505d77638c6bb72a21f528396cd08f2823e1b977"

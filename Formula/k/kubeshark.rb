@@ -1,8 +1,8 @@
 class Kubeshark < Formula
   desc "API Traffic Analyzer providing real-time visibility into Kubernetes network"
   homepage "https://www.kubeshark.co/"
-  url "https://github.com/kubeshark/kubeshark/archive/refs/tags/v52.7.8.tar.gz"
-  sha256 "02d518b9d0033862e64f1d7436fcc287970ba2a072a815b44c8191bfc1329d19"
+  url "https://github.com/kubeshark/kubeshark/archive/refs/tags/v52.8.0.tar.gz"
+  sha256 "82de96b7815befc3a0ae329b44149072c3c000a21f2d89df9410ff0d3266db01"
   license "Apache-2.0"
   head "https://github.com/kubeshark/kubeshark.git", branch: "master"
 

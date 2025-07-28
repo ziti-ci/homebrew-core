@@ -1,8 +1,10 @@
 class Dnsdist < Formula
+  include Language::Python::Virtualenv
+
   desc "Highly DNS-, DoS- and abuse-aware loadbalancer"
   homepage "https://www.dnsdist.org/"
-  url "https://downloads.powerdns.com/releases/dnsdist-1.9.10.tar.bz2"
-  sha256 "027ddbdee695c5a59728057bfc41c5b1a691fa1c7a5e89278b09f355325fbed6"
+  url "https://downloads.powerdns.com/releases/dnsdist-2.0.0.tar.xz"
+  sha256 "da30742f51aac8be7e116677cb07bc49fbea979fc5443e7e1fa8fa7bd0a63fe5"
   license "GPL-2.0-only"
 
   livecheck do
@@ -21,7 +23,9 @@ class Dnsdist < Formula
   end
 
   depends_on "boost" => :build
+  depends_on "libyaml" => :build # for PyYaml
   depends_on "pkgconf" => :build
+  depends_on "python@3.13" => :build
   depends_on "abseil"
   depends_on "fstrm"
   depends_on "libnghttp2"
@@ -33,7 +37,16 @@ class Dnsdist < Formula
 
   uses_from_macos "libedit"
 
+  resource "PyYaml" do
+    url "https://files.pythonhosted.org/packages/54/ed/79a089b6be93607fa5cdaedf301d7dfb23af5f25c398d5ead2525b063e17/pyyaml-6.0.2.tar.gz"
+    sha256 "d584d9ec91ad65861cc08d42e834324ef890a082e591037abe114850ff7bbc3e"
+  end
+
   def install
+    venv = virtualenv_create(buildpath/"bootstrap", "python3")
+    venv.pip_install resources
+    ENV.prepend_path "PATH", venv.root/"bin"
+
     system "./configure", "--disable-silent-rules",
                           "--without-net-snmp",
                           "--enable-dns-over-tls",

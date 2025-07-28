@@ -11,9 +11,9 @@ class WasiLibc < Formula
   stable do
     # Check the commit hash of `src/wasi-libc` corresponding to the latest tag at:
     # https://github.com/WebAssembly/wasi-sdk
-    url "https://github.com/WebAssembly/wasi-libc/archive/50ae11904df674fecaa311537967fe138c21fcc7.tar.gz"
-    version "26"
-    sha256 "d5550b25c90ddbede393957849562bdcbc79e9d58ab0ba0bd0763cec965c960a"
+    url "https://github.com/WebAssembly/wasi-libc/archive/3f7eb4c7d6ede4dde3c4bffa6ed14e8d656fe93f.tar.gz"
+    version "27"
+    sha256 "6bb86e09dc5ed43260e81176537d702568689cf4203b8beb1f505609c4139ca5"
 
     resource "WASI" do
       # Check the commit hash of `tools/wasi-headers/WASI` from the commit hash above.

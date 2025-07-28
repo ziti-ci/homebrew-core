@@ -1,10 +1,9 @@
 class Muon < Formula
   desc "Meson-compatible build system"
   homepage "https://muon.build"
-  url "https://git.sr.ht/~lattis/muon/archive/0.4.0.tar.gz"
-  sha256 "c2ce8302e886b2d3534ec38896a824dc83f43698d085d57bb19a751611d94e86"
+  url "https://git.sr.ht/~lattis/muon/archive/0.5.0.tar.gz"
+  sha256 "565c1b6e1e58f7e90d8813fda0e2102df69fb493ddab4cf6a84ce3647466bee5"
   license "GPL-3.0-only"
-  revision 2
   head "https://git.sr.ht/~lattis/muon", branch: "master"
 
   bottle do
@@ -18,6 +17,7 @@ class Muon < Formula
   end
 
   depends_on "meson" => :build
+  depends_on "scdoc" => :build
   depends_on "libarchive"
   depends_on "ninja"
   depends_on "pkgconf"
@@ -26,7 +26,9 @@ class Muon < Formula
 
   def install
     args = %w[
-      -Ddocs=disabled
+      -Dman-pages=enabled
+      -Dmeson-docs=disabled
+      -Dmeson-tests=disabled
       -Dlibarchive=enabled
       -Dlibcurl=enabled
       -Dlibpkgconf=enabled

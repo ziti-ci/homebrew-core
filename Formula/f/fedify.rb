@@ -1,8 +1,8 @@
 class Fedify < Formula
   desc "CLI toolchain for Fedify"
   homepage "https://fedify.dev/cli"
-  url "https://github.com/fedify-dev/fedify/archive/refs/tags/1.7.6.tar.gz"
-  sha256 "ae2a009b509cd589b1188b2bc09ad96bc20e028f0608ca8fa3dd510cb4abf094"
+  url "https://github.com/fedify-dev/fedify/archive/refs/tags/1.7.7.tar.gz"
+  sha256 "927b797cacdadd67a470a5ed4bef8371ef06dcdf0cb7e56e80f4063a4dcfeb8c"
   license "MIT"
   head "https://github.com/fedify-dev/fedify.git", branch: "main"
 
@@ -23,7 +23,7 @@ class Fedify < Formula
 
   def install
     # upstream bug report, https://github.com/fedify-dev/fedify/issues/303
-    odie "Remove `--no-check` workarounds" if build.stable? && version > "1.7.6"
+    odie "Remove `--no-check` workarounds" if build.stable? && version > "1.7.7"
 
     system "deno", "task", "codegen"
     system "deno", "compile", "--allow-all", "--no-check", "--output=#{bin/"fedify"}", "cli/mod.ts"

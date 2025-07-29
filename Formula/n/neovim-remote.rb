@@ -59,7 +59,7 @@ class NeovimRemote < Formula
       Formula["neovim"].opt_bin/"nvim", "--headless", "-i", "NONE", "-u", "NONE", "--listen", socket, file,
       [:out, :err] => "/dev/null"
     )
-    sleep 5
+    sleep 1 until socket.exist? && socket.socket?
 
     str = "Hello from neovim-remote!"
     system bin/"nvr", "--servername", socket, "--remote-send", "i#{str}<ESC>:write<CR>"

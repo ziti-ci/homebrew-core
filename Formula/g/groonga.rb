@@ -1,8 +1,8 @@
 class Groonga < Formula
   desc "Fulltext search engine and column store"
   homepage "https://groonga.org/"
-  url "https://github.com/groonga/groonga/releases/download/v15.1.3/groonga-15.1.3.tar.gz"
-  sha256 "2fc5078d80507fd8800ef22ced035903ff35166558ffe802c12ef77dfeb67587"
+  url "https://github.com/groonga/groonga/releases/download/v15.1.4/groonga-15.1.4.tar.gz"
+  sha256 "c39afb1e24d0d5864d7634e8dec0e5d2cfbecf43379805ed3a3656c6b3216a19"
   license "LGPL-2.1-or-later"
 
   livecheck do
@@ -27,6 +27,7 @@ class Groonga < Formula
     depends_on "libtool" => :build
   end
 
+  depends_on "cmake" => :build
   depends_on "pkgconf" => :build
   depends_on "mecab"
   depends_on "mecab-ipadic"
@@ -45,8 +46,8 @@ class Groonga < Formula
   link_overwrite "lib/pkgconfig/groonga-normalizer-mysql.pc"
 
   resource "groonga-normalizer-mysql" do
-    url "https://packages.groonga.org/source/groonga-normalizer-mysql/groonga-normalizer-mysql-1.2.1.tar.gz"
-    sha256 "c8d65bfaf45ea56326e4fec24a1e3818fef9652b2ab3a2ad9b528b7a1a00c0cc"
+    url "https://github.com/groonga/groonga-normalizer-mysql/releases/download/v1.2.6/groonga-normalizer-mysql-1.2.6.tar.gz"
+    sha256 "f85b49d24f4f4559cb1c0479dcb945a6fa0571390f40aeff38bff8e8f5e84157"
   end
 
   def install
@@ -70,9 +71,9 @@ class Groonga < Formula
     resource("groonga-normalizer-mysql").stage do
       ENV.prepend_path "PATH", bin
       ENV.prepend_path "PKG_CONFIG_PATH", lib/"pkgconfig"
-      system "./configure", "--prefix=#{prefix}"
-      system "make"
-      system "make", "install"
+      system "cmake", "-S", ".", "-B", "_build", *std_cmake_args
+      system "cmake", "--build", "_build"
+      system "cmake", "--install", "_build"
     end
   end
 

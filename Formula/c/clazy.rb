@@ -23,7 +23,7 @@ class Clazy < Formula
   depends_on "cmake" => [:build, :test]
   depends_on "qt" => :test
   depends_on "coreutils"
-  depends_on "llvm@19" # LLVM 20 issue: https://invent.kde.org/sdk/clazy/-/issues/27
+  depends_on "llvm"
 
   uses_from_macos "libxml2"
   uses_from_macos "ncurses"

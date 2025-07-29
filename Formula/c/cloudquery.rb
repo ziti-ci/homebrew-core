@@ -1,8 +1,8 @@
 class Cloudquery < Formula
   desc "Data movement tool to sync data from any source to any destination"
   homepage "https://www.cloudquery.io"
-  url "https://github.com/cloudquery/cloudquery/archive/refs/tags/cli-v6.25.2.tar.gz"
-  sha256 "5d412fff3902f88ea9a22fa82a93ef7e27411afa52cba066b2df2fada4a34958"
+  url "https://github.com/cloudquery/cloudquery/archive/refs/tags/cli-v6.26.0.tar.gz"
+  sha256 "c1000f4814b7a7727fa4b76e7c69186f11f94703283e9d16c1c3a4befa649c72"
   license "MPL-2.0"
   head "https://github.com/cloudquery/cloudquery.git", branch: "main"
 

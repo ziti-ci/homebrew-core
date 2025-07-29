@@ -12,13 +12,13 @@ class OathToolkit < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_sequoia: "48cff9d9c17d7a8955db7df8ed9df1b542b1860f45a85ac321534faf1ba9f48b"
-    sha256 cellar: :any, arm64_sonoma:  "24dcc5b994f410171e1eaf2f45b032ddec6dd2a41daba5228ca5b247327a5d32"
-    sha256 cellar: :any, arm64_ventura: "68298fee2815c22a314f1b121b2ac624cbc3b160831c80a4727f625ac4e98450"
-    sha256               sonoma:        "8238e0cbb73ddbeaf854e2d72ebc780a6770960011c4170e33693c33e5d87272"
-    sha256               ventura:       "9720311caa80a8b5ca3968337a05e788c051738ac3626c4e879e72f860728963"
-    sha256               arm64_linux:   "90be7b01eca8aed744b3db5c82a49be6f2e3cfeb666c8f7c9436855c2044d928"
-    sha256               x86_64_linux:  "c161af7b8bd8f281efc7d65c226d812283125c0d7cd3b9ce272c123a7ae5749a"
+    sha256 cellar: :any, arm64_sequoia: "a194b2db6ed6b3566e16a7ae5fbe0493f6e6450676468f774910fe30d83fa199"
+    sha256 cellar: :any, arm64_sonoma:  "cf4057a1672ecedade4214940e6fe786b08d403798135dde3c78926c0b1758d2"
+    sha256 cellar: :any, arm64_ventura: "7a8fc9a02a185f4adff751b49551c555b104cd1733754b21ee13255b7df1e1f8"
+    sha256               sonoma:        "8fa9c96c1fd5491d8316653a396476ebe4a3a03f2f654ae3d9de9e84c2f03d8e"
+    sha256               ventura:       "45d3b881643fe9aae507ff2b79135bd8fced496f75c8184a4c8a2b515c3278cb"
+    sha256               arm64_linux:   "976d358c400c6ca225db031e9c1d4934d9bf8d84b42dc23caec116dcab283bf1"
+    sha256               x86_64_linux:  "64d5b405189368bb048ad03474b44fac7fd76853996906629ffb00fc5b4f11ac"
   end
 
   head do

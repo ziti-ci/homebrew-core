@@ -23,16 +23,9 @@ class Cfssl < Formula
   def install
     ldflags = "-s -w -X github.com/cloudflare/cfssl/cli/version.version=#{version}"
 
-    system "go", "build", *std_go_args(ldflags:, output: bin/"cfssl"), "./cmd/cfssl"
-    system "go", "build", *std_go_args(ldflags:, output: bin/"cfssljson"), "./cmd/cfssljson"
-    system "go", "build", *std_go_args(ldflags: "-s -w", output: bin/"mkbundle"), "./cmd/mkbundle"
-  end
-
-  def caveats
-    <<~EOS
-      `mkbundle` has been installed as `cfsslmkbundle` to avoid conflict
-      with Mono and other tools that ship the same executable.
-    EOS
+    (buildpath/"cmd").each_child(false) do |cmd|
+      system "go", "build", *std_go_args(ldflags:, output: bin/cmd), "./cmd/#{cmd}"
+    end
   end
 
   test do

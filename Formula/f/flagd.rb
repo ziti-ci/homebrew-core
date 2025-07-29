@@ -2,8 +2,8 @@ class Flagd < Formula
   desc "Feature flag daemon with a Unix philosophy"
   homepage "https://github.com/open-feature/flagd"
   url "https://github.com/open-feature/flagd.git",
-      tag:      "flagd/v0.12.8",
-      revision: "c0a2940aef33f8558aa6ea4941ded74f0a6f6e83"
+      tag:      "flagd/v0.12.9",
+      revision: "1ee636aa039ad862f055831bd2ab42216fe30865"
   license "Apache-2.0"
   head "https://github.com/open-feature/flagd.git", branch: "main"
 

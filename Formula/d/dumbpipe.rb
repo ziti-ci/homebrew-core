@@ -11,6 +11,7 @@ class Dumbpipe < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura: "ac0bf4187356dc7f6b7329228bc7b7905e91cef1ca51546bb24865181571650b"
     sha256 cellar: :any_skip_relocation, sonoma:        "2e6efe5d35e2f1749d1a86188c81c77c2b8346d346919d799aec9bd0cb40daab"
     sha256 cellar: :any_skip_relocation, ventura:       "5f21f5e0c0b4ee28ea12d736bc8162992ddf2eeadd8265738d747446a062f41f"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "5109816b1476bc201acd40c7d7708162c6d00a211e72e61c2b75989089535c31"
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "4481ddaf02a5ee21477781bc30c5a9aed785737b0967bc3a4d129bbe166c089c"
   end
 

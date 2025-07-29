@@ -32,9 +32,9 @@ class Unitycatalog < Formula
       pkgetc.install "etc"
     end
 
-    env = Language::Java.overridable_java_home_env("21")
-    env["PATH"] = "${JAVA_HOME}/bin:${PATH}" if OS.linux?
-    bin.env_script_all_files libexec/"bin", env
+    java_env = Language::Java.overridable_java_home_env("21")
+    java_env["PATH"] = "${JAVA_HOME}/bin:${PATH}"
+    bin.env_script_all_files libexec/"bin", java_env
   end
 
   service do

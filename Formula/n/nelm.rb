@@ -1,8 +1,8 @@
 class Nelm < Formula
   desc "Kubernetes deployment tool that manages and deploys Helm Charts"
   homepage "https://github.com/werf/nelm"
-  url "https://github.com/werf/nelm/archive/refs/tags/v1.8.0.tar.gz"
-  sha256 "e832a4a33e8c00f0d4ae04a21b5fe8e8d7678e1201281e2bde12a7c40ce4db4e"
+  url "https://github.com/werf/nelm/archive/refs/tags/v1.9.0.tar.gz"
+  sha256 "d956d2190c185cc18da8b17fabd2091a5c6855e3b4069f4324a2c6fe77e84a1d"
   license "Apache-2.0"
   head "https://github.com/werf/nelm.git", branch: "main"
 

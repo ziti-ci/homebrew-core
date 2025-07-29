@@ -10,12 +10,12 @@ class Iconsur < Formula
   license "MIT"
 
   bottle do
-    rebuild 3
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "ba4be0ff656530a2a787c34d2b8c9502a0bb6448dd3d76198ff9d9a295769303"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "4c5b0753cf7a6dd13ecc8fa8ca6d8e511f1f8658a907e793e8cce001164f669a"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "81f49f558f09ca338470b0599e6c8e2254a85b31e7a098dada4dac32bd5f2de5"
-    sha256 cellar: :any_skip_relocation, sonoma:        "80a8c9d1251b6015fa7070d4a07a82fe39b6b70d2a1bf148a468cf8f28dd9467"
-    sha256 cellar: :any_skip_relocation, ventura:       "652b5bdaa7162f802914ec320be23b44f1984f58a967cb5488dfa354a46b678c"
+    rebuild 4
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "a387505aeabe3db495e15a9dda242feffe56d2a1b8d5098bce8f992a691813b1"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "1e104a5588b9c5c798afff7bda2adb98de20d0aead8759c7b8148cd256d0386e"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "882cf1ad86e392edff824cb1a32414f4ba714ffbc77823af315ecc81458b8f17"
+    sha256 cellar: :any_skip_relocation, sonoma:        "5c44aa9c8fb87a78d48de33645c812fe818a9e98840c58c096cc50c4997a3da5"
+    sha256 cellar: :any_skip_relocation, ventura:       "bd2baf85e6dce0f61e8e5313e2333022e88704ba80c515e0893103b5320a9531"
   end
 
   depends_on :macos

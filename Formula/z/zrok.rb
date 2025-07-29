@@ -10,12 +10,12 @@ class Zrok < Formula
   no_autobump! because: :requires_manual_review
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "7325ef51fd90a7f091a6ebdffa6e2a15b82b0ec376311ce7ac02acaf479a8e81"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "2628a53704535f6e004a3a9b5c038244503972af74720822a5bb6315188b7693"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "6ea91da5e3dd244163359f9139d966f25e3a857e7f406835b50ed1299c2ed57e"
-    sha256 cellar: :any_skip_relocation, sonoma:        "51fd315059bba9e7120bdacd9806bd4270349454083113a2684d44d3968ba2db"
-    sha256 cellar: :any_skip_relocation, ventura:       "dac24ef9bbd70af181d6fc67baf37bda055fc69da96db59da92d67486558b866"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "15d21f52f12e03170fa68fd92a9e9793945d8a7f33a1430600d1f1ea73ca077a"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "f616625b51489bbb274a3f98af43a6c575554f5b20d33b8061b8f934813a12b5"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "83edae86e46515be824d156e04a5cd2f29bd0d34cec35ab9b42025f174a998aa"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "fc7c2caf36c6f54acd4f4c1098a32b5028f39b5e77fd1cba8d68c70140623012"
+    sha256 cellar: :any_skip_relocation, sonoma:        "5b7bcda155acee996e3d6fe3b546a803d75d728376b13630dbab18ea8c86c38f"
+    sha256 cellar: :any_skip_relocation, ventura:       "595a151bc2e2b427bd5803595ef4b9cd58fb1d9514a349aca33a60263f72056c"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "619d31c4271c4ed6a49f5cd5206310a990674d4ce27ca66092b6dca0c31b5106"
   end
 
   depends_on "go" => :build

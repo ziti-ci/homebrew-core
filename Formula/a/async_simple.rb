@@ -1,12 +1,10 @@
 class AsyncSimple < Formula
   desc "Simple, light-weight and easy-to-use asynchronous components"
   homepage "https://github.com/alibaba/async_simple"
-  url "https://github.com/alibaba/async_simple/archive/refs/tags/v1.3.tar.gz"
-  sha256 "0ba0dc3397882611b538d04b8ee6668b1a04ce046128599205184c598b718743"
+  url "https://github.com/alibaba/async_simple/archive/refs/tags/1.4.tar.gz"
+  sha256 "6188f7a5f4211754fee758dfebf73759b74ce78c208719b5cc37d5ab4775d550"
   license "Apache-2.0"
   head "https://github.com/alibaba/async_simple.git", branch: "main"
-
-  no_autobump! because: :requires_manual_review
 
   bottle do
     sha256 cellar: :any,                 arm64_sequoia: "755cd0582500b20090528bb4192041eb7a57e2b1ba4fb87ecfe1082926c77415"

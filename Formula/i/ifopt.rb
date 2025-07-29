@@ -11,6 +11,7 @@ class Ifopt < Formula
     sha256 cellar: :any,                 arm64_ventura: "f545c8e42c49be06e5c7f2cf820d20850199be87eea52016a63aef2ae350ca66"
     sha256 cellar: :any,                 sonoma:        "4c05cd8ad919c075bdd3eeb378b5cf0094e95a1157ed89c6645887c4a3fd2290"
     sha256 cellar: :any,                 ventura:       "c1e79916555fefb52c6175c441b0a26f402dc6b8895313ea5ae7963c66434e11"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "832619dd1e2b379e80f7ec2447aaf912310f8ba8dd46b835c3afe892ee91a03c"
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "3ab1eef461f9e9d7b924d607a0831ac311656735942aeb701a09b6bd504123b6"
   end
 

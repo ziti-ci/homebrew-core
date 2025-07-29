@@ -1,8 +1,8 @@
 class Ldcli < Formula
   desc "CLI for managing LaunchDarkly feature flags"
   homepage "https://launchdarkly.com/docs/home/getting-started/ldcli"
-  url "https://github.com/launchdarkly/ldcli/archive/refs/tags/v1.16.1.tar.gz"
-  sha256 "00437d61ed1e51d221352fc6523db16cc2e6fd68321ca9c781ddbb2af32810df"
+  url "https://github.com/launchdarkly/ldcli/archive/refs/tags/v1.16.2.tar.gz"
+  sha256 "70f9bfb1465c91c920c60dd6673df3668850a715a2442b428d49153ad585e1a4"
   license "Apache-2.0"
   head "https://github.com/launchdarkly/ldcli.git", branch: "main"
 
@@ -31,7 +31,7 @@ class Ldcli < Formula
   test do
     assert_match version.to_s, shell_output("#{bin}/ldcli --version")
 
-    assert_match "Invalid account ID header",
-      shell_output("#{bin}/ldcli flags list --access-token=Homebrew --project=Homebrew 2>&1")
+    output = shell_output("#{bin}/ldcli flags list --access-token=Homebrew --project=Homebrew 2>&1", 1)
+    assert_match "Invalid account ID header", output
   end
 end

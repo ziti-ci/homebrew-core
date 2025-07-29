@@ -5,12 +5,12 @@ class Unisonlang < Formula
 
   stable do
     url "https://github.com/unisonweb/unison.git",
-        tag:      "release/0.5.41",
-        revision: "b3a897b08561b767e16b1752a852b84ddf461c70"
+        tag:      "release/0.5.44",
+        revision: "dbd7a1fcdf0b32cc053474838af5e5453bc6cc2a"
 
     resource "local-ui" do
-      url "https://github.com/unisonweb/unison-local-ui/archive/refs/tags/release/0.5.41.tar.gz"
-      sha256 "f7643f1c060bbe8c6f132144be810596212506b292d2777d5ee7f403195c12d0"
+      url "https://github.com/unisonweb/unison-local-ui/archive/refs/tags/release/0.5.44.tar.gz"
+      sha256 "e403edd5324221c415aff0e5849ae52bad5db51e7c83df5a106be51ef85f8cf2"
 
       livecheck do
         formula :parent
@@ -41,6 +41,7 @@ class Unisonlang < Formula
   end
 
   depends_on "elm" => :build
+  depends_on "elm-format" => :build
   depends_on "ghc@9.6" => :build
   depends_on "haskell-stack" => :build
   depends_on "node" => :build
@@ -48,10 +49,6 @@ class Unisonlang < Formula
   uses_from_macos "python" => :build
   uses_from_macos "xz" => :build
   uses_from_macos "zlib"
-
-  on_linux do
-    depends_on "ncurses"
-  end
 
   def install
     odie "local-ui resource needs to be updated" if build.stable? && version != resource("local-ui").version
@@ -61,11 +58,17 @@ class Unisonlang < Formula
 
     # Build and install the web interface
     resource("local-ui").stage do
-      system "npm", "install", *std_npm_args(prefix: false)
-      # Replace pre-built x86_64 elm binary
-      elm = Pathname("node_modules/elm/bin/elm")
-      elm.unlink
-      elm.parent.install_symlink Formula["elm"].opt_bin/"elm"
+      with_env(npm_config_ignore_scripts: "elm,elm-format") do
+        system "npm", "install", *std_npm_args(prefix: false)
+      end
+
+      # Install missing peer dependencies
+      system "npm", "install", *std_npm_args(prefix: false), "favicons"
+
+      # Wire the real binaries into node_modules
+      ln_sf Formula["elm"].opt_bin/"elm", "node_modules/elm/bin/elm"
+      ln_sf Formula["elm-format"].opt_bin/"elm-format", "node_modules/elm-format/bin/elm-format"
+
       # HACK: Flaky command occasionally stalls build indefinitely so we force fail
       # if that occurs. Problem seems to happening while running `elm-json install`.
       # Issue ref: https://github.com/zwilias/elm-json/issues/50

@@ -5,6 +5,11 @@ class Unitycatalog < Formula
   sha256 "fae708a22f1e38e19f754aca22925d66016a7efeaab680ce87c27496c75078d1"
   license "Apache-2.0"
 
+  livecheck do
+    url :stable
+    regex(/^v?(\d+(?:\.\d+)+)$/i)
+  end
+
   bottle do
     rebuild 1
     sha256 cellar: :any_skip_relocation, all: "8d0ef55f20e1d003a29001a2e018e6b0fb839a6c0bab924c25815a92ec7ed421"

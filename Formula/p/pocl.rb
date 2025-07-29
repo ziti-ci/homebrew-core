@@ -1,16 +1,10 @@
 class Pocl < Formula
   desc "Portable Computing Language"
   homepage "https://portablecl.org/"
+  url "https://github.com/pocl/pocl/archive/refs/tags/v7.0.tar.gz"
+  sha256 "f55caba8c3ce12bec7b683ce55104c7555e19457fc2ac72c6f035201e362be08"
   license "MIT"
-  revision 1
-
-  stable do
-    # TODO: Update to newer LLVM on next release
-    url "https://github.com/pocl/pocl/archive/refs/tags/v6.0.tar.gz"
-    sha256 "de9710223fc1855f833dbbf42ea2681e06aa8ec0464f0201104dc80a74dfd1f2"
-
-    depends_on "llvm@18" # LLVM 19: https://github.com/pocl/pocl/commit/802d347bd09921d5e6333ad9dd2c99c35004f398
-  end
+  head "https://github.com/pocl/pocl.git", branch: "main"
 
   livecheck do
     url :stable
@@ -27,16 +21,11 @@ class Pocl < Formula
     sha256 x86_64_linux:  "5eb94f47dc4e2c6a34259afa0fb0ac297ee9b985c1934f8fc3e25d48ce009b14"
   end
 
-  head do
-    url "https://github.com/pocl/pocl.git", branch: "main"
-
-    depends_on "llvm"
-  end
-
   depends_on "cmake" => :build
   depends_on "opencl-headers" => :build
   depends_on "pkgconf" => :build
   depends_on "hwloc"
+  depends_on "llvm"
   depends_on "opencl-icd-loader"
   uses_from_macos "python" => :build
 
@@ -55,16 +44,19 @@ class Pocl < Formula
       -DCMAKE_INSTALL_RPATH=#{rpaths.join(";")}
       -DENABLE_EXAMPLES=OFF
       -DENABLE_TESTS=OFF
+      -DINSTALL_OPENCL_HEADERS=OFF
       -DWITH_LLVM_CONFIG=#{llvm.opt_bin}/llvm-config
       -DLLVM_PREFIX=#{llvm.opt_prefix}
       -DLLVM_BINDIR=#{llvm.opt_bin}
       -DLLVM_LIBDIR=#{llvm.opt_lib}
       -DLLVM_INCLUDEDIR=#{llvm.opt_include}
     ]
-    # Avoid installing another copy of OpenCL headers on macOS
-    args << "-DOPENCL_H=#{Formula["opencl-headers"].opt_include}/CL/opencl.h" if OS.mac?
-    # Only x86_64 supports "distro" which allows runtime detection of SSE/AVX
-    args << "-DKERNELLIB_HOST_CPU_VARIANTS=distro" if Hardware::CPU.intel?
+    if Hardware::CPU.intel?
+      # Only x86_64 supports "distro" which allows runtime detection of SSE/AVX
+      args << "-DKERNELLIB_HOST_CPU_VARIANTS=distro"
+    elsif OS.mac?
+      args << "-DLLC_HOST_CPU=apple-m1"
+    end
 
     system "cmake", "-S", ".", "-B", "build", *args, *std_cmake_args
     system "cmake", "--build", "build"

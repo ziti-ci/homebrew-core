@@ -12,6 +12,7 @@ class CargoCareful < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura: "a7220ca95fb1ccb4ee0eb90f0837224b6c8eecf72ebe8dbcd3db5aad96098769"
     sha256 cellar: :any_skip_relocation, sonoma:        "70279ff00ffb65a2fbbb70151a3c316ec18e484dc455848467eedfb086d0336a"
     sha256 cellar: :any_skip_relocation, ventura:       "527c1522e7c2a0b65b8c19b966ff2eb0c3915840e14f8fe67cc709bcb32dc092"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "d0fbedac308d44d4efae6be65fc20159034df1954954c204111a01f0c1090d55"
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "642e2323e43bd6180710fd6f8aff52668f7a9ff781cf43f412bc5a58d64a1493"
   end
 

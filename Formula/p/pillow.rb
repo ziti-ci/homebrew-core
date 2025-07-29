@@ -21,6 +21,7 @@ class Pillow < Formula
   depends_on "python@3.13" => [:build, :test]
   depends_on "freetype"
   depends_on "jpeg-turbo"
+  depends_on "libavif"
   depends_on "libimagequant"
   depends_on "libraqm"
   depends_on "libtiff"
@@ -54,6 +55,7 @@ class Pillow < Formula
                      "-C", "lcms=enable",
                      "-C", "webp=enable",
                      "-C", "xcb=enable",
+                     "-C", "avif=enable",
                      "."
     end
   end
@@ -67,6 +69,42 @@ class Pillow < Formula
 
     pythons.each do |python|
       assert_equal "JPEG (1, 1) RGB", shell_output("#{python} test.py").chomp
+    end
+
+    # Test webp support
+    resource "test-webp" do
+      url "https://raw.githubusercontent.com/python-pillow/Pillow/refs/heads/main/Tests/images/flower.webp"
+      sha256 "af5bf1a0e420467c09d221fbfbb739646956c17f2b67f8280eacfacf87059a37"
+    end
+
+    testpath.install resource("test-webp")
+    test_webp = testpath/"flower.webp"
+    (testpath/"test_webp.py").write <<~PYTHON
+      from PIL import Image
+      im = Image.open("#{test_webp}")
+      print(im.format, im.size, im.mode)
+    PYTHON
+
+    pythons.each do |python|
+      assert_equal "WEBP (480, 360) RGB", shell_output("#{python} test_webp.py").chomp
+    end
+
+    # Test avif support
+    resource "test-avif" do
+      url "https://raw.githubusercontent.com/python-pillow/Pillow/refs/heads/main/Tests/images/avif/exif.avif"
+      sha256 "438dc63eb5aa722f4b23a93ac48cd0c19b7a575865c89e666c86b7ac363cff04"
+    end
+
+    testpath.install resource("test-avif")
+    test_avif = testpath/"exif.avif"
+    (testpath/"test_avif.py").write <<~PYTHON
+      from PIL import Image
+      im = Image.open("#{test_avif}")
+      print(im.format, im.size, im.mode)
+    PYTHON
+
+    pythons.each do |python|
+      assert_equal "AVIF (512, 512) RGB", shell_output("#{python} test_avif.py").chomp
     end
   end
 end

@@ -20,17 +20,16 @@ class Dumbpipe < Formula
 
     begin
       sleep 2
-      node_id = ""
-      while read.wait_readable(1)
+      node_id = while read.wait_readable(1)
         line = read.gets
         break if line.nil?
 
         match = line.match(/dumbpipe connect (\w+)/)
         next if match.blank?
 
-        node_id = match[1]
+        break match[1]
       end
-      odie "No node ID found in listener output" if node_id.blank?
+      refute_empty node_id, "No node ID found in listener output"
 
       sender_read, sender_write = IO.pipe
       sender_pid = spawn bin/"dumbpipe", "connect", node_id, in: sender_read
@@ -38,8 +37,8 @@ class Dumbpipe < Formula
       assert_match "foobar", read.gets
     ensure
       Process.kill "TERM", sender_pid
-      Process.wait sender_pid
       Process.kill "TERM", listener_pid
+      Process.wait sender_pid
       Process.wait listener_pid
     end
   end

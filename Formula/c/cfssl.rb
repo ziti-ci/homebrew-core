@@ -50,8 +50,8 @@ class Cfssl < Formula
         ]
       }
     JSON
-    shell_output("#{bin}/cfssl genkey -initca request.json > response.json")
-    response = JSON.parse(File.read(testpath/"response.json"))
+    response_json = shell_output("#{bin}/cfssl genkey -initca request.json")
+    response = JSON.parse(response_json)
     assert_match(/^-----BEGIN CERTIFICATE-----.*/, response["cert"])
     assert_match(/.*-----END CERTIFICATE-----$/, response["cert"])
     assert_match(/^-----BEGIN RSA PRIVATE KEY-----.*/, response["key"])

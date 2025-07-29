@@ -2,8 +2,8 @@ class Tailscale < Formula
   desc "Easiest, most secure way to use WireGuard and 2FA"
   homepage "https://tailscale.com"
   url "https://github.com/tailscale/tailscale.git",
-      tag:      "v1.86.0",
-      revision: "758dfe72035fcb2ce00e6ea7693e6f1a11eb135c"
+      tag:      "v1.86.2",
+      revision: "d72494bac7a2fb6b6a01715cfc5bcc903dbd7594"
   license "BSD-3-Clause"
 
   livecheck do

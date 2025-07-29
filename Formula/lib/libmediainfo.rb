@@ -1,8 +1,8 @@
 class Libmediainfo < Formula
   desc "Shared library for mediainfo"
   homepage "https://mediaarea.net/en/MediaInfo"
-  url "https://mediaarea.net/download/source/libmediainfo/25.04/libmediainfo_25.04.tar.xz"
-  sha256 "ad45ed7c9db7807aa803845ca88bad9526aa8da883a58127e5390aaa2d81bbb1"
+  url "https://mediaarea.net/download/source/libmediainfo/25.07/libmediainfo_25.07.tar.xz"
+  sha256 "58ece66eaebd9c2fa9b01143c594bce5d21489b8c1dde0dfd2bd13aa7f6266cc"
   license "BSD-2-Clause"
   head "https://github.com/MediaArea/MediaInfoLib.git", branch: "master"
 
@@ -10,8 +10,6 @@ class Libmediainfo < Formula
     url "https://mediaarea.net/en/MediaInfo/Download/Source"
     regex(/href=.*?libmediainfo[._-]v?(\d+(?:\.\d+)+)\.t/i)
   end
-
-  no_autobump! because: :requires_manual_review
 
   bottle do
     sha256 cellar: :any,                 arm64_sequoia: "c7a6a63c51275d03a196ba46853d9f9b643b3619b23ee28cc90f5b37c11fdda9"

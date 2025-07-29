@@ -1,8 +1,8 @@
 class MediaInfo < Formula
   desc "Unified display of technical and tag data for audio/video"
   homepage "https://mediaarea.net/"
-  url "https://mediaarea.net/download/binary/mediainfo/25.04/MediaInfo_CLI_25.04_GNU_FromSource.tar.xz"
-  sha256 "ecd286de77cb13ea4b6ce0ebdbbff3f3da89c67ec2d5c330d47f385a4329c5d2"
+  url "https://mediaarea.net/download/binary/mediainfo/25.07/MediaInfo_CLI_25.07_GNU_FromSource.tar.xz"
+  sha256 "d810a56b84a8f6c009958312459e1d7353b3722db8f18c2bc87da512ebd51482"
   license "BSD-2-Clause"
   head "https://github.com/MediaArea/MediaInfo.git", branch: "master"
 
@@ -10,8 +10,6 @@ class MediaInfo < Formula
     url "https://mediaarea.net/en/MediaInfo/Download/Source"
     regex(/href=.*?mediainfo[._-]v?(\d+(?:\.\d+)+)\.t/i)
   end
-
-  no_autobump! because: :requires_manual_review
 
   bottle do
     sha256 cellar: :any,                 arm64_sequoia: "8192fe05feba4545f5c999c17f9704b9e9d360953bb43c738f8083cf704a8247"

@@ -14,6 +14,7 @@ class MemtierBenchmark < Formula
     sha256 cellar: :any,                 arm64_ventura: "480d91ebdc73328c71a14fac3a89aef8b273e0ce4269ebee7338772c152f80f6"
     sha256 cellar: :any,                 sonoma:        "4a31a0c1a97bb0cad1281df5bbb4068051c2486e92bd6c5a0a9d44af1e39e225"
     sha256 cellar: :any,                 ventura:       "8ada137153c75deaa14f1e052d18a82b0252ad4eaeb569771a2c48adf33d1167"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "f505c77b0c6639ccca30243e051a29fd0ce9ef9532c061e4c0733ecfe0236273"
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "5bc33bff6f485a4d924254a6c38243d048aa5b80b1a6c488f2cc767f38a758d2"
   end
 

@@ -3,11 +3,9 @@ class CodecovCli < Formula
 
   desc "Codecov's command-line interface"
   homepage "https://cli.codecov.io/"
-  url "https://files.pythonhosted.org/packages/3a/7e/7d916fa02a49d1f16fbb74498bdb95d005d008eb9792626b2468336297cb/codecov_cli-11.0.3.tar.gz"
-  sha256 "0a6d92f51bc6bfb3c5bb6b59722ba3c32e1325f2d23562b4596e2c93782cadad"
+  url "https://files.pythonhosted.org/packages/74/ce/286c8a81efbab0981535e0e031f5e7db40b81d0225aa45adbd40701a40e9/codecov_cli-11.1.0.tar.gz"
+  sha256 "488977802c79905f0bd6de0a5ebc7e8ac3f868b96e0c52121a7b372d4a01e15d"
   license "Apache-2.0"
-  revision 2
-  head "https://github.com/codecov/codecov-cli.git", branch: "main"
 
   bottle do
     rebuild 1
@@ -25,8 +23,8 @@ class CodecovCli < Formula
   depends_on "python@3.13"
 
   resource "certifi" do
-    url "https://files.pythonhosted.org/packages/73/f7/f14b46d4bcd21092d7d3ccef689615220d8a08fb25e564b65d20738e672e/certifi-2025.6.15.tar.gz"
-    sha256 "d747aa5a8b9bbbb1bb8c22bb13e22bd1f18e9796defa16bab421f7f7a317323b"
+    url "https://files.pythonhosted.org/packages/b3/76/52c535bcebe74590f296d6c77c86dabf761c41980e1347a2422e4aa2ae41/certifi-2025.7.14.tar.gz"
+    sha256 "8ea99dbdfaaf2ba2f9bac77b9249ef62ec5218e7c2b2e903378ed5fccf765995"
   end
 
   resource "charset-normalizer" do
@@ -65,8 +63,8 @@ class CodecovCli < Formula
   end
 
   resource "sentry-sdk" do
-    url "https://files.pythonhosted.org/packages/04/4c/af31e0201b48469786ddeb1bf6fd3dfa3a291cc613a0fe6a60163a7535f9/sentry_sdk-2.30.0.tar.gz"
-    sha256 "436369b02afef7430efb10300a344fb61a11fe6db41c2b11f41ee037d2dd7f45"
+    url "https://files.pythonhosted.org/packages/3a/38/10d6bfe23df1bfc65ac2262ed10b45823f47f810b0057d3feeea1ca5c7ed/sentry_sdk-2.34.1.tar.gz"
+    sha256 "69274eb8c5c38562a544c3e9f68b5be0a43be4b697f5fd385bf98e4fbe672687"
   end
 
   resource "test-results-parser" do

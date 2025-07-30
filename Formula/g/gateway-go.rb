@@ -7,12 +7,12 @@ class GatewayGo < Formula
   head "https://github.com/OpenIoTHub/gateway-go.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "80d06cbb839faa56f60c458fd9ee81afb0e75ac44425f853946dc64b77737945"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "fd65ff9636a19d7be1cd6b534854139bf20c3af802f9040f3db7eb4489e1ba37"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "d99f14fbe19bd62caa64279d419da8b27c73f9f6f0170ff4a89d712541ac8d0c"
-    sha256 cellar: :any_skip_relocation, sonoma:        "188243613be33e1a759747819d64647503b64be51dd2f1ff56840e8b761109cb"
-    sha256 cellar: :any_skip_relocation, ventura:       "f31c311bbc54ada41596d6807f7ad9080519e0a83a76d4360cbaf2f31efe3150"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "7f6c9fb22790a50284a796b6ca7a2bb9231dca4fa6b1fb01e30dd1027bc11b04"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "432159ef7f4efaad41c272483803834c97a5e2da4324999d2d5bb8e84190283d"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "73153cdeb9af0633d107a707bd4380ed45510be96f0f580623dc1a673746a164"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "d2fee6e26ef52c684f07404f43b28cca3d6c98c7e2eb77c05778e71a0892be54"
+    sha256 cellar: :any_skip_relocation, sonoma:        "ea1f7e04b61873ecc112c7a780d9f6865a0361b48bdd4ba4ee88544fa7bf898b"
+    sha256 cellar: :any_skip_relocation, ventura:       "b908b6d560ba03720d79b9346d86966f62b0bfb54dc849013224ab08463aa4fa"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "574a9244c32bf65a8bf49a14573b4911ce71cfaf344a3efadbad65833d5ba854"
   end
 
   depends_on "go" => :build

@@ -1,8 +1,8 @@
 class Apigeecli < Formula
   desc "Apigee management API command-line interface"
   homepage "https://cloud.google.com/apigee/docs"
-  url "https://github.com/apigee/apigeecli/archive/refs/tags/v2.13.0.tar.gz"
-  sha256 "61d441d082d07dd7102483dea826fa57dbd97d76434076312a67b067776698fa"
+  url "https://github.com/apigee/apigeecli/archive/refs/tags/v2.14.0.tar.gz"
+  sha256 "7a0cb53288dfe15b337d2ba04344f3a4869fbf37481305ce36fad62d6a6b283a"
   license "Apache-2.0"
   head "https://github.com/apigee/apigeecli.git", branch: "main"
 

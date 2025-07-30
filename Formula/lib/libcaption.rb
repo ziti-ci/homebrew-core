@@ -12,6 +12,7 @@ class Libcaption < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura: "f3699e0e6939851149651a60d8544f7ebc194a6d79f6e835d9ea36803f9b8a8e"
     sha256 cellar: :any_skip_relocation, sonoma:        "5b7e178fc19e4d5f815d2210036f2fe830a32546231fd917d9e68b37ecaef63c"
     sha256 cellar: :any_skip_relocation, ventura:       "39432e5e175d5a277097d328795b7e071ec80ecd93be1d0d396be670d79dc4e8"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "87d59136b4f50c2ccbd626f1a83655f2652f31ef8b8916b4822c645f2fa443f9"
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "1f739c811db204ee8daf42272b61ef2b4e81e73d0bd52ad7e1914a2e14090df6"
   end
 

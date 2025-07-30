@@ -1,11 +1,10 @@
 class Scmpuff < Formula
   desc "Adds numbered shortcuts for common git commands"
   homepage "https://mroth.github.io/scmpuff/"
-  url "https://github.com/mroth/scmpuff/archive/refs/tags/v0.5.0.tar.gz"
-  sha256 "e07634c7207dc51479d39895e546dd0107a50566faf5c2067f61a3b92c824fbf"
+  url "https://github.com/mroth/scmpuff/archive/refs/tags/v0.6.0.tar.gz"
+  sha256 "4478a53ff16d70ca433d21a66f7e3532631f43ecd64a1fbaf0a933aa7cbd2df4"
   license "MIT"
-
-  no_autobump! because: :requires_manual_review
+  head "https://github.com/mroth/scmpuff.git", branch: "main"
 
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_sequoia:  "151580cd03c9b01f87b20dfe4b52cd1fd9a03306463bcca646291418fc37f952"
@@ -24,11 +23,13 @@ class Scmpuff < Formula
   depends_on "go" => :build
 
   def install
-    ldflags = "-s -w -X main.VERSION=#{version}"
+    ldflags = "-s -w -X main.version=#{version} -X main.commit=#{tap.user} -X main.builtBy=#{tap.user}"
     system "go", "build", *std_go_args(ldflags:)
   end
 
   test do
+    assert_match version.to_s, shell_output("#{bin}/scmpuff --version 2>&1")
+
     ENV["e1"] = "abc"
     assert_equal "abc", shell_output("#{bin}/scmpuff expand 1").strip
   end

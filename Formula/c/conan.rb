@@ -3,8 +3,8 @@ class Conan < Formula
 
   desc "Distributed, open source, package manager for C/C++"
   homepage "https://conan.io"
-  url "https://files.pythonhosted.org/packages/dd/36/ab4eb834149720fd444fc29ff72f30390e50b800c5064f0631aebbbd4ee7/conan-2.19.0.tar.gz"
-  sha256 "6f66530678daa2d28ca09c53598e5c04a9d6cad80212d50f9cedcc9c7d3d7f30"
+  url "https://files.pythonhosted.org/packages/e9/44/95bbf7be1f2b48b01977dcc820c3a7e6e0d42e1b9cf24d9c3822e050aa2a/conan-2.19.1.tar.gz"
+  sha256 "bf334867b81bcb73e5be31afe26a0f207017719298ad1f0f64762867caa9a971"
   license "MIT"
   head "https://github.com/conan-io/conan.git", branch: "develop"
 

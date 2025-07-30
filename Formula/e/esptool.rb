@@ -3,8 +3,8 @@ class Esptool < Formula
 
   desc "ESP8266 and ESP32 serial bootloader utility"
   homepage "https://docs.espressif.com/projects/esptool/en/latest/esp32/"
-  url "https://files.pythonhosted.org/packages/7e/94/4f3057d92c8e16db8c48ade626dcabb172031756bcee3a29c4bd614f4ff3/esptool-5.0.1.tar.gz"
-  sha256 "2ad7cae469e4356a2a3087c385343ade7b0c0cd68ffe5b934d9e595d74e3bac9"
+  url "https://files.pythonhosted.org/packages/6c/d1/92d407cffc2d7d0113ba965a1b79bf80c1ccfdb9f86495e31de07669472f/esptool-5.0.2.tar.gz"
+  sha256 "05cc4732eb2a9a7766c9e3531f7943d76ff0ca06dc9cd308d1d3d0b72f74aac2"
   license "GPL-2.0-or-later"
 
   bottle do
@@ -22,8 +22,8 @@ class Esptool < Formula
   depends_on "python@3.13"
 
   resource "bitarray" do
-    url "https://files.pythonhosted.org/packages/8a/e9/be1722981d43341ec1da6370255c414ec00ba23a99e01fc315dbe4c5c9f4/bitarray-3.5.1.tar.gz"
-    sha256 "b03c49d1a2eb753cc6090053f1c675ada71e1c3ea02011f1996cf4c2b6e9d6d6"
+    url "https://files.pythonhosted.org/packages/e5/ee/3b2fcbac3a4192e5d079aaa1850dff2f9ac625861c4c644819c2b34292ec/bitarray-3.6.0.tar.gz"
+    sha256 "20febc849a1f858e6a57a7d47b323fe9e727c579ddd526d317ad8831748a66a8"
   end
 
   resource "bitstring" do
@@ -32,8 +32,8 @@ class Esptool < Formula
   end
 
   resource "click" do
-    url "https://files.pythonhosted.org/packages/b9/2e/0090cbf739cee7d23781ad4b89a9894a41538e4fcf4c31dcdd705b78eb8b/click-8.1.8.tar.gz"
-    sha256 "ed53c9d8990d83c2a27deae68e4ee337473f6330c040a31d4225c9574d16096a"
+    url "https://files.pythonhosted.org/packages/60/6c/8ca2efa64cf75a977a0d7fac081354553ebe483345c734fb6b6515d96bbc/click-8.2.1.tar.gz"
+    sha256 "27c491cc05d968d271d5a1db13e3b5a184636d9d930f148c50b038f0d0646202"
   end
 
   resource "intelhex" do
@@ -72,8 +72,8 @@ class Esptool < Formula
   end
 
   resource "rich" do
-    url "https://files.pythonhosted.org/packages/a1/53/830aa4c3066a8ab0ae9a9955976fb770fe9c6102117c8ec4ab3ea62d89e8/rich-14.0.0.tar.gz"
-    sha256 "82f1bc23a6a21ebca4ae0c45af9bdbc492ed20231dcb63f297d6d1021a9d5725"
+    url "https://files.pythonhosted.org/packages/fe/75/af448d8e52bf1d8fa6a9d089ca6c07ff4453d86c65c145d0a300bb073b9b/rich-14.1.0.tar.gz"
+    sha256 "e497a48b844b0320d45007cdebfeaeed8db2a4f4bcf49f15e455cfc4af11eaa8"
   end
 
   resource "rich-click" do

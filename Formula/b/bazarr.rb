@@ -23,7 +23,7 @@ class Bazarr < Formula
   depends_on "gcc"
   depends_on "numpy"
   depends_on "pillow"
-  depends_on "python@3.12" # Python 3.13 issue (closed w/o fix): https://github.com/morpheus65535/bazarr/issues/2803
+  depends_on "python@3.13"
   depends_on "unar"
 
   uses_from_macos "libxml2", since: :ventura
@@ -46,7 +46,7 @@ class Bazarr < Formula
   end
 
   def install
-    venv = virtualenv_create(libexec, "python3.12")
+    venv = virtualenv_create(libexec, "python3.13")
     venv.pip_install resources
 
     if build.head?

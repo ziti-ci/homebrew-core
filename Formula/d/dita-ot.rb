@@ -1,16 +1,14 @@
 class DitaOt < Formula
   desc "DITA Open Toolkit is an implementation of the OASIS DITA specification"
   homepage "https://www.dita-ot.org/"
-  url "https://github.com/dita-ot/dita-ot/releases/download/4.3.3/dita-ot-4.3.3.zip"
-  sha256 "1248908ffa2ec4dfee24c87a87cb57a737e51976f619c766073ed6e62bdf2286"
+  url "https://github.com/dita-ot/dita-ot/releases/download/4.3.4/dita-ot-4.3.4.zip"
+  sha256 "011c65bbe55b917f572e8d8e81a5518504cff0706b436f1c8a6565a1d2d98f08"
   license "Apache-2.0"
 
   livecheck do
     url :stable
     regex(/^v?(\d+(?:\.\d+)+)$/i)
   end
-
-  no_autobump! because: :requires_manual_review
 
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_sequoia: "cd925d8847c43b8a687966b5690a4f7a671526282c630424a5113103ec85e5a8"

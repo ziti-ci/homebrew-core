@@ -528,6 +528,10 @@
   "linode-cli": {
     "exclude_packages": ["certifi"]
   },
+  "litani": {
+    "package_name": "",
+    "extra_packages": ["jinja2", "markupsafe", "pyyaml"]
+  },
   "litecli": {
     "exclude_packages": ["setuptools"]
   },

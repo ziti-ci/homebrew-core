@@ -7,6 +7,15 @@ class B4 < Formula
   sha256 "4f835b6e5ae30eff6004bb25c15fd8f4f6ecd1105596e86db1871fef7d18113d"
   license "GPL-2.0-or-later"
 
+  bottle do
+    sha256 cellar: :any,                 arm64_sequoia: "78e1ab7fdd04911b6ec55f17cef7c4b56895669021ad06d40d5b04f47166d894"
+    sha256 cellar: :any,                 arm64_sonoma:  "0a19827273be52f7f525549c1b973579ba381b5a1976942d567933fccbf99984"
+    sha256 cellar: :any,                 arm64_ventura: "e89ba215ccb8788c2982d405535d8f75d536e97a1449a35ac85f0a80a62334b8"
+    sha256 cellar: :any,                 sonoma:        "146022f8857fd125219db815b4a084ea8e5692693493fc66566f02914566844b"
+    sha256 cellar: :any,                 ventura:       "fae976fa4a22be857ae5440ce1f0d02166187ee6620804133802d7db62c8f5ce"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "27959dc1ca798d76a8085dc5fc410226d55f4c89da62226c8487d71d2dc203cb"
+  end
+
   depends_on "certifi"
   depends_on "cffi"
   depends_on "libsodium"

@@ -6,15 +6,8 @@ class Distcc < Formula
   url "https://github.com/distcc/distcc/releases/download/v3.4/distcc-3.4.tar.gz"
   sha256 "2b99edda9dad9dbf283933a02eace6de7423fe5650daa4a728c950e5cd37bd7d"
   license "GPL-2.0-or-later"
-  revision 2
+  revision 3
   head "https://github.com/distcc/distcc.git", branch: "master"
-
-  livecheck do
-    url :stable
-    strategy :github_latest
-  end
-
-  no_autobump! because: :requires_manual_review
 
   bottle do
     rebuild 3
@@ -30,13 +23,13 @@ class Distcc < Formula
   depends_on "python@3.13"
 
   resource "libiberty" do
-    url "https://ftp.debian.org/debian/pool/main/libi/libiberty/libiberty_20210106.orig.tar.xz"
-    sha256 "9df153d69914c0f5a9145e0abbb248e72feebab6777c712a30f1c3b8c19047d4"
+    url "https://ftp.debian.org/debian/pool/main/libi/libiberty/libiberty_20250315.orig.tar.xz"
+    sha256 "5b510b5e0918dcb00a748900103365a00411855f202089ff81dc5ef99d8beeaa"
   end
 
   resource "setuptools" do
-    url "https://files.pythonhosted.org/packages/d6/4f/b10f707e14ef7de524fe1f8988a294fb262a29c9b5b12275c7e188864aed/setuptools-69.5.1.tar.gz"
-    sha256 "6c1fccdac05a97e598fb0ae3bbed5904ccb317337a51139dcd51453611bbb987"
+    url "https://files.pythonhosted.org/packages/18/5d/3bf57dcd21979b887f014ea83c24ae194cfcd12b9e0fda66b957c69d1fca/setuptools-80.9.0.tar.gz"
+    sha256 "f36b47402ecde768dbfafc46e8e4207b4360c654f1f3bb84475f0a28628fb19c"
   end
 
   # Python 3.10+ compatibility

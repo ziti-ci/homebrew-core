@@ -9,7 +9,7 @@ class Nodenv < Formula
   no_autobump! because: :requires_manual_review
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "c55d5fa041bff0f7c662111988bb1b67f78ccf8e6caab9f77d7088c6445db44d"
+    sha256 cellar: :any_skip_relocation, all: "a01dda203871fb80f56351ebb37f528f1f65de52f681a57e98d38d5fa6911792"
   end
 
   depends_on "node" => :test

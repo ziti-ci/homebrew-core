@@ -1,9 +1,9 @@
 class Gdbm < Formula
   desc "GNU database manager"
   homepage "https://www.gnu.org.ua/software/gdbm/"
-  url "https://ftp.gnu.org/gnu/gdbm/gdbm-1.25.tar.gz"
-  mirror "https://ftpmirror.gnu.org/gdbm/gdbm-1.25.tar.gz"
-  sha256 "d02db3c5926ed877f8817b81cd1f92f53ef74ca8c6db543fbba0271b34f393ec"
+  url "https://ftp.gnu.org/gnu/gdbm/gdbm-1.26.tar.gz"
+  mirror "https://ftpmirror.gnu.org/gdbm/gdbm-1.26.tar.gz"
+  sha256 "6a24504a14de4a744103dcb936be976df6fbe88ccff26065e54c1c47946f4a5e"
   license "GPL-3.0-or-later"
 
   bottle do
@@ -15,12 +15,6 @@ class Gdbm < Formula
     sha256 cellar: :any, ventura:       "10080cd256c860ccef00b7abac526615cc45b1baa24df81ea4733de939db7fd1"
     sha256               arm64_linux:   "347fe6091f508ee3e0b92a54e3e8c1b2f05e40db5c66a183b130de9306e3e33f"
     sha256               x86_64_linux:  "f95b2737b4b0513b3b04e850c44d3f365f2872baa6325e9c3bc8adc3497fc236"
-  end
-
-  # Backport fix for macOS
-  patch do
-    url "https://git.savannah.gnu.org/cgit/gdbm.git/rawdiff/?id=ed0a865345681982ea02c6159c0f3d7702c928a1"
-    sha256 "cdba23a8da0bbdf91921247d226f9ca13e2a1c9541434f7a9132ba39346762ad"
   end
 
   def install

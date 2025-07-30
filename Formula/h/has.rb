@@ -7,8 +7,7 @@ class Has < Formula
   head "https://github.com/kdabir/has.git", branch: "master"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, all: "dd0eec9c703fb35356c4931881f3c5106a4fdee227e39c2c2844fecf025509e8"
+    sha256 cellar: :any_skip_relocation, all: "601865ae2b656ff5e957d4c7e01e67ce9cbeea244bed03e95d73fc26b2a50f6e"
   end
 
   # Fix long option parsing issue, upstream pr ref, https://github.com/kdabir/has/pull/88

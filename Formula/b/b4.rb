@@ -13,6 +13,7 @@ class B4 < Formula
     sha256 cellar: :any,                 arm64_ventura: "e89ba215ccb8788c2982d405535d8f75d536e97a1449a35ac85f0a80a62334b8"
     sha256 cellar: :any,                 sonoma:        "146022f8857fd125219db815b4a084ea8e5692693493fc66566f02914566844b"
     sha256 cellar: :any,                 ventura:       "fae976fa4a22be857ae5440ce1f0d02166187ee6620804133802d7db62c8f5ce"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "958e4f895da095812971882a90ff4bc28b1bcba79f6e067432a29eebf6c7a043"
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "27959dc1ca798d76a8085dc5fc410226d55f4c89da62226c8487d71d2dc203cb"
   end
 

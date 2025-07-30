@@ -6,6 +6,15 @@ class GiteaMcpServer < Formula
   license "MIT"
   head "https://gitea.com/gitea/gitea-mcp.git", branch: "main"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "00e5f80da0850be068bdaa277df568ffe4b8e5051c282081c3bccfad3e23fa53"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "00e5f80da0850be068bdaa277df568ffe4b8e5051c282081c3bccfad3e23fa53"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "00e5f80da0850be068bdaa277df568ffe4b8e5051c282081c3bccfad3e23fa53"
+    sha256 cellar: :any_skip_relocation, sonoma:        "a43ea1ac727ae983fc085214d17eafd7c7a16a2401665b069d2bc91ae0ab9408"
+    sha256 cellar: :any_skip_relocation, ventura:       "a43ea1ac727ae983fc085214d17eafd7c7a16a2401665b069d2bc91ae0ab9408"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "fe0372e6b26def9b61b77258e0e9a52061a2d708347a2d28eea961f97a7d76e2"
+  end
+
   depends_on "go" => :build
 
   def install

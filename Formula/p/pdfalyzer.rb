@@ -3,8 +3,8 @@ class Pdfalyzer < Formula
 
   desc "PDF analysis toolkit"
   homepage "https://github.com/michelcrypt4d4mus/pdfalyzer"
-  url "https://files.pythonhosted.org/packages/83/c4/1f72b314bbe964e3569ebf66bb84c508e20eaba8204b1df30608d69dd836/pdfalyzer-1.16.6.tar.gz"
-  sha256 "2e07d0772c66448ec664167cd54c41cd3339ba459c24d84df833e49163c0f7c3"
+  url "https://files.pythonhosted.org/packages/90/64/56ed42cadeee98717889cd6e8901a9c3d41d57a5ce5fcad7e17dc55d708f/pdfalyzer-1.16.9.tar.gz"
+  sha256 "1df7f208b16d53aa8eb938546ff78fcc3d561f555e9efe59733a4ec07c59eb40"
   license "GPL-3.0-or-later"
   head "https://github.com/michelcrypt4d4mus/pdfalyzer.git", branch: "master"
 
@@ -31,9 +31,14 @@ class Pdfalyzer < Formula
     sha256 "1b3b6ff479a8c414bc3fa2c0852995695c4a026dcd6d0633b2dd092ca39c1cf7"
   end
 
-  resource "commonmark" do
-    url "https://files.pythonhosted.org/packages/60/48/a60f593447e8f0894ebb7f6e6c1f25dafc5e89c5879fdc9360ae93ff83f0/commonmark-0.9.1.tar.gz"
-    sha256 "452f9dc859be7f06631ddcb328b6919c67984aca654e5fefb3914d54691aed60"
+  resource "markdown-it-py" do
+    url "https://files.pythonhosted.org/packages/38/71/3b932df36c1a044d397a1f92d1cf91ee0a503d91e470cbd670aa66b07ed0/markdown-it-py-3.0.0.tar.gz"
+    sha256 "e3f60a94fa066dc52ec76661e37c851cb232d92f9886b15cb560aaada2df8feb"
+  end
+
+  resource "mdurl" do
+    url "https://files.pythonhosted.org/packages/d6/54/cfe61301667036ec958cb99bd3efefba235e65cdeb9c84d24a8293ba1d90/mdurl-0.1.2.tar.gz"
+    sha256 "bb413d29f5eea38f31dd4754dd7377d4465116fb207585f97bf925588687c1ba"
   end
 
   resource "pygments" do
@@ -42,8 +47,8 @@ class Pdfalyzer < Formula
   end
 
   resource "pypdf" do
-    url "https://files.pythonhosted.org/packages/7b/42/fbc37af367b20fa6c53da81b1780025f6046a0fac8cbf0663a17e743b033/pypdf-5.7.0.tar.gz"
-    sha256 "68c92f2e1aae878bab1150e74447f31ab3848b1c0a6f8becae9f0b1904460b6f"
+    url "https://files.pythonhosted.org/packages/89/3a/584b97a228950ed85aec97c811c68473d9b8d149e6a8c155668287cf1a28/pypdf-5.9.0.tar.gz"
+    sha256 "30f67a614d558e495e1fbb157ba58c1de91ffc1718f5e0dfeb82a029233890a1"
   end
 
   resource "python-dotenv" do
@@ -52,8 +57,8 @@ class Pdfalyzer < Formula
   end
 
   resource "rich" do
-    url "https://files.pythonhosted.org/packages/11/23/814edf09ec6470d52022b9e95c23c1bef77f0bc451761e1504ebd09606d3/rich-12.6.0.tar.gz"
-    sha256 "ba3a3775974105c221d31141f2c116f4fd65c5ceb0698657a11e9f295ec93fd0"
+    url "https://files.pythonhosted.org/packages/fe/75/af448d8e52bf1d8fa6a9d089ca6c07ff4453d86c65c145d0a300bb073b9b/rich-14.1.0.tar.gz"
+    sha256 "e497a48b844b0320d45007cdebfeaeed8db2a4f4bcf49f15e455cfc4af11eaa8"
   end
 
   resource "rich-argparse-plus" do
@@ -67,8 +72,8 @@ class Pdfalyzer < Formula
   end
 
   resource "yaralyzer" do
-    url "https://files.pythonhosted.org/packages/a2/78/9f3c2619e0974731a491a972ddc157f61fc240bdf7074594cbdc0d82a858/yaralyzer-0.9.6.tar.gz"
-    sha256 "e234af284e8edafbb923fe1b37ea9e00d1ee6b455d5486f135743e6ec0c962b4"
+    url "https://files.pythonhosted.org/packages/02/55/68038f1de2ca69f04d820768cf26f6aa8a19f116c280751417f02d8b78a6/yaralyzer-1.0.5.tar.gz"
+    sha256 "46b9c7e7e5414645eb89463bbb15a28332cc6bc8b5ab6a403a4a19f7168690c1"
   end
 
   def install

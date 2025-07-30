@@ -14,12 +14,12 @@ class Oxen < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "d319df00729d3c7abd36e71176c47af508d81bbdbf712b523524baba1790306d"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "4783ad7d4023cac2543eb0c47a113240e45a1b66acf7ed7084480dcc00353bd5"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "216d72182cf2f3e3c34f544ad7438d9f5728be91677950068291fd189a127e15"
-    sha256 cellar: :any_skip_relocation, sonoma:        "7265d4a36a1c075a182f1ac9ed42437391b73e4661fda0629723e6a0ee2b333d"
-    sha256 cellar: :any_skip_relocation, ventura:       "3a4ca77bf520502fbd3ae947ed0fda68c24fdf4d8ecc6561fe2abfbbf2581756"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "f1489b895273a79bfbd96d0827095271a34fffb67f41a11fde0c83b9b175868b"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "e6f3ea631e19bcb209d0e1726b261664d551482bbf2dbc213624cfc1e979d53a"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "d915dbf54f002249fd605c0c003fca1c336367f2f014eda8ce1c5554ffd8622d"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "f59979e57e26c1118d0d9b3f100448cc62dd1598a00ac285b4cae07880d16a41"
+    sha256 cellar: :any_skip_relocation, sonoma:        "42ba88a5abe762ec212dd2b113708aaf15ec7b4f81b0b9c4ec475152894c4284"
+    sha256 cellar: :any_skip_relocation, ventura:       "3012ea0435a5afec15316bd991461ab1bd3a850927f758bfbdd0a5845ba6f4dc"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "5409d8ee7c3e4592a686176e8b085fe5489713ac5d1d644ea050befcf2ff3ea4"
   end
 
   depends_on "cmake" => :build # for libz-ng-sys

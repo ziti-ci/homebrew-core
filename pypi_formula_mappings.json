@@ -232,6 +232,10 @@
   "cookiecutter": {
     "exclude_packages": ["certifi"]
   },
+  "copyparty": {
+    "package_name": "copyparty[thumbnails2,audiotags,ftpd,ftps,tftpd,pwhash,zeromq]",
+    "exclude_packages": ["cffi", "pycparser"]
+  },
   "core-lightning": {
     "package_name": "",
     "extra_packages": ["mako", "setuptools"]

@@ -1,9 +1,9 @@
 class Mailutils < Formula
   desc "Swiss Army knife of email handling"
   homepage "https://mailutils.org/"
-  url "https://ftp.gnu.org/gnu/mailutils/mailutils-3.19.tar.gz"
-  mirror "https://ftpmirror.gnu.org/mailutils/mailutils-3.19.tar.gz"
-  sha256 "aeb6d5fca9179da0402cf6adef36026f656d6ae6de4e7142c6b0a035161fd7dd"
+  url "https://ftp.gnu.org/gnu/mailutils/mailutils-3.20.tar.gz"
+  mirror "https://ftpmirror.gnu.org/mailutils/mailutils-3.20.tar.gz"
+  sha256 "d10ee65ba391d6463952d8a81551f8a6e667538ee8587b3c801137e657087d4c"
   license "GPL-3.0-or-later"
 
   bottle do
@@ -16,6 +16,7 @@ class Mailutils < Formula
     sha256 x86_64_linux:  "8cf1753255aa8749c4669d1abdec367627998243decd6f8c72500068efb326c6"
   end
 
+  depends_on "gdbm"
   depends_on "gnutls"
   depends_on "gsasl"
   depends_on "libtool"
@@ -23,6 +24,7 @@ class Mailutils < Formula
   depends_on "readline"
 
   uses_from_macos "libxcrypt"
+  uses_from_macos "python"
 
   on_macos do
     depends_on "gettext"
@@ -38,7 +40,6 @@ class Mailutils < Formula
     system "./configure", "--disable-mh",
                           "--disable-silent-rules",
                           "--without-fribidi",
-                          "--without-gdbm",
                           "--without-guile",
                           "--without-tokyocabinet",
                           *std_configure_args

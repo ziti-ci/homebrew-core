@@ -1,8 +1,8 @@
 class Melange < Formula
   desc "Build APKs from source code"
   homepage "https://github.com/chainguard-dev/melange"
-  url "https://github.com/chainguard-dev/melange/archive/refs/tags/v0.30.1.tar.gz"
-  sha256 "1082540294f294f4c0e5a4255a961e88fa3335bbf7f910ca5a49790c6829e364"
+  url "https://github.com/chainguard-dev/melange/archive/refs/tags/v0.30.2.tar.gz"
+  sha256 "27889130416ab0a902193014bdb41e30767c521b3832e1cebc3c7a5996c30e23"
   license "Apache-2.0"
   head "https://github.com/chainguard-dev/melange.git", branch: "main"
 
@@ -81,6 +81,6 @@ class Melange < Formula
     system bin/"melange", "keygen"
     assert_path_exists testpath/"melange.rsa"
 
-    assert_match version.to_s, shell_output(bin/"melange version 2>&1")
+    assert_match version.to_s, shell_output("#{bin}/melange version 2>&1")
   end
 end

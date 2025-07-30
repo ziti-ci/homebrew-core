@@ -94,6 +94,9 @@
   "b2-tools": {
     "exclude_packages": ["certifi"]
   },
+  "b4" :{
+    "exclude_packages": ["certifi", "cffi"]
+  },
   "badkeys": {
     "exclude_packages": ["cryptography"]
   },

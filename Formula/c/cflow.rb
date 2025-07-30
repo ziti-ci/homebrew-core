@@ -1,12 +1,10 @@
 class Cflow < Formula
   desc "Generate call graphs from C code"
   homepage "https://www.gnu.org/software/cflow/"
-  url "https://ftp.gnu.org/gnu/cflow/cflow-1.7.tar.bz2"
-  mirror "https://ftpmirror.gnu.org/cflow/cflow-1.7.tar.bz2"
-  sha256 "d01146caf9001e266133417c2a8258a64b5fc16fcb082a14f6528204d0c97086"
+  url "https://ftp.gnu.org/gnu/cflow/cflow-1.8.tar.bz2"
+  mirror "https://ftpmirror.gnu.org/cflow/cflow-1.8.tar.bz2"
+  sha256 "8321627b55b6c7877f6a43fcc6f9f846a94b1476a081a035465f7a78d3499ab8"
   license "GPL-3.0-or-later"
-
-  no_autobump! because: :requires_manual_review
 
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_sequoia:  "751d7b1a86af9855a051cffe36b2569ce962146f5f56c09529ea4276140fa500"
@@ -29,6 +27,12 @@ class Cflow < Formula
                           "--disable-debug",
                           "--disable-dependency-tracking",
                           "--with-lispdir=#{elisp}"
+
+    # Replace C++11 attribute syntax with GCC-style attribute for Clang compatibility
+    if OS.mac? && DevelopmentTools.clang_build_version >= 1500
+      inreplace "config.h", /\[\[__maybe_unused__\]\]/, "__attribute__((__unused__))"
+    end
+
     system "make", "install"
   end
 

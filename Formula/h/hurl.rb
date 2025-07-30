@@ -1,8 +1,8 @@
 class Hurl < Formula
   desc "Run and Test HTTP Requests with plain text and curl"
   homepage "https://hurl.dev"
-  url "https://github.com/Orange-OpenSource/hurl/archive/refs/tags/6.1.1.tar.gz"
-  sha256 "26ef1ed685f4b94190914a0e03127f7b7f6a488abf65758c19092dc6b9034b2c"
+  url "https://github.com/Orange-OpenSource/hurl/archive/refs/tags/7.0.0.tar.gz"
+  sha256 "3f505848aabd9eec78360928b0fcbfea237a049b5c8d25b8d9e0aeb3f9d8dfed"
   license "Apache-2.0"
   head "https://github.com/Orange-OpenSource/hurl.git", branch: "master"
 
@@ -29,6 +29,7 @@ class Hurl < Formula
 
   uses_from_macos "curl"
   uses_from_macos "libxml2"
+  uses_from_macos "llvm" # for libclang
 
   def install
     # FIXME: This formula uses the `openssl-sys` crate on Linux but does not link with our OpenSSL.

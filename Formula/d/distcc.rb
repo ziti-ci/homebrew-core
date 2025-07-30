@@ -10,14 +10,13 @@ class Distcc < Formula
   head "https://github.com/distcc/distcc.git", branch: "master"
 
   bottle do
-    rebuild 3
-    sha256 arm64_sequoia: "49f0073a59339ec44150cdafd79c3d4ca807780e5e55df49a7030c179025c636"
-    sha256 arm64_sonoma:  "00dcf6bcfda58dbb694516e1f21e5208604894977260101bf2ffc05c57544c44"
-    sha256 arm64_ventura: "f37c9ba4f2a613091c706b096d14cb4a44ccd38f6254fea5a50614ba55eb228f"
-    sha256 sonoma:        "2eb1710b55e4cc45819f6a3bdd47f67e287e3ff6bd823015130c35a06b84da3f"
-    sha256 ventura:       "72982228dea2fe8ccbcdd364ecc672c90c6c67ecab38732c7350032cb376c4c6"
-    sha256 arm64_linux:   "86215de5512754860d1ae2124359bdf3bb31c022ef5fa4352f08440aac373477"
-    sha256 x86_64_linux:  "b9b24030b5cdd52aa1abdf03c3d85ce35a327a4c3bffd928e466d05e6b118f8b"
+    sha256 arm64_sequoia: "b98395e66b59e15e749f8653a24a7cdb21ed924ab38789987937b424087db48c"
+    sha256 arm64_sonoma:  "3f7592cb46c1103e012aa5321bc042a422cf4feff63f741df469ac0b360048dd"
+    sha256 arm64_ventura: "4e2d0d3d71ff226b128e3449b7ef1117dd6f27c46345fc29a293ae246f562dd4"
+    sha256 sonoma:        "80254e2dd3cb658907364565ee40c9f60a8aa303cbc9bcc20cf7e7a8c6024a94"
+    sha256 ventura:       "50459c98419e4b2d87f529ae4a058f90f011836cd157af010f81137e9468e531"
+    sha256 arm64_linux:   "938461a356c88827ebb319494279a8a41959be010e7102adbfe17e79f6da9b61"
+    sha256 x86_64_linux:  "92bb7674804a00828013b7a43534c3875624168e13934e3b099afcc8b50698a8"
   end
 
   depends_on "python@3.13"

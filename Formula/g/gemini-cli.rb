@@ -6,13 +6,13 @@ class GeminiCli < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "33b9b86707c974f92ee17947ab776702ee257e724d91c2199a09c804241b6962"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "33b9b86707c974f92ee17947ab776702ee257e724d91c2199a09c804241b6962"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "33b9b86707c974f92ee17947ab776702ee257e724d91c2199a09c804241b6962"
-    sha256 cellar: :any_skip_relocation, sonoma:        "eb97f839e3825edbffb56a7e976f6859fe5021362e4b1db86fc8b09dbaa89cb9"
-    sha256 cellar: :any_skip_relocation, ventura:       "eb97f839e3825edbffb56a7e976f6859fe5021362e4b1db86fc8b09dbaa89cb9"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "33b9b86707c974f92ee17947ab776702ee257e724d91c2199a09c804241b6962"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "33b9b86707c974f92ee17947ab776702ee257e724d91c2199a09c804241b6962"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "dc2386ad2883e06a120d66c5989c3c3ce9624be2921761194836c303a8ea5529"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "dc2386ad2883e06a120d66c5989c3c3ce9624be2921761194836c303a8ea5529"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "dc2386ad2883e06a120d66c5989c3c3ce9624be2921761194836c303a8ea5529"
+    sha256 cellar: :any_skip_relocation, sonoma:        "601a0660ea3d7f809319d77193cc3dc22249270a94a34eb65699c2bd0766a1a1"
+    sha256 cellar: :any_skip_relocation, ventura:       "601a0660ea3d7f809319d77193cc3dc22249270a94a34eb65699c2bd0766a1a1"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "dc2386ad2883e06a120d66c5989c3c3ce9624be2921761194836c303a8ea5529"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "dc2386ad2883e06a120d66c5989c3c3ce9624be2921761194836c303a8ea5529"
   end
 
   depends_on "node"

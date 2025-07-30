@@ -3,8 +3,8 @@ class Copyparty < Formula
 
   desc "Portable file server"
   homepage "https://github.com/9001/copyparty"
-  url "https://files.pythonhosted.org/packages/ab/fb/95b58ef0848ed78c80fec0e19749f8daccdb848d3dd4294d3ba8b0978845/copyparty-1.18.6.tar.gz"
-  sha256 "f136106ec36f3b91dcab3a473c039b4f2b999afe5c3a5a9edb5d217a4cfb0bd2"
+  url "https://files.pythonhosted.org/packages/d3/f4/992e77658fb1440f8559ffa10f6c815caaca653f7d4c3b1d6ed379acc580/copyparty-1.18.7.tar.gz"
+  sha256 "ecdeb29dcf46af0427cdddc86faece7d5511f60b4e5a49106fdb8efd23a42935"
   license "MIT"
 
   bottle do
@@ -31,8 +31,8 @@ class Copyparty < Formula
   end
 
   resource "argon2-cffi-bindings" do
-    url "https://files.pythonhosted.org/packages/b9/e9/184b8ccce6683b0aa2fbb7ba5683ea4b9c5763f1356347f1312c32e3c66e/argon2-cffi-bindings-21.2.0.tar.gz"
-    sha256 "bb89ceffa6c791807d1305ceb77dbfacc5aa499891d2c55661c6459651fc39e3"
+    url "https://files.pythonhosted.org/packages/5c/2d/db8af0df73c1cf454f71b2bbe5e356b8c1f8041c979f505b3d3186e520a9/argon2_cffi_bindings-25.1.0.tar.gz"
+    sha256 "b957f3e6ea4d55d820e40ff76f450952807013d361a65d7f28acc0acbf29229d"
   end
 
   resource "jinja2" do

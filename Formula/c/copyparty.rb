@@ -7,6 +7,15 @@ class Copyparty < Formula
   sha256 "f136106ec36f3b91dcab3a473c039b4f2b999afe5c3a5a9edb5d217a4cfb0bd2"
   license "MIT"
 
+  bottle do
+    sha256 cellar: :any,                 arm64_sequoia: "f5c55ea475e12367b2d3a07852cdcaf7f9bf6e10c551868e246760f8df5401c4"
+    sha256 cellar: :any,                 arm64_sonoma:  "9455f502ba3d41add2e1dfff9f19936bcd498ca17d4b49d2725ab1156b2dde2e"
+    sha256 cellar: :any,                 arm64_ventura: "70617580c1467211f0421ad6b9d614c4a84dab0a4c2d3ff9a77e89ee115d36ef"
+    sha256 cellar: :any,                 sonoma:        "05bc35f81c96c23bebfd978d43be37613db6c0e273da032b3eeb8ca0e39e57ef"
+    sha256 cellar: :any,                 ventura:       "2eee93f9ab81e67cb2b6d7d80ccb60917e0b588700d9029c50eaa769af7675d0"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "e541eada6849ea8ef2538770abe340d7d482c86e361f3715d8440a926fe390cd"
+  end
+
   depends_on "cmake" => :build
   depends_on "ninja" => :build
   depends_on "pkgconf" => :build

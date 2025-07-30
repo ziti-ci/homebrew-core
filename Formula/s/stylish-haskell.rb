@@ -17,7 +17,10 @@ class StylishHaskell < Formula
   end
 
   depends_on "cabal-install" => :build
-  depends_on "ghc@9.10" => :build
+  depends_on "ghc" => :build
+  depends_on "gmp"
+
+  uses_from_macos "libffi"
 
   def install
     system "cabal", "v2-update"

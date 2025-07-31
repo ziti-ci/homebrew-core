@@ -11,6 +11,7 @@ class Dexidp < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura: "b1dfbc438df4649eaa41f79184dd1e9a7db9c959358f5ae75ee90eda06ecebaf"
     sha256 cellar: :any_skip_relocation, sonoma:        "36248b5904adb1e060f09ed27a7a84b966436e7c41cb7ff58576800bc952b501"
     sha256 cellar: :any_skip_relocation, ventura:       "a5a41bc11c26692df5632ee4c7749a7b7afb8ef953baac8780f799e4ca180737"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "e4bd51c389c1a0ad685c5ca313efbdb7f70c6dcafea005ee12078fdd79906196"
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "216d6cb44634e1126d93a34022f848332a06a6432cbe090406312658ed2d9383"
   end
 

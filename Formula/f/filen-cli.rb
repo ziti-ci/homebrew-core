@@ -11,6 +11,7 @@ class FilenCli < Formula
     sha256                               arm64_ventura: "3fc5d84274a8f6e37fdfa8397d1ed953d52cb590bcb4cc64d9ea0fdf2d9d66fd"
     sha256                               sonoma:        "bb9db1b0866e787a63dc146ac8bbbb99383640ec140d909b44f34fb80b866946"
     sha256                               ventura:       "e193906a4e233c32a72583476b7ce47d63d084c71b0672cd2ef9973bbd9d3624"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "999b7f5c4d00acdc8b0eec7ac089ec23177cdfe73d3c361320ef0897ab60db42"
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "48b7688976ec264cc9ec27879a8d0a4826fa9f02f214aa655ef3261835f84193"
   end
 

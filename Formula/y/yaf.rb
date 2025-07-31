@@ -1,8 +1,8 @@
 class Yaf < Formula
   desc "Yet another flowmeter: processes packet data from pcap(3)"
   homepage "https://tools.netsa.cert.org/yaf/"
-  url "https://tools.netsa.cert.org/releases/yaf-2.16.4.tar.gz"
-  sha256 "b328d44e5f0fdf5fdf63acbb724cfa569b87f428dde6051958e404b689cf6e16"
+  url "https://tools.netsa.cert.org/releases/yaf-2.17.0.tar.gz"
+  sha256 "99a9e8651bcee516a20ddca093d248c5cda3890c5561b2dfd893c4414a0ed52b"
   license "GPL-2.0-only"
 
   # NOTE: This should be updated to check the main `/yaf/download.html`
@@ -44,10 +44,10 @@ class Yaf < Formula
 
   test do
     input = test_fixtures("test.pcap")
-    output = pipe_output(bin/"yafscii", shell_output("#{bin}/yaf --in #{input}"))
-    expected = "2014-10-02 10:29:06.168 - 10:29:06.169 (0.001 sec) tcp " \
+    output = pipe_output("#{bin}/yafscii", shell_output("#{bin}/yaf --in #{input}"))
+    expected = "2014-10-02 10:29:06.168497 - 10:29:06.169875 (0.001378 sec) tcp " \
                "192.168.1.115:51613 => 192.168.1.118:80 71487608:98fc8ced " \
-               "S/APF:AS/APF (7/453 <-> 5/578) rtt 0 ms"
+               "S/APF:AS/APF (7/453 <-> 5/578) rtt 451 us"
     assert_equal expected, output.strip
   end
 end

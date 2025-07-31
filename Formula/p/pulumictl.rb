@@ -1,8 +1,8 @@
 class Pulumictl < Formula
   desc "Swiss army knife for Pulumi development"
   homepage "https://github.com/pulumi/pulumictl"
-  url "https://github.com/pulumi/pulumictl/archive/refs/tags/v0.0.49.tar.gz"
-  sha256 "36af696d99adfa8ca5941780ad12f13116178f252fe47e24a70be0a2f771b0d0"
+  url "https://github.com/pulumi/pulumictl/archive/refs/tags/v0.0.50.tar.gz"
+  sha256 "5950c1e147480068cf292f0e6d68bdf38a31be971ec8dad2f6052963d3fe5eb2"
   license "Apache-2.0"
   head "https://github.com/pulumi/pulumictl.git", branch: "master"
 

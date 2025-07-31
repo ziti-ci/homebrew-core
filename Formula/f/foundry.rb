@@ -1,8 +1,8 @@
 class Foundry < Formula
   desc "Blazing fast, portable and modular toolkit for Ethereum application development"
   homepage "https://github.com/foundry-rs/foundry"
-  url "https://github.com/foundry-rs/foundry/archive/refs/tags/v1.2.3.tar.gz"
-  sha256 "856c8b5cab39f1e6dd27ee368a306add7604d1c720148763cfd599cce4e1a510"
+  url "https://github.com/foundry-rs/foundry/archive/refs/tags/v1.3.0.tar.gz"
+  sha256 "7a90541ea255003b4264fbd112d8de9c30afcd1bf82e567772a6919504863a82"
   license any_of: ["MIT", "Apache-2.0"]
   head "https://github.com/foundry-rs/foundry.git", branch: "master"
 
@@ -56,7 +56,7 @@ class Foundry < Formula
       assert_match "Suite result: ok.", shell_output("#{bin}/forge test")
     end
 
-    assert_match "Decimal: 2\n", pipe_output(bin/"chisel", "1+1")
+    assert_match "Decimal: 2\n", pipe_output("#{bin}/chisel", "1+1")
 
     anvil_port = free_port
     anvil = spawn bin/"anvil", "--port", anvil_port.to_s

@@ -2,8 +2,8 @@ class Pulumi < Formula
   desc "Cloud native development platform"
   homepage "https://pulumi.io/"
   url "https://github.com/pulumi/pulumi.git",
-      tag:      "v3.186.0",
-      revision: "e37a2ea3f2571408f96a6145d09a22f287f47ce5"
+      tag:      "v3.187.0",
+      revision: "ba984452ea927e63cc995be2bfe1a4192adcc608"
   license "Apache-2.0"
   head "https://github.com/pulumi/pulumi.git", branch: "master"
 
@@ -41,6 +41,6 @@ class Pulumi < Formula
     ENV["PULUMI_HOME"] = testpath
     ENV["PULUMI_TEMPLATE_PATH"] = testpath/"templates"
     assert_match "invalid access token",
-                 shell_output(bin/"pulumi new aws-typescript --generate-only --force --yes 2>&1", 255)
+                 shell_output("#{bin}/pulumi new aws-typescript --generate-only --force --yes 2>&1", 255)
   end
 end

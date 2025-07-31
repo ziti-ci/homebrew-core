@@ -6,12 +6,12 @@ class Dagu < Formula
   license "GPL-3.0-only"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "e4f2636fdc7488a3bf0ac0fe9f9a7e057dd429f2d88527eae149cf42e71779ba"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "276e4a2a55263326ecfdaff52097dd90441711b2c5c7a3e2a665de903c91e366"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "78a09be73955d1401131279d4205564191fd114c009b01d44da3c9ef46e73d1b"
-    sha256 cellar: :any_skip_relocation, sonoma:        "9d8ad164ebe4a12a7eb0914cf67844761cceec49a4f21d686ff357e8c71f385f"
-    sha256 cellar: :any_skip_relocation, ventura:       "c909cf93270b90db0c17b40ac507c258bd551d52ee8d937c05079a3990d76688"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "6099b03f715d77b7cc76ee15e0c67bfb104a67e4568b8b4a7e9eda7ef1a25244"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "c90c3f51e880ea09e82a51ab7fe482581b4f273bbaf027bcf332c094773f11cd"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "8c1d7f3cc6c68d259e0648e4d05c2a0114623c99e445c50b6ae2a9d99e66304a"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "ecf0f9fc25a259682e87f3d719dbe97d52db1a37380481a752fc53e1c844e8e3"
+    sha256 cellar: :any_skip_relocation, sonoma:        "a5840245c06c4134c2c488008f1c329aa792c747764449cd2713f99774f02190"
+    sha256 cellar: :any_skip_relocation, ventura:       "922836169d28eb716e833cf9d7083a60110ab332e21d581a125c6bfa20bd2292"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "0b3e340803ee451eaf2e6006a031d3f446acff29818edda5bfaeba198cca83dc"
   end
 
   depends_on "go" => :build

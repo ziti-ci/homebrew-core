@@ -16,6 +16,8 @@ class Dexidp < Formula
 
   depends_on "go" => :build
 
+  conflicts_with "dex", because: "both install `dex` binaries"
+
   def install
     ldflags = "-w -X main.version=#{version}"
     system "go", "build", *std_go_args(ldflags:, output: bin/"dex"), "./cmd/dex"

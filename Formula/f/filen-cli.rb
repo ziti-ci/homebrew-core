@@ -1,8 +1,8 @@
 class FilenCli < Formula
   desc "Interface with Filen, an end-to-end encrypted cloud storage service"
   homepage "https://github.com/FilenCloudDienste/filen-cli"
-  url "https://registry.npmjs.org/@filen/cli/-/cli-0.0.33.tgz"
-  sha256 "04d97ed98394402386fefb8847055bfb3915fa298b3f47001d705946cd6a46f9"
+  url "https://registry.npmjs.org/@filen/cli/-/cli-0.0.34.tgz"
+  sha256 "b124711dfe329029bee0475958a1fe233a61aa100c95947b71c11668aa8f45b2"
   license "AGPL-3.0-or-later"
 
   bottle do

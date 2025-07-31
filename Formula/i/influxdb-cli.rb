@@ -24,7 +24,7 @@ class InfluxdbCli < Formula
   end
 
   depends_on "go" => :build
-  depends_on "influxdb" => :test
+  depends_on "influxdb@2" => :test
 
   def install
     ldflags = %W[
@@ -43,12 +43,13 @@ class InfluxdbCli < Formula
   test do
     # Boot a test server.
     influxd_port = free_port
-    influxd = fork do
-      exec "influxd", "--bolt-path=#{testpath}/influxd.bolt",
-                      "--engine-path=#{testpath}/engine",
-                      "--http-bind-address=:#{influxd_port}",
-                      "--log-level=error"
-    end
+    influxd_args = %W[
+      --bolt-path=#{testpath}/influxd.bolt
+      --engine-path=#{testpath}/engine
+      --http-bind-address=:#{influxd_port}
+      --log-level=error
+    ]
+    influxd = spawn Formula["influxdb@2"].opt_bin/"influxd", *influxd_args
     sleep 30
 
     # Configure the CLI for the test env.

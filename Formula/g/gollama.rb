@@ -4,6 +4,7 @@ class Gollama < Formula
   url "https://github.com/sammcj/gollama/archive/refs/tags/v1.35.1.tar.gz"
   sha256 "a2b57d378d8a2741e7b6eaa762b14e6d263a9a7c3edc171be32482a491516441"
   license "MIT"
+  revision 1
   head "https://github.com/sammcj/gollama.git", branch: "main"
 
   bottle do
@@ -23,7 +24,7 @@ class Gollama < Formula
   end
 
   test do
-    assert_match version.to_s, shell_output(bin/"gollama -v")
+    assert_match version.to_s, shell_output("#{bin}/gollama -v")
 
     port = free_port
     ENV["OLLAMA_HOST"] = "localhost:#{port}"
@@ -32,7 +33,7 @@ class Gollama < Formula
     sleep 3
     begin
       assert_match "No matching models found.",
-        shell_output(bin/"gollama -h http://localhost:#{port} -s chatgpt")
+        shell_output("#{bin}/gollama -h http://localhost:#{port} -s chatgpt")
     ensure
       Process.kill "SIGTERM", pid
     end

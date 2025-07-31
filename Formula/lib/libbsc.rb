@@ -1,11 +1,9 @@
 class Libbsc < Formula
   desc "High performance block-sorting data compression library"
   homepage "http://libbsc.com"
-  url "https://github.com/IlyaGrebnov/libbsc/archive/refs/tags/v3.3.9.tar.gz"
-  sha256 "d287535feaf18a05c3ffc9ccba3ee4eacd7604224b4648121d7388727160f107"
+  url "https://github.com/IlyaGrebnov/libbsc/archive/refs/tags/v3.3.10.tar.gz"
+  sha256 "8e0ad726d808402c3573da35b1fd8945eda6cfdeace6271569d4d516d964fe38"
   license "Apache-2.0"
-
-  no_autobump! because: :requires_manual_review
 
   bottle do
     sha256 cellar: :any,                 arm64_sequoia: "c7ed848197e074d4ffbf597c051dcc37399d2d589c6ada3a15f90fd049859470"

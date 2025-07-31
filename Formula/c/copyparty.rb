@@ -3,18 +3,18 @@ class Copyparty < Formula
 
   desc "Portable file server"
   homepage "https://github.com/9001/copyparty"
-  url "https://files.pythonhosted.org/packages/ab/fb/95b58ef0848ed78c80fec0e19749f8daccdb848d3dd4294d3ba8b0978845/copyparty-1.18.6.tar.gz"
-  sha256 "f136106ec36f3b91dcab3a473c039b4f2b999afe5c3a5a9edb5d217a4cfb0bd2"
+  url "https://files.pythonhosted.org/packages/d3/f4/992e77658fb1440f8559ffa10f6c815caaca653f7d4c3b1d6ed379acc580/copyparty-1.18.7.tar.gz"
+  sha256 "ecdeb29dcf46af0427cdddc86faece7d5511f60b4e5a49106fdb8efd23a42935"
   license "MIT"
 
   bottle do
-    sha256 cellar: :any,                 arm64_sequoia: "f5c55ea475e12367b2d3a07852cdcaf7f9bf6e10c551868e246760f8df5401c4"
-    sha256 cellar: :any,                 arm64_sonoma:  "9455f502ba3d41add2e1dfff9f19936bcd498ca17d4b49d2725ab1156b2dde2e"
-    sha256 cellar: :any,                 arm64_ventura: "70617580c1467211f0421ad6b9d614c4a84dab0a4c2d3ff9a77e89ee115d36ef"
-    sha256 cellar: :any,                 sonoma:        "05bc35f81c96c23bebfd978d43be37613db6c0e273da032b3eeb8ca0e39e57ef"
-    sha256 cellar: :any,                 ventura:       "2eee93f9ab81e67cb2b6d7d80ccb60917e0b588700d9029c50eaa769af7675d0"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "9d96232cd21a05ed50d1a95b86f96fd14d583afc6a3a9ec620c25c066bc8e8e3"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "e541eada6849ea8ef2538770abe340d7d482c86e361f3715d8440a926fe390cd"
+    sha256 cellar: :any,                 arm64_sequoia: "48c4b254a3fed54bc500bbb2c701ad1151f64c620eca5ed5d9e175acdc612eb8"
+    sha256 cellar: :any,                 arm64_sonoma:  "878297e98bc32552fd8590beecc9e2ef11bc55be4090b4ddf4d34b4eb3599b53"
+    sha256 cellar: :any,                 arm64_ventura: "7b90cf997e450db83e34e4ac20b07ca2618892cf174957531d3ffb3e93d8228b"
+    sha256 cellar: :any,                 sonoma:        "20c73c6fd0a33e22a82bd731dbaa850b27a1240bcc36181d241106a5c8bd5f5f"
+    sha256 cellar: :any,                 ventura:       "da189fc15713fb7c216a4f4093cf285a163e82c047eff27205b55f164edc1bd1"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "defe36f5b541534c5bd7972e7e37f1197378c34595d2db8321649268c2945250"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "d3666ceda0f46882afe8062c5a59817bae991f2ed78c5cbefb2e45e16ec5ec66"
   end
 
   depends_on "cmake" => :build
@@ -31,8 +31,8 @@ class Copyparty < Formula
   end
 
   resource "argon2-cffi-bindings" do
-    url "https://files.pythonhosted.org/packages/b9/e9/184b8ccce6683b0aa2fbb7ba5683ea4b9c5763f1356347f1312c32e3c66e/argon2-cffi-bindings-21.2.0.tar.gz"
-    sha256 "bb89ceffa6c791807d1305ceb77dbfacc5aa499891d2c55661c6459651fc39e3"
+    url "https://files.pythonhosted.org/packages/5c/2d/db8af0df73c1cf454f71b2bbe5e356b8c1f8041c979f505b3d3186e520a9/argon2_cffi_bindings-25.1.0.tar.gz"
+    sha256 "b957f3e6ea4d55d820e40ff76f450952807013d361a65d7f28acc0acbf29229d"
   end
 
   resource "jinja2" do

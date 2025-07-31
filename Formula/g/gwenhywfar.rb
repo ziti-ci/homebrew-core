@@ -28,7 +28,7 @@ class Gwenhywfar < Formula
   depends_on "libgpg-error"
   depends_on "openssl@3"
   depends_on "pkgconf" # gwenhywfar-config needs pkg-config for execution
-  depends_on "qt@5"
+  depends_on "qt"
 
   on_macos do
     depends_on "gettext"
@@ -46,8 +46,12 @@ class Gwenhywfar < Formula
       ENV.append_to_cflags "-Wno-int-conversion -Wno-incompatible-function-pointer-types"
     end
 
+    # Workaround for Qt6 until next release which should have fix.
+    # https://www.aquamaniac.de/rdm/projects/gwenhywfar/repository/revisions/49e4fb81dc41efd966115ff8a610a84495b330e4
+    ln_s buildpath/"gui/qt5", buildpath/"gui/qt6"
+
     inreplace "gwenhywfar-config.in.in", "@PKG_CONFIG@", "pkg-config"
-    guis = ["cpp", "qt5"]
+    guis = ["cpp", "qt6"]
     guis << "cocoa" if OS.mac?
     system "./configure", "--disable-silent-rules",
                           "--with-guis=#{guis.join(" ")}",
@@ -75,24 +79,21 @@ class Gwenhywfar < Formula
       cmake_minimum_required(VERSION 3.29)
       project(test_gwen)
 
-      find_package(Qt5 REQUIRED Core Widgets)
+      find_package(Qt6 REQUIRED Core Widgets)
       find_package(gwenhywfar REQUIRED)
       find_package(gwengui-cpp REQUIRED)
-      find_package(gwengui-qt5 REQUIRED)
+      find_package(gwengui-qt6 REQUIRED)
 
       add_executable(${PROJECT_NAME} test.c)
 
       target_link_libraries(${PROJECT_NAME} PUBLIC
                       gwenhywfar::core
                       gwenhywfar::gui-cpp
-                      gwenhywfar::gui-qt5
+                      gwenhywfar::gui-qt6
       )
     CMAKE
 
-    args = std_cmake_args
-    args << "-DQt5_DIR=#{Formula["qt@5"].opt_prefix/"lib/cmake/Qt5"}"
-
-    system "cmake", testpath.to_s, *args
+    system "cmake", testpath.to_s, *std_cmake_args
     system "make"
   end
 end

@@ -8,11 +8,11 @@ class MediaControl < Formula
   head "https://github.com/ungive/media-control.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any, arm64_sequoia: "99828a6d0984a865e0d1797dedd5a65b5097a8c7cd7621e77950a6c4a7ae1a62"
-    sha256 cellar: :any, arm64_sonoma:  "a23af3ccaa578660f374e1d1fa0a84f00fb5d8196043e60b534deb2de69935e5"
-    sha256 cellar: :any, arm64_ventura: "d1b2778e04792c500c6c627eb966d4581f8266800a46402280e0b2c9dd60da7c"
-    sha256 cellar: :any, sonoma:        "4aa566bb09e4835d0fa19d4a9f7bec69a88b3424a806c5ad3bbe56f5ce36e74f"
-    sha256 cellar: :any, ventura:       "da26f8b5d42aaf4df2696e9f31d6d953cbf0937959b022dd526d372db6071da1"
+    sha256 cellar: :any, arm64_sequoia: "2b9e3181f309c01ea8486b28e0d83d5524b3e9d7ecf5ade7c21aff2307775165"
+    sha256 cellar: :any, arm64_sonoma:  "51060056b44c31b3eb54867db0883e723481fb8a491bc5166b39b7bf9010b3ac"
+    sha256 cellar: :any, arm64_ventura: "64531989913840f77e32198e0d9f986f7141f90f97a2b80c2208bc7209aaac91"
+    sha256 cellar: :any, sonoma:        "387029d41be8466ed00fa287611533c7665fe6dcdcfef4506f65bc35a351d0df"
+    sha256 cellar: :any, ventura:       "587d3f6827c3f5ed8906074b2d7da23e57aa1764cf71edfee322739a75203213"
   end
 
   depends_on "cmake" => :build

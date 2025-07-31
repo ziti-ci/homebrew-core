@@ -2,11 +2,10 @@ class Carla < Formula
   desc "Audio plugin host supporting LADSPA, LV2, VST2/3, SF2 and more"
   homepage "https://kx.studio/Applications:Carla"
   license "GPL-2.0-or-later"
-  revision 1
 
   stable do
-    url "https://github.com/falkTX/Carla/archive/refs/tags/v2.5.9.tar.gz"
-    sha256 "226fb5d646b7541b82035080190e7440df1f92372fb798b4ad49289570e5ad81"
+    url "https://github.com/falkTX/Carla/archive/refs/tags/v2.5.10.tar.gz"
+    sha256 "ae2835b12081f7271a6b0b25d34b87d36b022c40370028ca4a10f90fcedfa661"
 
     # TODO: Remove in 2.6.0
     depends_on maximum_macos: [:sonoma, :build]

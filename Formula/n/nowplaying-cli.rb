@@ -16,7 +16,7 @@ class NowplayingCli < Formula
   end
 
   # see upstream discussion, https://github.com/kirtan-shah/nowplaying-cli/issues/28
-  deprecate! date: "2025-07-31", because: :unmaintained
+  deprecate! date: "2026-04-17", because: :unmaintained
 
   depends_on :macos
 

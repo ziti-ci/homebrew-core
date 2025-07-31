@@ -3,8 +3,8 @@ class Localstack < Formula
 
   desc "Fully functional local AWS cloud stack"
   homepage "https://localstack.cloud/"
-  url "https://files.pythonhosted.org/packages/47/72/b1fa6c2928cb8fd38a0681920f32201ee88b0ee93625e03d35bcf07bb765/localstack-4.6.0.tar.gz"
-  sha256 "2b0ba609816241dba507d7d7b20ca44ee598b4c730f6c56bed3e6f5472dc6c7d"
+  url "https://files.pythonhosted.org/packages/f8/42/61aa34f15be3439eccdc248112f99b207ae87d1f35e401e6de9fd0881e84/localstack-4.7.0.tar.gz"
+  sha256 "c798c31ca241873f6ea6b935c7d06a6f7f7b9fe306e9cd296e3c1ee4adacdb27"
   license "Apache-2.0"
 
   bottle do
@@ -63,14 +63,19 @@ class Localstack < Formula
     sha256 "12f65c9b470abda6dc35cf8e63cc574b1c52b11df2c86030af0ac09b01b13ea9"
   end
 
+  resource "jsonpickle" do
+    url "https://files.pythonhosted.org/packages/e4/a6/d07afcfdef402900229bcca795f80506b207af13a838d4d99ad45abf530c/jsonpickle-4.1.1.tar.gz"
+    sha256 "f86e18f13e2b96c1c1eede0b7b90095bbb61d99fedc14813c44dc2f361dbbae1"
+  end
+
   resource "localstack-core" do
-    url "https://files.pythonhosted.org/packages/87/af/bb6760edcbb1e1c3906c2aa961c6a744e9a9a4f11c2ac7d2ac0e5fabd08d/localstack_core-4.6.0.tar.gz"
-    sha256 "e324a8ece8acb1b15a8961ea1a103a50e24e61bbbd30e608b9f5a03ff3b0b0ad"
+    url "https://files.pythonhosted.org/packages/98/f1/9dfc210884d1c5913d5e63491df96827176e0ea219649e516017eaef05d2/localstack_core-4.7.0.tar.gz"
+    sha256 "cd72f6779d4e76c2427c814a31e145f6d9e6dd3737a4d3e9283e6b690ea6b114"
   end
 
   resource "localstack-ext" do
-    url "https://files.pythonhosted.org/packages/0c/4f/0f6424553530c1b3b88a9815d7f10a3025c14144f267e525c7156d4fa59f/localstack_ext-4.6.0.tar.gz"
-    sha256 "7b9fcd712877bd5678b394bb24e8ebdb1df9fb4c669177049c0d97e005c8615c"
+    url "https://files.pythonhosted.org/packages/19/7a/80d865ef5377617b487dfd34645f3a127e3fdd9475372b8f8bcf406b7d76/localstack_ext-4.7.0.tar.gz"
+    sha256 "38b7826c0c9b3fa4a01dbd8335ff2b5d4af1b7cf663a241fa76c31761d80dc5e"
   end
 
   resource "markdown-it-py" do
@@ -139,8 +144,8 @@ class Localstack < Formula
   end
 
   resource "rich" do
-    url "https://files.pythonhosted.org/packages/a1/53/830aa4c3066a8ab0ae9a9955976fb770fe9c6102117c8ec4ab3ea62d89e8/rich-14.0.0.tar.gz"
-    sha256 "82f1bc23a6a21ebca4ae0c45af9bdbc492ed20231dcb63f297d6d1021a9d5725"
+    url "https://files.pythonhosted.org/packages/fe/75/af448d8e52bf1d8fa6a9d089ca6c07ff4453d86c65c145d0a300bb073b9b/rich-14.1.0.tar.gz"
+    sha256 "e497a48b844b0320d45007cdebfeaeed8db2a4f4bcf49f15e455cfc4af11eaa8"
   end
 
   resource "semver" do

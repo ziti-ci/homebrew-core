@@ -1,8 +1,8 @@
 class Pnetcdf < Formula
   desc "Parallel netCDF library for scientific data using the OpenMPI library"
   homepage "https://parallel-netcdf.github.io/index.html"
-  url "https://parallel-netcdf.github.io/Release/pnetcdf-1.14.0.tar.gz"
-  sha256 "e5a7e87dcf7d526b97e8ffdce05df0d2845965787a7d21242fafa9656950e402"
+  url "https://parallel-netcdf.github.io/Release/pnetcdf-1.14.1.tar.gz"
+  sha256 "ffb5ee9bb40e4e5f09f1ed6b2eaa94c4e4810ce00111c29b5024cf91486d3fed"
   license "NetCDF"
 
   livecheck do
@@ -23,12 +23,6 @@ class Pnetcdf < Formula
   depends_on "open-mpi"
 
   uses_from_macos "m4" => :build
-
-  # Fix -flat_namespace being used on Big Sur and later.
-  patch do
-    url "https://raw.githubusercontent.com/Homebrew/formula-patches/03cf8088210822aa2c1ab544ed58ea04c897d9c4/libtool/configure-big_sur.diff"
-    sha256 "35acd6aebc19843f1a2b3a63e880baceb0f5278ab1ace661e57a502d9d78c93c"
-  end
 
   def install
     # Work around asm incompatibility with new linker (FB13194320)

@@ -21,12 +21,12 @@ class Influxdb < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "577ba9284522799541c29345f9c05007fa0a4d49c506e9d6e3ef8410cf070bba"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "9cb31a2b14b041a044bb1bd8ca75a3a1799d6ab4c9981d95eafe2675cf1786fc"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "1ff048a6a4b8784a6f07c16c40a406fa90f7acc77b9f6db1d2b59403fac0d211"
-    sha256 cellar: :any_skip_relocation, sonoma:        "2cbda744c82743c7e1b0193708c813b22602b65ce9c3c5117f595ea44933103e"
-    sha256 cellar: :any_skip_relocation, ventura:       "5b206daf7596804851d172d0f70d0713b2477a1cc7fb58d5b0c18a3deba9a6f0"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "dce1ad38f5b09ae95904350471e1d3dd7dd9eb1558e07c52e9dda1db2dd8ab2a"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "23d65d552476d6a5c9a10d741f202fead045809782f0eeb25ac146f92b6ae59f"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "7a6b817054743d4ad428dc1f7b02a0b22b8f5c575173e3b2e8f16f6cfd9f7702"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "402fdde18259f92fb63ae902a4c90619ff1ab3fdd6dd08961742b69906b05f7c"
+    sha256 cellar: :any_skip_relocation, sonoma:        "f67c158257908b8c36ce0334d46eb7c43255fa27e126fa5f043153f3946fb95a"
+    sha256 cellar: :any_skip_relocation, ventura:       "a716620cb960f36e308239eee5f7277f29070fb3e8e13246cea44e30c4ace5c5"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "6c5c653142f61b7a1abee3d66add075b163341e0908579a192a6217197e3853d"
   end
 
   depends_on "breezy" => :build

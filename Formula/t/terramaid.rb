@@ -1,8 +1,8 @@
 class Terramaid < Formula
   desc "Utility for generating Mermaid diagrams from Terraform configurations"
   homepage "https://github.com/RoseSecurity/Terramaid"
-  url "https://github.com/RoseSecurity/Terramaid/archive/refs/tags/v2.6.0.tar.gz"
-  sha256 "3415bae95e17556bfcc21893c494bd536523b5fd071b70ffa5068bad3490d11a"
+  url "https://github.com/RoseSecurity/Terramaid/archive/refs/tags/v2.6.2.tar.gz"
+  sha256 "d9733bbe9a9df2736d654e5ab3fa9caf7448e82a1ae23f581f5cb6f59fd50a58"
   license "Apache-2.0"
   head "https://github.com/RoseSecurity/Terramaid.git", branch: "main"
 

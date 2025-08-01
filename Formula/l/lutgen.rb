@@ -1,8 +1,8 @@
 class Lutgen < Formula
   desc "Blazingly fast interpolated LUT generator and applicator for color palettes"
   homepage "https://ozwaldorf.github.io/lutgen-rs/"
-  url "https://github.com/ozwaldorf/lutgen-rs/archive/refs/tags/lutgen-v1.0.0.tar.gz"
-  sha256 "6fb508e4c8ccd08157c2196114f2d3c8f513f521e1144979e47135fd852b338f"
+  url "https://github.com/ozwaldorf/lutgen-rs/archive/refs/tags/lutgen-v1.0.1.tar.gz"
+  sha256 "12923b00a23dc6a9b871e1be1fda266254dca679698ae32957d0c454ef78518a"
   license "MIT"
   head "https://github.com/ozwaldorf/lutgen-rs.git", branch: "main"
 

@@ -1,9 +1,9 @@
 class RomTools < Formula
   desc "Tools for Multiple Arcade Machine Emulator"
   homepage "https://www.mamedev.org/"
-  url "https://github.com/mamedev/mame/archive/refs/tags/mame0278.tar.gz"
-  version "0.278"
-  sha256 "ca5f44a0ed834875f8420a75587706af210ff8c5922942509bc5bfef7d45c360"
+  url "https://github.com/mamedev/mame/archive/refs/tags/mame0279.tar.gz"
+  version "0.279"
+  sha256 "07e2e0d8ec187b12eadba3d7917ce3227bf0c5fccec8e934d70ada4fc502130c"
   license "GPL-2.0-or-later"
   head "https://github.com/mamedev/mame.git", branch: "master"
 
@@ -11,7 +11,7 @@ class RomTools < Formula
     formula "mame"
   end
 
-  no_autobump! because: :requires_manual_review
+  no_autobump! because: :incompatible_version_format
 
   bottle do
     sha256 cellar: :any,                 arm64_sequoia: "c94c86c35e5b73d192e1a564ad7c6808d21426cff3dabddac4fe3f82b583a8c8"

@@ -9,8 +9,8 @@ class Ratarmount < Formula
   head "https://github.com/mxmlnkn/ratarmount.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_linux:  "a47c1f4afdfe798b9f95ca27387be51adb9119eec04865822a81db9251dff97f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "ac5b04865362cd22b5da926a986507d9659fcdebcc488a7100777125b6eedae3"
+    sha256 cellar: :any_skip_relocation, arm64_linux:  "dc24769dab58d7cb5f167c556b95548dff82d25cfbfcf6ef9668c96ff752036e"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "5c675df6c16d5f30b0a3b4aeece57f5120e53870657c842dba01f66bd74b7296"
   end
 
   depends_on "libffi"

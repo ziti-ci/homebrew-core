@@ -8,13 +8,13 @@ class Tmt < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any,                 arm64_sequoia: "ff4b598c0ded3fe0f38be708d39a01a529dd10584bca737391215a465fa9d5a3"
-    sha256 cellar: :any,                 arm64_sonoma:  "2c7f45fb3ec3e9e2a3e5888da279fe2c0863d8aac0322c035222317240a97ecd"
-    sha256 cellar: :any,                 arm64_ventura: "18072739844a6f745804446204a670ee045f917a371f355d50a1fafd98206e3f"
-    sha256 cellar: :any,                 sonoma:        "4928936b1a2091a6ab36139f5fcbda6244c1e5c081e4d1d85d885649d8003272"
-    sha256 cellar: :any,                 ventura:       "a064f3a080206505bd2906ba309a484f2da3d028ab28517d02ad686744281feb"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "ceadfbe0f5f3b233b2ffc9d8bd28e052adbdf9c3032bdf55ef3ace7dc4cf845e"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "ee148f3d908758d42f6a43092aed6ee4ca9190dc63fff1e8efc1eed7bdcec16d"
+    sha256 cellar: :any,                 arm64_sequoia: "37436ced2f4c51beccc01052468cc706ef809fc8100c53a6bb2a6ca6e5b0dfc1"
+    sha256 cellar: :any,                 arm64_sonoma:  "9475a37b69df1de78016b79158b3e9936093846ecc532561fdfbb14d7859ebd4"
+    sha256 cellar: :any,                 arm64_ventura: "1aec79b8dafb82e2a2ae880d9ab65c5c8aa8f2fa7656b812614787c9b5ec34fd"
+    sha256 cellar: :any,                 sonoma:        "aeaea5e2a27daf6c4c38630724dec2db60dae03ec145f9750d2f676c05882b1f"
+    sha256 cellar: :any,                 ventura:       "ccf657394f0fde74f985d01e83d933f649dcfbed0122156ac78d235ee2a2aa9c"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "850256a89bea3c2aa5797fc08a7aacdffab648adfd2a771c0eda9e903069d605"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "152f3592da62d99253c8c116a966bae3ef5048ecae18624f25e4dd0d5738ab82"
   end
 
   depends_on "rust" => :build # for rpds-py

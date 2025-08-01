@@ -7,13 +7,13 @@ class AvroCpp < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any,                 arm64_sequoia: "82b1a0dea57a3a31212c4276544e531efba46f7d19b45a9fc0b99a0b4a68c9d0"
-    sha256 cellar: :any,                 arm64_sonoma:  "ea66a997dbb67c668b2efeefc6c55d99bb18eba228107a80ca62eab4c0e6d616"
-    sha256 cellar: :any,                 arm64_ventura: "cb8df69dec1f3fd1fc81b92439e5f790f5d0b9b15c813c09fd67d2bce97faea8"
-    sha256 cellar: :any,                 sonoma:        "1e6a8d749991317610e3b6ea1138a8e4d76d900a3aa705b5367cae864b2ee5b4"
-    sha256 cellar: :any,                 ventura:       "bff702fbaa5e5d3804c890b944ae5f89466adab8cc589b6d69242f128bd9680f"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "9031c2d1bff4c0f2ceb59ae01efd28e0a983fd7d49eb8ab7a0e0dfbb4f8e1293"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "9b869f1c4d9cb66d3cc15dbdb24ca17ad431d457807bfc7dab3aca7fe3015831"
+    sha256 cellar: :any,                 arm64_sequoia: "291b84c78bc647e73768a8e56238854a0921e6bb4cb0719941d2224dc615d4a1"
+    sha256 cellar: :any,                 arm64_sonoma:  "b4814a1221cb3c2b269295b082a7800f9e98b6e35353b5169e0cd11bde2b1204"
+    sha256 cellar: :any,                 arm64_ventura: "5baa7aba33ff81ea4533abd7cea3618e388b297f9ed515e9070081aa18c5f682"
+    sha256 cellar: :any,                 sonoma:        "b6871bfbea04fb244cb3703fc02b5c60f9694a7d69e8651690ac871a3a2be192"
+    sha256 cellar: :any,                 ventura:       "9c38cb460359de66ad6c65bf50356a22698d9a08cf50f4ea4798a7e9acc653cb"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "44bfb408cd8eca3fdb23efbcb046e741768f4e1de5e86c62fc00f98b68e94966"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "3fa20bafdf7c160c06da0dc7fd48574cf2fb584e01f36a513f11a8fc0aef1056"
   end
 
   depends_on "cmake" => :build

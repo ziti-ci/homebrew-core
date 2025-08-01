@@ -1,8 +1,8 @@
 class Oxen < Formula
   desc "Data VCS for structured and unstructured machine learning datasets"
   homepage "https://www.oxen.ai/"
-  url "https://github.com/Oxen-AI/Oxen/archive/refs/tags/v0.36.2.tar.gz"
-  sha256 "243fe6bc600914510c8adeea4ce0f9885aab9aedbd69ab05b73c8f98560424a8"
+  url "https://github.com/Oxen-AI/Oxen/archive/refs/tags/v0.36.3.tar.gz"
+  sha256 "fa9744d1c5c0fe48a9e1c1dcb191a5aa7e193099aa7d2370cbfb049ed0f31bb4"
   license "Apache-2.0"
   head "https://github.com/Oxen-AI/Oxen.git", branch: "main"
 
@@ -32,18 +32,6 @@ class Oxen < Formula
 
   on_linux do
     depends_on "openssl@3"
-  end
-
-  # Remove `procinfo` crate dep, upstream pr ref, https://github.com/Oxen-AI/Oxen/pull/93
-  patch do
-    url "https://github.com/Oxen-AI/Oxen/commit/d8867a02a8194e986e1c0e6727dcfea46ba8eb5e.patch?full_index=1"
-    sha256 "511ef9a4a09ad3627fb6a9adf898862e45939529542e07d6c63300f90e74c85d"
-  end
-
-  # Add missing dependencies, upstream pr ref, https://github.com/Oxen-AI/Oxen/pull/94
-  patch do
-    url "https://github.com/Oxen-AI/Oxen/commit/d1961e1b49f094ff0247d75a3e5022f4a1999b2c.patch?full_index=1"
-    sha256 "2eae56fd15abae3018e211a670e8552fff233893e4fdc9ce357415cb922feb26"
   end
 
   def install

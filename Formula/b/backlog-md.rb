@@ -6,13 +6,13 @@ class BacklogMd < Formula
   license "MIT"
 
   bottle do
-    sha256                               arm64_sequoia: "ac559a3d40d92ef49d757ed69779fe3ffc669b7c45b74acc41229b4267275671"
-    sha256                               arm64_sonoma:  "ac559a3d40d92ef49d757ed69779fe3ffc669b7c45b74acc41229b4267275671"
-    sha256                               arm64_ventura: "ac559a3d40d92ef49d757ed69779fe3ffc669b7c45b74acc41229b4267275671"
-    sha256 cellar: :any_skip_relocation, sonoma:        "7da49dfa50ab396d6dcbba11f3678b1fedaa40bcc5367fcd5719e958dff7602e"
-    sha256 cellar: :any_skip_relocation, ventura:       "7da49dfa50ab396d6dcbba11f3678b1fedaa40bcc5367fcd5719e958dff7602e"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "96b5446e36e45196641dc1aa19664ddfd7293373b8b385abc30a2bbd2f13a4e8"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "369c718bcebaee1bccd96aa92d869fdb5d1c40990807b4b122832e639fe274f4"
+    sha256                               arm64_sequoia: "ee2586fd88a7546211f93bdfca1f23a73b4afd21d53fcbd467137c7b0d3d74b5"
+    sha256                               arm64_sonoma:  "ee2586fd88a7546211f93bdfca1f23a73b4afd21d53fcbd467137c7b0d3d74b5"
+    sha256                               arm64_ventura: "ee2586fd88a7546211f93bdfca1f23a73b4afd21d53fcbd467137c7b0d3d74b5"
+    sha256 cellar: :any_skip_relocation, sonoma:        "0a1e2f25abad58937eeb799132ff5d447c3fa6a1cfb753f8497692f9f53755db"
+    sha256 cellar: :any_skip_relocation, ventura:       "0a1e2f25abad58937eeb799132ff5d447c3fa6a1cfb753f8497692f9f53755db"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "26abea10d8660c5ff75d405278052a7573a28673bfb2e444e2cf2ee9e3224e8f"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "42f4f9e9bfe5d89db8815aec500869243368e35baf7f86c912f4f0fdfff5a122"
   end
 
   depends_on "node"

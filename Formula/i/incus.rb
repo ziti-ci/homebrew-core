@@ -14,13 +14,13 @@ class Incus < Formula
   no_autobump! because: :requires_manual_review
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "3926d000e75be945d42a3271fe79216ba8b501176e76d43ef638f7ee6301948f"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "3926d000e75be945d42a3271fe79216ba8b501176e76d43ef638f7ee6301948f"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "3926d000e75be945d42a3271fe79216ba8b501176e76d43ef638f7ee6301948f"
-    sha256 cellar: :any_skip_relocation, sonoma:        "640a6fca8ee3b63d7105875698be1db96a508a0bb42132d2500d6444a86c4c1c"
-    sha256 cellar: :any_skip_relocation, ventura:       "640a6fca8ee3b63d7105875698be1db96a508a0bb42132d2500d6444a86c4c1c"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "a11b74dddbbbc6b584ddd010d797f98c2211d2d58bec0a9849315a7fac37d22b"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "d6816ac83ffb33490b752ac21984e8b18009b486609f7f48982f2fbcd88df504"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "e24740cbd69e0c19f427ed2054a4f70dc2a6d3a115a584b558ce246cd912b9ab"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "e24740cbd69e0c19f427ed2054a4f70dc2a6d3a115a584b558ce246cd912b9ab"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "e24740cbd69e0c19f427ed2054a4f70dc2a6d3a115a584b558ce246cd912b9ab"
+    sha256 cellar: :any_skip_relocation, sonoma:        "7b0ef91404bf7dd3d7ad2399e2542db6e525281324aa2a7ba9c4dce6cf82d1a1"
+    sha256 cellar: :any_skip_relocation, ventura:       "7b0ef91404bf7dd3d7ad2399e2542db6e525281324aa2a7ba9c4dce6cf82d1a1"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "a1e880760e2e03249e47a61386f5b380cd0aca78df716ae550b0eb2f7560603b"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "d92541b8bce83ea9621af051ce04b7ba4958fd8f7ad5d40d4116a510c6f0ff8d"
   end
 
   depends_on "go" => :build

@@ -6,12 +6,12 @@ class RekorCli < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "72adeb8aff63987e2fe31c48b8dc0c193264aa6c85f6524163825a8f3ae494bd"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "72adeb8aff63987e2fe31c48b8dc0c193264aa6c85f6524163825a8f3ae494bd"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "72adeb8aff63987e2fe31c48b8dc0c193264aa6c85f6524163825a8f3ae494bd"
-    sha256 cellar: :any_skip_relocation, sonoma:        "d333f5e92d551acbbab84c88d69211644b89df5303c36457cc298849c5bbb807"
-    sha256 cellar: :any_skip_relocation, ventura:       "d333f5e92d551acbbab84c88d69211644b89df5303c36457cc298849c5bbb807"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "5055688e7d183eb84d4a9bc1653e7a7180bd01dd8a9df2cd76db2072047f4fa3"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "1947724858e53b73f7f1bb8f39f1503bcb86e90d331b7e354fc39aa92f03c78a"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "1947724858e53b73f7f1bb8f39f1503bcb86e90d331b7e354fc39aa92f03c78a"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "1947724858e53b73f7f1bb8f39f1503bcb86e90d331b7e354fc39aa92f03c78a"
+    sha256 cellar: :any_skip_relocation, sonoma:        "bbe3973cc5c656b79396993f7c62e1769da593e5d6c7ab6646c0a122480c8fcf"
+    sha256 cellar: :any_skip_relocation, ventura:       "bbe3973cc5c656b79396993f7c62e1769da593e5d6c7ab6646c0a122480c8fcf"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "1f6a856cb2aa7fa6156a7b1aecf27a9435f4c63dc01e63c9f3a431b1c6016a7e"
   end
 
   depends_on "go" => :build

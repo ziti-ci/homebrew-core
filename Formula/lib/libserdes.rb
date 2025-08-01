@@ -5,6 +5,7 @@ class Libserdes < Formula
       tag:      "v8.0.0",
       revision: "152fad7ddec001e886452726e71f3b6a5c8e8c65"
   license "Apache-2.0"
+  revision 1
   head "https://github.com/confluentinc/libserdes.git", branch: "master"
 
   no_autobump! because: :requires_manual_review

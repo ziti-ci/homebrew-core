@@ -1,8 +1,8 @@
 class Blisp < Formula
   desc "ISP tool & library for Bouffalo Labs RISC-V Microcontrollers and SoCs"
   homepage "https://github.com/pine64/blisp"
-  url "https://github.com/pine64/blisp/archive/refs/tags/v0.0.4.tar.gz"
-  sha256 "288a8165f7dce604657f79ee8eea895cc2fa4e4676de5df9853177defd77cf78"
+  url "https://github.com/pine64/blisp/archive/refs/tags/v0.0.5.tar.gz"
+  sha256 "79f87fbbb66f1d9ddf250cdc15dc16638d95e0905665003b08920a4b1fda9f96"
   license "MIT"
   head "https://github.com/pine64/blisp.git", branch: "master"
 
@@ -37,8 +37,8 @@ class Blisp < Formula
   end
 
   test do
-    output = shell_output("#{bin}/blisp write -c bl70x --reset Pinecilv2_EN.bin 2>&1", 3)
-    assert_match "Device not found", output
+    output = shell_output("#{bin}/blisp write -c bl70x --reset Pinecilv2_EN.bin 2>&1", 11)
+    assert_match "Input firmware not found: Pinecilv2_EN.bin", output
 
     assert_match version.to_s, shell_output("#{bin}/blisp --version")
   end

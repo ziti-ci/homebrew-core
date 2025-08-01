@@ -11,6 +11,7 @@ class Fakesteak < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura: "ce939e2b91c0f63e2f29534fce23306a266b9a08569aa73608973f82d963507d"
     sha256 cellar: :any_skip_relocation, sonoma:        "b2f86a907d30ec94ef32e5f60e91bfb1c938c3283144ce5d0ecd9844b53ff2f2"
     sha256 cellar: :any_skip_relocation, ventura:       "7f80849b67d39baee17d87603098b7d6ecc480d2b67108f2b311d91c874394a9"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "74164e3c8e1eaf53327943ef1e0e454ab02695e54fbd440e4ca247aaffc79663"
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "aebc761ec7d4c947ef5cc769fd00c3cb00d3b02ad42ff1395ccdddf6d685da18"
   end
 

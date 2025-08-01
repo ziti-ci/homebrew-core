@@ -5,6 +5,7 @@ class Kcat < Formula
       tag:      "1.7.0",
       revision: "f2236ae5d985b9f31631b076df24ca6c33542e61"
   license "BSD-2-Clause"
+  revision 1
   head "https://github.com/edenhill/kcat.git", branch: "master"
 
   # Upstream sometimes creates a tag with a stable version format but does not

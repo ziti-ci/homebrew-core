@@ -6,6 +6,7 @@ class Glances < Formula
   url "https://files.pythonhosted.org/packages/3b/a2/b0cd24f1309002f0488e9861e6c265c4e673ba6e1d3d4503382646c76c43/glances-4.3.3.tar.gz"
   sha256 "56695ff97043149e007edbb188dea82dd29f479e2ca5b8324a119b95aafb8fa4"
   license "LGPL-3.0-or-later"
+  revision 1
   head "https://github.com/nicolargo/glances.git", branch: "develop"
 
   bottle do

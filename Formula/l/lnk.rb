@@ -1,8 +1,8 @@
 class Lnk < Formula
   desc "Git-native dotfiles management that doesn't suck"
   homepage "https://github.com/yarlson/lnk"
-  url "https://github.com/yarlson/lnk/archive/refs/tags/v0.5.0.tar.gz"
-  sha256 "18d9b61e558004073ba7f680fd575fd498dd0ef0c97c0487c93c7d5152856ca9"
+  url "https://github.com/yarlson/lnk/archive/refs/tags/v0.5.1.tar.gz"
+  sha256 "089b210a5be46d3741ecb6575aeca3c28e2a59c4851dd76a9e4ed30575ba09b0"
   license "MIT"
 
   bottle do

@@ -1,8 +1,8 @@
 class Jsrepo < Formula
   desc "Build and distribute your code"
   homepage "https://jsrepo.dev/"
-  url "https://registry.npmjs.org/jsrepo/-/jsrepo-2.4.4.tgz"
-  sha256 "0616561e0fe61c19c706aa55deb3124e9a665d6c14815247affe2ef29adbb7f3"
+  url "https://registry.npmjs.org/jsrepo/-/jsrepo-2.4.5.tgz"
+  sha256 "7b833899ca60a142b338c73a9cc3d216dd0690ffad68ff31c951a3de8269cd56"
   license "MIT"
 
   bottle do
@@ -17,9 +17,23 @@ class Jsrepo < Formula
 
   depends_on "node"
 
+  on_macos do
+    depends_on "macos-term-size"
+  end
+
   def install
     system "npm", "install", *std_npm_args
     bin.install_symlink libexec.glob("bin/*")
+
+    term_size_vendor_dir = libexec/"lib/node_modules/jsrepo/node_modules/term-size/vendor"
+    rm_r(term_size_vendor_dir) # remove pre-built binaries
+
+    if OS.mac?
+      macos_dir = term_size_vendor_dir/"macos"
+      macos_dir.mkpath
+      # Replace the vendored pre-built term-size with one we build ourselves
+      ln_sf (Formula["macos-term-size"].opt_bin/"term-size").relative_path_from(macos_dir), macos_dir
+    end
   end
 
   test do

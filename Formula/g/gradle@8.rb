@@ -10,6 +10,10 @@ class GradleAT8 < Formula
     regex(/href=.*?gradle[._-]v?(8(?:\.\d+)+)-all\.(?:zip|t)/i)
   end
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "f1eae3a15f69a395246d590a2affefb1c30b1bca61f00996490ca76ce8965eb1"
+  end
+
   keg_only :versioned_formula
 
   # https://github.com/gradle/gradle/blob/master/platforms/documentation/docs/src/docs/userguide/releases/compatibility.adoc

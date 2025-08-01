@@ -4,8 +4,8 @@ class Semgrep < Formula
   desc "Easily detect and prevent bugs and anti-patterns in your codebase"
   homepage "https://semgrep.dev"
   url "https://github.com/semgrep/semgrep.git",
-      tag:      "v1.130.0",
-      revision: "44b291e6997dffcb037396d7e577c0d747e29970"
+      tag:      "v1.131.0",
+      revision: "47fbfd8a276c5416432439b43ab5b4df55041a85"
   license "LGPL-2.1-only"
   head "https://github.com/semgrep/semgrep.git", branch: "develop"
 
@@ -15,13 +15,13 @@ class Semgrep < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_sequoia: "d60ba0836e54ee1c86b184cc464794f22d88d2967879375647841249b9b57ee9"
-    sha256 cellar: :any,                 arm64_sonoma:  "cac0f30ca74b9626b5005654fb4cc5de013acbf928ebe1e6a012cd720231dee5"
-    sha256 cellar: :any,                 arm64_ventura: "e96ad10ad6f9091e3868081b2c09649aef32243a3e450c680d9ec0cc1eef65d1"
-    sha256 cellar: :any,                 sonoma:        "ab9e374fa3042a9624756dae62637a4b575edac66b60a6622137125ceab8d16b"
-    sha256 cellar: :any,                 ventura:       "9f59af9a628e575e91e6c348a356fa822b63e8d078db1768297e235a8a99ec61"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "dab52f78d43b07196d21d470e7393708e6f4fbe1fcc96c6c024c0b27aefa0889"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "07277119d2bca76eeb55c3af0d65275853ab37791f7aaae64bb03647c4e88197"
+    sha256 cellar: :any,                 arm64_sequoia: "c84e569ceb23f3962879abf64d9a48a6d6c7d8942a9b21d26f8c4af1d9ac213c"
+    sha256 cellar: :any,                 arm64_sonoma:  "4badcf467e83086c1fb2ef4b9f4a5b50d75a8833e87d0e5d7ab4e3da5818c738"
+    sha256 cellar: :any,                 arm64_ventura: "5b6e55367ea33cb2d72ec14063066fb99cc43737f178996f11250ff0be6578cd"
+    sha256 cellar: :any,                 sonoma:        "ad52bfd7102f59f8eaa79416c7ef7bdf3f709e8fb16ffdb358d78e24e5c8f9a7"
+    sha256 cellar: :any,                 ventura:       "eb19f8a2fc772970fbf2b2f083a49d0850d81cb1ded2fe6838e275cfb32f5fcb"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "777b7a467251eefc3f34eeb1df18dd12b1d798f33af40aeac544c8396da1b159"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "fcd78092352e0f39b84efc5712e5bcb9eca511fb8947eba7c3cd481081930b7d"
   end
 
   depends_on "autoconf" => :build

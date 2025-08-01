@@ -6,6 +6,15 @@ class Prefligit < Formula
   license "MIT"
   head "https://github.com/j178/prefligit.git", branch: "master"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "c9e610509b29975dcfd65adff0bb631791103f86ee957740c34135035ea70bfd"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "32274093e53a44a0597d2aaeff8ae3d39b8e39be786f012f04e2ac85301eeab0"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "4a04c10f8b9615912920b5016f4db306b2e4d7d8949516227896b678f48769da"
+    sha256 cellar: :any_skip_relocation, sonoma:        "fa224f68d6d9d6c15026ff9d80d09c79d4e789fc10982044f8620b73eeceb869"
+    sha256 cellar: :any_skip_relocation, ventura:       "99dc7039f3f2da8805bdb9fede2b782a03e41d7a25a90942387a782c08115e46"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "d6d44e1626f329544ed31efe894f6284f0fcd04eb9089bb149e11319bf9c9bb7"
+  end
+
   depends_on "rust" => :build
 
   def install

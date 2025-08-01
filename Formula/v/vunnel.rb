@@ -3,8 +3,8 @@ class Vunnel < Formula
 
   desc "Tool for collecting vulnerability data from various sources"
   homepage "https://github.com/anchore/vunnel"
-  url "https://files.pythonhosted.org/packages/0e/0f/f207c4f6e7056de26e9a6b105d157ca2ca80a58087daca27cbf071710f70/vunnel-0.35.1.tar.gz"
-  sha256 "df846487f0469e9dc1c477c29475eccf9278c1e7f4a339a66437f08a1c5fec5e"
+  url "https://files.pythonhosted.org/packages/fe/fe/fe72da2b3d8bb47041d3e371fae212a428eb68c8c654a39eb2933826a46c/vunnel-0.36.0.tar.gz"
+  sha256 "6daecae048fa7ed44deb43e7da2f113d1f81961c8ccb7e265cd662148bafbfc2"
   license "Apache-2.0"
   head "https://github.com/anchore/vunnel.git", branch: "main"
 
@@ -117,13 +117,13 @@ class Vunnel < Formula
   end
 
   resource "orjson" do
-    url "https://files.pythonhosted.org/packages/29/87/03ababa86d984952304ac8ce9fbd3a317afb4a225b9a81f9b606ac60c873/orjson-3.11.0.tar.gz"
-    sha256 "2e4c129da624f291bcc607016a99e7f04a353f6874f3bd8d9b47b88597d5f700"
+    url "https://files.pythonhosted.org/packages/19/3b/fd9ff8ff64ae3900f11554d5cfc835fb73e501e043c420ad32ec574fe27f/orjson-3.11.1.tar.gz"
+    sha256 "48d82770a5fd88778063604c566f9c7c71820270c9cc9338d25147cbf34afd96"
   end
 
   resource "packageurl-python" do
-    url "https://files.pythonhosted.org/packages/a9/b6/d28c4fa7535530879e7d64176f7ff081fb6308b50cac8e30f038a89e8fdd/packageurl_python-0.17.1.tar.gz"
-    sha256 "5db592a990b60bc02446033c50fb1803a26c5124cd72c5a2cd1b8ea1ae741969"
+    url "https://files.pythonhosted.org/packages/37/0f/66c682b6d6844247a5ba04e1be51ee782d1a921ebffc8fa0b3f4d520d885/packageurl_python-0.17.3.tar.gz"
+    sha256 "719995f0c7f706890277ba57ec95afcaa9696c836a7675770a1279b01a41f7be"
   end
 
   resource "packaging" do

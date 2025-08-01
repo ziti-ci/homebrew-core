@@ -7,12 +7,12 @@ class Brook < Formula
   head "https://github.com/txthinking/brook.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "04547e268b88935b2c6101b9324126819adb599e795cabaa740e5fb04325c17f"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "04547e268b88935b2c6101b9324126819adb599e795cabaa740e5fb04325c17f"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "04547e268b88935b2c6101b9324126819adb599e795cabaa740e5fb04325c17f"
-    sha256 cellar: :any_skip_relocation, sonoma:        "0a05d9d3eada57f63ca111712d411068bb691fd17ac588cf7444b26f386fa58d"
-    sha256 cellar: :any_skip_relocation, ventura:       "0a05d9d3eada57f63ca111712d411068bb691fd17ac588cf7444b26f386fa58d"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "3686e17eb912d009421511ea22337970205595adc821891ffdee034d8d97642e"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "564f95bb9ccd7cb726f77a7edbefa788366804c53d87398715a23a54cd1354d9"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "564f95bb9ccd7cb726f77a7edbefa788366804c53d87398715a23a54cd1354d9"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "564f95bb9ccd7cb726f77a7edbefa788366804c53d87398715a23a54cd1354d9"
+    sha256 cellar: :any_skip_relocation, sonoma:        "43906bd2683a7b8d2d8ebfc55771e74c1161d8cf25af6482e429335e248db075"
+    sha256 cellar: :any_skip_relocation, ventura:       "43906bd2683a7b8d2d8ebfc55771e74c1161d8cf25af6482e429335e248db075"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "401093bfe7df589f3e79937615e8f7585e7d916b714cc4c56a3cef1641be514d"
   end
 
   depends_on "go" => :build

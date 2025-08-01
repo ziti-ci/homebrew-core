@@ -7,13 +7,13 @@ class Blisp < Formula
   head "https://github.com/pine64/blisp.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_sequoia: "41b508789c6bce007f07aaa0c76f46dbfba9a02e1fdf2a5920985affce135519"
-    sha256 cellar: :any,                 arm64_sonoma:  "378b9e0bf8a8de264749eb7f5b45ca41b6606363854cea6e61fbad3b7ef0d865"
-    sha256 cellar: :any,                 arm64_ventura: "5fcae89834fc473691f68efb1d465286ebf9286367709eff247e28ecc0898e18"
-    sha256 cellar: :any,                 sonoma:        "1b58e07e26693499bf1364127f5bc68c735a38953087319d4f5daf236071c778"
-    sha256 cellar: :any,                 ventura:       "7e442f53b23b4c1c216fc5a91e4ef6f9a09dffddd00601f9664bd5cca83bdee8"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "1b361198695ac6822882d99ae26212b3e9ca7cf5c19c13e311ab79b3073d3a79"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "5a4ed852cd606d9477c96a101081eee8e928a14ca30c24dab41e293b90512278"
+    sha256 cellar: :any,                 arm64_sequoia: "ff28997c11bce2736f54cdb6e31fae1ef5ba7637443203d29ce8b7b5d947cfce"
+    sha256 cellar: :any,                 arm64_sonoma:  "b034d4d4510b4d817547caf94730a1a6262608759849ea5782c957b4e8bc157a"
+    sha256 cellar: :any,                 arm64_ventura: "8429a988fc4858c21db8bbb87150e1aad7d1d11a306d4a90566c831f3b9b3dcc"
+    sha256 cellar: :any,                 sonoma:        "67b1c5420ba76d82760abab0fafa97b343aeba0331a086ab755262f5165c3b1f"
+    sha256 cellar: :any,                 ventura:       "185fa7b68d7301e70936fb7b0740a9e672ba89ff9fe51780febd8ebffd33247b"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "473ecf51999b00ebacaaa0950602ccd9fa544fbabc13c2a912e4a9b5475b6a52"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "ec80b8a1aa1b9271d6600f34e3d1e7de3ce029d7a87e232787d3e5f7e9405496"
   end
 
   depends_on "cmake" => :build

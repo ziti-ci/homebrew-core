@@ -6,13 +6,13 @@ class TmuxSessionizer < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any,                 arm64_sequoia: "94a0d5bafb7636d4012332b0e3e5159dd9bb16d487aef5e1382527a26958826b"
-    sha256 cellar: :any,                 arm64_sonoma:  "e8486f6f4e77a8bf58c6213e1f8e68f21e7611ec70aa96934d203cd3cebf9955"
-    sha256 cellar: :any,                 arm64_ventura: "09d3a2e2a754b32137f1dbf0a329b3d49491806a31b8b031217a48444e7b9773"
-    sha256 cellar: :any,                 sonoma:        "b3050eda58cd73739f53d11af0f6111fa1f5957757c7c5fe0cfa328788e9f1f5"
-    sha256 cellar: :any,                 ventura:       "a5f2144f6d7464b5f8283dc94eef025a79a9c8eeb195efc12712a18ce80c3ce1"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "4f1c67d572a5c83597dacf9f0a67e2ab8bd6c24298c024739c8a13041ed0412f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "a588098f0d380b6fd1ca53a697760e9d4d56a9d828bcd1e7a21041d488c18ff3"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "20971b1673ee2cfa08f990642538eadb168ef54dce98400ff72cd1696c4ba283"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "91922de190efa1c9899f4e2479f8b4ad089b7d599b77bb1d06325b330d9b9fb1"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "80aa9e9af59eddeba40896b474cd216e8fcb84556e8439bde6946c3c8d35a881"
+    sha256 cellar: :any_skip_relocation, sonoma:        "d419591132c0593b5a0404be795a04464026f4ceb98c4f3ff011ec5e8913409e"
+    sha256 cellar: :any_skip_relocation, ventura:       "807e3f2c36d3c0535d8f70ac197c777a112fcaa43c8baa21599c4508611086d0"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "dc042dfb028a16bbf7c7c5d56d8e1a66be403debdcc52805b10d98c804192a8d"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "0c1267d366d4184bfd6620de0b6f7ed966c86b9a0a88761cf16e16c1f2132da3"
   end
 
   depends_on "rust" => :build

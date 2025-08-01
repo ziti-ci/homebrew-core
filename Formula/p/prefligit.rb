@@ -12,6 +12,7 @@ class Prefligit < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura: "a61c2231732eff1f48a93c0964a3da4d81aaf6e34ebc782240edea59ce09b90e"
     sha256 cellar: :any_skip_relocation, sonoma:        "6ece93d1218a7fe8b870f90a8c4c64b0803e30ee040b408d5ffa7d629bae9706"
     sha256 cellar: :any_skip_relocation, ventura:       "1d36ee986537e5b250afeaf3acf111578c0f4a0b0331bd78fadf4797227efc86"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "ef8a81428a6c489e09817f670244dcec3d8643e635e9e03118b4a8253542918c"
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "b143640d84b8dbcf068d87169ebaa100e18c695467c3a112cf43f0ef1a3b42e0"
   end
 

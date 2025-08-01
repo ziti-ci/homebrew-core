@@ -5,6 +5,15 @@ class Clipper2 < Formula
   sha256 "e5cbe4acdfbd381496feacd5692110f60914ce2998e7350b124fb11429574f75"
   license "BSL-1.0"
 
+  bottle do
+    sha256 cellar: :any,                 arm64_sequoia: "5344952baad694ee32003946b5ed28a8212f58564a79df0ee97a245a2e35fb31"
+    sha256 cellar: :any,                 arm64_sonoma:  "dab66cd4bfc560cc95579a0586f44cd3a8a6c477abad07e5dce0d9812a97f9db"
+    sha256 cellar: :any,                 arm64_ventura: "c3634a45b7e445d258db0179b7946b08e4e746ec3d04c8f4c9a71f6d351a99b7"
+    sha256 cellar: :any,                 sonoma:        "e488dd77e4e22dcc5c7031904749e89f67483e28d9c3e300674d4907ebc610c4"
+    sha256 cellar: :any,                 ventura:       "beeaceb4432c6aba698d3e23f55e35f5aabc4aeb2a69323a94791b37b9e73532"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "8346e821c65cac35259db00c4a43d56bd53dc4cc581bf0922b963968c2b9bd17"
+  end
+
   depends_on "cmake" => :build
 
   def install

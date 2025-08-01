@@ -1,18 +1,18 @@
 class FilenCli < Formula
   desc "Interface with Filen, an end-to-end encrypted cloud storage service"
   homepage "https://github.com/FilenCloudDienste/filen-cli"
-  url "https://registry.npmjs.org/@filen/cli/-/cli-0.0.33.tgz"
-  sha256 "04d97ed98394402386fefb8847055bfb3915fa298b3f47001d705946cd6a46f9"
+  url "https://registry.npmjs.org/@filen/cli/-/cli-0.0.34.tgz"
+  sha256 "b124711dfe329029bee0475958a1fe233a61aa100c95947b71c11668aa8f45b2"
   license "AGPL-3.0-or-later"
 
   bottle do
-    sha256                               arm64_sequoia: "c98c84160e42c188c5ffba257bb667caeb38eeb0bf7bc1f0e85b0cd60bcb9adf"
-    sha256                               arm64_sonoma:  "c8f038324111534f7e3ad7bfedbab5e13e1d21c55b22fb8fefd1d99fb13e5a8d"
-    sha256                               arm64_ventura: "3fc5d84274a8f6e37fdfa8397d1ed953d52cb590bcb4cc64d9ea0fdf2d9d66fd"
-    sha256                               sonoma:        "bb9db1b0866e787a63dc146ac8bbbb99383640ec140d909b44f34fb80b866946"
-    sha256                               ventura:       "e193906a4e233c32a72583476b7ce47d63d084c71b0672cd2ef9973bbd9d3624"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "999b7f5c4d00acdc8b0eec7ac089ec23177cdfe73d3c361320ef0897ab60db42"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "48b7688976ec264cc9ec27879a8d0a4826fa9f02f214aa655ef3261835f84193"
+    sha256                               arm64_sequoia: "a2aa4f39e876f8831b242287f71c802e90f21c3495cee97271067dffc32da845"
+    sha256                               arm64_sonoma:  "bd34ce54bbc156d604f8fd420f4acc8ac99ce4e695f8880a1e24ea865261ab54"
+    sha256                               arm64_ventura: "954c51678d06d7c3a1e1f7f75e8b17d339b96d72c1a768fd64660bf507d533b8"
+    sha256                               sonoma:        "9807b7b18bb11585ceaf4057d74cf605cc71261c816129131389451652872238"
+    sha256                               ventura:       "29a98ac2cabaf393769b65aebcb7dbe3c06aec72961364d6480e52c829ac8856"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "63124c5ef159ef428d16b4de0b0dc243fe30035778bccbd6f263e5423b78d247"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "028d167c8b43532da88e079138a17c3512d918ea509d6cf3c69a256f07fe5f2e"
   end
 
   depends_on "pkgconf" => :build

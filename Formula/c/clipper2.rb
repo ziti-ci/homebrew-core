@@ -11,6 +11,7 @@ class Clipper2 < Formula
     sha256 cellar: :any,                 arm64_ventura: "c3634a45b7e445d258db0179b7946b08e4e746ec3d04c8f4c9a71f6d351a99b7"
     sha256 cellar: :any,                 sonoma:        "e488dd77e4e22dcc5c7031904749e89f67483e28d9c3e300674d4907ebc610c4"
     sha256 cellar: :any,                 ventura:       "beeaceb4432c6aba698d3e23f55e35f5aabc4aeb2a69323a94791b37b9e73532"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "3827936a12835ab57ea26493a4b38da08705e0d0e743384a58f80b7817cf1acd"
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "8346e821c65cac35259db00c4a43d56bd53dc4cc581bf0922b963968c2b9bd17"
   end
 

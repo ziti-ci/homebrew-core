@@ -1,8 +1,8 @@
 class Cue < Formula
   desc "Validate and define text-based and dynamic configuration"
   homepage "https://cuelang.org/"
-  url "https://github.com/cue-lang/cue/archive/refs/tags/v0.13.2.tar.gz"
-  sha256 "3ed53c0b32e44491b3871fd22dd0cf2577a6b2ee9036c76801c261b75c4e44ee"
+  url "https://github.com/cue-lang/cue/archive/refs/tags/v0.14.0.tar.gz"
+  sha256 "5fd6d74246a24e6c153510d1b0b2e1bf8482a6b108da879ce76da10986412839"
   license "Apache-2.0"
   head "https://github.com/cue-lang/cue.git", branch: "master"
 
@@ -43,8 +43,8 @@ class Cue < Formula
           ./ranges.yml:5:6
     EOS
 
-    assert_equal expected, shell_output(bin/"cue vet ranges.yml check.cue 2>&1", 1)
+    assert_equal expected, shell_output("#{bin}/cue vet ranges.yml check.cue 2>&1", 1)
 
-    assert_match version.to_s, shell_output(bin/"cue version")
+    assert_match version.to_s, shell_output("#{bin}/cue version")
   end
 end

@@ -5,6 +5,10 @@ class BbCli < Formula
   sha256 "3a43bd7bc80cde7b2ae8091113d358258b661a63e81a952cbe5111a1aee6e4fd"
   license "MIT"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "8cfd238d4feee9bc3c16451eac59ce27fa4ce8cec2bd0b3a3007e47b301c2a01"
+  end
+
   depends_on "php"
 
   def install

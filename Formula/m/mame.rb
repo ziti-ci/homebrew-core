@@ -1,9 +1,9 @@
 class Mame < Formula
   desc "Multiple Arcade Machine Emulator"
   homepage "https://mamedev.org/"
-  url "https://github.com/mamedev/mame/archive/refs/tags/mame0278.tar.gz"
-  version "0.278"
-  sha256 "ca5f44a0ed834875f8420a75587706af210ff8c5922942509bc5bfef7d45c360"
+  url "https://github.com/mamedev/mame/archive/refs/tags/mame0279.tar.gz"
+  version "0.279"
+  sha256 "07e2e0d8ec187b12eadba3d7917ce3227bf0c5fccec8e934d70ada4fc502130c"
   license "GPL-2.0-or-later"
   head "https://github.com/mamedev/mame.git", branch: "master"
 
@@ -18,7 +18,7 @@ class Mame < Formula
     end
   end
 
-  no_autobump! because: :requires_manual_review
+  no_autobump! because: :incompatible_version_format
 
   bottle do
     sha256 cellar: :any,                 arm64_sequoia: "dbad98208eb3d1cd8af7fb685d51cfa84dec21add1416238d30129ca261d2d12"

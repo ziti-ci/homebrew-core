@@ -3,8 +3,8 @@ class Schemathesis < Formula
 
   desc "Testing tool for web applications with specs"
   homepage "https://schemathesis.readthedocs.io/"
-  url "https://files.pythonhosted.org/packages/b2/d1/1a54fa48b3451e27a39791615a38412cc392c9d36636664e87aae26c02b8/schemathesis-4.0.17.tar.gz"
-  sha256 "b9c14c5fc21f77d85d52a75dd55ba7bf0d76800e9706a7e3b2c55c8355f85b94"
+  url "https://files.pythonhosted.org/packages/d7/70/403bd46e06d0ded017a45d99fdee8af6f8c045fbb5cd515de6f331ffb402/schemathesis-4.0.18.tar.gz"
+  sha256 "3db5939511adfed260247eeb827bda9b0916e5a972707a2b8696a7a20a07d688"
   license "MIT"
 
   bottle do
@@ -50,8 +50,8 @@ class Schemathesis < Formula
   end
 
   resource "click" do
-    url "https://files.pythonhosted.org/packages/e9/87/105111999772ec9730e3d4d910c723ea9763ece2ec441533a5cea1e87e3c/click-8.2.2.tar.gz"
-    sha256 "068616e6ef9705a07b6db727cb9c248f4eb9dae437a30239f56fa94b18b852ef"
+    url "https://files.pythonhosted.org/packages/60/6c/8ca2efa64cf75a977a0d7fac081354553ebe483345c734fb6b6515d96bbc/click-8.2.1.tar.gz"
+    sha256 "27c491cc05d968d271d5a1db13e3b5a184636d9d930f148c50b038f0d0646202"
   end
 
   resource "colorama" do

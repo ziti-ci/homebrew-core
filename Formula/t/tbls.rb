@@ -31,7 +31,7 @@ class Tbls < Formula
   end
 
   test do
-    assert_match "unsupported driver", shell_output(bin/"tbls doc", 1)
-    assert_match version.to_s, shell_output(bin/"tbls version")
+    assert_match "unsupported driver", shell_output("#{bin}/tbls doc", 1)
+    assert_match version.to_s, shell_output("#{bin}/tbls version")
   end
 end

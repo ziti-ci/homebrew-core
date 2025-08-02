@@ -17,11 +17,13 @@ class AvroCpp < Formula
   end
 
   depends_on "cmake" => :build
+  depends_on "fmt" => [:build, :test] # needed for headers
   depends_on "pkgconf" => :build
   depends_on "boost"
-  depends_on "fmt" # needed for headers
 
-  # Fix compatibility for `fmt` version 11 and remove fetch_content
+  # Fix compatibility with `fmt` 11, https://github.com/apache/avro/pull/3444
+  # Fix to use system installed `fmt`, https://github.com/apache/avro/pull/3447
+  # Both patches are not applicable to the source splitted tarball
   patch :DATA
 
   def install
@@ -59,10 +61,10 @@ end
 
 __END__
 diff --git a/CMakeLists.txt b/CMakeLists.txt
-index 19059a4..6b198db 100644
+index 19059a4..ba95df6 100644
 --- a/CMakeLists.txt
 +++ b/CMakeLists.txt
-@@ -82,15 +82,7 @@ endif ()
+@@ -82,15 +82,18 @@ endif ()
  find_package (Boost 1.38 REQUIRED
      COMPONENTS filesystem iostreams program_options regex system)
  
@@ -75,7 +77,18 @@ index 19059a4..6b198db 100644
 -        USES_TERMINAL_DOWNLOAD TRUE
 -)
 -FetchContent_MakeAvailable(fmt)
-+find_package(fmt REQUIRED)
++find_package(fmt)
++if (NOT fmt_FOUND)
++    include(FetchContent)
++    FetchContent_Declare(
++            fmt
++            GIT_REPOSITORY  https://github.com/fmtlib/fmt.git
++            GIT_TAG         10.2.1
++            GIT_PROGRESS    TRUE
++            USES_TERMINAL_DOWNLOAD TRUE
++    )
++    FetchContent_MakeAvailable(fmt)
++endif (NOT fmt_FOUND)
  
  find_package(Snappy)
  if (SNAPPY_FOUND)

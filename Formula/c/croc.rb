@@ -1,8 +1,8 @@
 class Croc < Formula
   desc "Securely send things from one computer to another"
   homepage "https://github.com/schollz/croc"
-  url "https://github.com/schollz/croc/archive/refs/tags/v10.2.2.tar.gz"
-  sha256 "1d892bbf3f8dacd0f528f683ab6c3678483374b17076187da7d1af805326fa68"
+  url "https://github.com/schollz/croc/archive/refs/tags/v10.2.3.tar.gz"
+  sha256 "96c17b9fa6c55c0a1e02937c5f2d34bd2ce5b7ef6f844f16eac8d155c1b8a119"
   license "MIT"
   head "https://github.com/schollz/croc.git", branch: "master"
 

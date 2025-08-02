@@ -25,7 +25,7 @@ class Carapace < Formula
     ]
     system "go", "build", *std_go_args(ldflags:, tags: "release"), "./cmd/carapace"
 
-    generate_completions_from_executable(bin/"carapace", "_carapace")
+    generate_completions_from_executable(bin/"carapace", "carapace")
   end
 
   test do

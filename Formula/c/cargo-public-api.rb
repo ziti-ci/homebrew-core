@@ -7,13 +7,13 @@ class CargoPublicApi < Formula
   head "https://github.com/cargo-public-api/cargo-public-api.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "3b38fc8ef63a5fe15741ef497023fcc55cf89b02f315ef11f05f3b22d84b7d3d"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "5ec83ecae8f9127fe6890a9bb89bde5bfcf0cfdeaa1b9d718858f940c7543e62"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "6a34c80a4237fce67864f291d91a9e486db07a65053880ea5da1b0cae9f4e93a"
-    sha256 cellar: :any_skip_relocation, sonoma:        "4093bf1afec2155a928432f489d8aa64b7cc7b62cf7297aa80fc84b63fa40dbd"
-    sha256 cellar: :any_skip_relocation, ventura:       "c59cda720ff6e03d3f712138d824c90becd4d5a3edcde8bbce80e09b9a4480ba"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "92cbdcdb7dcf1a24004a5be67539a1a5773a9fbeda469a88958ea09acf27785c"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "f112713874725343d453fe6bfb25f966c7f602023fd5ded0f6f2948ae857b896"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "6c7444446cd605cd2a5b9410aa9b007aeefad52eebf8a91b5786606936984792"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "3f1a31b8ecd2e6a8aa2ca2d861b8a471a2ba43dbeaba4b6b7ef097b9633888f4"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "273416297384313a0efbe83b4fe6f6c615881e338950600d0a9be0880fcfc8a5"
+    sha256 cellar: :any_skip_relocation, sonoma:        "0d046b185a172a1f9c85e4c9c506040765ac98a30ae8287f586bf6b0566cab84"
+    sha256 cellar: :any_skip_relocation, ventura:       "e90934f1b896cf82b12ca0b4757d0b6b763432e93b3ce499aa2a22b8fab635b9"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "1c1719b63932b075d2536b9645446723c525fcc171e5de3d877b7351080d7ea9"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "280e37e71e73d6afd1642f46824f81f5006bc2ba6f00b1fb47c4fca9d9f175fa"
   end
 
   depends_on "pkgconf" => :build

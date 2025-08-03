@@ -24,33 +24,31 @@ class Jasper < Formula
   depends_on "jpeg-turbo"
 
   def install
-    mkdir "tmp_cmake" do
-      args = std_cmake_args
-      args << "-DJAS_ENABLE_DOC=OFF"
+    args = %w[
+      -DJAS_ENABLE_DOC=OFF
+      -DJAS_ENABLE_AUTOMATIC_DEPENDENCIES=OFF
+    ]
 
-      if OS.mac?
-        # Make sure macOS's GLUT.framework is used, not XQuartz or freeglut
-        # Reported to CMake upstream 4 Apr 2016 https://gitlab.kitware.com/cmake/cmake/issues/16045
-        glut_lib = "#{MacOS.sdk_path}/System/Library/Frameworks/GLUT.framework"
-        args << "-DGLUT_glut_LIBRARY=#{glut_lib}"
-      else
-        args << "-DJAS_ENABLE_OPENGL=OFF"
-      end
-
-      system "cmake", "..",
-        "-DJAS_ENABLE_AUTOMATIC_DEPENDENCIES=false",
-        "-DJAS_ENABLE_SHARED=ON",
-        *args
-      system "make"
-      system "make", "install"
-      system "make", "clean"
-
-      system "cmake", "..",
-        "-DJAS_ENABLE_SHARED=OFF",
-        *args
-      system "make"
-      lib.install "src/libjasper/libjasper.a"
+    args << if OS.mac?
+      # Make sure macOS's GLUT.framework is used, not XQuartz or freeglut
+      # Reported to CMake upstream 4 Apr 2016 https://gitlab.kitware.com/cmake/cmake/issues/16045
+      glut_lib = "#{MacOS.sdk_path}/System/Library/Frameworks/GLUT.framework"
+      "-DGLUT_glut_LIBRARY=#{glut_lib}"
+    else
+      "-DJAS_ENABLE_OPENGL=OFF"
     end
+
+    # Build in the parent of `buildpath` to avoid errors from upstream's in-source build detection.
+    system "cmake", "-S", ".", "-B", "../build-shared", "-DJAS_ENABLE_SHARED=ON", *args, *std_cmake_args
+    system "cmake", "--build", "../build-shared"
+    system "cmake", "--install", "../build-shared"
+
+    system "cmake", "-S", ".", "-B", "../build-static", "-DJAS_ENABLE_SHARED=OFF", *args, *std_cmake_args
+    system "cmake", "--build", "../build-static"
+    lib.install "../build-static/src/libjasper/libjasper.a"
+
+    # Move the build directories into `buildpath` so Homebrew captures log files properly.
+    buildpath.install ["../build-shared", "../build-static"]
 
     # Avoid rebuilding dependents that hard-code the prefix.
     inreplace lib/"pkgconfig/jasper.pc", prefix, opt_prefix

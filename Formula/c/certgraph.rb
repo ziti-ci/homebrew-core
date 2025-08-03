@@ -13,14 +13,12 @@ class Certgraph < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:  "bb875c3150d6b112b81aa2e8fdec0393f8d1c62a052ccd53b4349550559307c0"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "87984362d6fa214b3adad55d4ee28ecf6f102e5fc3dc62f0f85b186210824518"
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "303c6039381a5d9dfe1865103a5242c8ce6260a9391d02238c1a52051707538e"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "f7b5fee234dd83f986f53ea5a8491b82fa6a7eeaa9d2f598e26aef1023395c99"
-    sha256 cellar: :any_skip_relocation, sonoma:         "36aa352a0a7ae8f8abaaa9507371211218cb4d81762a063e31502fae2f50444f"
-    sha256 cellar: :any_skip_relocation, ventura:        "50ffe0bc271d347b26e0fbabe4ce36403c50a275eb020254940db32557d26c88"
-    sha256 cellar: :any_skip_relocation, monterey:       "4d76930426da0cadfd8bef3e8e60c26ab291dd5aa83512fe336f7461d6ffb3bb"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "9651e81f791eeeedca90abb0cb4330fd8a22b77a1649e143d665071c7916d6ca"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "bde0c1f8afd2b9c5958c78a25a40e7e992557ede0ca00c0330fa0484635eda6d"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "bde0c1f8afd2b9c5958c78a25a40e7e992557ede0ca00c0330fa0484635eda6d"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "bde0c1f8afd2b9c5958c78a25a40e7e992557ede0ca00c0330fa0484635eda6d"
+    sha256 cellar: :any_skip_relocation, sonoma:        "9ed721de7ae895d61b262588fb5474616d535a494555d45ae4c16cf9e8e00aa3"
+    sha256 cellar: :any_skip_relocation, ventura:       "9ed721de7ae895d61b262588fb5474616d535a494555d45ae4c16cf9e8e00aa3"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "5a79040989ad70a9a969056413dace4e155218fc87d2e93eb70e816a8af1b43e"
   end
 
   depends_on "go" => :build

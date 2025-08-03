@@ -1,20 +1,18 @@
 class Detox < Formula
   desc "Utility to replace problematic characters in filenames"
   homepage "https://detox.sourceforge.net/"
-  url "https://github.com/dharple/detox/archive/refs/tags/v2.0.0.tar.gz"
-  sha256 "46e646855cfeae5aa51d00c834f7eeeb5967188aaa17f8882a14f98343d82924"
+  url "https://github.com/dharple/detox/archive/refs/tags/v2.0.1.tar.gz"
+  sha256 "b7924153e3503a2844f111a7d142ebc557d2f03ca2bce8834b8cdb87dc688754"
   license "BSD-3-Clause"
 
   bottle do
-    sha256 arm64_sequoia:  "481ed92a26b1e26953107580c9a6baa6e4c3c3fd6d773395125de4038a83e46e"
-    sha256 arm64_sonoma:   "8faa1e95922d876ff01d233893f0cb83d07bcf2e916c231d15e94765d16efa21"
-    sha256 arm64_ventura:  "79122f4f58434d19c69c182bc1709630b052dd7141e6810691b1f1e91175083f"
-    sha256 arm64_monterey: "b105a28c660493298adf8cac087529dbafe41196b4f97b5e7d28a8543236b208"
-    sha256 sonoma:         "cb3ba28c5bd713d4b8cbc3bd908270ff645481fa62b0d7d8c83e55c4e9ee984e"
-    sha256 ventura:        "4e6159694a04362b11cec132dcacb70b1d84567c688614f7f887e8b7a1f43293"
-    sha256 monterey:       "e39e5f5112ebedf0e3b44aab8d8af72c966698e9f4230797df96fffe24c82686"
-    sha256 arm64_linux:    "b699688a6b8ba32c1b024d43a922014a10bef9fc957b833f9cdf17471211f7a0"
-    sha256 x86_64_linux:   "cb4ab816445009b488e415ec13b576903e89a89e367bcf31313896b589163448"
+    sha256 arm64_sequoia: "2c8a32673686361bf04898306888ae65718b6ef6408c63c0b4fa711ee4b36b0a"
+    sha256 arm64_sonoma:  "436c94eec6c569db314807a3314dc4ea389ceb662db9e191a48d0d63eaad3180"
+    sha256 arm64_ventura: "4674f7f96d48d0ce435d866b8f61090ff55cc531199a7defd30e46cb49a777ac"
+    sha256 sonoma:        "0bd23f28b3a788dfae5fe7297a6375338a382a1f7c5759d5dc3f49255bf23f35"
+    sha256 ventura:       "e32a97460e895f3a311c0aa1f3ce6cb812e943916256735cdd507700fdf700e5"
+    sha256 arm64_linux:   "478e21e6feedf75fe43bafea397d6e9a5cc100ad7014092ce342399d45728bc3"
+    sha256 x86_64_linux:  "7bdb9b90e06c87c3ed666a8324133e48d372db477bdf73f845962fa0b53e8f6f"
   end
 
   depends_on "autoconf" => :build

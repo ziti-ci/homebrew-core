@@ -6,13 +6,13 @@ class Snapcast < Formula
   license "GPL-3.0-or-later"
 
   bottle do
-    sha256 cellar: :any,                 arm64_sequoia: "503bcd02e9c1cee66a0fe1c31b4fb92c456e0403dbeff251ab37a89d097800ba"
-    sha256 cellar: :any,                 arm64_sonoma:  "5148be65fd513313ab9eae89eada1ab878e311c5bf7bae260adc8d9742005213"
-    sha256 cellar: :any,                 arm64_ventura: "0dbfc1421b25651a69006ac4f2dc5995c79ad832f582b57877b53deed618b47e"
-    sha256 cellar: :any,                 sonoma:        "e7a695a5486603ca20361ee1ea25680f77cbfefe31b073b2f881c1f4dd7e7302"
-    sha256 cellar: :any,                 ventura:       "7c12245e729a102ec2b284ce3cc5ff11532269effd442175acc8890c440a1b7f"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "f75f295d76b5e75bdebb3131c00c38d134d74ec6268951a27e14fcfb7d1486ca"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "f5f9f7d0a5ee35ffa91c5d4e115ce9ba9a16d4cd3511ce01bc882f37b1f3f1f2"
+    sha256 cellar: :any,                 arm64_sequoia: "f5caa514a957d68041927660e14c1e0672ec3172300732abd8255894d1e72c2f"
+    sha256 cellar: :any,                 arm64_sonoma:  "f585413623b8487c4bcc4b3419aba3afe98c3974c0b8462983cce576732be56a"
+    sha256 cellar: :any,                 arm64_ventura: "ed4a03214943903364f76cc1bb63c87464fe13ffd36342a77e69b2e7762130ba"
+    sha256 cellar: :any,                 sonoma:        "421ba014f996ccc0136ada7347110ff0e6562f83afe41af81b9fc9a4b4f4948f"
+    sha256 cellar: :any,                 ventura:       "a137ff7401260cc8156967738488d315b9017ef3723df94840d7da19ce22f4ee"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "f0a644b1f12dfb7c18b73841845f03b36514717bb28c5d50b1bc246700a7c037"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "49ccaf252e5aaa2defe954af92b8138799bc16d30c0321e5912a1759681821de"
   end
 
   depends_on "boost" => :build

@@ -1,10 +1,9 @@
 class Snapcast < Formula
   desc "Synchronous multiroom audio player"
   homepage "https://github.com/badaix/snapcast"
-  url "https://github.com/badaix/snapcast/archive/refs/tags/v0.31.0.tar.gz"
-  sha256 "d38d576f85bfa936412413b6860875ba3b462a8e67405f3984a0485778f2fdac"
+  url "https://github.com/badaix/snapcast/archive/refs/tags/v0.32.0.tar.gz"
+  sha256 "57b358ed0b5bcffc287d4ec72249727d522a46b84f4766e83f0ec6e8e312b5b4"
   license "GPL-3.0-or-later"
-  revision 1
 
   bottle do
     sha256 cellar: :any,                 arm64_sequoia: "503bcd02e9c1cee66a0fe1c31b4fb92c456e0403dbeff251ab37a89d097800ba"
@@ -53,7 +52,7 @@ class Snapcast < Formula
       client_pid = spawn bin/"snapclient", [:out, :err] => output_log.to_s
       sleep 10
       if OS.mac?
-        assert_match("Connected to", output_log.read)
+        assert_match version.to_s, output_log.read
       else
         # Needs Avahi (which also needs D-Bus system bus) which requires root
         assert_match "BrowseAvahi - Failed to create client", output_log.read

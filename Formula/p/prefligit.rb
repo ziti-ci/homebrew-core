@@ -7,13 +7,14 @@ class Prefligit < Formula
   head "https://github.com/j178/prefligit.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "7e5a1c6910ed0ea1a0091264304dd77e28390f81ba665b08b8ed12ad39827b1e"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "f465c7475825c43563b8f0ea6f95b560d8cab11771e3c6672b67f52dc1cc01b5"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "83940f57902e2d3bbb23be11c51d03df17793d6eecf6c1d722b49f7490bcf7e4"
-    sha256 cellar: :any_skip_relocation, sonoma:        "e88785a430fed985381464e7101de70dc5fa3094e170024f6d855e8a68fa43c1"
-    sha256 cellar: :any_skip_relocation, ventura:       "97d846bafa589f92c86acf1cd134f67a92ae532e01f8abf4c29641432cd9b673"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "6f1fd1e9bca0a71bf78f3e8726ad304db8e4cc5a33cf64cda7d85cb1de5fe23b"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "69a3cac803d4d1035c89f4ff02d8f46bf3fe114e2bebc750f5b1757a88a81db9"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "6a97381e95c9acbd08d24d863bb0cbd00bd912aec9ba255cd7acde573a88f65c"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "96a0b44c8aa6851daab785964b166254fa49a9bb9df5a4ad4d143e9624bbcc3d"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "4d5932dc63511319828bf0c7121a570ce6b39ecba9fd225559427731cd938dc8"
+    sha256 cellar: :any_skip_relocation, sonoma:        "b49e0dad5999a568c829b2894b4bb2d1b39b726463c257c01099ae35e6449d72"
+    sha256 cellar: :any_skip_relocation, ventura:       "9f831ff8301b2cc4828672a42dc9e9df87b58ab90ddbbad4a9a376282b175d60"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "e1ebe925f8aa936235a0165889a889a7b8e734055bc5637c7773d7cc3292d582"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "eb5b8b5de9c805a5396ac8fa81bddeedd3a78e32b23bb9d6c1c80eb8e4dcfdef"
   end
 
   depends_on "rust" => :build

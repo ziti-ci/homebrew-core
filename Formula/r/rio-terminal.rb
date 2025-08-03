@@ -1,8 +1,8 @@
 class RioTerminal < Formula
   desc "Hardware-accelerated GPU terminal emulator powered by WebGPU"
   homepage "https://raphamorim.io/rio/"
-  url "https://github.com/raphamorim/rio/archive/refs/tags/v0.2.24.tar.gz"
-  sha256 "8efd401ae3c2dc3851399e4dcd1fa8d57f36b3af45a81280da826a1b7367b5fd"
+  url "https://github.com/raphamorim/rio/archive/refs/tags/v0.2.25.tar.gz"
+  sha256 "b4849138ea4be3d8ff5b5d79463a0bfc6085f8470b3566ab18368fa966901d68"
   license "MIT"
   head "https://github.com/raphamorim/rio.git", branch: "main"
 
@@ -33,12 +33,8 @@ class RioTerminal < Formula
 
   test do
     assert_match version.to_s, shell_output("#{bin}/rio --version")
-    return if Hardware::CPU.intel? && ENV["HOMEBREW_GITHUB_ACTIONS"].present?
 
-    # This test does pass locally for x86 but it fails for containers
-    # which is the case of x86 in the CI
-
-    system bin/"rio", "-e", "touch", testpath/"testfile"
-    assert_path_exists testpath/"testfile"
+    system bin/"rio", "--write-config", testpath/"rio.toml"
+    assert_match "enable-log-file = false", (testpath/"rio.toml").read
   end
 end

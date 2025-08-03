@@ -3,8 +3,8 @@ class Mapnik < Formula
   homepage "https://mapnik.org/"
   # needs submodules
   url "https://github.com/mapnik/mapnik.git",
-      tag:      "v4.1.1",
-      revision: "bb6aaa0cdd9f54cd08426e9c0fe051bc7a25072c"
+      tag:      "v4.1.2",
+      revision: "83c1f6b1a2f45a825e9d5764b9a6d33c907c4bad"
   license "LGPL-2.1-or-later"
   head "https://github.com/mapnik/mapnik.git", branch: "master"
 
@@ -32,6 +32,7 @@ class Mapnik < Formula
   depends_on "harfbuzz"
   depends_on "icu4c@77"
   depends_on "jpeg-turbo"
+  depends_on "libavif"
   depends_on "libpng"
   depends_on "libpq"
   depends_on "libtiff"

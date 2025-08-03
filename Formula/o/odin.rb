@@ -118,7 +118,7 @@ class Odin < Formula
     (bin/"odin").write <<~BASH
       #!/bin/bash
       export PATH="#{llvm.opt_bin}:$PATH"
-      exec -a odin "#{libexec}/odin" "$@"
+      exec -a "${0}" "#{libexec}/odin" "${@}"
     BASH
     pkgshare.install "examples"
   end

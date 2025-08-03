@@ -6,13 +6,13 @@ class Detox < Formula
   license "BSD-3-Clause"
 
   bottle do
-    sha256 arm64_sequoia: "2c8a32673686361bf04898306888ae65718b6ef6408c63c0b4fa711ee4b36b0a"
-    sha256 arm64_sonoma:  "436c94eec6c569db314807a3314dc4ea389ceb662db9e191a48d0d63eaad3180"
-    sha256 arm64_ventura: "4674f7f96d48d0ce435d866b8f61090ff55cc531199a7defd30e46cb49a777ac"
-    sha256 sonoma:        "0bd23f28b3a788dfae5fe7297a6375338a382a1f7c5759d5dc3f49255bf23f35"
-    sha256 ventura:       "e32a97460e895f3a311c0aa1f3ce6cb812e943916256735cdd507700fdf700e5"
-    sha256 arm64_linux:   "478e21e6feedf75fe43bafea397d6e9a5cc100ad7014092ce342399d45728bc3"
-    sha256 x86_64_linux:  "7bdb9b90e06c87c3ed666a8324133e48d372db477bdf73f845962fa0b53e8f6f"
+    sha256 arm64_sequoia: "bb8e9362999ad6334ece927cb05875ffd92f46d7127fc7b354ba66d73716be56"
+    sha256 arm64_sonoma:  "aae15dfee10976d473d400b0830c415bd154fa946cf6e36b03a4d781d0923d12"
+    sha256 arm64_ventura: "eac0f4171f62ca9f70e540d45fa3019e06edac2f0f847f4f714f66ac550ab8b2"
+    sha256 sonoma:        "613dc7c33956fab7088dedec1ee060ad8f6e0bc18c5aa18ea3988f9da007b884"
+    sha256 ventura:       "da7ed61574f4ff64d63d63c6806493a33e5bf1e8dae4c879074d37b64f98c7fc"
+    sha256 arm64_linux:   "148017084514876dd611f5a51bb8ce981167c2cf0dc8cc1cbe8753cd1afd04a6"
+    sha256 x86_64_linux:  "d0601f06bcd9d68f4ab6b12d17497e8d2ffc7fbe66868db5d6da6e2e7be1cba4"
   end
 
   depends_on "autoconf" => :build

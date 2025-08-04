@@ -3,8 +3,8 @@ class Schemathesis < Formula
 
   desc "Testing tool for web applications with specs"
   homepage "https://schemathesis.readthedocs.io/"
-  url "https://files.pythonhosted.org/packages/71/d0/d88c718dce0fad2bb9fa68bc2034a6f572dac412bb862af62a906f67d0fc/schemathesis-4.0.19.tar.gz"
-  sha256 "4ed989ecaaf70da66ca101ba88738c3c32221116672235bf020fee81e8d916f4"
+  url "https://files.pythonhosted.org/packages/76/c5/4a2c1e2b60498c7610e4c297c1d79b5e6f7423fd9b8752aac989dce54cc7/schemathesis-4.0.20.tar.gz"
+  sha256 "c0d986768e765b534b246c600f69b82b8522667927b1c88e412ac863309891f7"
   license "MIT"
 
   bottle do
@@ -25,8 +25,8 @@ class Schemathesis < Formula
   conflicts_with "st", because: "both install `st` binaries"
 
   resource "anyio" do
-    url "https://files.pythonhosted.org/packages/95/7d/4c1bd541d4dffa1b52bd83fb8527089e097a106fc90b467a7313b105f840/anyio-4.9.0.tar.gz"
-    sha256 "673c0c244e15788651a4ff38710fea9675823028a6f08a5eda409e0c9840a028"
+    url "https://files.pythonhosted.org/packages/f1/b4/636b3b65173d3ce9a38ef5f0522789614e590dab6a8d505340a4efe4c567/anyio-4.10.0.tar.gz"
+    sha256 "3f3fae35c96039744587aa5b8371e7e8e603c0702999535961dd336026973ba6"
   end
 
   resource "arrow" do
@@ -90,8 +90,8 @@ class Schemathesis < Formula
   end
 
   resource "hypothesis" do
-    url "https://files.pythonhosted.org/packages/2e/19/92369e1d5f2ead5f3f491d5453f28a04be82133886d3a7b46ebdcf7e109d/hypothesis-6.136.7.tar.gz"
-    sha256 "864c5cf7779adc58871ee51595bc724c496047c5bc45229e0baa950b103a73ea"
+    url "https://files.pythonhosted.org/packages/e1/7c/f3393509a4868b026df3460b5536a95c597ee3ac83394dc3472bc91b60e7/hypothesis-6.136.8.tar.gz"
+    sha256 "3c784eb48350f67b2aaee2af6d9d94cbae47ee00cf5e209bf778603c621652f1"
   end
 
   resource "hypothesis-graphql" do

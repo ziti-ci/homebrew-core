@@ -6,6 +6,15 @@ class DomainCheck < Formula
   license "Apache-2.0"
   head "https://github.com/saidutt46/domain-check.git", branch: "main"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "635d21a45cf09356c46b9851b7de92b6fd423278a99e787287745df69a17587b"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "9924c37da9b37b9cde0f7216a50b9cfb605535c713e26796138e8deec5c7d316"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "c6800c2f7cc58f98ef6944b344949e758e60c10ddb5d21055c09e0939ec656a5"
+    sha256 cellar: :any_skip_relocation, sonoma:        "5391a580a4d148ffc763b027fee2c3c4f2c5909a96dd6f487f0db3b3b14e2d58"
+    sha256 cellar: :any_skip_relocation, ventura:       "24ce8d5ebf223fa8c46262f7cc22f059ae641b045bd523a302113d16c1a5f13e"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "73d90ab7d9d70bf77574b54a5ce39f874a17fbf3a0874dfc0b5010c8c493f85f"
+  end
+
   depends_on "rust" => :build
 
   def install

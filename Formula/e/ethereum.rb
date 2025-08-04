@@ -1,8 +1,8 @@
 class Ethereum < Formula
   desc "Official Go implementation of the Ethereum protocol"
   homepage "https://geth.ethereum.org/"
-  url "https://github.com/ethereum/go-ethereum/archive/refs/tags/v1.15.11.tar.gz"
-  sha256 "d9f584c7d77e170320c1b374cc4528dc5987f5a88d2ea79f700a254597788e1b"
+  url "https://github.com/ethereum/go-ethereum/archive/refs/tags/v1.16.2.tar.gz"
+  sha256 "ab0650551a6f1d5443c6c857338f834c6adb5c96b1b2e4851e4b8cb516758ea2"
   license "LGPL-3.0-or-later"
   head "https://github.com/ethereum/go-ethereum.git", branch: "master"
 
@@ -31,8 +31,17 @@ class Ethereum < Formula
     # See discussion in https://github.com/Homebrew/brew/issues/14763.
     ENV.O0 if OS.linux?
 
-    system "make", "all"
-    bin.install buildpath.glob("build/bin/*")
+    ldflags = %W[
+      -s -w
+      -X github.com/ethereum/go-ethereum/internal/build/env.GitCommitFlag=#{tap.user}
+      -X github.com/ethereum/go-ethereum/internal/build/env.GitTagFlag=v#{version}
+      -X github.com/ethereum/go-ethereum/internal/build/env.BuildnumFlag=#{tap.user}
+    ]
+    (buildpath/"cmd").each_child(false) do |cmd|
+      next if cmd.basename.to_s == "utils"
+
+      system "go", "build", *std_go_args(ldflags:, output: bin/cmd), "./cmd/#{cmd}"
+    end
   end
 
   test do

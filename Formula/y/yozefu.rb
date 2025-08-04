@@ -1,8 +1,8 @@
 class Yozefu < Formula
   desc "TUI for exploring data in a Kafka cluster"
   homepage "https://github.com/MAIF/yozefu"
-  url "https://github.com/MAIF/yozefu/archive/refs/tags/v0.0.11.tar.gz"
-  sha256 "a3ea8b1311bac49110b562e00887380d153083563934e7a3e4f0db40d24797e2"
+  url "https://github.com/MAIF/yozefu/archive/refs/tags/v0.0.13.tar.gz"
+  sha256 "a09b0e8c22f50a9d0e90c9f27012d2070cfc17542373c0ce43c67ebca1133ead"
   license "Apache-2.0"
   head "https://github.com/MAIF/yozefu.git", branch: "main"
 
@@ -24,14 +24,11 @@ class Yozefu < Formula
   uses_from_macos "llvm" => :build # for libclang
 
   def install
-    # cmake 4 support, remove when https://github.com/fede1024/rust-rdkafka/pull/766 is released
-    # upstream issue, https://github.com/MAIF/yozefu/issues/83
-    ENV["CMAKE_POLICY_VERSION_MINIMUM"] = "3.5"
-
     # Ensure that the `openssl` crate picks up the intended library.
     ENV["OPENSSL_DIR"] = Formula["openssl@3"].opt_prefix
     ENV["OPENSSL_NO_VENDOR"] = "1"
 
+    ENV["RUSTFLAGS"] = "--cfg tokio_unstable"
     system "cargo", "install", *std_cargo_args(path: "crates/bin")
   end
 

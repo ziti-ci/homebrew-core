@@ -1,10 +1,9 @@
 class Djview4 < Formula
   desc "Viewer for the DjVu image format"
   homepage "https://djvu.sourceforge.net/djview4.html"
-  url "https://downloads.sourceforge.net/project/djvu/DjView/4.12/djview-4.12.tar.gz"
-  sha256 "5673c6a8b7e195b91a1720b24091915b8145de34879db1158bc936b100eaf3e3"
+  url "https://downloads.sourceforge.net/project/djvu/DjView/4.12/djview-4.12.3.tar.gz"
+  sha256 "17bfb9731ab8070e01235381f08e57b1231ffb5f49eb031873ebfa189cdaf47d"
   license "GPL-2.0-or-later"
-  revision 2
 
   livecheck do
     url :stable
@@ -32,54 +31,37 @@ class Djview4 < Formula
   depends_on "pkgconf" => :build
   depends_on "djvulibre"
   depends_on "libtiff"
-  depends_on "qt@5"
-
-  # Fix QT detection when multiple Xcode installations are present.
-  # Submitted upstream: https://sourceforge.net/p/djvu/patches/44/
-  patch :DATA
+  depends_on "qt"
 
   def install
-    system "autoreconf", "--force", "--install", "--verbose"
-
-    system "./configure", "--with-x=no",
-                          "--disable-nsdejavu",
-                          "--disable-desktopfiles",
-                          "--with-tiff=#{Formula["libtiff"].opt_prefix}",
-                          *std_configure_args
+    system "./autogen.sh", "--with-x=no",
+                            "--disable-nsdejavu",
+                            "--#{OS.mac? ? "disable" : "enable"}-desktopfiles",
+                            "--#{OS.mac? ? "enable" : "disable"}-mac",
+                            "--with-tiff=#{Formula["libtiff"].opt_prefix}",
+                            *std_configure_args
     system "make", "CC=#{ENV.cc}", "CXX=#{ENV.cxx}"
 
     # From the djview4.8 README:
     # NOTE: Do not use command "make install".
     # Simply copy the application bundle where you want it.
     if OS.mac?
-      prefix.install "src/djview.app"
-      bin.write_exec_script prefix/"djview.app/Contents/MacOS/djview"
+      # This script creates a more complete bundle, still relying on homebrew libs
+      cd("mac") { system "sh", "./make_djview_bundle_small.sh" }
+      prefix.install "mac/DjView.app"
+      bin.write_exec_script prefix/"DjView.app/Contents/MacOS/djview"
     else
+      # Should we use make install DESTDIR=<cellardir> instead?
       prefix.install "src/djview"
     end
   end
 
   test do
     name = if OS.mac?
-      "djview.app"
+      "DjView.app"
     else
       "djview"
     end
     assert_path_exists prefix/name
   end
 end
-
-__END__
-diff --git a/config/acinclude.m4 b/config/acinclude.m4
-index 3c78d41..8eb0575 100644
---- a/config/acinclude.m4
-+++ b/config/acinclude.m4
-@@ -314,7 +314,7 @@ message(QT_INSTALL_BINS="$$[QT_INSTALL_BINS]")
- changequote([, ])dnl
- EOF
-   if ( cd conftest.d && $QMAKE > conftest.out 2>&1 ) ; then
--    sed -e 's/^.*: *//' < conftest.d/conftest.out > conftest.d/conftest.sh
-+    grep "Project MESSAGE:" < conftest.d/conftest.out | sed -e 's/^.*: *//' > conftest.d/conftest.sh
-     . conftest.d/conftest.sh
-     rm -rf conftest.d
-   else

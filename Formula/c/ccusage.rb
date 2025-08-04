@@ -6,13 +6,13 @@ class Ccusage < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "24a7d4df5b41d3936bb39bd3706addcd11abfa804b021168a03b7a37e7b3d8a1"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "24a7d4df5b41d3936bb39bd3706addcd11abfa804b021168a03b7a37e7b3d8a1"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "24a7d4df5b41d3936bb39bd3706addcd11abfa804b021168a03b7a37e7b3d8a1"
-    sha256 cellar: :any_skip_relocation, sonoma:        "e5b6cc58619eaa3c331d90d9ee3902ea104b6bc49698e7f7ef53a693438f65c6"
-    sha256 cellar: :any_skip_relocation, ventura:       "e5b6cc58619eaa3c331d90d9ee3902ea104b6bc49698e7f7ef53a693438f65c6"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "24a7d4df5b41d3936bb39bd3706addcd11abfa804b021168a03b7a37e7b3d8a1"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "24a7d4df5b41d3936bb39bd3706addcd11abfa804b021168a03b7a37e7b3d8a1"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "80c8d61b53aa4d93cc0d58979ababea5d63230e31c963a55d51881485846a9b6"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "80c8d61b53aa4d93cc0d58979ababea5d63230e31c963a55d51881485846a9b6"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "80c8d61b53aa4d93cc0d58979ababea5d63230e31c963a55d51881485846a9b6"
+    sha256 cellar: :any_skip_relocation, sonoma:        "69d952e7c357cad6e7abf137fc3d4cefe3a2d737053bf0b4887bf0fcf61d37d1"
+    sha256 cellar: :any_skip_relocation, ventura:       "69d952e7c357cad6e7abf137fc3d4cefe3a2d737053bf0b4887bf0fcf61d37d1"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "80c8d61b53aa4d93cc0d58979ababea5d63230e31c963a55d51881485846a9b6"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "80c8d61b53aa4d93cc0d58979ababea5d63230e31c963a55d51881485846a9b6"
   end
 
   depends_on "node"

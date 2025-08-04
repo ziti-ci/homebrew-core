@@ -13,6 +13,7 @@ class McpProxy < Formula
     sha256 cellar: :any,                 arm64_ventura: "db0e337fa40f65d37fd59e3fe33888a58466dbe1a4f78b680ba2940c09bd6403"
     sha256 cellar: :any,                 sonoma:        "dbb71ce521de7c061f5fcd44d018ac16c3ee399363d7cb7e642025142770dba2"
     sha256 cellar: :any,                 ventura:       "ef046bb060452efd633db513c28bf8365e23ac1ecff6c7a04c613353322222f1"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "a2c4f86bde2837fa7a0e46496de3c7c9180f902b57f27658e881d91f24d113cc"
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "a03c95e85c68b35ef84b9b237bc9e1411dcbdf8c6b9d56bf27a74dc8bdf6cd97"
   end
 

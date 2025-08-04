@@ -1,10 +1,9 @@
 class SingBox < Formula
   desc "Universal proxy platform"
   homepage "https://sing-box.sagernet.org"
-  url "https://github.com/SagerNet/sing-box/archive/refs/tags/v1.11.15.tar.gz"
-  sha256 "97d58dd873d7cf9b5e4b4aca5516568f3b2e6f5c3dbc93241c82fff5e4a609fd"
+  url "https://github.com/SagerNet/sing-box/archive/refs/tags/v1.12.0.tar.gz"
+  sha256 "1093254161d2dac2175a589eb0b43415b89b3e0c10bb2a09ac230f320d974c82"
   license "GPL-3.0-or-later"
-  revision 1
   head "https://github.com/SagerNet/sing-box.git", branch: "dev-next"
 
   bottle do
@@ -20,9 +19,16 @@ class SingBox < Formula
 
   def install
     ldflags = "-s -w -X github.com/sagernet/sing-box/constant.Version=#{version} -buildid="
-    tags = "with_gvisor,with_dhcp,with_wireguard,with_reality_server,with_clash_api,with_quic," \
-           "with_utls,with_acme,with_ech"
-    system "go", "build", *std_go_args(ldflags:, tags:), "./cmd/sing-box"
+    tags = %w[
+      with_acme
+      with_clash_api
+      with_dhcp
+      with_gvisor
+      with_quic
+      with_utls
+      with_wireguard
+    ]
+    system "go", "build", *std_go_args(ldflags:, tags: tags.join(",")), "./cmd/sing-box"
     generate_completions_from_executable(bin/"sing-box", "completion")
   end
 

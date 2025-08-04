@@ -10,7 +10,7 @@ class ApacheFlinkAT1 < Formula
   no_autobump! because: :requires_manual_review
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "99384bed6ba14959e8215e2eb0ca41df3597021c0b5f1bdac4a952b4d7f74ecb"
+    sha256 cellar: :any_skip_relocation, all: "343d4caf2add1dd23ff46d12008f3726787b3fc443f3fb31fc5eef0ff3b734e3"
   end
 
   keg_only :versioned_formula

@@ -7,6 +7,15 @@ class McpProxy < Formula
   sha256 "5d113da6c965bef04202ed2525c6642cfbb786e2517fff8b7c209d58d5a6d00e"
   license "MIT"
 
+  bottle do
+    sha256 cellar: :any,                 arm64_sequoia: "877e627a035e20034023858fb2133a68834dc3b460327d8a155a733e49c89e37"
+    sha256 cellar: :any,                 arm64_sonoma:  "84138641f3341965e3cba000cc5acfe97d3e059e279becb8a8ff1f5dff62dd74"
+    sha256 cellar: :any,                 arm64_ventura: "db0e337fa40f65d37fd59e3fe33888a58466dbe1a4f78b680ba2940c09bd6403"
+    sha256 cellar: :any,                 sonoma:        "dbb71ce521de7c061f5fcd44d018ac16c3ee399363d7cb7e642025142770dba2"
+    sha256 cellar: :any,                 ventura:       "ef046bb060452efd633db513c28bf8365e23ac1ecff6c7a04c613353322222f1"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "a03c95e85c68b35ef84b9b237bc9e1411dcbdf8c6b9d56bf27a74dc8bdf6cd97"
+  end
+
   depends_on "pkgconf" => :build
   depends_on "rust" => :build # for pydantic_core
   depends_on "certifi"

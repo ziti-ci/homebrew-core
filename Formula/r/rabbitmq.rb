@@ -1,8 +1,8 @@
 class Rabbitmq < Formula
   desc "Messaging and streaming broker"
   homepage "https://www.rabbitmq.com"
-  url "https://github.com/rabbitmq/rabbitmq-server/releases/download/v4.1.2/rabbitmq-server-generic-unix-4.1.2.tar.xz"
-  sha256 "640e5b6f5696040e3ed1546aa55ee462ad97082dea24d318035d8b0c6fef40a7"
+  url "https://github.com/rabbitmq/rabbitmq-server/releases/download/v4.1.3/rabbitmq-server-generic-unix-4.1.3.tar.xz"
+  sha256 "1a9a57572828e379e8659171972c4aab814d482b162b2ccc9de02ff0a6971e73"
   license "MPL-2.0"
 
   livecheck do

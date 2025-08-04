@@ -7,12 +7,12 @@ class Cog < Formula
   head "https://github.com/replicate/cog.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "297bb10590cff352a0c8672d843b4e3d76f03e48c51e59f7917d738c81a11991"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "297bb10590cff352a0c8672d843b4e3d76f03e48c51e59f7917d738c81a11991"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "297bb10590cff352a0c8672d843b4e3d76f03e48c51e59f7917d738c81a11991"
-    sha256 cellar: :any_skip_relocation, sonoma:        "d947346aa4fddc503d85f57d19327efb6a457b3058ff716e5fc1936e3f0b39d3"
-    sha256 cellar: :any_skip_relocation, ventura:       "d947346aa4fddc503d85f57d19327efb6a457b3058ff716e5fc1936e3f0b39d3"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "53d5e14e134c164cbddf56e5ba5caa584520356cf7c2b41b23f391d59a344357"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "70fc23a56a8a761086b0214e8d08cb384506cf36b30b37e4448e3b9b16e1782c"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "70fc23a56a8a761086b0214e8d08cb384506cf36b30b37e4448e3b9b16e1782c"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "70fc23a56a8a761086b0214e8d08cb384506cf36b30b37e4448e3b9b16e1782c"
+    sha256 cellar: :any_skip_relocation, sonoma:        "50c12f5b8dc5245bb60eacb946d2020322c55730f0b73ccf6cf9dc9a106f8d3a"
+    sha256 cellar: :any_skip_relocation, ventura:       "50c12f5b8dc5245bb60eacb946d2020322c55730f0b73ccf6cf9dc9a106f8d3a"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "03327c5e9fd59133aff40e7607c2639c3098366bf4bb6d18268c66a2a9e463e5"
   end
 
   depends_on "go" => :build

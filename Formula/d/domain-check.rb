@@ -12,6 +12,7 @@ class DomainCheck < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura: "c6800c2f7cc58f98ef6944b344949e758e60c10ddb5d21055c09e0939ec656a5"
     sha256 cellar: :any_skip_relocation, sonoma:        "5391a580a4d148ffc763b027fee2c3c4f2c5909a96dd6f487f0db3b3b14e2d58"
     sha256 cellar: :any_skip_relocation, ventura:       "24ce8d5ebf223fa8c46262f7cc22f059ae641b045bd523a302113d16c1a5f13e"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "264985616da42cca2e4bf09669a82ab41739d1b6be1fd3dd187169930f287492"
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "73d90ab7d9d70bf77574b54a5ce39f874a17fbf3a0874dfc0b5010c8c493f85f"
   end
 

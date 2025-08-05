@@ -6,6 +6,15 @@ class Pyrefly < Formula
   license "MIT"
   head "https://github.com/facebook/pyrefly.git", branch: "main"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "0eea480a5cd209764c609c1289817bd93322fc4a90bf6ed1f37416d4331f1dba"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "631b17eb6a049ca5025bf5d536bbc108937a4d8b9f4e1517bbc2d799b1a321ce"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "cfb1a49c5e7b7aaa4b7c485d41cc5318fa9511f123b5426579c1d1ca7b93e99a"
+    sha256 cellar: :any_skip_relocation, sonoma:        "1b2b7965dd8053150ebdbca809ff39efe877a3f8aee7755f313e1a96f947fd80"
+    sha256 cellar: :any_skip_relocation, ventura:       "4774d8e2a6192454aba94785f57abbd8028b3373da129432a835f43bce49fe72"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "92bac047a9c209c9cf0346038757cfc2b78bab57e9c80d27b2972b2523cd9617"
+  end
+
   depends_on "rust" => :build
 
   def install

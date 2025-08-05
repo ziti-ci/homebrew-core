@@ -1,9 +1,9 @@
 class Ed < Formula
   desc "Classic UNIX line editor"
   homepage "https://www.gnu.org/software/ed/ed.html"
-  url "https://ftp.gnu.org/gnu/ed/ed-1.22.tar.lz"
-  mirror "https://ftpmirror.gnu.org/ed/ed-1.22.tar.lz"
-  sha256 "7eb22c30a99dcdb50a8630ef7ff3e4642491ac4f8cd1aa9f3182264df4f4ad08"
+  url "https://ftp.gnu.org/gnu/ed/ed-1.22.1.tar.lz"
+  mirror "https://ftpmirror.gnu.org/ed/ed-1.22.1.tar.lz"
+  sha256 "1af541116796d6b9e4b66ef9c45ddce0e15a19ed62bfca362ccd7d472cc1c8fb"
   license "GPL-3.0-or-later"
 
   bottle do

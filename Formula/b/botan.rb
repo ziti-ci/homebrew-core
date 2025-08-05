@@ -68,8 +68,9 @@ class Botan < Formula
   end
 
   test do
-    (testpath/"test.txt").write "Homebrew"
-    (testpath/"testout.txt").write shell_output("#{bin}/botan base64_enc test.txt")
-    assert_match "Homebrew", shell_output("#{bin}/botan base64_dec testout.txt")
+    text = "Homebrew"
+    base64_enc = pipe_output("#{bin}/botan base64_enc -", text)
+    refute_empty base64_enc
+    assert_equal text, pipe_output("#{bin}/botan base64_dec -", base64_enc).chomp
   end
 end

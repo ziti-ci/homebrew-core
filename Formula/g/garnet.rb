@@ -1,8 +1,8 @@
 class Garnet < Formula
   desc "High-performance cache-store"
   homepage "https://microsoft.github.io/garnet/"
-  url "https://github.com/microsoft/garnet/archive/refs/tags/v1.0.79.tar.gz"
-  sha256 "a3f005ff5154a7a058e579b134f117d559ac98f035804a0f1258ffdda4b2e563"
+  url "https://github.com/microsoft/garnet/archive/refs/tags/v1.0.80.tar.gz"
+  sha256 "1885d47fd1cba043cd11bf8f4dc775cf9249f39b61edef11f3e0793b5e70f061"
   license "MIT"
 
   bottle do
@@ -51,6 +51,9 @@ class Garnet < Formula
 
     # Replace universal binaries with their native slices.
     deuniversalize_machos
+
+    # Remove non-native library
+    rm libexec/"liblua54.so" if OS.linux? && Hardware::CPU.arm?
   end
 
   test do

@@ -12,6 +12,7 @@ class Netatalk < Formula
     "BSD-3-Clause",
     "MIT",
   ]
+  revision 1
   head "https://github.com/Netatalk/netatalk.git", branch: "main"
 
   no_autobump! because: :incompatible_version_format
@@ -32,6 +33,7 @@ class Netatalk < Formula
   depends_on "pkgconf" => :build
 
   depends_on "berkeley-db@5" # macOS bdb library lacks DBC type etc.
+  depends_on "bstring"
   depends_on "cracklib"
   depends_on "iniparser"
   depends_on "libevent"
@@ -42,6 +44,7 @@ class Netatalk < Formula
   uses_from_macos "krb5"
   uses_from_macos "libxcrypt"
   uses_from_macos "perl"
+  uses_from_macos "sqlite"
 
   on_linux do
     depends_on "avahi" # on macOS we use native mDNS instead
@@ -72,9 +75,10 @@ class Netatalk < Formula
       "-Dwith-install-hooks=false",
       "-Dwith-lockfile-path=#{var}/run",
       "-Dwith-pam-config-path=#{etc}/pam.d",
-      "-Dwith-rpath=false",
+      "-Dwith-pkgconfdir-path=#{pkgetc}",
       "-Dwith-spotlight=false",
       "-Dwith-statedir-path=#{var}",
+      "-Dwith-testsuite=true",
     ]
 
     system "meson", "setup", "build", *args, *std_meson_args
@@ -105,8 +109,24 @@ class Netatalk < Formula
   end
 
   test do
-    system sbin/"netatalk", "-V"
+    pidfile = var/"run/netatalk#{".pid" if OS.mac?}"
+    port = free_port
+    (testpath/"afp.conf").write <<~EOS
+      [Global]
+      afp port = #{port}
+      log file = #{testpath}/afpd.log
+      log level = default:info
+      signature = 1234567890ABCDEF
+    EOS
+    fork do
+      system sbin/"netatalk", "-d", "-F", "#{testpath}/afp.conf"
+    end
     system sbin/"afpd", "-V"
-    assert_empty shell_output(sbin/"netatalk")
+    system sbin/"netatalk", "-V"
+    sleep 5
+    assert_match "AFP reply", shell_output("#{bin}/asip-status localhost #{port}")
+    pid = pidfile.read.chomp.to_i
+  ensure
+    Process.kill("TERM", pid)
   end
 end

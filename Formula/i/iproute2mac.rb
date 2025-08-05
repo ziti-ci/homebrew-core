@@ -10,8 +10,7 @@ class Iproute2mac < Formula
   no_autobump! because: :requires_manual_review
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, all: "231085d2b1c81ef0406d5f32239fe6edfb4f92e52ab0f3a4065221e318b2babc"
+    sha256 cellar: :any_skip_relocation, all: "9177703b982fa2c580265be6812f51e9d4d213ec567b6e5731d87ff78716698b"
   end
 
   depends_on :macos

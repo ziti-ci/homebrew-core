@@ -4,12 +4,12 @@ class Coin3d < Formula
   license "BSD-3-Clause"
 
   stable do
-    url "https://github.com/coin3d/coin/releases/download/v4.0.4/coin-4.0.4-src.tar.gz"
-    sha256 "80efd056a445050939a265db307d106ac7524105774d4be924a71b0cff23a719"
+    url "https://github.com/coin3d/coin/releases/download/v4.0.5/coin-4.0.5-src.tar.gz"
+    sha256 "0abc591cb49cbb8d97eb70251340f61cc1bd75a3ac1fa7c23907af6671c1079a"
 
     resource "soqt" do
-      url "https://github.com/coin3d/soqt/releases/download/v1.6.3/soqt-1.6.3-src.tar.gz"
-      sha256 "79342e89290783457c075fb6a60088aad4a48ea072ede06fdf01985075ef46bd"
+      url "https://github.com/coin3d/soqt/releases/download/v1.6.4/soqt-1.6.4-src.tar.gz"
+      sha256 "1387d702df5578fdbc16b9c0a12dd52a68c0478f5e112cb6a45c033f02ba4d24"
     end
   end
 
@@ -53,7 +53,6 @@ class Coin3d < Formula
   end
 
   def install
-    odie "Remove cmake 4 build patch" if build.stable? && resource("soqt").version > "1.6.3"
     system "cmake", "-S", ".", "-B", "_build",
                     "-DCOIN_BUILD_MAC_FRAMEWORK=OFF",
                     "-DCOIN_BUILD_DOCUMENTATION=ON",
@@ -69,7 +68,6 @@ class Coin3d < Formula
                       "-DSOQT_BUILD_MAC_FRAMEWORK=OFF",
                       "-DSOQT_BUILD_DOCUMENTATION=OFF",
                       "-DSOQT_BUILD_TESTS=OFF",
-                      "-DCMAKE_POLICY_VERSION_MINIMUM=3.5",
                       *std_cmake_args(find_framework: "FIRST")
       system "cmake", "--build", "_build"
       system "cmake", "--install", "_build"

@@ -13,16 +13,11 @@ class Djview4 < Formula
   no_autobump! because: :requires_manual_review
 
   bottle do
-    sha256 cellar: :any,                 arm64_sequoia:  "50f358049ae7371431b1640620050d40f9075e998695efc69e3cfc228955d189"
-    sha256 cellar: :any,                 arm64_sonoma:   "aeec9249493e568780d0760a7c11d597c51e9a89835d9d7be3a3512510dd6e09"
-    sha256 cellar: :any,                 arm64_ventura:  "a852adaa4bb85ae49414a271aa1b183595b523d994d338567a18384097ce1abf"
-    sha256 cellar: :any,                 arm64_monterey: "7386959e5881c110ca398bd1ec94f962a4d726ea659ef26c804cbf68aaf4fceb"
-    sha256 cellar: :any,                 arm64_big_sur:  "2da284a44e3e0a0a1a5dc29c7b6c71ef3e014d13d81846c9d7e88293b005081f"
-    sha256 cellar: :any,                 sonoma:         "fb06597b392db6503ee92b70ee0074a0880b58e2d5fed3999d3b2c40b0039d28"
-    sha256 cellar: :any,                 ventura:        "7c8e2da786b4d91a1d4af0991a7d8e49903c80101377a10f8b6920559e25aff1"
-    sha256 cellar: :any,                 monterey:       "d5c2c116e402498ec6ffd6261ee5eeaec4374a6d9ec7b37c7cb4f5ff7f316b81"
-    sha256 cellar: :any,                 big_sur:        "8f03e13feeb1f0e19b8a1f1b5638990557aaad04916e06826bee7511a0dbfbf4"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "9ad7de2463c9ef2720b7bd1a854ac73ed84bdf0ecb6273146a9a404a48b78eca"
+    sha256 cellar: :any,                 arm64_sonoma:  "b393017f8b974e7dc17a48f65941fc9ddde96ed8984d8512eee36c8696d92226"
+    sha256 cellar: :any,                 arm64_ventura: "ad42188575bb0381ad12eacebd07697e2e9ff2d006ee8ce2f6f13ea4dedb3b20"
+    sha256 cellar: :any,                 sonoma:        "7c6e8d7e367fb01bb6ab1ce25937baad8216b3eeba387c02b818f7181c5aded4"
+    sha256 cellar: :any,                 ventura:       "feb0dbe394dd086949cb1c383b4d88999073173b84fbaadde047160c064c4bdd"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "782df64753001f0fcda840c52acda38ce36c0468d478eb05a669955e2c6f2b3c"
   end
 
   depends_on "autoconf" => :build

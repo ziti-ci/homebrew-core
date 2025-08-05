@@ -4,9 +4,9 @@ class Cassandra < Formula
 
   desc "Eventually consistent, distributed key-value store"
   homepage "https://cassandra.apache.org"
-  url "https://www.apache.org/dyn/closer.lua?path=cassandra/5.0.4/apache-cassandra-5.0.4-bin.tar.gz"
-  mirror "https://archive.apache.org/dist/cassandra/5.0.4/apache-cassandra-5.0.4-bin.tar.gz"
-  sha256 "d3056b75f35c2bd2abbdf7b0bf9f5f816a61328ca136c5580a8fb0c9f57c5e30"
+  url "https://www.apache.org/dyn/closer.lua?path=cassandra/5.0.5/apache-cassandra-5.0.5-bin.tar.gz"
+  mirror "https://archive.apache.org/dist/cassandra/5.0.5/apache-cassandra-5.0.5-bin.tar.gz"
+  sha256 "17097f52fe9627a45867efefd8eee42d5fa4c4cbab6e2a92474aa1d370ea0aca"
   license "Apache-2.0"
 
   bottle do
@@ -31,8 +31,8 @@ class Cassandra < Formula
   end
 
   resource "click" do
-    url "https://files.pythonhosted.org/packages/b9/2e/0090cbf739cee7d23781ad4b89a9894a41538e4fcf4c31dcdd705b78eb8b/click-8.1.8.tar.gz"
-    sha256 "ed53c9d8990d83c2a27deae68e4ee337473f6330c040a31d4225c9574d16096a"
+    url "https://files.pythonhosted.org/packages/60/6c/8ca2efa64cf75a977a0d7fac081354553ebe483345c734fb6b6515d96bbc/click-8.2.1.tar.gz"
+    sha256 "27c491cc05d968d271d5a1db13e3b5a184636d9d930f148c50b038f0d0646202"
   end
 
   resource "geomet" do

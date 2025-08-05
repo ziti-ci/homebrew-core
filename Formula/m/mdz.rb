@@ -1,8 +1,8 @@
 class Mdz < Formula
   desc "CLI for the mdz ledger Open Source"
   homepage "https://github.com/LerianStudio/midaz"
-  url "https://github.com/LerianStudio/midaz/archive/refs/tags/v2.2.2.tar.gz"
-  sha256 "c9406dcccd2fc7b306cd251370bcc2b0e42e54e7a336df2762ea667d76633f54"
+  url "https://github.com/LerianStudio/midaz/archive/refs/tags/v3.0.0.tar.gz"
+  sha256 "34d76cea270969d2ea636b6b779dec3775b368422487da98d2c80bb2149ce432"
   license "Apache-2.0"
   head "https://github.com/LerianStudio/midaz.git", branch: "main"
 
@@ -18,8 +18,10 @@ class Mdz < Formula
   depends_on "go" => :build
 
   def install
-    ldflags = "-s -w -X github.com/LerianStudio/midaz/components/mdz/pkg/environment.Version=#{version}"
+    ldflags = "-s -w -X github.com/LerianStudio/midaz/v3/components/mdz/pkg/environment.Version=#{version}"
     system "go", "build", *std_go_args(ldflags:), "./components/mdz"
+
+    generate_completions_from_executable(bin/"mdz", "completion", shells: [:bash, :zsh, :fish, :pwsh])
   end
 
   test do

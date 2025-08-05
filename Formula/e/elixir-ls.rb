@@ -11,7 +11,7 @@ class ElixirLs < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "b84810a6cc3a4936a486c942a163e8181f6ee5e0254ea2a43f209c04878a80ed"
+    sha256 cellar: :any_skip_relocation, all: "b3eea835e3c22360b4fe92265174ec76a5a206acd37d20c7a4208cb100157c93"
   end
 
   depends_on "elixir"

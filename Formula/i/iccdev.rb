@@ -1,4 +1,4 @@
-class Iccmax < Formula
+class Iccdev < Formula
   desc "Demonstration Implementation for iccMAX color profiles"
   homepage "https://github.com/InternationalColorConsortium/DemoIccMAX"
   url "https://github.com/InternationalColorConsortium/DemoIccMAX/archive/refs/tags/v2.2.50.tar.gz"
@@ -6,13 +6,13 @@ class Iccmax < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any,                 arm64_sequoia: "c65b4162c33709671fc0554926edf05d0ab5f0a4f37f9336d36e1f8fb7e237b9"
-    sha256 cellar: :any,                 arm64_sonoma:  "2488ed5d87bbe84c802ba1803ae383c4d2ba6c793c0e3146a4d50c7e0aaa2c95"
-    sha256 cellar: :any,                 arm64_ventura: "725fa427b1a4106eadb49acb96e112249e00dcd737a72e9430a116bde3adbba4"
-    sha256 cellar: :any,                 sonoma:        "d1b0708ef55cbc7ec7a0bc39f87fb98417489fb0e59fbf34f63d836067fdb79c"
-    sha256 cellar: :any,                 ventura:       "2b5aef1ad26aecc5fddf8f097fccf3fb1dedfc72bf5061a577a1720ebe5953ec"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "2df8f147a9e2ed559a38c26cd1030e90982eb5fbf2048eeaac73d7d0937476d5"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "8ef04980d03bed8eb5e7cce0480045d252efdcab85167368e75a4090a7274854"
+    sha256 cellar: :any,                 arm64_sequoia: "f722a5bbdb050d4c8fc3a98ddb44ee416bf5b3dcef1ff97a7a4d7337c78e3626"
+    sha256 cellar: :any,                 arm64_sonoma:  "cbf8e8773fb606ad43f4eeef01be4531b03e8671a200fc930d16269184b1cfed"
+    sha256 cellar: :any,                 arm64_ventura: "320314d7aa7f677efe22cdc29b815205c4a8e44acc41bf2e269f2e7f49182d03"
+    sha256 cellar: :any,                 sonoma:        "7d8888b48a3fabea1b4b425ce45c0022cfe1aefab7ef197fc96af928027f2cbc"
+    sha256 cellar: :any,                 ventura:       "19822d5ff8e4213013e005cf41b52046c2822b2ecafc08f6da0109bba4b45e08"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "d6dd04ecdae3a0fee2746b33a1453f949b519278d1335ae4eb533d583ab5c621"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "1096b2b99784ab6d08d1590ab5f3dcd3f2b9145429b97c4e5182328a85877145"
   end
 
   depends_on "cmake" => :build

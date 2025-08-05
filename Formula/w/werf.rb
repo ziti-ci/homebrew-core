@@ -1,8 +1,8 @@
 class Werf < Formula
   desc "Consistent delivery tool for Kubernetes"
   homepage "https://werf.io/"
-  url "https://github.com/werf/werf/archive/refs/tags/v2.39.1.tar.gz"
-  sha256 "fdc6f3f092d0e1ac418c50a64eb56f86eb98ccaa7c57b991b48962944b6507d9"
+  url "https://github.com/werf/werf/archive/refs/tags/v2.43.1.tar.gz"
+  sha256 "2870d4f8f44ea8fae8c2a423e2e7a5a6fc4fc800253ba5f6bb19c19c815fcad3"
   license "Apache-2.0"
   head "https://github.com/werf/werf.git", branch: "main"
 
@@ -74,8 +74,8 @@ class Werf < Formula
     YAML
 
     output = <<~YAML
-      - image: vote
       - image: result
+      - image: vote
       - image: worker
     YAML
 
@@ -83,7 +83,8 @@ class Werf < Formula
     system "git", "add", werf_config
     system "git", "commit", "-m", "Initial commit"
 
-    assert_equal output, shell_output("#{bin}/werf config graph")
+    assert_equal output,
+                 shell_output("#{bin}/werf config graph").lines.sort.join
 
     assert_match version.to_s, shell_output("#{bin}/werf version")
   end

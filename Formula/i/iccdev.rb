@@ -11,6 +11,7 @@ class Iccdev < Formula
     sha256 cellar: :any,                 arm64_ventura: "320314d7aa7f677efe22cdc29b815205c4a8e44acc41bf2e269f2e7f49182d03"
     sha256 cellar: :any,                 sonoma:        "7d8888b48a3fabea1b4b425ce45c0022cfe1aefab7ef197fc96af928027f2cbc"
     sha256 cellar: :any,                 ventura:       "19822d5ff8e4213013e005cf41b52046c2822b2ecafc08f6da0109bba4b45e08"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "d6dd04ecdae3a0fee2746b33a1453f949b519278d1335ae4eb533d583ab5c621"
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "1096b2b99784ab6d08d1590ab5f3dcd3f2b9145429b97c4e5182328a85877145"
   end
 

@@ -3,10 +3,9 @@ class Poetry < Formula
 
   desc "Python package management tool"
   homepage "https://python-poetry.org/"
-  url "https://files.pythonhosted.org/packages/db/12/1c8d8b2c6017a33a9c9c708c6d2bb883af7f447520a466dc21d2c74ecfe1/poetry-2.1.3.tar.gz"
-  sha256 "f2c9bd6790b19475976d88ea4553bcc3533c0dc73f740edc4fffe9e2add50594"
+  url "https://files.pythonhosted.org/packages/4e/f3/d7f0fcefd3577d01574bbc43b0e93b00fec529b9dc14f838dc4502670a08/poetry-2.1.4.tar.gz"
+  sha256 "bed4af5fc87fb145258ac5b1dae77de2cd7082ec494e3b2f66bca0f477cbfc5c"
   license "MIT"
-  revision 2
   head "https://github.com/python-poetry/poetry.git", branch: "master"
 
   bottle do
@@ -34,13 +33,13 @@ class Poetry < Formula
   end
 
   resource "anyio" do
-    url "https://files.pythonhosted.org/packages/95/7d/4c1bd541d4dffa1b52bd83fb8527089e097a106fc90b467a7313b105f840/anyio-4.9.0.tar.gz"
-    sha256 "673c0c244e15788651a4ff38710fea9675823028a6f08a5eda409e0c9840a028"
+    url "https://files.pythonhosted.org/packages/f1/b4/636b3b65173d3ce9a38ef5f0522789614e590dab6a8d505340a4efe4c567/anyio-4.10.0.tar.gz"
+    sha256 "3f3fae35c96039744587aa5b8371e7e8e603c0702999535961dd336026973ba6"
   end
 
   resource "build" do
-    url "https://files.pythonhosted.org/packages/7d/46/aeab111f8e06793e4f0e421fcad593d547fb8313b50990f31681ee2fb1ad/build-1.2.2.post1.tar.gz"
-    sha256 "b36993e92ca9375a219c99e606a122ff365a760a2d4bba0caa09bd5278b608b7"
+    url "https://files.pythonhosted.org/packages/25/1c/23e33405a7c9eac261dff640926b8b5adaed6a6eb3e1767d441ed611d0c0/build-1.3.0.tar.gz"
+    sha256 "698edd0ea270bde950f53aed21f3a0135672206f3911e0176261a31e0e07b397"
   end
 
   resource "cachecontrol" do
@@ -64,8 +63,8 @@ class Poetry < Formula
   end
 
   resource "distlib" do
-    url "https://files.pythonhosted.org/packages/0d/dd/1bec4c5ddb504ca60fc29472f3d27e8d4da1257a854e1d96742f15c1d02d/distlib-0.3.9.tar.gz"
-    sha256 "a60f20dea646b8a33f3e7772f74dc0b2d0772d2837ee1342a00645c81edf9403"
+    url "https://files.pythonhosted.org/packages/96/8e/709914eb2b5749865801041647dc7f4e6d00b549cfe88b65ca192995f07c/distlib-0.4.0.tar.gz"
+    sha256 "feec40075be03a04501a973d81f633735b4b69f98b05450592310c0f401a4e0d"
   end
 
   resource "dulwich" do
@@ -124,8 +123,8 @@ class Poetry < Formula
   end
 
   resource "jaraco-functools" do
-    url "https://files.pythonhosted.org/packages/ab/23/9894b3df5d0a6eb44611c36aec777823fc2e07740dabbd0b810e19594013/jaraco_functools-4.1.0.tar.gz"
-    sha256 "70f7e0e2ae076498e212562325e805204fc092d7b4c17e0e86c959e249701a9d"
+    url "https://files.pythonhosted.org/packages/49/1c/831faaaa0f090b711c355c6d8b2abf277c72133aab472b6932b03322294c/jaraco_functools-4.2.1.tar.gz"
+    sha256 "be634abfccabce56fa3053f8c7ebe37b682683a4ee7793670ced17bab0087353"
   end
 
   resource "jeepney" do
@@ -154,8 +153,8 @@ class Poetry < Formula
   end
 
   resource "pbs-installer" do
-    url "https://files.pythonhosted.org/packages/2f/02/bd162be66772b5dbdfd719d4ced63e14730d8260417db1c43ac8017e2b3e/pbs_installer-2025.6.12.tar.gz"
-    sha256 "ae2d3990848652dca699a680b00ea8e19b970cb6172967cb00539bfeed5a7465"
+    url "https://files.pythonhosted.org/packages/a2/fa/cc15ff1d8bb595af5b4115ebe334a6b90058e5b7864bca6300e6affb06e2/pbs_installer-2025.7.23.tar.gz"
+    sha256 "0dcf3038b4d04f9b41c4f80fc43ac05de34c0bf949580308a6894836a0340752"
   end
 
   resource "pkginfo" do
@@ -224,13 +223,13 @@ class Poetry < Formula
   end
 
   resource "virtualenv" do
-    url "https://files.pythonhosted.org/packages/56/2c/444f465fb2c65f40c3a104fd0c495184c4f2336d65baf398e3c75d72ea94/virtualenv-20.31.2.tar.gz"
-    sha256 "e10c0a9d02835e592521be48b332b6caee6887f332c111aa79a09b9e79efc2af"
+    url "https://files.pythonhosted.org/packages/a9/96/0834f30fa08dca3738614e6a9d42752b6420ee94e58971d702118f7cfd30/virtualenv-20.32.0.tar.gz"
+    sha256 "886bf75cadfdc964674e6e33eb74d787dff31ca314ceace03ca5810620f4ecf0"
   end
 
   resource "xattr" do
-    url "https://files.pythonhosted.org/packages/62/bf/8b98081f9f8fd56d67b9478ff1e0f8c337cde08bcb92f0d592f0a7958983/xattr-1.1.4.tar.gz"
-    sha256 "b7b02ecb2270da5b7e7deaeea8f8b528c17368401c2b9d5f63e91f545b45d372"
+    url "https://files.pythonhosted.org/packages/50/65/14438ae55acf7f8fc396ee8340d740a3e1d6ef382bf25bf24156cfb83563/xattr-1.2.0.tar.gz"
+    sha256 "a64c8e21eff1be143accf80fd3b8fde3e28a478c37da298742af647ac3e5e0a7"
   end
 
   resource "zstandard" do

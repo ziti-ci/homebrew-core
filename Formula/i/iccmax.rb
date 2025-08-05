@@ -1,10 +1,9 @@
 class Iccmax < Formula
   desc "Demonstration Implementation for iccMAX color profiles"
   homepage "https://github.com/InternationalColorConsortium/DemoIccMAX"
-  url "https://github.com/InternationalColorConsortium/DemoIccMAX/archive/refs/tags/v2.2.6.tar.gz"
-  sha256 "dcb66f84016f6abe6033e71e2206e662b40e581dce9d208c9c7d60515f185dfe"
+  url "https://github.com/InternationalColorConsortium/DemoIccMAX/archive/refs/tags/v2.2.50.tar.gz"
+  sha256 "f48fc2e3f4cc80f9c73df27bf48fca3de7d0a81266d7084df544941e61b37eb2"
   license "MIT"
-  revision 1
 
   bottle do
     rebuild 1
@@ -25,13 +24,6 @@ class Iccmax < Formula
   depends_on "wxwidgets"
 
   uses_from_macos "libxml2"
-
-  # Build fails on Ubuntu
-  # https://github.com/InternationalColorConsortium/DemoIccMAX/pull/145
-  patch do
-    url "https://github.com/InternationalColorConsortium/DemoIccMAX/commit/965e14fb0c00dd4638dac6056cce84bab9821b57.patch?full_index=1"
-    sha256 "e40a632236e2b3da5df9b2313fee3d79eed601b9f91a81158a67577e0a9d397c"
-  end
 
   def install
     args = %W[

@@ -1,8 +1,8 @@
 class Kargo < Formula
   desc "Multi-Stage GitOps Continuous Promotion"
   homepage "https://kargo.io/"
-  url "https://github.com/akuity/kargo/archive/refs/tags/v1.6.2.tar.gz"
-  sha256 "501a0b85f5dfdef73da97fa8a689c5adce54ad3ebd42b140a14265711384eb1f"
+  url "https://github.com/akuity/kargo/archive/refs/tags/v1.7.0.tar.gz"
+  sha256 "ed0b0b7497f1a54c001a332766ff850d7118d9663913f95f3f437f3094f583b4"
   license "Apache-2.0"
   head "https://github.com/akuity/kargo.git", branch: "main"
 

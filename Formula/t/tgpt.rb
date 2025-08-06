@@ -1,8 +1,8 @@
 class Tgpt < Formula
   desc "AI Chatbots in terminal without needing API keys"
   homepage "https://github.com/aandrew-me/tgpt"
-  url "https://github.com/aandrew-me/tgpt/archive/refs/tags/v2.10.1.tar.gz"
-  sha256 "a0fc596fd2b8aabac222e22e96fc02709e185031e31a15b522f4c5c59db892d9"
+  url "https://github.com/aandrew-me/tgpt/archive/refs/tags/v2.11.0.tar.gz"
+  sha256 "79cbb20d33d38370cc86a5d28d584a3492631295a95635615052db39e92636a3"
   license "GPL-3.0-only"
   head "https://github.com/aandrew-me/tgpt.git", branch: "main"
 

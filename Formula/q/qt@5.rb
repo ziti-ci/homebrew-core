@@ -20,12 +20,12 @@ class QtAT5 < Formula
   no_autobump! because: :requires_manual_review
 
   bottle do
-    sha256 cellar: :any,                 arm64_sequoia: "a661d1f9b62c9fff165ace3821f3befeb65620166b63d8795301f132cc9aeb50"
-    sha256 cellar: :any,                 arm64_sonoma:  "1902b5b126785f33ff1fdd612c458a0dd2cca205c925f4c04fc5ef4e6b7d5517"
-    sha256 cellar: :any,                 arm64_ventura: "61a83675a351069af55b9ab8cc62962fbf1e763cb5abb8ee2a63102de9c4d438"
-    sha256 cellar: :any,                 sonoma:        "d86069ffb50778801427abd0574ef955e2377d777d251b496bf38c732ebcf6c4"
-    sha256 cellar: :any,                 ventura:       "3a50379f30ae54952e5860dfb1a624e903db7b63a420af76a90aa0e0fdc3d3e6"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "0b1afcefd9c62dae5bf3aadf26d9a25e3ed9c8855bb8b979a1fe1cdb0484dd3c"
+    sha256 cellar: :any,                 arm64_sequoia: "71e99646e19f6bbfb49bef4ce5fb144967158846b6c63819f24f3769dba01570"
+    sha256 cellar: :any,                 arm64_sonoma:  "37b737c30cd357390362d8b732b87a665f6f3d35b06d31951251e6e3616a37a9"
+    sha256 cellar: :any,                 arm64_ventura: "7149d97837f5cecc2a773f32e855f059e7d92b1fe2502a142c97f777acb4fe66"
+    sha256 cellar: :any,                 sonoma:        "18882946bb6b34ace4fae1fe0fd53bc94666823b1d8007c7add580d4128d8884"
+    sha256 cellar: :any,                 ventura:       "2b768884998655899253a3887c8d01011bd609bc754c5ef897323af5cb4b361d"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "343311cd12f13c145f45fcb608b4803a4aebbb1d78914ca7fcd2982feb50303c"
   end
 
   keg_only :versioned_formula

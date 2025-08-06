@@ -6,6 +6,15 @@ class Bstring < Formula
   license "BSD-3-Clause"
   head "https://github.com/msteinert/bstring.git", branch: "main"
 
+  bottle do
+    sha256 cellar: :any,                 arm64_sequoia: "bbdfcc6c40fc5d3826b69cf194b712e96c6e9f3bb15fe6c6b487d161eeee1bf4"
+    sha256 cellar: :any,                 arm64_sonoma:  "c25d14a3197a9508e1516cd3503b471ba15d1929b511533af28b6cbc54b9e5f6"
+    sha256 cellar: :any,                 arm64_ventura: "3e7c981e0076bcadcbe655064492a4170b5e0c3a5bedd65a2a2244fcb18083a1"
+    sha256 cellar: :any,                 sonoma:        "fea29e81c074efcc6b7ec34733ef211fb268e6d5877cba536f70a897a4cc96e2"
+    sha256 cellar: :any,                 ventura:       "225f2b47a0fd47f5d935150bf17e8b836711874107a6993a98e5cacb02adc2b8"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "3e5c66d11cb49ef8c83637a7c0690b2dfcda8562107be84cc77a7efdfd9ee447"
+  end
+
   depends_on "meson" => :build
   depends_on "ninja" => :build
   depends_on "check" => :test

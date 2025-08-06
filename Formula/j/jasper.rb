@@ -1,8 +1,8 @@
 class Jasper < Formula
   desc "Library for manipulating JPEG-2000 images"
   homepage "https://ece.engr.uvic.ca/~frodo/jasper/"
-  url "https://github.com/jasper-software/jasper/releases/download/version-4.2.7/jasper-4.2.7.tar.gz"
-  sha256 "e133ff3e3260069f2f77b65237c1bef680c20ebaf817d0e15106bffd8e6dea53"
+  url "https://github.com/jasper-software/jasper/releases/download/version-4.2.8/jasper-4.2.8.tar.gz"
+  sha256 "98058a94fbff57ec6e31dcaec37290589de0ba6f47c966f92654681a56c71fae"
   license "JasPer-2.0"
 
   livecheck do

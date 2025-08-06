@@ -33,18 +33,40 @@ class OrTools < Formula
   depends_on "osi"
   depends_on "protobuf"
   depends_on "re2"
+  depends_on "scip"
   uses_from_macos "bzip2"
   uses_from_macos "zlib"
 
   def install
+    # Fix for wrong target name for `libscip`.
+    # Reported at https://github.com/google/or-tools/issues/4750.
+    libscip_files = %w[
+      cmake/check_deps.cmake
+      cmake/docs/cmake.dot
+      cmake/docs/cmake.svg
+      cmake/docs/deps.dot
+      cmake/docs/deps.svg
+      cmake/java.cmake
+      cmake/ortoolsConfig.cmake.in
+      cmake/python.cmake
+      cmake/system_deps.cmake
+      ortools/dotnet/Google.OrTools.runtime.csproj.in
+      ortools/gscip/CMakeLists.txt
+      ortools/linear_solver/CMakeLists.txt
+      ortools/linear_solver/proto_solver/CMakeLists.txt
+      ortools/linear_solver/wrappers/CMakeLists.txt
+      ortools/math_opt/io/CMakeLists.txt
+      ortools/math_opt/solvers/CMakeLists.txt
+    ]
+    inreplace libscip_files, "SCIP::libscip", "libscip"
+
     # FIXME: Upstream enabled Highs support in their binary distribution, but our build fails with it.
-    # FIXME: turned off SCIP, otherwise or-tools fails to build with "Target SCIP::libscip not available."
     args = %w[
       -DUSE_HIGHS=OFF
       -DBUILD_DEPS=OFF
       -DBUILD_SAMPLES=OFF
       -DBUILD_EXAMPLES=OFF
-      -DUSE_SCIP=OFF
+      -DUSE_SCIP=ON
     ]
     system "cmake", "-S", ".", "-B", "build", *args, *std_cmake_args
     system "cmake", "--build", "build"

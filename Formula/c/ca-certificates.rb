@@ -96,7 +96,7 @@ class CaCertificates < Formula
     end
 
     # Now process Mozilla certificates we downloaded.
-    pem_certificates_list = File.read(pkgshare/"cacert.pem")
+    pem_certificates_list = (pkgshare/"cacert.pem").read
     pem_certificates = pem_certificates_list.scan(
       /-----BEGIN CERTIFICATE-----.*?-----END CERTIFICATE-----/m,
     )
@@ -121,9 +121,6 @@ class CaCertificates < Formula
   end
 
   def load_certificates_from_file(file_path, trusted_certificates, fingerprints, certificate_type)
-    file_path = Pathname(file_path)
-    return unless file_path.exist?
-
     certificates_list = file_path.read
     certificates = certificates_list.scan(
       /-----BEGIN CERTIFICATE-----.*?-----END CERTIFICATE-----/m,
@@ -143,8 +140,15 @@ class CaCertificates < Formula
   end
 
   def linux_post_install
-    rm(pkgetc/"cert.pem") if (pkgetc/"cert.pem").exist?
+    rm(pkgetc/"cert.pem", force: true)
     pkgetc.mkpath
+
+    system_ca_certificates = Pathname.new("/etc/ssl/certs/ca-certificates.crt")
+    if !system_ca_certificates.exist? || !system_ca_certificates.readable?
+      cp pkgshare/"cacert.pem", pkgetc/"cert.pem"
+      return
+    end
+
     # Integrate system certificates if OpenSSL is available
     unless which("openssl")
       opoo "Cannot find OpenSSL: skipping system certificates."
@@ -161,8 +165,7 @@ class CaCertificates < Formula
     fingerprints = Set.new
 
     # First, load system certificates from standard Linux location
-    load_certificates_from_file("/etc/ssl/certs/ca-certificates.crt",
-                                trusted_certificates, fingerprints, "system")
+    load_certificates_from_file(system_ca_certificates, trusted_certificates, fingerprints, "system")
 
     # Now process Mozilla certs and append only new ones
     load_certificates_from_file(pkgshare/"cacert.pem", trusted_certificates, fingerprints, "Mozilla")
@@ -180,7 +183,11 @@ class CaCertificates < Formula
 
     on_linux do
       <<~EOS
-        CA certificates have been bootstrapped from both the system CA store and the Mozilla CA store.
+        CA certificates have been bootstrapped from both the Mozilla CA store and the system CA store at
+
+          /etc/ssl/certs/ca-certificates.crt
+
+        if this path exists and is readable.
       EOS
     end
   end

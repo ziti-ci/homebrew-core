@@ -1,8 +1,8 @@
 class Anyquery < Formula
   desc "Query anything with SQL"
   homepage "https://anyquery.dev"
-  url "https://github.com/julien040/anyquery/archive/refs/tags/0.4.2.tar.gz"
-  sha256 "fd7a249965fa4cb014629772fa4d9c79acb823c89f73fb68c9c1361a08cd11c6"
+  url "https://github.com/julien040/anyquery/archive/refs/tags/0.4.3.tar.gz"
+  sha256 "515541e21737979291d1a7c026db352ffc202c9e1887ec5ba4fb1fab512d9ee9"
   license "AGPL-3.0-only"
   head "https://github.com/julien040/anyquery.git", branch: "main"
 

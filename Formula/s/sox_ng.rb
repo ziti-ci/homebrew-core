@@ -1,8 +1,8 @@
 class SoxNg < Formula
   desc "Sound eXchange NG"
   homepage "https://codeberg.org/sox_ng/sox_ng"
-  url "https://codeberg.org/sox_ng/sox_ng/releases/download/sox_ng-14.6.0.3/sox_ng-14.6.0.3.tar.gz"
-  sha256 "a07b2ca63fc9f3953967975655d4b2ea468f228c99fba19413db1547f3c695ad"
+  url "https://codeberg.org/sox_ng/sox_ng/releases/download/sox_ng-14.6.0.4/sox_ng-14.6.0.4.tar.gz"
+  sha256 "faf376b7054eac6da3c6c15897a42a8fd22147d5d5ea05921ff1afa1f4e7a7ab"
   license "GPL-2.0-only"
   head "https://codeberg.org/sox_ng/sox_ng.git", branch: "main"
 

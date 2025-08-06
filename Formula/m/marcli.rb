@@ -1,8 +1,8 @@
 class Marcli < Formula
   desc "Parse MARC (ISO 2709) files"
   homepage "https://github.com/hectorcorrea/marcli"
-  url "https://github.com/hectorcorrea/marcli/archive/refs/tags/v1.2.0.tar.gz"
-  sha256 "673f3237baa843db13f671c5a2e3986aa272566a38835bdd042377327ff9d9cb"
+  url "https://github.com/hectorcorrea/marcli/archive/refs/tags/v1.3.0.tar.gz"
+  sha256 "7ee0ea5e0edd73e1ac7155bf9d3579f20818384ba1dc12b5a87f869b00a1ca69"
   license "MIT"
   head "https://github.com/hectorcorrea/marcli.git", branch: "main"
 
@@ -29,7 +29,7 @@ class Marcli < Formula
     end
 
     resource("testdata").stage do
-      assert_equal "=650  \\0$aCoal$xAnalysis.\r\n=650  \\0$aCoal$xSampling.\r\n\r\n",
+      assert_equal "=650  \\0$aCoal$xAnalysis.\n=650  \\0$aCoal$xSampling.\n\n",
       shell_output("#{bin}/marcli -file test_1a.mrc -fields 650")
     end
   end

@@ -33,6 +33,7 @@ class Rggen < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura: "88986dd86533e818c10e69f7b2d8122bedc26ec4d6b7ee8a960138d814f62e78"
     sha256 cellar: :any_skip_relocation, sonoma:        "25af42103656b6b6282d64836fb625c7ceba42f947e5f63b1c5557ae1c879f79"
     sha256 cellar: :any_skip_relocation, ventura:       "25af42103656b6b6282d64836fb625c7ceba42f947e5f63b1c5557ae1c879f79"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "20f55dc1c1b14357296de31c1da3f3e74427430afe0496e2b813c2ddaae7b0b1"
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "c91a2c2cf06d99dfe6684abe7d49179bd4ff30cc246d2151077e5a72db468601"
   end
 

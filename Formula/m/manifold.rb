@@ -11,6 +11,7 @@ class Manifold < Formula
     sha256 cellar: :any,                 arm64_ventura: "3cbdbd014289232556ffd784dd8f9440349e5598e925aa28134f05feb45a5767"
     sha256 cellar: :any,                 sonoma:        "c43c199ecff386933bd3b069261aa6c0d08243e4f51008a475c89216f19b4578"
     sha256 cellar: :any,                 ventura:       "9bbc38300371f5d38a3151e7e08bb57e8298081f5e7193176d2f0c4a7daf49c4"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "0b72d2bbc6b70fc96f92a37a45b80be6218b47c42c22d772a9790694ce033165"
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "fa851ba5615a5bfe0c555334e2b03d64d3201c471852064227852dea8c8f44a0"
   end
 

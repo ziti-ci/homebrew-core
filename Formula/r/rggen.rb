@@ -27,6 +27,15 @@ class Rggen < Formula
     end
   end
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "88986dd86533e818c10e69f7b2d8122bedc26ec4d6b7ee8a960138d814f62e78"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "88986dd86533e818c10e69f7b2d8122bedc26ec4d6b7ee8a960138d814f62e78"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "88986dd86533e818c10e69f7b2d8122bedc26ec4d6b7ee8a960138d814f62e78"
+    sha256 cellar: :any_skip_relocation, sonoma:        "25af42103656b6b6282d64836fb625c7ceba42f947e5f63b1c5557ae1c879f79"
+    sha256 cellar: :any_skip_relocation, ventura:       "25af42103656b6b6282d64836fb625c7ceba42f947e5f63b1c5557ae1c879f79"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "c91a2c2cf06d99dfe6684abe7d49179bd4ff30cc246d2151077e5a72db468601"
+  end
+
   head do
     url "https://github.com/rggen/rggen.git",
       branch: "master"

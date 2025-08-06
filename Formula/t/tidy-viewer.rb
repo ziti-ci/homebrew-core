@@ -1,8 +1,8 @@
 class TidyViewer < Formula
   desc "CLI csv pretty printer"
   homepage "https://github.com/alexhallam/tv"
-  url "https://github.com/alexhallam/tv/archive/refs/tags/1.5.2.tar.gz"
-  sha256 "3f950c1d05cc7fd5806a49a3f10a9437290e2b24ddf8402ec04d54c63d1a60d5"
+  url "https://github.com/alexhallam/tv/archive/refs/tags/1.6.0.tar.gz"
+  sha256 "512c0019879e4be16a991a4ff34f5791cafb0748fd9bb0b25410a97ec5e32950"
   license "Unlicense"
 
   # Some tagged versions using a stable version format are marked as
@@ -11,8 +11,6 @@ class TidyViewer < Formula
     url :stable
     strategy :github_latest
   end
-
-  no_autobump! because: :requires_manual_review
 
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_sequoia:  "73a068ea1c90da7c42f7eb61e16429607c620c7519987417ba192aece9254d37"

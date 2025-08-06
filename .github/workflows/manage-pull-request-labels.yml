@@ -39,7 +39,7 @@ jobs:
 
   concurrent-downloads-label:
     permissions:
-      pull-requests: write # for `gh pr edit`
+      pull-requests: write # for `gh pr comment`
     runs-on: ubuntu-latest
     if: >
       github.repository_owner == 'Homebrew' &&

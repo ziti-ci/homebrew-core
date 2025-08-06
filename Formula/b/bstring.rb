@@ -12,6 +12,7 @@ class Bstring < Formula
     sha256 cellar: :any,                 arm64_ventura: "3e7c981e0076bcadcbe655064492a4170b5e0c3a5bedd65a2a2244fcb18083a1"
     sha256 cellar: :any,                 sonoma:        "fea29e81c074efcc6b7ec34733ef211fb268e6d5877cba536f70a897a4cc96e2"
     sha256 cellar: :any,                 ventura:       "225f2b47a0fd47f5d935150bf17e8b836711874107a6993a98e5cacb02adc2b8"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "3d92eb7cf9024db94bb16ab6db8085ceb721d2ed2b2f0e8e56df1288d850a36c"
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "3e5c66d11cb49ef8c83637a7c0690b2dfcda8562107be84cc77a7efdfd9ee447"
   end
 

@@ -3,8 +3,8 @@ class Osc < Formula
 
   desc "Command-line interface to work with an Open Build Service"
   homepage "https://openbuildservice.org"
-  url "https://files.pythonhosted.org/packages/b5/90/39664d958752b4f5b3dd88dad48f40761055cb8c375c323a5b33fe33574b/osc-1.19.0.tar.gz"
-  sha256 "cfd925c44cca00df1ad2d31279ca95c8c6e924d47cf46e73d7785d23d6bd1b1f"
+  url "https://files.pythonhosted.org/packages/a2/70/274b4097d5b32540607a56c0527a06048007a35bcd7bb1e2b5e0c88f48c9/osc-1.19.1.tar.gz"
+  sha256 "81b8da13d1b4ca32fb6e9f73dfad4fa52b393a7e29bac0cc4e536471a741240d"
   license "GPL-2.0-or-later"
   head "https://github.com/openSUSE/osc.git", branch: "master"
 

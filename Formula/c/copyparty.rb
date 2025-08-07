@@ -3,8 +3,8 @@ class Copyparty < Formula
 
   desc "Portable file server"
   homepage "https://github.com/9001/copyparty"
-  url "https://files.pythonhosted.org/packages/07/48/5170943361caaa8796239370d0ffbc3ea348d79342d01e307bc53c115298/copyparty-1.18.10.tar.gz"
-  sha256 "f8ef477a2e5176116550be1eecf7df96c91434f8125e5ecb310a3c6c927eeaf5"
+  url "https://files.pythonhosted.org/packages/a6/e8/801751a3edbd51e9e37834c01f6fa7e9d3c608ed2d66ec76f097abb5bd7c/copyparty-1.19.0.tar.gz"
+  sha256 "6faf2402f48a01b1725d8ee8e9eb074f885ff099fbde16e1b18e6f547144f51e"
   license "MIT"
 
   bottle do
@@ -21,9 +21,14 @@ class Copyparty < Formula
   depends_on "ninja" => :build
   depends_on "pkgconf" => :build
   depends_on "cryptography"
+  depends_on "glib"
   depends_on "python@3.13"
   depends_on "vips"
   depends_on "zeromq"
+
+  on_macos do
+    depends_on "gettext"
+  end
 
   resource "argon2-cffi" do
     url "https://files.pythonhosted.org/packages/0e/89/ce5af8a7d472a67cc819d5d998aa8c82c5d860608c4db9f46f1162d7dab9/argon2_cffi-25.1.0.tar.gz"

@@ -6,7 +6,7 @@ class Vdirsyncer < Formula
   url "https://files.pythonhosted.org/packages/ee/c2/50eb6b430f447c062ae3cd07d1a354d768bdb1443580bd4ae16ec8c8296d/vdirsyncer-0.19.3.tar.gz"
   sha256 "e437851feb985dec3544654f8f9cf6dd109b0b03f7e19956086603092ffeb28f"
   license "BSD-3-Clause"
-  revision 3
+  revision 4
   head "https://github.com/pimutils/vdirsyncer.git", branch: "main"
 
   bottle do
@@ -30,8 +30,8 @@ class Vdirsyncer < Formula
   end
 
   resource "aiohttp" do
-    url "https://files.pythonhosted.org/packages/42/6e/ab88e7cb2a4058bed2f7870276454f85a7c56cd6da79349eb314fc7bbcaa/aiohttp-3.12.13.tar.gz"
-    sha256 "47e2da578528264a12e4e3dd8dd72a7289e5f812758fe086473fab037a10fcce"
+    url "https://files.pythonhosted.org/packages/9b/e7/d92a237d8802ca88483906c388f7c201bbe96cd80a165ffd0ac2f6a8d59f/aiohttp-3.12.15.tar.gz"
+    sha256 "4fc61385e9c98d72fcdf47e6dd81833f47b2f77c114c29cd64a361be57a763a2"
   end
 
   resource "aiohttp-oauthlib" do

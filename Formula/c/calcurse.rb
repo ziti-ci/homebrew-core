@@ -1,8 +1,8 @@
 class Calcurse < Formula
   desc "Text-based personal organizer"
   homepage "https://calcurse.org/"
-  url "https://calcurse.org/files/calcurse-4.8.1.tar.gz"
-  sha256 "d86bb37014fd69b8d83ccb904ac979c6b8ddf59ee3dbc80f5a274525e4d5830a"
+  url "https://calcurse.org/files/calcurse-4.8.2.tar.gz"
+  sha256 "849ba852c7f37b6772365cb0c42a94cde0fe75efba91363e96a0e7ef797ba565"
   license "BSD-2-Clause"
 
   livecheck do
@@ -32,6 +32,7 @@ class Calcurse < Formula
     depends_on "automake" => :build
   end
 
+  depends_on "pkgconf" => :build
   uses_from_macos "ncurses"
 
   on_macos do

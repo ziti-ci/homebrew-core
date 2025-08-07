@@ -1,8 +1,8 @@
 class Mantra < Formula
   desc "Tool to hunt down API key leaks in JS files and pages"
   homepage "https://amoloht.github.io"
-  url "https://github.com/brosck/mantra/archive/refs/tags/v2.0.tar.gz"
-  sha256 "f6eecb667fea6978cc53e8ff0f18f86b6ea6e25a651af24d00c941bdfd0c8ab2"
+  url "https://github.com/brosck/mantra/archive/refs/tags/v3.1.tar.gz"
+  sha256 "379894f36ef04a6b4e57e77112070e23dcc75569d1df98a8f128fe24a8b5e0b1"
   license "GPL-3.0-only"
   head "https://github.com/brosck/mantra.git", branch: "main"
 

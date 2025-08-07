@@ -5,6 +5,15 @@ class Wayback < Formula
   sha256 "b65833d8aa5c19ab8971c0b97bd96bdda235a6e420259aabe0daa5adf098d972"
   license "GPL-3.0-or-later"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "a0684a17257ce53249c7e55249bc6e66aeccb68958f5697cfd5434fb70efc63f"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "a0684a17257ce53249c7e55249bc6e66aeccb68958f5697cfd5434fb70efc63f"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "a0684a17257ce53249c7e55249bc6e66aeccb68958f5697cfd5434fb70efc63f"
+    sha256 cellar: :any_skip_relocation, sonoma:        "774972e3cf80db6e0a99bb29997108faa51cab0a713874425cbeb9b30756c41c"
+    sha256 cellar: :any_skip_relocation, ventura:       "774972e3cf80db6e0a99bb29997108faa51cab0a713874425cbeb9b30756c41c"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "7fe1fcf1dcb7230f7399e58a45cc4e5e4e80c5dccca06d40469d2d23a4b772e9"
+  end
+
   depends_on "go" => :build
 
   def install

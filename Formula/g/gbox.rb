@@ -5,6 +5,15 @@ class Gbox < Formula
   sha256 "41e94e96a756bb4ec81d049080fe15b45d5b3c59785f54965daa364aa7813331"
   license "Apache-2.0"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "d51e41d35226cf0d9ef00cce72729598114e8eb7d5a52e5fcd33051bd3134b05"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "22ed6fba82e288fc6c79e7fa46ae0d88bafe74db49836753b2bc52869fd1f179"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "2737330361a010efb1a7557e1c781e91cd78337e8ab9a52414190d6e111e8bd4"
+    sha256 cellar: :any_skip_relocation, sonoma:        "ffa31a5cd0c2eae8b9c94d8627bd2f13567d14b9146973af1d2748ac3c15e014"
+    sha256 cellar: :any_skip_relocation, ventura:       "f6c1211cc95356191a961c4e9a241eb2e5942c8fad2dcf898820c7cae6914839"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "9cfe0d53c7df446dd566082012c6cd27a5feea2faea58c2e6c448a996741c4fd"
+  end
+
   depends_on "go" => :build
   depends_on "rsync" => :build
   depends_on "yq"

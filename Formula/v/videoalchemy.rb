@@ -6,6 +6,15 @@ class Videoalchemy < Formula
   license "MIT"
   head "https://github.com/viddotech/videoalchemy.git", branch: "main"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "f90306872d961d0f3b3faa8591c95d22f55f989d5176e3365b7e03a1f158ed24"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "f90306872d961d0f3b3faa8591c95d22f55f989d5176e3365b7e03a1f158ed24"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "f90306872d961d0f3b3faa8591c95d22f55f989d5176e3365b7e03a1f158ed24"
+    sha256 cellar: :any_skip_relocation, sonoma:        "2e949c0b167c2278117aa0e3340c623b67419920e1de8c933f016581fd183579"
+    sha256 cellar: :any_skip_relocation, ventura:       "2e949c0b167c2278117aa0e3340c623b67419920e1de8c933f016581fd183579"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "f53966609f56765856602f4a631171eaafeefb0fb2bb6bc9bf26fc25650ddc92"
+  end
+
   depends_on "go" => :build
 
   def install

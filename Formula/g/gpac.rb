@@ -34,15 +34,13 @@ class Gpac < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_sequoia:  "5dd37f08f66d4cd6326954764aff8e02b44a534eb54ac5ebf336152153a1c65c"
-    sha256 cellar: :any,                 arm64_sonoma:   "0db848b31b7bda589b829bef38fd0d99575d1303691a04a915d66548b3dac128"
-    sha256 cellar: :any,                 arm64_ventura:  "e02c1581892fd72215874516724a24eb30fb7862a1e5d45ebd7cce0b840a3908"
-    sha256 cellar: :any,                 arm64_monterey: "b15f699737dc4e58fda9c8753ea2aa2f323baa0423b5424230852bdb0e35b258"
-    sha256 cellar: :any,                 sonoma:         "d689fcb607e52f1111fb9ddfb6bf107a40592e16c7f7f536bcbece0b76e69145"
-    sha256 cellar: :any,                 ventura:        "be9dbecc82418f0ff125b5838d56ff7e37c7818f64f090df2fc0e35fdec969b4"
-    sha256 cellar: :any,                 monterey:       "618101f402082ebc311574e2de377212b20386b346f1f12ab008ded4b647e5fa"
-    sha256 cellar: :any_skip_relocation, arm64_linux:    "ccf5c3da135e37dd9e0b42fc2057eec92c01b9d9006229e2132936f0777973cb"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "3fa932d0f671a1643b20f381bba3181328431e5ef9555444a8d25a983ace36e1"
+    sha256 cellar: :any,                 arm64_sequoia: "7e04a3a1f11ff3976c7387a3bd3e1837c831c9a1bd991f957773501eced657e7"
+    sha256 cellar: :any,                 arm64_sonoma:  "7e288ee18e1dcf0b3a08a4d5e137b52470f8e17c1de05195db3876c9837233fc"
+    sha256 cellar: :any,                 arm64_ventura: "e87ea4b6e25fc76ca2e4ac44ed500f7d03c6da646560b73cf64fa625ffea7877"
+    sha256 cellar: :any,                 sonoma:        "c9159f5306bc52f3eae908884fd62bd33fd2fc241a2dca04633c626b85e4e479"
+    sha256 cellar: :any,                 ventura:       "8ba46158c90ae79b14ea2b075cffe5de2edee4e2ef90eeeb58a9ee16b8bc5b2d"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "767de89eee487210275f87993bac2c7e5a46c2a5604ce220a778ce330593f8a3"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "4e8e1c6c41d3c4a58f39da1a6b6339e3fade0b338745fc6ddff89772e0dbf981"
   end
 
   depends_on "pkgconf" => :build

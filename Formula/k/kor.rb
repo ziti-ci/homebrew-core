@@ -1,8 +1,8 @@
 class Kor < Formula
   desc "CLI tool to discover unused Kubernetes resources"
   homepage "https://github.com/yonahd/kor"
-  url "https://github.com/yonahd/kor/archive/refs/tags/v0.6.2.tar.gz"
-  sha256 "949b5857f126b4a237daae3670b115b6671fb8c233fd5569d2897635f867c2cd"
+  url "https://github.com/yonahd/kor/archive/refs/tags/v0.6.3.tar.gz"
+  sha256 "0410c86e8d12b29580119b1d3b45441bbfbd81782788b53ba95cfcb02e7e0da4"
   license "MIT"
   head "https://github.com/yonahd/kor.git", branch: "main"
 
@@ -19,8 +19,8 @@ class Kor < Formula
 
   # skip kubeconfig for utility commands, upstream pr ref, https://github.com/yonahd/kor/pull/457
   patch do
-    url "https://github.com/yonahd/kor/commit/6c02951894e587c023e57a7ab2654136024bff70.patch?full_index=1"
-    sha256 "98b3dac34c1164831a25502f8c2723d227cdac8ade8e4f68b17b00057e149be4"
+    url "https://github.com/yonahd/kor/commit/42443ecf76e840b4d80dc9be5c13fd1ddac54c9c.patch?full_index=1"
+    sha256 "6b8d47f047e16a7fd2a99036c67c8b40dfb47242078fd657726787c382388c69"
   end
 
   def install

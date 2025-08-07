@@ -13,6 +13,7 @@ class PulpCli < Formula
     sha256 cellar: :any,                 arm64_ventura: "898516efcc4db5e8719760cd39805a50f4b9d77cafcaf7af770565fde1e60d6f"
     sha256 cellar: :any,                 sonoma:        "6839a15324ebe18399dfe84e1b2c9afbeea3a419bc1e6000458391e8c0be7c32"
     sha256 cellar: :any,                 ventura:       "04f0c4f45617357992305c1ef3531f72028751579e06bb794c82923c8eb2f28f"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "67be66cebad0e6a781e3dfa20e70a2677e882484b5fde489d59123a41dac8495"
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "5e43bc9f933647f9f495fe0fe239425c33dc1456533f675dcb555093c6dd3cf1"
   end
 

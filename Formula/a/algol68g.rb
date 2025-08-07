@@ -1,8 +1,8 @@
 class Algol68g < Formula
   desc "Algol 68 compiler-interpreter"
   homepage "https://jmvdveer.home.xs4all.nl/algol.html"
-  url "https://jmvdveer.home.xs4all.nl/algol68g-3.7.0.tar.gz"
-  sha256 "c95125268250f112167993514d73a1a761aa08b6e9dc42665ad9f598198ac8bc"
+  url "https://jmvdveer.home.xs4all.nl/algol68g-3.7.1.tar.gz"
+  sha256 "a0e017c8667d9eb2f39db0b1c2559821c35a6280d04a4c292ab2e61f9663b017"
   license "GPL-3.0-or-later"
 
   livecheck do

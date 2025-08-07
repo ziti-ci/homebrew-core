@@ -11,13 +11,13 @@ class Algol68g < Formula
   end
 
   bottle do
-    sha256 arm64_sequoia: "a6a870cec74af9dda8f847c408d06eef24fc2daaffcf8ea1687213cdcabbb468"
-    sha256 arm64_sonoma:  "9200736201167178472b0f8d96730231865f81aa6bbc72509c975d1a0f44b229"
-    sha256 arm64_ventura: "703c870ac8c4adbb2619d87d1cd59ce039adf1a301a41400994335c65cbc276c"
-    sha256 sonoma:        "575162e4e4973bc213ee5d93bf9a1007b9233ed20cf3dde83053509f6178ddce"
-    sha256 ventura:       "a7e0e50f75e0f95fb58d5572aeebc6981d6ce6c99cfbf45c1dbeb7085f19eebf"
-    sha256 arm64_linux:   "2be08f5ebcec2749f85e1949d5a8a386e233c50319a7dc7827f3a5d34e85314c"
-    sha256 x86_64_linux:  "eee10fc9c0c9e4c8dadf62fb903adbece604aa0709d528a40afa57e1cb5b4dab"
+    sha256 arm64_sequoia: "797c4464ed5865c84cff645a3d8b4a911ba5354e7b33241a1f74c6dd6ce69cb3"
+    sha256 arm64_sonoma:  "10925078ae44c95b8eab5ddc2f40f4f091cb7f9468985f1490005e4a1a0b8d13"
+    sha256 arm64_ventura: "bdc56971f55dfe68aa521b20f869fa79b879f11cd710d2ab835d6c7013af0728"
+    sha256 sonoma:        "24fb31764809623644cb42873cd764adbe45da9871fd35f9a3e2549390386133"
+    sha256 ventura:       "6e6a5c672f25d278b9311e8cb6d1ae600d5f1ec43d779ae8e9d88262f1dc68f5"
+    sha256 arm64_linux:   "1f4646b738b434353fb30d9836ea6af2da1aba30e426757f922ef8c60f4b332b"
+    sha256 x86_64_linux:  "4a14eaaf14c5243f6d17356ed81e9d5e0faf9bb0b5cc10cda5bf8eebeef466e4"
   end
 
   uses_from_macos "ncurses"

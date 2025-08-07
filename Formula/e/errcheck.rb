@@ -4,6 +4,7 @@ class Errcheck < Formula
   url "https://github.com/kisielk/errcheck/archive/refs/tags/v1.9.0.tar.gz"
   sha256 "f8b9c864c0bdc8e56fbd709fb97a04b43b989815641b8bd9aae2e5fbc43b6930"
   license "MIT"
+  revision 1
 
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_sequoia: "b0c68d0627e96f81d5c9908e475a382997f174292480d7e401b9611684ccdd1f"

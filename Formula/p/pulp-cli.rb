@@ -7,6 +7,15 @@ class PulpCli < Formula
   sha256 "b4214a87795b61765513f5a42537f7183b67064e5e744f4cbfbe5cdf2b01828a"
   license "GPL-2.0-or-later"
 
+  bottle do
+    sha256 cellar: :any,                 arm64_sequoia: "7a16627268ff499fa5965d3b3e71f71b0a650a179c596d89ee393b20d90bd3cc"
+    sha256 cellar: :any,                 arm64_sonoma:  "7d9749928a9d8fe381b3257b36116a54a5ae17e04db957e376279c7e0e185be0"
+    sha256 cellar: :any,                 arm64_ventura: "898516efcc4db5e8719760cd39805a50f4b9d77cafcaf7af770565fde1e60d6f"
+    sha256 cellar: :any,                 sonoma:        "6839a15324ebe18399dfe84e1b2c9afbeea3a419bc1e6000458391e8c0be7c32"
+    sha256 cellar: :any,                 ventura:       "04f0c4f45617357992305c1ef3531f72028751579e06bb794c82923c8eb2f28f"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "5e43bc9f933647f9f495fe0fe239425c33dc1456533f675dcb555093c6dd3cf1"
+  end
+
   depends_on "certifi"
   depends_on "libyaml"
   depends_on "python@3.13"

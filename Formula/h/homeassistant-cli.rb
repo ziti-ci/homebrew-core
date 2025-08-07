@@ -10,15 +10,14 @@ class HomeassistantCli < Formula
   head "https://github.com/home-assistant-ecosystem/home-assistant-cli.git", branch: "dev"
 
   bottle do
-    rebuild 2
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "14097ae33fea2b0d77d5363e5f6ae93679d9bedb151904e44b5142fc93ec397f"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "1cee8de39515ba9f20532f1087b0306d86a6ce1b7c7be88238eb8b8dcca8fa3b"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "837a0a83085ca60fe4cd87450a3bee0d7358e73a61aca65323ea719f8eea1899"
-    sha256 cellar: :any_skip_relocation, sequoia:       "db6a25db6cd469930d3de33aca9b1bf6eef3c7b32c97afe2d50323e3f3579c2f"
-    sha256 cellar: :any_skip_relocation, sonoma:        "f860f0751af5e27ead4cea58aa8ade9df19a01f2a1329f95e8d641ee8f1de8d6"
-    sha256 cellar: :any_skip_relocation, ventura:       "fdfe44c2d48970dc85a6eb09e850fb97267bbda675ce899040d67a2dc8f958bd"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "59171904c78d5bea8fac7d0a51c1004de37d43b06a715f04132edc15ee0d9bd6"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "376cfba4260399d338367c5e6997b692f6d98881b396ad5ec4fe340de8aebc58"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "c70c109dbe8a719046abfe9dd8701ec19acb5785b75b8cbda6543c44489203eb"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "a9afe1a08a27165e7cd251f1e6d6f5ccc5ae840bdee7196c1561c70c1b80c64a"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "a1016fedb7ae69aa83a9b1db34d0a835d7a9eb3c4039f78710eff145e9da44b1"
+    sha256 cellar: :any_skip_relocation, sequoia:       "4a76332c9f46fb87efd6241e487f60a44ab9c17eb0f503cf2ce4825564a895d7"
+    sha256 cellar: :any_skip_relocation, sonoma:        "f9ec858a192f9721dbf242878a439c036927ad5d5ce2609b28d1b8e5b3400045"
+    sha256 cellar: :any_skip_relocation, ventura:       "5c89229366ba414f829f9a3373aba7679b923eed5850ee64345efb0ae7be2385"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "39a41ee6be09f00c5ccb241090c1a1ac28dd174df7b6e85b3e181a3349de8fbf"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "a2efcba7e61fa4b380937d4e09aaa834925847db7248d36cf2c66973175054c0"
   end
 
   depends_on "python@3.13"

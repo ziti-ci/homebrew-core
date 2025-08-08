@@ -1,8 +1,8 @@
 class Latexindent < Formula
   desc "Add indentation to LaTeX files"
   homepage "https://latexindentpl.readthedocs.io"
-  url "https://github.com/cmhughes/latexindent.pl/archive/refs/tags/V3.24.5.tar.gz"
-  sha256 "3bafd91da0bfd8c530cd9e8bd8dd98948d95850d314cfb459bb180f12a608b83"
+  url "https://github.com/cmhughes/latexindent.pl/archive/refs/tags/V3.24.6.tar.gz"
+  sha256 "1b0ff3b3a97c2deaba7aac9e7c2991b94eecc33a69f6d8cd70470a1be55ba97e"
   license "GPL-3.0-or-later"
 
   bottle do
@@ -100,8 +100,8 @@ class Latexindent < Formula
   end
 
   resource "Module::Runtime" do
-    url "https://cpan.metacpan.org/authors/id/Z/ZE/ZEFRAM/Module-Runtime-0.016.tar.gz"
-    sha256 "68302ec646833547d410be28e09676db75006f4aa58a11f3bdb44ffe99f0f024"
+    url "https://cpan.metacpan.org/authors/id/H/HA/HAARG/Module-Runtime-0.018.tar.gz"
+    sha256 "0bf77ef68e53721914ff554eada20973596310b4e2cf1401fc958601807de577"
   end
 
   resource "Package::Stash" do
@@ -125,8 +125,8 @@ class Latexindent < Formula
   end
 
   resource "Specio" do
-    url "https://cpan.metacpan.org/authors/id/D/DR/DROLSKY/Specio-0.50.tar.gz"
-    sha256 "467baf0582681626266318e3154727497d7205996fbd76674ba58ed79e10640e"
+    url "https://cpan.metacpan.org/authors/id/D/DR/DROLSKY/Specio-0.51.tar.gz"
+    sha256 "505f5de28bee55545b9ec0c45c1d5e4ae568d4f5dbb5e8eabe9d980cb9b68f93"
   end
 
   resource "Sub::Exporter::Progressive" do
@@ -197,9 +197,8 @@ class Latexindent < Formula
     end
 
     (libexec/"lib/perl5").install "LatexIndent"
-    (libexec/"bin").install "latexindent.pl"
-    (libexec/"bin").install "defaultSettings.yaml"
-    (bin/"latexindent").write_env_script(libexec/"bin/latexindent.pl", PERL5LIB: ENV["PERL5LIB"])
+    (libexec/"bin").install "latexindent.pl", "defaultSettings.yaml"
+    (bin/"latexindent").write_env_script libexec/"bin/latexindent.pl", PERL5LIB: ENV["PERL5LIB"]
   end
 
   test do

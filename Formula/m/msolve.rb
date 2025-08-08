@@ -12,6 +12,7 @@ class Msolve < Formula
     sha256 cellar: :any,                 arm64_ventura: "4ed81d00c905b6996bea06d2731e89ee570c4ae3efa66b0de3b074f5ee97343d"
     sha256 cellar: :any,                 sonoma:        "9fb2c5a3b264cd2259003b5e6b099bdea903f1c13d425e2a0308e540ea55f239"
     sha256 cellar: :any,                 ventura:       "071188370774cd208aa2749f1613a97adaa88ba1b2322acea7d44c4e032bf553"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "2a5e176cae3364043adeefbe5b107defb8ffa278b00e1ca750f914f0084751c1"
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "0ac11243d5470405652ba4f49740ef64a3b171f8fa92f5e4dd56d7027d2f4100"
   end
 

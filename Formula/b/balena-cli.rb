@@ -1,8 +1,8 @@
 class BalenaCli < Formula
   desc "Command-line tool for interacting with the balenaCloud and balena API"
   homepage "https://docs.balena.io/reference/balena-cli/latest/"
-  url "https://registry.npmjs.org/balena-cli/-/balena-cli-22.2.2.tgz"
-  sha256 "696f19c0b54b0224f131b9c5251441c37ea7ab889e7058acb7f57ae01513fdca"
+  url "https://registry.npmjs.org/balena-cli/-/balena-cli-22.2.3.tgz"
+  sha256 "6541271aa8a7184485d8fe6936a885ddc7d45eb30ff13935e91ff35a636a64d5"
   license "Apache-2.0"
 
   livecheck do
@@ -41,8 +41,14 @@ class BalenaCli < Formula
     os = OS.kernel_name.downcase
     arch = Hardware::CPU.intel? ? "x64" : Hardware::CPU.arch.to_s
     node_modules = libexec/"lib/node_modules/balena-cli/node_modules"
-    node_modules.glob("{ffi-napi,ref-napi}/prebuilds/*")
-                .each { |dir| rm_r(dir) if dir.basename.to_s != "#{os}-#{arch}" }
+    node_modules.glob("{bcrypt,lzma-native,mountutils}/prebuilds/*")
+                .each do |dir|
+                  if dir.basename.to_s == "#{os}-#{arch}"
+                    dir.glob("*.musl.node").each(&:unlink) if OS.linux?
+                  else
+                    rm_r(dir)
+                  end
+                end
 
     rm_r(node_modules/"lzma-native/build")
     rm_r(node_modules/"usb") if OS.linux?

@@ -1,8 +1,8 @@
 class Mcphost < Formula
   desc "CLI host for LLMs to interact with tools via MCP"
   homepage "https://github.com/mark3labs/mcphost"
-  url "https://github.com/mark3labs/mcphost/archive/refs/tags/v0.27.0.tar.gz"
-  sha256 "a98b6510c6dd0750380ecd2a7ac577235d01edc79c547f633c006d95ed3de83c"
+  url "https://github.com/mark3labs/mcphost/archive/refs/tags/v0.27.1.tar.gz"
+  sha256 "ed9cc7b82daee95feffefe7723f15f9bc862896cdfc398b2cd8a4be9885b2876"
   license "MIT"
   head "https://github.com/mark3labs/mcphost.git", branch: "main"
 

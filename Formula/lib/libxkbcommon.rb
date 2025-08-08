@@ -1,8 +1,8 @@
 class Libxkbcommon < Formula
   desc "Keyboard handling library"
   homepage "https://xkbcommon.org/"
-  url "https://github.com/xkbcommon/libxkbcommon/archive/refs/tags/xkbcommon-1.10.0.tar.gz"
-  sha256 "0427585a4d6ca17c9fc1ac4b539bf303348e9080af70c5ea402503bc370a9631"
+  url "https://github.com/xkbcommon/libxkbcommon/archive/refs/tags/xkbcommon-1.11.0.tar.gz"
+  sha256 "78a6b14f16e9a55025978c252e53ce9e16a02bfdb929550b9a0db5af87db7e02"
   license "MIT"
   head "https://github.com/xkbcommon/libxkbcommon.git", branch: "master"
 

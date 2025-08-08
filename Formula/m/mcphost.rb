@@ -1,18 +1,18 @@
 class Mcphost < Formula
   desc "CLI host for LLMs to interact with tools via MCP"
   homepage "https://github.com/mark3labs/mcphost"
-  url "https://github.com/mark3labs/mcphost/archive/refs/tags/v0.27.1.tar.gz"
-  sha256 "ed9cc7b82daee95feffefe7723f15f9bc862896cdfc398b2cd8a4be9885b2876"
+  url "https://github.com/mark3labs/mcphost/archive/refs/tags/v0.28.0.tar.gz"
+  sha256 "8bb1a75f8b29f414735c52a64d0a9d8b0f114f99d9a2803d7dff62fe4fb2091f"
   license "MIT"
   head "https://github.com/mark3labs/mcphost.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "6734a419e180d73b5b8e9c36f0972b9d47e4b15b401086c2abc38049f7b4519f"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "6734a419e180d73b5b8e9c36f0972b9d47e4b15b401086c2abc38049f7b4519f"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "6734a419e180d73b5b8e9c36f0972b9d47e4b15b401086c2abc38049f7b4519f"
-    sha256 cellar: :any_skip_relocation, sonoma:        "d3de4d2e87da73c0b3845ebef10170482a05fc06d78de86c5dfe330575fa0c90"
-    sha256 cellar: :any_skip_relocation, ventura:       "d3de4d2e87da73c0b3845ebef10170482a05fc06d78de86c5dfe330575fa0c90"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "bba0d092c9903b1df803e97a6548b707a49721f764db3ed938bcddaf9184637f"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "9d7576dab3b8719a36dd96835b8e8612c67af6dd44df8f65a37345232c1fc7c6"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "9d7576dab3b8719a36dd96835b8e8612c67af6dd44df8f65a37345232c1fc7c6"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "9d7576dab3b8719a36dd96835b8e8612c67af6dd44df8f65a37345232c1fc7c6"
+    sha256 cellar: :any_skip_relocation, sonoma:        "e71fb7b93cb380dd2b624e3d0cd89e64ea8d857f2b89f84c6ca9dad9ab37d9b6"
+    sha256 cellar: :any_skip_relocation, ventura:       "e71fb7b93cb380dd2b624e3d0cd89e64ea8d857f2b89f84c6ca9dad9ab37d9b6"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "01ecccc420524b47a923217ebe936ae29932fa32d2432c96ca17e9fc99473aed"
   end
 
   depends_on "go" => :build

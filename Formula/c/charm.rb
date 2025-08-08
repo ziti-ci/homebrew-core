@@ -23,9 +23,12 @@ class Charm < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "623e2d62e1dc1210de466ff4e4ea1d8e0c8ea059dbdc491ff5b8f3ec1cc9603e"
   end
 
+  depends_on "breezy" => :build
   depends_on "go" => :build
 
   def install
+    # Charm requires bzr (bazaar vcs) for fetching launchpad.net/lpad Go module.
+    ENV["GOVCS"] = "launchpad.net:bzr"
     system "go", "build", *std_go_args, "./cmd/charm"
   end
 

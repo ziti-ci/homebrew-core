@@ -1,12 +1,10 @@
 class Polyml < Formula
   desc "Standard ML implementation"
   homepage "https://www.polyml.org/"
-  url "https://github.com/polyml/polyml/archive/refs/tags/v5.9.1.tar.gz"
-  sha256 "52f56a57a4f308f79446d479e744312195b298aa65181893bce2dfc023a3663c"
+  url "https://github.com/polyml/polyml/archive/refs/tags/v5.9.2.tar.gz"
+  sha256 "5cf5f77767568c25cf880acc2d0a32ee3d399e935475ab1626e8192fc3b07390"
   license "LGPL-2.1-or-later"
   head "https://github.com/polyml/polyml.git", branch: "master"
-
-  no_autobump! because: :requires_manual_review
 
   bottle do
     sha256 arm64_sequoia:  "956ba9b862e294bd6ebd6efb29ab46446bbcf9d29c09dcbab2003d4ba76bc4eb"
@@ -18,12 +16,6 @@ class Polyml < Formula
     sha256 monterey:       "9a8ef34cc09cbbd5871f0de8167a63aa80e7ac476f3169e6c2726b28ef5b9db2"
     sha256 arm64_linux:    "c17c19d56fb21ebd5df29726c787d7a53deeee0206a79d2dc20a297dd6f77458"
     sha256 x86_64_linux:   "2c629afd3ff1ad92cdbc78d7b3f638747e4851f8011e1393498aada95c3f452b"
-  end
-
-  # Fix -flat_namespace being used on Big Sur and later.
-  patch do
-    url "https://raw.githubusercontent.com/Homebrew/formula-patches/03cf8088210822aa2c1ab544ed58ea04c897d9c4/libtool/configure-big_sur.diff"
-    sha256 "35acd6aebc19843f1a2b3a63e880baceb0f5278ab1ace661e57a502d9d78c93c"
   end
 
   def install

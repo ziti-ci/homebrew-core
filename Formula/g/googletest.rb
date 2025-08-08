@@ -20,7 +20,9 @@ class Googletest < Formula
 
   def install
     system "cmake", "-S", ".", "-B", "build",
-      "-DCMAKE_CXX_STANDARD=17", *std_cmake_args
+                    "-DCMAKE_CXX_STANDARD=17",
+                    "-DCMAKE_POSITION_INDEPENDENT_CODE=ON",
+                    *std_cmake_args
     system "cmake", "--build", "build"
     system "cmake", "--install", "build"
 

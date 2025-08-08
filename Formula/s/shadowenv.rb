@@ -1,8 +1,8 @@
 class Shadowenv < Formula
   desc "Reversible directory-local environment variable manipulations"
   homepage "https://shopify.github.io/shadowenv/"
-  url "https://github.com/Shopify/shadowenv/archive/refs/tags/3.3.1.tar.gz"
-  sha256 "726c2a655749213cd7f0efe9dca199f65c11b58774c5550ea4834d5b2334b27c"
+  url "https://github.com/Shopify/shadowenv/archive/refs/tags/3.4.0.tar.gz"
+  sha256 "86313a5022a8e897ceb52a51479fa7a921e44cd520cf04d111ba711684791e44"
   license "MIT"
 
   # There can be a notable gap between when a version is tagged and a

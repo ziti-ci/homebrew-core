@@ -1,18 +1,18 @@
 class Jd < Formula
   desc "JSON diff and patch"
   homepage "https://github.com/josephburnett/jd"
-  url "https://github.com/josephburnett/jd/archive/refs/tags/v2.2.4.tar.gz"
-  sha256 "3afa5f0b38efd9eb36154c7a75f5731ee66f3c7a1f580b236eabccb65cb47352"
+  url "https://github.com/josephburnett/jd/archive/refs/tags/v2.2.5.tar.gz"
+  sha256 "9f5cf5c0955372b75c8877a9811e0b9ead3682603231558484f47352ee097e9c"
   license "MIT"
   head "https://github.com/josephburnett/jd.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "d3cf382ecb26b9288dedab8eb85c1464f891c81f8f90cc1f22f96b5cd6774f7b"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "d3cf382ecb26b9288dedab8eb85c1464f891c81f8f90cc1f22f96b5cd6774f7b"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "d3cf382ecb26b9288dedab8eb85c1464f891c81f8f90cc1f22f96b5cd6774f7b"
-    sha256 cellar: :any_skip_relocation, sonoma:        "c85651e38649266b6b2f7226301f614b67b34603b607d0d71fdfa74507d8a78b"
-    sha256 cellar: :any_skip_relocation, ventura:       "c85651e38649266b6b2f7226301f614b67b34603b607d0d71fdfa74507d8a78b"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "c8300e45ccd04f69d153ef2f0a5c1482ff2f7c03a7507b78dbbf2a08a049d673"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "48e23ef98402ecbb0b3fb7a3b71217fbe15d3242403e6c28c1cd55e3f4912835"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "48e23ef98402ecbb0b3fb7a3b71217fbe15d3242403e6c28c1cd55e3f4912835"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "48e23ef98402ecbb0b3fb7a3b71217fbe15d3242403e6c28c1cd55e3f4912835"
+    sha256 cellar: :any_skip_relocation, sonoma:        "8efd7c641f8d4050810ce9f6f945620be69b36cc6ef85235db0d7892f99f91b7"
+    sha256 cellar: :any_skip_relocation, ventura:       "8efd7c641f8d4050810ce9f6f945620be69b36cc6ef85235db0d7892f99f91b7"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "b27cd86044389a44d2487e46791dc8bb4d1fb0a9b9a58c5bc295a8c2f1d7eb92"
   end
 
   depends_on "go" => :build

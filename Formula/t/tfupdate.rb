@@ -7,12 +7,12 @@ class Tfupdate < Formula
   head "https://github.com/minamijoyo/tfupdate.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "00d282c53811c76412b0e2b70e46ebed61000da5ad00626b685746c4c5c751bb"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "00d282c53811c76412b0e2b70e46ebed61000da5ad00626b685746c4c5c751bb"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "00d282c53811c76412b0e2b70e46ebed61000da5ad00626b685746c4c5c751bb"
-    sha256 cellar: :any_skip_relocation, sonoma:        "e64ef15ad842060603995ea401b5c2076fecc986a847ce0561f37c786e956e09"
-    sha256 cellar: :any_skip_relocation, ventura:       "e64ef15ad842060603995ea401b5c2076fecc986a847ce0561f37c786e956e09"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "76812d8345297e0e89375753cff0dee7a3b1def82bd9b8e7c41caa9f15e2ae99"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "247825cbffb910ffc07e8ec49e72e101acf2f8624d432ccf3869bb98874ed1a5"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "247825cbffb910ffc07e8ec49e72e101acf2f8624d432ccf3869bb98874ed1a5"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "247825cbffb910ffc07e8ec49e72e101acf2f8624d432ccf3869bb98874ed1a5"
+    sha256 cellar: :any_skip_relocation, sonoma:        "5cf43eba7b409ae0090035d99a4f0d4bf1503449a388bbc888441a055d781c61"
+    sha256 cellar: :any_skip_relocation, ventura:       "5cf43eba7b409ae0090035d99a4f0d4bf1503449a388bbc888441a055d781c61"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "6b21bc43bc4e0576aca32458bbf76c1c33a9d2f996bf652d1f191d71c9f16998"
   end
 
   depends_on "go" => :build

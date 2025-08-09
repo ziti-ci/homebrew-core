@@ -7,6 +7,15 @@ class WgpuNative < Formula
   license "Apache-2.0"
   head "https://github.com/gfx-rs/wgpu-native.git", branch: "trunk"
 
+  bottle do
+    sha256 cellar: :any,                 arm64_sequoia: "cb1e0418532763c8a8e38556ba48d263cdee03bfd7b043fd0b2888fe96464738"
+    sha256 cellar: :any,                 arm64_sonoma:  "e2815a5fd4d6036b1e494a2474ff1df8c0a4f4df1df7d1ee621c00c4ec03ada7"
+    sha256 cellar: :any,                 arm64_ventura: "ac68dc14f145e005d60c7868275d7f952f3f0e4c368cef0eefb8ba887fda82e3"
+    sha256 cellar: :any,                 sonoma:        "745b241b6e2dc78e29b547840d03279cd0f603f91fcdf9bdae4182605e526999"
+    sha256 cellar: :any,                 ventura:       "3b67dfd8eb82443cbe63d9b76e4928c516534c5c986b96a94a5ec43ffd9a22db"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "421381400826ad0f5f8ce03630ef87e37f120cc3b6148b5612374303d025cdf0"
+  end
+
   depends_on "rust" => :build
   depends_on "cmake" => :test
   depends_on "ninja" => :test

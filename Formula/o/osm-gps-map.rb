@@ -26,15 +26,14 @@ class OsmGpsMap < Formula
   no_autobump! because: :requires_manual_review
 
   bottle do
-    sha256                               arm64_sequoia:  "86a72e93e60138253d415f0f8350e2a08f01cf670631f159cbcb9aef453991f0"
-    sha256                               arm64_sonoma:   "4e99312645cad4b62bce40d08360aaf0071a7a5fce6e8331c3940fc9956d6a30"
-    sha256                               arm64_ventura:  "2bc5f12b6808b31bbc6fb791a90a8561c33eb88ac4d937d9d48df795570fe2fb"
-    sha256                               arm64_monterey: "8dddb7d2eee3341e52742fb0d9d2503a081dcf53777048e614ee0d873314af3a"
-    sha256                               sonoma:         "14f294ea2b9e3031d6e7f53b06f926846e3a2de6e7ff7c61a1ab68ed5f651d58"
-    sha256                               ventura:        "6cda5bd18d03de3bb11ddff9bf3b4451257f612ae26a03cf3d2f2cf09bdea496"
-    sha256                               monterey:       "23bdada15af6c8a29c89925199ebf59225d69edc709531a33f82f8e9be659085"
-    sha256 cellar: :any_skip_relocation, arm64_linux:    "796fe43d3fd75d366860ad62c3f15e98a00183616f71ceea03e6256975152406"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "9267eb6c95ec708b3d3d1df50e7201f58ae05fb05816cf17656c5a4c71875ab2"
+    rebuild 1
+    sha256                               arm64_sequoia: "d3a211ac79c16396ead6f2534b86c3c248e06f831338414ec8a21bdc2cce22b9"
+    sha256                               arm64_sonoma:  "5aa68d177f32672611f97b832c73c83570de2c6e86abe7f193ab734fafec8d24"
+    sha256                               arm64_ventura: "acd4790bde4be13ced5e99b99379bb4aa185791d274130f55eddb281dd6d703c"
+    sha256                               sonoma:        "ef15c14a0e3bba41a7bcf62813cca2c948e87a7b68ed8c8cf59085e0fb96ee19"
+    sha256                               ventura:       "4cd079e99493a856504ab389073c91c59a36964e0fc018d8bbb9a2c298b4725b"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "8f7c57b9e057b6958ee11fa4cbcfacd64bdcaa1e29b9f2a778b96c7057086778"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "68c94c3d3db5b48fa40523d5581d8794e00ce39a5f59b5a14924a2682fdc5a9f"
   end
 
   head do

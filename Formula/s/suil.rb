@@ -25,11 +25,15 @@ class Suil < Formula
   depends_on "pkgconf" => :build
   depends_on "libx11"
   depends_on "lv2"
-  depends_on "qt@5"
+
+  on_macos do
+    depends_on "qt@5" # cocoa still needs Qt5
+  end
 
   on_linux do
     depends_on "glib"
     depends_on "gtk+3"
+    depends_on "qt"
   end
 
   def install

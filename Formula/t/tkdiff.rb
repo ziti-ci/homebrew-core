@@ -18,11 +18,10 @@ class Tkdiff < Formula
   end
 
   # upstream bug report about running with system tcl-tk, https://sourceforge.net/p/tkdiff/bugs/98/
-  depends_on "tcl-tk@8"
+  depends_on "tcl-tk"
 
   def install
     bin.install "tkdiff"
-    bin.env_script_all_files libexec, PATH: "#{Formula["tcl-tk@8"].opt_bin}:${PATH}"
   end
 
   test do

@@ -34,7 +34,7 @@ class GerbilScheme < Formula
     depends_on "gcc"
   end
 
-  # TODO: add `conflicts_with "ghostscript"`
+  conflicts_with "ghostscript", because: "both install `gsc` binary"
   conflicts_with "gambit-scheme", because: "both install `gsc` binary"
 
   fails_with :clang do

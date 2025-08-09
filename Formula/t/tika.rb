@@ -7,7 +7,7 @@ class Tika < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "9f9d786884111b091cf81347b58dbc73054d9e369fc41bacff434a41933f220b"
+    sha256 cellar: :any_skip_relocation, all: "6e81b0183dc5cc06347ea24e1e04f553d12effd10e8b60ad6372d474b5b797d5"
   end
 
   depends_on "openjdk"

@@ -23,6 +23,7 @@ class Tika < Formula
   end
 
   def install
+    odie "update `server` resource" if version != resource("server").version
     libexec.install "tika-app-#{version}.jar"
     bin.write_jar_script libexec/"tika-app-#{version}.jar", "tika"
 
@@ -36,7 +37,6 @@ class Tika < Formula
   end
 
   test do
-    assert_match version.to_s, resource("server").version.to_s, "server resource out of sync with formula"
     pdf = test_fixtures("test.pdf")
     assert_equal "application/pdf\n", shell_output("#{bin}/tika --detect #{pdf}")
 

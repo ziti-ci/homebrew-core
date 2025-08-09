@@ -13,6 +13,7 @@ class Glom < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura: "4850004be60878177e0a752b6f228c6e0e936e85d452d847d161b74cedc279fe"
     sha256 cellar: :any_skip_relocation, sonoma:        "a1ebcfd0cd88dd77693e98b1cc014a035fea901f7fdfde2ab1691c579477dad6"
     sha256 cellar: :any_skip_relocation, ventura:       "a1ebcfd0cd88dd77693e98b1cc014a035fea901f7fdfde2ab1691c579477dad6"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "4850004be60878177e0a752b6f228c6e0e936e85d452d847d161b74cedc279fe"
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "4850004be60878177e0a752b6f228c6e0e936e85d452d847d161b74cedc279fe"
   end
 

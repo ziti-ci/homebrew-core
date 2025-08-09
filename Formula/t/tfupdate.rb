@@ -1,8 +1,8 @@
 class Tfupdate < Formula
   desc "Update version constraints in your Terraform configurations"
   homepage "https://github.com/minamijoyo/tfupdate"
-  url "https://github.com/minamijoyo/tfupdate/archive/refs/tags/v0.9.1.tar.gz"
-  sha256 "0d9820f93f9f80c17e01da8bd3f4256642e93c86a1356b5d4418cb93797ec95d"
+  url "https://github.com/minamijoyo/tfupdate/archive/refs/tags/v0.9.2.tar.gz"
+  sha256 "4020825b5618686287d7040a5d992c9e36f4435031219c048cff25213932fa5d"
   license "MIT"
   head "https://github.com/minamijoyo/tfupdate.git", branch: "master"
 

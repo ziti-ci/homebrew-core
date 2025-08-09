@@ -1,8 +1,8 @@
 class Dwm < Formula
   desc "Dynamic window manager"
   homepage "https://dwm.suckless.org/"
-  url "https://dl.suckless.org/dwm/dwm-6.5.tar.gz"
-  sha256 "21d79ebfa9f2fb93141836c2666cb81f4784c69d64e7f1b2352f9b970ba09729"
+  url "https://dl.suckless.org/dwm/dwm-6.6.tar.gz"
+  sha256 "7cfc2c6d9386c07c49e2c906f209c18ba3364ce0b4872eae39f56efdb7fc00a3"
   license "MIT"
   head "https://git.suckless.org/dwm/", using: :git, branch: "master"
 

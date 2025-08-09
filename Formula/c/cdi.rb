@@ -1,8 +1,8 @@
 class Cdi < Formula
   desc "C and Fortran Interface to access Climate and NWP model Data"
   homepage "https://code.mpimet.mpg.de/projects/cdi"
-  url "https://code.mpimet.mpg.de/attachments/download/29871/cdi-2.5.1.1.tar.gz"
-  sha256 "a78c577324eb99ef461e90f717b75a1843304ac6613ebd168fdad12f84d78539"
+  url "https://code.mpimet.mpg.de/attachments/download/30033/cdi-2.5.3.tar.gz"
+  sha256 "1ebf6098b195c0bb13614015b62a63efd2ef3d4ee94f4c69cadcf236854b2303"
   license "GPL-2.0-only"
 
   livecheck do
@@ -10,7 +10,7 @@ class Cdi < Formula
     regex(/href=.*?cdi[._-]v?(\d+(?:\.\d+)+)\.t/i)
   end
 
-  no_autobump! because: :requires_manual_review
+  no_autobump! because: :incompatible_version_format
 
   bottle do
     sha256 cellar: :any,                 arm64_sequoia: "8ba79bdfd5b3ae2ee2c1761091adec216dd87fcd07dfd50cfebaa4eb95ff5cc5"

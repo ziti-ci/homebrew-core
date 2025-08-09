@@ -18,13 +18,13 @@ class Netatalk < Formula
   no_autobump! because: :incompatible_version_format
 
   bottle do
-    sha256 arm64_sequoia: "4800ca9b8e1b9bb7278186c01cba8b2bfd3b7cff962f7a124e6a6b9a818e0d43"
-    sha256 arm64_sonoma:  "c55e6b5321ce21f7bf1e82f7aab5f22008c771e7e08bf705eda10ea34e11b8c9"
-    sha256 arm64_ventura: "42419b170d0d5b7b96af5756ddbd3ff5ec6f2ad16eea35a9dcd143b8f0ea8243"
-    sha256 sonoma:        "11b8669ae277c25960b4418df3b25c65c0460155a0522b09b059d3cdd8c88b7d"
-    sha256 ventura:       "a3463716d5c66d2a90b84957dfa73cc7fb9f83f9d4486a25a97eeb47907b77e0"
-    sha256 arm64_linux:   "ca689a63c55901555e121ada20539e71282a9743a4acc3f7837c4d580e9661ec"
-    sha256 x86_64_linux:  "8eaa9d719c089a01dfc2a7b01f64e4f988692e9132e4f58e624f484956873333"
+    sha256 arm64_sequoia: "59512a22b20093f6798c96b9f8ed795a02e8767188388eabaca966708bc337c5"
+    sha256 arm64_sonoma:  "9bea5e0a1fed6fa0e9deb15d3f24cd312a4a63d535c9061c7be2ddd6623b878a"
+    sha256 arm64_ventura: "3c8298501fdd5efb373ffb025a2a7ea4f238aaa73345432b3007a0261738fcda"
+    sha256 sonoma:        "56878d4855fb7ee8401176786caa32afe13b99e6408895b898c927a9febc93f1"
+    sha256 ventura:       "374d8c73a8e190c727a60f027076a294690b17d62de3923d521e5fb45c978df5"
+    sha256 arm64_linux:   "9d54530b496a91a56bcf23fc6eafbd444e91f2eaf3a900e0c05a7291b7d44074"
+    sha256 x86_64_linux:  "edc5be6cadb386ab459fb41b5752e9ef4071488d040b48ff64a70d91bec41891"
   end
 
   depends_on "cmark-gfm" => :build

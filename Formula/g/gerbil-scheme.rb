@@ -19,6 +19,7 @@ class GerbilScheme < Formula
     sha256 arm64_ventura: "3a84f0abe9b30ccbbcfc7e5915f75af455b45b53b032f92e3bccae0fe3cf59bb"
     sha256 sonoma:        "4b5ad778a0eb69040087799891cef2915423e36bee59b44b429846ac750a6b50"
     sha256 ventura:       "333d0738fe5d912401ccee0cc0958db84b4e90e304c0365805580d071fb45b95"
+    sha256 arm64_linux:   "4d104632dda501548237d32ba5a454dccb9409b3b58b380f39a552017349193d"
     sha256 x86_64_linux:  "6b5f1a9d1e67afb310f18b033089eafa83514b33a9a32605651ff3ddbc5765e8"
   end
 

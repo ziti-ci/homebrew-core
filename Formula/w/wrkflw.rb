@@ -1,8 +1,8 @@
 class Wrkflw < Formula
   desc "Validate and execute GitHub Actions workflows locally"
   homepage "https://github.com/bahdotsh/wrkflw"
-  url "https://github.com/bahdotsh/wrkflw/archive/refs/tags/v0.4.0.tar.gz"
-  sha256 "e145daaef2d52f685de41021151dc7a213e5cc57ee78157bb171200d5195467c"
+  url "https://github.com/bahdotsh/wrkflw/archive/refs/tags/v0.6.0.tar.gz"
+  sha256 "90437baf4601baecc6abf7aa682b3609ffb2193d9956e70132acc12a1dac811f"
   license "MIT"
   head "https://github.com/bahdotsh/wrkflw.git", branch: "main"
 
@@ -25,7 +25,7 @@ class Wrkflw < Formula
   end
 
   def install
-    system "cargo", "install", *std_cargo_args
+    system "cargo", "install", *std_cargo_args(path: "crates/wrkflw")
   end
 
   test do

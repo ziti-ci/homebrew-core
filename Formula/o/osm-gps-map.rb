@@ -5,14 +5,21 @@ class OsmGpsMap < Formula
   revision 2
 
   stable do
+    # TODO: Make autoconf, automake, gtk-doc and libtool HEAD-only on next release
     url "https://github.com/nzjrs/osm-gps-map/releases/download/1.2.0/osm-gps-map-1.2.0.tar.gz"
     sha256 "ddec11449f37b5dffb4bca134d024623897c6140af1f9981a8acc512dbf6a7a5"
-
-    depends_on "libsoup@2"
 
     patch do
       url "https://raw.githubusercontent.com/Homebrew/formula-patches/03cf8088210822aa2c1ab544ed58ea04c897d9c4/libtool/configure-big_sur.diff"
       sha256 "35acd6aebc19843f1a2b3a63e880baceb0f5278ab1ace661e57a502d9d78c93c"
+    end
+
+    # Apply Void Linux's patch for libsoup 3. Remove in the next release.
+    # This is a rebased copy of upstream commit that applies on stable release
+    # https://github.com/nzjrs/osm-gps-map/commit/a7965751821d5bb55f8fb37b4045295d0c44dd9b
+    patch do
+      url "https://raw.githubusercontent.com/void-linux/void-packages/f6b0cf8ca04678301773327b9a2d5efb043dae3d/srcpkgs/libosmgpsmap/patches/libsoup-3.patch"
+      sha256 "045c8c9a6a317aea89158154818399815525f5b5cb0340332f92b250d73e5bc6"
     end
   end
 
@@ -32,21 +39,21 @@ class OsmGpsMap < Formula
 
   head do
     url "https://github.com/nzjrs/osm-gps-map.git", branch: "master"
-    depends_on "autoconf" => :build
     depends_on "autoconf-archive" => :build
-    depends_on "automake" => :build
-    depends_on "gtk-doc" => :build
-    depends_on "libtool" => :build
-    depends_on "libsoup"
   end
 
+  depends_on "autoconf" => :build
+  depends_on "automake" => :build
   depends_on "gobject-introspection" => :build
+  depends_on "gtk-doc" => :build
+  depends_on "libtool" => :build
   depends_on "pkgconf" => [:build, :test]
 
   depends_on "cairo"
   depends_on "gdk-pixbuf"
   depends_on "glib"
   depends_on "gtk+3"
+  depends_on "libsoup"
 
   on_macos do
     depends_on "at-spi2-core"
@@ -56,6 +63,9 @@ class OsmGpsMap < Formula
   end
 
   def install
+    # TODO: Remove next release
+    system "autoreconf", "--force", "--install", "--verbose" if build.stable?
+
     configure = build.head? ? "./autogen.sh" : "./configure"
     system configure, "--disable-silent-rules", "--enable-introspection", *std_configure_args
     system "make", "install"
@@ -73,7 +83,6 @@ class OsmGpsMap < Formula
       }
     C
 
-    ENV.prepend_path "PKG_CONFIG_PATH", Formula["libsoup@2"].opt_lib/"pkgconfig"
     flags = shell_output("pkgconf --cflags --libs osmgpsmap-1.0").chomp.split
     system ENV.cc, "test.c", "-o", "test", *flags
 

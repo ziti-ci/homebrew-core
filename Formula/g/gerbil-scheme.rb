@@ -14,17 +14,12 @@ class GerbilScheme < Formula
   no_autobump! because: :requires_manual_review
 
   bottle do
-    sha256 arm64_sequoia:  "dec01c0ea7481d9d9d04be4d4ba2dee210ddad512dee22dd4c4842fcdd66eaaf"
-    sha256 arm64_sonoma:   "d14934e41e373d08361070ee4ae92941c5933eb9afea231d289a9c66c1726067"
-    sha256 arm64_ventura:  "5568e6b56fed556b8c0145de4d54d6dc256c0d75af3e43a88a34c4f3b4922a0f"
-    sha256 arm64_monterey: "eea0039afa114fcf1329ca303a4b1829141a8b94d95520409109b362ffe459f6"
-    sha256 arm64_big_sur:  "a95805093e7668f057a9bead359aed795887a461c6399fe7da08a2a365d0a176"
-    sha256 sonoma:         "aca1864f111e920c18688f8c38f5a29ef0ad4def897279cc280b1eae77b528fb"
-    sha256 ventura:        "29e03e2cce80923ebace68b450dd7ac32c0fb8e9d5108ad1734c20b133e70306"
-    sha256 monterey:       "f3048903ad1fd2bd101cabb22d7587229d8e92712f6fb1724d5683664ad1e80b"
-    sha256 big_sur:        "f6e7338913c1e66538c1af4d177c63869dd33554f0aa5d14be7143eefa724330"
-    sha256 arm64_linux:    "ba2625ed4169c763474c919f4751c12c9c8d317b7d12e6a9319d295c054c0e4e"
-    sha256 x86_64_linux:   "878b862448fe401b00980688c6c880ef4344cc88272bb29ed6c1ddb1ce14460f"
+    sha256 arm64_sequoia: "939444b532cbb429e5385d5b9eaf5c998e5100cd6f44c73a08e03d81cf5390d6"
+    sha256 arm64_sonoma:  "f82c1f9904a538503b8465a690f2eeb492b719a76fc0e581610ff46ab10fba98"
+    sha256 arm64_ventura: "3a84f0abe9b30ccbbcfc7e5915f75af455b45b53b032f92e3bccae0fe3cf59bb"
+    sha256 sonoma:        "4b5ad778a0eb69040087799891cef2915423e36bee59b44b429846ac750a6b50"
+    sha256 ventura:       "333d0738fe5d912401ccee0cc0958db84b4e90e304c0365805580d071fb45b95"
+    sha256 x86_64_linux:  "6b5f1a9d1e67afb310f18b033089eafa83514b33a9a32605651ff3ddbc5765e8"
   end
 
   depends_on "coreutils" => :build

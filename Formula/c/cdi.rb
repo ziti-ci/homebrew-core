@@ -13,13 +13,13 @@ class Cdi < Formula
   no_autobump! because: :incompatible_version_format
 
   bottle do
-    sha256 cellar: :any,                 arm64_sequoia: "8ba79bdfd5b3ae2ee2c1761091adec216dd87fcd07dfd50cfebaa4eb95ff5cc5"
-    sha256 cellar: :any,                 arm64_sonoma:  "7c4791aa173ee41b0f3769d41252379a538cc4eb815adfe455f2371411a07cb0"
-    sha256 cellar: :any,                 arm64_ventura: "672518b37e775349dd80650bf633d3fe0c38c0929cec798ba382a120be8b02f0"
-    sha256 cellar: :any,                 sonoma:        "fd7bd1151d508897c5ab9b2e610af65e6b1741cff84dab549d8068c2502581e3"
-    sha256 cellar: :any,                 ventura:       "cf645ed409a66f613ee7ee117e1b90e806fc6557f82dabaff414c298e9f5b787"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "341ebba037f6dfc1b38692328d8eea830da74611f85ecf17b0607031072214c5"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "330cd470852be10e82afd99a977270252a46eb9ee67fe543334715861b5304aa"
+    sha256 cellar: :any,                 arm64_sequoia: "cfc00e9f19ee18c4fd3db9f33e71a3312d28857a8a5911756d17bb36cf3047db"
+    sha256 cellar: :any,                 arm64_sonoma:  "be8fbcfc9050ffe9e353d9b0fc31df5fea966babd9625fe014a82724c46f26ab"
+    sha256 cellar: :any,                 arm64_ventura: "95ecbbe3065c0a09587de975457e992a2c881844acb54303c4de76e62da81ce4"
+    sha256 cellar: :any,                 sonoma:        "c39d215b041512c361686a609de5d5af7994a791bb0d9b163408f29e4dd3a352"
+    sha256 cellar: :any,                 ventura:       "1441d2209aa2d2d8f7a373fe47e6eda539fdeb0ba9b4899c911baefe9770ae06"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "6e5351f6875be7fe43b7dd1075999ea63de9c4728c7bb70acf55d50bf27e61af"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "ac2b729c7c93b160f854c4b4d0966f0926b7a32c5685780f24aa080a526146cb"
   end
 
   depends_on "eccodes"

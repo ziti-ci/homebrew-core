@@ -11,13 +11,13 @@ class Paperjam < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_sequoia: "271b0d2b33c3f06f81fac58248a81a95eef0bcc36929230e2bad7b4d38ff34db"
-    sha256 cellar: :any,                 arm64_sonoma:  "4df949ea647a2056ea7d7ab0ea2d298f45da5643ae92c25aaac80aad7e1301c7"
-    sha256 cellar: :any,                 arm64_ventura: "1fd3b138f16296ab6107a43387eb5ea3b54e5dac2358b7b5b6e8bc6c7951f512"
-    sha256 cellar: :any,                 sonoma:        "0d6af7df1e10f96f42f56cf222c6bfb35d384ed547f1b8b0e11352906a5af41c"
-    sha256 cellar: :any,                 ventura:       "2fc406ca453bf24ade3b65111f80bb3fd0b1a761c316ee48540ed8341afc6d63"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "5a6fdbd3537bf7e095cf7ec80429789e08c0310083fd086ffdc9bf2956d37eb0"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "05712c9aeabd27e0ca3dd38ce377228044e31bccb7ee9bfb0a218b239f4838be"
+    sha256 cellar: :any,                 arm64_sequoia: "a7c254e007515ca0b2ba42063d766f12d5bc8521ce50b2019f71f7bf76920944"
+    sha256 cellar: :any,                 arm64_sonoma:  "201983b5c3c8b90a58e66d5f43cec89005935277f3b0113c9c51692f486c00d0"
+    sha256 cellar: :any,                 arm64_ventura: "6698810703ff9e4622a05bb1ddeb3428827199a2165869fb53736b088fcbaf79"
+    sha256 cellar: :any,                 sonoma:        "91fa2261cd3db2b3224ec207ec99541cac0ea6aea77bb544362f288e731f8135"
+    sha256 cellar: :any,                 ventura:       "53a29eb850b492e5aaffb84038267c8b23cca0c2569460568739f83553c47e25"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "f7c6806d04b52f70dfae2d5e3f7b4c1041ab6d18a0753cc3907eb20a487fbb9b"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "69fa71726997dffe37df6cad5c7ca2a9c0663bacb2ef40575b5e6751c79c72bb"
   end
 
   depends_on "asciidoc" => :build

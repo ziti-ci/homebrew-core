@@ -1,8 +1,8 @@
 class TidyViewer < Formula
   desc "CLI csv pretty printer"
   homepage "https://github.com/alexhallam/tv"
-  url "https://github.com/alexhallam/tv/archive/refs/tags/1.6.5.tar.gz"
-  sha256 "42a7fb627d91930225590c9773cd6efa6f32c779c3dc0ea96a8a6c88e78eaba0"
+  url "https://github.com/alexhallam/tv/archive/refs/tags/1.8.92.tar.gz"
+  sha256 "acc42d295bd9d1c960140ecea52aa74d682dab3e44529b72b1d5c71a87e32315"
   license "Unlicense"
 
   # Some tagged versions using a stable version format are marked as
@@ -27,7 +27,7 @@ class TidyViewer < Formula
   conflicts_with "television", because: "both install `tv` binaries"
 
   def install
-    system "cargo", "install", *std_cargo_args
+    system "cargo", "install", *std_cargo_args(path: "tidy-viewer-cli")
     bin.install_symlink "tidy-viewer" => "tv"
   end
 

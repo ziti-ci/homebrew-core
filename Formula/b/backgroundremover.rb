@@ -6,6 +6,7 @@ class Backgroundremover < Formula
   url "https://files.pythonhosted.org/packages/81/c9/5c7d668bea7bb5ae6e069afe33c19e55ae95975a87a7e3a5bbd3d6199f74/backgroundremover-0.3.4.tar.gz"
   sha256 "c4ce35da0194138c115017dba9f5dae38b7e2bfcf15a413ef04d8ce01e66e214"
   license "MIT"
+  revision 1
 
   bottle do
     rebuild 1

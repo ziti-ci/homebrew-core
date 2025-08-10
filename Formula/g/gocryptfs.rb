@@ -7,8 +7,8 @@ class Gocryptfs < Formula
   head "https://github.com/rfjakob/gocryptfs.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_linux:  "b3f8cd47fb9723f23a269891234dba134f2edb3d20d60e7bd4062f3a277573e2"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "309522acde8449ddc3e83e4316d81a3afcd2118dd88f1c5f6a8e3497c87a96ac"
+    sha256 cellar: :any_skip_relocation, arm64_linux:  "0dcfa87911d05b4bcc751d9a15b6aefd1b2876499c7f1f9eed58a9af84b891dd"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "689397d13f30daf5630dcb4ee457a6a2ca1d77100a23d9dd4a40c1f31840a2b0"
   end
 
   depends_on "go" => :build

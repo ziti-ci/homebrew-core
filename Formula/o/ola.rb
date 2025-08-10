@@ -3,9 +3,9 @@ class Ola < Formula
   include Language::Python::Virtualenv
 
   desc "Open Lighting Architecture for lighting control information"
-  homepage "https://www.openlighting.org/ola/"
+  homepage "https://github.com/OpenLightingProject/ola"
   license all_of: ["GPL-2.0-or-later", "LGPL-2.1-or-later"]
-  revision 5
+  revision 6
 
   stable do
     # TODO: Check if we can use unversioned `protobuf` at version bump
@@ -60,7 +60,7 @@ class Ola < Formula
   depends_on "libmicrohttpd"
   depends_on "libusb"
   depends_on "numpy"
-  depends_on "protobuf"
+  depends_on "protobuf@29"
   depends_on "python@3.13"
 
   uses_from_macos "bison" => :build
@@ -72,8 +72,8 @@ class Ola < Formula
   end
 
   resource "protobuf" do
-    url "https://files.pythonhosted.org/packages/f7/d1/e0a911544ca9993e0f17ce6d3cc0932752356c1b0a834397f28e63479344/protobuf-5.29.3.tar.gz"
-    sha256 "5da0f41edaf117bde316404bad1a486cb4ededf8e4a54891296f648e8e076620"
+    url "https://files.pythonhosted.org/packages/43/29/d09e70352e4e88c9c7a198d5645d7277811448d76c23b00345670f7c8a38/protobuf-5.29.5.tar.gz"
+    sha256 "bc1463bafd4b0929216c35f437a8e28731a2b7fe3d98bb77a600efced5a15c84"
   end
 
   # Apply open PR to support Protobuf 22+ API
@@ -105,6 +105,14 @@ class Ola < Formula
 
     # Skip flaky python tests. Remove when no longer running tests
     inreplace "python/ola/Makefile.mk", /^test_scripts \+= \\$/, "skipped_test_scripts = \\"
+    # Skip flaky tests on macOS
+    if OS.mac?
+      # https://github.com/OpenLightingProject/ola/pull/1655#issuecomment-696756941
+      inreplace "common/network/Makefile.mk", %r{\bcommon/network/HealthCheckedConnectionTester }, "#\\0"
+      inreplace "plugins/usbpro/Makefile.mk", %r{\\\n\s*plugins/usbpro/WidgetDetectorThreadTester$}, ""
+      # TODO: SelectServerTester may need confirmation on sporadic failures.
+      inreplace "common/io/Makefile.mk", %r{\bcommon/io/SelectServerTester }, "#\\0"
+    end
 
     venv = virtualenv_create(libexec, python3)
     venv.pip_install resources
@@ -125,7 +133,11 @@ class Ola < Formula
     system "make"
     # Run tests to check the workarounds applied haven't broken basic functionality.
     # TODO: Remove and revert to `--disable-unittests` when workarounds can be dropped.
-    system "make", "check"
+    ENV.deparallelize do
+      system "make", "check"
+    ensure
+      logs.install buildpath/"test-suite.log" if (buildpath/"test-suite.log").exist?
+    end
     system "make", "install"
 
     rewrite_shebang python_shebang_rewrite_info(venv.root/"bin/python"), *bin.children

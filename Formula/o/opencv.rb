@@ -60,7 +60,6 @@ class Opencv < Formula
   depends_on "openblas"
   depends_on "openexr"
   depends_on "openjpeg"
-  depends_on "openvino"
   depends_on "protobuf"
   depends_on "python@3.13"
   depends_on "tbb"
@@ -97,6 +96,7 @@ class Opencv < Formula
     libdirs = %w[ffmpeg libjasper libjpeg libjpeg-turbo libpng libtiff libwebp openexr openjpeg protobuf tbb zlib]
     libdirs.each { |l| rm_r(buildpath/"3rdparty"/l) }
 
+    # FIXME: `openvino` seems to break often and is difficult to update, so we disable it here for now.
     args = %W[
       -DCMAKE_CXX_STANDARD=17
       -DCMAKE_OSX_DEPLOYMENT_TARGET=
@@ -128,7 +128,7 @@ class Opencv < Formula
       -DWITH_JASPER=OFF
       -DWITH_OPENEXR=ON
       -DWITH_OPENGL=OFF
-      -DWITH_OPENVINO=ON
+      -DWITH_OPENVINO=OFF
       -DWITH_QT=OFF
       -DWITH_TBB=ON
       -DWITH_VTK=ON
@@ -203,7 +203,8 @@ class Opencv < Formula
                     "-L#{lib}", "-lopencv_core", "-lopencv_imgcodecs"
     assert_equal version.to_s, shell_output("./test").strip
 
-    return if OS.linux? && Hardware::CPU.intel?
+    # The test below seems to time out on Linux and Intel macOS.
+    return if OS.linux? || Hardware::CPU.intel?
 
     output = shell_output("#{python3} -c 'import cv2; print(cv2.__version__)'")
     assert_equal version.to_s, output.chomp

@@ -1,17 +1,14 @@
 class Paperjam < Formula
   desc "Program for transforming PDF files"
   homepage "https://mj.ucw.cz/sw/paperjam/"
-  url "https://mj.ucw.cz/download/linux/paperjam-1.2.1.tar.gz"
-  sha256 "bd38ed3539011f07e8443b21985bb5cd97c656e12d9363571f925d039124839b"
+  url "https://mj.ucw.cz/download/linux/paperjam-1.2.2.tar.gz"
+  sha256 "a281912d00a935f490ce20873e87b82d5203bb6180326be1bec60184acab30fc"
   license "GPL-2.0-or-later"
-  revision 1
 
   livecheck do
     url :homepage
     regex(/href=.*?paperjam[._-]v?(\d+(?:\.\d+)+)\.t/i)
   end
-
-  no_autobump! because: :requires_manual_review
 
   bottle do
     sha256 cellar: :any,                 arm64_sequoia: "271b0d2b33c3f06f81fac58248a81a95eef0bcc36929230e2bad7b4d38ff34db"
@@ -30,9 +27,6 @@ class Paperjam < Formula
 
   uses_from_macos "libxslt"
 
-  # notified the upstream about the patch
-  patch :DATA
-
   def install
     ENV["XML_CATALOG_FILES"] = "#{etc}/xml/catalog"
     ENV.append "LDLIBS", "-liconv" if OS.mac?
@@ -45,42 +39,3 @@ class Paperjam < Formula
     assert_path_exists testpath/"output.pdf"
   end
 end
-
-__END__
-diff --git a/pdf-tools.cc b/pdf-tools.cc
-index 0d74ca3..23d5ee4 100644
---- a/pdf-tools.cc
-+++ b/pdf-tools.cc
-@@ -7,6 +7,7 @@
- #include <cstdio>
- #include <cstdlib>
- #include <cstring>
-+#include <memory>
-
- #include <iconv.h>
-
-@@ -229,7 +230,7 @@ QPDFObjectHandle page_to_xobject(QPDF *out, QPDFObjectHandle page)
- 	}
-
- 	vector<QPDFObjectHandle> contents = page.getPageContents();
--	auto ph = PointerHolder<QPDFObjectHandle::StreamDataProvider>(new CombineFromContents_Provider(contents));
-+	auto ph = std::shared_ptr<QPDFObjectHandle::StreamDataProvider>(new CombineFromContents_Provider(contents));
- 	xo_stream.replaceStreamData(ph, QPDFObjectHandle::newNull(), QPDFObjectHandle::newNull());
- 	return xo_stream;
- }
-diff --git a/pdf.cc b/pdf.cc
-index 9f8dc12..41a158b 100644
---- a/pdf.cc
-+++ b/pdf.cc
-@@ -185,7 +185,11 @@ static void make_info_dict()
-     {
-       const string to_copy[] = { "/Title", "/Author", "/Subject", "/Keywords", "/Creator", "/CreationDate" };
-       for (string key: to_copy)
--	info.replaceOrRemoveKey(key, orig_info.getKey(key));
-+        {
-+          QPDFObjectHandle value = orig_info.getKey(key);
-+          if (!value.isNull())
-+            info.replaceKey(key, value);
-+        }
-     }
- }

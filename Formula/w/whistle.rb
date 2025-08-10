@@ -6,12 +6,12 @@ class Whistle < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "5569a7c3048d9b9b9b32e20b79f521cd92e52185bdbaabc810dea3497fffa282"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "5569a7c3048d9b9b9b32e20b79f521cd92e52185bdbaabc810dea3497fffa282"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "5569a7c3048d9b9b9b32e20b79f521cd92e52185bdbaabc810dea3497fffa282"
-    sha256 cellar: :any_skip_relocation, sonoma:        "b3aec0ae728d66705773026127c63d87d3fd78991b161ace63e81a68286e9d9f"
-    sha256 cellar: :any_skip_relocation, ventura:       "b3aec0ae728d66705773026127c63d87d3fd78991b161ace63e81a68286e9d9f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "5569a7c3048d9b9b9b32e20b79f521cd92e52185bdbaabc810dea3497fffa282"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "8c40a01f371987427ad33f33f6b72237d5011fd243ae66002b81c340acd51c7b"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "8c40a01f371987427ad33f33f6b72237d5011fd243ae66002b81c340acd51c7b"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "8c40a01f371987427ad33f33f6b72237d5011fd243ae66002b81c340acd51c7b"
+    sha256 cellar: :any_skip_relocation, sonoma:        "144e0a78de7c44ce68338700dfb621e332988af167117f776280541de3220295"
+    sha256 cellar: :any_skip_relocation, ventura:       "144e0a78de7c44ce68338700dfb621e332988af167117f776280541de3220295"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "8c40a01f371987427ad33f33f6b72237d5011fd243ae66002b81c340acd51c7b"
   end
 
   depends_on "node"

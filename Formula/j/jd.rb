@@ -7,12 +7,12 @@ class Jd < Formula
   head "https://github.com/josephburnett/jd.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "48e23ef98402ecbb0b3fb7a3b71217fbe15d3242403e6c28c1cd55e3f4912835"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "48e23ef98402ecbb0b3fb7a3b71217fbe15d3242403e6c28c1cd55e3f4912835"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "48e23ef98402ecbb0b3fb7a3b71217fbe15d3242403e6c28c1cd55e3f4912835"
-    sha256 cellar: :any_skip_relocation, sonoma:        "8efd7c641f8d4050810ce9f6f945620be69b36cc6ef85235db0d7892f99f91b7"
-    sha256 cellar: :any_skip_relocation, ventura:       "8efd7c641f8d4050810ce9f6f945620be69b36cc6ef85235db0d7892f99f91b7"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "b27cd86044389a44d2487e46791dc8bb4d1fb0a9b9a58c5bc295a8c2f1d7eb92"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "39e449b63f3b5f0b288fdaaac1406e25ac922c1e8bff6ca68e65245a3afe7ae8"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "39e449b63f3b5f0b288fdaaac1406e25ac922c1e8bff6ca68e65245a3afe7ae8"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "39e449b63f3b5f0b288fdaaac1406e25ac922c1e8bff6ca68e65245a3afe7ae8"
+    sha256 cellar: :any_skip_relocation, sonoma:        "05258c25b7b7c1b5652d808a8510d37797797d177d39c2aad2117c3495e8b493"
+    sha256 cellar: :any_skip_relocation, ventura:       "05258c25b7b7c1b5652d808a8510d37797797d177d39c2aad2117c3495e8b493"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "5aa69c9036be51f6ca72b074da190c816dafcf77d6fcb1d34a50a62d62171510"
   end
 
   depends_on "go" => :build

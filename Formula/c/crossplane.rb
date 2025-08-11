@@ -6,6 +6,11 @@ class Crossplane < Formula
   license "Apache-2.0"
   head "https://github.com/crossplane/crossplane.git", branch: "main"
 
+  livecheck do
+    url :stable
+    strategy :github_latest
+  end
+
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_sequoia: "b3c0fa4e896acbca0d698a7c6cf9831de2c64fac3412d38ccf9c1501ad896df5"
     sha256 cellar: :any_skip_relocation, arm64_sonoma:  "df018239abfffd81c0d556fbfd9c31abb59a8ef276af02d55bdbeb8789179621"

@@ -1,8 +1,8 @@
 class PerconaXtrabackupAT80 < Formula
   desc "Open source hot backup tool for InnoDB and XtraDB databases"
   homepage "https://www.percona.com/software/mysql-database/percona-xtrabackup"
-  url "https://downloads.percona.com/downloads/Percona-XtraBackup-8.0/Percona-XtraBackup-8.0.35-33/source/tarball/percona-xtrabackup-8.0.35-33.tar.gz"
-  sha256 "f4db1304ecf309913374c072b533bd448f5e5bffb31eed3c1fa76bc929f5c6c4"
+  url "https://downloads.percona.com/downloads/Percona-XtraBackup-8.0/Percona-XtraBackup-8.0.35-34/source/tarball/percona-xtrabackup-8.0.35-34.tar.gz"
+  sha256 "6ca81cd647e7cb1d8fd341f97cd32248bd719f9104a63eb24f1edda6a2d2441c"
   license "GPL-2.0-only"
 
   livecheck do

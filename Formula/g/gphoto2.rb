@@ -1,17 +1,14 @@
 class Gphoto2 < Formula
   desc "Command-line interface to libgphoto2"
   homepage "http://www.gphoto.org/"
-  url "https://downloads.sourceforge.net/project/gphoto/gphoto/2.5.28/gphoto2-2.5.28.tar.bz2"
-  sha256 "2a648dcdf12da19e208255df4ebed3e7d2a02f905be4165f2443c984cf887375"
+  url "https://downloads.sourceforge.net/project/gphoto/gphoto/2.5.32/gphoto2-2.5.32.tar.bz2"
+  sha256 "4e379a0f12f72b49ee5ee2283ffd806b5d12d099939d75197a3f4bbc7f27a1a1"
   license "GPL-2.0-or-later"
-  revision 1
 
   livecheck do
     url :stable
     regex(%r{url=.*?/gphoto2[._-]v?(\d+(?:\.\d+)+)\.t}i)
   end
-
-  no_autobump! because: :requires_manual_review
 
   bottle do
     sha256 arm64_sequoia:  "5ae6c7be0e9948d7fd7d0f473a4fcb0f62d37d8961c5e9ff33f42095fbc17463"
@@ -40,10 +37,6 @@ class Gphoto2 < Formula
     depends_on "gettext"
   end
 
-  # fix incompatible pointer type issue
-  # upstream patch PR ref, https://github.com/gphoto/gphoto2/pull/569
-  patch :DATA
-
   def install
     system "./configure", *std_configure_args
     system "make", "install"
@@ -53,26 +46,3 @@ class Gphoto2 < Formula
     assert_match version.to_s, shell_output("#{bin}/gphoto2 -v")
   end
 end
-
-__END__
-diff --git a/gphoto2/main.c b/gphoto2/main.c
-index 2bf5964..cd84467 100644
---- a/gphoto2/main.c
-+++ b/gphoto2/main.c
-@@ -1215,14 +1215,14 @@ start_timeout_func (Camera *camera, unsigned int timeout,
- 
- 	pthread_create (&tid, NULL, thread_func, td);
- 
--	return (tid);
-+	return (unsigned int)tid;
- }
- 
- static void
- stop_timeout_func (Camera __unused__ *camera, unsigned int id,
- 		   void __unused__ *data)
- {
--	pthread_t tid = id;
-+	pthread_t tid = (pthread_t)id;
- 
- 	pthread_cancel (tid);
- 	pthread_join (tid, NULL);

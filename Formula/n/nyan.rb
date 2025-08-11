@@ -7,12 +7,12 @@ class Nyan < Formula
   head "https://github.com/toshimaru/nyan.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "d8e9b3833088f3db2411296a60a99173107d6e2176322698c0a160d431219e65"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "d8e9b3833088f3db2411296a60a99173107d6e2176322698c0a160d431219e65"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "d8e9b3833088f3db2411296a60a99173107d6e2176322698c0a160d431219e65"
-    sha256 cellar: :any_skip_relocation, sonoma:        "f3ac2f67dbc35963b33657a3f99a4743da90b531778d78cbd3d6d00821c36d4f"
-    sha256 cellar: :any_skip_relocation, ventura:       "f3ac2f67dbc35963b33657a3f99a4743da90b531778d78cbd3d6d00821c36d4f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "238bbab1e8de95171fb84e4a2647ad46e97b73a4de1b30556c033a475cfe51f8"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "85ec2874fa41b2db68fa86d2e830bdad8cc8876984e66ce2b2a8fbbf7177f98f"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "85ec2874fa41b2db68fa86d2e830bdad8cc8876984e66ce2b2a8fbbf7177f98f"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "85ec2874fa41b2db68fa86d2e830bdad8cc8876984e66ce2b2a8fbbf7177f98f"
+    sha256 cellar: :any_skip_relocation, sonoma:        "f5d13e720cd69066895046f71d4002e94f8d01937254700fb5046320e8e1e73d"
+    sha256 cellar: :any_skip_relocation, ventura:       "f5d13e720cd69066895046f71d4002e94f8d01937254700fb5046320e8e1e73d"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "d71ae6d69044a2e3c7a02f5a5fb9d040dafe372c6f0e7d1f709030ff5bc40205"
   end
 
   depends_on "go" => :build

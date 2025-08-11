@@ -1,8 +1,8 @@
 class Fb303 < Formula
   desc "Thrift functions for querying information from a service"
   homepage "https://github.com/facebook/fb303"
-  url "https://github.com/facebook/fb303/archive/refs/tags/v2025.08.04.00.tar.gz"
-  sha256 "15476f7de72f0270ac43626c1b50f7dabbf131e5939ba284a11797ad71b0ceab"
+  url "https://github.com/facebook/fb303/archive/refs/tags/v2025.08.11.00.tar.gz"
+  sha256 "69123178f5e00c0a507a82dc5cd33ff81300ee3a50d7951425d9f5931ee8fbbd"
   license "Apache-2.0"
   head "https://github.com/facebook/fb303.git", branch: "main"
 
@@ -25,6 +25,12 @@ class Fb303 < Formula
   depends_on "gflags"
   depends_on "glog"
   depends_on "openssl@3"
+
+  # CMAKE_CXX_STANDARD to 20, should remove in next release
+  patch do
+    url "https://github.com/facebook/fb303/commit/ac1a8c3fb522f8a08d96ba831818912e18d565d9.patch?full_index=1"
+    sha256 "f048ae3b053822114fd692967cf7b8e8f0b362711699e65007c406b31d67550f"
+  end
 
   def install
     shared_args = ["-DBUILD_SHARED_LIBS=ON", "-DCMAKE_INSTALL_RPATH=#{rpath}"]
@@ -51,7 +57,7 @@ class Fb303 < Formula
       ENV.append_to_cflags "-march=#{Hardware.oldest_cpu}" if Hardware::CPU.intel?
     end
 
-    ENV.append "CXXFLAGS", "-std=c++17"
+    ENV.append "CXXFLAGS", "-std=c++20"
     system ENV.cxx, *ENV.cxxflags.split, "test.cpp", "-o", "test",
                     "-I#{include}", "-I#{Formula["openssl@3"].opt_include}",
                     "-L#{lib}", "-lfb303_thrift_cpp",

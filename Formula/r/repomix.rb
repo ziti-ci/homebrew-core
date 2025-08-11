@@ -6,13 +6,13 @@ class Repomix < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "d472300724ff93d67b867cf36fe39b2530246fc09c89da1d565ad17e06827ffb"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "d472300724ff93d67b867cf36fe39b2530246fc09c89da1d565ad17e06827ffb"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "d472300724ff93d67b867cf36fe39b2530246fc09c89da1d565ad17e06827ffb"
-    sha256 cellar: :any_skip_relocation, sonoma:        "ca7f60b335adb6371e63f574c3994a38e7e4fdb19bbfb2e21aa6ccc5be0415aa"
-    sha256 cellar: :any_skip_relocation, ventura:       "ca7f60b335adb6371e63f574c3994a38e7e4fdb19bbfb2e21aa6ccc5be0415aa"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "ec95db568d289639af503f4d91eaf2868a1bb285372c5845cab836c523ac5a9b"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "ec95db568d289639af503f4d91eaf2868a1bb285372c5845cab836c523ac5a9b"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "f09b4bc018a7ce50b6c28f5c71f9965692b27caff3f51078af95948ba63afea8"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "f09b4bc018a7ce50b6c28f5c71f9965692b27caff3f51078af95948ba63afea8"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "f09b4bc018a7ce50b6c28f5c71f9965692b27caff3f51078af95948ba63afea8"
+    sha256 cellar: :any_skip_relocation, sonoma:        "bcc0183325c179b3263c548d479281a8c8c8719a85e268414714426c406e2f34"
+    sha256 cellar: :any_skip_relocation, ventura:       "bcc0183325c179b3263c548d479281a8c8c8719a85e268414714426c406e2f34"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "1ca624c978c6965dc6da758d342543f6a0fc2bc244987ebf30d18dd13472d19b"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "1ca624c978c6965dc6da758d342543f6a0fc2bc244987ebf30d18dd13472d19b"
   end
 
   depends_on "node"

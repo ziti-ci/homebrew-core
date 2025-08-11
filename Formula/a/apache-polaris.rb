@@ -5,6 +5,15 @@ class ApachePolaris < Formula
   sha256 "4ed1a13aae04c8bf25982bc059e12d3490cb70ddf3b175dc97a227b46a566e10"
   license "Apache-2.0"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "651193a8f10b0c26dab239210f54945b941bcc8b32ff36ca4a711a25ea171c28"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "1723a5e2227e1fc846448527ed63bf01fbd2d54408e63430b39bbd2f6f2aea98"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "98d67992486f8b8dd409325f6573f5b27757fc21326b02e1237fbdcd3b481570"
+    sha256 cellar: :any_skip_relocation, sonoma:        "20ee0608dd98311e960c8948f7fe4c8157ea6b3d21e5ee49381241263a31f858"
+    sha256 cellar: :any_skip_relocation, ventura:       "7383dcf9f868196365a1f529829cbffc19f11e5d1ede1d345658d6e8be615bfe"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "b5fc3d56012a19e29fc5a6e4439f5c5661649d1e2a8192fefd62542dd7c25bfa"
+  end
+
   depends_on "gradle@8" => :build
   depends_on "openjdk"
 

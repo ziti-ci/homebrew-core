@@ -1,8 +1,8 @@
 class Hubble < Formula
   desc "Network, Service & Security Observability for Kubernetes using eBPF"
   homepage "https://github.com/cilium/hubble"
-  url "https://github.com/cilium/hubble/archive/refs/tags/v1.17.5.tar.gz"
-  sha256 "ac0a7e58f611cb203e14f24c3b65b050931c4994794d884cbfecf5c4bf5aaf7f"
+  url "https://github.com/cilium/hubble/archive/refs/tags/v1.18.0.tar.gz"
+  sha256 "29f4a452a360829a184d5e20b4d6c54fc96c982f91fe3569cd26b0fec35cf010"
   license "Apache-2.0"
   head "https://github.com/cilium/hubble.git", branch: "main"
 

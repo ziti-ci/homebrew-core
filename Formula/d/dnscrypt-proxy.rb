@@ -12,12 +12,12 @@ class DnscryptProxy < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "38a991fd79def4d2ee222219c359c4fc1c17d40a285a770acffabf3699421e22"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "38a991fd79def4d2ee222219c359c4fc1c17d40a285a770acffabf3699421e22"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "38a991fd79def4d2ee222219c359c4fc1c17d40a285a770acffabf3699421e22"
-    sha256 cellar: :any_skip_relocation, sonoma:        "3964f11eafa485a11c0d7b7643977a2e9f301ef23cea1f16d09e04f251332223"
-    sha256 cellar: :any_skip_relocation, ventura:       "3964f11eafa485a11c0d7b7643977a2e9f301ef23cea1f16d09e04f251332223"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "bacbce7fc6809f62c43f35e400c771803a10ad1cbe95369939b8c0ce4cc097d3"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "3d2a9fefe84ef2ffc829031e377fd1b7312487aae8eb0ede34b251f29fab93a4"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "3d2a9fefe84ef2ffc829031e377fd1b7312487aae8eb0ede34b251f29fab93a4"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "3d2a9fefe84ef2ffc829031e377fd1b7312487aae8eb0ede34b251f29fab93a4"
+    sha256 cellar: :any_skip_relocation, sonoma:        "2ab1431ae96a6ca889b19c34a297693050345aee97dadca212cbc2446839f4b4"
+    sha256 cellar: :any_skip_relocation, ventura:       "2ab1431ae96a6ca889b19c34a297693050345aee97dadca212cbc2446839f4b4"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "609e5a73e61ad5a6780dbb45a99104dffb5f537078423866f63fd9a29c40064a"
   end
 
   depends_on "go" => :build

@@ -1,13 +1,10 @@
 class Bnfc < Formula
   desc "BNF Converter"
   homepage "https://github.com/BNFC/bnfc"
-  url "https://github.com/BNFC/bnfc/archive/refs/tags/v2.9.5.tar.gz"
-  sha256 "32a6293b95e10cf1192f348ec79f3c125b52a56350caa4f67087feb3642eef77"
+  url "https://github.com/BNFC/bnfc/archive/refs/tags/v2.9.6.tar.gz"
+  sha256 "aec9b5042e40fb5af044ae64ffb5bba252f004245013922b0029c0855966a9ed"
   license "BSD-3-Clause"
-  revision 1
   head "https://github.com/BNFC/bnfc.git", branch: "master"
-
-  no_autobump! because: :requires_manual_review
 
   bottle do
     rebuild 1

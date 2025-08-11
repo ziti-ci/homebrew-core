@@ -37,8 +37,8 @@ class Msolve < Formula
       ENV.append "LDFLAGS", "-L#{libomp.opt_lib} -lomp"
     end
 
-    # only compile with cpu baseline features
-    inreplace "configure.ac", /AX_EXT/, " "
+    # only compile with cpu baseline features for the pre-built binaries
+    inreplace "configure.ac", /AX_EXT/, " " if build.bottle?
     system "autoreconf", "--force", "--install", "--verbose"
     system "./configure", "--disable-silent-rules", "--enable-openmp=yes", *std_configure_args
     system "make", "install"

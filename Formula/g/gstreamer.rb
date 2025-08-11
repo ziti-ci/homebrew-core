@@ -215,20 +215,6 @@ class Gstreamer < Formula
     rpath_args = [loader_path, rpath(source: plugin_dir)].map { |path| "-rpath,#{path}" }
     ENV.append_to_rustflags "--codegen link-args=-Wl,#{rpath_args.join(",")}"
 
-    # On Linux, adjust processing of RUSTFLAGS to avoid using shlex, which may mangle our
-    # RPATH-related flags, due to the presence of `$` in $ORIGIN.
-    if OS.linux?
-      wrapper_files = %w[
-        subprojects/gst-plugins-rs/cargo_wrapper.py
-        subprojects/gst-devtools/dots-viewer/cargo_wrapper.py
-      ]
-      inreplace wrapper_files do |s|
-        s.gsub!(/shlex\.split\(env\.get\(("RUSTFLAGS"|'RUSTFLAGS'), (""|'')\)\)/,
-                "' '.split(env.get(\"RUSTFLAGS\", \"\"))")
-        s.gsub! "shlex_join(rust_flags)", "' '.join(rust_flags)"
-      end
-    end
-
     # Make sure the `openssl-sys` crate uses our OpenSSL.
     ENV["OPENSSL_NO_VENDOR"] = "1"
     ENV["OPENSSL_DIR"] = Formula["openssl@3"].opt_prefix

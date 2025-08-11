@@ -24,13 +24,12 @@ class Gstreamer < Formula
   end
 
   bottle do
-    sha256 arm64_sequoia: "77f2deb231115c8df5afce4f0501b4b43275d33d5073543314b54addfcd6c7d2"
-    sha256 arm64_sonoma:  "d0bfc6831909ad8144990e30af757726e48a3586e4b1c1f4c441b82506481aee"
-    sha256 arm64_ventura: "737bc617927b3e9b235de36b305e8bb0c1e5a8aac3072a324c393f27cacce9ab"
-    sha256 sonoma:        "ab034c1272896890afc853a416430f2399fbdded984dd83e6e3fcaff090f65a1"
-    sha256 ventura:       "b9bc2158f563ca1668a0f7ab01ae96610a0757a5796307712763a4f4d98ccf8b"
-    sha256 arm64_linux:   "5f9785752dca93196f69df7481a389941a9f381db84227ad844bea76e13cf171"
-    sha256 x86_64_linux:  "99901e4761af2e71caf6b07faa044883f39948e7c910af57709f7c77c80000cf"
+    rebuild 1
+    sha256 arm64_sequoia: "7b8824f12fd1c56268993653ae1e2851e7b71c54dd7b2ee0096e2c6ee30979ef"
+    sha256 arm64_sonoma:  "cd03c091098836b182fbca2d592f4ab7a65a027112dd1b0162733a7ca8f1fb52"
+    sha256 arm64_ventura: "9ad6152b49308a1dee6b329df167e30a8a4d1b5475a691f2be90a0bda0defd5b"
+    sha256 sonoma:        "63fa2c3cc24c7a1972802fba964ec2a4562cae4dcce474b521fa2b31ca3c35fe"
+    sha256 ventura:       "51d8d1c000b35210a2e02acca97a772af298731397d4fec129ee1e3ab58ab78d"
   end
 
   head do
@@ -214,7 +213,7 @@ class Gstreamer < Formula
     # https://gitlab.freedesktop.org/gstreamer/gst-plugins-rs/-/issues/279
     plugin_dir = lib/"gstreamer-1.0"
     rpath_args = [loader_path, rpath(source: plugin_dir)].map { |path| "-rpath,#{path}" }
-    ENV.append "RUSTFLAGS", "--codegen link-args=-Wl,#{rpath_args.join(",")}"
+    ENV.append_to_rustflags "--codegen link-args=-Wl,#{rpath_args.join(",")}"
 
     # On Linux, adjust processing of RUSTFLAGS to avoid using shlex, which may mangle our
     # RPATH-related flags, due to the presence of `$` in $ORIGIN.

@@ -1,10 +1,10 @@
 class Yutu < Formula
-  desc "Fully functional CLI for YouTube"
+  desc "MCP server and CLI for YouTube"
   homepage "https://github.com/eat-pray-ai/yutu"
   url "https://github.com/eat-pray-ai/yutu.git",
-      tag:      "v0.9.10",
-      revision: "a074d5564d4c7eb562dc11108b5ca06f842029bf"
-  license "MIT"
+      tag:      "v0.10.1",
+      revision: "16f8f0e9b996a2804263f9e4a709101a76517bc1"
+  license "Apache-2.0"
   head "https://github.com/eat-pray-ai/yutu.git", branch: "main"
 
   bottle do
@@ -21,21 +21,22 @@ class Yutu < Formula
 
   def install
     mod = "github.com/eat-pray-ai/yutu/cmd"
-    ldflags = %W[-w -s
-                 -X #{mod}.Os=#{OS.mac? ? "darwin" : "linux"}
-                 -X #{mod}.Arch=#{Hardware::CPU.arch}
-                 -X #{mod}.Version=v#{version}
-                 -X #{mod}.Commit=#{Utils.git_short_head(length: 7)}
-                 -X #{mod}.CommitDate=#{time.iso8601}]
-    system "go", "build", *std_go_args(ldflags:), "."
+    ldflags = %W[
+      -s -w
+      -X #{mod}.Os=#{OS.mac? ? "darwin" : "linux"}
+      -X #{mod}.Arch=#{Hardware::CPU.arch}
+      -X #{mod}.Version=v#{version}
+      -X #{mod}.Commit=#{Utils.git_short_head(length: 7)}
+      -X #{mod}.CommitDate=#{time.iso8601}
+    ]
+    system "go", "build", *std_go_args(ldflags:)
 
-    generate_completions_from_executable(bin/"yutu", "completion", shells: [:bash, :zsh, :fish, :pwsh])
+    generate_completions_from_executable(bin/"yutu", "completion")
   end
 
   test do
-    version_output = shell_output("#{bin}/yutu version 2>&1")
-    assert_match "yutu🐰 version v#{version}", version_output
-    auth_output = shell_output("#{bin}/yutu auth 2>&1", 1)
-    assert_match "Please configure OAuth 2.0", auth_output
+    assert_match "yutu🐰 version v#{version}", shell_output("#{bin}/yutu version 2>&1")
+
+    assert_match "Please configure OAuth 2.0", shell_output("#{bin}/yutu auth 2>&1", 1)
   end
 end

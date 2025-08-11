@@ -229,6 +229,7 @@ jobs:
       BOTTLES_DIR: ${{matrix.workdir || github.workspace}}/bottles
     steps:
       - name: Pre-test steps
+        timeout-minutes: 10
         uses: Homebrew/actions/pre-build@main
         with:
           bottles-directory: ${{ env.BOTTLES_DIR }}
@@ -237,11 +238,11 @@ jobs:
       - name: Test formulae
         id: brew-test-bot-formulae
         run: |
-          # shellcheck disable=SC2086
-          brew test-bot $TEST_BOT_FORMULAE_ARGS \
+          xargs -t brew test-bot \
             --testing-formulae="$TESTING_FORMULAE" \
             --added-formulae="$ADDED_FORMULAE" \
-            --deleted-formulae="$DELETED_FORMULAE"
+            --deleted-formulae="$DELETED_FORMULAE" \
+            <<<"$TEST_BOT_FORMULAE_ARGS"
         env:
           TEST_BOT_FORMULAE_ARGS: ${{ needs.setup_tests.outputs.test-bot-formulae-args }}
           TESTING_FORMULAE: ${{ needs.formulae_detect.outputs.testing_formulae }}
@@ -362,6 +363,7 @@ jobs:
       TESTING_FORMULAE: ${{matrix.testing_formulae}}
     steps:
       - name: Pre-test steps
+        timeout-minutes: 10
         uses: Homebrew/actions/pre-build@main
         with:
           bottles-directory: ${{ env.BOTTLES_DIR }}
@@ -370,10 +372,10 @@ jobs:
 
       - name: Test dependents
         run: |
-          # shellcheck disable=SC2086
-          brew test-bot $TEST_BOT_DEPENDENTS_ARGS \
+          xargs -t brew test-bot \
             --testing-formulae="$TESTING_FORMULAE" \
-            --tested-formulae="$TESTED_FORMULAE"
+            --tested-formulae="$TESTED_FORMULAE" \
+            <<<"$TEST_BOT_DEPENDENTS_ARGS"
         env:
           TEST_BOT_DEPENDENTS_ARGS: ${{ needs.setup_dep_tests.outputs.test-bot-dependents-args }}
           TESTED_FORMULAE: ${{ needs.formulae_detect.outputs.testing_formulae }}

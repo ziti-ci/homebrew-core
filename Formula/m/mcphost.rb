@@ -1,18 +1,18 @@
 class Mcphost < Formula
   desc "CLI host for LLMs to interact with tools via MCP"
   homepage "https://github.com/mark3labs/mcphost"
-  url "https://github.com/mark3labs/mcphost/archive/refs/tags/v0.27.0.tar.gz"
-  sha256 "a98b6510c6dd0750380ecd2a7ac577235d01edc79c547f633c006d95ed3de83c"
+  url "https://github.com/mark3labs/mcphost/archive/refs/tags/v0.28.1.tar.gz"
+  sha256 "7071044ed4fc78f1373289ac7fa55c80d59f9dc7fab63700ba9d23201ace715a"
   license "MIT"
   head "https://github.com/mark3labs/mcphost.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "013fabfbb5e403593f3e6ab4ab9be3aadde0f30c2274b0a42e131d881162e16d"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "013fabfbb5e403593f3e6ab4ab9be3aadde0f30c2274b0a42e131d881162e16d"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "013fabfbb5e403593f3e6ab4ab9be3aadde0f30c2274b0a42e131d881162e16d"
-    sha256 cellar: :any_skip_relocation, sonoma:        "8a2712f5477c0a6a0bbcc72cbfeadcff686c7eead0b51f1ddbeba9bb06490c49"
-    sha256 cellar: :any_skip_relocation, ventura:       "8a2712f5477c0a6a0bbcc72cbfeadcff686c7eead0b51f1ddbeba9bb06490c49"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "600072d0ce5ff91403d9edebcb2929fa3ad2cc8462c2709d99274b165983e131"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "0b3c6b6769033110fee549a364db3e86ac7305d7a6e4cdb9635fadfd2723795f"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "0b3c6b6769033110fee549a364db3e86ac7305d7a6e4cdb9635fadfd2723795f"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "0b3c6b6769033110fee549a364db3e86ac7305d7a6e4cdb9635fadfd2723795f"
+    sha256 cellar: :any_skip_relocation, sonoma:        "51e62fc1572ca153e17f3b08b556f858dae8587bcd64ffdb8a6ddfc6dc17dcef"
+    sha256 cellar: :any_skip_relocation, ventura:       "51e62fc1572ca153e17f3b08b556f858dae8587bcd64ffdb8a6ddfc6dc17dcef"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "d1bddd85ef20dfc81f90cc5955d4d0ddc0c2f81064270b06b7db98acb2bf4572"
   end
 
   depends_on "go" => :build

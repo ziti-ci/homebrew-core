@@ -54,7 +54,7 @@ module Homebrew
             if macos_version.outdated_release? || macos_version.prerelease?
               nil
             else
-              ephemeral_suffix = "-#{ENV.fetch("GITHUB_RUN_ID")}"
+              ephemeral_suffix = "-#{ENV.fetch("GITHUB_RUN_ID")}-dispatch"
               macos_runners = [{ runner: "#{macos_version}-x86_64#{ephemeral_suffix}" }]
               macos_runners << { runner: "#{macos_version}-arm64#{ephemeral_suffix}" }
               macos_runners
@@ -70,6 +70,7 @@ module Homebrew
               runner = macos_version.to_s
               runner += "-#{tag.arch}"
               runner += "-#{ENV.fetch("GITHUB_RUN_ID")}"
+              runner += "-dispatch"
 
               { runner: }
             end

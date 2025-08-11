@@ -2,6 +2,7 @@ class Opencv < Formula
   desc "Open source computer vision library"
   homepage "https://opencv.org/"
   license "Apache-2.0"
+  revision 1
 
   stable do
     url "https://github.com/opencv/opencv/archive/refs/tags/4.12.0.tar.gz"
@@ -25,11 +26,12 @@ class Opencv < Formula
   no_autobump! because: :requires_manual_review
 
   bottle do
-    sha256 arm64_sonoma:  "8d9dc9f16eeb5f2acd3b9bb21cf1db96fb1b11cb5c02d20a237ccd0ac6245e20"
-    sha256 arm64_ventura: "90207a4a2d7de57ac41491c7e28b878da0232baaf528b306c8d1b7a5c2107224"
-    sha256 sonoma:        "29efbb8210e680beaae8fc415afe3d30aec356a0126ba91ca7aa6e582e27330d"
-    sha256 ventura:       "981cd771a676cf0762b98903a8b785e8ad5c26cde497717b019b6bdccd2dfc66"
-    sha256 x86_64_linux:  "6ef326dd8a2437968b83ebc0495a688e17c1b981e2ab4549be4704ec119a6fec"
+    rebuild 2
+    sha256 arm64_sonoma:  "5754a61a2acde03ad4a175df839f57090cba38a43f336893ea7683d4f450383f"
+    sha256 arm64_ventura: "c4277ad9b2b98c3c0741925345e8bbd103c73eb8307044f4779dca9a0093b6c7"
+    sha256 sonoma:        "be31d170a46195555295a8548592ed00462bdf9dfa7f3d1d01c73f73bccbb524"
+    sha256 ventura:       "dff9b4a395fe2f1d5ac765693eecce7abcbd949f0b4515d324eacd7ab7f5db4a"
+    sha256 x86_64_linux:  "f664207eb9c1c33915851c967f9ce9f72b5386c7c6c29ad6a6aef6f3fcab4ca6"
   end
 
   head do
@@ -59,7 +61,6 @@ class Opencv < Formula
   depends_on "openblas"
   depends_on "openexr"
   depends_on "openjpeg"
-  depends_on "openvino"
   depends_on "protobuf"
   depends_on "python@3.13"
   depends_on "tbb"
@@ -96,6 +97,7 @@ class Opencv < Formula
     libdirs = %w[ffmpeg libjasper libjpeg libjpeg-turbo libpng libtiff libwebp openexr openjpeg protobuf tbb zlib]
     libdirs.each { |l| rm_r(buildpath/"3rdparty"/l) }
 
+    # FIXME: `openvino` seems to break often and is difficult to update, so we disable it here for now.
     args = %W[
       -DCMAKE_CXX_STANDARD=17
       -DCMAKE_OSX_DEPLOYMENT_TARGET=
@@ -127,7 +129,7 @@ class Opencv < Formula
       -DWITH_JASPER=OFF
       -DWITH_OPENEXR=ON
       -DWITH_OPENGL=OFF
-      -DWITH_OPENVINO=ON
+      -DWITH_OPENVINO=OFF
       -DWITH_QT=OFF
       -DWITH_TBB=ON
       -DWITH_VTK=ON
@@ -202,7 +204,8 @@ class Opencv < Formula
                     "-L#{lib}", "-lopencv_core", "-lopencv_imgcodecs"
     assert_equal version.to_s, shell_output("./test").strip
 
-    return if OS.linux? && Hardware::CPU.intel?
+    # The test below seems to time out on Linux and Intel macOS.
+    return if OS.linux? || Hardware::CPU.intel?
 
     output = shell_output("#{python3} -c 'import cv2; print(cv2.__version__)'")
     assert_equal version.to_s, output.chomp

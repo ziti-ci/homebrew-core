@@ -1,10 +1,22 @@
 class OrTools < Formula
   desc "Google's Operations Research tools"
   homepage "https://developers.google.com/optimization/"
-  url "https://github.com/google/or-tools/archive/refs/tags/v9.14.tar.gz"
-  sha256 "9019facf316b54ee72bb58827efc875df4cfbb328fbf2b367615bf2226dd94ca"
   license "Apache-2.0"
+  revision 1
   head "https://github.com/google/or-tools.git", branch: "stable"
+
+  # Remove `stable` block when patch is no longer needed.
+  stable do
+    url "https://github.com/google/or-tools/archive/refs/tags/v9.14.tar.gz"
+    sha256 "9019facf316b54ee72bb58827efc875df4cfbb328fbf2b367615bf2226dd94ca"
+
+    # Fix for wrong target name for `libscip`.
+    # https://github.com/google/or-tools/issues/4750.
+    patch do
+      url "https://github.com/google/or-tools/commit/9d3350dcbc746d154f22a8b44d21f624604bd6c3.patch?full_index=1"
+      sha256 "fb39e1aa1215d685419837dc6cef339cda36e704a68afc475a820f74c0653a61"
+    end
+  end
 
   livecheck do
     url :stable
@@ -12,12 +24,14 @@ class OrTools < Formula
   end
 
   bottle do
-    sha256                               arm64_sequoia: "e9c776a67231ce836f2338d3411829368eb691900222b8f1fd2c038d0ca6ad4b"
-    sha256                               arm64_sonoma:  "5c4f56ad3f0b37163a4170d4403726accbcebac0852f881e948834cdafaa0f12"
-    sha256                               arm64_ventura: "671f302bf07cd51da141708328d7ad784ce40f9dc07b965c94b30764f58cd5dd"
-    sha256 cellar: :any,                 sonoma:        "864db82fd26b0d93bb4b7e760850d737767778b485ab3a8125c46578c31e3ca3"
-    sha256 cellar: :any,                 ventura:       "c51d79040006283f086ffb84723840a772f437b149f1d8e57ec84cb73f378c58"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "f57d60129669da947b3e3ec771568dad25c6d6e30de8f63f80d9399ee79e4440"
+    rebuild 1
+    sha256 cellar: :any,                 arm64_sequoia: "7ce8536119bdc17013e8e1af390d35089c90a82c00a2e2b7f060664d8a6ebcc6"
+    sha256 cellar: :any,                 arm64_sonoma:  "cf67629211b9483eda40865ef3d73b22931237fc6ad33c6add8d1860d06ffaee"
+    sha256 cellar: :any,                 arm64_ventura: "8007ad563566751f66d77f871b4ecc81bd66b51d331d5416f560fa4e88d57ace"
+    sha256 cellar: :any,                 sonoma:        "e8e5cef74403cbdbabdb6ffb46bdd4a02031af1d26b6b3be9672d2a9efd4faf6"
+    sha256 cellar: :any,                 ventura:       "abb9cc2a587012012bc89bf9c892cfe5e3c894c35efc20277870d985feeb0c66"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "a57fca0beeca2fc09d465e54f4ca599d5fdc313b3371232e5db3d5bbdb43bf43"
+    sha256                               x86_64_linux:  "736a0b63de7c4c141d3543dff26eda8f51241a2697bee93d1ed1ba9294ebf16b"
   end
 
   depends_on "cmake" => [:build, :test]
@@ -38,13 +52,12 @@ class OrTools < Formula
 
   def install
     # FIXME: Upstream enabled Highs support in their binary distribution, but our build fails with it.
-    # FIXME: turned off SCIP, otherwise or-tools fails to build with "Target SCIP::libscip not available."
     args = %w[
       -DUSE_HIGHS=OFF
       -DBUILD_DEPS=OFF
       -DBUILD_SAMPLES=OFF
       -DBUILD_EXAMPLES=OFF
-      -DUSE_SCIP=OFF
+      -DUSE_SCIP=ON
     ]
     system "cmake", "-S", ".", "-B", "build", *args, *std_cmake_args
     system "cmake", "--build", "build"

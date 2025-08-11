@@ -238,7 +238,7 @@ jobs:
       - name: Test formulae
         id: brew-test-bot-formulae
         run: |
-          xargs brew test-bot \
+          xargs -t brew test-bot \
             --testing-formulae="$TESTING_FORMULAE" \
             --added-formulae="$ADDED_FORMULAE" \
             --deleted-formulae="$DELETED_FORMULAE" \
@@ -372,7 +372,7 @@ jobs:
 
       - name: Test dependents
         run: |
-          xargs brew test-bot \
+          xargs -t brew test-bot \
             --testing-formulae="$TESTING_FORMULAE" \
             --tested-formulae="$TESTED_FORMULAE" \
             <<<"$TEST_BOT_DEPENDENTS_ARGS"

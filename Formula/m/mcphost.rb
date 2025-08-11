@@ -1,8 +1,8 @@
 class Mcphost < Formula
   desc "CLI host for LLMs to interact with tools via MCP"
   homepage "https://github.com/mark3labs/mcphost"
-  url "https://github.com/mark3labs/mcphost/archive/refs/tags/v0.28.1.tar.gz"
-  sha256 "7071044ed4fc78f1373289ac7fa55c80d59f9dc7fab63700ba9d23201ace715a"
+  url "https://github.com/mark3labs/mcphost/archive/refs/tags/v0.29.0.tar.gz"
+  sha256 "30c0f00b721d4ff16bae15e4c210effa7a4caf035b43a348769d2997d0b9b143"
   license "MIT"
   head "https://github.com/mark3labs/mcphost.git", branch: "main"
 
@@ -16,6 +16,12 @@ class Mcphost < Formula
   end
 
   depends_on "go" => :build
+
+  # fix version patch, upstream pr ref, https://github.com/mark3labs/mcphost/pull/128
+  patch do
+    url "https://github.com/mark3labs/mcphost/commit/008a4991ecd20b27866f458e492715c3dace2ddf.patch?full_index=1"
+    sha256 "82cd1e1cfc4eebbc0ed4114a3b93e6306be73243eb0e48aa7e4c7d648070ed8f"
+  end
 
   def install
     system "go", "build", *std_go_args(ldflags: "-s -w -X main.version=#{version}")

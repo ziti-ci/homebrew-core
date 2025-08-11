@@ -1,8 +1,8 @@
 class Nyan < Formula
   desc "Colorizing `cat` command with syntax highlighting"
   homepage "https://github.com/toshimaru/nyan"
-  url "https://github.com/toshimaru/nyan/archive/refs/tags/v1.2.1.tar.gz"
-  sha256 "9aedf339d62bb9fd3d83256228354990320b61413672950b63ea424053bbd73c"
+  url "https://github.com/toshimaru/nyan/archive/refs/tags/v1.2.2.tar.gz"
+  sha256 "0df7b5b25f71da2ab5458d3bf9a4d0158bea1a9a6f365937cf3653f9411150eb"
   license "MIT"
   head "https://github.com/toshimaru/nyan.git", branch: "main"
 

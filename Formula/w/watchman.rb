@@ -3,8 +3,8 @@ class Watchman < Formula
 
   desc "Watch files and take action when they change"
   homepage "https://github.com/facebook/watchman"
-  url "https://github.com/facebook/watchman/archive/refs/tags/v2025.08.04.00.tar.gz"
-  sha256 "8029db629fb386b13e58fdae0657b8f5a8b545bb42d4efd0c3c78a5aaee875ee"
+  url "https://github.com/facebook/watchman/archive/refs/tags/v2025.08.11.00.tar.gz"
+  sha256 "f9493050fdc5384c92d18f5445e73b3ebca80fe262c5af9e0c70044e56fd96de"
   license "MIT"
   head "https://github.com/facebook/watchman.git", branch: "main"
 
@@ -56,6 +56,7 @@ class Watchman < Formula
       -DWATCHMAN_VERSION_OVERRIDE=#{version}
       -DWATCHMAN_BUILDINFO_OVERRIDE=#{tap&.user || "Homebrew"}
       -DWATCHMAN_STATE_DIR=
+      -DCMAKE_CXX_STANDARD=20
     ]
     # Avoid overlinking with libsodium and mvfst
     args << "-DCMAKE_EXE_LINKER_FLAGS=-Wl,-dead_strip_dylibs" if OS.mac?

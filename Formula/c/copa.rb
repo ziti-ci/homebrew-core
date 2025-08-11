@@ -1,8 +1,8 @@
 class Copa < Formula
   desc "Tool to directly patch container images given the vulnerability scanning results"
   homepage "https://github.com/project-copacetic/copacetic"
-  url "https://github.com/project-copacetic/copacetic/archive/refs/tags/v0.10.0.tar.gz"
-  sha256 "4441630bca610ef6ed2ef17f353b27632bab4d0a2410f99bc96f0cd3f47b52f2"
+  url "https://github.com/project-copacetic/copacetic/archive/refs/tags/v0.11.1.tar.gz"
+  sha256 "b88a1618a3586d2e61dfbd2049755671a41b43e30faa3c1210ed378fd9ee3fc9"
   license "Apache-2.0"
   head "https://github.com/project-copacetic/copacetic.git", branch: "main"
 
@@ -12,7 +12,6 @@ class Copa < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura: "d403fa235446f405793bc94b659e8b1db4f73dc7940f33032bca3fe2783235d8"
     sha256 cellar: :any_skip_relocation, sonoma:        "c473dedf7ed6d875c86756962b74a93b4f0ffe98294a368cd3941dac491f2056"
     sha256 cellar: :any_skip_relocation, ventura:       "b0d0dec095c5035c77c97115a91cc31014a665798a79dbddc0cb7c26ec0bdeef"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "bd4e8c261fd31d0cdcbce2401183b2fc2b386feb10c520f1c10bb9f02a9adad7"
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "5e41b16c68e598ddecd219bee333ad8a405dbcdd6759fcbf49ac226638ba957c"
   end
 

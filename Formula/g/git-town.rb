@@ -7,12 +7,12 @@ class GitTown < Formula
   head "https://github.com/git-town/git-town.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "0b414a1dbf437026ea72097e8e1d2c6e0b477eebaf57f0f7744df351e7eafe63"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "0b414a1dbf437026ea72097e8e1d2c6e0b477eebaf57f0f7744df351e7eafe63"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "0b414a1dbf437026ea72097e8e1d2c6e0b477eebaf57f0f7744df351e7eafe63"
-    sha256 cellar: :any_skip_relocation, sonoma:        "834bc1fcc4cdc35f9ef9bd08c878346fc5d4432a9f2d9aa7827334d4e20e6178"
-    sha256 cellar: :any_skip_relocation, ventura:       "834bc1fcc4cdc35f9ef9bd08c878346fc5d4432a9f2d9aa7827334d4e20e6178"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "c02a7cfcbf2a706f70bbb10177eb4441d95b660f06373d3dccffa939ede2e591"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "990c55abe7adf5765405d2e0e39d2dbcff53b0c89924d8e41f5a73bdbd28c7d3"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "990c55abe7adf5765405d2e0e39d2dbcff53b0c89924d8e41f5a73bdbd28c7d3"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "990c55abe7adf5765405d2e0e39d2dbcff53b0c89924d8e41f5a73bdbd28c7d3"
+    sha256 cellar: :any_skip_relocation, sonoma:        "4a3c5a91658cdbff9603f4bbcc91262fe3fe50ebb9e236bb5fcb343c490def32"
+    sha256 cellar: :any_skip_relocation, ventura:       "4a3c5a91658cdbff9603f4bbcc91262fe3fe50ebb9e236bb5fcb343c490def32"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "7bcd4be736fd5560b58ffa02ed10d790cc288fc75d134e8d4e6066c71eff88fc"
   end
 
   depends_on "go" => :build

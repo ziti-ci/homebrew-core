@@ -3,8 +3,8 @@ class Locust < Formula
 
   desc "Scalable user load testing tool written in Python"
   homepage "https://locust.io/"
-  url "https://files.pythonhosted.org/packages/fb/93/ecd79dde28e24bdc99488d4e2c0ad4117252257d5cbdd61e3b14d1f03786/locust-2.38.0.tar.gz"
-  sha256 "5bd6c29d8423733cb5d9a265548c9fef7b731f2254aa91885d6c98d0d39f90f0"
+  url "https://files.pythonhosted.org/packages/be/03/2f92b75d971e6043cca6fcec59ceccfa800a1324425a74950603d8cac33a/locust-2.38.1.tar.gz"
+  sha256 "4ad9f2f9e7d56b7747ba67cb16e47ca0466b3908f402f50660f15f37621a5218"
   license "MIT"
 
   bottle do
@@ -39,8 +39,8 @@ class Locust < Formula
   end
 
   resource "charset-normalizer" do
-    url "https://files.pythonhosted.org/packages/e4/33/89c2ced2b67d1c2a61c19c6751aa8902d46ce3dacb23600a283619f5a12d/charset_normalizer-3.4.2.tar.gz"
-    sha256 "5baececa9ecba31eff645232d59845c07aa030f0c81ee70184a90d35099a0e63"
+    url "https://files.pythonhosted.org/packages/83/2d/5fd176ceb9b2fc619e63405525573493ca23441330fcdaee6bef9460e924/charset_normalizer-3.4.3.tar.gz"
+    sha256 "6fce4b8500244f6fcb71465d4a4930d132ba9ab8e71a7859e6a5d59851068d14"
   end
 
   resource "click" do
@@ -79,8 +79,8 @@ class Locust < Formula
   end
 
   resource "greenlet" do
-    url "https://files.pythonhosted.org/packages/c9/92/bb85bd6e80148a4d2e0c59f7c0c2891029f8fd510183afc7d8d2feeed9b6/greenlet-3.2.3.tar.gz"
-    sha256 "8b0dd8ae4c0d6f5e54ee55ba935eeb3d735a9b58a8a1e5b5cbab64e01a39f365"
+    url "https://files.pythonhosted.org/packages/03/b8/704d753a5a45507a7aab61f18db9509302ed3d0a27ac7e0359ec2905b1a6/greenlet-3.2.4.tar.gz"
+    sha256 "0dca0d95ff849f9a364385f36ab49f50065d76964944638be9691e1832e9f86d"
   end
 
   resource "h11" do

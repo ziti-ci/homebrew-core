@@ -9,13 +9,13 @@ class Webpack < Formula
   head "https://github.com/webpack/webpack.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "e14bd462bb101d07ba56dcf3253887638b56d9f0143de35071d151a3f673f9e1"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "e14bd462bb101d07ba56dcf3253887638b56d9f0143de35071d151a3f673f9e1"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "e14bd462bb101d07ba56dcf3253887638b56d9f0143de35071d151a3f673f9e1"
-    sha256 cellar: :any_skip_relocation, sonoma:        "f3deb70f1f9b7b9a9609ab2e2acc1c7ba3b2a3dd527a228568e330aebfecc547"
-    sha256 cellar: :any_skip_relocation, ventura:       "f3deb70f1f9b7b9a9609ab2e2acc1c7ba3b2a3dd527a228568e330aebfecc547"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "e14bd462bb101d07ba56dcf3253887638b56d9f0143de35071d151a3f673f9e1"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "e14bd462bb101d07ba56dcf3253887638b56d9f0143de35071d151a3f673f9e1"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "a87ac10855ba697e19935a171699b3f9534c09dcc52b4947052c0dc76ccd7817"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "a87ac10855ba697e19935a171699b3f9534c09dcc52b4947052c0dc76ccd7817"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "a87ac10855ba697e19935a171699b3f9534c09dcc52b4947052c0dc76ccd7817"
+    sha256 cellar: :any_skip_relocation, sonoma:        "413a016b6f95de49d447c036d6429a7bb86a31fce9591324e604665782e91422"
+    sha256 cellar: :any_skip_relocation, ventura:       "413a016b6f95de49d447c036d6429a7bb86a31fce9591324e604665782e91422"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "a87ac10855ba697e19935a171699b3f9534c09dcc52b4947052c0dc76ccd7817"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "a87ac10855ba697e19935a171699b3f9534c09dcc52b4947052c0dc76ccd7817"
   end
 
   depends_on "node"

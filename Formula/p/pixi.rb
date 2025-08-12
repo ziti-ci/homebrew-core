@@ -1,8 +1,8 @@
 class Pixi < Formula
   desc "Package management made easy"
   homepage "https://pixi.sh"
-  url "https://github.com/prefix-dev/pixi/archive/refs/tags/v0.50.2.tar.gz"
-  sha256 "26636239084fba212f175d843f1b3f3a1321946ea9287db0cee473ecd47cafaf"
+  url "https://github.com/prefix-dev/pixi/archive/refs/tags/v0.51.0.tar.gz"
+  sha256 "42346913e069751f22d4187953ba2fce8894c61b2da4b1f5798453d9c94ff5e8"
   license "BSD-3-Clause"
   head "https://github.com/prefix-dev/pixi.git", branch: "main"
 
@@ -48,6 +48,8 @@ class Pixi < Formula
   end
 
   test do
+    ENV["PIXI_HOME"] = testpath
+
     assert_equal "pixi #{version}", shell_output("#{bin}/pixi --version").strip
 
     system bin/"pixi", "init"

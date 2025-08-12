@@ -3,8 +3,8 @@ class Codelimit < Formula
 
   desc "Your Refactoring Alarm"
   homepage "https://github.com/getcodelimit/codelimit"
-  url "https://files.pythonhosted.org/packages/1f/0f/efe4f75ad56419cc68800fb22ea38e30816b23b27f82f5d4fd2c63378b17/codelimit-0.20.1.tar.gz"
-  sha256 "bb9a675b2a16a5de1c20ba166bb8c1fa81ff1fa3387b22334a6b708ab1a82895"
+  url "https://files.pythonhosted.org/packages/c9/c7/8d549c91354c38f1dd8529aa4dcab080a232473c848eb7416673aef7f690/codelimit-0.20.2.tar.gz"
+  sha256 "f1c2740644bfe2cda6b4daf677d0d23a7bd6128595dc2f08d72233ab67700727"
   license "GPL-3.0-or-later"
 
   bottle do

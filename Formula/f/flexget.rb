@@ -10,6 +10,7 @@ class Flexget < Formula
   depends_on "rust" => :build
   depends_on "libyaml"
   depends_on "python@3.13"
+  depends_on "zstd"
 
   resource "aniso8601" do
     url "https://files.pythonhosted.org/packages/8b/8d/52179c4e3f1978d3d9a285f98c706642522750ef343e9738286130423730/aniso8601-10.0.1.tar.gz"
@@ -352,7 +353,13 @@ class Flexget < Formula
   end
 
   def install
-    virtualenv_install_with_resources
+    virtualenv_install_with_resources without: "pyzstd"
+    # We need to build separately to link to our `zstd`.
+    resource("pyzstd").stage do
+      system_zstd = "--config-settings=--build-option=--dynamic-link-zstd"
+      system venv.root/"bin/python", "-m", "pip", "install", system_zstd,
+                                           *std_pip_args(prefix: false, build_isolation: true), "."
+    end
   end
 
   test do

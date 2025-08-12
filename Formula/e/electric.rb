@@ -11,6 +11,7 @@ class Electric < Formula
     sha256 cellar: :any,                 arm64_ventura: "5ad12957265cb407bd227421468efa67771ebe19828a6ee32401d71f927919a2"
     sha256 cellar: :any,                 sonoma:        "737c07d008629bf0036d8f51d9332801193aaa7b9d0f5d8479aaffc2228531d9"
     sha256 cellar: :any,                 ventura:       "b06c3901909e728b86949b21f5ec4cab239a5bba9ab62b1a1c8115b48e300e20"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "57f297de18d0e6da5b663259e2e9a67427d2cbcb2a2b77c04330ece1230ee010"
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "0663309185b4eade5947e6ece0ffc0cbb30d2f121dd32b4e71376927c148383a"
   end
 

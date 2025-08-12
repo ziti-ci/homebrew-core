@@ -1,8 +1,8 @@
 class Scotch < Formula
   desc "Package for graph partitioning, graph clustering, and sparse matrix ordering"
   homepage "https://gitlab.inria.fr/scotch/scotch"
-  url "https://gitlab.inria.fr/scotch/scotch/-/archive/v7.0.7/scotch-v7.0.7.tar.bz2"
-  sha256 "d88a9005dd05a9b3b86e6d1d7925740a789c975e5a92718ca0070e16b6567893"
+  url "https://gitlab.inria.fr/scotch/scotch/-/archive/v7.0.8/scotch-v7.0.8.tar.bz2"
+  sha256 "f4f05f56ad2c3219d9c6118eaa21d07af5c266cdc59db194b5fd47efe1ec1448"
   license "CECILL-C"
   head "https://gitlab.inria.fr/scotch/scotch.git", branch: "master"
 
@@ -32,17 +32,20 @@ class Scotch < Formula
   uses_from_macos "zlib"
 
   def install
-    system "cmake", "-S", ".", "-B", "build",
-                    "-DBUILD_SHARED_LIBS=ON",
-                    "-DCMAKE_INSTALL_RPATH=#{rpath}",
-                    "-DENABLE_TESTS=OFF",
-                    "-DINSTALL_METIS_HEADERS=OFF",
-                    *std_cmake_args
+    args = %W[
+      -DBUILD_SHARED_LIBS=ON
+      -DCMAKE_INSTALL_RPATH=#{rpath}
+      -DENABLE_TESTS=OFF
+      -DINSTALL_METIS_HEADERS=OFF
+    ]
+    system "cmake", "-S", ".", "-B", "build", *args, *std_cmake_args
     system "cmake", "--build", "build"
     system "cmake", "--install", "build"
 
-    pkgshare.install "src/check/test_strat_seq.c"
-    pkgshare.install "src/check/test_strat_par.c"
+    (pkgshare/"check").install "src/check/test_strat_seq.c"
+    (pkgshare/"check").install "src/check/test_strat_par.c"
+    (pkgshare/"libscotch").install "src/libscotch/common.h"
+    (pkgshare/"libscotch").install "src/libscotch/module.h"
 
     # License file has a non-standard filename
     prefix.install buildpath.glob("LICEN[CS]E_*.txt")
@@ -61,18 +64,17 @@ class Scotch < Formula
         return 0;
       }
     C
-    system ENV.cc, "test.c", "-L#{lib}", "-lscotch", "-lscotcherr",
-                             "-pthread", "-L#{Formula["zlib"].opt_lib}", "-lz", "-lm"
+
+    args = %W[-I#{include} -L#{lib} -lscotch -lscotcherr -pthread -lz -lm]
+
+    system ENV.cc, "test.c", *args
     assert_match version.to_s, shell_output("./a.out")
 
-    system ENV.cc, pkgshare/"test_strat_seq.c", "-o", "test_strat_seq",
-                   "-I#{include}", "-L#{lib}", "-lscotch", "-lscotcherr", "-lm", "-pthread",
-                   "-L#{Formula["zlib"].opt_lib}", "-lz"
+    system ENV.cc, pkgshare/"check/test_strat_seq.c", "-o", "test_strat_seq", *args
     assert_match "Sequential mapping strategy, SCOTCH_STRATDEFAULT", shell_output("./test_strat_seq")
 
-    system "mpicc", pkgshare/"test_strat_par.c", "-o", "test_strat_par",
-                    "-I#{include}", "-L#{lib}", "-lptscotch", "-lscotch", "-lptscotcherr", "-lm", "-pthread",
-                    "-L#{Formula["zlib"].opt_lib}", "-lz", "-Wl,-rpath,#{lib}"
+    system "mpicc", pkgshare/"check/test_strat_par.c", "-o", "test_strat_par",
+                    "-lptscotch", "-Wl,-rpath,#{lib}", *args
     assert_match "Parallel mapping strategy, SCOTCH_STRATDEFAULT", shell_output("./test_strat_par")
   end
 end

@@ -3,8 +3,8 @@ class Schemathesis < Formula
 
   desc "Testing tool for web applications with specs"
   homepage "https://schemathesis.readthedocs.io/"
-  url "https://files.pythonhosted.org/packages/ba/4c/1685d36fcf93098f6cf5d6611881d25c5f816ed48dd130d548f6a1d8523c/schemathesis-4.0.25.tar.gz"
-  sha256 "0cde28c167e562385c59c878667bdc1fb6348ce8125279f12dc85f1da081a0f9"
+  url "https://files.pythonhosted.org/packages/5c/27/bc250053ba5ff80dca9d2d98d35f636a7aa005047d48926bc94609c07b66/schemathesis-4.0.26.tar.gz"
+  sha256 "a3969e35c36fd3a50a703dda9fbf3314a1689dfeb1f9e95c838a773d2faab361"
   license "MIT"
 
   bottle do
@@ -90,8 +90,8 @@ class Schemathesis < Formula
   end
 
   resource "hypothesis" do
-    url "https://files.pythonhosted.org/packages/65/92/70f29b04e4d7acf7f9a0c3dd52619853715ad9ae092a8e5d89bc7bdc39ec/hypothesis-6.137.1.tar.gz"
-    sha256 "b086e644456da79ad460fdaf8fbf90a41a661e8a4076232dd4ea64cfbc0d0529"
+    url "https://files.pythonhosted.org/packages/e8/dd/57d29992de6d43c5e03319db7cb1ff726399dff904574996587b2afbffe6/hypothesis-6.137.3.tar.gz"
+    sha256 "8e2897572295b1e57c2cd4a0302a25ba8faa70460e96818ea0c16b793485a575"
   end
 
   resource "hypothesis-graphql" do
@@ -140,8 +140,8 @@ class Schemathesis < Formula
   end
 
   resource "markdown-it-py" do
-    url "https://files.pythonhosted.org/packages/38/71/3b932df36c1a044d397a1f92d1cf91ee0a503d91e470cbd670aa66b07ed0/markdown-it-py-3.0.0.tar.gz"
-    sha256 "e3f60a94fa066dc52ec76661e37c851cb232d92f9886b15cb560aaada2df8feb"
+    url "https://files.pythonhosted.org/packages/5b/f5/4ec618ed16cc4f8fb3b701563655a69816155e79e24a17b651541804721d/markdown_it_py-4.0.0.tar.gz"
+    sha256 "cb0a2b4aa34f932c007117b194e945bd74e0ec24133ceb5bac59009cda1cb9f3"
   end
 
   resource "markupsafe" do

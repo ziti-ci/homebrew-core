@@ -3,8 +3,8 @@ class Btcli < Formula
 
   desc "Bittensor command-line tool"
   homepage "https://docs.bittensor.com/btcli"
-  url "https://files.pythonhosted.org/packages/91/9a/5908c06fac4d82c5e735974f5fb6d2b1b98c9b84dd9152f08b8ce754c7c2/bittensor_cli-9.9.0.tar.gz"
-  sha256 "262519a9199f9f992b54959230b71045e064378c8c11988de8928cef83b737c3"
+  url "https://files.pythonhosted.org/packages/5b/a7/b35f70dd3e545432bd47e77f5187c25401c3117763e47142a12c0e598da1/bittensor_cli-9.10.1.tar.gz"
+  sha256 "5f1f77dd7e549c3e0005c005a0a29c9d0a2ce298b76c0fafcaa4add767fa287a"
   license "MIT"
   head "https://github.com/opentensor/btcli.git", branch: "main"
 
@@ -44,8 +44,8 @@ class Btcli < Formula
   end
 
   resource "async-substrate-interface" do
-    url "https://files.pythonhosted.org/packages/43/90/ae69cbd66fb6fa7ea6ef170aed79ac9eddedf8c2f86e30f7df4428125ae1/async_substrate_interface-1.4.3.tar.gz"
-    sha256 "483d42198ecacc193747239dfc6606ef4c5e0d4c261a2f186c490178cb4d23a7"
+    url "https://files.pythonhosted.org/packages/12/a5/569502432ce7e072572ccdfe56e9de13b2e0ffae25fa03508cc839dd42f4/async_substrate_interface-1.5.1.tar.gz"
+    sha256 "7da149e05ca955682790be6eb4c56f48e565e7af3eb0e00bd3857b37c9f6369e"
   end
 
   resource "attrs" do
@@ -64,8 +64,8 @@ class Btcli < Formula
   end
 
   resource "bittensor-wallet" do
-    url "https://files.pythonhosted.org/packages/70/b2/d120b53ff896f1b19d4275a647249c6f0d400bb92636cd6c77738765fb08/bittensor_wallet-3.1.0.tar.gz"
-    sha256 "d18eff3ab8ae64aa8c5641466026f0dc839cc690b55c9de36a9aa3dabf4c86f1"
+    url "https://files.pythonhosted.org/packages/02/94/d1473ad79490b16ccb3cd9f13c48f4db72907d0287636a40c038683f7afc/bittensor_wallet-4.0.0.tar.gz"
+    sha256 "9f990eac74b08897f9fc9a8af460d566b5cfb6e542f0313e4896a809449beb47"
   end
 
   resource "bt-decode" do
@@ -74,13 +74,13 @@ class Btcli < Formula
   end
 
   resource "charset-normalizer" do
-    url "https://files.pythonhosted.org/packages/e4/33/89c2ced2b67d1c2a61c19c6751aa8902d46ce3dacb23600a283619f5a12d/charset_normalizer-3.4.2.tar.gz"
-    sha256 "5baececa9ecba31eff645232d59845c07aa030f0c81ee70184a90d35099a0e63"
+    url "https://files.pythonhosted.org/packages/83/2d/5fd176ceb9b2fc619e63405525573493ca23441330fcdaee6bef9460e924/charset_normalizer-3.4.3.tar.gz"
+    sha256 "6fce4b8500244f6fcb71465d4a4930d132ba9ab8e71a7859e6a5d59851068d14"
   end
 
   resource "click" do
-    url "https://files.pythonhosted.org/packages/b9/2e/0090cbf739cee7d23781ad4b89a9894a41538e4fcf4c31dcdd705b78eb8b/click-8.1.8.tar.gz"
-    sha256 "ed53c9d8990d83c2a27deae68e4ee337473f6330c040a31d4225c9574d16096a"
+    url "https://files.pythonhosted.org/packages/60/6c/8ca2efa64cf75a977a0d7fac081354553ebe483345c734fb6b6515d96bbc/click-8.2.1.tar.gz"
+    sha256 "27c491cc05d968d271d5a1db13e3b5a184636d9d930f148c50b038f0d0646202"
   end
 
   resource "frozenlist" do
@@ -109,8 +109,8 @@ class Btcli < Formula
   end
 
   resource "markdown-it-py" do
-    url "https://files.pythonhosted.org/packages/38/71/3b932df36c1a044d397a1f92d1cf91ee0a503d91e470cbd670aa66b07ed0/markdown-it-py-3.0.0.tar.gz"
-    sha256 "e3f60a94fa066dc52ec76661e37c851cb232d92f9886b15cb560aaada2df8feb"
+    url "https://files.pythonhosted.org/packages/5b/f5/4ec618ed16cc4f8fb3b701563655a69816155e79e24a17b651541804721d/markdown_it_py-4.0.0.tar.gz"
+    sha256 "cb0a2b4aa34f932c007117b194e945bd74e0ec24133ceb5bac59009cda1cb9f3"
   end
 
   resource "markupsafe" do
@@ -129,13 +129,13 @@ class Btcli < Formula
   end
 
   resource "multidict" do
-    url "https://files.pythonhosted.org/packages/3d/2c/5dad12e82fbdf7470f29bff2171484bf07cb3b16ada60a6589af8f376440/multidict-6.6.3.tar.gz"
-    sha256 "798a9eb12dab0a6c2e29c1de6f3468af5cb2da6053a20dfa3344907eed0937cc"
+    url "https://files.pythonhosted.org/packages/69/7f/0652e6ed47ab288e3756ea9c0df8b14950781184d4bd7883f4d87dd41245/multidict-6.6.4.tar.gz"
+    sha256 "d2d4e4787672911b48350df02ed3fa3fffdc2f2e8ca06dd6afdf34189b76a9dd"
   end
 
   resource "narwhals" do
-    url "https://files.pythonhosted.org/packages/d9/58/0fbbfb13662297c8447d1872670da79f3f2a63fb68ae9aac9965cdc2d428/narwhals-2.0.0.tar.gz"
-    sha256 "d967bea54dfb6cd787abf3865ab4d72b8259d8f798c1c12c4eb693d5e9cebb24"
+    url "https://files.pythonhosted.org/packages/88/2b/d1206ec57d44efd07a08c75ecbeeef05e6b0457dc6777b6bd2d1e79713cd/narwhals-2.1.1.tar.gz"
+    sha256 "308ec9d0e40616b66b61cd76ede4083a4232ae04942a3acef7e514d49641cb77"
   end
 
   resource "netaddr" do
@@ -209,8 +209,8 @@ class Btcli < Formula
   end
 
   resource "typer" do
-    url "https://files.pythonhosted.org/packages/6c/89/c527e6c848739be8ceb5c44eb8208c52ea3515c6cf6406aa61932887bf58/typer-0.15.4.tar.gz"
-    sha256 "89507b104f9b6a0730354f27c39fae5b63ccd0c95b1ce1f1a6ba0cfd329997c3"
+    url "https://files.pythonhosted.org/packages/c5/8c/7d682431efca5fd290017663ea4588bf6f2c6aad085c7f108c5dbc316e70/typer-0.16.0.tar.gz"
+    sha256 "af377ffaee1dbe37ae9440cb4e8f11686ea5ce4e9bae01b84ae7c63b87f1dd3b"
   end
 
   resource "typing-extensions" do

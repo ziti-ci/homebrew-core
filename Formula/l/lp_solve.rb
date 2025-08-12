@@ -1,8 +1,8 @@
 class LpSolve < Formula
   desc "Mixed integer linear programming solver"
-  homepage "https://sourceforge.net/projects/lpsolve/"
-  url "https://downloads.sourceforge.net/lpsolve/lp_solve_5.5.2.11_source.tar.gz"
-  sha256 "6d4abff5cc6aaa933ae8e6c17a226df0fc0b671c438f69715d41d09fe81f902f"
+  homepage "https://lp-solve.github.io/"
+  url "https://github.com/lp-solve/lp_solve/releases/download/5.5.2.14/lp_solve_5.5.2.14_source.tar.gz"
+  sha256 "a4bbdc881128bdbe920a38e134c9add5db47f9aa814a0a018ba940b0f3c278c3"
   license "LGPL-2.1-or-later"
 
   no_autobump! because: :requires_manual_review
@@ -30,13 +30,6 @@ class LpSolve < Formula
       "osx64"
     else
       "ux64"
-    end
-
-    # Workaround for newer Clang
-    if DevelopmentTools.clang_build_version >= 1403
-      inreplace %W[lpsolve55/ccc#{target} lp_solve/ccc#{target}],
-                /^c=cc$/,
-                'c="cc -Wno-implicit-int"'
     end
 
     cd "lpsolve55" do

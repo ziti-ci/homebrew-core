@@ -7,6 +7,15 @@ class Mk < Formula
   sha256 "0a041a3620057165f155b8372469d8ab55ae94dd91d6e27723ab9a7de1aa2086"
   license "MIT"
 
+  bottle do
+    sha256 cellar: :any,                 arm64_sequoia: "fb57de51d981a1df57ba80756f979826aade4dead30392eeeb820a004412e2cb"
+    sha256 cellar: :any,                 arm64_sonoma:  "e139df051211ddb1dbfce7c51b5bc312f4e95f3ef4ec4f0994022b03bcfac1c0"
+    sha256 cellar: :any,                 arm64_ventura: "863faaaa32a7cf7ee1de6a01627afa7507f9f6685622d2904b53443d1dde0d74"
+    sha256 cellar: :any,                 sonoma:        "c136d141b1e34561edc0148d242257a03adfbf5fbe814dc20a0a092fb6039bf7"
+    sha256 cellar: :any,                 ventura:       "b3492d1025c53c27044ab5ad231507fcc2fc3b6b65221d40132e5f18a07542ea"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "151b045b09a2c9fab7500a90fbf88ec503890a867f56290b647a42db906f1166"
+  end
+
   depends_on "rust" => :build
   depends_on "certifi"
   depends_on "libyaml"

@@ -1,8 +1,8 @@
 class Syncthing < Formula
   desc "Open source continuous file synchronization application"
   homepage "https://syncthing.net/"
-  url "https://github.com/syncthing/syncthing/archive/refs/tags/v1.30.0.tar.gz"
-  sha256 "1e9eb93be73960f748fe85d2738793b5a11c88e63839254057d4fd86cd4321a3"
+  url "https://github.com/syncthing/syncthing/archive/refs/tags/v2.0.0.tar.gz"
+  sha256 "e5bdc6cbc9d671d6c1bfcc0c778bd4d591ebb491fe07d5f7a1c19916c8742df6"
   license "MPL-2.0"
   head "https://github.com/syncthing/syncthing.git", branch: "main"
 
@@ -41,7 +41,7 @@ class Syncthing < Formula
   end
 
   test do
-    assert_match "syncthing v#{version} ", shell_output("#{bin}/syncthing --version")
-    system bin/"syncthing", "-generate", "./"
+    assert_match "syncthing v#{version} ", shell_output("#{bin}/syncthing version")
+    system bin/"syncthing", "generate"
   end
 end

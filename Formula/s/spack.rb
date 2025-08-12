@@ -1,8 +1,8 @@
 class Spack < Formula
   desc "Package manager that builds multiple versions and configurations of software"
   homepage "https://spack.io"
-  url "https://github.com/spack/spack/archive/refs/tags/v0.23.1.tar.gz"
-  sha256 "32ca622c49448a3b4e398eb1397d8ff9a6aa987a248de621261e24e65f287593"
+  url "https://github.com/spack/spack/archive/refs/tags/v1.0.1.tar.gz"
+  sha256 "dd1345427dbc9281f359bdb6d0d53cb38edb94fd2ebee3256fda441c8242205e"
   license any_of: ["Apache-2.0", "MIT"]
   head "https://github.com/spack/spack.git", branch: "develop"
 
@@ -25,7 +25,6 @@ class Spack < Formula
 
   def install
     rm Dir["bin/*.bat", "bin/*.ps1", "bin/haspywin.py"] # Remove Windows files.
-    rm "var/spack/repos/builtin/packages/patchelf/test/hello" # Remove pre-built test ELF
     prefix.install Dir["*"]
   end
 
@@ -34,6 +33,12 @@ class Spack < Formula
   end
 
   test do
+    ENV["SPACK_USER_CONFIG_PATH"] = testpath
+    (testpath/"config.yaml").write <<~YAML
+      config:
+        install_tree: #{testpath}/opt/spack
+    YAML
+
     system bin/"spack", "--version"
     assert_match "zlib", shell_output("#{bin}/spack info zlib")
     system bin/"spack", "compiler", "find"

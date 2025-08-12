@@ -104,7 +104,7 @@ class Black < Formula
     ENV["HATCH_BUILD_HOOK_ENABLE_MYPYC"] = "1"
     virtualenv_install_with_resources
 
-    generate_completions_from_executable(bin/"black", shells: [:fish, :zsh], shell_parameter_format: :click)
+    generate_completions_from_executable(bin/"black", shell_parameter_format: :click)
   end
 
   service do

@@ -3,8 +3,8 @@ class Llm < Formula
 
   desc "Access large language models from the command-line"
   homepage "https://llm.datasette.io/"
-  url "https://files.pythonhosted.org/packages/28/54/7523826f13cc7e4054d303e297935cae202f6b9ac7345a1d28bdb33242ae/llm-0.27.tar.gz"
-  sha256 "0ad7101e29c3870b4c1f64e4ddbeaccbbdcadaf1457d14d3f57fd97d14ea752e"
+  url "https://files.pythonhosted.org/packages/05/7f/f2fe103b8fa6c5a96ba117fef46af15c766d4c28640893c2c7feb79c0df3/llm-0.27.1.tar.gz"
+  sha256 "02b0b393e31cf0e0ee1f2a6006c451c74ec18c7ec3973218de56e76fd72baa80"
   license "Apache-2.0"
 
   bottle do
@@ -78,8 +78,8 @@ class Llm < Formula
   end
 
   resource "openai" do
-    url "https://files.pythonhosted.org/packages/4b/81/288157471c43975cc849bc8779b8c7209aec6da5d7cbcd87a982912a19e5/openai-1.99.8.tar.gz"
-    sha256 "4b49845983eb4d5ffae9bae5d98bd5c0bd3a709a30f8b994fc8f316961b6d566"
+    url "https://files.pythonhosted.org/packages/8a/d2/ef89c6f3f36b13b06e271d3cc984ddd2f62508a0972c1cbcc8485a6644ff/openai-1.99.9.tar.gz"
+    sha256 "f2082d155b1ad22e83247c3de3958eb4255b20ccf4a1de2e6681b6957b554e92"
   end
 
   resource "pluggy" do

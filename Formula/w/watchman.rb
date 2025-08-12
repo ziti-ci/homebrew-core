@@ -9,13 +9,13 @@ class Watchman < Formula
   head "https://github.com/facebook/watchman.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any,                 arm64_sequoia: "417268d812084d5b2ca35ec7968ed3c9a41a26c781bee2f9e170322f11fa5c7e"
-    sha256 cellar: :any,                 arm64_sonoma:  "67607b7a8df1763dbe4b040db77c6c4da27ab5d6ee23896642a10bf2594d1712"
-    sha256 cellar: :any,                 arm64_ventura: "4c06bb1e8cd3b03fa47b029fc0fe9096de12d15d4ba717fad2b71f29880690e7"
-    sha256 cellar: :any,                 sonoma:        "d0c9dd295b19326c0951b30a3226d98de11cbbd68765512f410aa241471637ae"
-    sha256 cellar: :any,                 ventura:       "7446dbedb3e93949a331d231fdb8dc0c0a6c44c6ba5a3522fb976a508b86c9e5"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "0186f626a26b3c1e666d42af456237fe598cf13b4afbaeaa7fb23c8595428f28"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "ea282154003cb8f7b29eecb077cc2e2fb63b238ec0a8ee55cdc616f514ad68ca"
+    sha256 cellar: :any,                 arm64_sequoia: "d4eaccaecbc49ba3451790fcf2b49f80047ea6d5d44d2c54920ef5f817339faf"
+    sha256 cellar: :any,                 arm64_sonoma:  "daedae42b00d7e5f8bdcdb8070323ceca5973d3340c0a4675603ac35c15d7bea"
+    sha256 cellar: :any,                 arm64_ventura: "e4e9abc511ed3e8aa19c0d6c8af0ac1440fc1307c2cebc70aca84978b1413150"
+    sha256 cellar: :any,                 sonoma:        "5f7033fc03186582d3f92b240b47ab8af82eea6579905e53a9976d47505fdb2c"
+    sha256 cellar: :any,                 ventura:       "9eb4c95bb775da8504527957e24988f87161f6d5bdc9ace9ccf5f41300c3d8ea"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "7e01b4d498839237093796f57262d118359f158bba46948a523ca048c894102e"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "f87d385454cad53cc03168e4e7687b666581eedd07cbfb1729d695e903a8e2d1"
   end
 
   depends_on "cmake" => :build

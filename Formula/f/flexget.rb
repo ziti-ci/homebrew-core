@@ -51,11 +51,6 @@ class Flexget < Formula
     sha256 "81de08ac11bcb85841e440c13611c00b67d3bf82698314928d0b676362546724"
   end
 
-  resource "certifi" do
-    url "https://files.pythonhosted.org/packages/dc/67/960ebe6bf230a96cda2e0abcf73af550ec4f090005363542f0765df162e0/certifi-2025.8.3.tar.gz"
-    sha256 "e564105f78ded564e3ae7c923924435e1daa7463faeab5bb932bc53ffae63407"
-  end
-
   resource "charset-normalizer" do
     url "https://files.pythonhosted.org/packages/83/2d/5fd176ceb9b2fc619e63405525573493ca23441330fcdaee6bef9460e924/charset_normalizer-3.4.3.tar.gz"
     sha256 "6fce4b8500244f6fcb71465d4a4930d132ba9ab8e71a7859e6a5d59851068d14"

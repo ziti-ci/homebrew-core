@@ -12,13 +12,14 @@ class Syncthing < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "0cc197508bc3e117bd0e4f9ba67a8568592f7312c48afb9b8ac06caf3bfe527a"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "e0f65b5c0a4f83df1b1c23fcba1cbb777afbf21f7222cc94d04cc4262c9802be"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "3dec07dc21486f80e4b3b95b1e99d9f01c32f68a58ccea2d474991f518844b43"
-    sha256 cellar: :any_skip_relocation, sonoma:        "b3c6e925f27d066b4d25e57c0435965d71ef3e4cb47d40e10cecdbec6d0ac6e0"
-    sha256 cellar: :any_skip_relocation, ventura:       "b7bd3b76d5f971a501bd456c83a442698af40ce875543d9b76923076ad5709e0"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "25650825c7f397fef52c6dc715d5a983a203caa473948396eff60370946f2ea7"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "079bff0cf3a9561dcf07e517eac444729637c60770db723b8c0d6e8e0024e0de"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "b9a7398865f1370640a4e898289145074b226b1146fd70191e54431618207e02"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "7b28948073445bf1b3cf45e7b12493a05eda95f62fb5e258888016fcd44e8d95"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "4caa5e74219fede948457f858c714f86c992ce33271ae2bb0dfa98475868b3e6"
+    sha256 cellar: :any_skip_relocation, sonoma:        "1c33134cb338959e7004c7a0ea91677f5285e6c95949904cb4397aa0c26dbb12"
+    sha256 cellar: :any_skip_relocation, ventura:       "c91529044134bdfd2dcfcf2f98ba5f469080c69e192fa084ad62bd328bf8da37"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "8456b0cc00a370f4cce8314b1669fe8c234ae00d8e7bd92a00bfe8e811171e94"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "e9ad2092ba81ab9428635f1499f5db9a1f1313207046a10aeb58318c1a2e133b"
   end
 
   depends_on "go" => :build
@@ -34,7 +35,7 @@ class Syncthing < Formula
   end
 
   service do
-    run [opt_bin/"syncthing", "-no-browser", "-no-restart"]
+    run [opt_bin/"syncthing", "--no-browser", "--no-restart"]
     keep_alive true
     log_path var/"log/syncthing.log"
     error_log_path var/"log/syncthing.log"

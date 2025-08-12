@@ -14,26 +14,20 @@ class Faircamp < Formula
     sha256 cellar: :any, ventura:       "74e4fea1c11b4206c19616b74d08ced932c0d352bbe43361c58ea10fc47d94f4"
   end
 
-  depends_on "opus" => :build
   depends_on "pkgconf" => :build
   depends_on "rust" => :build
   depends_on "ffmpeg"
   depends_on "gettext"
   depends_on "glib"
-  # Brew's libopus behaves differently in linux compared to macOS and
-  # results in runtime errors. Further investigation and work on this
-  # formulae is needed to support linux builds. The upstream project
-  # provides their own mechanism for linux distribution. Brew is most
-  # valuable on macOS, where there is no other suitable package manager,
-  # so for now, restrict this formulae to macOS.
-  depends_on :macos
+  depends_on "opus"
   depends_on "vips"
+  depends_on "xz"
 
   def install
     # libvips is a runtime dependency, the brew install location is
     # not discovered by default by Cargo. Upstream issue:
     #   https://codeberg.org/simonrepp/faircamp/issues/45
-    ENV.append_to_rustflags Utils.safe_popen_read("pkgconf", "--libs", "vips").chomp
+    ENV.append_to_rustflags Utils.safe_popen_read("pkgconf", "--libs", "opus", "vips").chomp
     system "cargo", "install", *std_cargo_args, "--features", "libvips"
   end
 

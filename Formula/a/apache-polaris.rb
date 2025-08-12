@@ -11,6 +11,7 @@ class ApachePolaris < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura: "98d67992486f8b8dd409325f6573f5b27757fc21326b02e1237fbdcd3b481570"
     sha256 cellar: :any_skip_relocation, sonoma:        "20ee0608dd98311e960c8948f7fe4c8157ea6b3d21e5ee49381241263a31f858"
     sha256 cellar: :any_skip_relocation, ventura:       "7383dcf9f868196365a1f529829cbffc19f11e5d1ede1d345658d6e8be615bfe"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "592619c84b43b42ca83191cfc5da00981d6a0fbe5cc2a7858df1eb5d64b8b20f"
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "b5fc3d56012a19e29fc5a6e4439f5c5661649d1e2a8192fefd62542dd7c25bfa"
   end
 

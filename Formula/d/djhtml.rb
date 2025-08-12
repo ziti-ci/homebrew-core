@@ -8,7 +8,7 @@ class Djhtml < Formula
   license "GPL-3.0-or-later"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "30c255ebe8bca9d8a0251eb1e4eab05d094bb499104dcc5736a899481ff24826"
+    sha256 cellar: :any_skip_relocation, all: "7a2429c630f209192d18a335250b1d157cafe15a800a26874fb38e5abbcf57cb"
   end
 
   depends_on "python@3.13"

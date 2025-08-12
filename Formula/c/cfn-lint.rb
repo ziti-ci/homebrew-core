@@ -3,8 +3,8 @@ class CfnLint < Formula
 
   desc "Validate CloudFormation templates against the CloudFormation spec"
   homepage "https://github.com/aws-cloudformation/cfn-lint/"
-  url "https://files.pythonhosted.org/packages/a4/60/960368d67e52efee68f550d4af47f8e349ff05cbaa238290bb73f1ba6776/cfn_lint-1.38.2.tar.gz"
-  sha256 "2febd202f98a14da27feb1d6799f11f5dfdd3f3f1e89afdcb3688423bed1fd8f"
+  url "https://files.pythonhosted.org/packages/5f/59/fce3fc232899608e24665531bb29a355fc41ac12b4e0d8198dab3b650b67/cfn_lint-1.38.3.tar.gz"
+  sha256 "954fe80fdcd7676db48a2cee0680bcecc517a2677b49058fd5d71c3d21e9f00a"
   license "MIT-0"
 
   bottle do
@@ -37,13 +37,13 @@ class CfnLint < Formula
   end
 
   resource "boto3" do
-    url "https://files.pythonhosted.org/packages/d1/c0/9ceff05d2243f169765ae9db08fa6f085d026af71a778cd083dc972f0f2b/boto3-1.40.2.tar.gz"
-    sha256 "2dfbc214fdbf94abfd61eec687ea39089d05af43bb00be792c76f3a6c1393f7b"
+    url "https://files.pythonhosted.org/packages/06/0d/1c5c70d2f72bba218c9ed166016e4a8e2fec4783399f98b2c007c510bda8/boto3-1.40.8.tar.gz"
+    sha256 "62959010dfd3d24157f73a8183fca7619ec97fb42ac400477006f7ecb9548d06"
   end
 
   resource "botocore" do
-    url "https://files.pythonhosted.org/packages/20/e5/e7d68381042a6d50510c8d4629f39922ce27ff32f45baf852ba6534342c5/botocore-1.40.2.tar.gz"
-    sha256 "77c4710bf37b28e897833b5b1f47d6a83e45a29985cd01a560dfdb8b6ad524e5"
+    url "https://files.pythonhosted.org/packages/64/43/d83d03afe05d46249d0e65231f7b59eec7900f9af0e395888e4d46f99d04/botocore-1.40.8.tar.gz"
+    sha256 "954fa6e36020ebf58898de80a8f864ba13b74dc26994cf20ccfff2966724b0b9"
   end
 
   resource "jmespath" do
@@ -112,8 +112,8 @@ class CfnLint < Formula
   end
 
   resource "rpds-py" do
-    url "https://files.pythonhosted.org/packages/a5/aa/4456d84bbb54adc6a916fb10c9b374f78ac840337644e4a5eda229c81275/rpds_py-0.26.0.tar.gz"
-    sha256 "20dae58a859b0906f0685642e591056f1e787f3a8b39c8e8749a45dc7d26bdb0"
+    url "https://files.pythonhosted.org/packages/1e/d9/991a0dee12d9fc53ed027e26a26a64b151d77252ac477e22666b9688bc16/rpds_py-0.27.0.tar.gz"
+    sha256 "8b23cf252f180cda89220b378d917180f29d313cd6a07b2431c0d3b776aae86f"
   end
 
   resource "s3transfer" do

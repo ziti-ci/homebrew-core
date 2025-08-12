@@ -6,13 +6,13 @@ class RedoclyCli < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "eab2841f3d5eed9eb80ceecf83cc61d058f2cf67fb464efa682e7f1d74d9c15d"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "eab2841f3d5eed9eb80ceecf83cc61d058f2cf67fb464efa682e7f1d74d9c15d"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "eab2841f3d5eed9eb80ceecf83cc61d058f2cf67fb464efa682e7f1d74d9c15d"
-    sha256 cellar: :any_skip_relocation, sonoma:        "bcbfd85401b02fd244d8eb51808792a75d53a654807f69040deb34d89d0773e9"
-    sha256 cellar: :any_skip_relocation, ventura:       "bcbfd85401b02fd244d8eb51808792a75d53a654807f69040deb34d89d0773e9"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "eab2841f3d5eed9eb80ceecf83cc61d058f2cf67fb464efa682e7f1d74d9c15d"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "eab2841f3d5eed9eb80ceecf83cc61d058f2cf67fb464efa682e7f1d74d9c15d"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "6a1eb3ee1b7d05cab24796eeb9dcf4d614fcae381f8b0a97a82962854888ef04"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "6a1eb3ee1b7d05cab24796eeb9dcf4d614fcae381f8b0a97a82962854888ef04"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "6a1eb3ee1b7d05cab24796eeb9dcf4d614fcae381f8b0a97a82962854888ef04"
+    sha256 cellar: :any_skip_relocation, sonoma:        "b1b13349a6ffc356f389f879a3f5dabbb72df330e4e32a11cda802a4b1440a7a"
+    sha256 cellar: :any_skip_relocation, ventura:       "b1b13349a6ffc356f389f879a3f5dabbb72df330e4e32a11cda802a4b1440a7a"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "6a1eb3ee1b7d05cab24796eeb9dcf4d614fcae381f8b0a97a82962854888ef04"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "6a1eb3ee1b7d05cab24796eeb9dcf4d614fcae381f8b0a97a82962854888ef04"
   end
 
   depends_on "node"

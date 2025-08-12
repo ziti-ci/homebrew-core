@@ -2,13 +2,10 @@ class Alive2 < Formula
   desc "Automatic verification of LLVM optimizations"
   homepage "https://github.com/AliveToolkit/alive2"
   url "https://github.com/AliveToolkit/alive2.git",
-      tag:      "v20.0",
-      revision: "c0f5434f402ad91714ee0952f686cd0f524920ad"
+      tag:      "v21.0",
+      revision: "913e1556032ee70a9ebf147b5a0c7e10086b7490"
   license "MIT"
-  revision 2
   head "https://github.com/AliveToolkit/alive2.git", branch: "master"
-
-  no_autobump! because: :requires_manual_review
 
   bottle do
     sha256 cellar: :any,                 arm64_sequoia: "c2e52c9df83cf4759cdc53761aec5cf533bdc24fc9812241c18f494a9e7bc836"

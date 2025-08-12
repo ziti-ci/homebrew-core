@@ -1,8 +1,8 @@
 class Poselib < Formula
   desc "Minimal solvers for calibrated camera pose estimation"
   homepage "https://github.com/PoseLib/PoseLib/"
-  url "https://github.com/PoseLib/PoseLib/archive/refs/tags/v2.0.4.tar.gz"
-  sha256 "caa0c1c9b882f6e36b5ced6f781406ed97d4c1f0f61aa31345ebe54633d67c16"
+  url "https://github.com/PoseLib/PoseLib/archive/refs/tags/v2.0.5.tar.gz"
+  sha256 "a9493e6725c58e6ae541fe416c0a6179185a60006880ff3ddf32737a43695668"
   license "BSD-3-Clause"
 
   bottle do

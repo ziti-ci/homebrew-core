@@ -14,13 +14,13 @@ class Meilisearch < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "4795dbf9e5a6d08d59bd76d4c54847af12ee1b99ffafbbfc68a7af090d7108f2"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "4c85d14756edf10b567936e655cdbfb9ac3a48778ff9eec52550008eebd493c7"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "3986fa07c708584151e338209a33b6822f4c478986e333058e03e0d0c727f2a4"
-    sha256 cellar: :any_skip_relocation, sonoma:        "abacd5d25c3f54d02ef87c74d4eff9ab7b59269cb82906d8ba5a1e51078c5999"
-    sha256 cellar: :any_skip_relocation, ventura:       "ba941cb80caf0557db2dd4916d672e25011a7f8c49af459efab3db5264380eed"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "4b8c0487bb20656da9a08166a3846798e704fa40d029e128de55c6548c5e53ea"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "947d9f549fd0e0d65e87a17f4edf3306cd88a26207631d0ab5054ad8e02cad30"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "048bdae97e13dc87610104b53a192cc415d24020076dddfbe1e4e91fecf0f0a3"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "206eaed2f059dcce5944d412e9b5a5a6ab4f45685668ac3ae3db2123c9790dc4"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "861e3b592d7cc415cbc31a1436a0b4d1a1cbed7458bd32c734162d2877e76ebd"
+    sha256 cellar: :any_skip_relocation, sonoma:        "c3345a71ebb177f9eb89ac86b9093a4a83c6170e2445a903436ac3de72a619f1"
+    sha256 cellar: :any_skip_relocation, ventura:       "166eebcb0f79cc852171148bcb6512055dfad06881c40f5acf6e8cb5f48722bf"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "2d5ab94d877d09aa1b2bdbac0612593eae47fbb8ca1cfb340ead2d626bafed7e"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "0e92a7fa73656ba8546265a2688a6ade006293a193888fe7a8c42edc711be616"
   end
 
   depends_on "rust" => :build

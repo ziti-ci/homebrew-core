@@ -5,6 +5,15 @@ class Electric < Formula
   sha256 "58f28cf698cc7d8de8c780fe831932aa62efb207ec443b26ba46e9a0d6242a41"
   license "Apache-2.0"
 
+  bottle do
+    sha256 cellar: :any,                 arm64_sequoia: "6d77cb95934fbb68d5022b728635efda38da9b359e3d7d596f8521814a0c9ef8"
+    sha256 cellar: :any,                 arm64_sonoma:  "c92bb0710595e82915596640f6d5fd5c2394325f57a89090ade94e2da47f9cd3"
+    sha256 cellar: :any,                 arm64_ventura: "5ad12957265cb407bd227421468efa67771ebe19828a6ee32401d71f927919a2"
+    sha256 cellar: :any,                 sonoma:        "737c07d008629bf0036d8f51d9332801193aaa7b9d0f5d8479aaffc2228531d9"
+    sha256 cellar: :any,                 ventura:       "b06c3901909e728b86949b21f5ec4cab239a5bba9ab62b1a1c8115b48e300e20"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "0663309185b4eade5947e6ece0ffc0cbb30d2f121dd32b4e71376927c148383a"
+  end
+
   depends_on "elixir" => :build
   depends_on "postgresql@17" => :test
   depends_on "erlang"

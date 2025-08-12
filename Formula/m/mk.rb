@@ -13,6 +13,7 @@ class Mk < Formula
     sha256 cellar: :any,                 arm64_ventura: "863faaaa32a7cf7ee1de6a01627afa7507f9f6685622d2904b53443d1dde0d74"
     sha256 cellar: :any,                 sonoma:        "c136d141b1e34561edc0148d242257a03adfbf5fbe814dc20a0a092fb6039bf7"
     sha256 cellar: :any,                 ventura:       "b3492d1025c53c27044ab5ad231507fcc2fc3b6b65221d40132e5f18a07542ea"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "b94a0da458c1f5a82bb1ab94f8e60085516a7086f878b5a4f5e525cf67205fd9"
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "151b045b09a2c9fab7500a90fbf88ec503890a867f56290b647a42db906f1166"
   end
 

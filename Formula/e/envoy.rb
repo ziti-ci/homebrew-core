@@ -1,8 +1,8 @@
 class Envoy < Formula
   desc "Cloud-native high-performance edge/middle/service proxy"
   homepage "https://www.envoyproxy.io/index.html"
-  url "https://github.com/envoyproxy/envoy/archive/refs/tags/v1.33.2.tar.gz"
-  sha256 "e54d444a8d4197c1dca56e7f6e7bc3b7d83c1695197f5699f62e250ecbece169"
+  url "https://github.com/envoyproxy/envoy/archive/refs/tags/v1.35.0.tar.gz"
+  sha256 "31ce14bee8f21b409743083ccb2147c6ac968a6d4338d7002f4126d8ddd67b75"
   license "Apache-2.0"
   head "https://github.com/envoyproxy/envoy.git", branch: "main"
 
@@ -58,7 +58,7 @@ class Envoy < Formula
 
     if OS.linux?
       # GCC/ld.gold had some issues while building envoy so use clang/lld instead
-      args << "--config=clang"
+      args << "--config=clang-common"
 
       # clang 18 introduced stricter thread safety analysis. Remove once release that supports clang 18
       # https://github.com/envoyproxy/envoy/issues/37911
@@ -71,7 +71,13 @@ class Envoy < Formula
       # Workaround to build with Clang 19 until envoy uses newer grpc
       # https://github.com/grpc/grpc/commit/e55f69cedd0ef7344e0bcb64b5ec9205e6aa4f04
       args << "--copt=-Wno-missing-template-arg-list-after-template-kw"
+
+      # Workaround to build with Clang 20
+      args << "--copt=-Wno-deprecated-literal-operator"
     end
+
+    # Workaround to build with Xcode 16.3 / Clang 19
+    args << "--copt=-Wno-nullability-completeness" if OS.linux? || DevelopmentTools.clang_build_version >= 1700
 
     # Write the current version SOURCE_VERSION.
     system "python3", "tools/github/write_current_source_version.py", "--skip_error_in_git"

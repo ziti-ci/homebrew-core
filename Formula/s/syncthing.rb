@@ -34,7 +34,7 @@ class Syncthing < Formula
   end
 
   service do
-    run [opt_bin/"syncthing", "-no-browser", "-no-restart"]
+    run [opt_bin/"syncthing", "--no-browser", "--no-restart"]
     keep_alive true
     log_path var/"log/syncthing.log"
     error_log_path var/"log/syncthing.log"

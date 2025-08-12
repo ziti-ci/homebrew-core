@@ -27,11 +27,19 @@ class Aptos < Formula
   uses_from_macos "llvm" => :build
 
   on_linux do
+    depends_on "lld" => :build
     depends_on "pkgconf" => :build
     depends_on "zip" => :build
     depends_on "elfutils"
     depends_on "openssl@3"
     depends_on "systemd"
+  end
+
+  # Fixes build with newer versions of blst
+  # PR ref: https://github.com/aptos-labs/aptos-core/pull/17349
+  patch do
+    url "https://github.com/aptos-labs/aptos-core/commit/87862b1bf0aaeb73f6f967957ec38354e74d5d31.patch?full_index=1"
+    sha256 "f4893ea7b41f0a9402dd630f7c184352603ee121aae86cfc8cfb4e86ede7c827"
   end
 
   def install

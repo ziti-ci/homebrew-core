@@ -1,8 +1,8 @@
 class DartSdk < Formula
   desc "Dart Language SDK, including the VM, dart2js, core libraries, and more"
   homepage "https://dart.dev"
-  url "https://github.com/dart-lang/sdk/archive/refs/tags/3.8.3.tar.gz"
-  sha256 "29dd0a9be41eb696f8c45ac9bde7c1f0f2884b4e454ab06a137c7f145b58c1f1"
+  url "https://github.com/dart-lang/sdk/archive/refs/tags/3.9.0.tar.gz"
+  sha256 "948e4244fa0e9ec7acee5cd40d34f6250be484effae5059d67290c82e3f45099"
   license "BSD-3-Clause"
 
   bottle do
@@ -25,7 +25,7 @@ class DartSdk < Formula
   # always pull the latest commit from https://chromium.googlesource.com/chromium/tools/depot_tools.git/+/refs/heads/main
   resource "depot-tools" do
     url "https://chromium.googlesource.com/chromium/tools/depot_tools.git",
-        revision: "7d1e2bdb9168718566caba63a170a67cdab2356b"
+        revision: "b12a6cc03cf7838d3ea320a5a8b0c2c8d4a6151e"
   end
 
   def install

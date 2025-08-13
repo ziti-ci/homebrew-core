@@ -8,12 +8,12 @@ class AliyunCli < Formula
   head "https://github.com/aliyun/aliyun-cli.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "472926db9534f2f797e2acae178dfa3470ab457b1cc6f91d384fd5a6df522819"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "472926db9534f2f797e2acae178dfa3470ab457b1cc6f91d384fd5a6df522819"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "472926db9534f2f797e2acae178dfa3470ab457b1cc6f91d384fd5a6df522819"
-    sha256 cellar: :any_skip_relocation, sonoma:        "8d9924843fba0fd102a9c92ffdcc7f89ea9a2978d8e16ad964390a42ba293eeb"
-    sha256 cellar: :any_skip_relocation, ventura:       "8d9924843fba0fd102a9c92ffdcc7f89ea9a2978d8e16ad964390a42ba293eeb"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "2169ce8bb4ac2f6a5c169c16315e1f20dd57cad2d107836b0a16baf97bba4721"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "133416a11211e1c74e4120264cd85371b59c7af89219541ceac7f38f27b0da9f"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "133416a11211e1c74e4120264cd85371b59c7af89219541ceac7f38f27b0da9f"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "133416a11211e1c74e4120264cd85371b59c7af89219541ceac7f38f27b0da9f"
+    sha256 cellar: :any_skip_relocation, sonoma:        "1914d2f503c6b21fc49c725b8738e4e9af4dd0e1dcd02df51f022f5a9e8d054e"
+    sha256 cellar: :any_skip_relocation, ventura:       "1914d2f503c6b21fc49c725b8738e4e9af4dd0e1dcd02df51f022f5a9e8d054e"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "a7a2af24b40271b7ecf7dbe67becb506dd71dcc4054692c75390a37998bcb14f"
   end
 
   depends_on "go" => :build

@@ -1,8 +1,8 @@
 class Perbase < Formula
   desc "Fast and correct perbase BAM/CRAM analysis"
   homepage "https://github.com/sstadick/perbase"
-  url "https://github.com/sstadick/perbase/archive/refs/tags/v1.0.0.tar.gz"
-  sha256 "01bbd8fb6ddc0b02347a068035b9a729a07cacfec12474d1fdb2501f086ca917"
+  url "https://github.com/sstadick/perbase/archive/refs/tags/v1.1.0.tar.gz"
+  sha256 "6b9e030ce0692631482ef074a7d6c37519d6400be21d2f7533ba44a0ec5dc237"
   license "MIT"
   head "https://github.com/sstadick/perbase.git", branch: "master"
 

@@ -6,6 +6,7 @@ class Openvino < Formula
   url "https://github.com/openvinotoolkit/openvino/archive/refs/tags/2025.2.0.tar.gz"
   sha256 "15cd5c9beb320a8feadd18bcae40970608de154d5057277281dc53dd7023e383"
   license "Apache-2.0"
+  revision 1
   head "https://github.com/openvinotoolkit/openvino.git", branch: "master"
 
   livecheck do
@@ -100,6 +101,10 @@ class Openvino < Formula
   end
 
   def install
+    # Work around for Protobuf C++ 6.x until OpenVINO adds support
+    inreplace "thirdparty/dependencies.cmake", "find_package(Protobuf 5.26.0 ",
+                                               "find_package(Protobuf 6.30.0 "
+
     # cmake 4 build patch for third parties
     ENV["CMAKE_POLICY_VERSION_MINIMUM"] = "3.5"
 

@@ -1,8 +1,8 @@
 class Goenv < Formula
   desc "Go version management"
   homepage "https://github.com/go-nv/goenv"
-  url "https://github.com/go-nv/goenv/archive/refs/tags/2.2.27.tar.gz"
-  sha256 "25aeb49c66389a736b7c15f5e726d9d13d81ddb9ba943a6763ac9cba184357a8"
+  url "https://github.com/go-nv/goenv/archive/refs/tags/2.2.28.tar.gz"
+  sha256 "6dfb6ec4696327afd5cd21f40ffe1268e304e1ad025e45727f5248cd8a4f5d3b"
   license "MIT"
   version_scheme 1
   head "https://github.com/go-nv/goenv.git", branch: "master"

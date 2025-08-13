@@ -1,8 +1,8 @@
 class Bzip3 < Formula
   desc "Better and stronger spiritual successor to BZip2"
   homepage "https://github.com/kspalaiologos/bzip3"
-  url "https://github.com/kspalaiologos/bzip3/releases/download/1.5.2/bzip3-1.5.2.tar.gz"
-  sha256 "9d10092a3842378e6d0b16992ee49f711304d88eb4efac80440338184d4b6276"
+  url "https://github.com/kspalaiologos/bzip3/releases/download/1.5.3/bzip3-1.5.3.tar.gz"
+  sha256 "c48823353084df2a5a0dba44fd5295abd078e40b49f09700d08af4d9b1e31d67"
   license "LGPL-3.0-only"
 
   bottle do

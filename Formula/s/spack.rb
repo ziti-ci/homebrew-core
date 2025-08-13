@@ -12,13 +12,13 @@ class Spack < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "2684e22465a5d1dc2b6914046b3888ad551ba5e124854e3e67974330377e2bf1"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "2684e22465a5d1dc2b6914046b3888ad551ba5e124854e3e67974330377e2bf1"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "2684e22465a5d1dc2b6914046b3888ad551ba5e124854e3e67974330377e2bf1"
-    sha256 cellar: :any_skip_relocation, sonoma:        "7624a31a3821c80a4c33f0e54e36fff5aa8f4c93e7d20b7a063205017cf50008"
-    sha256 cellar: :any_skip_relocation, ventura:       "7624a31a3821c80a4c33f0e54e36fff5aa8f4c93e7d20b7a063205017cf50008"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "94d27af942c129148f0f6638e22a029dc7090833fd4df88a13268e0c6303b21b"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "e86a9198a69c530a065637ceba3eb6d5133833879c406967deac53743659692b"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "24740174b2c04b46afb1bf30566f7623833212e62bd63c732ad88835c4d457ce"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "24740174b2c04b46afb1bf30566f7623833212e62bd63c732ad88835c4d457ce"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "24740174b2c04b46afb1bf30566f7623833212e62bd63c732ad88835c4d457ce"
+    sha256 cellar: :any_skip_relocation, sonoma:        "fb62f39f80b60afe1b133749f2d1f69ccdea05096ca5c8670cef2b79f0199425"
+    sha256 cellar: :any_skip_relocation, ventura:       "fb62f39f80b60afe1b133749f2d1f69ccdea05096ca5c8670cef2b79f0199425"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "24740174b2c04b46afb1bf30566f7623833212e62bd63c732ad88835c4d457ce"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "24740174b2c04b46afb1bf30566f7623833212e62bd63c732ad88835c4d457ce"
   end
 
   uses_from_macos "python"

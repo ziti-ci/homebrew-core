@@ -7,6 +7,10 @@ class Cogapp < Formula
   sha256 "a9e8b8c31e5e47de722f27eaba1ec128dd6c8e7b6015555d9c8edaa5ad6092b4"
   license "MIT"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "a904c26976e9e55216ce6316e12727825dd8fdda8b4a762be8a6632efe60d172"
+  end
+
   depends_on "python@3.13"
 
   def install

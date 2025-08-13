@@ -25,6 +25,7 @@ class SingBox < Formula
       with_dhcp
       with_gvisor
       with_quic
+      with_tailscale
       with_utls
       with_wireguard
     ]

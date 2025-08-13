@@ -1,8 +1,8 @@
 class Gbox < Formula
   desc "Self-hostable sandbox for AI Agents to execute commands and surf web"
   homepage "https://gbox.ai"
-  url "https://github.com/babelcloud/gbox/releases/download/v0.0.20/gbox-v0.0.20.tar.gz"
-  sha256 "962dcea209b87e77f89d6e3a555600cf5d3d187bfcfd4e3a040c69016c80f0ac"
+  url "https://github.com/babelcloud/gbox/releases/download/v0.1.0/gbox-v0.1.0.tar.gz"
+  sha256 "33d48ffeaccce542a465ad778ed6162474498d7504b1a8d0dcdb8d6f7e7e5a7a"
   license "Apache-2.0"
 
   bottle do

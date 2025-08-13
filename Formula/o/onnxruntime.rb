@@ -2,10 +2,9 @@ class Onnxruntime < Formula
   desc "Cross-platform, high performance scoring engine for ML models"
   homepage "https://github.com/microsoft/onnxruntime"
   url "https://github.com/microsoft/onnxruntime.git",
-      tag:      "v1.22.1",
-      revision: "89746dc19a0a1ae59ebf4b16df9acab8f99f3925"
+      tag:      "v1.22.2",
+      revision: "5630b081cd25e4eccc7516a652ff956e51676794"
   license "MIT"
-  revision 2
 
   livecheck do
     url :stable
@@ -38,17 +37,26 @@ class Onnxruntime < Formula
 
   # Need newer than stable `eigen` after https://github.com/microsoft/onnxruntime/pull/21492
   # element_wise_ops.cc:708:32: error: no matching member function for call to 'min'
-  #
-  # https://github.com/microsoft/onnxruntime/blob/v#{version}/cmake/deps.txt#L25
   resource "eigen3" do
     url "https://gitlab.com/libeigen/eigen/-/archive/1d8b82b0740839c0de7f1242a3585e3390ff5f33/eigen-1d8b82b0740839c0de7f1242a3585e3390ff5f33.tar.bz2"
+    version "1d8b82b0740839c0de7f1242a3585e3390ff5f33"
     sha256 "37c2385d5b18471d46ac8c971ce9cf6a5a25d30112f5e4a2761a18c968faa202"
+
+    livecheck do
+      url "https://raw.githubusercontent.com/microsoft/onnxruntime/refs/tags/v#{LATEST_VERSION}/cmake/deps.txt"
+      regex(%r{^eigen;.*/eigen[._-](\h+)\.zip}i)
+    end
   end
 
-  # https://github.com/microsoft/onnxruntime/blob/v#{version}/cmake/deps.txt#L51
   resource "pytorch_cpuinfo" do
     url "https://github.com/pytorch/cpuinfo/archive/8a1772a0c5c447df2d18edf33ec4603a8c9c04a6.tar.gz"
+    version "8a1772a0c5c447df2d18edf33ec4603a8c9c04a6"
     sha256 "37bb2fd2d1e87102baea8d131a0c550c4ceff5a12fba61faeb1bff63868155f1"
+
+    livecheck do
+      url "https://raw.githubusercontent.com/microsoft/onnxruntime/refs/tags/v#{LATEST_VERSION}/cmake/deps.txt"
+      regex(%r{^pytorch_cpuinfo;.*/(\h+)\.zip}i)
+    end
   end
 
   def install

@@ -12,13 +12,12 @@ class Inframap < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "045720e46c73c4a8f8398d48d0a66207e62195d8797c7f69a8ac1ab1a3bf7412"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "045720e46c73c4a8f8398d48d0a66207e62195d8797c7f69a8ac1ab1a3bf7412"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "045720e46c73c4a8f8398d48d0a66207e62195d8797c7f69a8ac1ab1a3bf7412"
-    sha256 cellar: :any_skip_relocation, sonoma:        "aa596b7fd67f707f8a838582b00f65c4a195c1051654a2f72c4e78d0f0d968a0"
-    sha256 cellar: :any_skip_relocation, ventura:       "aa596b7fd67f707f8a838582b00f65c4a195c1051654a2f72c4e78d0f0d968a0"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "6621e3619bcb502a7e99fbf8043fac869cf1d03b6fffb09945bf759d721093b7"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "18e6aacb8e602b2c4fd488a1071209c1711ba388fda1f19797665915b6e84c36"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "18e6aacb8e602b2c4fd488a1071209c1711ba388fda1f19797665915b6e84c36"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "18e6aacb8e602b2c4fd488a1071209c1711ba388fda1f19797665915b6e84c36"
+    sha256 cellar: :any_skip_relocation, sonoma:        "95af43179d426a7a6dd382dea950559c3bc479bc00cf7b9bf4865a854a44b57d"
+    sha256 cellar: :any_skip_relocation, ventura:       "95af43179d426a7a6dd382dea950559c3bc479bc00cf7b9bf4865a854a44b57d"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "bf01e9146e3abf82239ed0e2f498916a5eb8ff863099e70c840393adf8423dbf"
   end
 
   depends_on "go" => :build

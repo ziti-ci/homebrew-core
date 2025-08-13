@@ -5,6 +5,15 @@ class Iceberg < Formula
   sha256 "3bf2bb338676161db4896b1748879cc211ea12d9ad9ea5dd845dde12af271249"
   license "Apache-2.0"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "b362e2d7e85e08fa6b8f902d77fc519fc096a08d68d1c8ee68b08993c65e9996"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "b362e2d7e85e08fa6b8f902d77fc519fc096a08d68d1c8ee68b08993c65e9996"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "b362e2d7e85e08fa6b8f902d77fc519fc096a08d68d1c8ee68b08993c65e9996"
+    sha256 cellar: :any_skip_relocation, sonoma:        "410dfe015077c35d134318e84a478cb8836be97000994862e0efba5ecf639d5d"
+    sha256 cellar: :any_skip_relocation, ventura:       "410dfe015077c35d134318e84a478cb8836be97000994862e0efba5ecf639d5d"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "d9a671a01b1a587f7f0eb495d1477f3cf6082a3bd6012a0f23c2de054a04d3b4"
+  end
+
   depends_on "go" => :build
 
   def install

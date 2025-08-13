@@ -3,8 +3,8 @@ class PiecesCli < Formula
 
   desc "Command-line tool for Pieces.app"
   homepage "https://docs.pieces.app/products/cli"
-  url "https://files.pythonhosted.org/packages/bc/e0/f24e5ef6f4fba7e32c9b9473a5fd8ccb8b8dd25e4ec1cfa8cc0983fee698/pieces_cli-1.17.0.tar.gz"
-  sha256 "c684dc62bab00c7689f1c28f7538a30f54a714d17a9e0941ef01d1d77152c658"
+  url "https://files.pythonhosted.org/packages/16/8e/b176c800f3cf6a7578d5bbaf9e2b90015715df62af9610a8e67f9facb717/pieces_cli-1.17.1.tar.gz"
+  sha256 "9b1e7a91d52db370d9d1e886a8d9ff0ca4edcaf10e6baa3a31028ae415b9c969"
   license "MIT"
   head "https://github.com/pieces-app/cli-agent.git", branch: "main"
 

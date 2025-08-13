@@ -13,13 +13,7 @@ class Sf < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "362860a5a9554e45428f790de613a26811fa5a8590768006e24e72cdf3be3121"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "362860a5a9554e45428f790de613a26811fa5a8590768006e24e72cdf3be3121"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "362860a5a9554e45428f790de613a26811fa5a8590768006e24e72cdf3be3121"
-    sha256 cellar: :any_skip_relocation, sonoma:        "b463263ba3af28849bee8840ed8aa4f78031eed22b9102f07b98baed780e8cba"
-    sha256 cellar: :any_skip_relocation, ventura:       "b463263ba3af28849bee8840ed8aa4f78031eed22b9102f07b98baed780e8cba"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "362860a5a9554e45428f790de613a26811fa5a8590768006e24e72cdf3be3121"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "362860a5a9554e45428f790de613a26811fa5a8590768006e24e72cdf3be3121"
+    sha256 cellar: :any_skip_relocation, all: "f0ebfeb64c6dc592f629cbf65213399cf65347784ea81a42f5285089fe8ac241"
   end
 
   depends_on "node"

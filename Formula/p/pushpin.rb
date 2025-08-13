@@ -1,10 +1,9 @@
 class Pushpin < Formula
   desc "Reverse proxy for realtime web services"
   homepage "https://pushpin.org/"
-  url "https://github.com/fastly/pushpin/releases/download/v1.40.1/pushpin-1.40.1.tar.bz2"
-  sha256 "64b6486160ecffdac9d6452463e980433800858cc0877c40736985bf67634044"
+  url "https://github.com/fastly/pushpin/releases/download/v1.41.0/pushpin-1.41.0.tar.bz2"
+  sha256 "1ceef0b8da5229a066906797e47795905f1fe8fb1477edc9d5799720df9943ef"
   license "Apache-2.0"
-  revision 1
   head "https://github.com/fastly/pushpin.git", branch: "main"
 
   bottle do

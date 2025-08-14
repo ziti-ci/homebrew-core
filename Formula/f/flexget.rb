@@ -3,8 +3,8 @@ class Flexget < Formula
 
   desc "Multipurpose automation tool for content"
   homepage "https://www.flexget.com"
-  url "https://github.com/Flexget/Flexget/releases/download/v3.17.7/flexget-3.17.7.tar.gz"
-  sha256 "f29d9b0733959341d8656d04bb49571b739c95fb327ec3b60170f83f069caa2b"
+  url "https://files.pythonhosted.org/packages/b4/cc/22b27b2b61e3a3b8fb03bfb28ac43ad7713f468b470621a25c2e5161cbd1/flexget-3.17.10.tar.gz"
+  sha256 "951c1c6849cac6b8a838724e317b66fecbf51d5f40c44d1e696646e0cda511b2"
   license "MIT"
 
   depends_on "rust" => :build
@@ -353,7 +353,7 @@ class Flexget < Formula
   end
 
   def install
-    virtualenv_install_with_resources without: "pyzstd"
+    venv = virtualenv_install_with_resources without: "pyzstd"
     # We need to build separately to link to our `zstd`.
     resource("pyzstd").stage do
       system_zstd = "--config-settings=--build-option=--dynamic-link-zstd"

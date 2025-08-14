@@ -4,6 +4,7 @@ class Mfem < Formula
   url "https://github.com/mfem/mfem/archive/refs/tags/v4.8.tar.gz"
   sha256 "65472f732d273832c64b2c39460649dd862df674222c71bfa82cf2da76705052"
   license "BSD-3-Clause"
+  revision 1
   head "https://github.com/mfem/mfem.git", branch: "master"
 
   bottle do
@@ -31,6 +32,7 @@ class Mfem < Formula
     inreplace "config/config.mk.in", "@MFEM_HOST_CXX@", ENV.cxx
 
     args = [
+      "-DBUILD_SHARED_LIBS=ON",
       "-DCMAKE_INSTALL_RPATH=#{rpath}",
       "-DMFEM_USE_MPI=YES",
       "-DMFEM_USE_METIS_5=YES",

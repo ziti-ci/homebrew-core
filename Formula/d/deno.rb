@@ -1,8 +1,8 @@
 class Deno < Formula
   desc "Secure runtime for JavaScript and TypeScript"
   homepage "https://deno.com/"
-  url "https://github.com/denoland/deno/releases/download/v2.4.3/deno_src.tar.gz"
-  sha256 "c2644b3204aed0701bba3c6e26907251b2d89ab73873db644b4ef7b43647040b"
+  url "https://github.com/denoland/deno/releases/download/v2.4.4/deno_src.tar.gz"
+  sha256 "5031957355e777ac1ba5b5a4160ba801f693c6dfc77c58d622f6d60422d07be3"
   license "MIT"
   head "https://github.com/denoland/deno.git", branch: "main"
 
@@ -28,7 +28,6 @@ class Deno < Formula
 
   uses_from_macos "python" => :build, since: :catalina
   uses_from_macos "libffi"
-  uses_from_macos "zlib"
 
   on_linux do
     depends_on "glib" => :build
@@ -50,9 +49,6 @@ class Deno < Formula
       s.gsub!(/^rusqlite = { version = "(.+)", features = \["unlock_notify", "bundled", "session"/,
               'rusqlite = { version = "\\1", features = ["unlock_notify", "session"')
     end
-    inreplace "libs/npm_cache/Cargo.toml",
-              'flate2 = { workspace = true, features = ["zlib-ng-compat"] }',
-              "flate2 = { workspace = true }"
 
     ENV["LCMS2_LIB_DIR"] = Formula["little-cms2"].opt_lib
     # env args for building a release build with our python3 and ninja

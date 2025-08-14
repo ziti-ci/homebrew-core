@@ -2,7 +2,7 @@ class GnuChess < Formula
   desc "Chess-playing program"
   homepage "https://www.gnu.org/software/chess/"
   url "https://ftpmirror.gnu.org/gnu/chess/gnuchess-6.2.11.tar.gz"
-  mirror "https://ftp.gnu.org/chess/gnuchess-6.2.11.tar.gz"
+  mirror "https://ftp.gnu.org/gnu/chess/gnuchess-6.2.11.tar.gz"
   sha256 "d81140eea5c69d14b0cfb63816d4b4c9e18fba51f5267de5b1539f468939e9bd"
   license "GPL-3.0-or-later"
 

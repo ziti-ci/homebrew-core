@@ -26,11 +26,8 @@ class Jags < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "e3f035c69478626479915a42deb8a4e329e3eebef4db5ab7f44e7c23dad34958"
   end
 
-  depends_on "gcc" # for gfortran
-
-  on_linux do
-    depends_on "openblas"
-  end
+  depends_on "gcc" => :build # for gfortran
+  depends_on "openblas"
 
   def install
     system "./configure", *std_configure_args

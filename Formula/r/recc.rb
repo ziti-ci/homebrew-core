@@ -8,11 +8,11 @@ class Recc < Formula
   head "https://gitlab.com/BuildGrid/buildbox/buildbox.git", branch: "master"
 
   bottle do
-    sha256 arm64_sequoia: "46903605c464ca6b6dae88ffa8d06471b85ef932dae6688b410f8b0d6c5fd31f"
-    sha256 arm64_sonoma:  "d27bcea8d0a11309177d38251eda15a9210a686222ec8b654e84363390a59689"
-    sha256 sonoma:        "8210f28538d7a78aae8b3aeacb8eed222cd4bee697638e0e1ee7bfc255551d39"
-    sha256 arm64_linux:   "a313cf75d344ecd5bcbdeb18a7b3b55b73b34409522d647de89574122b640865"
-    sha256 x86_64_linux:  "7cb67a78495286552c0bec8b64db4d467d407a01fefb4cfaa0b3a24e402940ac"
+    sha256 arm64_sequoia: "f2eb01d3f4257dbe27dfb6591d4e656992c58f884981e182d2014717dc139d01"
+    sha256 arm64_sonoma:  "30849e2f21e2f3e33608e468c32a341f5421a90222e969a6e21ad92f0b31bdf4"
+    sha256 sonoma:        "aa16376df3e0c7e4d385afa1ecbd09c5d191c58c25c158f29d8d3855b390c6be"
+    sha256 arm64_linux:   "2673023f637d2ed4b67a65a5a3a6027227630785392d8155562a79af236b9740"
+    sha256 x86_64_linux:  "f09fdbdbce6ad0eccfbe1426e68c3f953b0662312e970254c9de7120cd9e118f"
   end
 
   depends_on "cmake" => :build

@@ -6,7 +6,7 @@ class Bash < Formula
 
   stable do
     url "https://ftpmirror.gnu.org/gnu/bash/bash-5.3.tar.gz"
-    mirror "https://ftp.gnu.org/bash/bash-5.3.tar.gz"
+    mirror "https://ftp.gnu.org/gnu/bash/bash-5.3.tar.gz"
     mirror "https://mirrors.kernel.org/gnu/bash/bash-5.3.tar.gz"
     mirror "https://mirrors.ocf.berkeley.edu/gnu/bash/bash-5.3.tar.gz"
     sha256 "0d5cd86965f869a26cf64f4b71be7b96f90a3ba8b3d74e27e8e9d9d5550f31ba"
@@ -29,7 +29,7 @@ class Bash < Formula
     patch_checksum_pairs.each_slice(2) do |p, checksum|
       patch :p0 do
         url "https://ftpmirror.gnu.org/gnu/bash/bash-5.3-patches/bash53-#{p}"
-        mirror "https://ftp.gnu.org/bash/bash-5.3-patches/bash53-#{p}"
+        mirror "https://ftp.gnu.org/gnu/bash/bash-5.3-patches/bash53-#{p}"
         mirror "https://mirrors.kernel.org/gnu/bash/bash-5.3-patches/bash53-#{p}"
         mirror "https://mirrors.ocf.berkeley.edu/gnu/bash/bash-5.3-patches/bash53-#{p}"
         sha256 checksum

@@ -1,8 +1,8 @@
 class Deck < Formula
   desc "Creates slide deck using Markdown and Google Slides"
   homepage "https://github.com/k1LoW/deck"
-  url "https://github.com/k1LoW/deck/archive/refs/tags/v1.13.0.tar.gz"
-  sha256 "4628d49a0bb62c2eb62634584025f021391d873861bab41ab08d7c9c4c5955f1"
+  url "https://github.com/k1LoW/deck/archive/refs/tags/v1.13.1.tar.gz"
+  sha256 "514bb0316989c1d212f3c51998e9a71193a5a5196e22efa74e61dfecebf006c2"
   license "MIT"
   head "https://github.com/k1LoW/deck.git", branch: "main"
 

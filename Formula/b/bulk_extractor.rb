@@ -28,15 +28,22 @@ class BulkExtractor < Formula
   end
 
   depends_on "pkgconf" => :build
-  depends_on "openssl@3"
-  depends_on "re2"
+  # Not actually used at runtime, but required at build-time
+  # due to a stray `RE2::` reference.
+  depends_on "re2" => :build
 
   uses_from_macos "flex" => :build
   uses_from_macos "expat"
   uses_from_macos "ncurses"
   uses_from_macos "zlib"
 
+  on_linux do
+    depends_on "openssl@3" # uses CommonCrypto on macOS
+  end
+
   def install
+    # Avoid overlinkage with abseil and re2.
+    ENV.append "LDFLAGS", "-Wl,-dead_strip_dylibs" if OS.mac?
     system "./bootstrap.sh" if build.head?
     # Disable RAR to avoid problematic UnRAR license
     system "./configure", *std_configure_args, "--disable-rar", "--disable-silent-rules"

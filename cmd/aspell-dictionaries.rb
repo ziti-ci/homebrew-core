@@ -18,7 +18,7 @@ module Homebrew
 
       sig { override.void }
       def run
-        dictionary_url = "https://ftpmirror.gnu.org/aspell/dict"
+        dictionary_url = "https://ftpmirror.gnu.org/gnu/aspell/dict"
         dictionary_mirror = "https://ftp.gnu.org/gnu/aspell/dict"
         languages = {}
 

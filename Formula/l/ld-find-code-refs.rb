@@ -7,12 +7,12 @@ class LdFindCodeRefs < Formula
   head "https://github.com/launchdarkly/ld-find-code-refs.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "1a042bbee68be9ce54f73a66ab62347c5188b29da378751c69b36c754800859a"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "1a042bbee68be9ce54f73a66ab62347c5188b29da378751c69b36c754800859a"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "1a042bbee68be9ce54f73a66ab62347c5188b29da378751c69b36c754800859a"
-    sha256 cellar: :any_skip_relocation, sonoma:        "1e1fbd6b0122cb078632226abecd6ef639b967661556e9014d00c06bfa76b6f2"
-    sha256 cellar: :any_skip_relocation, ventura:       "1e1fbd6b0122cb078632226abecd6ef639b967661556e9014d00c06bfa76b6f2"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "b8cb73e822ef55794009be3aa1a4cbc1921b634b6abc493c9b2fcd54b31bc274"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "b8fe7f8ffeef61b1ca2160f60d7b5dc13ae55482dff0c7cdf5adcfa0ec547e8d"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "b8fe7f8ffeef61b1ca2160f60d7b5dc13ae55482dff0c7cdf5adcfa0ec547e8d"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "b8fe7f8ffeef61b1ca2160f60d7b5dc13ae55482dff0c7cdf5adcfa0ec547e8d"
+    sha256 cellar: :any_skip_relocation, sonoma:        "f2445c7dfdaf87d5075d6ed499179629095dc2445ec4eba04a7b18465179c95f"
+    sha256 cellar: :any_skip_relocation, ventura:       "f2445c7dfdaf87d5075d6ed499179629095dc2445ec4eba04a7b18465179c95f"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "a33733870e77a06fbd6e96076ea78ac84a30c2549a3f6fb6694705911abe1e65"
   end
 
   depends_on "go" => :build

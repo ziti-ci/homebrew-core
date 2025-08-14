@@ -12,6 +12,7 @@ class Prek < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura: "d7eec63203cc848ac9a94de7841be75c133af0a1857b3934dfc9f4aa7c0ba26e"
     sha256 cellar: :any_skip_relocation, sonoma:        "c26492229f964aa1cfe8d6f1ee4d67c352c2e1eb11fa2e0b53cec041db1028f4"
     sha256 cellar: :any_skip_relocation, ventura:       "60cb5aa3bf3006e8b4281e69473e3d65d6b6a0cd65a8b8030d31696100371d20"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "8c3cb50e08f9f3e2cc1ce12d0fe1cd89c84c0a581c87cfdbe578ffcb6b31271f"
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "6434f359683d7435e1c7e0f5efd096e2658fc6c836d9c555763c5ac7e1af9f47"
   end
 

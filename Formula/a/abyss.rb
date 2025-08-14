@@ -33,32 +33,44 @@ class Abyss < Formula
   depends_on "meson" => :build # For btllib
   depends_on "ninja" => :build # For btllib
   depends_on "python@3.13" => :build # For btllib
-  depends_on "gcc"
   depends_on "open-mpi"
 
   uses_from_macos "sqlite"
 
-  fails_with :clang # no OpenMP support
+  on_macos do
+    depends_on "libomp"
+  end
 
   resource "btllib" do
     url "https://github.com/bcgsc/btllib/releases/download/v1.7.3/btllib-1.7.3.tar.gz"
     sha256 "31e7124e1cda9eea6f27b654258a7f8d3dea83c828f0b2e8e847faf1c5296aa3"
+
+    # Apply FreeBSD patch to fix build with newer Clang, https://github.com/simongog/sdsl-lite/issues/462
+    patch :p0 do
+      url "https://raw.githubusercontent.com/freebsd/freebsd-ports/af74f60a871e4a5aa7aea787fc235a2cb760e764/devel/sdsl-lite/files/patch-include_sdsl_louds__tree.hpp"
+      sha256 "84aef67058947044c40032ac39d9b6d1b8a285c581f660d565cd23aaa4beade7"
+      directory "subprojects/sdsl-lite"
+    end
   end
 
   def install
-    python3 = "python3.13"
-
-    (buildpath/"btllib").install resource("btllib")
-    cd "btllib" do
-      inreplace "compile", '"python3-config"', "\"#{python3}-config\""
-      system "./compile"
+    resource("btllib").stage do
+      with_env(CMAKE_POLICY_VERSION_MINIMUM: "3.5") do
+        args = %w[-Db_ndebug=true -Db_coverage=false]
+        system "meson", "setup", "build", *args, *std_meson_args.map { |s| s.sub prefix, buildpath/"btllib" }
+        system "meson", "compile", "-C", "build", "--verbose"
+        system "meson", "install", "-C", "build"
+      end
     end
+
+    # Help link to libomp on macOS
+    ENV["ac_cv_prog_cxx_openmp"] = "-Xpreprocessor -fopenmp -lomp" if OS.mac?
 
     system "./autogen.sh" if build.head?
     system "./configure", "--disable-silent-rules",
                           "--enable-maxk=128",
                           "--with-boost=#{Formula["boost"].include}",
-                          "--with-btllib=#{buildpath}/btllib/install",
+                          "--with-btllib=#{buildpath}/btllib",
                           "--with-mpi=#{Formula["open-mpi"].prefix}",
                           "--with-sparsehash=#{Formula["google-sparsehash"].prefix}",
                           *std_configure_args

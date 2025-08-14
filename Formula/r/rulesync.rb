@@ -6,7 +6,7 @@ class Rulesync < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "e1f36b8947207aefb22fcd5efcde42f4cb25662a6e688b85ab072ce2d593b5ff"
+    sha256 cellar: :any_skip_relocation, all: "18145c64b3f2d92df9a89c5304a80a2b0c4db18a28d5a4c2e3b200b8f812cdad"
   end
 
   depends_on "node"

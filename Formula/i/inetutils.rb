@@ -2,7 +2,7 @@ class Inetutils < Formula
   desc "GNU utilities for networking"
   homepage "https://www.gnu.org/software/inetutils/"
   url "https://ftpmirror.gnu.org/gnu/inetutils/inetutils-2.6.tar.xz"
-  mirror "https://ftp.gnu.org/inetutils/inetutils-2.6.tar.xz"
+  mirror "https://ftp.gnu.org/gnu/inetutils/inetutils-2.6.tar.xz"
   sha256 "68bedbfeaf73f7d86be2a7d99bcfbd4093d829f52770893919ae174c0b2357ca"
   license "GPL-3.0-or-later"
 

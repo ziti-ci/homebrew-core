@@ -8,6 +8,7 @@ class Flexget < Formula
   license "MIT"
 
   depends_on "rust" => :build
+  depends_on "certifi"
   depends_on "libyaml"
   depends_on "python@3.13"
   depends_on "zstd"

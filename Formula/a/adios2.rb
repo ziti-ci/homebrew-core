@@ -23,7 +23,8 @@ class Adios2 < Formula
 
   depends_on "cmake" => :build
   depends_on "nlohmann-json" => :build
-  depends_on "c-blosc"
+  depends_on "pybind11" => :build
+  depends_on "c-blosc2"
   depends_on "gcc" # for gfortran
   depends_on "libfabric"
   depends_on "libpng"
@@ -32,7 +33,6 @@ class Adios2 < Formula
   depends_on "numpy"
   depends_on "open-mpi"
   depends_on "pugixml"
-  depends_on "pybind11"
   depends_on "python@3.13"
   depends_on "sqlite"
   depends_on "yaml-cpp"
@@ -43,6 +43,8 @@ class Adios2 < Formula
 
   on_macos do
     depends_on "llvm" => :build if DevelopmentTools.clang_build_version == 1400
+    depends_on "lz4"
+    depends_on "zstd"
   end
 
   # clang: error: unable to execute command: Segmentation fault: 11
@@ -64,7 +66,7 @@ class Adios2 < Formula
     end
 
     args = %W[
-      -DADIOS2_USE_Blosc=ON
+      -DADIOS2_USE_Blosc2=ON
       -DADIOS2_USE_BZip2=ON
       -DADIOS2_USE_DataSpaces=OFF
       -DADIOS2_USE_Fortran=ON

@@ -1,12 +1,10 @@
 class Highway < Formula
   desc "Performance-portable, length-agnostic SIMD with runtime dispatch"
   homepage "https://github.com/google/highway"
-  url "https://github.com/google/highway/archive/refs/tags/1.2.0.tar.gz"
-  sha256 "7e0be78b8318e8bdbf6fa545d2ecb4c90f947df03f7aadc42c1967f019e63343"
+  url "https://github.com/google/highway/archive/refs/tags/1.3.0.tar.gz"
+  sha256 "07b3c1ba2c1096878a85a31a5b9b3757427af963b1141ca904db2f9f4afe0bc2"
   license "Apache-2.0"
   head "https://github.com/google/highway.git", branch: "master"
-
-  no_autobump! because: :requires_manual_review
 
   bottle do
     sha256 cellar: :any,                 arm64_sequoia:  "8a3327629482279fdff46b5bf3324cb6379a975b271d1ecc4a901a3cdb7e7f5a"
@@ -24,10 +22,6 @@ class Highway < Formula
 
   # These used to be bundled with `jpeg-xl`.
   link_overwrite "include/hwy/*", "lib/pkgconfig/libhwy*"
-
-  # Avoid compiling ARM SVE on Apple Silicon
-  # Issue ref: https://github.com/google/highway/issues/2317
-  patch :DATA
 
   def install
     ENV.runtime_cpu_detection
@@ -48,23 +42,3 @@ class Highway < Formula
     system "./a.out"
   end
 end
-
-__END__
-diff --git a/hwy/detect_targets.h b/hwy/detect_targets.h
-index a8d4a13f..e0ffb33a 100644
---- a/hwy/detect_targets.h
-+++ b/hwy/detect_targets.h
-@@ -223,8 +223,12 @@
- #endif
-
- // SVE[2] require recent clang or gcc versions.
-+//
-+// SVE is not supported on Apple arm64 CPUs and also crashes the compiler:
-+// https://github.com/llvm/llvm-project/issues/97198
- #if (HWY_COMPILER_CLANG && HWY_COMPILER_CLANG < 1100) || \
--    (HWY_COMPILER_GCC_ACTUAL && HWY_COMPILER_GCC_ACTUAL < 1000)
-+    (HWY_COMPILER_GCC_ACTUAL && HWY_COMPILER_GCC_ACTUAL < 1000) || \
-+    (HWY_OS_APPLE && HWY_ARCH_ARM_A64)
- #define HWY_BROKEN_SVE (HWY_SVE | HWY_SVE2 | HWY_SVE_256 | HWY_SVE2_128)
- #else
- #define HWY_BROKEN_SVE 0

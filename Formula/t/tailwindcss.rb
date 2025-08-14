@@ -15,13 +15,13 @@ class Tailwindcss < Formula
   end
 
   bottle do
-    sha256                               arm64_sequoia: "2ccebd4786671ae09609ae61072d792ea9fb4f94540af032b2cf36e53de42d08"
-    sha256                               arm64_sonoma:  "81b52e5df136097b7cccb4c3d65cfcc17542dbece003c6aaa62d84102c09d4c0"
-    sha256                               arm64_ventura: "9f1770823cf7bd9e692c795bdfab79c0ed4639dfa0987a60b1795345895d8d3c"
-    sha256                               sonoma:        "43017fc345cd06e72ad007a7ddfbaf7b4d82721c47ba0efdd83360307549f84a"
-    sha256                               ventura:       "19c3bbcd7e9c85bfc9670e756c1e58a0586c2cbcc4825439f04080efa99586f3"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "f64042694901449e5baef9e43fc824a47d0a5b7311db4478470c4127c20b5de2"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "bfe605ba512197f80afff1110f7e8e17b79d5592b0aa25494e06f9eafafa33fa"
+    sha256                               arm64_sequoia: "9fbba2948aba3f848dd2cea965f272c8e71653631c1fdf827c3c6d447cdee454"
+    sha256                               arm64_sonoma:  "591020802e582a826d3e956fc75ea6f8d77e746548ff5122b0b496fd7eafc7d0"
+    sha256                               arm64_ventura: "c88946e3f70df1c6178c4e1e62827bbc67b4013276bd8a9855434fc78157bba6"
+    sha256                               sonoma:        "711cb09e023c1b6faca9a86e94387d0be4a1e999689de086ea3e1a06caa78008"
+    sha256                               ventura:       "d09d8cfa501fe51702db1a7485e746551dac973776a33872564e45b3e58fc648"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "850919ea7e63e8af693b9b4319e185629f5525e5ae0e217426c2f5262e21026c"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "286c8f6b3a2dce090c2d09e5690ddbb3973ace6a46918e5dcc59347b45f41275"
   end
 
   depends_on "node"

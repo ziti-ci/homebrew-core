@@ -1,10 +1,10 @@
 class Tailwindcss < Formula
   desc "Utility-first CSS framework"
   homepage "https://tailwindcss.com"
-  url "https://registry.npmjs.org/@tailwindcss/cli/-/cli-4.1.11.tgz"
-  sha256 "d26ab44103a28804e1d1f4c280d8abaf6db7234c8d9eb940ec7dc435c5ad80df"
+  url "https://registry.npmjs.org/@tailwindcss/cli/-/cli-4.1.12.tgz"
+  sha256 "e77698dbda13739e77fdd9eacf1b82a7939594d5b377830c529cda60b6e31682"
   license "MIT"
-  head "https://github.com/tailwindlabs/tailwindcss.git", branch: "next"
+  head "https://github.com/tailwindlabs/tailwindcss.git", branch: "main"
 
   # There can be a notable gap between when a version is added to npm and the
   # GitHub release is created, so we check the "latest" release on GitHub

@@ -16,13 +16,7 @@ class Getmail6 < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "aeba8c126c3373e1e43aac701ea953b1ab0fdd487693bec81b0aaf069cb408a2"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "aeba8c126c3373e1e43aac701ea953b1ab0fdd487693bec81b0aaf069cb408a2"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "aeba8c126c3373e1e43aac701ea953b1ab0fdd487693bec81b0aaf069cb408a2"
-    sha256 cellar: :any_skip_relocation, sonoma:        "8193735e7a29f0906ea8bfa88062a69dd29397fab794c7a0aba470028a3be6a2"
-    sha256 cellar: :any_skip_relocation, ventura:       "8193735e7a29f0906ea8bfa88062a69dd29397fab794c7a0aba470028a3be6a2"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "aeba8c126c3373e1e43aac701ea953b1ab0fdd487693bec81b0aaf069cb408a2"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "aeba8c126c3373e1e43aac701ea953b1ab0fdd487693bec81b0aaf069cb408a2"
+    sha256 cellar: :any_skip_relocation, all: "96821737cd37cf93e0d238c72623640537b8cee482f1774bc265863bbef048db"
   end
 
   uses_from_macos "python", since: :catalina

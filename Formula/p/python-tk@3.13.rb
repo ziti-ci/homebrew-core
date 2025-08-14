@@ -1,15 +1,13 @@
 class PythonTkAT313 < Formula
   desc "Python interface to Tcl/Tk"
   homepage "https://www.python.org/"
-  url "https://www.python.org/ftp/python/3.13.6/Python-3.13.6.tgz"
-  sha256 "6cf50672cc03928488817d45af24bc927a48f910fe7893d6f388130e59ba98d7"
+  url "https://www.python.org/ftp/python/3.13.7/Python-3.13.7.tgz"
+  sha256 "6c9d80839cfa20024f34d9a6dd31ae2a9cd97ff5e980e969209746037a5153b2"
   license "Python-2.0"
 
   livecheck do
     formula "python@3.13"
   end
-
-  no_autobump! because: :requires_manual_review
 
   bottle do
     sha256 cellar: :any, arm64_sequoia: "0ea5215d6b383c15a052e1e60736d1c7a2969f6567510a4015d3ef4353a99f91"

@@ -1,8 +1,8 @@
 class Sendme < Formula
   desc "Tool to send files and directories, based on iroh"
   homepage "https://iroh.computer/sendme"
-  url "https://github.com/n0-computer/sendme/archive/refs/tags/v0.26.0.tar.gz"
-  sha256 "d41bd166e08b611d993e4bdf01c66610406fe93338783fe9a310eaf726fc337f"
+  url "https://github.com/n0-computer/sendme/archive/refs/tags/v0.27.0.tar.gz"
+  sha256 "1afbc67d504ba595f5b1af42ced07dc64ba3db28addc00ff118a695b4619caf5"
   license "MIT"
   head "https://github.com/n0-computer/sendme.git", branch: "main"
 
@@ -28,7 +28,7 @@ class Sendme < Formula
     begin
       output_log = testpath/"output.log"
       pid = spawn bin/"sendme", "send", bin/"sendme", [:out, :err] => output_log.to_s
-      sleep 2
+      sleep 4
       assert_match "imported file #{bin}/sendme", output_log.read
       assert_match "to get this data, use\nsendme receive", output_log.read
     ensure

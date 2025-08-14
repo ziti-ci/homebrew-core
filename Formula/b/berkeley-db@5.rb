@@ -33,7 +33,7 @@ class BerkeleyDbAT5 < Formula
     on_linux do
       on_arm do
         url "https://ftpmirror.gnu.org/gnu/automake/automake-1.16.5.tar.xz"
-        mirror "https://ftp.gnu.org/automake/automake-1.16.5.tar.xz"
+        mirror "https://ftp.gnu.org/gnu/automake/automake-1.16.5.tar.xz"
         sha256 "f01d58cd6d9d77fbdca9eb4bbd5ead1988228fdb73d6f7a201f5f8d6b118b469"
       end
     end

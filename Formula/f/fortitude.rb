@@ -1,8 +1,8 @@
 class Fortitude < Formula
   desc "Fortran linter"
   homepage "https://fortitude.readthedocs.io/en/stable/"
-  url "https://github.com/PlasmaFAIR/fortitude/archive/refs/tags/v0.7.3.tar.gz"
-  sha256 "caf5148a20a433e8031fbb875465648ca7a918fd975dd704249e41d7a98bafe6"
+  url "https://github.com/PlasmaFAIR/fortitude/archive/refs/tags/v0.7.4.tar.gz"
+  sha256 "7f13f5f70ee5620a07019fb70dd2122892a085ac52f4237a64edbf30b9faf042"
   license "MIT"
   head "https://github.com/PlasmaFAIR/fortitude.git", branch: "main"
 
@@ -19,7 +19,7 @@ class Fortitude < Formula
   depends_on "rust" => :build
 
   def install
-    system "cargo", "install", *std_cargo_args(path: "fortitude")
+    system "cargo", "install", *std_cargo_args(path: "crates/fortitude")
   end
 
   test do

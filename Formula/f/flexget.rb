@@ -13,6 +13,7 @@ class Flexget < Formula
     sha256 cellar: :any,                 arm64_ventura: "9e9bbf8c69964f314a443e41b9589a6c2c8882b90b3675be4cbd590dc0982edc"
     sha256 cellar: :any,                 sonoma:        "c5a95b0307ff01ea9a50b79778416785314d3c74f37cf6bb971046243a1990e3"
     sha256 cellar: :any,                 ventura:       "6f7105a643d410b2d56299638d0f36bc1e321ed7b51e267318900cf4ff75523b"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "fb3d533ea6ab4a71554d1e5fc804e78eafd2867320f0f6ba2962a3730d37a43f"
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "e0d58f9baa71f012e9f98d214e399cb364706499a64c632390741662751dee47"
   end
 

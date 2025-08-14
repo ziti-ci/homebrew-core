@@ -7,6 +7,15 @@ class Flexget < Formula
   sha256 "951c1c6849cac6b8a838724e317b66fecbf51d5f40c44d1e696646e0cda511b2"
   license "MIT"
 
+  bottle do
+    sha256 cellar: :any,                 arm64_sequoia: "68383985dd09129c779b26e803a551f918d5c1e84155f8d5cc148dd2e441ccf0"
+    sha256 cellar: :any,                 arm64_sonoma:  "cb6b2a7dc1fde40bf6edef1620cbd1d87ab138cff04084895e4055185d810f22"
+    sha256 cellar: :any,                 arm64_ventura: "9e9bbf8c69964f314a443e41b9589a6c2c8882b90b3675be4cbd590dc0982edc"
+    sha256 cellar: :any,                 sonoma:        "c5a95b0307ff01ea9a50b79778416785314d3c74f37cf6bb971046243a1990e3"
+    sha256 cellar: :any,                 ventura:       "6f7105a643d410b2d56299638d0f36bc1e321ed7b51e267318900cf4ff75523b"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "e0d58f9baa71f012e9f98d214e399cb364706499a64c632390741662751dee47"
+  end
+
   depends_on "rust" => :build
   depends_on "certifi"
   depends_on "libyaml"

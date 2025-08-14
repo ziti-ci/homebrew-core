@@ -1,8 +1,8 @@
 class Emscripten < Formula
   desc "LLVM bytecode to JavaScript compiler"
   homepage "https://emscripten.org/"
-  url "https://github.com/emscripten-core/emscripten/archive/refs/tags/4.0.12.tar.gz"
-  sha256 "a177867ccc704e466683e3a72e43be197d6ba741cf775f9302e5cbff304b34de"
+  url "https://github.com/emscripten-core/emscripten/archive/refs/tags/4.0.13.tar.gz"
+  sha256 "05501a883b12379bd51bf824ddde1dbb457cb270bc0dd02520377e7b636a30f2"
   license all_of: [
     "Apache-2.0", # binaryen
     "Apache-2.0" => { with: "LLVM-exception" }, # llvm
@@ -62,9 +62,9 @@ class Emscripten < Formula
   # https://chromium.googlesource.com/emscripten-releases/+/<commit>/DEPS
   # Then use the listed binaryen_revision for the revision below.
   resource "binaryen" do
-    url "https://github.com/WebAssembly/binaryen/archive/fc6a7977cccea66c7d78f3d86eb0cdac9f37cbdb.tar.gz"
-    version "fc6a7977cccea66c7d78f3d86eb0cdac9f37cbdb"
-    sha256 "ce3d9faa3dcfd09b7579af111c42444aa9e5f81e988a2efe6dce18b69af0aa87"
+    url "https://github.com/WebAssembly/binaryen/archive/4d9f6f5c240c54fb2d3a0fea5545c8528569f845.tar.gz"
+    version "4d9f6f5c240c54fb2d3a0fea5545c8528569f845"
+    sha256 "40a5706d9961bbcb9fc1ce82cef7783014f9aadd9496236e8478dc29928cd2a0"
 
     livecheck do
       url "https://raw.githubusercontent.com/emscripten-core/emsdk/refs/tags/#{LATEST_VERSION}/emscripten-releases-tags.json"
@@ -88,9 +88,9 @@ class Emscripten < Formula
   # See binaryen resource above for instructions on how to update this.
   # Then use the listed llvm_project_revision for the tarball below.
   resource "llvm" do
-    url "https://github.com/llvm/llvm-project/archive/ceb2b9c141903c16d76e0b3a0cbeb0e9f3c68d5c.tar.gz"
-    version "ceb2b9c141903c16d76e0b3a0cbeb0e9f3c68d5c"
-    sha256 "e5e8a051635ba5c5e2864da805965c9bcd783acd6de835b039dbdecd83f87fcd"
+    url "https://github.com/llvm/llvm-project/archive/177f27d22092cb64e871e6cd2f8981d24e823186.tar.gz"
+    version "177f27d22092cb64e871e6cd2f8981d24e823186"
+    sha256 "5768a7066c7c45841d9273568d21884d7d4b8d4402abccd5b1f84e57459bb157"
 
     livecheck do
       url "https://raw.githubusercontent.com/emscripten-core/emsdk/refs/tags/#{LATEST_VERSION}/emscripten-releases-tags.json"
@@ -230,6 +230,12 @@ class Emscripten < Formula
 
     emscripts.each do |emscript|
       (bin/emscript).write_env_script libexec/emscript, emscript_env
+
+      next if emscript.extname != ".py"
+      next if emscripts.include?(emscript.basename(".py"))
+
+      bin.install_symlink emscript => emscript.basename(".py").to_s
+      libexec.install_symlink emscript => emscript.basename(".py").to_s
     end
 
     # Replace universal binaries with their native slices

@@ -1,8 +1,8 @@
 class Crossplane < Formula
   desc "Build control planes without needing to write code"
   homepage "https://github.com/crossplane/crossplane"
-  url "https://github.com/crossplane/crossplane/archive/refs/tags/v1.20.1.tar.gz"
-  sha256 "57d471912b89b812d85f8f04dfddb545610cf3c8eb53263826678bcd60200f6c"
+  url "https://github.com/crossplane/crossplane/archive/refs/tags/v2.0.2.tar.gz"
+  sha256 "dcdd06b770a6b697c8b9ba25ea7a96e4c8dd1fd4938a659ba49561f027cb38f7"
   license "Apache-2.0"
   head "https://github.com/crossplane/crossplane.git", branch: "main"
 
@@ -23,43 +23,34 @@ class Crossplane < Formula
   depends_on "go" => :build
 
   def install
-    system "go", "build", *std_go_args(ldflags: "-s -w -X github.com/crossplane/crossplane/internal/version.version=v#{version}"), "./cmd/crank"
+    ldflags = %W[
+      -s -w
+      -X github.com/crossplane/crossplane/v#{version.major}/internal/version.version=v#{version}
+    ]
+    system "go", "build", *std_go_args(ldflags:), "./cmd/crank"
   end
 
   test do
     assert_match "Client Version: v#{version}", shell_output("#{bin}/crossplane version --client")
 
-    (testpath/"controllerconfig.yaml").write <<~YAML
-      apiVersion: pkg.crossplane.io/v1alpha1
-      kind: ControllerConfig
+    (testpath/"composition.yaml").write <<~YAML
+      apiVersion: apiextensions.crossplane.io/v1
+      kind: Composition
       metadata:
-       name: irsa
+        name: example
       spec:
-       args:
-         - --enable-external-secret-stores
+        compositeTypeRef:
+          apiVersion: example.org/v1alpha1
+          kind: XExample
+        mode: Pipeline
+        pipeline:
+          - step: example
+            functionRef:
+              name: example-function
     YAML
-    expected_output = <<~YAML
-      apiVersion: pkg.crossplane.io/v1beta1
-      kind: DeploymentRuntimeConfig
-      metadata:
-        name: irsa
-      spec:
-        deploymentTemplate:
-          spec:
-            selector: {}
-            strategy: {}
-            template:
-              metadata:
-              spec:
-                containers:
-                - args:
-                  - --enable-external-secret-stores
-                  name: package-runtime
-                  resources: {}
-    YAML
-    system bin/"crossplane", "beta", "convert", "deployment-runtime", "controllerconfig.yaml", "-o",
-"deploymentruntimeconfig.yaml"
-    inreplace "deploymentruntimeconfig.yaml", /^\s+creationTimestamp.+$\n/, ""
-    assert_equal expected_output, File.read("deploymentruntimeconfig.yaml")
+
+    output = shell_output("#{bin}/crossplane beta convert composition-environment " \
+                          "composition.yaml -o converted.yaml 2>&1")
+    assert_match "No changes needed", output
   end
 end

@@ -20,14 +20,10 @@ class Kahip < Formula
   depends_on "open-mpi"
 
   on_macos do
-    depends_on "gcc"
+    depends_on "libomp"
   end
 
   conflicts_with "mcp-toolbox", because: "both install `toolbox` binaries"
-
-  fails_with :clang do
-    cause "needs OpenMP support"
-  end
 
   def install
     system "cmake", "-S", ".", "-B", "build", *std_cmake_args

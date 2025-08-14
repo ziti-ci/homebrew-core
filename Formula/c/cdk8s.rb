@@ -6,13 +6,7 @@ class Cdk8s < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "f170b6b1f77b523d1f7ed655255bd079a6046a2cde8bb24ffd519c38796c43ec"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "f170b6b1f77b523d1f7ed655255bd079a6046a2cde8bb24ffd519c38796c43ec"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "f170b6b1f77b523d1f7ed655255bd079a6046a2cde8bb24ffd519c38796c43ec"
-    sha256 cellar: :any_skip_relocation, sonoma:        "db6bc5766042ad76d841ddd64b8d664c1e976c9d54f12695092d9fb4a433c2b5"
-    sha256 cellar: :any_skip_relocation, ventura:       "db6bc5766042ad76d841ddd64b8d664c1e976c9d54f12695092d9fb4a433c2b5"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "f170b6b1f77b523d1f7ed655255bd079a6046a2cde8bb24ffd519c38796c43ec"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "f170b6b1f77b523d1f7ed655255bd079a6046a2cde8bb24ffd519c38796c43ec"
+    sha256 cellar: :any_skip_relocation, all: "7b1a64b834ebc56caa244743d589c29ff9a7847105c1c680194ccc400ca4c36b"
   end
 
   depends_on "node"

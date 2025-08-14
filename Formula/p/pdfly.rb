@@ -9,13 +9,13 @@ class Pdfly < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any,                 arm64_sequoia: "7e91da36531c3b7076bcffd1dde7aba56d94e8c11b13447fe1d40496b7e498b6"
-    sha256 cellar: :any,                 arm64_sonoma:  "26394b3ed577a21919b60a24c74c983e4480564b85ec159dbb0b0224599737b1"
-    sha256 cellar: :any,                 arm64_ventura: "09f6c3a13a4e014c9c588cab0cae45322d271214b6aec592a2321b31c45074ef"
-    sha256 cellar: :any,                 sonoma:        "f6facb62383357c88042f90b1dbe8a8fe82b48b00568dc851d16708c26928f1f"
-    sha256 cellar: :any,                 ventura:       "e58d87bc2e341ca79f8b965d3610ee8e8b895517e91b4ca16397d65ad0d0a814"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "f5f900e8fdd5dfdd164461a48597936485983ef42fedd0c8ae33634f4f77a480"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "7a38bab6d6d1cdec358d0ec1caa52fab83d4bbae465e0d5b133636f4636ebd64"
+    sha256 cellar: :any,                 arm64_sequoia: "7871e53768cb28d79bb9f725f60720c6a45c3e7f7299f905b1260bd235b10347"
+    sha256 cellar: :any,                 arm64_sonoma:  "3e8999f7d191f8944e6ccf4f22316892586a2950bfb1fa2cecd8f91ae39be87e"
+    sha256 cellar: :any,                 arm64_ventura: "f4cb2815f77a1f362ece58e4134e080b4c1134d3f6ac8a36c224f69a07ea2d58"
+    sha256 cellar: :any,                 sonoma:        "ccedec9d5f1cd7144b43baa1a6d82ea6e01a7cab3785b7c623c76b8530b51a17"
+    sha256 cellar: :any,                 ventura:       "5a8d73c5a1dc09accb8f826bb1788da565cb6570791806facac0392553c4a52e"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "0950841788728f6ffb7ea27afcca68340b28145d324723dd674aeedc05680278"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "0534d2476c0462fc42ed85f8c7668ecf2cf575ddc553cfe6bd451d5fa370a3f9"
   end
 
   depends_on "rust" => :build # for pydantic-core

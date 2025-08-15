@@ -1,8 +1,8 @@
 class Latexindent < Formula
   desc "Add indentation to LaTeX files"
   homepage "https://latexindentpl.readthedocs.io"
-  url "https://github.com/cmhughes/latexindent.pl/archive/refs/tags/V3.24.6.tar.gz"
-  sha256 "1b0ff3b3a97c2deaba7aac9e7c2991b94eecc33a69f6d8cd70470a1be55ba97e"
+  url "https://github.com/cmhughes/latexindent.pl/archive/refs/tags/V3.24.7.tar.gz"
+  sha256 "d60fb91050a30e1c0d94362c1c304c4e4fc37862b7058ddd024e5d305862546b"
   license "GPL-3.0-or-later"
 
   bottle do
@@ -125,8 +125,8 @@ class Latexindent < Formula
   end
 
   resource "Specio" do
-    url "https://cpan.metacpan.org/authors/id/D/DR/DROLSKY/Specio-0.51.tar.gz"
-    sha256 "505f5de28bee55545b9ec0c45c1d5e4ae568d4f5dbb5e8eabe9d980cb9b68f93"
+    url "https://cpan.metacpan.org/authors/id/D/DR/DROLSKY/Specio-0.52.tar.gz"
+    sha256 "aa770a8f5f61af37cd34b81b6ea8039e431b0e3b070f251617024abacdfadbdc"
   end
 
   resource "Sub::Exporter::Progressive" do

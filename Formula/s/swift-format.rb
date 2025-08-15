@@ -40,6 +40,7 @@ class SwiftFormat < Formula
     system "swift", "build", *args, "-c", "release", "--product", "swift-format"
     bin.install ".build/release/swift-format"
     doc.install "Documentation/Configuration.md"
+    generate_completions_from_executable(bin/"swift-format", "--generate-completion-script")
   end
 
   test do

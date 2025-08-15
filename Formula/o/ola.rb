@@ -29,13 +29,12 @@ class Ola < Formula
   no_autobump! because: :requires_manual_review
 
   bottle do
-    sha256                               arm64_sequoia: "6d4182b55d3ec40ac585f082515e7ee1125e42acbc6902e3ab1d15c01721b465"
-    sha256                               arm64_sonoma:  "9b45e675b229a1443b89f643533a07aaf3f9674062bbf6115ba899d1b5388b49"
-    sha256                               arm64_ventura: "98db8a67a41af2686b691188404ac2c3ba49c1e63f20c929f2c37048a63aea12"
-    sha256                               sonoma:        "a548628c89e92f9d84659e771a35e745b44cab0713a49a0885f3a56ed075666c"
-    sha256                               ventura:       "b87bb7a4367d5859724b59883b8912bfeaa05317813dbedba687ba7c2b15d48b"
-    sha256                               arm64_linux:   "2ec0f72ea286942021bc89f5dd8d91bc7cf40efb18fdd0c917daf51fd31a69f5"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "74cc94c3489eafd39fe993859da64ea188d1f1d40532fe044c75fe1f27e7ed27"
+    sha256 arm64_sonoma:  "ebac56b5aae140ab7f9eed2b35f26ff41e9bafa74bfd4290e7d04c44669e3141"
+    sha256 arm64_ventura: "3c41eb58067aa655a87be1e780279cfc60dbaa04fd893dca467d1ea0aea59cf8"
+    sha256 sonoma:        "e014ac73d1d8f81e589a853a2bb19ceaed924763fa826585e18546d116abb74c"
+    sha256 ventura:       "7189cec61a6d03f8195bbd2632d0c4bb3ce84f8a4cb49d2d6ec08be382526a5d"
+    sha256 arm64_linux:   "a10b42be37d5cd1fdab520be8fd58c3f5db9fb72eb7569c495bbf77698a5549a"
+    sha256 x86_64_linux:  "a392f5b2a76a4f0d5be2d3de9cefa2e16c5c53c3c769830f753914e3a596f4a0"
   end
 
   head do

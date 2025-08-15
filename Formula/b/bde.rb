@@ -1,8 +1,8 @@
 class Bde < Formula
   desc "Basic Development Environment: foundational C++ libraries used at Bloomberg"
   homepage "https://github.com/bloomberg/bde"
-  url "https://github.com/bloomberg/bde/archive/refs/tags/4.27.0.0.tar.gz"
-  sha256 "93d8ebde23c5cabe43add6b907195588d1bd614c76d77830a44e16ec13e6413b"
+  url "https://github.com/bloomberg/bde/archive/refs/tags/4.28.0.0.tar.gz"
+  sha256 "842b1ff2b5677886436cc537fd9ce2b68eb867be95024ee9a0f8ef1e1be78dfc"
   license "Apache-2.0"
 
   livecheck do
@@ -30,7 +30,7 @@ class Bde < Formula
     sha256 "934c5f1599f1c4e05f82e20e610f78532aa37d9868311e7cfc39b789c48fa1b5"
 
     livecheck do
-      formula :parent
+      regex(/^v?(\d+\.\d+\.\d+\.\d+)$/i)
     end
   end
 

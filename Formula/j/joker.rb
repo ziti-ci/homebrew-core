@@ -1,8 +1,8 @@
 class Joker < Formula
   desc "Small Clojure interpreter, linter and formatter"
   homepage "https://joker-lang.org/"
-  url "https://github.com/candid82/joker/archive/refs/tags/v1.5.0.tar.gz"
-  sha256 "5e2f5bc5d03ae456cf032d73f7fed0b4475e23b5a05b65abb97256362ebeb7c8"
+  url "https://github.com/candid82/joker/archive/refs/tags/v1.5.2.tar.gz"
+  sha256 "6a3fe0fe8bb181d790823e408c855168e85cce4f9cae3d7a1985a156cbf5a230"
   license "EPL-1.0"
   head "https://github.com/candid82/joker.git", branch: "master"
 

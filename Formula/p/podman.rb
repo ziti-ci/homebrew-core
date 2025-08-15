@@ -1,10 +1,9 @@
 class Podman < Formula
   desc "Tool for managing OCI containers and pods"
   homepage "https://podman.io/"
-  url "https://github.com/containers/podman/archive/refs/tags/v5.5.2.tar.gz"
-  sha256 "a2dbd8280cd92d4741f32f5a99d385d7fc6f0dd36bc9cc90a7273767e26d43d9"
+  url "https://github.com/containers/podman/archive/refs/tags/v5.6.0.tar.gz"
+  sha256 "8d1cbab138506749c55bd0ca5a7e437ebdfc7f8c4eda100bf2642b2b231bbe1f"
   license all_of: ["Apache-2.0", "GPL-3.0-or-later"]
-  revision 1
   head "https://github.com/containers/podman.git", branch: "main"
 
   # There can be a notable gap between when a version is tagged and a
@@ -58,8 +57,8 @@ class Podman < Formula
   # More context: https://github.com/Homebrew/homebrew-core/pull/205303
   resource "gvproxy" do
     on_macos do
-      url "https://github.com/containers/gvisor-tap-vsock/archive/refs/tags/v0.8.6.tar.gz"
-      sha256 "eb08309d452823ca7e309da2f58c031bb42bb1b1f2f0bf09ca98b299e326b215"
+      url "https://github.com/containers/gvisor-tap-vsock/archive/refs/tags/v0.8.7.tar.gz"
+      sha256 "ef9765d24bc3339014dd4a8f2e2224f039823278c249fb9bd1416ba8bbab590b"
     end
   end
 
@@ -79,15 +78,15 @@ class Podman < Formula
 
   resource "netavark" do
     on_linux do
-      url "https://github.com/containers/netavark/archive/refs/tags/v1.15.2.tar.gz"
-      sha256 "84325e03aa0a2818aef9fb57b62cda8e9472584744d91ce5e5b191098f9e6d6a"
+      url "https://github.com/containers/netavark/archive/refs/tags/v1.16.0.tar.gz"
+      sha256 "4a6df4ad5a611c5006738fc8a7e8539d9be81272dfed79de8e10eeb541c3d285"
     end
   end
 
   resource "aardvark-dns" do
     on_linux do
-      url "https://github.com/containers/aardvark-dns/archive/refs/tags/v1.15.0.tar.gz"
-      sha256 "4ecc3996eeb8c579fbfe50901a2d73662441730ca4101e88983751a96b9fc010"
+      url "https://github.com/containers/aardvark-dns/archive/refs/tags/v1.16.0.tar.gz"
+      sha256 "6c84a3371087d6af95407b0d3de26cdc1e720ae8cd983a9bdaec8883e2216959"
     end
   end
 

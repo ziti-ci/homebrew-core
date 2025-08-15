@@ -159,6 +159,9 @@ class Openvino < Formula
       ENV["MACOSX_DEPLOYMENT_TARGET"] = "#{MacOS.version}.0"
     end
 
+    # Fix linking failure of certain binaries.
+    cmake_args << "-DCMAKE_BUILD_RPATH=#{HOMEBREW_PREFIX}/lib" if OS.linux? && Hardware::CPU.arm?
+
     openvino_binary_dir = "#{buildpath}/build"
     system "cmake", "-S", ".", "-B", openvino_binary_dir, *cmake_args, *std_cmake_args
     system "cmake", "--build", openvino_binary_dir

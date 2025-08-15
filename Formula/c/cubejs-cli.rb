@@ -1,8 +1,8 @@
 class CubejsCli < Formula
   desc "Cube.js command-line interface"
   homepage "https://cube.dev/"
-  url "https://registry.npmjs.org/cubejs-cli/-/cubejs-cli-1.3.52.tgz"
-  sha256 "64f22e974ea60344e0fae73fd47d3eb93825b407054e43808996bc3597b492a7"
+  url "https://registry.npmjs.org/cubejs-cli/-/cubejs-cli-1.3.53.tgz"
+  sha256 "2ec7760a6c98545631cdac29f75147ee421bcceb3779f7a24df3de5b1a3aca84"
   license "Apache-2.0"
 
   bottle do

@@ -15,13 +15,13 @@ class Corsixth < Formula
   end
 
   bottle do
-    sha256 arm64_sequoia: "0decd168795988916b92e814d937027ff7999f75514e5b078fae4bef441f1d9c"
-    sha256 arm64_sonoma:  "cd96d54ceef6d14a32a76c33b4b7317865c0cb1e955ef68aafaa0cca59b90f8e"
-    sha256 arm64_ventura: "b26f4227f77757bc93023940afe00e05f91e7baeb30c3a0729d17f6df2f6946f"
-    sha256 sonoma:        "67a6adecbab18ae3bf3c641d16e5db95d8201c68ec1c531ad2f6f4d35bd20d46"
-    sha256 ventura:       "eba5905a0554c2c5afb557da9bdda642cae66f2d7ea603b189eedde5cf9188cd"
-    sha256 arm64_linux:   "4cd091ab208d3dde25ee05a1b2f6e534493eb1e7fc378417ff43c08239ffc456"
-    sha256 x86_64_linux:  "b0b9f5cd66ef36b1b733e3cd226d6e6e8f3722f71bacc1a7e1bb4f615ba74d0c"
+    sha256 arm64_sequoia: "7b3a8a1966420aa190db9c82bf2e778d72639529f5e705f4541395d6d5f347fb"
+    sha256 arm64_sonoma:  "f84f1f3a1093df6f9080febe527010cd391c2f72305d93d39bb1ce34d7d39fb2"
+    sha256 arm64_ventura: "0a9179f157529eac5cd2bd3b03ddcbd5d62d4329ee5c17fe07df6f61766d23f0"
+    sha256 sonoma:        "f3c33d249251260b470f6ec258156f0b43d9fb763ddd3c6424efc0a3291a6485"
+    sha256 ventura:       "a191b8dca9636d60d849be2a4bb85248231d0efd4f533d564d5a7ef8c5252214"
+    sha256 arm64_linux:   "ba00ae1a27a10fff23a022a43a99999504e90066276b3c42b2720e596ee63ed7"
+    sha256 x86_64_linux:  "35bf6fe9afff312913d2362e468a2e80f1d18da933e6847de308123f230a0da4"
   end
 
   depends_on "cmake" => :build

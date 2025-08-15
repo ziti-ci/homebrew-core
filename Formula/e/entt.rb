@@ -6,6 +6,11 @@ class Entt < Formula
   license "MIT"
   head "https://github.com/skypjack/entt.git", branch: "master"
 
+  livecheck do
+    url :stable
+    regex(/^v?(\d+(?:\.\d+)+)$/i)
+  end
+
   bottle do
     sha256 cellar: :any_skip_relocation, all: "86074bf1b1b86d90191ff16eadc4e04849293c273748e7e95f0e7298a2529425"
   end

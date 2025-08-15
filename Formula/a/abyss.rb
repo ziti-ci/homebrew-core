@@ -10,13 +10,14 @@ class Abyss < Formula
     regex(/^v?(\d+(?:\.\d+)+)$/i)
   end
   bottle do
-    sha256 cellar: :any,                 arm64_sequoia: "c4c97608ca2bb86304b77b4fddd3abee125f25971ba51495e95e6658b1ad5d1a"
-    sha256 cellar: :any,                 arm64_sonoma:  "f4bdcdb91f2004e514df06e02f91d6341cb8d3f3ce32a9acf3958d37f1983f80"
-    sha256 cellar: :any,                 arm64_ventura: "22819d8dfedb879c1f0742ec3f07e9090d99385b533bfc54158beddbe1eefadc"
-    sha256 cellar: :any,                 sonoma:        "6bd97e0afea52bf21f3c0f01d10b2643c22c4aed6bf3e36cece3545d6ad6e9d1"
-    sha256 cellar: :any,                 ventura:       "d81fe789736077b682ba6cbc7c62d89333ee560a7c2c02a0b3e936810e3cac1a"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "fbd181f4720f2c4e8f15d120f49bb2016a72e1eb7017dd8e046be245c424384a"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "7cb253b94acc90a0619ef05ba23a178f9a28e8ee0395ffea66abbeb13500726f"
+    rebuild 1
+    sha256 cellar: :any,                 arm64_sequoia: "e101572d7d3f7ec6a519888e90d8202da080add1d774105b406712a5920b68a8"
+    sha256 cellar: :any,                 arm64_sonoma:  "8568ca8de272baac70ea8233665436f6ba0bd26156f5ae6a9eebc9c9a26df696"
+    sha256 cellar: :any,                 arm64_ventura: "0183a197b480d32b9063da4d7d16bdf9e347f9b3e1417b18577d5c1c3fbdeb95"
+    sha256 cellar: :any,                 sonoma:        "7a18163b240f0cd8b95da2dc9b4df409a4f49f56ce24c9032185237a45de08ea"
+    sha256 cellar: :any,                 ventura:       "f14bb039e937d63c3b856bcb51252ef98faf80f0f972220e753eaefd52645157"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "8f64a28e719e394fcf696127bd2906ab59bcd1d7a5765ae51f36876e533d4389"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "246d74b2ccc4a225327db691de91a9e89731052c2b1443040d4ed1870483c7a7"
   end
 
   head do

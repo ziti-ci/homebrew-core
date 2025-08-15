@@ -6,7 +6,7 @@ class Fgbio < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "74519df628d1cfcb37e8b0b897d880fa5c15e7c01ea62bdddc903e6c13853049"
+    sha256 cellar: :any_skip_relocation, all: "1d19e55c5bda1fe8dfc30f5fd329ae855e527c92e89371c1efa77c8504f6b49f"
   end
 
   depends_on "openjdk"

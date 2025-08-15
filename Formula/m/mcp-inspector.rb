@@ -6,13 +6,7 @@ class McpInspector < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "df4339b20c39dbab39fa73a52515dd0638aff5c2c48f35ba4b90b1fdcc54c352"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "df4339b20c39dbab39fa73a52515dd0638aff5c2c48f35ba4b90b1fdcc54c352"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "df4339b20c39dbab39fa73a52515dd0638aff5c2c48f35ba4b90b1fdcc54c352"
-    sha256 cellar: :any_skip_relocation, sonoma:        "9dbdc6e5e3231eb4573f77f034343e0aa54e94e8f96dd3d9aa12ca30edf555bc"
-    sha256 cellar: :any_skip_relocation, ventura:       "9dbdc6e5e3231eb4573f77f034343e0aa54e94e8f96dd3d9aa12ca30edf555bc"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "df4339b20c39dbab39fa73a52515dd0638aff5c2c48f35ba4b90b1fdcc54c352"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "df4339b20c39dbab39fa73a52515dd0638aff5c2c48f35ba4b90b1fdcc54c352"
+    sha256 cellar: :any_skip_relocation, all: "e00818addae7b5b1577a1934c9a8de75fd7fe82ce9b0fa9ab21df77928fb9858"
   end
 
   depends_on "node"

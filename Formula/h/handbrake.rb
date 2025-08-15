@@ -7,13 +7,13 @@ class Handbrake < Formula
   head "https://github.com/HandBrake/HandBrake.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "e522355fdd80a18975dff369e4f84f114db24bdd998c9aabf0412e37870d3c14"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "2bf626472451af5250d1ad1bda30d045fd8524c8ead478ba10c6617137513ea4"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "0963b2fe7afb36039db49f6d70bfb956d762e2f45dc8f8f75f6b788f130e27e7"
-    sha256 cellar: :any_skip_relocation, sonoma:        "90d51673f0d57cf519ca07cef60fd47d3102352a7eb15c9b74cd5528cfc34dce"
-    sha256 cellar: :any_skip_relocation, ventura:       "e4566e9531e9b4ef8e1424d2b64881a42849fa998c4f41723e7901ac69fa869c"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "5897d3846d9bc98ae0ca7f17f818aa471dc3c77c0fee7cff49c9870e27cfd60a"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "d369bff496ed3e599714b882be69de1d774ec7f4c36863de22e230ea1739cca7"
+    sha256 cellar: :any,                 arm64_sequoia: "4dc8b8de7ff4b78a1a8ec92e5d95bebb08a0ae406e3b6e76256fe3b6561c18f2"
+    sha256 cellar: :any,                 arm64_sonoma:  "c0756cac988fd50b981e32d371147c3cf4bc8d237c8ae4f4ec2fac5dae8eac67"
+    sha256 cellar: :any,                 arm64_ventura: "b4ee5f3a06e95a2cffaa98eb6f1caeed695f361f3ab59446c9ea1958c52ec6fd"
+    sha256 cellar: :any,                 sonoma:        "a5fedc40f7461eb310779b44c6c5cbaf1ed24b8c321c317d8c0d90ae2cd87f60"
+    sha256 cellar: :any,                 ventura:       "0a59bb3f7ea4b639efb2528256223b3dbc63c19626a566fa3fef9ce081ac6419"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "dce2716664cb34296d1419b2a6c3fea5c5aaeb5dc27023d2b413cd64f2bfccdc"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "426f0851ac394ad5358c8db2a3e0f57140650891e99c51a9231bdc5b9656f4ff"
   end
 
   depends_on "autoconf" => :build

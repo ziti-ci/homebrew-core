@@ -20,6 +20,8 @@ class Kingfisher < Formula
   depends_on "pkgconf" => :build
   depends_on "rust" => :build
 
+  uses_from_macos "bzip2"
+
   def install
     system "cargo", "install", "--features", "system-alloc", *std_cargo_args
   end

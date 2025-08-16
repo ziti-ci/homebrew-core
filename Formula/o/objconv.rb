@@ -2,8 +2,8 @@ class Objconv < Formula
   desc "Object file converter"
   homepage "https://www.agner.org/optimize/#objconv"
   url "https://www.agner.org/optimize/objconv.zip"
-  version "2023-03-29"
-  sha256 "0c5ca8fbc7ef1c4afe3cc7cc9018711a5885afacbe8bcebc48028d1ec90ccc7c"
+  version "2025-08-16"
+  sha256 "e259dd2e01e78311a7734fb2aedcf6a83ddf09360081dfe0968290db37b73039"
   license "GPL-3.0-or-later"
 
   livecheck do
@@ -17,7 +17,7 @@ class Objconv < Formula
     end
   end
 
-  no_autobump! because: :requires_manual_review
+  no_autobump! because: :incompatible_version_format
 
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_sequoia:  "2b4714a356e16792f3980afc77dc4be1dc71f422b1f018581add5627a7029938"

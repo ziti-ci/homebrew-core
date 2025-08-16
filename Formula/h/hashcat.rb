@@ -1,9 +1,9 @@
 class Hashcat < Formula
   desc "World's fastest and most advanced password recovery utility"
   homepage "https://hashcat.net/hashcat/"
-  url "https://hashcat.net/files/hashcat-7.0.0.tar.gz"
-  mirror "https://github.com/hashcat/hashcat/archive/refs/tags/v7.0.0.tar.gz"
-  sha256 "842b71d0d34b02000588247aae9fec9a0fc13277f2cd3a6a4925b0f09b33bf75"
+  url "https://hashcat.net/files/hashcat-7.1.0.tar.gz"
+  mirror "https://github.com/hashcat/hashcat/archive/refs/tags/v7.1.0.tar.gz"
+  sha256 "cf2d73d36b85dfc5a36d20bf2d7516858173d5ef780df2055bc926c6f902da77"
   license all_of: [
     "MIT",
     "LZMA-SDK-9.22", # deps/LZMA-SDK/
@@ -42,13 +42,6 @@ class Hashcat < Formula
     depends_on "opencl-headers" => :build
     depends_on "opencl-icd-loader"
     depends_on "pocl"
-  end
-
-  # Add missing shebangs to the scripts in `bin` directory
-  # https://github.com/hashcat/hashcat/pull/4401
-  patch do
-    url "https://github.com/hashcat/hashcat/commit/13a7eaabf8c65eecaf18659a2eefd83d36f9186d.patch?full_index=1"
-    sha256 "ad7258e835198c66d793c1b28715e6e637ab52cfa2e0b9e4c400c1cdd479e85d"
   end
 
   def install

@@ -1,8 +1,8 @@
 class Tfcmt < Formula
   desc "Notify the execution result of terraform command"
   homepage "https://suzuki-shunsuke.github.io/tfcmt/"
-  url "https://github.com/suzuki-shunsuke/tfcmt/archive/refs/tags/v4.14.9.tar.gz"
-  sha256 "b0abe2aafc91e44db8a5c526846ce2c4cd4e9dfe2298cec0fab8fee6e40ba006"
+  url "https://github.com/suzuki-shunsuke/tfcmt/archive/refs/tags/v4.14.10.tar.gz"
+  sha256 "3468fbfe49809acbce8ed4475cd90975c991c8dfa1dcddb82fc6f4ef4baa5c2b"
   license "MIT"
   head "https://github.com/suzuki-shunsuke/tfcmt.git", branch: "main"
 

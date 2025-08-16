@@ -35,12 +35,11 @@ class ProtocGenGrpcJava < Formula
       s.gsub! ', "-static-libgcc"', ""
     end
 
-    system "gradle", "--no-daemon",
-                     "--stacktrace",
-                     "--debug",
-                     "--project-dir=compiler",
-                     "-PskipAndroid=true",
-                     "java_pluginExecutable"
+    args = %w[--no-daemon --project-dir=compiler -PskipAndroid=true]
+    # Show extra logs for failures other than slow Intel macOS
+    args += %w[--stacktrace --debug] if !OS.mac? || !Hardware::CPU.intel?
+
+    system "gradle", *args, "java_pluginExecutable"
     bin.install "compiler/build/exe/java_plugin/protoc-gen-grpc-java"
 
     pkgshare.install "examples/src/main/proto/helloworld.proto"

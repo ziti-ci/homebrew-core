@@ -137,7 +137,7 @@ class Pytorch < Formula
 
     # Expose C++ API
     torch = venv.site_packages/"torch"
-    include.install_symlink (torch/"include").children
+    include.install_symlink ((torch/"include").children - [torch/"include/fmt"])
     lib.install_symlink (torch/"lib").children
     (share/"cmake").install_symlink (torch/"share/cmake").children
   end

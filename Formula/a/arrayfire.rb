@@ -17,6 +17,7 @@ class Arrayfire < Formula
   depends_on "boost" => :build
   depends_on "cmake" => :build
   depends_on "doxygen" => :build
+  depends_on "clblast"
   depends_on "fftw"
   depends_on "fmt"
   depends_on "freeimage"
@@ -27,6 +28,12 @@ class Arrayfire < Formula
     depends_on "opencl-headers" => :build
     depends_on "opencl-icd-loader"
     depends_on "pocl"
+  end
+
+  # Backport fix for missing include for climits header
+  patch do
+    url "https://github.com/arrayfire/arrayfire/commit/cb09bfc5457489d6da434a7841b9098dded58cc0.patch?full_index=1"
+    sha256 "4b5628d1b6164e3b6747868adaa8aeccb92d87d8df2ac6baca6f01580a8b10f7"
   end
 
   # fmt 11 compatibility
@@ -41,19 +48,14 @@ class Arrayfire < Formula
       rpath(source: lib, target: HOMEBREW_PREFIX/"lib"),
     ]
 
-    if OS.mac?
-      # Our compiler shims strip `-Werror`, which breaks upstream detection of linker features.
-      # https://github.com/arrayfire/arrayfire/blob/715e21fcd6e989793d01c5781908f221720e7d48/src/backend/opencl/CMakeLists.txt#L598
-      inreplace "src/backend/opencl/CMakeLists.txt", "if(group_flags)", "if(FALSE)"
-    else
-      # Work around missing include for climits header
-      # Issue ref: https://github.com/arrayfire/arrayfire/issues/3543
-      ENV.append "CXXFLAGS", "-include climits"
-    end
+    # Our compiler shims strip `-Werror`, which breaks upstream detection of linker features.
+    # https://github.com/arrayfire/arrayfire/blob/715e21fcd6e989793d01c5781908f221720e7d48/src/backend/opencl/CMakeLists.txt#L598
+    inreplace "src/backend/opencl/CMakeLists.txt", "if(group_flags)", "if(FALSE)" if OS.mac?
 
     system "cmake", "-S", ".", "-B", "build",
                     "-DAF_BUILD_CUDA=OFF",
                     "-DAF_COMPUTE_LIBRARY=FFTW/LAPACK/BLAS",
+                    "-DAF_WITH_EXTERNAL_PACKAGES_ONLY=ON",
                     "-DCMAKE_CXX_STANDARD=14",
                     "-DCMAKE_INSTALL_RPATH=#{rpaths.join(";")}",
                     *std_cmake_args

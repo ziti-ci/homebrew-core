@@ -6,6 +6,7 @@ class Mk < Formula
   url "https://files.pythonhosted.org/packages/75/9e/dcc7813d9f7133f8d384eca24a4d4bb0cb056abcc53f1f170b8353084feb/mk-3.0.0.tar.gz"
   sha256 "0a041a3620057165f155b8372469d8ab55ae94dd91d6e27723ab9a7de1aa2086"
   license "MIT"
+  head "https://github.com/pycontribs/mk.git", branch: "main"
 
   bottle do
     sha256 cellar: :any,                 arm64_sequoia: "fb57de51d981a1df57ba80756f979826aade4dead30392eeeb820a004412e2cb"
@@ -204,16 +205,19 @@ class Mk < Formula
 
   def install
     virtualenv_install_with_resources
+    ENV["_TYPER_COMPLETE_TEST_DISABLE_SHELL_DETECTION"] = "1"
+    generate_completions_from_executable(bin/"mk", "--show-completion")
   end
 
   test do
+    (testpath/"Makefile").write <<~MAKE
+      all: ## description
+      	@echo hello from mk
+    MAKE
+
+    system "git", "init", "--initial-branch=main"
     assert_match version.to_s, shell_output("#{bin}/mk --version")
-
-    assert_match "mk works only within git repos", shell_output("#{bin}/mk detect 2>&1")
-
-    assert_match "UserWarning: No such file: '#{testpath}/.config/mk/mk.yml'", shell_output("#{bin}/pre 2>&1")
-
-    system "git", "init"
-    assert_match "ERROR    Received exit code 4", shell_output("#{bin}/mk changelog 2>&1", 4)
+    assert_match "all", shell_output("#{bin}/mk commands 2>&1")
+    assert_match "hello from mk", shell_output("#{bin}/mk all 2>&1")
   end
 end

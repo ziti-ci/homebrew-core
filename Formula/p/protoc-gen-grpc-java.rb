@@ -10,6 +10,8 @@ class ProtocGenGrpcJava < Formula
     sha256 cellar: :any,                 arm64_sequoia: "b854853fd0ef677d57848bd9279e5ff0e9abc5c674c25e912f2a9f17dd8cf5f6"
     sha256 cellar: :any,                 arm64_sonoma:  "454b74c866f9f06feadbacc812f8620696ced96b35b225bde2efb66574eb5b12"
     sha256 cellar: :any,                 arm64_ventura: "01081a0fcf53418987eb258163b136727b1635d9f2c886553f83fda59684e2b1"
+    sha256 cellar: :any,                 sonoma:        "37c90105f5d8464955275c13371ec2d66e66cc79ebd2a34798f49a4a6a310fc2"
+    sha256 cellar: :any,                 ventura:       "b1e1f8266ba2275601a1524abbd3a16c65d8a9c8710a8cf0b6f3193b16452aa2"
     sha256 cellar: :any_skip_relocation, arm64_linux:   "eb777b02d19c773ae43f8c9ca90ddaa008a8745f22d222e14911c2c7b28bf64f"
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "dd2b2e2c8e1bee3ab00e0a5b9eb13d6215e567ac0fc7058b63f45c5491ea6b73"
   end

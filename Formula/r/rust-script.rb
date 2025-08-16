@@ -1,11 +1,9 @@
 class RustScript < Formula
   desc "Run Rust files and expressions as scripts without any setup or compilation step"
   homepage "https://rust-script.org"
-  url "https://github.com/fornwall/rust-script/archive/refs/tags/0.35.0.tar.gz"
-  sha256 "21061a471cdb25656952750d7436f12b57bac3c292485e9bc71a5352b290d5df"
+  url "https://github.com/fornwall/rust-script/archive/refs/tags/0.36.0.tar.gz"
+  sha256 "9b6d04ad4dd34838c1b55a8ec4b69e8d7f3008a67d85ef1c35b49502c359b6d8"
   license "Apache-2.0"
-
-  no_autobump! because: :requires_manual_review
 
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_sequoia: "84ccef7a3d517ba17b93f95b279529a318501e56e9d6e3c7c9c6122b10c63fac"

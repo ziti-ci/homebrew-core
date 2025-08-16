@@ -26,11 +26,11 @@ class Opencv < Formula
   no_autobump! because: :requires_manual_review
 
   bottle do
-    sha256 arm64_sonoma:  "344bfa002e362b560fd1374a93ceebbf0dec6e7074c957cf583f01f376de017a"
-    sha256 arm64_ventura: "ac0bcc288ade26617a10a8f2dc47e7fd75fc2f837ec3aa2ffd3fb85165d025b4"
-    sha256 sonoma:        "1c1c7b871ab3a34f619881aa28133200979910cac4f72a58c27abeea41d8ad2c"
-    sha256 ventura:       "3ab695ad0c51aeb6f56e7bd5a53fd76f54f706fdd004cfba52ee3e99dde91f06"
-    sha256 x86_64_linux:  "5ee055909d12888f8520b3596782d83022ce719369a7b64bda092dda4c0debe3"
+    sha256 arm64_sonoma:  "51c266c017a4aae493af2f4021fd1299958c35b76d49fffcc5f81109ca6e2aa1"
+    sha256 arm64_ventura: "9774c9de9996f8f1a8c188e590dcf9b21479a30c238d8a75e07feebbd1dcd69f"
+    sha256 sonoma:        "f9af1e3c9b23a8e31bbbd77d8670e1976556016d5c8aa0f108a936129309ce40"
+    sha256 ventura:       "a4e38430ca5dff0901a5b74953f9ad1e37c5eb7f75f28d577f6cef5babd2aa23"
+    sha256 x86_64_linux:  "5b892b7e398fb6118e5046f8046ee24a56e450ba5498f8a883982335e24616dc"
   end
 
   head do

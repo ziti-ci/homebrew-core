@@ -1,8 +1,8 @@
 class Vsd < Formula
   desc "Download video streams over HTTP, DASH (.mpd), and HLS (.m3u8)"
   homepage "https://github.com/clitic/vsd"
-  url "https://github.com/clitic/vsd/archive/refs/tags/vsd-0.4.2.tar.gz"
-  sha256 "edc3ffc310a90e8941e6bb48f56e057cefad763104edc3a174caa48206d43e11"
+  url "https://github.com/clitic/vsd/archive/refs/tags/vsd-0.4.3.tar.gz"
+  sha256 "a50a7e749693dc38c48d8ea64178da8c513895f381f6c8a2516925c7442a7bfc"
   license "MIT"
 
   livecheck do

@@ -33,6 +33,7 @@ class Opam < Formula
   end
 
   depends_on "ocaml" => [:build, :test]
+  depends_on "rsync" # macOS's openrsync won't work (see https://github.com/ocaml/opam/issues/6628)
 
   uses_from_macos "unzip"
 

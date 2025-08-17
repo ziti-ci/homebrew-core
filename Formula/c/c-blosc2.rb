@@ -29,7 +29,15 @@ class CBlosc2 < Formula
   def install
     ENV.llvm_clang if OS.mac? && DevelopmentTools.clang_build_version <= 1400
 
+    internal_complibs = buildpath.glob("internal-complibs/{lz4,zlib,zstd}-*")
+    odie "Failed to find vendored sources for removal!" if internal_complibs.count != 3
+    rm_r internal_complibs
+
     args = %w[
+      -DBUILD_TESTS=OFF
+      -DBUILD_FUZZERS=OFF
+      -DBUILD_BENCHMARKS=OFF
+      -DBUILD_EXAMPLES=OFF
       -DPREFER_EXTERNAL_LZ4=ON
       -DPREFER_EXTERNAL_ZLIB=ON
       -DPREFER_EXTERNAL_ZSTD=ON

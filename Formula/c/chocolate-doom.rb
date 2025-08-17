@@ -1,8 +1,8 @@
 class ChocolateDoom < Formula
   desc "Accurate source port of Doom"
   homepage "https://www.chocolate-doom.org/"
-  url "https://github.com/chocolate-doom/chocolate-doom/archive/refs/tags/chocolate-doom-3.1.0.tar.gz"
-  sha256 "f2c64843dcec312032b180c3b2f34b4cb26c4dcdaa7375a1601a3b1df11ef84d"
+  url "https://github.com/chocolate-doom/chocolate-doom/archive/refs/tags/chocolate-doom-3.1.1.tar.gz"
+  sha256 "1edcc41254bdc194beb0d33e267fae306556c4d24110a1d3d3f865717f25da23"
   license "GPL-2.0-only"
   head "https://github.com/chocolate-doom/chocolate-doom.git", branch: "master"
 
@@ -10,8 +10,6 @@ class ChocolateDoom < Formula
     url :stable
     regex(/^chocolate-doom[._-]v?(\d+(?:\.\d+)+)$/i)
   end
-
-  no_autobump! because: :requires_manual_review
 
   bottle do
     sha256 cellar: :any,                 arm64_sequoia:  "4f000383f25ecf073d230153d43208298586091496c89fffe550b1ac3ceec679"

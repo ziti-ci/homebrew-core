@@ -53,26 +53,15 @@ class Envoy < Formula
       --verbose_failures
       --action_env=PATH=#{env_path}
       --host_action_env=PATH=#{env_path}
-      --define=wasm=disabled
+      --define=wasm=wamr
     ]
 
     if OS.linux?
       # GCC/ld.gold had some issues while building envoy so use clang/lld instead
       args << "--config=clang-common"
 
-      # clang 18 introduced stricter thread safety analysis. Remove once release that supports clang 18
-      # https://github.com/envoyproxy/envoy/issues/37911
-      args << "--copt=-Wno-thread-safety-reference-return"
-
-      # Workaround to build with Clang 19 until envoy uses newer tcmalloc
-      # https://github.com/google/tcmalloc/commit/a37da0243b83bd2a7b1b53c187efd4fbf46e6e38
-      args << "--copt=-Wno-unused-but-set-variable"
-
-      # Workaround to build with Clang 19 until envoy uses newer grpc
-      # https://github.com/grpc/grpc/commit/e55f69cedd0ef7344e0bcb64b5ec9205e6aa4f04
-      args << "--copt=-Wno-missing-template-arg-list-after-template-kw"
-
-      # Workaround to build with Clang 20
+      # Workaround to build with Clang 20 until envoy uses newer dd-trace-cpp (with newer nlohmann-json)
+      # https://github.com/DataDog/dd-trace-cpp/commit/a7d71b5e0599125d5957f7b8d3d56f0bcc6ae485
       args << "--copt=-Wno-deprecated-literal-operator"
     end
 

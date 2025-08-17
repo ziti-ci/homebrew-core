@@ -33,15 +33,6 @@ class Libaec < Formula
     system "cmake", "--build", "build"
     system "ctest", "--test-dir", "build", "--verbose"
     system "cmake", "--install", "build"
-
-    # Symlink CMake files to a common linked location. Similar to Linux distros
-    # like Arch Linux[^1] and Alpine[^2], but we add an extra subdirectory so that
-    # CMake can automatically find them using the default search procedure[^3].
-    #
-    # [^1]: https://gitlab.archlinux.org/archlinux/packaging/packages/libaec/-/blob/main/PKGBUILD?ref_type=heads#L25
-    # [^2]: https://gitlab.alpinelinux.org/alpine/aports/-/blob/master/community/libaec/APKBUILD#L43
-    # [^3]: https://cmake.org/cmake/help/latest/command/find_package.html#config-mode-search-procedure
-    (lib/"cmake").install_symlink prefix/"cmake" => "libaec"
   end
 
   test do
@@ -78,7 +69,7 @@ class Libaec < Formula
 
     # Test CMake config package can be automatically found
     (testpath/"CMakeLists.txt").write <<~CMAKE
-      cmake_minimum_required(VERSION 3.5)
+      cmake_minimum_required(VERSION 3.10)
       project(test LANGUAGES CXX)
 
       find_package(libaec CONFIG REQUIRED)

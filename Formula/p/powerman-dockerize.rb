@@ -2,8 +2,8 @@ class PowermanDockerize < Formula
   desc "Utility to simplify running applications in docker containers"
   homepage "https://github.com/powerman/dockerize"
   url "https://github.com/powerman/dockerize.git",
-      tag:      "v0.23.1",
-      revision: "67f38473db4017b50603c44fa12f5a0e72dddab3"
+      tag:      "v0.23.2",
+      revision: "b2733c291f1c3be71e0559d35efde3a887dc7060"
   license "MIT"
 
   bottle do

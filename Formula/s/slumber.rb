@@ -1,8 +1,8 @@
 class Slumber < Formula
   desc "Terminal-based HTTP/REST client"
   homepage "https://slumber.lucaspickering.me/"
-  url "https://github.com/LucasPickering/slumber/archive/refs/tags/v3.3.0.tar.gz"
-  sha256 "64435435fb27fc2dc7267fa967f333fb4c671e5c8b6ee9010bb0290834941daf"
+  url "https://github.com/LucasPickering/slumber/archive/refs/tags/v3.4.0.tar.gz"
+  sha256 "6be559a499be09b5db22d5a6b3401a6592412d2c938d1a9ce8bd8c7cd40648c7"
   license "MIT"
   head "https://github.com/LucasPickering/slumber.git", branch: "master"
 
@@ -28,9 +28,9 @@ class Slumber < Formula
     system bin/"slumber", "new"
     assert_match <<~YAML, (testpath/"slumber.yml").read
       # For basic usage info, see:
-      # https://slumber.lucaspickering.me/book/getting_started.html
+      # https://slumber.lucaspickering.me/getting_started.html
       # For all collection options, see:
-      # https://slumber.lucaspickering.me/book/api/request_collection/index.html
+      # https://slumber.lucaspickering.me/api/request_collection/index.html
 
       name: My Collection
 

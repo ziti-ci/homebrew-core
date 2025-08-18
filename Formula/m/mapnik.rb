@@ -20,6 +20,7 @@ class Mapnik < Formula
     sha256 cellar: :any, arm64_ventura: "3d55b37b1e59a0416e9f381356bf2913e637e53f0a9b52f393bb3e2ec8c683c4"
     sha256 cellar: :any, sonoma:        "09e2d4681dd402d6ffb1910f18f4c3e39c7c9f0acc1d9bdd94784fdc835cf39f"
     sha256 cellar: :any, ventura:       "c37cb04238f5f98a5d9a9409f8ca6e96cd0300f8d57125c0b9a8790073ce5ebd"
+    sha256               arm64_linux:   "20b9a20ca6c577346a6b53b69d39de3a9504a65ec229f0e0c119115fdec735bd"
     sha256               x86_64_linux:  "2010bf71fb4caffe99888c36e54c9ff1169399226d9ddfb4b3ec6505c730ddb4"
   end
 

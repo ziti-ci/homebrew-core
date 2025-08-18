@@ -11,6 +11,15 @@ class Quadcastrgb < Formula
     regex(/quadcastrgb[._-]v?(\d+(?:\.\d+)+)\.t/i)
   end
 
+  bottle do
+    sha256 cellar: :any,                 arm64_sequoia: "e1684c8f4af8812803239f4a03601d5eaf2ac7e6ed0f49be43968e3b0f41b60a"
+    sha256 cellar: :any,                 arm64_sonoma:  "136dd48804bc7f5d90f3f1b50c069ac5c95a898dc3a78e987bdab56ccdca72d7"
+    sha256 cellar: :any,                 arm64_ventura: "9107904542014591dbd2f97c66ce1363da3725a5ff3064ad3339d58872a4f71f"
+    sha256 cellar: :any,                 sonoma:        "a48b6ff4a332dfb6fb30312ef091372bf4f84d73692ec73e041fe1df4af8b8aa"
+    sha256 cellar: :any,                 ventura:       "0a057c592b4dc9bd1475ecdee53f4c055a5c9cd0e4831cbbe6db94877f57e98d"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "2801d5cd4a174741bc30148f65714b4aa8fcf15a97294df3e7482bb088bd6d56"
+  end
+
   depends_on "make" => :build
   depends_on "libusb"
 

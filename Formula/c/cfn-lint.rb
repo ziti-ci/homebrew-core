@@ -8,13 +8,13 @@ class CfnLint < Formula
   license "MIT-0"
 
   bottle do
-    sha256 cellar: :any,                 arm64_sequoia: "365d7c7f1f440479c66e7363a02b4cf2486a35d35e5b9422873e431c58f11132"
-    sha256 cellar: :any,                 arm64_sonoma:  "4c8b847e55ba4e01a97ceeca96db2734056ffbf1f3c00adc5c5f97128c28fd94"
-    sha256 cellar: :any,                 arm64_ventura: "6ef51ea8afce0aabc348a3839ccf3135483b9f5e5d5f51b7c3c9d13f85ac0bdd"
-    sha256 cellar: :any,                 sonoma:        "e01994488d82546daf941efa1580a901be727bd51e4ff337f78c334c25087a97"
-    sha256 cellar: :any,                 ventura:       "b655ac2aafde03e3338002b9654e05f8f6838976c8147fa65f4f7b3ef462a7ad"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "9b5e1e96c1ef8602985d7cbc8ee2001390f36dac14dea63c228979708a491271"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "9f81a27fe2eb0f01448a4879221d58211afc0afa15279bc3b35607befd47e669"
+    sha256 cellar: :any,                 arm64_sequoia: "12b9bff110ad27f2d2e73e8a8f243a8d844b851a3064961734dd1ec922d32188"
+    sha256 cellar: :any,                 arm64_sonoma:  "239aaf4f28fa223528b0f3700c0255eddf2e9d8e23d79ce97657a243577cb4c2"
+    sha256 cellar: :any,                 arm64_ventura: "96b60c30a65fbb658f945bf257a30fef80376273c85b9efe7a3f5849446acb23"
+    sha256 cellar: :any,                 sonoma:        "c2819f85bc199dbd84c54a03d86f404d498738f50c48798cb0451b5e19201788"
+    sha256 cellar: :any,                 ventura:       "f6e59a436e3961eed9e721c6d0c0ae926ac16b65d2d82ea38081709b53fc6fd6"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "536bd7dd68b35814fa99505a394713e8e4eba64ca4896d68ce47f166d98c25aa"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "5fb19907497d993b7b7198b0e637b302acfa0187712e4d9425daf807214a737b"
   end
 
   depends_on "rust" => :build

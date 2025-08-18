@@ -9,13 +9,7 @@ class Webpack < Formula
   head "https://github.com/webpack/webpack.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "62703486739d0189fc2b9e14a8ccece784ce7d7e2ef3e37f5dda8b978c871f83"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "62703486739d0189fc2b9e14a8ccece784ce7d7e2ef3e37f5dda8b978c871f83"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "62703486739d0189fc2b9e14a8ccece784ce7d7e2ef3e37f5dda8b978c871f83"
-    sha256 cellar: :any_skip_relocation, sonoma:        "62703486739d0189fc2b9e14a8ccece784ce7d7e2ef3e37f5dda8b978c871f83"
-    sha256 cellar: :any_skip_relocation, ventura:       "62703486739d0189fc2b9e14a8ccece784ce7d7e2ef3e37f5dda8b978c871f83"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "b439ba24f0e9ff3b6d5694e3533001680bf2732dd522ab616c0f1dc5d42e6188"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "b439ba24f0e9ff3b6d5694e3533001680bf2732dd522ab616c0f1dc5d42e6188"
+    sha256 cellar: :any_skip_relocation, all: "72401062d05a0d2da4ae38fa0bb82df98f4bb48d683a8d204a3732bd7e7931a2"
   end
 
   depends_on "node"

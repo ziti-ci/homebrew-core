@@ -1,19 +1,19 @@
 class Prek < Formula
   desc "Pre-commit re-implemented in Rust"
   homepage "https://github.com/j178/prek"
-  url "https://github.com/j178/prek/archive/refs/tags/v0.0.27.tar.gz"
-  sha256 "4434f31d54b8ee996b23fbd1b41d2d1aee7e47e34c6a855ce5e4abeefe01add9"
+  url "https://github.com/j178/prek/archive/refs/tags/v0.0.28.tar.gz"
+  sha256 "095964e821008e3291d5f5823142766e1f9cad576a10cc87de81e58c5464b3f9"
   license "MIT"
   head "https://github.com/j178/prek.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "83aaceffeac4b8bd2063857f4616a155885e7e029c045a6b86e04d91a6f11e5a"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "5b81628a31770599153354adce66e108636f2f776d720327ae6cedd334672acb"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "2348b4ba5b669fae24ef047a4eaac9b42f86390c7569ebef797af4266c13e0ee"
-    sha256 cellar: :any_skip_relocation, sonoma:        "d13a59a14b35fd71603c503257dfe221f951d1f55a890d490de99f41c44d7980"
-    sha256 cellar: :any_skip_relocation, ventura:       "9a8a1de9f9f9cac42171855959d058fb6b5f217597f7a133b0ac6c7c1fc040f3"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "8d46105c5e3ba81ad73e63b092fe14d04a8653aa841902fcf21fcefa7ad1ba45"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "b7193ea65e4b0da55880363eab8eca9c28fb4514b8a87af8089d1048192d7e6e"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "7d8cf057aa57145db86871ab737cd91fe5b54a2a10030c07681efad45fcf067a"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "288d4e2a141cf4eab8c0bd9a01dc2167c3d294faa32c0231ed5e78b24b16b18e"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "f4286eafe9497b18834b17c6c549b3fb31c6f81cca3ff642205e89025d630a0a"
+    sha256 cellar: :any_skip_relocation, sonoma:        "9bf7b449e758c818da21b63a05e4f97bf8b2d1509f70ac28b1a637d4f7972c73"
+    sha256 cellar: :any_skip_relocation, ventura:       "aeb550e14ac621551e149e1e898c1239293162900a1a37f7aacfa7c024d240db"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "324611e4c6a9eab256adf8172cd080c76e99f1bb93553bfbf9f93b87c3265f1e"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "e80331885bba082188d9e7e628e9938f5957dc87345fa984bda99257d51ea358"
   end
 
   depends_on "rust" => :build

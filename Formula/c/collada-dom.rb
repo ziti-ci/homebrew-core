@@ -15,6 +15,7 @@ class ColladaDom < Formula
     sha256 cellar: :any,                 arm64_ventura: "c3386425b2597b815b79002e2bfa629e4c8c92b50119def90c2e63153f86eacb"
     sha256 cellar: :any,                 sonoma:        "d649bd1ff5c6c3db62909c949f9ce6f6713b46fed91255ef93be32742ca58b7b"
     sha256 cellar: :any,                 ventura:       "3c00de7fa89c1d6e750d77308ccc56f46e0698e4192e42c33d420e0534ab9535"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "62ec1ee257626dd9e7f5c1c874695a99a388401a0597d8f4bf9c9fc22caef0a0"
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "405679197a0c02d886159df43321ac8d3553bb91089aa61da54a83c3643ee18f"
   end
 

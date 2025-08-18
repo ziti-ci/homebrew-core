@@ -30,11 +30,10 @@ class Fheroes2 < Formula
 
   uses_from_macos "zlib"
 
-  on_macos do
-    depends_on "dylibbundler" => :build
-  end
-
   def install
+    # Avoid running dylibbundler to prevent copying dylibs
+    inreplace "CMakeLists.txt", /^(\s*run_dylibbundler)\s+ALL$/, "\\1"
+
     args = std_cmake_args
     args << "-DMACOS_APP_BUNDLE=ON" if OS.mac?
     system "cmake", "-S", ".", "-B", "build", *args

@@ -7,6 +7,15 @@ class Omnara < Formula
   sha256 "39edca0d3a2bf10ec91c1a5c66a3c114d24eea004fb63b2662d59b0bbdb257d4"
   license "Apache-2.0"
 
+  bottle do
+    sha256 cellar: :any,                 arm64_sequoia: "52ed0aeeb73a50ab85b54d3ed71a298f84f63a0ecb7ae3a39cea9f8222212ed0"
+    sha256 cellar: :any,                 arm64_sonoma:  "724a3e524d05ec1cec6349011cffe86061e01fd7c191600b6e9dde1a63c6cac1"
+    sha256 cellar: :any,                 arm64_ventura: "358634f190472458949ef789a89218f3310963577f996d731bf38dd00e1cfff5"
+    sha256 cellar: :any,                 sonoma:        "8dab6735e0097730e6aaab41564118cddd11ef22c18ba1875dd95246064350d7"
+    sha256 cellar: :any,                 ventura:       "f8108faf85b7f37c44f740f7e77d7de8af92742e913f6e2da5415bb0546f0966"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "9ff267aebef62985ff6791b05a500d41fdfd7b9adf8383b081d7169c18a1ea2d"
+  end
+
   depends_on "rust" => :build # for pydantic-core
   depends_on "certifi"
   depends_on "cryptography"

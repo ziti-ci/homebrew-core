@@ -13,6 +13,7 @@ class Nzbget < Formula
     sha256 cellar: :any,                 arm64_ventura: "f5b3c05a1de78f0c34fd45602518b44591482e6b799b28a0c8fc7c5749d51c82"
     sha256 cellar: :any,                 sonoma:        "9a06e612b01cb3cb97ba7d4d23e958138a471337f8923d925f816aa513b133b8"
     sha256 cellar: :any,                 ventura:       "3ef289e522618e695d05761fad0850c5c976589ad0f73a2dba5f773ac7f2b00b"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "7d5757247006ceeefafe36fa98b76ce0c4813d5db6de7b189606c7fe43f5245e"
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "b104a47939a6a6f9ee4a3e24de94941c656c69b21a6e1caced8d6a1e43c33bb7"
   end
 

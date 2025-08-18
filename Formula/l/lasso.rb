@@ -3,17 +3,14 @@ class Lasso < Formula
 
   desc "Library for Liberty Alliance and SAML protocols"
   homepage "https://lasso.entrouvert.org/"
-  url "https://dev.entrouvert.org/releases/lasso/lasso-2.8.2.tar.gz"
-  sha256 "6a1831bfdbf8f424c7508aba47b045d51341ec0fde9122f38b0b86b096ef533e"
+  url "https://dev.entrouvert.org/releases/lasso/lasso-2.9.0.tar.gz"
+  sha256 "63816c8219df48cdefeccb1acb35e04014ca6395b5263c70aacd5470ea95c351"
   license "GPL-2.0-or-later"
-  revision 2
 
   livecheck do
     url :homepage
     regex(/href=.*?lasso[._-]v?(\d+(?:\.\d+)+)\.t/i)
   end
-
-  no_autobump! because: :requires_manual_review
 
   bottle do
     sha256 cellar: :any,                 arm64_sequoia:  "d11f5c5002eea8bf352df2eb6d3e903a25cf985c624d764d908646b7193d7787"
@@ -47,13 +44,6 @@ class Lasso < Formula
       sha256 "1e61c37477a1626458e36f7b1d82aa5c9b094fa4802892072e49de9c60c4c926"
     end
   end
-
-  # patch from upstream issue: https://dev.entrouvert.org/issues/85339
-  # Remove when https://git.entrouvert.org/entrouvert/lasso/pulls/10/ is merged
-  #
-  # Backport https://git.entrouvert.org/entrouvert/lasso/commit/cbe2c45455d93ed793dc4be59e3d2d26f1bd1111
-  # Remove on the next release (starting from "diff --git a/lasso/lasso.c b/lasso/lasso.c")
-  patch :DATA
 
   def install
     ENV["PYTHON"] = if OS.linux?
@@ -92,116 +82,3 @@ class Lasso < Formula
     system "./test"
   end
 end
-
-__END__
-diff --git a/lasso/xml/tools.c b/lasso/xml/tools.c
-index 4d5fa78a..0478f3f4 100644
---- a/lasso/xml/tools.c
-+++ b/lasso/xml/tools.c
-@@ -64,6 +64,7 @@
- #include <glib.h>
- #include "xml.h"
- #include "xml_enc.h"
-+#include "id-ff/server.h"
- #include "saml-2.0/saml2_assertion.h"
- #include <unistd.h>
- #include "../debug.h"
-@@ -309,7 +310,7 @@ xmlSecKeyPtr lasso_get_public_key_from_pem_file(const char *file) {
- 			pub_key = lasso_get_public_key_from_pem_cert_file(file);
- 			break;
- 		case LASSO_PEM_FILE_TYPE_PUB_KEY:
--			pub_key = xmlSecCryptoAppKeyLoad(file,
-+			pub_key = xmlSecCryptoAppKeyLoadEx(file, xmlSecKeyDataTypePublic | xmlSecKeyDataTypePrivate,
- 					xmlSecKeyDataFormatPem, NULL, NULL, NULL);
- 			break;
- 		case LASSO_PEM_FILE_TYPE_PRIVATE_KEY:
-@@ -378,7 +379,7 @@ lasso_get_public_key_from_pem_cert_file(const char *pem_cert_file)
- static xmlSecKeyPtr
- lasso_get_public_key_from_private_key_file(const char *private_key_file)
- {
--	return xmlSecCryptoAppKeyLoad(private_key_file,
-+	return xmlSecCryptoAppKeyLoadEx(private_key_file, xmlSecKeyDataTypePrivate | xmlSecKeyDataTypePublic,
- 			xmlSecKeyDataFormatPem, NULL, NULL, NULL);
- }
- 
-@@ -2704,7 +2705,7 @@ cleanup:
- xmlSecKeyPtr
- lasso_xmlsec_load_key_info(xmlNode *key_descriptor)
- {
--	xmlSecKeyPtr key, result = NULL;
-+	xmlSecKeyPtr key = NULL, result = NULL;
- 	xmlNodePtr key_info = NULL;
- 	xmlSecKeyInfoCtx ctx = {0};
- 	xmlSecKeysMngr *keys_mngr = NULL;
-@@ -2738,6 +2739,17 @@ lasso_xmlsec_load_key_info(xmlNode *key_descriptor)
- 	ctx.keyReq.keyUsage = xmlSecKeyDataUsageAny;
- 	ctx.certsVerificationDepth = 0;
- 
-+	if((xmlSecPtrListAdd(&ctx.enabledKeyData, BAD_CAST xmlSecKeyDataX509Id) < 0) ||
-+		(xmlSecPtrListAdd(&ctx.enabledKeyData, BAD_CAST xmlSecKeyDataValueId) < 0) ||
-+		(xmlSecPtrListAdd(&ctx.enabledKeyData, BAD_CAST xmlSecKeyDataRsaId) < 0) ||
-+		(xmlSecPtrListAdd(&ctx.enabledKeyData, BAD_CAST xmlSecKeyDataDsaId) < 0) ||
-+		(xmlSecPtrListAdd(&ctx.enabledKeyData, BAD_CAST xmlSecKeyDataHmacId) < 0)) {
-+		message(G_LOG_LEVEL_CRITICAL, "Could not enable needed KeyData");
-+		goto next;
-+	}
-+
-+
-+
- 	key = xmlSecKeyCreate();
- 	if (lasso_flag_pem_public_key) {
- 		xmlSecErrorsDefaultCallbackEnableOutput(FALSE);
-diff --git a/lasso/xml/xml.c b/lasso/xml/xml.c
-index 0d5c6e31..09cc3037 100644
---- a/lasso/xml/xml.c
-+++ b/lasso/xml/xml.c
-@@ -620,6 +620,10 @@ lasso_node_encrypt(LassoNode *lasso_node, xmlSecKey *encryption_public_key,
- 		goto cleanup;
- 	}
- 
-+#if (XMLSEC_MAJOR > 1) || (XMLSEC_MAJOR == 1 && XMLSEC_MINOR > 3) || (XMLSEC_MAJOR == 1 && XMLSEC_MINOR == 3 && XMLSEC_SUBMINOR >= 0)
-+	enc_ctx->keyInfoWriteCtx.flags |= XMLSEC_KEYINFO_FLAGS_LAX_KEY_SEARCH;
-+#endif
-+
- 	/* generate a symetric key */
- 	switch (encryption_sym_key_type) {
- 		case LASSO_ENCRYPTION_SYM_KEY_TYPE_AES_256:
-diff --git a/lasso/lasso.c b/lasso/lasso.c
-index 42b7d6bb..bc75f5e6 100644
---- a/lasso/lasso.c
-+++ b/lasso/lasso.c
-@@ -138,7 +138,13 @@ DllMain(HINSTANCE hinstDLL, DWORD fdwReason, LPVOID lpvReserved)
- #include "types.c"
- 
- static void
--lasso_xml_structured_error_func(G_GNUC_UNUSED void *user_data, xmlErrorPtr error)
-+lasso_xml_structured_error_func(G_GNUC_UNUSED void *user_data,
-+#if LIBXML_VERSION >= 21200
-+                                        const xmlError *error
-+#else
-+                                        xmlErrorPtr error
-+#endif
-+				)
- {
- 	g_log("libxml2", G_LOG_LEVEL_DEBUG, "libxml2: %s", error->message);
- }
-diff --git a/lasso/xml/tools.c b/lasso/xml/tools.c
-index bbc87d9f..4d5fa78a 100644
---- a/lasso/xml/tools.c
-+++ b/lasso/xml/tools.c
-@@ -1450,7 +1450,14 @@ lasso_concat_url_query(const char *url, const char *query)
- 	}
- }
- 
--static void structuredErrorFunc (void *userData, xmlErrorPtr error) {
-+static void structuredErrorFunc (void *userData,
-+#if LIBXML_VERSION >= 21200
-+                                        const xmlError *error
-+#else
-+                                        xmlErrorPtr error
-+#endif
-+				 )
-+{
- 		*(int*)userData = error->code;
- }
- 

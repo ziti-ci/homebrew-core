@@ -7,13 +7,13 @@ class Bettercap < Formula
   head "https://github.com/bettercap/bettercap.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_sequoia: "621bb685704def4c8be34da96de714b4edf0ac04154bd2c9463695951883e758"
-    sha256 cellar: :any,                 arm64_sonoma:  "901bbb7d7876139268957e5d43a894ab9626455a57883af493c2924b33c6479a"
-    sha256 cellar: :any,                 arm64_ventura: "daba887ac15d63596447f47f0b5abc5f45e20eebc0e67f59ecd63daff671e1d5"
-    sha256 cellar: :any,                 sonoma:        "d04852a37bcc0926d9cda8036024e04f37455239e5d1f735010fc818ccdecb67"
-    sha256 cellar: :any,                 ventura:       "0ab41470bf5828053907cb4d7e7235878950308ea1f42df6289b4360422f0ab7"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "b27de98d5ff8586d70b3a6448d663c7821926bbab32c6c49d0c7ff9abfd1d2d9"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "1b1ce57b33228eb4fbc74f6f384ed0712e56ad4929dff81e13ad9ad2924c7d43"
+    sha256 cellar: :any,                 arm64_sequoia: "8bb7a6d6cd4d05376150aaf6f3e636748e6f7c25f55a7020414ce5d9ec9f2b28"
+    sha256 cellar: :any,                 arm64_sonoma:  "ba4ebfe92ecc1c3dbe6f316d8caae94db58653b69748824ab7c4536392bcbbac"
+    sha256 cellar: :any,                 arm64_ventura: "24a234febe71292390e60b28d5c9dd570003d26e01c439ecc724a600b22fab32"
+    sha256 cellar: :any,                 sonoma:        "64d654c858082709adaeeb902a59ed81b581a3142dcfd7386c3f370144fb9595"
+    sha256 cellar: :any,                 ventura:       "1820c1c01213158db3703d6e9bc9d7bb3ab3d4451da7de3daa18b90bd1cfe291"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "7f88c29696e7607598f42b0a0fe8ef73ffe91812829666e0ee7cdb665a2ae4ec"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "678b0e10c0ac69b43e12c5bb6e5e96663b1e30a1febed2e3a9d4efe1f9f0a443"
   end
 
   depends_on "go" => :build

@@ -1,8 +1,8 @@
 class Levant < Formula
   desc "Templating and deployment tool for HashiCorp Nomad jobs"
   homepage "https://github.com/hashicorp/levant"
-  url "https://github.com/hashicorp/levant/archive/refs/tags/v0.3.3.tar.gz"
-  sha256 "0e87c27e2d4be7cd2a24cb0459d0a55f1bb7b5d65e6f7da4a2babd7d95d1bd92"
+  url "https://github.com/hashicorp/levant/archive/refs/tags/v0.4.0.tar.gz"
+  sha256 "8d299e890af5a3c6e9048f930b10cd34276656142358c298497ec5d7d8efa263"
   license "MPL-2.0"
   head "https://github.com/hashicorp/levant.git", branch: "main"
 

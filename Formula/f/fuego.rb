@@ -21,6 +21,7 @@ class Fuego < Formula
     sha256                               arm64_ventura: "e8289d17aa98ecf078bb29cd9ef32ac2cfc09635372dee6c30ea6f1d0f5ba407"
     sha256                               sonoma:        "7cd89cd4c4fc11f0f0fd069c499ee0fd0d1d4ba46e7bd52a0fc40751b03d8894"
     sha256                               ventura:       "7b34e6b51a48f1b769f14d45913846790dff6320b2cf639553d32c96c3acc749"
+    sha256                               arm64_linux:   "edee126e525257ef55b5ced38ac289b06f6a2c9db6b2ee17599fc79d3175d308"
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "8d5380f0826f95049aa0f1d6e9001a1791d8fd8970902bdb2f3615aa888c1389"
   end
 

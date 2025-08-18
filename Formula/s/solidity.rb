@@ -14,13 +14,12 @@ class Solidity < Formula
   no_autobump! because: :requires_manual_review
 
   bottle do
-    sha256 cellar: :any,                 arm64_sequoia: "473fa776a7d59bcddcd39fcae1decae308a7fcf76b955ad737788edb788dd1b1"
-    sha256 cellar: :any,                 arm64_sonoma:  "1fff4b5d4ee6fdfe9f580cb4a0f9102a335c01c3e9cb9b43907b2904e1d9830d"
-    sha256 cellar: :any,                 arm64_ventura: "3056f30a88cf1eb1283ca37ee98d52a3b799f49cc4da481161ff4f5bf6f717e6"
-    sha256 cellar: :any,                 sonoma:        "5c54b89ae94ff561cb13ae3f1a5614a9a0996a1101602aa68fd6d911b8cb05c6"
-    sha256 cellar: :any,                 ventura:       "754784a2bf9a57e6fe88d57c43465af5a721667250faf7767e817421438c4a13"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "e9d10fb6a132c5d5f5b36ef1c9296ad9f4c25a2236822e054150ac057f72154a"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "e88792a9be5d50f8732d8679c3fba67b84c9ecc839e9af1bcd114c4fcb543111"
+    sha256 cellar: :any,                 arm64_sequoia: "64d6eda62ef156a0101b7db05f46fced2dbb782642b92e3972689d87fa3ded70"
+    sha256 cellar: :any,                 arm64_sonoma:  "d22c39245433eb7ce91fb21ea5d7587b5c2f0be56f5ea926d9d14274c7238536"
+    sha256 cellar: :any,                 arm64_ventura: "5122f5b427213dbeecdbdc1f5e16d478d5577bfec406cb834d09dc0bfe5faa7c"
+    sha256 cellar: :any,                 sonoma:        "1e776c872721c83f27fc64cf6ecee4a9a1c57660b7ca71be25b71e69c0d26e8c"
+    sha256 cellar: :any,                 ventura:       "461812120f0c82b5e6ed4bda4c2e66c87e608762bda9e6a902f75b324874f72c"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "700199170a432f1e4a6608aa7e75c3def553578b0dbf8730ebb589a5e4a4f4e3"
   end
 
   depends_on "cmake" => :build

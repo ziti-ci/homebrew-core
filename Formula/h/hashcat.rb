@@ -1,9 +1,9 @@
 class Hashcat < Formula
   desc "World's fastest and most advanced password recovery utility"
   homepage "https://hashcat.net/hashcat/"
-  url "https://hashcat.net/files/hashcat-7.1.0.tar.gz"
-  mirror "https://github.com/hashcat/hashcat/archive/refs/tags/v7.1.0.tar.gz"
-  sha256 "cf2d73d36b85dfc5a36d20bf2d7516858173d5ef780df2055bc926c6f902da77"
+  url "https://hashcat.net/files/hashcat-7.1.1.tar.gz"
+  mirror "https://github.com/hashcat/hashcat/archive/refs/tags/v7.1.1.tar.gz"
+  sha256 "1cdf6db3058088d7e3883f63519b5d345dbda0184ec8e1e1cb984e1255e297f0"
   license all_of: [
     "MIT",
     "LZMA-SDK-9.22", # deps/LZMA-SDK/

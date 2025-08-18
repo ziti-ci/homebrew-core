@@ -46,6 +46,7 @@ class Redex < Formula
     sha256 cellar: :any,                 arm64_ventura: "3cc462535b6d47cd2a65e846a203431b3f09b684cd90b985b7d92f70b3024459"
     sha256 cellar: :any,                 sonoma:        "45bf906a221af854ad97f570f32cc2d614d9701f14f64d29119e8add6340daa2"
     sha256 cellar: :any,                 ventura:       "26ae6a587173f41403c4222044bcb6307adaeb42978c5cde5efe91f103880c62"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "33695004d04b690c9ef97ec7a1b93277933d9a2d19a67c5307aa838f3b3f60e9"
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "972ea4c2f3357bf1adbf4777cf949aa636ab5e221e07383017053f236db28503"
   end
 

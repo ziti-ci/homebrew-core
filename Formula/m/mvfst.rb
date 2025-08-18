@@ -7,13 +7,13 @@ class Mvfst < Formula
   head "https://github.com/facebook/mvfst.git", branch: "main"
 
   bottle do
-    sha256                               arm64_sequoia: "88b81f899678252ddc2731fc2ca653c409d21f945253d9224215a3824db019c6"
-    sha256                               arm64_sonoma:  "033ec7b6024d085e7d6170ca00a9207c20fe2e79b977140d7fbe4f22cbb6437d"
-    sha256                               arm64_ventura: "5c9087cfe7080dbd80b1119a6f425668ae3e47fffa6e4d4c65575feb019f5282"
-    sha256 cellar: :any,                 sonoma:        "a38be2b3f090f84913e8414aec2441d0075e78cac1dba8b2bc0f2a7dde834f60"
-    sha256 cellar: :any,                 ventura:       "bd392f5224a8c02cb47f53b77171657274b1777e9dd84af9171c5f5ebfbb2e55"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "6d64ec398e6c25cc9f777d3928cf7215683f0ae0475d4deeffdadb8ac25c42c7"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "16eab43b9dfccabd23dd8e6227e4ef120b5a3ea44bd8e24d2f11d380f88fed8d"
+    sha256                               arm64_sequoia: "f0df0dfecbbc2335d0b07f1e0e834ef411457dbac241639cf4575ffb5c82c8d7"
+    sha256                               arm64_sonoma:  "bd5e8c3f80f5776022fa840aea36d9bdd636b7ed870252336303ccfeddc88166"
+    sha256                               arm64_ventura: "ef8d632fcfcbb70aefd544291e46b5b42b2d978570bb24d3df130ed11f29a325"
+    sha256 cellar: :any,                 sonoma:        "ba0f31b9248484925aa1c14fe8a4eff11cec4266c348af82927356c7ec548262"
+    sha256 cellar: :any,                 ventura:       "08a1cdc0fe81f417987578a32a8a5934b3c7c7ce153208cd86dd041db3255c48"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "64bd2b6e2168e4df088e2f25284aebe09cc464e0bcb887aa7bbf38384806a8f3"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "ff6a248d5f8f8f1aa87589cc50ff43279146e2b3a22a50841b1cc6740943a59d"
   end
 
   depends_on "cmake" => [:build, :test]

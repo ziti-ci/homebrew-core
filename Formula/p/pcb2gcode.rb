@@ -14,6 +14,7 @@ class Pcb2gcode < Formula
     sha256 cellar: :any,                 arm64_ventura: "b01464e9d453255290840876db3899984cceff1a5c6c5046bd6bdae5d79d563e"
     sha256 cellar: :any,                 sonoma:        "0cd3f0c8556a36e6bfb7238ecb698108c85c97396e4a6b1966752868c6d3cbe0"
     sha256 cellar: :any,                 ventura:       "1bee47236c3414536c8c77badab1057fb363eb35cb76cde433aea647a0bf53f3"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "06977900652f188f45575688519d4fb379b8d1c01d778e7f5676d79afbac604b"
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "1f0101b39171e4e96a6f5db51c8316b78251cd5c78867819d376c8845c5e0ada"
   end
 

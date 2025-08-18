@@ -16,6 +16,7 @@ class LeelaZero < Formula
     sha256 cellar: :any,                 arm64_ventura: "1647c60bb30f22c26e0ab0f3ec99d296a1a7e8bd48c4c676bfd7f469dc9c4df2"
     sha256 cellar: :any,                 sonoma:        "f6e5f5636798be24caa619d0c84d38d23c3f905e6edbb8baec7cf34dbd45dc69"
     sha256 cellar: :any,                 ventura:       "74df4fbf6d10992225a619107f28b3c583f5ba00a0f773e9609294d522c78e37"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "a2d2119742e144d26f3408deaa148a07fe926dcb7e3c735f08b6a9c7c9b1023a"
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "fb7e114a1e812141f2c633f914403e1694a962a14188d98e66757a7e48f126d2"
   end
 

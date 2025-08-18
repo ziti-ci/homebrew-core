@@ -13,6 +13,7 @@ class Mgis < Formula
     sha256 cellar: :any,                 arm64_ventura: "2c95f087b9a89026c345477fce004a13ad88376804c7222da9310f5637b86aad"
     sha256 cellar: :any,                 sonoma:        "2a270fb617d534331a5d15b27c4ac77edf5921456d3eb5cd6cab5e56a1bbd5e2"
     sha256 cellar: :any,                 ventura:       "adb7eefc819507ef06028d0075d17f2f1919570dd3eac0be42187cf3c3348e39"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "12bedcbecfb86831e8e5457debb9fc6abd14d75cb562cc48fb1fbf3a1a8508a4"
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "d7d57981d82eb7676b31402f7d3fac080a52f5252adfb838cf026a517f1e247e"
   end
 

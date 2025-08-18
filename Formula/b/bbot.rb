@@ -3,8 +3,8 @@ class Bbot < Formula
 
   desc "OSINT automation tool"
   homepage "https://github.com/blacklanternsecurity/bbot"
-  url "https://files.pythonhosted.org/packages/bd/2b/ce1ef4e4b9a49839e3b790997e33f93c415fda6a18339220a7a8a06c1b63/bbot-2.6.0.tar.gz"
-  sha256 "95d52eac67afa1cba1835a85c9b29cbb3cb40744f893018c468674c129ab4568"
+  url "https://files.pythonhosted.org/packages/74/e1/a8532c1cd6c6834dcc85a19edf6d67d23366c83bcb092a67f7b2310fc3f5/bbot-2.6.1.tar.gz"
+  sha256 "946c8c34b27396f2d4f3147ea8bf0d9b7ded8205f93d6f14b26f09f75a1f637b"
   license "GPL-3.0-or-later"
 
   bottle do
@@ -88,8 +88,8 @@ class Bbot < Formula
   end
 
   resource "filelock" do
-    url "https://files.pythonhosted.org/packages/0a/10/c23352565a6544bdc5353e0b15fc1c563352101f30e24bf500207a54df9a/filelock-3.18.0.tar.gz"
-    sha256 "adbc88eabb99d2fec8c9c1b229b171f18afa655400173ddc653d5d01501fb9f2"
+    url "https://files.pythonhosted.org/packages/40/bb/0ab3e58d22305b6f5440629d20683af28959bf793d98d11950e305c1c326/filelock-3.19.1.tar.gz"
+    sha256 "66eda1888b0171c998b35be2bcc0f6d75c388a7ce20c3f3f37aa8e96c2dddf58"
   end
 
   resource "h11" do
@@ -223,8 +223,8 @@ class Bbot < Formula
   end
 
   resource "requests" do
-    url "https://files.pythonhosted.org/packages/e1/0a/929373653770d8a0d7ea76c37de6e41f11eb07559b103b1c02cafb3f7cf8/requests-2.32.4.tar.gz"
-    sha256 "27d0316682c8a29834d3264820024b62a36942083d52caf2f14c0591336d3422"
+    url "https://files.pythonhosted.org/packages/c9/74/b3ff8e6c8446842c3f5c837e9c3dfcfe2018ea6ecef224c710c85ef728f4/requests-2.32.5.tar.gz"
+    sha256 "dbba0bac56e100853db0ea71b82b4dfd5fe2bf6d3754a8893c3af500cec7d7cf"
   end
 
   resource "requests-file" do

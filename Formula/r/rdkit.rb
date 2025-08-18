@@ -22,6 +22,7 @@ class Rdkit < Formula
     sha256                               arm64_ventura: "b34c3831c49708ca91129cb60638b09b1249c7be83dd4a1ff604e24be0dd7ad2"
     sha256 cellar: :any,                 sonoma:        "1aa34a1087e741ce6a3ce7271e22373051b8646494c19dc34c9cedef171280c3"
     sha256 cellar: :any,                 ventura:       "72db4c060d276fc5ee9fdff989c9fe8fccf418ac05644a1750fae8f657a9052c"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "5b1564fcda61fe18ed23f84fbc79c5f65f3af55804836a3a15ee0ce3f200b75b"
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "4dac9109a35ad92e4a2301652261e47b986b94981c1472d2ca52bbab72904b0f"
   end
 

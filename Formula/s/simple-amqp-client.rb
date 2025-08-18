@@ -10,13 +10,12 @@ class SimpleAmqpClient < Formula
   no_autobump! because: :requires_manual_review
 
   bottle do
-    sha256 cellar: :any,                 arm64_sequoia: "87ae8527d44ded5a0dd914f42d21527a951a01b9e99861413d73bc5113dbe74f"
-    sha256 cellar: :any,                 arm64_sonoma:  "842d4ae9462815803fc55eb6ab9bd046edd63814df21bdd450e570e61fa14dcd"
-    sha256 cellar: :any,                 arm64_ventura: "766942e45c1c85f8d93727b399a7caced4796226d67ee085b6bcf0c37a9a86b0"
-    sha256 cellar: :any,                 sonoma:        "3692e9563b2f7eb144aa01de033003dacdfaefd9ae88a0bd5719c5519c430093"
-    sha256 cellar: :any,                 ventura:       "386c44669e5e91bf2e33b954fe7d5abaf05e65c4f9329a36e1e5445f3d2bf106"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "724aaaf2f46fb7bbcf4d949fc115328e0e9108ee895048b1baef8f8453f4877a"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "d7f97c240551cdd21573e0a00f66fd23b6275b21247e718a93c05ff4185e56ad"
+    sha256 cellar: :any,                 arm64_sequoia: "e1eb5c48884a83b02dbbc2a0ad3d8d356f7c3fb935f8fc54341ae756bb4424e5"
+    sha256 cellar: :any,                 arm64_sonoma:  "eb19eaee74b987a22007c12f737a270bcc32913ba5cb822331c4d34b7cea09f3"
+    sha256 cellar: :any,                 arm64_ventura: "f5b70aba922a61a69ebeb2378e955fbf27bc5b15cf9e6f1ec608286b65d6410a"
+    sha256 cellar: :any,                 sonoma:        "b53ed9cf4ac06bce440b6cb5b128e408d60d8a8394db5c9b09247b974ac2c0c2"
+    sha256 cellar: :any,                 ventura:       "2eeb8c8ac5f48881dc6c88e402d0bb2528975e66cbe59ba8a64286d9df6b1d07"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "dae899a11bd849dc1d61c0b9099ccc7b188392a4cbb607ac57c91b3585250f09"
   end
 
   depends_on "cmake" => :build

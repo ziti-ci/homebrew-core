@@ -13,6 +13,7 @@ class Mvfst < Formula
     sha256                               arm64_ventura: "5c9087cfe7080dbd80b1119a6f425668ae3e47fffa6e4d4c65575feb019f5282"
     sha256 cellar: :any,                 sonoma:        "a38be2b3f090f84913e8414aec2441d0075e78cac1dba8b2bc0f2a7dde834f60"
     sha256 cellar: :any,                 ventura:       "bd392f5224a8c02cb47f53b77171657274b1777e9dd84af9171c5f5ebfbb2e55"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "6d64ec398e6c25cc9f777d3928cf7215683f0ae0475d4deeffdadb8ac25c42c7"
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "16eab43b9dfccabd23dd8e6227e4ef120b5a3ea44bd8e24d2f11d380f88fed8d"
   end
 

@@ -5,6 +5,15 @@ class Qman < Formula
   sha256 "785441bf11e99ff27869c08f0d36ce3f5c75db1b045b8712fe515059cf396780"
   license "BSD-2-Clause"
 
+  bottle do
+    sha256               arm64_sequoia: "242f89831ea2de296836320100941480578948076051262e9c5a4a55f099d7f5"
+    sha256               arm64_sonoma:  "d8ed1519a4e75f283581a084d86c58fcb4f9a99ea35fb11848688f1e7542d428"
+    sha256               arm64_ventura: "f80ec8da63ae6047755d58a238e6d668ad42f418a0ba2ee4effd1ab357fcce97"
+    sha256 cellar: :any, sonoma:        "8413046064145228637319223914e277a13ad7b0eadf201d1f633963d16c89b3"
+    sha256 cellar: :any, ventura:       "445caa196096dcbdbc4b3814cc2f2d1d41995fe3d1c4d4b5ce1c1eed911033a7"
+    sha256               x86_64_linux:  "156d528908713d8438b6da5ca03cd92b9629a3c082f7b417f77e13d253067061"
+  end
+
   depends_on "cogapp" => :build
   depends_on "meson" => :build
   depends_on "ninja" => :build

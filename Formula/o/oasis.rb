@@ -12,6 +12,7 @@ class Oasis < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura: "6cdc971d22cf1c3c357552c315ee00d0ec5bb1f2f0a43dc29065b52e57fc96e5"
     sha256 cellar: :any_skip_relocation, sonoma:        "02f0cc113b4d7f4b05b6d574ba34166728e92736fc86fe17917fe10c96631ae5"
     sha256 cellar: :any_skip_relocation, ventura:       "f251488246f48baac3d7fca525bf9553a57db175541178dc81374d546fa96889"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "8ac7c3f1e92afec59d1482c00e52aca1c2cd32dd659cb80186a8cf5d6b3bace6"
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "94210af3e16e15a7eea6e6157b86dae9f8dd4729cc0630ec7d006caecab97fc0"
   end
 

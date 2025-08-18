@@ -3,8 +3,8 @@ class Flexget < Formula
 
   desc "Multipurpose automation tool for content"
   homepage "https://www.flexget.com"
-  url "https://files.pythonhosted.org/packages/cf/c5/019139a8b56212a87e9b4c9c6285e62bf0f0d25d5af3f20123d57c8a2afc/flexget-3.17.11.tar.gz"
-  sha256 "e25984e37b49ab9c47f59a51bc87f6ac161accc2b24668e2911307d74b0720c2"
+  url "https://files.pythonhosted.org/packages/89/0b/13a1df29469bd74b89bc7c5480441d6eaebc8e223885bce23ce05e4f8576/flexget-3.17.12.tar.gz"
+  sha256 "67c63258edb6a090351665e724369d7d6eb597aa97061647ac1212e4220f7460"
   license "MIT"
 
   bottle do
@@ -169,8 +169,8 @@ class Flexget < Formula
   end
 
   resource "jsonschema" do
-    url "https://files.pythonhosted.org/packages/d5/00/a297a868e9d0784450faa7365c2172a7d6110c763e30ba861867c32ae6a9/jsonschema-4.25.0.tar.gz"
-    sha256 "e63acf5c11762c0e6672ffb61482bdf57f0876684d8d249c0fe2d730d48bc55f"
+    url "https://files.pythonhosted.org/packages/74/69/f7185de793a29082a9f3c7728268ffb31cb5095131a9c139a74078e27336/jsonschema-4.25.1.tar.gz"
+    sha256 "e4a9655ce0da0c0b67a085847e00a3a51449e1157f4f75e9fb5aa545e122eb85"
   end
 
   resource "jsonschema-specifications" do

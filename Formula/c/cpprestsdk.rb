@@ -16,6 +16,7 @@ class Cpprestsdk < Formula
     sha256 cellar: :any,                 arm64_ventura: "3cd4baefa8081807c066f32526e4292e4692482ab7e59f3b101ed8176bf47213"
     sha256 cellar: :any,                 sonoma:        "87bde89b79cd019ab64d60f98df68a31ea20cf6e1a615e6905a5fa57abc149f0"
     sha256 cellar: :any,                 ventura:       "750ea4343b57683dc552cd5a5cae40944dd90595863fa27419e5dbd4fb4fd87f"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "8464f7f1c4a87916539c39a3c7d1cb6ac5d2a1fd6cc1a8fd16e33cd83fdad88d"
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "24cc62c99aeecd2a910e156a9d39846f757b37d54b385740e6c2d3ea50adbd56"
   end
 

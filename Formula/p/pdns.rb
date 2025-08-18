@@ -22,6 +22,7 @@ class Pdns < Formula
     sha256 arm64_ventura: "be717db5960c7760efeb952e10468fc58c439b6b9801ab556ba3304fb1e03184"
     sha256 sonoma:        "02aa1ef5fc089ac94ebaa345c9108789d1e233362fdd3d96c5305019f84250d5"
     sha256 ventura:       "f27c289b9a1248ded18e64e895979a6c76adc88841b6a2ab44538084daa491a3"
+    sha256 arm64_linux:   "34641ee4372af61fa8b05faa83c4aa469b93d3695850ae20ce9b73ce7b267fc3"
     sha256 x86_64_linux:  "cce46f4abb822c351dcfb63caf22f44af6ac6b40eca0af36811e0de17f0d645e"
   end
 

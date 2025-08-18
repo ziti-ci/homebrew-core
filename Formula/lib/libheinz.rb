@@ -6,7 +6,7 @@ class Libheinz < Formula
   license "0BSD"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "5ef6b1109b5b5299b0666d217bb0300e0bf07000f6b2d63c7f871af8a7ecef12"
+    sha256 cellar: :any_skip_relocation, all: "67948152c574c30d8166f03ad0c64a713f59e862bce1ba3d3df1b0729b5b2144"
   end
 
   depends_on "cmake" => :build

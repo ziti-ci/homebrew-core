@@ -24,13 +24,12 @@ class Innoextract < Formula
   no_autobump! because: :requires_manual_review
 
   bottle do
-    sha256 cellar: :any,                 arm64_sequoia: "a6ecba6f9571ac08021cee5007d4ce46bc1c8af96f996dd58397fe2f2466d9c7"
-    sha256 cellar: :any,                 arm64_sonoma:  "8bcb1acc92f2b71ba74dbd9989858cb4c97c673ea4165d9a917005e3ae20ee0d"
-    sha256 cellar: :any,                 arm64_ventura: "078863c79c61eaa1bf3b34960334582c52c8cf6932d279f460fce2718a6ee852"
-    sha256 cellar: :any,                 sonoma:        "13374c0149963a68d215be71fee1e3be6ad3bc94793b582ec0545fc850a6186b"
-    sha256 cellar: :any,                 ventura:       "2d06f2828524c9790714130e550fe7aad4b157005b39652633500dbe35aaacb8"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "1a14135ee0ef9142fd550768cf198305ba67081514b03fe6ff1c36c3b0e1247b"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "f307fcdedb067bd399862b2640f25a92c31cd1ce5ab6d00ab113bfcb6a88f62d"
+    sha256 cellar: :any,                 arm64_sequoia: "f058c122e886a8f35997bc3603c10f791ad3a7eb9d0cd084aa081babf7833743"
+    sha256 cellar: :any,                 arm64_sonoma:  "e65c6340749c752ab228536d9ed8323e77a18132a6578eaa7d86950d07628f0a"
+    sha256 cellar: :any,                 arm64_ventura: "aa58225a507ab5162d5744d0ad7845ad4a444ef8e6680d75ed52a19b8b019876"
+    sha256 cellar: :any,                 sonoma:        "90ee4acae6795def50a0a74c8330aeff551818734c8351463f10a6b584a565e2"
+    sha256 cellar: :any,                 ventura:       "48c724ab7793c79e6fed6777c86cc0c971c1b4ac1613e0a39ef471196f7bcacc"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "823a6cad250181cac9e656165b82633b0c7e9d0e7f5baecd73f9630eae2fd5b1"
   end
 
   depends_on "cmake" => :build

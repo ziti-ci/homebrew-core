@@ -29,6 +29,7 @@ class Innoextract < Formula
     sha256 cellar: :any,                 arm64_ventura: "aa58225a507ab5162d5744d0ad7845ad4a444ef8e6680d75ed52a19b8b019876"
     sha256 cellar: :any,                 sonoma:        "90ee4acae6795def50a0a74c8330aeff551818734c8351463f10a6b584a565e2"
     sha256 cellar: :any,                 ventura:       "48c724ab7793c79e6fed6777c86cc0c971c1b4ac1613e0a39ef471196f7bcacc"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "f5ccafaae9f5a27b4a20a388c818e8de1a65e29ddc5c6ab3f5f7fd8664dee0d0"
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "823a6cad250181cac9e656165b82633b0c7e9d0e7f5baecd73f9630eae2fd5b1"
   end
 

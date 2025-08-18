@@ -4,16 +4,16 @@ class Proxygen < Formula
   url "https://github.com/facebook/proxygen/releases/download/v2025.08.11.00/proxygen-v2025.08.11.00.tar.gz"
   sha256 "adcb875fda718aa62fe47dc9b25c45c65632ccec583452f302624619a164e44f"
   license "BSD-3-Clause"
+  revision 1
   head "https://github.com/facebook/proxygen.git", branch: "main"
 
   bottle do
-    sha256                               arm64_sequoia: "5fb5e493c5e1e64d7b1fc12b504199bdf027d7d72f68b929e55d15fbfadd9641"
-    sha256                               arm64_sonoma:  "77a6b12d20588ee4a7d2ef7ce2d61c0da428050687da6c56167c123849bcd068"
-    sha256                               arm64_ventura: "20705ed1a16bd3ec3255380fae5fe7c3bb505375ec09062cad09e252f95d2a5c"
-    sha256 cellar: :any,                 sonoma:        "ebe8b1113d6955a94a86809e5dd689ea0f08deae8bb213086f47d22ff452cefb"
-    sha256 cellar: :any,                 ventura:       "f05c5696db73009b2f6df1d0a598116cfd8065fc5186ec9674371d841602f402"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "27722f73381b6f2d64a78f800ed96a47e7abd8cf7cf74cc86bfc573250782087"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "2f5575911ec786dbd86c92cb6b03e141927025a2ce5cf86b42ba9482cdee0395"
+    sha256                               arm64_sequoia: "f3da126c26cbdcc23bf494e725fa2762ec55e051dbf973799f10c2d4eaf88658"
+    sha256                               arm64_sonoma:  "5c9b413a911322b781d4c3678f7afef2d3ee4855f276ae94ea931097fdac2ebe"
+    sha256                               arm64_ventura: "1153ae17ffd8123af0f755b3e2808048d1578b6190c04016f8faed8fef4ddf40"
+    sha256 cellar: :any,                 sonoma:        "a241780f6ff7ead3e2114987768734dab40b97528807e5b472b3b6616c692656"
+    sha256 cellar: :any,                 ventura:       "633c8e994de2a51a188e6208df20b08456797ec24026abbe89b0afc4ddfd9da0"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "3442dee81c75d346b366906419ed098a14317e4991be6c1f479c710f7c1d0e0d"
   end
 
   depends_on "cmake" => :build
@@ -42,6 +42,12 @@ class Proxygen < Formula
       mirror "https://ftp.gnu.org/gnu/gperf/gperf-3.1.tar.gz"
       sha256 "588546b945bba4b70b6a3a616e80b4ab466e3f33024a352fc2198112cdbb3ae2"
     end
+  end
+
+  # Fix build with Boost 1.89.0, pr ref: https://github.com/facebook/proxygen/pull/570
+  patch do
+    url "https://github.com/facebook/proxygen/commit/d69f521bc0c7201ced9326aabe7ba0ca590621bf.patch?full_index=1"
+    sha256 "2b51cbce006750d70e6807bb186d4b06f9ec1c40f7109d0f0b8a8910581a39a3"
   end
 
   def install

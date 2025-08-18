@@ -14,6 +14,7 @@ class Bastet < Formula
     sha256               arm64_ventura: "a0862ef06147f76cf326257d45eea42597330c5c45f631317b1c8c39ccd5136f"
     sha256 cellar: :any, sonoma:        "98a67787b19ac466bcca7bdb637815e7baf9c3dcaefd03a69a4f240c6600c60b"
     sha256 cellar: :any, ventura:       "ad8b5e6d2c65c9d503d57401856729551a993e34d6201f396a52c8e811f349b4"
+    sha256               arm64_linux:   "e2e97c4de86dffae54d79bcf9afd9283e1014968dc67b426e57a963c69232e9a"
     sha256               x86_64_linux:  "fac2d3e5ddb3dde86764be8ae0072842f3c985c7393ca3fc75fba495f72ad2d1"
   end
 

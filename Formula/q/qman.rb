@@ -11,6 +11,7 @@ class Qman < Formula
     sha256               arm64_ventura: "f80ec8da63ae6047755d58a238e6d668ad42f418a0ba2ee4effd1ab357fcce97"
     sha256 cellar: :any, sonoma:        "8413046064145228637319223914e277a13ad7b0eadf201d1f633963d16c89b3"
     sha256 cellar: :any, ventura:       "445caa196096dcbdbc4b3814cc2f2d1d41995fe3d1c4d4b5ce1c1eed911033a7"
+    sha256               arm64_linux:   "01382320e7a0ba1239144fcaeca19f9a2c4d4d044fb56ac2dcdf159c873d2ceb"
     sha256               x86_64_linux:  "156d528908713d8438b6da5ca03cd92b9629a3c082f7b417f77e13d253067061"
   end
 

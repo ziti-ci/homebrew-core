@@ -14,6 +14,7 @@ class Pokerstove < Formula
     sha256 cellar: :any,                 arm64_ventura: "c34a21407e69e70f400fb9c2fd7c1834606498ff027dad0a86e8a198c123e48f"
     sha256 cellar: :any,                 sonoma:        "443d4d27cd085b1230a21f809107ddea5ce8675dea0807988bbc5c1c527042de"
     sha256 cellar: :any,                 ventura:       "3e49b9e0aae12e1f39606dced90b7ca9ab29c40fbf9225e83918c03ecbbb99fd"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "1cfdc4881d8bd0797ea748e6cc1e02b9cc38d81449d415bfbb5f07d0c863f741"
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "3ba1969e30c9063708d69009cab0d8e1bf22a443cb6b320fd51e13e0511af29d"
   end
 

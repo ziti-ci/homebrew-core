@@ -7,12 +7,12 @@ class Forcecli < Formula
   head "https://github.com/ForceCLI/force.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "c546c3cc1cfa95fdfaa184477858031e9334a1fb6e179226433c3d9dd873181d"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "c546c3cc1cfa95fdfaa184477858031e9334a1fb6e179226433c3d9dd873181d"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "c546c3cc1cfa95fdfaa184477858031e9334a1fb6e179226433c3d9dd873181d"
-    sha256 cellar: :any_skip_relocation, sonoma:        "e5df88404103fde0dd37e51a5a46aff53f2096bbb4c513bc60e4b0bb698bf9da"
-    sha256 cellar: :any_skip_relocation, ventura:       "e5df88404103fde0dd37e51a5a46aff53f2096bbb4c513bc60e4b0bb698bf9da"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "fc49ebf52c779b2631af94ffe7e9e7671bf883ef97709160cca0ac8f06e69be8"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "2c1fb2395fffa2fb586f2bf24ee0856fdace37a7e85763fcd2860424cc17d51b"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "2c1fb2395fffa2fb586f2bf24ee0856fdace37a7e85763fcd2860424cc17d51b"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "2c1fb2395fffa2fb586f2bf24ee0856fdace37a7e85763fcd2860424cc17d51b"
+    sha256 cellar: :any_skip_relocation, sonoma:        "6530587802fc85fd000be628282c2e4193531872bd62a6279a772f4ff3170b07"
+    sha256 cellar: :any_skip_relocation, ventura:       "6530587802fc85fd000be628282c2e4193531872bd62a6279a772f4ff3170b07"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "8ca79692265d7b73ed6a99221905abc3a4666a823ba6d0d124aba50ce606616c"
   end
 
   depends_on "go" => :build

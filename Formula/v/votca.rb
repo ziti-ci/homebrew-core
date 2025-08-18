@@ -12,6 +12,7 @@ class Votca < Formula
     sha256 cellar: :any,                 arm64_ventura: "908abe750c2a90c342c4b25d54f13cb0dd17de2969ea8fc33c5f53cfb96b2ab7"
     sha256 cellar: :any,                 sonoma:        "977de90ad8d326d316bd95a09180d6fdf2614a2bfb961b3434be02cca404cbdc"
     sha256 cellar: :any,                 ventura:       "8899fd469c58e43781e37c33ab8879a0c033d9751c6231983fbab2e2c669e122"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "a8d8668f5c90d2cdf59790ac441e86a2517241d81772966bd66874e21b6c720d"
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "7bbaa9113e6ed96c12a2fab7442a138ad601c7d8ec52ce07b2cf85fa893463e4"
   end
 

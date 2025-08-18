@@ -20,6 +20,7 @@ class OsrmBackend < Formula
     sha256 cellar: :any,                 arm64_ventura: "279149ff05cfe64f42403a6ce4e82dff3381a5ecaf79895eaa3b27f9a6d76c93"
     sha256 cellar: :any,                 sonoma:        "6a683f6cd29d8a81e1e410c2df5d4718105b69143d4cddceab70cccb95eb9429"
     sha256 cellar: :any,                 ventura:       "718788e54ac80005c8da8bd66e918c93c84ef32c92c991043ccf0f8a6f0ec813"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "7be21e22dbf762808c40691c50ca45a918298c241cb6195e8f5702cec2d58b30"
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "fd60664efed3fe7d87f93b5ebaf6e925c98121cf429ce89c8eb92429f646d020"
   end
 

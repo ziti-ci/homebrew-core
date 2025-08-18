@@ -30,13 +30,12 @@ class Standardese < Formula
   no_autobump! because: :requires_manual_review
 
   bottle do
-    sha256                               arm64_sequoia: "0c085a6553e072c5de272972f6ac567de96866d7f1f9e1bce5fbca086c0dc41f"
-    sha256                               arm64_sonoma:  "3f8eecb4c36f352b2e85f937e39a1ffd10191e4947f97db531d441520cb59963"
-    sha256                               arm64_ventura: "2877cca2dec0e5d25a13b0f871f124e6b6f151c820290a3f629b18a6a2fc35e3"
-    sha256                               sonoma:        "d7337d180cbf90b86e5def03d8031d26bea1fa8b9a68e09676f47ba2ddf6663f"
-    sha256                               ventura:       "d0da799b3b0175478642e0fcc104a11d40757f3da3d0c48f694b7372a4de9ee3"
-    sha256                               arm64_linux:   "35dbdc939daa2cc20d576caaa16f4e3a3b60c883f0f641e9c56e953abd6221ba"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "84e681ed07036aeb3b06e8be4d6bd6acecbb6b90840ab72c17e5a2a7eabbd2a5"
+    sha256                               arm64_sequoia: "7aac10f0c51eba02e38e87122b0adf550cd56e7092b7f226188b914c3e687967"
+    sha256                               arm64_sonoma:  "10cf6e4ea596448dac927b90a4fe4011d1541417c6d30f9720f74e1c8c706772"
+    sha256                               arm64_ventura: "1a3a96186e91ca2bf4111324abebf42fcce98b306301f98f4e5a21386def1569"
+    sha256                               sonoma:        "931b39b7b6e03abeae83852591f05d85ef475037c72e5c76491eb1a2f8590319"
+    sha256                               ventura:       "3821d85d58e252bf2b9dd27bb4263b7d690eeed8756aa276f8ed7f715517daf2"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "740d8cecff73da5d7c6d482eaa669a30c55726ff9c7439b10de8c45363de9236"
   end
 
   depends_on "cmake" => :build

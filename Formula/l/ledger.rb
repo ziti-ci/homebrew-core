@@ -66,6 +66,7 @@ class Ledger < Formula
     sha256 cellar: :any,                 arm64_ventura: "a9a4cca0fc9dc851603ca76d6d7f51638d7d8053529dc17636c694e7a18afe97"
     sha256 cellar: :any,                 sonoma:        "4f1b9ad9ea6267c32ee381bd64f526529cf96d717f4609cfed985979a82497c7"
     sha256 cellar: :any,                 ventura:       "36e9ef1b92e34221caa9d3d7e21fd0145f389842a37a3f499d2adb49b07ac5eb"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "464af7ae2d92d869baf3a3a45e60552b0e053b005b8f142e77bd6a8e07f04777"
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "fdd22eb4b12f6e18fc396541142c0f8e9f952d3cfa27c319895e9617440e0cdd"
   end
 

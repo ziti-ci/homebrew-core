@@ -6,6 +6,15 @@ class Oasis < Formula
   license "Apache-2.0"
   head "https://github.com/oasisprotocol/cli.git", branch: "master"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "ed77c8a7b8251541519fb70981b6f48305c9c6681bf064fe2a9dbbf10b178485"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "e43e7bc979d22d67ccfad65a905ee8d31fb897f0e51e1ac29adf943313106558"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "6cdc971d22cf1c3c357552c315ee00d0ec5bb1f2f0a43dc29065b52e57fc96e5"
+    sha256 cellar: :any_skip_relocation, sonoma:        "02f0cc113b4d7f4b05b6d574ba34166728e92736fc86fe17917fe10c96631ae5"
+    sha256 cellar: :any_skip_relocation, ventura:       "f251488246f48baac3d7fca525bf9553a57db175541178dc81374d546fa96889"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "94210af3e16e15a7eea6e6157b86dae9f8dd4729cc0630ec7d006caecab97fc0"
+  end
+
   depends_on "go" => :build
 
   def install

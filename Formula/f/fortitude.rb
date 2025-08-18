@@ -1,8 +1,8 @@
 class Fortitude < Formula
   desc "Fortran linter"
   homepage "https://fortitude.readthedocs.io/en/stable/"
-  url "https://github.com/PlasmaFAIR/fortitude/archive/refs/tags/v0.7.4.tar.gz"
-  sha256 "7f13f5f70ee5620a07019fb70dd2122892a085ac52f4237a64edbf30b9faf042"
+  url "https://github.com/PlasmaFAIR/fortitude/archive/refs/tags/v0.7.5.tar.gz"
+  sha256 "a481dddcee5a680bb67ecad745d6378daa1f4166a2e4a7421af1f6a4ef8006c1"
   license "MIT"
   head "https://github.com/PlasmaFAIR/fortitude.git", branch: "main"
 

@@ -6,13 +6,13 @@ class Electric < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any,                 arm64_sequoia: "0594bb01b210fc0c1c570dfa5180073c74b36db405c8b10ec7ccdab38a5053f7"
-    sha256 cellar: :any,                 arm64_sonoma:  "4febe53eedadd799bf42f8a6dcac9d8650bdf852aa62429f7413d94f3bb2b97a"
-    sha256 cellar: :any,                 arm64_ventura: "9229f4723b1b36f639bdf760e215db1e29c05ebb128f534efe63cede0d7bfbbf"
-    sha256 cellar: :any,                 sonoma:        "ea720036c74582ac13a65b25fbc22c82d362a75b190451bc343c1507c36944f7"
-    sha256 cellar: :any,                 ventura:       "8d7120aad5deccc40cb66807d5c985b2c1cc7df2f5f78ea72d10823552b18f62"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "8d1e1ed31a1922c552f2d88594d062cb502eca71fc6532ebceb273dd8fb57217"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "4c720c93cb2a166494fb843e98317431232716ab305665b1f5635dd7b3a4173f"
+    sha256 cellar: :any,                 arm64_sequoia: "2ceddac9de9d3503273d5c5a924238c386e684866c2c64d1f9070596f5b5440f"
+    sha256 cellar: :any,                 arm64_sonoma:  "564b7376d638ac55be9be3be7de7be984b4c33207ad3d6ab161f6620044dbe98"
+    sha256 cellar: :any,                 arm64_ventura: "d7893dc7c7301f52f06e97bc397d764fe9ea36fcbc23f683d4dce0df2dab643b"
+    sha256 cellar: :any,                 sonoma:        "fdbce79110f70ca36433f3cb391774110799543a4b3837a75800cbd2602caf0e"
+    sha256 cellar: :any,                 ventura:       "f4e84fe711a46f13d71bc54e362a79f3665cd68fcdf7f0842fd2796b2be3c6c0"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "5ff090986cd1386cf89e69580a64662c09dad28887b5551edad2eac0040b53e8"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "5814bc3c08a136729d6f5af1b3b39493e28c1deb08d4c0698f9d1cb4a0de9dcc"
   end
 
   depends_on "elixir" => :build

@@ -13,6 +13,7 @@ class Wangle < Formula
     sha256 cellar: :any,                 arm64_ventura: "c455d40ce29ab806579f442372ba64dbd5fce57a9551d155ab979d86ff358fdc"
     sha256 cellar: :any,                 sonoma:        "fcf0392abab9cdc2a1558d42283fbd60f3a5eaf371dd381fc36b9128c41b1250"
     sha256 cellar: :any,                 ventura:       "8109ba07c9818472a2cd200a1f89d7b80d28eaddb050595bd133869726c42c64"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "45519e1fc69d2ea14150698c55bc46e401708b2148ac47ee79aeeb10d6c59820"
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "ddc693f652738ef4eb6979546ed8a35939ad900a27b479ce05a5035924bfe290"
   end
 

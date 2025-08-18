@@ -13,15 +13,13 @@ class Lasso < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_sequoia:  "d11f5c5002eea8bf352df2eb6d3e903a25cf985c624d764d908646b7193d7787"
-    sha256 cellar: :any,                 arm64_sonoma:   "bae175f8483fcb721716c04489109384cf80f7b1b3e2dfddfe2bbb785e0cbddf"
-    sha256 cellar: :any,                 arm64_ventura:  "1d90d46ff6490946d1f8e156038fb83fe63c59f7bebab3b712ee6eeaf73175c9"
-    sha256 cellar: :any,                 arm64_monterey: "9b7b4aaf4ebb484bc9965c44ec60b5688bf07160fd21009b3698c9906339ceca"
-    sha256 cellar: :any,                 sonoma:         "1ae094adf28b557f503e6902eba7782fc3f06851f99af55bb719cd1ef5421acc"
-    sha256 cellar: :any,                 ventura:        "c70b29501fec372898d179cc2b90a8778135b1b90679cedbc9d04967c23be6ca"
-    sha256 cellar: :any,                 monterey:       "c502d05c3014a4bc43418345944c10ad4f5aa7e65743a83b374b51f8f44d2eff"
-    sha256 cellar: :any_skip_relocation, arm64_linux:    "06aec249f21d3077204ca46f10391df23570448ff47650cbeefd69455dad5a78"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "9adf24a05cbf953ad5f3d3bca3f388eadb08480aaf9f100663504c2ea83ff025"
+    sha256 cellar: :any,                 arm64_sequoia: "73a4b5de8e89c7600198eda7cbe6a6c617645e5a902419856e8c661aad8f9805"
+    sha256 cellar: :any,                 arm64_sonoma:  "6b4e27f4dec99b6f3e4fdd7e199fe025913c19bb6cb0bfb9960f4e5e4c8baeac"
+    sha256 cellar: :any,                 arm64_ventura: "b5d48e185589b6c5e989efd4334885d05aaeb181fadefc2d679d1296fec110a9"
+    sha256 cellar: :any,                 sonoma:        "bdf22529b3f2873ad02c0630beb28cbb6f05656819f7912441fb3324a649cf5e"
+    sha256 cellar: :any,                 ventura:       "2d7722abbe72ada2eeb86163ea469ab83bbaba42b4d57183d3c47f08d565fb12"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "c489df4d15314a1ea8c3589a21dcd9c584e989964d03f26170c9f9def96c6dbb"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "10d43be485d5889e1ad8fe51b3f9a685bb34e19a1fce924faed46de9f682f5ce"
   end
 
   depends_on "pkgconf" => :build

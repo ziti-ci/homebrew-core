@@ -11,6 +11,15 @@ class InfluxdbAT2 < Formula
     regex(/^v?(2(?:\.\d+)+)$/i)
   end
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "c83ced195279f3f5134e04a84216de1a50a3c8a60e825f01959953aa98287c8c"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "434cfeab9e6e075d1ec08bf368f875a74735d956fea39ac9d80c269a61199016"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "d857c0839003f194f4a463701966e8145d67d9bcb2abff54fbbd339453919081"
+    sha256 cellar: :any_skip_relocation, sonoma:        "807fd104f6177a1517bf9ef17a99a62c0652b5cea921a566d96afdbe850ad5f1"
+    sha256 cellar: :any_skip_relocation, ventura:       "4b026a2dac86d5ee5112cf488458eb5e9ea294f8c1ba47f706d6a3ce50e3cb23"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "6aa7a273fb2aaad1f1cf903573710e1f25949c4bc5543b36058654b7fd92ff78"
+  end
+
   keg_only :versioned_formula
 
   depends_on "breezy" => :build

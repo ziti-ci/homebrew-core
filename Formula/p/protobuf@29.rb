@@ -4,6 +4,7 @@ class ProtobufAT29 < Formula
   url "https://github.com/protocolbuffers/protobuf/releases/download/v29.5/protobuf-29.5.tar.gz"
   sha256 "a191d2afdd75997ba59f62019425016703daed356a9d92f7425f4741439ae544"
   license "BSD-3-Clause"
+  revision 1
 
   livecheck do
     url :stable
@@ -31,6 +32,16 @@ class ProtobufAT29 < Formula
   depends_on "abseil"
   uses_from_macos "zlib"
 
+  on_linux do
+    # Avoid newer GCC which creates binary with higher GLIBCXX requiring runtime dependency
+    depends_on "gcc@12" => :build if DevelopmentTools.gcc_version("/usr/bin/gcc") < 12
+  end
+
+  fails_with :gcc do
+    version "11"
+    cause "absl/log/internal/check_op.h error: ambiguous overload for 'operator<<'"
+  end
+
   # Backport to expose java-related symbols
   patch do
     url "https://github.com/protocolbuffers/protobuf/commit/9dc5aaa1e99f16065e25be4b9aab0a19bfb65ea2.patch?full_index=1"
@@ -45,6 +56,8 @@ class ProtobufAT29 < Formula
 
   # Backport of (for compatibility with new Abseil):
   # https://github.com/protocolbuffers/protobuf/commit/0ea5ccd61c69ff5000631781c6c9a3a50241392c.patch?full_index=1
+  # Backport to reduce flaky test failures:
+  # https://github.com/protocolbuffers/protobuf/commit/7df353d94a84eacdfc0a19ee6db445d95fc57679.patch?full_index=1
   patch :DATA
 
   def install
@@ -166,3 +179,20 @@ index 545fd51..55b1ec8 100644
    }
  
    // API to delete any objects not on an arena.  This can be used to safely
+diff --git a/src/google/protobuf/map_test.inc b/src/google/protobuf/map_test.inc
+index df8ce2e411631b1dda93f1a8b05602357126d9d4..a87f9dc6df55ef51d4bfbdc9ccb8611984119f38 100644
+--- a/src/google/protobuf/map_test.inc
++++ b/src/google/protobuf/map_test.inc
+@@ -1365,9 +1365,9 @@ TEST_F(MapImplTest, SpaceUsed) {
+ bool MapOrderingIsRandom(int a, int b) {
+   bool saw_a_first = false;
+   bool saw_b_first = false;
+-  std::vector<Map<int32_t, int32_t>> v(50);
+-  for (int i = 0; i < 50; ++i) {
+-    Map<int32_t, int32_t>& m = v[i];
++  std::vector<Map<int32_t, int32_t>> v;
++  while (v.size() < 100) {
++    Map<int32_t, int32_t>& m = v.emplace_back();
+     m[a] = 0;
+     m[b] = 0;
+     int32_t first_element = m.begin()->first;

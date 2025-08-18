@@ -13,6 +13,7 @@ class Papilo < Formula
     sha256 cellar: :any,                 arm64_ventura: "48f8055e56f81e27e016c806c0224e3453505ae0612ecb224c22dfb0955931da"
     sha256 cellar: :any,                 sonoma:        "63bf745b8e9ad6bbc0a7f99deb31b36ea695478065a7e0b8fb8183aa17ef7ea2"
     sha256 cellar: :any,                 ventura:       "c825e4961d95564ae48ec2aa30d77338260e584baa5682dbbcd1020336d82b77"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "e1968fb73502296bcb9a9dd2abb73819f021ee5367021c639359debdaddf876b"
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "e7bd8474115e706362921ebbc12130d9f15b50e6243de8759a19b099a41bafba"
   end
 

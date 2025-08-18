@@ -18,6 +18,7 @@ class ScummvmTools < Formula
     sha256 cellar: :any,                 arm64_ventura: "f90ccd5ce750fecac29157dfaada5171a890c5dc8b6ae194adc2f829b3894526"
     sha256 cellar: :any,                 sonoma:        "0eaca449b6111e14fc1e564137c67445d7d96fe241499f70e7b75d57e8933db2"
     sha256 cellar: :any,                 ventura:       "6b5c2b0112b3dc1e0fecbbcdd11bb67bec5dca0c39f12d364925d0e6a0b6fabd"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "0174937d75ac25ec4a7566e423cbc8486393a6a2fcb24e264ce803c0541e8a4a"
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "2b267aef34dc479086f9f0cf9e1ed1188a9dcb42fdb0320c826dc4d658bf16e7"
   end
 

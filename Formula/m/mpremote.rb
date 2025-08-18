@@ -8,7 +8,7 @@ class Mpremote < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "e0a64c3be9447ab462935ea95ed2d722264aadb1bd24146710393b5a6ef81d19"
+    sha256 cellar: :any_skip_relocation, all: "ef937462df64160d0b412a69a2b19f27c51fb781fc936cedc167a97691a2a168"
   end
 
   depends_on "python@3.13"

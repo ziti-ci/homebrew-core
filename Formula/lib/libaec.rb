@@ -7,13 +7,14 @@ class Libaec < Formula
   head "https://gitlab.dkrz.de/k202009/libaec.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_sequoia: "6b7cf987f0fdd72e90def1d0245c06e99edc300e9f7d3eaa01187700a1158742"
-    sha256 cellar: :any,                 arm64_sonoma:  "10ba88e1ad1c0309d6c44229401b566943f99834bad2e1e77144e5ddf935907d"
-    sha256 cellar: :any,                 arm64_ventura: "1d649a7e55b9f968ef794f97b48a391f736c3febd3b7cc317d324a3f45d3ef39"
-    sha256 cellar: :any,                 sonoma:        "dc39d915e139bffd788f2a8c97b5af10867f2ab06e7cca0d2c2a675178c3b1f6"
-    sha256 cellar: :any,                 ventura:       "1e1ec34fb1397f13a0dcd56cce603bf6ae60770c6e8ae3e553f96c129382c493"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "a5cb6a131e3f0e724ab22b11888efbde54a79387a07ae0e06fb7ecd39d320fdd"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "d100dbf43575d7c8807c4c862ae757f3a19278ddf0defe047213c66189840a34"
+    rebuild 1
+    sha256 cellar: :any,                 arm64_sequoia: "16e420eafe09ff6630c42143074b87d3c4645e11eeb542f6fb859911673aaaea"
+    sha256 cellar: :any,                 arm64_sonoma:  "2bf3bea23c8ab8ffd2fe58c0dcfbbce362201ea3bff1037c940e6a2abb2728bc"
+    sha256 cellar: :any,                 arm64_ventura: "728a90da56c97af9cb5228e08be60ea65363f01ad4b90a6b2d6ca88ef156a8c7"
+    sha256 cellar: :any,                 sonoma:        "f30ea9156cebcdba5c55cdcb0318ce486cfa5df3078a3a4c7a986fb846f33ce1"
+    sha256 cellar: :any,                 ventura:       "569bcd75e7aab19322fbfc28ff048c23013ac5eaa3c1bff470a1b19091e0ca56"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "732f3679d8817c854204a734b3dfa37715b623623045f56046a6502a3606e4e1"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "44fc9841f59a6d54fc954ad713f19436dd16db17381034a732a346457d552b33"
   end
 
   depends_on "cmake" => [:build, :test]

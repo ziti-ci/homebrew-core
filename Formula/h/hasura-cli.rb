@@ -7,12 +7,12 @@ class HasuraCli < Formula
   head "https://github.com/hasura/graphql-engine.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "3c168fb8c60738f168484fce057b62ab295aebe7274a031f0008d8d5dc4e91c4"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "3c168fb8c60738f168484fce057b62ab295aebe7274a031f0008d8d5dc4e91c4"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "3c168fb8c60738f168484fce057b62ab295aebe7274a031f0008d8d5dc4e91c4"
-    sha256 cellar: :any_skip_relocation, sonoma:        "26749938f27c8883846ca3a6a80ab79f8820d32920ad209c6e5be5dcd7ca5300"
-    sha256 cellar: :any_skip_relocation, ventura:       "26749938f27c8883846ca3a6a80ab79f8820d32920ad209c6e5be5dcd7ca5300"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "9f966901ebca05ee6f398ce905d3a5fa0886effbc927eae0ca5d5655c86d5508"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "f385b53709497e0cdcf9eb34e8322cfac34fc063bb406cc542a89b9d172c859c"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "f385b53709497e0cdcf9eb34e8322cfac34fc063bb406cc542a89b9d172c859c"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "f385b53709497e0cdcf9eb34e8322cfac34fc063bb406cc542a89b9d172c859c"
+    sha256 cellar: :any_skip_relocation, sonoma:        "310114abbf68ed17ec45b968303c43862c53cab6350cfd638475f76ffe277d11"
+    sha256 cellar: :any_skip_relocation, ventura:       "310114abbf68ed17ec45b968303c43862c53cab6350cfd638475f76ffe277d11"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "71c0b250d4b6e09f5d664f9b791792cf2bbb8f22881683b1566190bfcdcd3db6"
   end
 
   deprecate! date: "2024-10-29", because: "uses `node@18`, which is deprecated"

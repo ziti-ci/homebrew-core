@@ -13,6 +13,7 @@ class Folly < Formula
     sha256 cellar: :any,                 arm64_ventura: "7825b4cc841ec6bc93a3c2c55df516a519c685df7f309f0a28f19a597e60204b"
     sha256 cellar: :any,                 sonoma:        "fa05030f67e26ef277265c5b967a9e76ffd1973e7c0d488dea3310f42ea3884f"
     sha256 cellar: :any,                 ventura:       "5ce5de03c92c5b50b8ead58eaee3f2b2d118b44a3adbd39ef95fb274461836c7"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "e63128f38e72b70b4caccd116c71e1739da6db2ce7a3dffc9fd54ab98dcab316"
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "c780f8d459efdf69b3adbd9403de57dfbbc160b1eb8bc2190cc362181c4fc8d4"
   end
 

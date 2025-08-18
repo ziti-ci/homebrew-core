@@ -8,7 +8,7 @@ class ApifyCli < Formula
   no_autobump! because: :bumped_by_upstream
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "d575f7afa26af8a331af00b1834a442c64684cd9df3b92d7548f46fa3279e855"
+    sha256 cellar: :any_skip_relocation, all: "778eaf7f2ed8bbfc6a34841368b90bc6986da3c59c1a441b2b57532ca0c338d2"
   end
 
   depends_on "node"

@@ -8,14 +8,12 @@ class AvroCpp < Formula
   revision 1
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any,                 arm64_sequoia: "35545fc4240e13f8631fe71b1a9469092c15e2793c0d106d14fb34533db0e84b"
-    sha256 cellar: :any,                 arm64_sonoma:  "23c9ec83f2944a1d29735e620a4f64b7e0d9d94326c6dc9633383cfd53ebbecb"
-    sha256 cellar: :any,                 arm64_ventura: "425d77362d151dc0cb07d97bf7dc3588f340f568c8b5fcb23377f61510e47ea5"
-    sha256 cellar: :any,                 sonoma:        "82b98ee513025822b480a023234fe08f4f8d57fcab9b561c653562cde087c6a4"
-    sha256 cellar: :any,                 ventura:       "c04f7eef9843de29ca88223e70476d221cf017313b558c544bd4f47dc403c72d"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "22e8f9ba754a3dd5ed7ec1fe95b0c79b859bb9aa7fe95abc9f3340c7e8bda79d"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "c4c9fcfa73b1edfe173bd96bd36844029d48614ed5e8934498a2b67329da5183"
+    sha256 cellar: :any,                 arm64_sequoia: "c957d98325e78e380f0350d9c9e96edd4dedf5bc6e066cd3e1cc8149b50c8598"
+    sha256 cellar: :any,                 arm64_sonoma:  "b099c4cb40748b37a98350b66ecfaeeca27028731698f061a943aa677cea409b"
+    sha256 cellar: :any,                 arm64_ventura: "2bd5f3b4db84283a53fd5ad1378e64fe2be612ba26d542eef7678de2c3a9bc39"
+    sha256 cellar: :any,                 sonoma:        "1f97c3b6d551ac12a5709fc8677c5f9383d82f592a55884009fefd14f1c86829"
+    sha256 cellar: :any,                 ventura:       "ec11016e755c1c5ccae51e3e6f443a5051ace8c0649129102d047150fada63dc"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "3ae8f2eb793dc55a6deb6907c02445d54feb481060a4c0fdc8bbbbdd3cfb3737"
   end
 
   depends_on "cmake" => :build

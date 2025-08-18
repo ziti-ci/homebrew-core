@@ -1,8 +1,8 @@
 class Nickel < Formula
   desc "Better configuration for less"
   homepage "https://nickel-lang.org/"
-  url "https://github.com/tweag/nickel/archive/refs/tags/1.12.2.tar.gz"
-  sha256 "1161b901c238d78dfb2529fee878f37d69c4187ba10d5bd0e2723836d19f7c15"
+  url "https://github.com/tweag/nickel/archive/refs/tags/1.13.0.tar.gz"
+  sha256 "677a8400dc0cd86c1ec473423a169550104305667f2e5e9fe4a4a25d8f7d4973"
   license "MIT"
   head "https://github.com/tweag/nickel.git", branch: "master"
 

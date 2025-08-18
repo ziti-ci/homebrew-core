@@ -20,6 +20,7 @@ class Ompl < Formula
     sha256 cellar: :any,                 arm64_ventura: "25199cdb32d5a85df20abd180065b720537ea6b8d0d682d4720e298766e24d40"
     sha256 cellar: :any,                 sonoma:        "d2caaf1e0adcde01569c423f8f692b37d55a42cbd5546e0d52a716c7de4a427c"
     sha256 cellar: :any,                 ventura:       "b2f5b9f2f25a0056a86b1b02e0896c42dfd38eae59adf69145c04d7b658632c9"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "4f21390d59d902620a65ccdf2e147d9acd20675522738c4944eb7e0d7495f0dc"
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "7ccc4b78d4b67b691b831fbdad41064e0bc0ad2d583d9cfb5a11b42acb051f35"
   end
 

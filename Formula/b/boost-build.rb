@@ -20,6 +20,7 @@ class BoostBuild < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura: "777cf16f0dae799ee70b010775af19039180f9f4d5c2e2169aaa6bd19c42d2d0"
     sha256 cellar: :any_skip_relocation, sonoma:        "6816d550d826219ade18757195a78ff7636766def2e76a85de4e36347e56803b"
     sha256 cellar: :any_skip_relocation, ventura:       "01f05d1cc97c282b9c73eaee808b5816ba5238918d5a1a356bd242d69358cc5e"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "94cdd3d42c76dbed25b99daebe2ed2b771aaafb81e86e03ea90ec43b478e9806"
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "e581fb61742fc45c76ff67590d7ca781ab23085f92dfc6d4cc1ef8f1fee23c16"
   end
 

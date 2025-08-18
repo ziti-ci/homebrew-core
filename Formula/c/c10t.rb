@@ -9,13 +9,12 @@ class C10t < Formula
   no_autobump! because: :requires_manual_review
 
   bottle do
-    sha256 cellar: :any,                 arm64_sequoia: "b9cdeef70745ce25fb83a076585191b65f44a937075ed8f165e092c974550f96"
-    sha256 cellar: :any,                 arm64_sonoma:  "56bce6a79dc3ee8b07a0441e2b299dcb8ce0ba98d86e37af244519b8617914bc"
-    sha256 cellar: :any,                 arm64_ventura: "ba333295a388f76a8626f6c68548a02efa8262552aa9e88b4c66c6e1be556e67"
-    sha256 cellar: :any,                 sonoma:        "603ba928df95c77be7960e908145afb1a432174f953e366cacb584721b76158c"
-    sha256 cellar: :any,                 ventura:       "22ae09c19e427bfc4aa514a0de60dc3b6fb1013f6b862422539357e118b3f4e0"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "de79ed48a54bef77ca5a116f2adce08f91af261900d11fc4a38250b014ed1cac"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "4c4e4c6894ab5e4ab909a70fb123f6b788730806b1d388a59577ba8e2111e8e3"
+    sha256 cellar: :any,                 arm64_sequoia: "ca8927a16ee21b13da4ccf12f9cc600c01c4a692b35f09bb061c81f9dabe1650"
+    sha256 cellar: :any,                 arm64_sonoma:  "d785224c143b4df6cdf3ffc6e2a6cb5b8cb0cdfaf06ff6221a1d39b3ba71ad19"
+    sha256 cellar: :any,                 arm64_ventura: "c2056939dd01e763b8687f77646edba021fac9653ce866afa94144868934a04f"
+    sha256 cellar: :any,                 sonoma:        "e51497da78d4b2948f1d71a6ccf360d98bc6135465f059820f593f0091e2987e"
+    sha256 cellar: :any,                 ventura:       "aa46dea07945ea582d8046585db329c555ccca9136fe5ebf604f15e57746fd23"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "bd4e37bdf7a3cf012fb736e1b84539877c80ba65ccd2c812e26ee5df81ac95ba"
   end
 
   depends_on "cmake" => :build

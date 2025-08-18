@@ -13,6 +13,7 @@ class Edencommon < Formula
     sha256                               arm64_ventura: "fea0522aff1625048f56cf6ffe65ef020e618573c9fe85367b4494138c298981"
     sha256 cellar: :any,                 sonoma:        "2dec94a4c84b2df4f24d7f90713c25339e9320320beafb23a52714ca561c0689"
     sha256 cellar: :any,                 ventura:       "d2334e1528cc9a8e10d2f18ce903c348bd53a3e7d53b2538558aa29a14300403"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "264f2a3e524a9bd50b23dd69397949c3a110483ca4304c0ee8f87692c82c0289"
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "90b0de4161acd3496a0f16fae62633298e81820d11840ea88cc3855e17f54022"
   end
 

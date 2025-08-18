@@ -6,7 +6,7 @@ class GeminiCli < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "79b544ee33c02719591cfe405398873b937516a907bbf7b767a88080579a2487"
+    sha256 cellar: :any_skip_relocation, all: "466fe65c91f7314305ec774520f08ff1958d35968fa41f174b41ea6a1219db39"
   end
 
   depends_on "node"

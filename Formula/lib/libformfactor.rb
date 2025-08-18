@@ -71,7 +71,7 @@ class Libformfactor < Formula
       }
     CPP
 
-    system ENV.cxx, "-std=c++17", "fftest.cpp", "-I#{include}", "-L#{lib}", "-lformfactor", "-o", "fftest"
+    system ENV.cxx, "-std=c++20", "fftest.cpp", "-I#{include}", "-L#{lib}", "-lformfactor", "-o", "fftest"
     system "./fftest"
   end
 end

@@ -13,6 +13,7 @@ class AvroCpp < Formula
     sha256 cellar: :any,                 arm64_ventura: "2bd5f3b4db84283a53fd5ad1378e64fe2be612ba26d542eef7678de2c3a9bc39"
     sha256 cellar: :any,                 sonoma:        "1f97c3b6d551ac12a5709fc8677c5f9383d82f592a55884009fefd14f1c86829"
     sha256 cellar: :any,                 ventura:       "ec11016e755c1c5ccae51e3e6f443a5051ace8c0649129102d047150fada63dc"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "06cd6e6715712951deb88a37597234c495bf65fe08eb54a8b74310007780ac32"
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "3ae8f2eb793dc55a6deb6907c02445d54feb481060a4c0fdc8bbbbdd3cfb3737"
   end
 

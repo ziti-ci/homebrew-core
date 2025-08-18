@@ -11,13 +11,12 @@ class Cpprestsdk < Formula
   no_autobump! because: :requires_manual_review
 
   bottle do
-    sha256 cellar: :any,                 arm64_sequoia: "9640d605200200ae3d237d25c4331dbba2966b4581caff255f36a6ee4afe342b"
-    sha256 cellar: :any,                 arm64_sonoma:  "7be58510e079c21e8521cbd6d8abcc72aa21e6253050b60b47cc4796b7a80ed5"
-    sha256 cellar: :any,                 arm64_ventura: "18cca4c9e3e5beb9e777729aab6b8f0bada951a3e4ea7605137c810e248b9a1e"
-    sha256 cellar: :any,                 sonoma:        "fe4b73f785105a59749145114cba254a60729d80cb018e949fb1c2e1b32e84ff"
-    sha256 cellar: :any,                 ventura:       "e644df4a3ff8db4487036eafbdd520bcf9479b6fe120845c6aaf400a81938d43"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "07bc8aca63500a0b774984258086a28b5406b67814e9ce62e335b9e2edf8eb28"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "1703233871c829af74138257f48fa690602ea45f7d7084a0acbd163a4c6db494"
+    sha256 cellar: :any,                 arm64_sequoia: "308579b3f28e24db2678b00d3f2c0ca285fc47eacd8a2fddf35f2404562b142c"
+    sha256 cellar: :any,                 arm64_sonoma:  "01eb9f54ecdc29035230667a6beb5adc50940dc3f52169334394d1c7e8cc08c9"
+    sha256 cellar: :any,                 arm64_ventura: "3cd4baefa8081807c066f32526e4292e4692482ab7e59f3b101ed8176bf47213"
+    sha256 cellar: :any,                 sonoma:        "87bde89b79cd019ab64d60f98df68a31ea20cf6e1a615e6905a5fa57abc149f0"
+    sha256 cellar: :any,                 ventura:       "750ea4343b57683dc552cd5a5cae40944dd90595863fa27419e5dbd4fb4fd87f"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "24cc62c99aeecd2a910e156a9d39846f757b37d54b385740e6c2d3ea50adbd56"
   end
 
   depends_on "cmake" => :build

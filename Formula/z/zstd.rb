@@ -41,6 +41,7 @@ class Zstd < Formula
     # https://github.com/facebook/zstd/commit/db104f6e839cbef94df4df8268b5fecb58471274
     # Set it to `ON` to be explicit about the configuration.
     system "cmake", "-S", "build/cmake", "-B", "builddir",
+                    "-DBUILD_SHARED_LIBS=ON", # set CMake libzstd target to shared
                     "-DZSTD_PROGRAMS_LINK_SHARED=ON", # link `zstd` to `libzstd`
                     "-DZSTD_BUILD_CONTRIB=ON",
                     "-DCMAKE_INSTALL_RPATH=#{rpath}",

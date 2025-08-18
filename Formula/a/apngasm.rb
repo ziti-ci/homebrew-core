@@ -15,6 +15,7 @@ class Apngasm < Formula
     sha256                               arm64_ventura: "1eaf62b76489a8137ce94807e4620bb9858aa5fe14c2aae549ee21225549a6c8"
     sha256                               sonoma:        "f58b86508e14f1eec53218dab0e9ca5f4416fe48884f2be2439224f4763ec7bd"
     sha256                               ventura:       "9db2561881222680a4b2740f342ce45ec1ada0c4c95a211ad0bdb16c274fbc24"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "7799fbab3ad13774e371173cdf0c16d09506fa5e4bac755dd29d513e2d4be41e"
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "ab4cf496aea65ea1db6d5e1ac594e76e5f6e82454d8bc3e48fe03672d115bf3d"
   end
 

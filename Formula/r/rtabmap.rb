@@ -17,10 +17,11 @@ class Rtabmap < Formula
   no_autobump! because: :requires_manual_review
 
   bottle do
-    sha256 arm64_sonoma:  "94fa474a0202a514bd4dbceb16ca6a60a88985280fdd4c77e8d51b93ef9b69ad"
-    sha256 arm64_ventura: "da521aa54d7c7e6aa49dd429d7f6da66af128d318a6f9caaf18866d4dc6ed3e4"
-    sha256 sonoma:        "f61bbcdbdbda04c53967af9514e2321a76343c2ce73e45633424c9825fae8392"
-    sha256 ventura:       "893193d0069565cba40dbf3c230de078076e689b5c722a51f58552b54acee7aa"
+    sha256                               arm64_sonoma:  "e0ed9cba767dc19c92105319442f47c3c56c62ad6155cb08780df4ce0af26b35"
+    sha256                               arm64_ventura: "36712ba0210111b15c23ae533847a1751c03dc83ecae18ba3a2161aa5a124efc"
+    sha256                               sonoma:        "7513faa99af073805d541c665afa112cb0f2fa5d304672a028e28be1a8a3762a"
+    sha256                               ventura:       "a5959dca0f5b9f3ef5a7e7328d4010df661ec099c137384d099bf8a69a215167"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "8ab591544c0eab7a1885ef6b20e2be9d33c26ec1e93da956903ba12ca45dff25"
   end
 
   depends_on "cmake" => [:build, :test]

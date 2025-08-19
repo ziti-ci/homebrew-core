@@ -1,8 +1,8 @@
 class Gfold < Formula
   desc "Help keep track of your Git repositories, written in Rust"
   homepage "https://github.com/nickgerace/gfold"
-  url "https://github.com/nickgerace/gfold/archive/refs/tags/2025.7.0.tar.gz"
-  sha256 "07d20cd5b396c3a696e689086c7f9337c76c9aeeb57777dcd18a271a09039d27"
+  url "https://github.com/nickgerace/gfold/archive/refs/tags/2025.8.0.tar.gz"
+  sha256 "2501dd99082315b1ef465c2da1678c8dc2ba39cd8da9759333c0c05424f23b89"
   license "Apache-2.0"
   head "https://github.com/nickgerace/gfold.git", branch: "main"
 
@@ -30,6 +30,8 @@ class Gfold < Formula
   conflicts_with "coreutils", because: "both install `gfold` binaries"
 
   def install
+    rm ".cargo/config.toml" # avoid using mold linker on Linux
+
     ENV["LIBGIT2_NO_VENDOR"] = "1"
 
     system "cargo", "install", *std_cargo_args

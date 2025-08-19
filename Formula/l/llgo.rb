@@ -21,7 +21,7 @@ class Llgo < Formula
   end
 
   depends_on "bdw-gc"
-  depends_on "go"
+  depends_on "go@1.24"
   depends_on "libffi"
   depends_on "libuv"
   depends_on "lld@19"
@@ -62,7 +62,7 @@ class Llgo < Formula
 
     libexec.install "LICENSE", "README.md", "go.mod", "go.sum", "runtime"
 
-    path_deps = %w[lld llvm go pkgconf].map { |name| find_dep(name).opt_bin }
+    path_deps = %w[lld llvm go@1.24 pkgconf].map { |name| find_dep(name).opt_bin }
     script_env = { PATH: "#{path_deps.join(":")}:$PATH" }
 
     if OS.linux?
@@ -80,8 +80,9 @@ class Llgo < Formula
   end
 
   test do
-    goos = shell_output("go env GOOS").chomp
-    goarch = shell_output("go env GOARCH").chomp
+    go = find_dep("go@1.24")
+    goos = shell_output("#{go.opt_bin}/go env GOOS").chomp
+    goarch = shell_output("#{go.opt_bin}/go env GOARCH").chomp
     assert_equal "llgo v#{version} #{goos}/#{goarch}", shell_output("#{bin}/llgo version").chomp
 
     # Add bdw-gc library path to LD_LIBRARY_PATH, this is a workaround for the libgc.so not found issue
@@ -123,7 +124,7 @@ class Llgo < Formula
     (testpath/"go.mod").write <<~GOMOD
       module hello
     GOMOD
-    system "go", "get", "github.com/goplus/lib"
+    system go.opt_bin/"go", "get", "github.com/goplus/lib"
     # Test llgo run
     assert_equal "Hello LLGO by fmt.Println\n" \
                  "Hello LLGO by c.Printf\n",

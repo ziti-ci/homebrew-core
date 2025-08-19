@@ -2,10 +2,9 @@ class Mavsdk < Formula
   desc "API and library for MAVLink compatible systems written in C++17"
   homepage "https://mavsdk.mavlink.io"
   url "https://github.com/mavlink/MAVSDK.git",
-      tag:      "v3.7.2",
-      revision: "faf36edc6fda478a2c013698c78a42dfc663ef23"
+      tag:      "v3.10.0",
+      revision: "1bb1e1b56eedf3c0d3cd56f4795ce5dd9967b268"
   license "BSD-3-Clause"
-  revision 5
 
   livecheck do
     url :stable
@@ -49,14 +48,6 @@ class Mavsdk < Formula
     EOS
   end
 
-  # ver={version} && \
-  # curl -s https://raw.githubusercontent.com/mavlink/MAVSDK/v$ver/third_party/mavlink/CMakeLists.txt \
-  # | grep 'MAVLINK_GIT_HASH'
-  resource "mavlink" do
-    url "https://github.com/mavlink/mavlink.git",
-        revision: "5e3a42b8f3f53038f2779f9f69bd64767b913bb8"
-  end
-
   def install
     ENV.llvm_clang if OS.mac? && (DevelopmentTools.clang_build_version <= 1100)
 
@@ -66,16 +57,14 @@ class Mavsdk < Formula
     # Regenerate files to support newer protobuf
     system "tools/generate_from_protos.sh"
 
-    resource("mavlink").stage do
-      system "cmake", "-S", ".", "-B", "build",
-                      "-DPython_EXECUTABLE=#{which("python3.13")}",
-                      *std_cmake_args(install_prefix: libexec)
-      system "cmake", "--build", "build"
-      system "cmake", "--install", "build"
+    %w[mavlink picosha2 libmavlike].each do |dep|
+      system "cmake", "-S", "third_party/#{dep}", "-B", "build_#{dep}", *std_cmake_args(install_prefix: libexec)
+      system "cmake", "--build", "build_#{dep}"
+      system "cmake", "--install", "build_#{dep}"
     end
 
     # Source build adapted from
-    # https://mavsdk.mavlink.io/develop/en/contributing/build.html
+    # https://mavsdk.mavlink.io/main/en/cpp/guide/build.html
     args = %W[
       -DSUPERBUILD=OFF
       -DBUILD_SHARED_LIBS=ON
@@ -84,6 +73,7 @@ class Mavsdk < Formula
       -DVERSION_STR=v#{version}-#{tap.user}
       -DCMAKE_PREFIX_PATH=#{libexec}
       -DCMAKE_INSTALL_RPATH=#{rpath}
+      -DDEPS_INSTALL_PATH=#{libexec}
     ]
 
     system "cmake", "-S", ".", "-B", "build", *args, *std_cmake_args

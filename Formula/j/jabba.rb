@@ -30,14 +30,17 @@ class Jabba < Formula
   def caveats
     <<~EOS
       Add the following line to your ~/.bashrc or ~/.zshrc file:
-        [ -s "#{opt_pkgshare}/jabba.sh" ] && . "#{opt_pkgshare}/jabba.sh"
+        [ -s "#{opt_prefix}/jabba.sh" ] && . "#{opt_prefix}/jabba.sh"
 
       If you use the Fish shell then add the following line to your ~/.config/fish/config.fish:
-        [ -s "#{opt_pkgshare}/jabba.fish" ]; and source "#{opt_pkgshare}/jabba.fish"
+        [ -s "#{opt_prefix}/jabba.fish" ]; and source "#{opt_prefix}/jabba.fish"
     EOS
   end
 
   test do
+    assert_path_exists opt_prefix/"jabba.sh", "Caveat is outdated!"
+    assert_path_exists opt_prefix/"jabba.fish", "Caveat is outdated!"
+
     ENV["JABBA_HOME"] = testpath/"jabba_home"
     jdk_version = "zulu@17"
     system bin/"jabba", "install", jdk_version

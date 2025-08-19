@@ -2,8 +2,8 @@ class Ollama < Formula
   desc "Create, run, and share large language models (LLMs)"
   homepage "https://ollama.com/"
   url "https://github.com/ollama/ollama.git",
-      tag:      "v0.11.4",
-      revision: "f2e9c9aff5f59b21a5d9a9668408732b3de01e20"
+      tag:      "v0.11.5",
+      revision: "f804e8a46005b36e6f14577f4226cf2046abce12"
   license "MIT"
   head "https://github.com/ollama/ollama.git", branch: "main"
 
@@ -28,7 +28,7 @@ class Ollama < Formula
   depends_on "cmake" => :build
   depends_on "go" => :build
 
-  conflicts_with cask: "ollama"
+  conflicts_with cask: "ollama-app"
 
   def install
     # Silence tens of thousands of SDK warnings

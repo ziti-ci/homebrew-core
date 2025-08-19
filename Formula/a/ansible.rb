@@ -6,6 +6,7 @@ class Ansible < Formula
   url "https://files.pythonhosted.org/packages/e8/b3/01564da36375f35907c2ec6626d68f4d59e39e566c4b3f874f01d0d2ca19/ansible-11.9.0.tar.gz"
   sha256 "528ca5a408f11cf1fea00daea7570e68d40e167be38b90c119a7cb45729e4921"
   license "GPL-3.0-or-later"
+  revision 1
   head "https://github.com/ansible/ansible.git", branch: "devel"
 
   bottle do
@@ -72,13 +73,13 @@ class Ansible < Formula
   end
 
   resource "boto3" do
-    url "https://files.pythonhosted.org/packages/06/0d/1c5c70d2f72bba218c9ed166016e4a8e2fec4783399f98b2c007c510bda8/boto3-1.40.8.tar.gz"
-    sha256 "62959010dfd3d24157f73a8183fca7619ec97fb42ac400477006f7ecb9548d06"
+    url "https://files.pythonhosted.org/packages/41/19/2c4d140a7f99b5903b21b9ccd7253c71f147c346c3c632b2117444cf2d65/boto3-1.40.12.tar.gz"
+    sha256 "c6b32aee193fbd2eb84696d2b5b2410dcda9fb4a385e1926cff908377d222247"
   end
 
   resource "botocore" do
-    url "https://files.pythonhosted.org/packages/64/43/d83d03afe05d46249d0e65231f7b59eec7900f9af0e395888e4d46f99d04/botocore-1.40.8.tar.gz"
-    sha256 "954fa6e36020ebf58898de80a8f864ba13b74dc26994cf20ccfff2966724b0b9"
+    url "https://files.pythonhosted.org/packages/7d/b2/7933590fc5bca1980801b71e09db1a95581afff177cbf3c8a031d922885c/botocore-1.40.12.tar.gz"
+    sha256 "c6560578e799b47b762b7e555bd9c5dd5c29c5d23bd778a8a72e98c979b3c727"
   end
 
   resource "cachetools" do
@@ -129,11 +130,6 @@ class Ansible < Formula
   resource "durationpy" do
     url "https://files.pythonhosted.org/packages/9d/a4/e44218c2b394e31a6dd0d6b095c4e1f32d0be54c2a4b250032d717647bab/durationpy-0.10.tar.gz"
     sha256 "1fa6893409a6e739c9c72334fc65cca1f355dbdd93405d30f726deb5bde42fba"
-  end
-
-  resource "future" do
-    url "https://files.pythonhosted.org/packages/a7/b2/4140c69c6a66432916b26158687e821ba631a4c9273c474343badf84d3ba/future-1.0.0.tar.gz"
-    sha256 "bd2968309307861edae1458a4f8a4f3598c03be43b97521076aebf5d94c07b05"
   end
 
   resource "google-auth" do
@@ -237,8 +233,8 @@ class Ansible < Formula
   end
 
   resource "ntc-templates" do
-    url "https://files.pythonhosted.org/packages/ad/93/9cb55fac6752b9e9c18412521f95aef43adb7651719dfead1e000a5e3956/ntc_templates-7.9.0.tar.gz"
-    sha256 "df4b4520c3dd41b33ad0746ea7742c63b13eb2860579c7648c348167af5432e2"
+    url "https://files.pythonhosted.org/packages/db/c8/db26631c27c42ec4f93e148d1c0141f9d5ec83c6871bccdca39dba0a4c80/ntc_templates-8.0.0.tar.gz"
+    sha256 "44d94539f70709ade86b768147ddfdef0dbf1f58aebaf27fa9971c93941e2007"
   end
 
   resource "oauthlib" do
@@ -252,8 +248,8 @@ class Ansible < Formula
   end
 
   resource "openstacksdk" do
-    url "https://files.pythonhosted.org/packages/52/7a/07813f7501792e6bd7e79a75cd94a5bbce20c7fd2679822d44397201b00a/openstacksdk-4.6.0.tar.gz"
-    sha256 "e47e166c4732e9aea65228e618d490e4be5df06526a1b95e2d5995d7d0977d3d"
+    url "https://files.pythonhosted.org/packages/92/c2/a3521476b32fd0a25e842632d6e4d5cca401ff6e5c456d8a824194eb1f38/openstacksdk-4.7.0.tar.gz"
+    sha256 "ee6b853897b3eef347fa5042187174026ad181a95ff6e6933841f5f9c697b1bd"
   end
 
   resource "os-client-config" do
@@ -317,8 +313,8 @@ class Ansible < Formula
   end
 
   resource "pbr" do
-    url "https://files.pythonhosted.org/packages/01/d2/510cc0d218e753ba62a1bc1434651db3cd797a9716a0a66cc714cb4f0935/pbr-6.1.1.tar.gz"
-    sha256 "93ea72ce6989eb2eed99d0f75721474f69ad88128afdef5ac377eb797c4bf76b"
+    url "https://files.pythonhosted.org/packages/80/88/baf6b45d064271f19fefac7def6a030a893f912f430de0024dd595ced61f/pbr-7.0.0.tar.gz"
+    sha256 "cf4127298723dafbce3afd13775ccf3885be5d3c8435751b867f9a6a10b71a39"
   end
 
   resource "pexpect" do
@@ -442,8 +438,8 @@ class Ansible < Formula
   end
 
   resource "requests" do
-    url "https://files.pythonhosted.org/packages/e1/0a/929373653770d8a0d7ea76c37de6e41f11eb07559b103b1c02cafb3f7cf8/requests-2.32.4.tar.gz"
-    sha256 "27d0316682c8a29834d3264820024b62a36942083d52caf2f14c0591336d3422"
+    url "https://files.pythonhosted.org/packages/c9/74/b3ff8e6c8446842c3f5c837e9c3dfcfe2018ea6ecef224c710c85ef728f4/requests-2.32.5.tar.gz"
+    sha256 "dbba0bac56e100853db0ea71b82b4dfd5fe2bf6d3754a8893c3af500cec7d7cf"
   end
 
   resource "requests-credssp" do
@@ -522,8 +518,8 @@ class Ansible < Formula
   end
 
   resource "textfsm" do
-    url "https://files.pythonhosted.org/packages/b8/bf/c9147d29c5a3ff4c1c876e16ea02f6d4e4f35ba1bcbb2ac80a254924f0aa/textfsm-1.1.3.tar.gz"
-    sha256 "577ef278a9237f5341ae9b682947cefa4a2c1b24dbe486f94f2c95addc6504b5"
+    url "https://files.pythonhosted.org/packages/9e/87/2a93c2ced2a11fb26cfec3623894a9127b9b67ae3cfdd1778afa5cff576f/textfsm-2.1.0.tar.gz"
+    sha256 "45c18ff2b7c90163dfdff7e20d3f482514cc7aac26bc2547744e79dfa761e458"
   end
 
   resource "transitions" do

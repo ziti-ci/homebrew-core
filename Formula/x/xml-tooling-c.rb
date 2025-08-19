@@ -25,17 +25,33 @@ class XmlToolingC < Formula
 
   depends_on "pkgconf" => :build
   depends_on "boost"
+  depends_on "curl"
   depends_on "log4shib"
   depends_on "openssl@3"
   depends_on "xerces-c"
   depends_on "xml-security-c"
 
-  uses_from_macos "curl"
   uses_from_macos "zlib"
 
   def install
     ENV.cxx11
     system "./configure", "--disable-silent-rules", *std_configure_args
     system "make", "install"
+  end
+
+  test do
+    (testpath/"test.cpp").write <<~CPP
+      #include <xmltooling/XMLToolingConfig.h>
+      int main() {
+        xmltooling::XMLToolingConfig::getConfig().log_config("CRIT");
+        xmltooling::XMLToolingConfig::getConfig().init();
+        xmltooling::XMLToolingConfig::getConfig().getPathResolver();
+        return 0;
+      }
+    CPP
+    system ENV.cxx, "-std=c++11", "test.cpp", "-o", "test",
+                    "-L#{lib}", "-lxmltooling", "-L#{Formula["xerces-c"].opt_lib}", "-lxerces-c"
+    output = shell_output("./test 2>&1")
+    refute_match("libcurl lacks OpenSSL-specific options", output)
   end
 end

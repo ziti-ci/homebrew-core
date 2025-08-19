@@ -24,6 +24,10 @@ class Atool < Formula
   end
 
   def install
+    # Build an `:all` bottle.
+    files = %w[ChangeLog README]
+    files.each { |file| rm buildpath/file }
+
     system "./configure", "--prefix=#{prefix}"
     system "make", "install"
   end

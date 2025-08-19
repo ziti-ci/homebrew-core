@@ -1,8 +1,8 @@
 class Bitrise < Formula
   desc "Command-line automation tool"
   homepage "https://github.com/bitrise-io/bitrise"
-  url "https://github.com/bitrise-io/bitrise/archive/refs/tags/v2.33.0.tar.gz"
-  sha256 "5775d12868b03ec035f9e6942bcc3ecb6f321cf63c8ddfd99daca52ca01535af"
+  url "https://github.com/bitrise-io/bitrise/archive/refs/tags/v2.33.2.tar.gz"
+  sha256 "7d6510c5b35e82cf74a50e52287568ff227ac0bc3f486eb604be70913cbcb108"
   license "MIT"
   head "https://github.com/bitrise-io/bitrise.git", branch: "master"
 

@@ -22,6 +22,7 @@ class WhisperCpp < Formula
   end
 
   depends_on "cmake" => :build
+  depends_on "sdl2"
 
   def install
     args = %W[
@@ -30,6 +31,7 @@ class WhisperCpp < Formula
       -DGGML_METAL=#{(OS.mac? && !Hardware::CPU.intel?) ? "ON" : "OFF"}
       -DGGML_METAL_EMBED_LIBRARY=#{OS.mac? ? "ON" : "OFF"}
       -DGGML_NATIVE=#{build.bottle? ? "OFF" : "ON"}
+      -DWHISPER_SDL2=ON
       -DWHISPER_BUILD_EXAMPLES=ON
       -DWHISPER_BUILD_TESTS=OFF
       -DWHISPER_BUILD_SERVER=OFF

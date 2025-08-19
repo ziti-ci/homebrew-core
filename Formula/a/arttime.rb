@@ -32,6 +32,6 @@ class Arttime < Formula
 
   test do
     # arttime is a GUI application
-    system bin/"arttime", "--version"
+    assert_match version.to_s, shell_output("#{bin}/arttime --version")
   end
 end

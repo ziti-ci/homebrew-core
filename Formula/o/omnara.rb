@@ -3,8 +3,8 @@ class Omnara < Formula
 
   desc "Talk to Your AI Agents from Anywhere"
   homepage "https://omnara.com/"
-  url "https://files.pythonhosted.org/packages/49/57/af3e082f36ed7a450776580b4011f3aede952267610b06fd353a55365968/omnara-1.5.2.tar.gz"
-  sha256 "39edca0d3a2bf10ec91c1a5c66a3c114d24eea004fb63b2662d59b0bbdb257d4"
+  url "https://files.pythonhosted.org/packages/dc/ec/6d1d634bf37da98e7c2dd54c55f11d71b1faf0a0f27576523433c1dd8c18/omnara-1.5.3.tar.gz"
+  sha256 "c67b1b3071410b5e5797885f70a946b2f7270dfb3e980a6acbaa233cb34652ed"
   license "Apache-2.0"
 
   bottle do
@@ -149,8 +149,8 @@ class Omnara < Formula
   end
 
   resource "jsonschema" do
-    url "https://files.pythonhosted.org/packages/d5/00/a297a868e9d0784450faa7365c2172a7d6110c763e30ba861867c32ae6a9/jsonschema-4.25.0.tar.gz"
-    sha256 "e63acf5c11762c0e6672ffb61482bdf57f0876684d8d249c0fe2d730d48bc55f"
+    url "https://files.pythonhosted.org/packages/74/69/f7185de793a29082a9f3c7728268ffb31cb5095131a9c139a74078e27336/jsonschema-4.25.1.tar.gz"
+    sha256 "e4a9655ce0da0c0b67a085847e00a3a51449e1157f4f75e9fb5aa545e122eb85"
   end
 
   resource "jsonschema-path" do
@@ -279,8 +279,8 @@ class Omnara < Formula
   end
 
   resource "requests" do
-    url "https://files.pythonhosted.org/packages/e1/0a/929373653770d8a0d7ea76c37de6e41f11eb07559b103b1c02cafb3f7cf8/requests-2.32.4.tar.gz"
-    sha256 "27d0316682c8a29834d3264820024b62a36942083d52caf2f14c0591336d3422"
+    url "https://files.pythonhosted.org/packages/c9/74/b3ff8e6c8446842c3f5c837e9c3dfcfe2018ea6ecef224c710c85ef728f4/requests-2.32.5.tar.gz"
+    sha256 "dbba0bac56e100853db0ea71b82b4dfd5fe2bf6d3754a8893c3af500cec7d7cf"
   end
 
   resource "rfc3339-validator" do

@@ -6,6 +6,7 @@ class Asciinema < Formula
   url "https://files.pythonhosted.org/packages/f1/19/45b405438e90ad5b9618f3df62e9b3edaa2b115b530e60bd4b363465c704/asciinema-2.4.0.tar.gz"
   sha256 "828e04c36ba622a7b8f8f912c8f0c1329538b6c7ed1c0d1b131bbbfe3a221707"
   license "GPL-3.0-only"
+  revision 1
   head "https://github.com/asciinema/asciinema.git", branch: "develop"
 
   bottle do

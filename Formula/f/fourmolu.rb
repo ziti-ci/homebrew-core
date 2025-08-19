@@ -1,10 +1,10 @@
 class Fourmolu < Formula
   desc "Formatter for Haskell source code"
   homepage "https://github.com/fourmolu/fourmolu"
-  url "https://github.com/fourmolu/fourmolu/archive/refs/tags/v0.18.0.0.tar.gz"
-  sha256 "9aa651611f15091261e1de9322ff7726954711172cec17bf61b179d3cbd70c1b"
+  url "https://github.com/fourmolu/fourmolu/archive/refs/tags/v0.19.0.0.tar.gz"
+  sha256 "0ca870594e87ffa19fd39e49a65c45d4171f31b06bf03b6fd62717d7da93f323"
   license "BSD-3-Clause"
-  head "https://github.com/fourmolu/fourmolu.git", branch: "master"
+  head "https://github.com/fourmolu/fourmolu.git", branch: "main"
 
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_sequoia: "a2d9ce758465785f3ca94fa81e0eb51ce18d0cc967608fa08178d1a2f6f4e61c"

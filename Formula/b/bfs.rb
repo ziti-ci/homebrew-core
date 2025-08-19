@@ -14,6 +14,7 @@ class Bfs < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "940a33970935154d7cf1c7e12780f74090a7d4385c54e05b06e87aebd6784fc8"
   end
 
+  depends_on "pkgconf" => :build
   depends_on "oniguruma"
 
   on_macos do
@@ -38,6 +39,6 @@ class Bfs < Formula
   test do
     touch "foo_file"
     touch "test_file"
-    assert_equal "./test_file", shell_output("#{bin}/bfs -name 'test*' -depth 1").chomp
+    assert_equal "./test_file", shell_output("#{bin}/bfs -name 'test*' -regextype emacs -depth 1").chomp
   end
 end

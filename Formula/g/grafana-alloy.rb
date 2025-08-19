@@ -1,8 +1,8 @@
 class GrafanaAlloy < Formula
   desc "OpenTelemetry Collector distribution with programmable pipelines"
   homepage "https://grafana.com/oss/alloy-opentelemetry-collector/"
-  url "https://github.com/grafana/alloy/archive/refs/tags/v1.10.1.tar.gz"
-  sha256 "e0e7f06441081491b70cb52598158d4204e17dcfbe4eb626272da63cea39c573"
+  url "https://github.com/grafana/alloy/archive/refs/tags/v1.10.2.tar.gz"
+  sha256 "ed170622458600dd335dbdea12cf88a6bee33df1949a58b31a707b1a84f65b0f"
   license "Apache-2.0"
   head "https://github.com/grafana/alloy.git", branch: "main"
 

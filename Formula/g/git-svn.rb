@@ -1,16 +1,14 @@
 class GitSvn < Formula
   desc "Bidirectional operation between a Subversion repository and Git"
   homepage "https://git-scm.com"
-  url "https://mirrors.edge.kernel.org/pub/software/scm/git/git-2.50.1.tar.xz"
-  sha256 "7e3e6c36decbd8f1eedd14d42db6674be03671c2204864befa2a41756c5c8fc4"
+  url "https://mirrors.edge.kernel.org/pub/software/scm/git/git-2.51.0.tar.xz"
+  sha256 "60a7c2251cc2e588d5cd87bae567260617c6de0c22dca9cdbfc4c7d2b8990b62"
   license "GPL-2.0-only"
   head "https://github.com/git/git.git", branch: "master"
 
   livecheck do
     formula "git"
   end
-
-  no_autobump! because: :requires_manual_review
 
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_sequoia: "9443c387440b428a519dc695000202aeab8d83eb61b76dcddee3021850827735"

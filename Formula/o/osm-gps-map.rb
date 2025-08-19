@@ -21,6 +21,12 @@ class OsmGpsMap < Formula
       url "https://raw.githubusercontent.com/void-linux/void-packages/f6b0cf8ca04678301773327b9a2d5efb043dae3d/srcpkgs/libosmgpsmap/patches/libsoup-3.patch"
       sha256 "045c8c9a6a317aea89158154818399815525f5b5cb0340332f92b250d73e5bc6"
     end
+
+    # Backport fix for add_point
+    patch do
+      url "https://github.com/nzjrs/osm-gps-map/commit/639ea5e02d2cb47cbc15554d61b1ba6b0ee073b6.patch?full_index=1"
+      sha256 "7979e6d050e83b2e0f84c3e9671828c59de36d491b497a1b780b62bcc9ea1f69"
+    end
   end
 
   no_autobump! because: :requires_manual_review

@@ -1,5 +1,5 @@
 class Rye < Formula
-  desc "Package Management Solution for Python (consider the successor \"uv\" instead)"
+  desc "Package Management Solution for Python"
   homepage "https://rye.astral.sh/"
   url "https://github.com/astral-sh/rye/archive/refs/tags/0.44.0.tar.gz"
   sha256 "6ef86ccba82b59edfc4f6deba39be6394e7866fe2250596b96124c20327f0581"
@@ -22,6 +22,9 @@ class Rye < Formula
     sha256 cellar: :any_skip_relocation, arm64_linux:   "ae95a33be1b6eab2d8e8e17e95bdb14e6b23043bfb775094f76ce61964afc2a8"
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "2c57f18a9a1dd66aca420ceb0bdd53d91915bfd9b93298b5cfa12411af9558a7"
   end
+
+  # https://github.com/astral-sh/rye/commit/62ec9edbe471958a05a70418b19f3acd54f0484d
+  deprecate! date: "2025-08-18", because: :unmaintained
 
   depends_on "pkgconf" => :build
   depends_on "rust" => :build

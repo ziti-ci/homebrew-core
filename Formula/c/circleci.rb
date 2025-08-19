@@ -1,10 +1,10 @@
 class Circleci < Formula
   desc "Enables you to reproduce the CircleCI environment locally"
-  homepage "https://circleci.com/docs/2.0/local-cli/"
+  homepage "https://circleci.com/docs/guides/toolkit/local-cli/"
   # Updates should be pushed no more frequently than once per week.
   url "https://github.com/CircleCI-Public/circleci-cli.git",
-      tag:      "v0.1.32638",
-      revision: "2bfc35c9de336e78ca2bc1f806edad775e0b64ee"
+      tag:      "v0.1.33163",
+      revision: "b0dfb51968357e70919b31ada769f5aa60886ad3"
   license "MIT"
   head "https://github.com/CircleCI-Public/circleci-cli.git", branch: "main"
 

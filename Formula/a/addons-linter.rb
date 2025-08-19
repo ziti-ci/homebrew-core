@@ -38,7 +38,6 @@ class AddonsLinter < Formula
         }
       }
     JSON
-
     output = shell_output("#{bin}/addons-linter #{testpath}/manifest.json 2>&1")
     assert_match "BAD_ZIPFILE   Corrupt ZIP", output
   end

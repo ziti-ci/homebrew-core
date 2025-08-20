@@ -4,6 +4,7 @@ class Cppinsights < Formula
   url "https://github.com/andreasfertig/cppinsights/archive/refs/tags/v_20.1.tar.gz"
   sha256 "672ecc237bc0231510025c9662c0f4880feebb076af46d16840adfb16e8fc4e8"
   license "MIT"
+  revision 1
 
   bottle do
     sha256 cellar: :any,                 arm64_sequoia: "a633e7409562a57dcb44c9d1dbc216b3aa44ad3cb2a9424ddd3c00380ed06570"
@@ -16,18 +17,26 @@ class Cppinsights < Formula
   end
 
   depends_on "cmake" => :build
-  depends_on "llvm"
+  depends_on "llvm@20"
 
-  fails_with :clang do
-    build 1500
-    cause "Requires Clang > 15.0"
-  end
+  # TODO: Restore compiler selection when using unversioned `llvm`
+  # fails_with :clang do
+  #   build 1500
+  #   cause "Requires Clang > 15.0"
+  # end
 
   def install
-    ENV.llvm_clang if OS.mac? && DevelopmentTools.clang_build_version <= 1500
+    llvm = Formula["llvm@20"]
+
+    # TODO: Restore ENV.llvm_clang when using unversioned `llvm`
+    if OS.mac? && DevelopmentTools.clang_build_version <= 1500
+      ENV["CC"] = llvm.opt_bin/"clang"
+      ENV["CXX"] = llvm.opt_bin/"clang++"
+      inreplace "CMakeLists.txt", "add_definitions(-Werror)", ""
+    end
 
     args = %W[
-      -DINSIGHTS_LLVM_CONFIG=#{Formula["llvm"].opt_bin}/llvm-config
+      -DINSIGHTS_LLVM_CONFIG=#{llvm.opt_bin}/llvm-config
       -DINSIGHTS_USE_SYSTEM_INCLUDES=OFF
     ]
 

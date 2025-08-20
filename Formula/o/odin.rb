@@ -6,6 +6,7 @@ class Odin < Formula
       revision: "accdd7c2af4c2b9f4a0b923a47df4c2eb6074b0a"
   version "2025-08"
   license "BSD-3-Clause"
+  revision 1
   head "https://github.com/odin-lang/Odin.git", branch: "master"
 
   no_autobump! because: :incompatible_version_format
@@ -21,8 +22,8 @@ class Odin < Formula
   end
 
   depends_on "glfw"
-  depends_on "lld"
-  depends_on "llvm"
+  depends_on "lld@20"
+  depends_on "llvm@20"
   depends_on "raylib"
 
   resource "raygui" do

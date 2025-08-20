@@ -4,6 +4,7 @@ class Ldc < Formula
   url "https://github.com/ldc-developers/ldc/releases/download/v1.41.0/ldc-1.41.0-src.tar.gz"
   sha256 "af52818b60706106fb8bca2024685c54eddce929edccae718ad9fbcf689f222f"
   license "BSD-3-Clause"
+  revision 1
   head "https://github.com/ldc-developers/ldc.git", branch: "master"
 
   livecheck do
@@ -24,8 +25,8 @@ class Ldc < Formula
   depends_on "cmake" => :build
   depends_on "libconfig" => :build
   depends_on "pkgconf" => :build
-  depends_on "lld" => :test
-  depends_on "llvm"
+  depends_on "lld@20" => :test
+  depends_on "llvm@20"
   depends_on "zstd"
 
   uses_from_macos "libxml2" => :build

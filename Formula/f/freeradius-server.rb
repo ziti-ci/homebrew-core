@@ -1,10 +1,9 @@
 class FreeradiusServer < Formula
   desc "High-performance and highly configurable RADIUS server"
   homepage "https://freeradius.org/"
-  url "https://github.com/FreeRADIUS/freeradius-server/archive/refs/tags/release_3_2_7.tar.gz"
-  sha256 "ebb906a236a8db71ba96875c9e53405bc8493e363c3815af65ae829cb6c288a3"
+  url "https://github.com/FreeRADIUS/freeradius-server/archive/refs/tags/release_3_2_8.tar.gz"
+  sha256 "7a42562d4c1b0dfd67783b995b33df6ea0983573b2a3b2b99c368dda647e562c"
   license all_of: ["GPL-2.0-or-later", "LGPL-2.1-or-later"]
-  revision 1
   head "https://github.com/FreeRADIUS/freeradius-server.git", branch: "master"
 
   livecheck do
@@ -12,7 +11,7 @@ class FreeradiusServer < Formula
     regex(/^release[._-](\d+(?:[._]\d+)+)$/i)
   end
 
-  no_autobump! because: :requires_manual_review
+  no_autobump! because: :incompatible_version_format
 
   bottle do
     sha256 arm64_sequoia: "b9243e933ae4e539f4d8c824db8fe7af52bb72486ccb6e3af8632da30085dd6f"
@@ -39,12 +38,6 @@ class FreeradiusServer < Formula
   on_linux do
     depends_on "gdbm"
     depends_on "readline"
-  end
-
-  # Support openssl 3.5.2+: https://github.com/FreeRADIUS/freeradius-server/issues/5631
-  patch do
-    url "https://github.com/FreeRADIUS/freeradius-server/commit/59e262f1134fef8d53d15ae963885a08c9ea8315.patch?full_index=1"
-    sha256 "5ec22a8cf75b9d1685eadea6dba24eae1a5617f39dbde130d58b2866cabb6763"
   end
 
   def install

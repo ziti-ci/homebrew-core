@@ -4,6 +4,7 @@ class Wasmedge < Formula
   url "https://github.com/WasmEdge/WasmEdge/releases/download/0.15.0/WasmEdge-0.15.0-src.tar.gz"
   sha256 "17915c4d047bc7a02aca862f4852101ec8d35baab7b659593687ab8c84b00938"
   license "Apache-2.0"
+  revision 1
   head "https://github.com/WasmEdge/WasmEdge.git", branch: "master"
 
   bottle do
@@ -18,18 +19,15 @@ class Wasmedge < Formula
 
   depends_on "cmake" => :build
   depends_on "fmt"
-  depends_on "lld"
-  depends_on "llvm"
+  depends_on "lld@20"
+  depends_on "llvm@20"
   depends_on "spdlog"
 
-  uses_from_macos "zlib"
-
-  on_linux do
-    depends_on "zstd"
-  end
-
   def install
-    system "cmake", "-S", ".", "-B", "build", *std_cmake_args
+    # Use CMAKE_BUILD_WITH_INSTALL_RPATH to keep versioned LLVM in RPATH on Linux
+    args = ["-DCMAKE_BUILD_WITH_INSTALL_RPATH=ON"] if OS.linux?
+
+    system "cmake", "-S", ".", "-B", "build", *args, *std_cmake_args
     system "cmake", "--build", "build"
     system "cmake", "--install", "build"
   end

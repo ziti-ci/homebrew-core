@@ -1,8 +1,8 @@
 class Odbc2parquet < Formula
   desc "CLI to query an ODBC data source and write the result into a Parquet file"
   homepage "https://github.com/pacman82/odbc2parquet"
-  url "https://github.com/pacman82/odbc2parquet/archive/refs/tags/v8.1.1.tar.gz"
-  sha256 "d245d8b657bef162dc3d6ace262950d8b2e9624f4ed8df74afe1ecc45eac95ec"
+  url "https://github.com/pacman82/odbc2parquet/archive/refs/tags/v8.1.2.tar.gz"
+  sha256 "2c0fd64fe00926a605218bbfc448c759e32698e369c2e6daeea3d8bebe8367c5"
   license "MIT"
   head "https://github.com/pacman82/odbc2parquet.git", branch: "main"
 

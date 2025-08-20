@@ -2,8 +2,8 @@ class KeepSorted < Formula
   desc "Language-agnostic formatter that sorts selected lines"
   homepage "https://github.com/google/keep-sorted"
   url "https://github.com/google/keep-sorted.git",
-      tag:      "v0.7.0",
-      revision: "ee5e55fd2841386d1236f3e8153b991a8e366f36"
+      tag:      "v0.7.1",
+      revision: "c71803fd297b5736f3bfab1cfd84424ca52e961a"
   license "Apache-2.0"
   head "https://github.com/google/keep-sorted.git", branch: "main"
 

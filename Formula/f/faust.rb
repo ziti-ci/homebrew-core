@@ -4,6 +4,7 @@ class Faust < Formula
   url "https://github.com/grame-cncm/faust/releases/download/2.81.2/faust-2.81.2.tar.gz"
   sha256 "c91afe17cc01f1f75e4928dc2d2971dd83b37d10be991dda7e8b94ffab1f1ac9"
   license "GPL-2.0-or-later"
+  revision 1
 
   # Upstream creates releases that use a stable tag (e.g., `v1.2.3`) but are
   # labeled as "pre-release" on GitHub before the version is released, so it's
@@ -27,7 +28,7 @@ class Faust < Formula
   depends_on "pkgconf" => :build
   depends_on "libmicrohttpd"
   depends_on "libsndfile"
-  depends_on "llvm"
+  depends_on "llvm@20"
 
   def install
     # `brew linkage` doesn't like the pre-built Android libsndfile.so for faust2android.

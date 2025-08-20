@@ -4,6 +4,7 @@ class Autorest < Formula
   url "https://registry.npmjs.org/autorest/-/autorest-3.7.2.tgz"
   sha256 "4bd274127b60c276832127fe738f0f7f25ee56b190395dc4d594ca507659ccd2"
   license "MIT"
+  revision 1
 
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_sequoia: "6840e5f417fa145ce6576a18e7c82e45f866ea344555b58c06a35ac88fa47b66"

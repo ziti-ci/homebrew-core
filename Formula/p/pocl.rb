@@ -1,10 +1,14 @@
 class Pocl < Formula
   desc "Portable Computing Language"
   homepage "https://portablecl.org/"
-  url "https://github.com/pocl/pocl/archive/refs/tags/v7.0.tar.gz"
-  sha256 "f55caba8c3ce12bec7b683ce55104c7555e19457fc2ac72c6f035201e362be08"
   license "MIT"
-  head "https://github.com/pocl/pocl.git", branch: "main"
+  revision 1
+
+  stable do
+    url "https://github.com/pocl/pocl/archive/refs/tags/v7.0.tar.gz"
+    sha256 "f55caba8c3ce12bec7b683ce55104c7555e19457fc2ac72c6f035201e362be08"
+    depends_on "llvm@20" # TODO: use `llvm` next release, https://github.com/pocl/pocl/pull/1982
+  end
 
   livecheck do
     url :stable
@@ -21,11 +25,15 @@ class Pocl < Formula
     sha256 x86_64_linux:  "33874a69f7385e19a0b117294d85da156090fd7f5b784302bc2cf25769195374"
   end
 
+  head do
+    url "https://github.com/pocl/pocl.git", branch: "main"
+    depends_on "llvm"
+  end
+
   depends_on "cmake" => :build
   depends_on "opencl-headers" => :build
   depends_on "pkgconf" => :build
   depends_on "hwloc"
-  depends_on "llvm"
   depends_on "opencl-icd-loader"
   uses_from_macos "python" => :build
 

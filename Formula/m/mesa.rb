@@ -3,8 +3,8 @@ class Mesa < Formula
 
   desc "Graphics Library"
   homepage "https://www.mesa3d.org/"
-  url "https://archive.mesa3d.org/mesa-25.2.0.tar.xz"
-  sha256 "7c726b21c074d14d31d253d638b741422f3c0a497ce7f1b4aaaa917d10bd8d4f"
+  url "https://archive.mesa3d.org/mesa-25.2.1.tar.xz"
+  sha256 "c124372189d35f48e049ee503029171c68962c580971cb86d968a6771c965ba4"
   license all_of: [
     "MIT",
     "Apache-2.0", # include/{EGL,GLES*,vk_video,vulkan}, src/egl/generate/egl.xml, src/mapi/glapi/registry/gl.xml
@@ -158,7 +158,6 @@ class Mesa < Formula
         -Dgles1=enabled
         -Dgles2=enabled
         -Dglx=dri
-        -Dintel-clc=enabled
         -Dintel-rt=enabled
         -Dlmsensors=enabled
         -Dmicrosoft-clc=disabled

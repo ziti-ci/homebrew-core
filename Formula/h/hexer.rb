@@ -1,16 +1,14 @@
 class Hexer < Formula
   desc "Hex editor for the terminal with vi-like interface"
   homepage "https://devel.ringlet.net/editors/hexer/"
-  url "https://devel.ringlet.net/files/editors/hexer/hexer-1.0.6.tar.gz"
-  sha256 "fff00fbb0eb0eee959c08455861916ea672462d9bcc5580207eb41123e188129"
+  url "https://devel.ringlet.net/files/editors/hexer/hexer-1.0.7.tar.gz"
+  sha256 "4e4ee48f7c9b0f62ecf5e5012d280bcd6f2bbd35e77facb769ac912278f4ed08"
   license "BSD-3-Clause"
 
   livecheck do
     url :homepage
     regex(/href=.*?hexer[._-]v?(\d+(?:\.\d+)+)\.t/i)
   end
-
-  no_autobump! because: :requires_manual_review
 
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_sequoia:  "bd7a6cbea17a087bc8c9f58fbd4dcc595ea3c1f65760a6c1f7c34d9e4c2c7b1c"

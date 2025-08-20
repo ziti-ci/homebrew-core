@@ -1,8 +1,8 @@
 class CucumberRuby < Formula
   desc "Cucumber for Ruby"
   homepage "https://cucumber.io"
-  url "https://github.com/cucumber/cucumber-ruby/archive/refs/tags/v10.0.0.tar.gz"
-  sha256 "59550828a178de1d5b04611d1013e64319b6395ca3fc3995fcc448a3d0d054ce"
+  url "https://github.com/cucumber/cucumber-ruby/archive/refs/tags/v10.1.0.tar.gz"
+  sha256 "7c6adb2d3124842c5dd78e27f0e620a5d780bee152144c8eccdc2b57924941ad"
   license "MIT"
 
   livecheck do
@@ -50,8 +50,8 @@ class CucumberRuby < Formula
   end
 
   resource "logger" do
-    url "https://rubygems.org/gems/logger-1.6.4.gem"
-    sha256 "b627b91c922231050932e7bf8ee886fe54790ba2238a468ead52ba21911f2ee7"
+    url "https://rubygems.org/gems/logger-1.7.0.gem"
+    sha256 "196edec7cc44b66cfb40f9755ce11b392f21f7967696af15d274dde7edff0203"
   end
 
   resource "diff-lcs" do
@@ -65,8 +65,8 @@ class CucumberRuby < Formula
   end
 
   resource "cucumber-html-formatter" do
-    url "https://rubygems.org/gems/cucumber-html-formatter-21.10.1.gem"
-    sha256 "bc59de683fe84fb3403ca9ec5cd208afcf53aedda7be1844e3b3698e9c2f1134"
+    url "https://rubygems.org/gems/cucumber-html-formatter-21.14.0.gem"
+    sha256 "7fbaeb38c76e982848cf144136544853102ed906b6e54070bba409e505742267"
   end
 
   resource "bigdecimal" do
@@ -85,13 +85,13 @@ class CucumberRuby < Formula
   end
 
   resource "cucumber-gherkin" do
-    url "https://rubygems.org/gems/cucumber-gherkin-30.0.4.gem"
-    sha256 "fe7b3f2ff19e42a41748f3987bb99b7241b14324b30d81de01fb0f36a4628c10"
+    url "https://rubygems.org/gems/cucumber-gherkin-32.2.0.gem"
+    sha256 "a33699d3be9c7fe1b6d4a26c1aa18150f274a90c871a6bc1811d5795a52e4ad6"
   end
 
   resource "cucumber-core" do
-    url "https://rubygems.org/gems/cucumber-core-15.1.0.gem"
-    sha256 "2d5c56425d5f663a58647e12969288d555fd78a1e18bfe34d1957f0b3c4134b7"
+    url "https://rubygems.org/gems/cucumber-core-15.2.0.gem"
+    sha256 "18e45bd05d0fa44342b9f39d89b07a832063922d946c854e87013f94461b72a8"
   end
 
   resource "cucumber-ci-environment" do
@@ -105,8 +105,8 @@ class CucumberRuby < Formula
   end
 
   resource "base64" do
-    url "https://rubygems.org/gems/base64-0.2.0.gem"
-    sha256 "0f25e9b21a02a0cc0cea8ef92b2041035d39350946e8789c562b2d1a3da01507"
+    url "https://rubygems.org/gems/base64-0.3.0.gem"
+    sha256 "27337aeabad6ffae05c265c450490628ef3ebd4b67be58257393227588f5a97b"
   end
 
   def install

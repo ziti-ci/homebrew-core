@@ -1,8 +1,8 @@
 class Darklua < Formula
   desc "Command-line tool that transforms Lua code"
   homepage "https://darklua.com/"
-  url "https://github.com/seaofvoices/darklua/archive/refs/tags/v0.17.0.tar.gz"
-  sha256 "71de9e35c80b2a3476fda1597530d207fe9dd9b0910e3ce96171eddea1920d69"
+  url "https://github.com/seaofvoices/darklua/archive/refs/tags/v0.17.1.tar.gz"
+  sha256 "91551c27342170b95fe46dcd07b07cedb09a8cbb569cd6560419e5a8937e2d97"
   license "MIT"
   head "https://github.com/seaofvoices/darklua.git", branch: "main"
 

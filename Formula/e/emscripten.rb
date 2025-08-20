@@ -1,14 +1,23 @@
 class Emscripten < Formula
   desc "LLVM bytecode to JavaScript compiler"
   homepage "https://emscripten.org/"
-  url "https://github.com/emscripten-core/emscripten/archive/refs/tags/4.0.13.tar.gz"
-  sha256 "05501a883b12379bd51bf824ddde1dbb457cb270bc0dd02520377e7b636a30f2"
   license all_of: [
     "Apache-2.0", # binaryen
     "Apache-2.0" => { with: "LLVM-exception" }, # llvm
     any_of: ["MIT", "NCSA"], # emscripten
   ]
   head "https://github.com/emscripten-core/emscripten.git", branch: "main"
+
+  stable do
+    url "https://github.com/emscripten-core/emscripten/archive/refs/tags/4.0.13.tar.gz"
+    sha256 "05501a883b12379bd51bf824ddde1dbb457cb270bc0dd02520377e7b636a30f2"
+
+    # Backport commit to restore group/world executable bit
+    patch do
+      url "https://github.com/emscripten-core/emscripten/commit/2cac6027647e0e4ed793ac1286cc81ccb1c1f7f3.patch?full_index=1"
+      sha256 "3a9eb02524cdf3be35cbf8205fd04d792cef8cfbc85b017301dc65da0788a247"
+    end
+  end
 
   livecheck do
     url :stable
@@ -110,6 +119,8 @@ class Emscripten < Formula
   end
 
   def install
+    system "tools/maint/create_entry_points.py"
+
     # Avoid hardcoding the executables we pass to `write_env_script` below.
     # Prefer executables without `.py` extensions, but include those with `.py`
     # extensions if there isn't a matching executable without the `.py` extension.
@@ -230,12 +241,6 @@ class Emscripten < Formula
 
     emscripts.each do |emscript|
       (bin/emscript).write_env_script libexec/emscript, emscript_env
-
-      next if emscript.extname != ".py"
-      next if emscripts.include?(emscript.basename(".py"))
-
-      bin.install_symlink emscript => emscript.basename(".py").to_s
-      libexec.install_symlink emscript => emscript.basename(".py").to_s
     end
 
     # Replace universal binaries with their native slices

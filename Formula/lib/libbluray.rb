@@ -1,9 +1,10 @@
 class Libbluray < Formula
   desc "Blu-Ray disc playback library for media players like VLC"
   homepage "https://www.videolan.org/developers/libbluray.html"
-  url "https://download.videolan.org/videolan/libbluray/1.3.4/libbluray-1.3.4.tar.bz2"
-  sha256 "478ffd68a0f5dde8ef6ca989b7f035b5a0a22c599142e5cd3ff7b03bbebe5f2b"
+  url "https://download.videolan.org/videolan/libbluray/1.4.0/libbluray-1.4.0.tar.xz"
+  sha256 "77937baf07eadda4b2b311cf3af4c50269d2ea3165041f5843d96476c4c92777"
   license "LGPL-2.1-or-later"
+  head "https://code.videolan.org/videolan/libbluray.git", branch: "master"
 
   livecheck do
     url "https://download.videolan.org/pub/videolan/libbluray/"
@@ -27,27 +28,25 @@ class Libbluray < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "f5777913be5f68fb71aa0e5ed057ced402b9f8ab119a8ea74623bca2b5475f04"
   end
 
-  head do
-    url "https://code.videolan.org/videolan/libbluray.git"
-
-    depends_on "autoconf" => :build
-    depends_on "automake" => :build
-    depends_on "libtool" => :build
-  end
-
+  depends_on "meson" => :build
+  depends_on "ninja" => :build
   depends_on "pkgconf" => :build
   depends_on "fontconfig"
   depends_on "freetype"
+  depends_on "libudfread"
 
   uses_from_macos "libxml2"
 
   def install
-    args = %w[--disable-silent-rules --disable-bdjava-jar]
-
-    system "./bootstrap" if build.head?
-    system "./configure", *args, *std_configure_args
-    system "make"
-    system "make", "install"
+    args = %w[
+      -Dbdj_jar=disabled
+      -Dfontconfig=enabled
+      -Dfreetype=enabled
+      -Dlibxml2=enabled
+    ]
+    system "meson", "setup", "build", *args, *std_meson_args
+    system "meson", "compile", "-C", "build", "--verbose"
+    system "meson", "install", "-C", "build"
   end
 
   test do

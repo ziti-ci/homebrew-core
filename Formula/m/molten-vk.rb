@@ -4,8 +4,8 @@ class MoltenVk < Formula
   license "Apache-2.0"
 
   stable do
-    url "https://github.com/KhronosGroup/MoltenVK/archive/refs/tags/v1.3.0.tar.gz"
-    sha256 "9476033d49ef02776ebab288fffae3e28fd627a3e29b7ae5975a1e1c785bf912"
+    url "https://github.com/KhronosGroup/MoltenVK/archive/refs/tags/v1.4.0.tar.gz"
+    sha256 "fc74aef926ee3cd473fe260a93819c09fdc939bff669271a587e9ebaa43d4306"
 
     # MoltenVK depends on very specific revisions of its dependencies.
     # For each resource the path to the file describing the expected
@@ -13,7 +13,7 @@ class MoltenVk < Formula
     resource "SPIRV-Cross" do
       # ExternalRevisions/SPIRV-Cross_repo_revision
       url "https://github.com/KhronosGroup/SPIRV-Cross.git",
-          revision: "7918775748c5e2f5c40d9918ce68825035b5a1e1"
+          revision: "0a88b2d5c08708d45692b7096a0a84e7bfae366c"
     end
 
     resource "SPIRV-Headers" do
@@ -31,7 +31,7 @@ class MoltenVk < Formula
     resource "Vulkan-Headers" do
       # ExternalRevisions/Vulkan-Headers_repo_revision
       url "https://github.com/KhronosGroup/Vulkan-Headers.git",
-          revision: "e2e53a724677f6eba8ff0ce1ccb64ee321785cbd"
+          revision: "088a00d81d1fc30ff77aacf31485871aebec7cb2"
     end
 
     resource "Vulkan-Tools" do

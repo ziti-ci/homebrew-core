@@ -1,17 +1,17 @@
 class Gbox < Formula
   desc "Self-hostable sandbox for AI Agents to execute commands and surf web"
   homepage "https://gbox.ai"
-  url "https://github.com/babelcloud/gbox/releases/download/v0.1.3/gbox-v0.1.3.tar.gz"
-  sha256 "cebbff5be20e0b7c669e0a2319a41fa8e01db1e84668a84f5ccef5185cf55f23"
+  url "https://github.com/babelcloud/gbox/releases/download/v0.1.4/gbox-v0.1.4.tar.gz"
+  sha256 "2cfaacc86d42d68b8fcc3d665fb8cfc24f713f95f34dd2bfa9aaf8b39f624a24"
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "cf81420f48d3e6b8ac03090ffd090ca42d5671ed1e9ffae132703e3b6775e1f4"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "0d3da1ec42eee1f11c7b50879bc6c8e4b655d12ea5097cc0cb076124d20d575a"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "0e9a85cf55d594b1bbcaa4208f533bbc41829385624abaf68218b7e48d33e605"
-    sha256 cellar: :any_skip_relocation, sonoma:        "42221e4ee30ac38f8b20e4039178893220d98317dba50394464847de14e428db"
-    sha256 cellar: :any_skip_relocation, ventura:       "334e6efc62e7c1edb6e84173a24ba6fe1e8d2cb79f7ecfe7f1c430ee2a09dcea"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "c799062e1d9c613bc27c54a9cb124ee205247f3895984053c43d4d21ac3b6bb9"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "8aeb4f89aa32c89efd640f20cf2e279b7c152ab23a9a08ef51c11ced2a501602"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "8bfbcfbc25198113bac51dbe25558c8cf10b558fc6d2f62fe91d7beeed70a93f"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "127a91bbfef73a206027cfdd7e4a249b8fa641f9b3e16777bfa0f703b50979fa"
+    sha256 cellar: :any_skip_relocation, sonoma:        "62fd55903983db32a928934c377c6d5d0215ffbd57a1bead6fbaebd39de7a82b"
+    sha256 cellar: :any_skip_relocation, ventura:       "2066f587845c7e4c37280e154636065f4f8f938833a50a9e3b5636c6b69e3b63"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "a8157eb9956fd28b0fb187bf684a92ee53ce5471a0fa38789b59cca50e6c04d0"
   end
 
   depends_on "go" => :build

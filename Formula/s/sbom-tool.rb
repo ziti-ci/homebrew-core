@@ -1,8 +1,8 @@
 class SbomTool < Formula
   desc "Scalable and enterprise ready tool to create SBOMs for any variety of artifacts"
   homepage "https://github.com/microsoft/sbom-tool"
-  url "https://github.com/microsoft/sbom-tool/archive/refs/tags/v4.1.0.tar.gz"
-  sha256 "8f54fbcb463011633009f436e13f07e03423b2009b01d45fd6d6053459e37eea"
+  url "https://github.com/microsoft/sbom-tool/archive/refs/tags/v4.1.1.tar.gz"
+  sha256 "6c1a34e17ddd1eeff5e0de298cd8cc9cd53e8920cdee572dcff3eaf239e87d3a"
   license "MIT"
   head "https://github.com/microsoft/sbom-tool.git", branch: "main"
 

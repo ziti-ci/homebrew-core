@@ -8,5 +8,6 @@
   "llvm@17",
   "llvm@18",
   "llvm@19",
+  "llvm@20",
   "swift"
 ]

@@ -1,8 +1,8 @@
 class Libspelling < Formula
   desc "Spellcheck library for GTK 4"
   homepage "https://gitlab.gnome.org/GNOME/libspelling"
-  url "https://gitlab.gnome.org/GNOME/libspelling/-/archive/0.4.8/libspelling-0.4.8.tar.bz2"
-  sha256 "dadd7bfc58511b85f966570b6f241ae1c695986746daa634de4a2d856886ae18"
+  url "https://gitlab.gnome.org/GNOME/libspelling/-/archive/0.4.9/libspelling-0.4.9.tar.bz2"
+  sha256 "e0f1785e3314bd081bd3da391547af741d4b313c655d5cf512e4ef1aee615997"
   license "LGPL-2.1-or-later"
 
   bottle do

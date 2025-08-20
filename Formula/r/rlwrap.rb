@@ -1,8 +1,8 @@
 class Rlwrap < Formula
   desc "Readline wrapper: adds readline support to tools that lack it"
   homepage "https://github.com/hanslub42/rlwrap"
-  url "https://github.com/hanslub42/rlwrap/archive/refs/tags/v0.46.2.tar.gz"
-  sha256 "9abb0a0dc19e85794d9b8e72e480530563eb4ee1bf243e87c0e0dd05ea4a2f09"
+  url "https://github.com/hanslub42/rlwrap/archive/refs/tags/v0.47.tar.gz"
+  sha256 "07cd1c52aee96c05bf0db4ed8da63e854f07a1ca134b21b73c5d5d1969b337b5"
   license "GPL-2.0-or-later"
   head "https://github.com/hanslub42/rlwrap.git", branch: "master"
 
@@ -28,7 +28,8 @@ class Rlwrap < Formula
   def install
     system "autoreconf", "--force", "--install", "--verbose"
 
-    system "./configure", *std_configure_args
+    # TODO: add `libptytty` as a formula, there is a fallback for now
+    system "./configure", "--without-libptytty", *std_configure_args
     system "make", "install"
   end
 

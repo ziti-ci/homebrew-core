@@ -1,8 +1,8 @@
 class Geographiclib < Formula
   desc "C++ geography library"
   homepage "https://geographiclib.sourceforge.io/"
-  url "https://github.com/geographiclib/geographiclib/archive/refs/tags/r2.5.tar.gz"
-  sha256 "4b646358189799491e669f0de5072e94e3988d4a7486823344d182d57665ed35"
+  url "https://github.com/geographiclib/geographiclib/archive/refs/tags/r2.5.1.tar.gz"
+  sha256 "7467c5d3bf368d7654dfa0e75af6a1d40a9e530995f2db84672e57c04a447823"
   license "MIT"
   head "https://github.com/geographiclib/geographiclib.git", branch: "main"
 
@@ -10,8 +10,6 @@ class Geographiclib < Formula
     url :stable
     regex(/^r(\d+(?:\.\d+)+)$/i)
   end
-
-  no_autobump! because: :requires_manual_review
 
   bottle do
     sha256 cellar: :any,                 arm64_sequoia: "467cd9d17e3c199e4820960b4b0a063aa2983867b74652371daa2c0d7a19b58b"

@@ -6,13 +6,7 @@ class Pyright < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "2c6a4eb7ee5aacaecbe24647bcc5752c22eb17ee895f98bc275f65ff2bf77300"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "2c6a4eb7ee5aacaecbe24647bcc5752c22eb17ee895f98bc275f65ff2bf77300"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "2c6a4eb7ee5aacaecbe24647bcc5752c22eb17ee895f98bc275f65ff2bf77300"
-    sha256 cellar: :any_skip_relocation, sonoma:        "0f353845a64cb1854ce8fa0a69e45fed912482dcf1522078ea9fd5584fac2a37"
-    sha256 cellar: :any_skip_relocation, ventura:       "0f353845a64cb1854ce8fa0a69e45fed912482dcf1522078ea9fd5584fac2a37"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "2c6a4eb7ee5aacaecbe24647bcc5752c22eb17ee895f98bc275f65ff2bf77300"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "2c6a4eb7ee5aacaecbe24647bcc5752c22eb17ee895f98bc275f65ff2bf77300"
+    sha256 cellar: :any_skip_relocation, all: "127ac97458361bb4614edc63e78fd1a21a19e4b47c0e2d1f2d9307229bce4f5d"
   end
 
   depends_on "node"

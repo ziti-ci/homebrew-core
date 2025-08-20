@@ -1,8 +1,8 @@
 class Prek < Formula
   desc "Pre-commit re-implemented in Rust"
   homepage "https://github.com/j178/prek"
-  url "https://github.com/j178/prek/archive/refs/tags/v0.0.29.tar.gz"
-  sha256 "fe4ed382144aab1640f1b3ff277ba58a3b1b69b232d5ab226179b11d21f7798b"
+  url "https://github.com/j178/prek/archive/refs/tags/v0.1.1.tar.gz"
+  sha256 "ba04d08b90e0bb71d7700491456e5684300a5e13d01554a26ead561b6675d4dd"
   license "MIT"
   head "https://github.com/j178/prek.git", branch: "master"
 

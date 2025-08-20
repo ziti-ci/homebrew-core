@@ -1,8 +1,8 @@
 class ApachePolaris < Formula
   desc "Interoperable, open source catalog for Apache Iceberg"
   homepage "https://polaris.apache.org/"
-  url "https://github.com/apache/polaris/archive/refs/tags/apache-polaris-1.0.0-incubating.tar.gz"
-  sha256 "4ed1a13aae04c8bf25982bc059e12d3490cb70ddf3b175dc97a227b46a566e10"
+  url "https://github.com/apache/polaris/archive/refs/tags/apache-polaris-1.0.1-incubating.tar.gz"
+  sha256 "d4af0da781fa87cf67e4136e4cf51f0a54c5eac674a96bd8b1016713e86feac7"
   license "Apache-2.0"
 
   livecheck do

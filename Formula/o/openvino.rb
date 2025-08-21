@@ -200,17 +200,24 @@ class Openvino < Formula
 
     (testpath/"openvino_available_devices.c").write <<~C
       #include <openvino/c/openvino.h>
+      #include <stdio.h>
 
-      #define OV_CALL(statement) \
-          if ((statement) != 0) \
-              return 1;
+      #define OV_CALL(statement) do {                                       \
+          int _ov_status = (statement);                                     \
+          if (_ov_status != 0) {                                            \
+              fprintf(stderr, "OV_CALL failed: %s at %s:%d (status=%d)\\n", \
+                      #statement, __FILE__, __LINE__, _ov_status);          \
+              return 1;                                                     \
+          }                                                                 \
+      } while (0)
 
       int main() {
           ov_core_t* core = NULL;
           char* ret = NULL;
           OV_CALL(ov_core_create(&core));
           OV_CALL(ov_core_get_property(core, "CPU", "AVAILABLE_DEVICES", &ret));
-      #ifndef __APPLE__
+      #if !defined(__APPLE__) && !defined(__aarch64__)
+          // FIXME: checking `GPU` fails on aarch64 Linux.
           OV_CALL(ov_core_get_property(core, "GPU", "AVAILABLE_DEVICES", &ret));
       #endif
           OV_CALL(ov_core_get_property(core, "AUTO", "SUPPORTED_PROPERTIES", &ret));
@@ -223,8 +230,7 @@ class Openvino < Formula
     C
     system ENV.cc, testpath/"openvino_available_devices.c", *pkg_config_flags,
                    "-o", testpath/"openvino_devices_test"
-    # FIXME: Fails on aarch64 Linux.
-    system testpath/"openvino_devices_test" if Hardware::CPU.intel? || !OS.linux?
+    system testpath/"openvino_devices_test"
 
     (testpath/"openvino_available_frontends.cpp").write <<~CPP
       #include <openvino/frontend/manager.hpp>

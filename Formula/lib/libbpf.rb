@@ -1,8 +1,8 @@
 class Libbpf < Formula
   desc "Berkeley Packet Filter library"
   homepage "https://github.com/libbpf/libbpf"
-  url "https://github.com/libbpf/libbpf/archive/refs/tags/v1.6.1.tar.gz"
-  sha256 "f6fa65c86f20d6d2d5d958f8bb8203a580a1c7496173714582300b724e37e338"
+  url "https://github.com/libbpf/libbpf/archive/refs/tags/v1.6.2.tar.gz"
+  sha256 "16f31349c70764cba8e0fad3725cc9f52f6cf952554326aa0229daaa21ef4fbd"
   license "BSD-2-Clause"
 
   bottle do

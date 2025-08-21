@@ -8,14 +8,8 @@ class BashSnippets < Formula
   no_autobump! because: :requires_manual_review
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "3d9c146c0d2b5d4e6ec135939558a9a61f40f416c9087be9bcc968f09a156998"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "3d9c146c0d2b5d4e6ec135939558a9a61f40f416c9087be9bcc968f09a156998"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "3d9c146c0d2b5d4e6ec135939558a9a61f40f416c9087be9bcc968f09a156998"
-    sha256 cellar: :any_skip_relocation, sonoma:        "dd3fba704985cfdaef3cb86ca549b505e4ea7eecd3635c9acc3061f78acfa293"
-    sha256 cellar: :any_skip_relocation, ventura:       "dd3fba704985cfdaef3cb86ca549b505e4ea7eecd3635c9acc3061f78acfa293"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "3d9c146c0d2b5d4e6ec135939558a9a61f40f416c9087be9bcc968f09a156998"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "3d9c146c0d2b5d4e6ec135939558a9a61f40f416c9087be9bcc968f09a156998"
+    rebuild 2
+    sha256 cellar: :any_skip_relocation, all: "d22507e71365355dc20eba3747a10f575f80ff3dc86103d1a2f9be08a08932d9"
   end
 
   conflicts_with "cheat", because: "both install `cheat` binaries"

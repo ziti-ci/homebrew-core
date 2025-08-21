@@ -31,13 +31,16 @@ class Nzbget < Formula
     system "cmake", "--build", "build"
     system "cmake", "--install", "build"
 
-    if OS.mac?
-      # Set upstream's recommended values for file systems without
-      # sparse-file support (e.g., HFS+); see Homebrew/homebrew-core#972
-      inreplace "nzbget.conf", "DirectWrite=yes", "DirectWrite=no"
-      inreplace "nzbget.conf", "ArticleCache=0", "ArticleCache=700"
+    inreplace "nzbget.conf" do |s|
+      if OS.mac?
+        # Set upstream's recommended values for file systems without
+        # sparse-file support (e.g., HFS+); see Homebrew/homebrew-core#972
+        s.gsub! "DirectWrite=yes", "DirectWrite=no"
+        s.gsub! "ArticleCache=0", "ArticleCache=700"
+      end
+
       # Update 7z cmd to match homebrew binary
-      inreplace "nzbget.conf", "SevenZipCmd=7z", "SevenZipCmd=7zz"
+      s.gsub! "SevenZipCmd=7z", "SevenZipCmd=7zz"
     end
 
     etc.install "nzbget.conf"

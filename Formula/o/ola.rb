@@ -32,6 +32,7 @@ class Ola < Formula
     sha256 arm64_sonoma:  "0abe0cdf444f19e95d108975b4e922392a53bd04aee0809f8b38d2c65dbc2119"
     sha256 arm64_ventura: "689becd3e9be5eaac2153c7b54d95aca51ed20887f7ef8e930ec65abdff7d40b"
     sha256 sonoma:        "8c85e29a677be1c7d729f27821cd340e258fafc3e7c341e14cf2dc887973f7de"
+    sha256 ventura:       "576d9e927f6a14c88e142399d8261ad50ebe4d45f9ae6e517693fbfc3a4d6152"
     sha256 arm64_linux:   "35a522a13c6bd31eaa934ee2268f89719c94bd8054af06d1cc9d692ba081daee"
     sha256 x86_64_linux:  "a5691c9b8d2c0a7c797f0a683da77cc1a604bf9dd37a65aca1bf0507ace71209"
   end

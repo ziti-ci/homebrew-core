@@ -1,8 +1,8 @@
 class Armadillo < Formula
   desc "C++ linear algebra library"
   homepage "https://arma.sourceforge.net/"
-  url "https://downloads.sourceforge.net/project/arma/armadillo-14.6.3.tar.xz"
-  sha256 "ad1e2aa5b90a389ab714e2d00972ce64da42582b17dd89c18935358551e6e205"
+  url "https://downloads.sourceforge.net/project/arma/armadillo-15.0.0.tar.xz"
+  sha256 "4bf147cdf214c6980325b6c971d602723de494b1ae3bd1b4298d4a8312d7aa4b"
   license "Apache-2.0"
 
   livecheck do
@@ -40,7 +40,7 @@ class Armadillo < Formula
         std::cout << arma::arma_version::as_string() << std::endl;
       }
     CPP
-    system ENV.cxx, "-std=c++11", "test.cpp", "-I#{include}", "-L#{lib}", "-larmadillo", "-o", "test"
+    system ENV.cxx, "-std=c++14", "test.cpp", "-I#{include}", "-L#{lib}", "-larmadillo", "-o", "test"
     assert_equal version.to_s.to_i, shell_output("./test").to_i
   end
 end

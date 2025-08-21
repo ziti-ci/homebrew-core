@@ -24,6 +24,10 @@ class BlueprintCompiler < Formula
   depends_on "pygobject3"
 
   def install
+    # Workaround for python binding location
+    files = %w[meson.build docs/meson.build]
+    inreplace files, "py.get_install_dir()", "'#{Language::Python.site_packages("python3")}'"
+
     system "meson", "setup", "build", *std_meson_args
     system "meson", "compile", "-C", "build", "--verbose"
     system "meson", "install", "-C", "build"

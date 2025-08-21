@@ -1,5 +1,5 @@
 class Libudfread < Formula
-  desc "UDF reader"
+  desc "Universal Disk Format reader"
   homepage "https://code.videolan.org/videolan/libudfread"
   url "https://download.videolan.org/videolan/libudfread/libudfread-1.2.0.tar.xz"
   sha256 "bb477cbd4cfbfc7787d9d05b71ee5e70430f5cfebf1297497f7e83547958050f"

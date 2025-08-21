@@ -20,6 +20,7 @@ class SyslogNg < Formula
     sha256 arm64_ventura: "9b36999076709463213effa8f0be340e77ec2bf0d7c57b90449bdb9d93fc0e80"
     sha256 sonoma:        "e12ac8ddecb10fa60a9a0dbc6a8e8a272dd67e533e2703702b044bec8c713eac"
     sha256 ventura:       "508cebb027914814b6fcc56c9e256341e3efb66de2ba06022fcb767485d7671a"
+    sha256 arm64_linux:   "3ccc7ca262052030a47b6cc0008c696a12efcb3cc93be14aea98ab2b359cbcad"
     sha256 x86_64_linux:  "d07ae290a62e19acf1de1ff7f7feafba9b4d00f5912722f01af35e3691ef8bd6"
   end
 

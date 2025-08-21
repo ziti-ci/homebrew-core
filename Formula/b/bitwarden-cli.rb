@@ -12,13 +12,8 @@ class BitwardenCli < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "8b1f9d8e9f2a11e128d811b25f500ff8c5f3b1403b66d7d6b43e0bac9c55791d"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "8b1f9d8e9f2a11e128d811b25f500ff8c5f3b1403b66d7d6b43e0bac9c55791d"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "8b1f9d8e9f2a11e128d811b25f500ff8c5f3b1403b66d7d6b43e0bac9c55791d"
-    sha256 cellar: :any_skip_relocation, sonoma:        "11a4044c2d6407e4ba53a962163d2528e2c20f6afa05cbfb7ab216870b9a55eb"
-    sha256 cellar: :any_skip_relocation, ventura:       "11a4044c2d6407e4ba53a962163d2528e2c20f6afa05cbfb7ab216870b9a55eb"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "8b1f9d8e9f2a11e128d811b25f500ff8c5f3b1403b66d7d6b43e0bac9c55791d"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "8b1f9d8e9f2a11e128d811b25f500ff8c5f3b1403b66d7d6b43e0bac9c55791d"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, all: "84173cfd9e0ace25bea60cb4577bf3a25814bfa0bbf0eb6d8a2931ab1cac129b"
   end
 
   depends_on "node"
@@ -36,9 +31,9 @@ class BitwardenCli < Formula
   end
 
   test do
-    assert_equal 10, shell_output("#{bin}/bw generate --length 10").chomp.length
+    assert_equal 10, shell_output("#{bin}/bw generate --length 10").length
 
     output = pipe_output("#{bin}/bw encode", "Testing", 0)
-    assert_equal "VGVzdGluZw==", output.chomp
+    assert_equal "VGVzdGluZw==", output
   end
 end

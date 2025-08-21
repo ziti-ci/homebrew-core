@@ -18,7 +18,7 @@ class BashSnippets < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "3d9c146c0d2b5d4e6ec135939558a9a61f40f416c9087be9bcc968f09a156998"
   end
 
-  conflicts_with "cheat", because: "both install a `cheat` executable"
+  conflicts_with "cheat", because: "both install `cheat` binaries"
   conflicts_with "expect", because: "both install `weather` binaries"
   conflicts_with "pwned", because: "both install `pwned` binaries"
   conflicts_with "todoman", because: "both install `todo` binaries"
@@ -28,9 +28,9 @@ class BashSnippets < Formula
   end
 
   test do
-    output = shell_output("#{bin}/weather Paramus").lines.first.chomp
-    assert_equal "Weather report: Paramus", output
+    output = shell_output("#{bin}/weather London").lines.first.chomp
+    assert_equal "Weather report: London", output
     output = shell_output("#{bin}/qrify This is a test")
-    assert_match "████ ▄▄▄▄▄ █▀ █▀▄█ ▄▄▄▄▄ ████", output
+    assert_match "████ ▄▄▄▄▄ █▀▄█▀ █  ▀█ ▄▄▄▄▄ ████", output
   end
 end

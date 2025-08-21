@@ -6,12 +6,7 @@ class E2b < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "389a7740a3be2807697ee57b30760c0fa1d079b6307342126875d762acefcb7f"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "389a7740a3be2807697ee57b30760c0fa1d079b6307342126875d762acefcb7f"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "389a7740a3be2807697ee57b30760c0fa1d079b6307342126875d762acefcb7f"
-    sha256 cellar: :any_skip_relocation, sonoma:        "dd699ace4761d87d742a88c7c9d3a9d7894b161dc90f8652521567714590e534"
-    sha256 cellar: :any_skip_relocation, ventura:       "dd699ace4761d87d742a88c7c9d3a9d7894b161dc90f8652521567714590e534"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "389a7740a3be2807697ee57b30760c0fa1d079b6307342126875d762acefcb7f"
+    sha256 cellar: :any_skip_relocation, all: "949e3a62924265d5086f9433520b1b5bd63ea18abc1b4b88a662e16df7c0a200"
   end
 
   depends_on "node"

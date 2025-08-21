@@ -7,13 +7,14 @@ class Uv < Formula
   head "https://github.com/astral-sh/uv.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "125607f10877b01f1ab3df6093bf301057ce5c020ffe121eb829ffc621c617c9"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "4bba3b9f07cc01e9aa45b218b120e0d89b380eefce97bd5f905166dc82f8d9e2"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "ad8503ecc440b956a5bcff2428909664c9141763afe558058a6b3f400779ebaf"
-    sha256 cellar: :any_skip_relocation, sonoma:        "74c946fcb9653dddda2f9d29568da7c74d1ea48b23a6ca34d9d6b119fcee8d52"
-    sha256 cellar: :any_skip_relocation, ventura:       "658d854b6beb32392d351cd37dbd8ed16b15d4e2067f4bd6c23f45410bdc8ec6"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "72874cc8a166e86cfba24a04ecdcc831bdc601561f1574e4fcb21054525eb0ba"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "4db7ae91987a77df00029e8e0a61836241500e312df3f4a06e483dc94c69a200"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "76f7c27a2a1f20fca096428b77c2056ef8c354156590cd545f414dfb551df7b6"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "7178b2cc2c4d67bd86bc4ed194b0ee7c9a2b54ac2a3701a953a9a6470e869c57"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "76461de520202297f0335d3dc21448f6bc7e66f5918170e111708a75cf312b66"
+    sha256 cellar: :any_skip_relocation, sonoma:        "068e8eaec4c489b2e00698d08fb9f5c1d8be0b09e69f4bc10adf409dcb273ea1"
+    sha256 cellar: :any_skip_relocation, ventura:       "daa32c25465b8c273ebccf449f72c4887c16bb6a7f3bab320fd1739e48ae6347"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "24b0d2aa0adde0a45b7df52eeddf5566a003e644dcf783d7b3993b45d991afd3"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "8f097f70e90569b7d4827b79155cf27538e329ff279d7e4d31be4f09a2ab01d6"
   end
 
   depends_on "pkgconf" => :build
@@ -26,6 +27,8 @@ class Uv < Formula
   def install
     ENV["UV_COMMIT_HASH"] = ENV["UV_COMMIT_SHORT_HASH"] = tap.user
     ENV["UV_COMMIT_DATE"] = time.strftime("%F")
+    # See: https://github.com/astral-sh/uv/issues/15401
+    ENV["JEMALLOC_SYS_WITH_LG_PAGE"] = "16" if Hardware::CPU.arm? && OS.linux?
     system "cargo", "install", *std_cargo_args(path: "crates/uv")
     generate_completions_from_executable(bin/"uv", "generate-shell-completion")
     generate_completions_from_executable(bin/"uvx", "--generate-shell-completion")

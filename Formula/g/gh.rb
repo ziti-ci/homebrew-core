@@ -14,12 +14,12 @@ class Gh < Formula
   no_autobump! because: :requires_manual_review
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "faceba16a942f0ebb76e4da8aeeee624fc368613670f9a6a69debb029dfde0d7"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "faceba16a942f0ebb76e4da8aeeee624fc368613670f9a6a69debb029dfde0d7"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "faceba16a942f0ebb76e4da8aeeee624fc368613670f9a6a69debb029dfde0d7"
-    sha256 cellar: :any_skip_relocation, sonoma:        "acf80a636d3c7fa24ff60381dae956755da5652459e6ecdb624a571f4c9f998e"
-    sha256 cellar: :any_skip_relocation, ventura:       "cab3318da3492e9d0eb639609fc1f3e013e18de8d8d54b35bc3bc73220b85984"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "580872233df14f7e1fad5489df249c1fcbd64d315cd46a004df39d3dcdcb16fb"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "100a42a5352dfb76c01872ead02b29c38608ff05e4101265172d2fae10df74bb"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "100a42a5352dfb76c01872ead02b29c38608ff05e4101265172d2fae10df74bb"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "100a42a5352dfb76c01872ead02b29c38608ff05e4101265172d2fae10df74bb"
+    sha256 cellar: :any_skip_relocation, sonoma:        "4b709ac98289122fdc1dbcc8a4ff5866fd47c3b0849879a542c93175698cc406"
+    sha256 cellar: :any_skip_relocation, ventura:       "06972d10ce5be93c27e229a773711ebe00f5e5965327ea71a6a8974d66478a69"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "5f44d5467727bd0bda7d4f54304fdb7d848e531202a0449f54bb66461512b3aa"
   end
 
   depends_on "go" => :build

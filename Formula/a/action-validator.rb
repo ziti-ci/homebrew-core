@@ -4,25 +4,13 @@ class ActionValidator < Formula
   license "GPL-3.0-only"
 
   stable do
-    url "https://github.com/mpalmer/action-validator/archive/refs/tags/v0.6.0.tar.gz"
-    sha256 "bdec75f6383a887986192685538a736c88be365505e950aab262977c8845aa88"
+    url "https://github.com/mpalmer/action-validator/archive/refs/tags/v0.8.0.tar.gz"
+    sha256 "2a75ecde0a5e58b525623db1f270f7d0153e3707d3ad87adee73fd4ef6adeac6"
 
     # always pull the HEAD commit hash
     resource "schemastore" do
       url "https://github.com/SchemaStore/schemastore.git",
-          revision: "7bf746bd90d7e88cd11f0a9dc4bc34c91fbbf7b4"
-    end
-
-    # shell completion and manpage support, upstream pr ref, https://github.com/mpalmer/action-validator/pull/82
-    patch do
-      url "https://raw.githubusercontent.com/Homebrew/formula-patches/ffcaead14f73c08531313dcb7c300918db576c3b/action-validator/0.6.0-completion-manpage.patch"
-      sha256 "91b0f5170e52537f78e4b196e3b3dd580e3e56e6479f14ba59cdfcff556f4680"
-    end
-
-    # rust 1.87.0 patch
-    patch do
-      url "https://raw.githubusercontent.com/Homebrew/formula-patches/9bc980d441be50bce28156456113fa52af0d0ff3/action-validator/0.6.0-rust-1.87.patch"
-      sha256 "5748743bb855cdb2eae732a6dca354a27dcf57ebbead3dbc645775b7029a97a9"
+          revision: "d94af770cffaa34559f5279acbcc3a548bb0ea8c"
     end
   end
 
@@ -53,11 +41,6 @@ class ActionValidator < Formula
     (buildpath/"src/schemastore").install resource("schemastore")
 
     system "cargo", "install", *std_cargo_args
-
-    bash_completion.install "completions/action-validator.bash" => "action-validator"
-    fish_completion.install "completions/action-validator.fish"
-    zsh_completion.install "completions/_action-validator"
-    man1.install "man/action-validator.1"
   end
 
   test do

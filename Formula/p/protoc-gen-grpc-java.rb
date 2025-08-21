@@ -6,13 +6,13 @@ class ProtocGenGrpcJava < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any,                 arm64_sequoia: "41cda102e79d645a3bb38ed5f67203278116928d6a3ecdc4b40909967c73d341"
-    sha256 cellar: :any,                 arm64_sonoma:  "536098b9765d42f842c170bc4c730386ef095b9eee13306611b69d7eda587df2"
-    sha256 cellar: :any,                 arm64_ventura: "4fec9781020e0eb043aafc2d980050327297b7b8463a55ef1f73729ab2978702"
-    sha256 cellar: :any,                 sonoma:        "ed3d031820c4b4cc2f90673ea5a176914e5fe3dc1ce05a901f8cfc2b1fcf9d4b"
-    sha256 cellar: :any,                 ventura:       "0175639a88d192c77167387359890c0fc14bf73516895fed7d3de9136a8a38cd"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "ddedbc5d6a86b753345aa92410d4e41bf310856ea95b910d485fa674beebf4f7"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "499163a3c6ff4ba45953f660ac8611de0557d410ae85251839e3d7a2e35fb170"
+    sha256 cellar: :any,                 arm64_sequoia: "0de02bca3dec59832a83f8dc7b4e0e523320c48fd0570589565f3afd1d2e82e1"
+    sha256 cellar: :any,                 arm64_sonoma:  "2efdb623faf5ebc549a76b6ba10b6c86b6db00d3d8e47534ffff8e84605fa1f0"
+    sha256 cellar: :any,                 arm64_ventura: "621dfe98c20011488e9aee7e3206d5034199fafa6eab2c91481d990c75df68b0"
+    sha256 cellar: :any,                 sonoma:        "c37f4f21d0034cdb2d73a6c39f6df56f63733d24aa12ac6a3a7641f7f89c81e1"
+    sha256 cellar: :any,                 ventura:       "252be3da05b8893cc57cdbfd036b5de2426ac423803e6340cebe20fbff4ef30b"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "4fe12915bfe3529518c7b2b83b1be03a079d7085c8740008c112be27290ad2f0"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "699426e5242961447922152ae2174b6e6f92804b291028ebf36844306bd7a294"
   end
 
   depends_on "gradle@8" => :build

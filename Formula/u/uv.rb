@@ -26,6 +26,8 @@ class Uv < Formula
   def install
     ENV["UV_COMMIT_HASH"] = ENV["UV_COMMIT_SHORT_HASH"] = tap.user
     ENV["UV_COMMIT_DATE"] = time.strftime("%F")
+    # See: https://github.com/astral-sh/uv/issues/15401
+    ENV["JEMALLOC_SYS_WITH_LG_PAGE"] = "16" if Hardware::CPU.arm? && OS.linux?
     system "cargo", "install", *std_cargo_args(path: "crates/uv")
     generate_completions_from_executable(bin/"uv", "generate-shell-completion")
     generate_completions_from_executable(bin/"uvx", "--generate-shell-completion")

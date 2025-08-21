@@ -36,9 +36,9 @@ class BitwardenCli < Formula
   end
 
   test do
-    assert_equal 10, shell_output("#{bin}/bw generate --length 10").chomp.length
+    assert_equal 10, shell_output("#{bin}/bw generate --length 10").length
 
     output = pipe_output("#{bin}/bw encode", "Testing", 0)
-    assert_equal "VGVzdGluZw==", output.chomp
+    assert_equal "VGVzdGluZw==", output
   end
 end

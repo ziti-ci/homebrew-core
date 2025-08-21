@@ -13,6 +13,7 @@ class Securefs < Formula
   end
 
   bottle do
+    sha256 arm64_linux:  "253a93eb2271348a1c392d2a67d57a75d5df6fe0cd1683d2654ccdb86e22bfb6"
     sha256 x86_64_linux: "b2d1bfd6abd6e4df60822a6a62e8ceee4051ee3c0c5f86b573fe4e4255b67971"
   end
 

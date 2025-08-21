@@ -8,13 +8,13 @@ class Libpulsar < Formula
   revision 3
 
   bottle do
-    sha256 cellar: :any,                 arm64_sequoia: "080993ea0c4f59d5ebb6a4c1d5a18f8266f558cbd5315b7a8556659e89f27d50"
-    sha256 cellar: :any,                 arm64_sonoma:  "371875a22cd56bb7bd1554641acd73cc27ce667c6f1bda10570cba6ca2d317bf"
-    sha256 cellar: :any,                 arm64_ventura: "1601e945c536d8a53afa86ad2ee29710f9d477c790b3a2dc768d36042d32c3d6"
-    sha256 cellar: :any,                 sonoma:        "197b8ff5a595f98ad735fc3622a702d42512c8e46dd0fb688711c69a7a40a07b"
-    sha256 cellar: :any,                 ventura:       "9c6d2f850d2204ea25f0e35ed0c6f53488d2068cdd7e33cb121eb9873a9c062b"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "886699c29db597b3c2ffedb2d3f72421eab1bc09611cfbb67f2dbf1ff3750c1a"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "2e762bc7124b3b1fbaecf582eced07298f206f94c4e38b54c22d6c21dacfc9a2"
+    sha256 cellar: :any,                 arm64_sequoia: "127f23ea8cfe8361eda6419a782f1a30e574319c59f7daddaaf5e80fda4448c4"
+    sha256 cellar: :any,                 arm64_sonoma:  "0672f509cd6452e0a3b0a704406a417c53ee08feb013fe871c339431a349fd93"
+    sha256 cellar: :any,                 arm64_ventura: "ccebb44c06c890b4c1c628c724fa0d2c32b0f5ad5bcca8bd4f681869b3458bc7"
+    sha256 cellar: :any,                 sonoma:        "b171543333bd0b44c7091dc1ae5690645ef766695e17b8a0bd6d9861ad69e7f4"
+    sha256 cellar: :any,                 ventura:       "9235b7618d27f2ac474bc0500d814dba9003448eaf4228eb630fed8b927402d9"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "0972785e45e4ea72ed90a0274df98a5019407745dd521c172700e5b0d44a7c64"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "1ecd9b3a9368874cecaf30395dbee90e153639f7294333ba4f465e226af5a896"
   end
 
   depends_on "boost" => :build

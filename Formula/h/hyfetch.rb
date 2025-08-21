@@ -9,13 +9,7 @@ class Hyfetch < Formula
   head "https://github.com/hykilpikonna/hyfetch.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "5032952a2e1ded6fc2a2982b8ea254233f5886c54a34717b0affd2890d40765e"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "5032952a2e1ded6fc2a2982b8ea254233f5886c54a34717b0affd2890d40765e"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "5032952a2e1ded6fc2a2982b8ea254233f5886c54a34717b0affd2890d40765e"
-    sha256 cellar: :any_skip_relocation, sonoma:        "2adf143cdacc67ab16db6094d2bc2fb3f79137d9a0546836ad24a5036fe16769"
-    sha256 cellar: :any_skip_relocation, ventura:       "2adf143cdacc67ab16db6094d2bc2fb3f79137d9a0546836ad24a5036fe16769"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "cec6b351903878e14e0dc095ec82b8d38fce455d812e17a65af773df0731d34b"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "5032952a2e1ded6fc2a2982b8ea254233f5886c54a34717b0affd2890d40765e"
+    sha256 cellar: :any_skip_relocation, all: "55446c64fe707ad34df6df6193ccaac2e599597bf6e340a8753881a22f431867"
   end
 
   depends_on "python@3.13"

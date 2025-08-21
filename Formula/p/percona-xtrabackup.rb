@@ -1,10 +1,9 @@
 class PerconaXtrabackup < Formula
   desc "Open source hot backup tool for InnoDB and XtraDB databases"
   homepage "https://www.percona.com/software/mysql-database/percona-xtrabackup"
-  url "https://downloads.percona.com/downloads/Percona-XtraBackup-8.4/Percona-XtraBackup-8.4.0-3/source/tarball/percona-xtrabackup-8.4.0-3.tar.gz"
-  sha256 "0d0538a615031e31eecf9de9ae1daa332ca8707b0901f8ca41f595f0f29798a8"
+  url "https://downloads.percona.com/downloads/Percona-XtraBackup-8.4/Percona-XtraBackup-8.4.0-4/source/tarball/percona-xtrabackup-8.4.0-4.tar.gz"
+  sha256 "e566a164a21b18781aad281b84426418ac2bcf71052ec85d8c5e62f742a7dfeb"
   license "GPL-2.0-only"
-  revision 2
 
   livecheck do
     url "https://www.percona.com/products-api.php", post_form: {
@@ -40,16 +39,13 @@ class PerconaXtrabackup < Formula
   depends_on "libgcrypt"
   depends_on "lz4"
   depends_on "openssl@3"
-  depends_on "perl-dbd-mysql"
   depends_on "protobuf"
   depends_on "zlib"
   depends_on "zstd"
 
   uses_from_macos "cyrus-sasl" => :build
   uses_from_macos "libedit" => :build
-  uses_from_macos "vim" => :build # needed for xxd
   uses_from_macos "curl"
-  uses_from_macos "perl"
 
   on_linux do
     depends_on "patchelf" => :build
@@ -139,15 +135,8 @@ class PerconaXtrabackup < Formula
     keep = %w[boost libbacktrace libcno libkmip lz4 rapidjson unordered_dense]
     (buildpath/"extra").each_child { |dir| rm_r(dir) unless keep.include?(dir.basename.to_s) }
 
-    perl = "/usr/bin/perl"
-    if OS.linux?
-      perl = Formula["perl"].opt_bin/"perl"
-      # Disable ABI checking
-      inreplace "cmake/abi_check.cmake", "RUN_ABI_CHECK 1", "RUN_ABI_CHECK 0"
-    end
-
-    # Make sure Perl from `perl-dbd-mysql` is used at runtime. Otherwise may have incompatible modules
-    inreplace "storage/innobase/xtrabackup/src/backup_copy.cc", 'popen("perl",', "popen(\"#{perl}\","
+    # Disable ABI checking
+    inreplace "cmake/abi_check.cmake", "RUN_ABI_CHECK 1", "RUN_ABI_CHECK 0" if OS.linux?
 
     icu4c = deps.map(&:to_formula).find { |f| f.name.match?(/^icu4c@\d+$/) }
     # -DWITH_FIDO=system isn't set as feature isn't enabled and bundled copy was removed.
@@ -179,7 +168,6 @@ class PerconaXtrabackup < Formula
     system "cmake", "-S", ".", "-B", "build", *cmake_args, *std_cmake_args
     system "cmake", "--build", "build"
     system "cmake", "--install", "build"
-    bin.env_script_all_files(libexec/"bin", PERL5LIB: Formula["perl-dbd-mysql"].opt_libexec/"lib/perl5")
 
     # remove conflicting library that is already installed by mysql
     (lib/"libmysqlservices.a").unlink
@@ -215,7 +203,6 @@ class PerconaXtrabackup < Formula
       output = shell_output("#{bin}/xtrabackup #{xtrabackup_args.join(" ")} 2>&1")
       refute_match "[ERROR]", output
       assert_match "[Xtrabackup] completed OK!", output
-      assert_match "version_check Done.", output # check Perl modules work
       assert_path_exists testpath/"backup/xtrabackup_info"
     ensure
       system mysql.bin/"mysqladmin", *mysqladmin_args, "shutdown"

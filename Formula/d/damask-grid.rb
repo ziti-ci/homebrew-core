@@ -23,14 +23,16 @@ class DamaskGrid < Formula
 
   depends_on "cmake" => :build
   depends_on "pkgconf" => :build
+  depends_on "fftw"
+  depends_on "gcc"
+  depends_on "hdf5-mpi"
+  depends_on "metis"
+  depends_on "open-mpi"
+  depends_on "openblas"
   depends_on "petsc"
+  depends_on "scalapack"
 
   uses_from_macos "zlib"
-
-  resource "testfiles" do
-    url "https://damask-multiphysics.org/download/damask-3.0.2.tar.xz"
-    sha256 "82f9b3aefde87193c12a7c908f42b711b278438f6cad650918989e37fb6dbde4"
-  end
 
   def install
     ENV["PETSC_DIR"] = Formula["petsc"].opt_prefix
@@ -39,11 +41,14 @@ class DamaskGrid < Formula
     ]
     system "cmake", "-S", ".", "-B", "build-grid", *args, *std_cmake_args
     system "cmake", "--build", "build-grid", "--target", "install"
+
+    pkgshare.install "examples/grid"
   end
 
   test do
-    resource("testfiles").stage do
-      inreplace "examples/grid/tensionX.yaml" do |s|
+    cp_r pkgshare/"grid", testpath
+    cd "grid" do
+      inreplace "tensionX.yaml" do |s|
         s.gsub! " t: 10", " t: 1"
         s.gsub! " t: 60", " t: 1"
         s.gsub! "N: 60", "N: 1"
@@ -51,14 +56,14 @@ class DamaskGrid < Formula
       end
 
       args = %w[
-        -w examples/grid
+        -w .
         -m material.yaml
         -g 20grains16x16x16.vti
         -l tensionX.yaml
         -j output
       ]
       system "#{bin}/DAMASK_grid", *args
-      assert_path_exists "examples/grid/output.hdf5", "output.hdf5 must exist"
+      assert_path_exists "output.hdf5", "output.hdf5 must exist"
     end
   end
 end

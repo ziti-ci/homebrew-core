@@ -15,13 +15,14 @@ class Sevenzip < Formula
   no_autobump! because: :incompatible_version_format
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "7fc707e54e639a99f4bb1041dcdb981890b80711023d5d86122ad6f2fc75e9a6"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "3254fd85c69624613c4d2473bf0962cd0a6da95426db4103e7085a2eb6fb6523"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "98b39cffa36a599b640eba229458461a1b9658b5a6ce1495ed9c06194ab7701d"
-    sha256 cellar: :any_skip_relocation, sonoma:        "1de5040b9b80f5711eda3f3dc75555c5b6a2eda7d20eea1a8d6ec56ab3583c62"
-    sha256 cellar: :any_skip_relocation, ventura:       "93471f3ededabe6868538922a8268bef618ba992f2504826c37a391e3f7e3271"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "7503b0032b2724f7244f8fbf56be566bb31450973a120ea8a3380decf5b2c7e9"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "18a9255bc26eba7518647e9ed69790864aaa3e0d16bb932856c318b468fab9f8"
+    rebuild 1
+    sha256 cellar: :any,                 arm64_sequoia: "164df59691f0b22b908312d7352a048c348fbc5ca0f4cb01e90a0d588436af26"
+    sha256 cellar: :any,                 arm64_sonoma:  "061da1460500f02df5cd42a12f5301f76b7b4684fb75a76e590278b84445396c"
+    sha256 cellar: :any,                 arm64_ventura: "640b7a4fe0208c77a79dd47d960f52b3f2e75d618615e16708b644220b6943df"
+    sha256 cellar: :any,                 sonoma:        "eb1f49451241d795505ed4c2d42d67a6f994cda22f151cf3acc51db6c52100a3"
+    sha256 cellar: :any,                 ventura:       "0764395d3853ff416c9b5b1d94578cd0a2c6a29b7ba7875066ecc36d70d156b9"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "38ddcf4c4583824aa90ee0efaee9a5a9c3b51f30fc11f5406afcd8b59ce1983f"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "bdacdbbc0f28b2915b38c8e27d3a59ce64d7b5a23db36ad29f8f8fb5fc3dbdaa"
   end
 
   def install

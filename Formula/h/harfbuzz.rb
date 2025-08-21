@@ -1,8 +1,8 @@
 class Harfbuzz < Formula
   desc "OpenType text shaping engine"
   homepage "https://github.com/harfbuzz/harfbuzz"
-  url "https://github.com/harfbuzz/harfbuzz/archive/refs/tags/11.4.1.tar.gz"
-  sha256 "2cde2c6dc10c797e89045097b9f7e3e42bf30942bb2a5d4f2fadbe89b0b418a8"
+  url "https://github.com/harfbuzz/harfbuzz/archive/refs/tags/11.4.2.tar.gz"
+  sha256 "5a0608c9c02dff7c3ed9ce8536a670b892d609b418492e3b000caab05f865e10"
   license "MIT"
   head "https://github.com/harfbuzz/harfbuzz.git", branch: "main"
 

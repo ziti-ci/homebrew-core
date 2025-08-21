@@ -53,7 +53,7 @@ class Sevenzip < Formula
     system bin/"7zz", "e", "foo.7z", "-oout"
     assert_equal "hello world!\n", (testpath/"out/foo.txt").read
 
-    (testpath/"test7z.c").write <<~EOS
+    (testpath/"test7z.c").write <<~C
       #include <stdint.h>
       #include <stdio.h>
       #include <string.h>
@@ -105,7 +105,7 @@ class Sevenzip < Formula
         printf("%02u.%02u", major, minor);
         return 0;
       }
-    EOS
+    C
 
     system ENV.cc, "test7z.c", "-L#{lib}", "-l7z", "-o", "test7z"
     output = shell_output("./test7z").strip

@@ -7,14 +7,13 @@ class Uv < Formula
   head "https://github.com/astral-sh/uv.git", branch: "main"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "76f7c27a2a1f20fca096428b77c2056ef8c354156590cd545f414dfb551df7b6"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "7178b2cc2c4d67bd86bc4ed194b0ee7c9a2b54ac2a3701a953a9a6470e869c57"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "76461de520202297f0335d3dc21448f6bc7e66f5918170e111708a75cf312b66"
-    sha256 cellar: :any_skip_relocation, sonoma:        "068e8eaec4c489b2e00698d08fb9f5c1d8be0b09e69f4bc10adf409dcb273ea1"
-    sha256 cellar: :any_skip_relocation, ventura:       "daa32c25465b8c273ebccf449f72c4887c16bb6a7f3bab320fd1739e48ae6347"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "24b0d2aa0adde0a45b7df52eeddf5566a003e644dcf783d7b3993b45d991afd3"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "8f097f70e90569b7d4827b79155cf27538e329ff279d7e4d31be4f09a2ab01d6"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "a39221ab32b8cfbf9cf1adc40fe4a3ad0d68857be314bc33e12c622c8041c584"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "d9d4e2f3033049fa6240c5a70558bca084512aa180053e1ebeb9f945743bb6a4"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "096e57565a1888422db7870c88b2aaa7edc6600359145f5d1f531ab309528b08"
+    sha256 cellar: :any_skip_relocation, sonoma:        "f1e3cb770034d922ad50337d1a62d350151eb09cf03d879d700b1d40ff3e2e04"
+    sha256 cellar: :any_skip_relocation, ventura:       "fa0d7396d194c04fccecb95f97672270b0472313b450c228014b73cbe08c50ac"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "8ca9944f4697e2b36429a4b1eecb8da213018e6b1ed970478b47ec6614f227ed"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "9531b45ebd7964c4245fbed3db29e298c3eb3fce643821caca4cec50e049c5eb"
   end
 
   depends_on "pkgconf" => :build

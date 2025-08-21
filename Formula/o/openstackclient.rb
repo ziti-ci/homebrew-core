@@ -8,13 +8,13 @@ class Openstackclient < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any,                 arm64_sequoia: "65db20de937459793ac3c8836148be6111d0e853087ff0a6483308f8735b3b84"
-    sha256 cellar: :any,                 arm64_sonoma:  "02dd9907c9cc1153c68bdb55ba0ebfcee591c46a1eb900898721fa108da06e0e"
-    sha256 cellar: :any,                 arm64_ventura: "8a0ac81160b431452b016d15b7484c573fb17b84b362dba01a64a7e63b943dc0"
-    sha256 cellar: :any,                 sonoma:        "02fb4725d98eaa076f03d83150448d084be310c32c9d970952c937823fd884eb"
-    sha256 cellar: :any,                 ventura:       "1510ea3ede063348ec2bc3e6e27c3a5d90b7021c807abf0c21b260d7c3467d9f"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "8bf2e8a85789888f53666dc3ddd550c986e16a3ffe1fcf0976703f84564f5834"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "e39a3fa6c24d1b94d353e732246116336c077a124a77fb684062b8caf1e6854f"
+    sha256 cellar: :any,                 arm64_sequoia: "c8eb1a45cb080c41c2d46d6517cd20f32113e73e1072b65614d5220c8d1b5af4"
+    sha256 cellar: :any,                 arm64_sonoma:  "19b02e7203b8780817bb5b08970f66799841be35c70bedc978598ef32354ef58"
+    sha256 cellar: :any,                 arm64_ventura: "4c3b32140dc294bcc0c75afcb1e4e0f37fb8e6a4647bd2cde2aac310493e06bd"
+    sha256 cellar: :any,                 sonoma:        "6690d758248c43018747f81dfb296bdf422577ad844b23134f170b27c5d063d4"
+    sha256 cellar: :any,                 ventura:       "e9514e0463ee461e5799fd46619417f933b8c760367c3717846d808ecdda500d"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "f9b1fec0eb815b7f621a764373b75f750cfa09b4b9f477080a2305feb77a7486"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "f5df1c2041f6baaa94b60dcd05fc215ae8acf0956e2991e5557321ef9c210e43"
   end
 
   depends_on "rust" => :build # for rpds-py

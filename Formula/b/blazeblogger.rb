@@ -21,7 +21,7 @@ class Blazeblogger < Formula
   def install
     # https://code.google.com/p/blazeblogger/issues/detail?id=51
     ENV.deparallelize
-    system "make", "prefix=#{prefix}", "compdir=#{prefix}", "install"
+    system "make", "install", "prefix=#{prefix}", "compdir=#{prefix}"
   end
 
   test do

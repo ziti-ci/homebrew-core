@@ -24,13 +24,13 @@ class OrTools < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_sequoia: "ce649587c5f2d0202701b4a5df43cdb9135757bcd8f0ebc28c70d49e336c09a4"
-    sha256 cellar: :any, arm64_sonoma:  "cfa19ff800a4fa5ffc7822689e34d91446affa2e36fbc9495fcb93d77a7c1a87"
-    sha256 cellar: :any, arm64_ventura: "cade2913e7c6c0c916568b9004732f591e4a701c7f31be38918c5376077831c0"
-    sha256 cellar: :any, sonoma:        "2a4d4e198fe9f2f6b2acee2c192bda29345ee089d65f2339164e1e12bee83bfd"
-    sha256 cellar: :any, ventura:       "902c0119349430b42956eef021c163d4b496ac1482dc6658b3cadfc140c0e484"
-    sha256               arm64_linux:   "e9d93b5d72e6f1afa9116644477c59c66949259a19fe2318b7ca292022f2aa73"
-    sha256               x86_64_linux:  "0c01f6f3ddec8e2f8ee32aa1081692ca66ce35adaa8aca7b7b284a6a86b10bb2"
+    sha256 cellar: :any, arm64_sequoia: "2f41f4f61000dd2ac56cd8b4d0419916077fa2e10cc4a294a1d100b8b29bfed7"
+    sha256 cellar: :any, arm64_sonoma:  "40f1bdafd61fb20f09a8fbc2d17445ac12387ae2e46ac1c1131d0e54f02c891a"
+    sha256 cellar: :any, arm64_ventura: "711c37000c74bd1a3a44da29cafdcebe38a2a2ffe7e4f2a0971d7c8a5ad506b7"
+    sha256 cellar: :any, sonoma:        "6a7fbff38e8933616a7052935195ca08de4a9872d48554cb939c4687166d8331"
+    sha256 cellar: :any, ventura:       "37b2f307068cdad2adcdcb4c6dfc82216a7e6858f851c70d1804d4a0916c3fb0"
+    sha256               arm64_linux:   "f142fd5479d4de9c400b50c92777c3cff7a375c04582ab1f05ea06c881e8352f"
+    sha256               x86_64_linux:  "d5ff712bf00d2955ca8e1c6b695b75b233221f70d9bb51c89a5ac7cf85500521"
   end
 
   depends_on "cmake" => [:build, :test]

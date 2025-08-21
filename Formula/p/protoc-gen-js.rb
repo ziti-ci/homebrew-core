@@ -10,13 +10,13 @@ class ProtocGenJs < Formula
   no_autobump! because: :requires_manual_review
 
   bottle do
-    sha256 cellar: :any,                 arm64_sequoia: "b658affe54eee085541fab58fb9d35cc6031bd7ca278db12d1a265fe276c4db8"
-    sha256 cellar: :any,                 arm64_sonoma:  "46a32c6d040ec75abf2b73b4a91b32c0f1d8ab4631f38fdc0ad96121d8a99395"
-    sha256 cellar: :any,                 arm64_ventura: "d2f5b55f2a50b3119ed1c30fb8b875158c8c9f0f692e62a35dc3b51c961c77f1"
-    sha256 cellar: :any,                 sonoma:        "0b3fa26ac4b56f11d3f7ec386650ea4b78c567dcffb60b2106cddb91de5315ac"
-    sha256 cellar: :any,                 ventura:       "758b80b0122a6e309414ecb5b266f8a926f5cba9e3fc57b5ce6a69a7b218f79e"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "3a67b73fe726911472fbb1da0c152a41e20758d71a0258fb311b94ebd99b80a5"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "2fe521ef2b217ccbb76949f515836d918671d8753d627d590287ea2880518876"
+    sha256 cellar: :any,                 arm64_sequoia: "a87ff83edfcd03c7f32f6e56f28d439813f6a9e336ba0074cf7087a3cec46ea1"
+    sha256 cellar: :any,                 arm64_sonoma:  "36a1fb1991283d9ba6d58a84f6e76d3716cc7dfa0fb485a5b607257f188627c8"
+    sha256 cellar: :any,                 arm64_ventura: "b51382cb0ee46e9866f85ad4d0a28288c350fa13f02db224b8e9677a6e168a3f"
+    sha256 cellar: :any,                 sonoma:        "91cd9385dbcbbb0f98735df69b8db47b5dba90114ad0e548ff10495f9b5d79c1"
+    sha256 cellar: :any,                 ventura:       "882c2d7970d9bd50ce7106fa5a2f69bbd31378701fde1be08700b43cf51d1eef"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "d6cfe1c19f1b59fc8d8cd2384efeabbea7ec95f5cf177e5641deb48ddf9debf7"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "44f5679557f8f267512efa9038e2f6721b1da4d7b5e400dd1f9de93304c1dc6c"
   end
 
   depends_on "pkgconf" => :build

@@ -2,8 +2,8 @@ class Lc0 < Formula
   desc "Open source neural network based chess engine"
   homepage "https://lczero.org/"
   url "https://github.com/LeelaChessZero/lc0.git",
-      tag:      "v0.31.2",
-      revision: "8ba8aa426460bbeda452754ff7d6a9bb60bb0e54"
+      tag:      "v0.32.0",
+      revision: "b38ed00a25baed9554d2675ec376bd50dad18195"
   license "GPL-3.0-or-later"
 
   bottle do
@@ -37,6 +37,8 @@ class Lc0 < Formula
   end
 
   def install
+    ENV.append_to_cflags "-I#{Formula["eigen"].opt_include}/eigen3"
+
     args = ["-Dgtest=false", "-Dbindir=libexec"]
 
     if OS.mac?
@@ -57,9 +59,9 @@ class Lc0 < Formula
   end
 
   test do
-    assert_match "Creating backend [blas]",
+    assert_match "BLAS vendor:",
       shell_output("#{bin}/lc0 benchmark --backend=blas --nodes=1 --num-positions=1 2>&1")
-    assert_match "Creating backend [eigen]",
+    assert_match "Using Eigen",
       shell_output("#{bin}/lc0 benchmark --backend=eigen --nodes=1 --num-positions=1 2>&1")
   end
 end

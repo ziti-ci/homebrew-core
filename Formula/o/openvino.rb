@@ -6,7 +6,7 @@ class Openvino < Formula
   url "https://github.com/openvinotoolkit/openvino/archive/refs/tags/2025.2.0.tar.gz"
   sha256 "15cd5c9beb320a8feadd18bcae40970608de154d5057277281dc53dd7023e383"
   license "Apache-2.0"
-  revision 2
+  revision 3
   head "https://github.com/openvinotoolkit/openvino.git", branch: "master"
 
   livecheck do
@@ -15,12 +15,12 @@ class Openvino < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_sequoia: "b20ac6c8011db721cac7bb54578b514f6d0b3138b90d62421823f34409e018cc"
-    sha256 cellar: :any, arm64_sonoma:  "7b15e876a023f6b575b342bff98346174b04a15647a53a4fe36332dac8e5d75a"
-    sha256 cellar: :any, arm64_ventura: "5781671a502893face473c4ce47af49df53d75c6eb18e0383127a15b27ad3660"
-    sha256 cellar: :any, sonoma:        "dcf84d27fc67a6acd80bffd3c46f423010bb55679005b2a105e498ccf38c10cf"
-    sha256 cellar: :any, ventura:       "02c7226153970d2754ce46bd53b14d16f06240927e9d60194247fab6f2081845"
-    sha256               x86_64_linux:  "e2dc9651b47c8c74a29bf636d47501b58cdddc447495a9ae9e7114f990c4775f"
+    sha256 cellar: :any, arm64_sequoia: "7a49c564ead1cde5b61e44f47d175693678494711a1315848527401b8ea260dc"
+    sha256 cellar: :any, arm64_sonoma:  "ccbdd0defacbc68539614344a75aa153f3961ae9af36c1afb0593a4ec6ac9fcb"
+    sha256 cellar: :any, arm64_ventura: "0d18a86d3a49d947e976127bb2d15ac82627c42d500ceccab27e51cfa03377e4"
+    sha256 cellar: :any, sonoma:        "5ed46e78264ec191549c9e5f88ddfd0b5e8b220d1056948570a8897e7bae55b3"
+    sha256 cellar: :any, ventura:       "c61634c4b6cd5afe8f923a394cbbab31309d6cec9f62ef426e1e37215895d63e"
+    sha256               x86_64_linux:  "3edf864514d74a3d4d15b34076a53428cf9744e3ae0e3995ff3de01cc425680c"
   end
 
   depends_on "cmake" => [:build, :test]
@@ -64,8 +64,16 @@ class Openvino < Formula
     end
   end
 
-  on_intel do
-    depends_on "xbyak" => :build
+  # FIXME: depends_on "xbyak" => :build
+  #
+  # compute_hash.cpp:418:53: error: use of overloaded operator '+' is ambiguous
+  # (with operand types 'RegistersPool::Reg<Xbyak::Reg64>' and 'const uint64_t'
+  # after https://github.com/herumi/xbyak/commit/689767da682edab65b55e9607535c28902370b08
+  resource "xbyak" do
+    on_intel do
+      url "https://github.com/herumi/xbyak/archive/refs/tags/v7.28.tar.gz"
+      sha256 "c8da3d85fa322303cb312d6315592547952d7bb81f58bf98bc0a26ecd88be495"
+    end
   end
 
   resource "mlas" do
@@ -135,6 +143,9 @@ class Openvino < Formula
     elsif OS.linux?
       resource("onednn_gpu").stage buildpath/"src/plugins/intel_gpu/thirdparty/onednn_gpu"
     end
+
+    # TODO: Remove once able to build with xbyak >= 7.29
+    resource("xbyak").stage buildpath/"thirdparty/xbyak" if Hardware::CPU.intel?
 
     cmake_args = %w[
       -DENABLE_CPPLINT=OFF

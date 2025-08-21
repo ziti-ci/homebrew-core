@@ -4,16 +4,16 @@ class ProtocGenGrpcJava < Formula
   url "https://github.com/grpc/grpc-java/archive/refs/tags/v1.74.0.tar.gz"
   sha256 "0c602853d2170c7104c767849935851baaf5a2c551ef0add040319ac3afe9bfc"
   license "Apache-2.0"
-  revision 3
+  revision 4
 
   bottle do
-    sha256 cellar: :any,                 arm64_sequoia: "b854853fd0ef677d57848bd9279e5ff0e9abc5c674c25e912f2a9f17dd8cf5f6"
-    sha256 cellar: :any,                 arm64_sonoma:  "454b74c866f9f06feadbacc812f8620696ced96b35b225bde2efb66574eb5b12"
-    sha256 cellar: :any,                 arm64_ventura: "01081a0fcf53418987eb258163b136727b1635d9f2c886553f83fda59684e2b1"
-    sha256 cellar: :any,                 sonoma:        "37c90105f5d8464955275c13371ec2d66e66cc79ebd2a34798f49a4a6a310fc2"
-    sha256 cellar: :any,                 ventura:       "b1e1f8266ba2275601a1524abbd3a16c65d8a9c8710a8cf0b6f3193b16452aa2"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "eb777b02d19c773ae43f8c9ca90ddaa008a8745f22d222e14911c2c7b28bf64f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "dd2b2e2c8e1bee3ab00e0a5b9eb13d6215e567ac0fc7058b63f45c5491ea6b73"
+    sha256 cellar: :any,                 arm64_sequoia: "41cda102e79d645a3bb38ed5f67203278116928d6a3ecdc4b40909967c73d341"
+    sha256 cellar: :any,                 arm64_sonoma:  "536098b9765d42f842c170bc4c730386ef095b9eee13306611b69d7eda587df2"
+    sha256 cellar: :any,                 arm64_ventura: "4fec9781020e0eb043aafc2d980050327297b7b8463a55ef1f73729ab2978702"
+    sha256 cellar: :any,                 sonoma:        "ed3d031820c4b4cc2f90673ea5a176914e5fe3dc1ce05a901f8cfc2b1fcf9d4b"
+    sha256 cellar: :any,                 ventura:       "0175639a88d192c77167387359890c0fc14bf73516895fed7d3de9136a8a38cd"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "ddedbc5d6a86b753345aa92410d4e41bf310856ea95b910d485fa674beebf4f7"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "499163a3c6ff4ba45953f660ac8611de0557d410ae85251839e3d7a2e35fb170"
   end
 
   depends_on "gradle@8" => :build

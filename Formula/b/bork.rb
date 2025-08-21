@@ -26,6 +26,8 @@ class Bork < Formula
   end
 
   test do
+    assert_match version.to_s, shell_output("#{bin}/bork version")
+
     expected_output = "checking: directory #{testpath}/foo\r" \
                       "missing: directory #{testpath}/foo           \n" \
                       "verifying install: directory #{testpath}/foo\n" \

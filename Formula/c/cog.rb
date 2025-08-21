@@ -6,6 +6,11 @@ class Cog < Formula
   license "Apache-2.0"
   head "https://github.com/replicate/cog.git", branch: "main"
 
+  livecheck do
+    url :stable
+    strategy :github_latest
+  end
+
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_sequoia: "6c4a8639eddac358d3a929510a961ce45ad7723f93e45fb0144cc47fc9661726"
     sha256 cellar: :any_skip_relocation, arm64_sonoma:  "6c4a8639eddac358d3a929510a961ce45ad7723f93e45fb0144cc47fc9661726"

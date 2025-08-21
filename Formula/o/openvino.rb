@@ -20,6 +20,7 @@ class Openvino < Formula
     sha256 cellar: :any, arm64_ventura: "0d18a86d3a49d947e976127bb2d15ac82627c42d500ceccab27e51cfa03377e4"
     sha256 cellar: :any, sonoma:        "5ed46e78264ec191549c9e5f88ddfd0b5e8b220d1056948570a8897e7bae55b3"
     sha256 cellar: :any, ventura:       "c61634c4b6cd5afe8f923a394cbbab31309d6cec9f62ef426e1e37215895d63e"
+    sha256               arm64_linux:   "44e59660fba1c7831bf51b17510204a5894843e320b0bf5d0c8c0e08127a9fe4"
     sha256               x86_64_linux:  "3edf864514d74a3d4d15b34076a53428cf9744e3ae0e3995ff3de01cc425680c"
   end
 

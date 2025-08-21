@@ -16,6 +16,7 @@ class Libudfread < Formula
     sha256 cellar: :any,                 arm64_ventura: "d5f039fc1b4b415f554391bd3500cd47c3f7129baa8729d302f9f31d9bb2c939"
     sha256 cellar: :any,                 sonoma:        "f48224450840a89fd3c0941f0fdfcca6e25900174a2dc0529b5b741794ebdc1a"
     sha256 cellar: :any,                 ventura:       "dcfc7c2ae1e18c03814140a7fe31507166ad7174c105b99d1a6db3afdec9f51c"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "977b8b3c0c96cbb74267ddd08cbef36a51ffa97475b350cd95712fcccd759f63"
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "9d739ff8b7b3989919e494baae8ae502b249e61afe81587064d675ab7271744f"
   end
 

@@ -1,9 +1,9 @@
 class GnuChess < Formula
   desc "Chess-playing program"
   homepage "https://www.gnu.org/software/chess/"
-  url "https://ftpmirror.gnu.org/gnu/chess/gnuchess-6.2.11.tar.gz"
-  mirror "https://ftp.gnu.org/gnu/chess/gnuchess-6.2.11.tar.gz"
-  sha256 "d81140eea5c69d14b0cfb63816d4b4c9e18fba51f5267de5b1539f468939e9bd"
+  url "https://ftpmirror.gnu.org/gnu/chess/gnuchess-6.3.0.tar.gz"
+  mirror "https://ftp.gnu.org/gnu/chess/gnuchess-6.3.0.tar.gz"
+  sha256 "0b37bec2098c2ad695b7443e5d7944dc6dc8284f8d01fcc30bdb94dd033ca23a"
   license "GPL-3.0-or-later"
 
   livecheck do
@@ -67,6 +67,6 @@ class GnuChess < Formula
   end
 
   test do
-    assert_equal "GNU Chess #{version}", shell_output("#{bin}/gnuchess --version").chomp
+    assert_match "GNU Chess #{version}", shell_output("#{bin}/gnuchess --version")
   end
 end

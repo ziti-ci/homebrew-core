@@ -1,8 +1,8 @@
 class CodeCli < Formula
   desc "Command-line interface built-in Visual Studio Code"
   homepage "https://github.com/microsoft/vscode"
-  url "https://github.com/microsoft/vscode/archive/refs/tags/1.103.1.tar.gz"
-  sha256 "dbb53d6ab738a1a9fed17dd679b19ba394c681e461ae0ca961d0258436a700e6"
+  url "https://github.com/microsoft/vscode/archive/refs/tags/1.103.2.tar.gz"
+  sha256 "77d0201a5fd09df066a04a2bc1fa0acbc01317ed62ec04a99b8cb8a0ce2ce3b3"
   license "MIT"
   head "https://github.com/microsoft/vscode.git", branch: "main"
 
@@ -28,9 +28,6 @@ class CodeCli < Formula
   uses_from_macos "zlib"
 
   conflicts_with cask: "visual-studio-code"
-
-  # version patch, remove in next release
-  patch :DATA
 
   def install
     # Ensure that the `openssl` crate picks up the intended library.
@@ -64,17 +61,3 @@ class CodeCli < Formula
     end
   end
 end
-
-__END__
-diff --git a/package.json b/package.json
-index 865151c..25cfa7c 100644
---- a/package.json
-+++ b/package.json
-@@ -1,6 +1,6 @@
- {
-   "name": "code-oss-dev",
--  "version": "1.103.0",
-+  "version": "1.103.1",
-   "distro": "5545a7bcc7ca289eee3a1bd8fff5d381f3811934",
-   "author": {
-     "name": "Microsoft Corporation"

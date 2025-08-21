@@ -1,11 +1,11 @@
 class DockerMachine < Formula
   desc "Create Docker hosts locally and on cloud providers"
   homepage "https://docs.gitlab.com/runner/executors/docker_machine.html"
-  url "https://gitlab.com/gitlab-org/ci-cd/docker-machine/-/archive/v0.16.2-gitlab.40/docker-machine-v0.16.2-gitlab.40.tar.bz2"
-  version "0.16.2-gitlab.40"
-  sha256 "fcc9751e80af8aafd0ecfcd5380790cb6daabd926e6ac3183c5a120bb3f33f87"
+  url "https://gitlab.com/gitlab-org/ci-cd/docker-machine/-/archive/v0.16.2-gitlab.41/docker-machine-v0.16.2-gitlab.41.tar.bz2"
+  version "0.16.2-gitlab.41"
+  sha256 "1c8e4b303e49aaf31061657ec68ff85f5bf0559b174ec4d5f358a63c18292a12"
   license "Apache-2.0"
-  head "https://gitlab.com/gitlab-org/ci-cd/docker-machine.git", branch: "master"
+  head "https://gitlab.com/gitlab-org/ci-cd/docker-machine.git", branch: "main"
 
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_sequoia: "88cc0fe066546dc59a2a55506ac39dd0b853f0f96032d048646f5431c91b9bbe"

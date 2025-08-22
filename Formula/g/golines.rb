@@ -1,12 +1,10 @@
 class Golines < Formula
   desc "Golang formatter that fixes long lines"
   homepage "https://github.com/segmentio/golines"
-  url "https://github.com/segmentio/golines/archive/refs/tags/v0.12.2.tar.gz"
-  sha256 "6f3c462dc707b4441733dbcbef624c61cce829271db64bd994d43e50be95a211"
+  url "https://github.com/segmentio/golines/archive/refs/tags/v0.13.0.tar.gz"
+  sha256 "ec1933e0fb73cf0517fd007d325603007aa65ce430267a70fc78cfea43d9716e"
   license "MIT"
   head "https://github.com/segmentio/golines.git", branch: "master"
-
-  no_autobump! because: :requires_manual_review
 
   bottle do
     rebuild 1
@@ -18,8 +16,7 @@ class Golines < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "1869729349e1f224e3e615710ef606a79cf3bba1e03225e2633a78497fd5ee12"
   end
 
-  # Use "go" when https://github.com/segmentio/golines/pull/167 is merged and released:
-  depends_on "go@1.24" => :build
+  depends_on "go" => :build
 
   def install
     ldflags = "-s -w -X main.version=#{version} -X main.commit=#{tap.user} -X main.date=#{time.iso8601}"

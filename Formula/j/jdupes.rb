@@ -1,8 +1,8 @@
 class Jdupes < Formula
   desc "Duplicate file finder and an enhanced fork of 'fdupes'"
   homepage "https://codeberg.org/jbruchon/jdupes"
-  url "https://codeberg.org/jbruchon/jdupes/archive/v1.28.0.tar.gz"
-  sha256 "a8f21c04fff5e3ff0a92e8ac76114b2195ed43dc32b84bf343f5256e7ba9cb04"
+  url "https://codeberg.org/jbruchon/jdupes/archive/v1.30.0.tar.gz"
+  sha256 "9cf4727526d988cee62705f29f53c21765838302713ed6e6c0b29ac117c66af5"
   license "MIT"
 
   livecheck do
@@ -24,21 +24,14 @@ class Jdupes < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "efe8c6c3991ddf495a9b1d393818204927ab07da57de6ca47c3177197bded579"
   end
 
+  depends_on "libjodycode"
   depends_on macos: :catalina # requires aligned_alloc
 
-  resource "libjodycode" do
-    url "https://codeberg.org/jbruchon/libjodycode.git",
-        tag:      "v3.1.1",
-        revision: "0dc008e8d95c4899c9fc66fdb3ee5fc029df0470"
-  end
-
   def install
-    ENV.append_to_cflags "-I#{include}"
-    ENV.append "LDFLAGS", "-L#{lib}"
-
-    resource("libjodycode").stage do
-      system "make"
-      system "make", "install", "PREFIX=#{prefix}"
+    # error: no member named 'st_mtim' in 'struct stat'
+    inreplace "filestat.c" do |s|
+      s.gsub! "st_mtim.tv_sec", "st_mtime"
+      s.gsub! "st_atim.tv_sec", "st_atime"
     end
 
     system "make", "ENABLE_DEDUPE=1"
@@ -50,6 +43,6 @@ class Jdupes < Formula
     touch "b"
     (testpath/"c").write("unique file")
     dupes = shell_output("#{bin}/jdupes --zero-match .").strip.split("\n").sort
-    assert_equal ["./a", "./b"], dupes
+    assert_equal ["a", "b"], dupes
   end
 end

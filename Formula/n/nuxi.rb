@@ -6,6 +6,10 @@ class Nuxi < Formula
   license "MIT"
   head "https://github.com/nuxt/cli.git", branch: "main"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "cffdd16982be5e0ca7bd122e21b50a21b34717b8d53811b54f70f7c37822f1b8"
+  end
+
   depends_on "node"
 
   def install

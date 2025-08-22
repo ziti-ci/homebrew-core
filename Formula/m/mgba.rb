@@ -4,6 +4,7 @@ class Mgba < Formula
   url "https://github.com/mgba-emu/mgba/archive/refs/tags/0.10.5.tar.gz"
   sha256 "91d6fbd32abcbdf030d58d3f562de25ebbc9d56040d513ff8e5c19bee9dacf14"
   license "MPL-2.0"
+  revision 1
   head "https://github.com/mgba-emu/mgba.git", branch: "master"
 
   livecheck do
@@ -23,7 +24,7 @@ class Mgba < Formula
   depends_on "cmake" => :build
   depends_on "pkgconf" => :build
 
-  depends_on "ffmpeg"
+  depends_on "ffmpeg@7"
   depends_on "libepoxy"
   depends_on "libpng"
   depends_on "libsamplerate"
@@ -47,8 +48,10 @@ class Mgba < Formula
   end
 
   def install
+    # TODO: Remove minimum policy in 0.11. Upstream commit doesn't cleanly apply
+    # https://github.com/mgba-emu/mgba/commit/e95b81f1f7b95161fbda81fa5e931e3bcb193ccf
+    args = ["-DCMAKE_POLICY_VERSION_MINIMUM=3.5"]
     # https://github.com/mgba-emu/mgba/issues/3115
-    args = []
     args << "-DUSE_DISCORD_RPC=OFF" if OS.linux?
 
     inreplace "src/platform/qt/CMakeLists.txt" do |s|

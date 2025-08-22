@@ -13,15 +13,13 @@ class Jdupes < Formula
   no_autobump! because: :requires_manual_review
 
   bottle do
-    sha256 cellar: :any,                 arm64_sequoia:  "be36bdaad3510fc56343d42b0fc7038d9341c4ae9e0ce27cc51f6a793abf5b3a"
-    sha256 cellar: :any,                 arm64_sonoma:   "994e52bf99877c30b8e1dff40cb68b15107837c98f81f0dc4bae9ac4b7996270"
-    sha256 cellar: :any,                 arm64_ventura:  "316c3597188922ed828074195528feddb5e1dde7729c5d95171f42cedf12ef3e"
-    sha256 cellar: :any,                 arm64_monterey: "f9b2117f8e9af15c7f2daa38462b5eb20c5016698969bc320eb3129faa928ad3"
-    sha256 cellar: :any,                 sonoma:         "774795c0281215f51a2bd98e1310de9777ff88d44c812c7b4bf747915215aeae"
-    sha256 cellar: :any,                 ventura:        "a5fae3ac3b3c576f4f5a0b84b2f213251963eee770f94cd486b26f5122dd3513"
-    sha256 cellar: :any,                 monterey:       "8a2e86e7e6492f65534900bf6dee5bbff26ca910df3db5113b31d9393fccd710"
-    sha256 cellar: :any_skip_relocation, arm64_linux:    "c7e25093e68309582dbad8c1d255f38c74196379ecc77dce91c9c1d8d1e4e744"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "efe8c6c3991ddf495a9b1d393818204927ab07da57de6ca47c3177197bded579"
+    sha256 cellar: :any,                 arm64_sequoia: "bf13fca52de31046be8d384b328ffc06a7469bdb3c4ac2395124af859f963df8"
+    sha256 cellar: :any,                 arm64_sonoma:  "275595001b2b92d7c703c19fd47bb4b1a5b79f3b269320e2b67ef77c08629488"
+    sha256 cellar: :any,                 arm64_ventura: "c61d231a14741496d9d08b4eaad8a21fa8c25d459797214b26e71ac216b04151"
+    sha256 cellar: :any,                 sonoma:        "a293555bd6f8f5a3a7d18ddc2c08d7e6910dcf2bc30eb3d252583058cfea54dd"
+    sha256 cellar: :any,                 ventura:       "44de35b0123ddb92175ba7d2e033bbbedf6578a00b47675b76f9449c00d8fc3b"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "7fb72e297067bcd4c13172fc5a9663b3928083ae382ae48f3e58a3b4de1f6e94"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "37a40291a140fae56f732ede2171ba24d957b5f1ac983a716fda7726585a5495"
   end
 
   depends_on "libjodycode"

@@ -18,6 +18,9 @@ class Dehydrated < Formula
   def install
     bin.install "dehydrated"
     man1.install "docs/man/dehydrated.1"
+
+    # Build an `:all` bottle
+    inreplace bin/"dehydrated", "/usr/local/etc/dehydrated", "#{HOMEBREW_PREFIX}/etc/dehydrated"
   end
 
   test do

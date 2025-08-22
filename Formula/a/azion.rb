@@ -1,19 +1,18 @@
 class Azion < Formula
   desc "CLI for the Azion service"
   homepage "https://github.com/aziontech/azion"
-  url "https://github.com/aziontech/azion/archive/refs/tags/4.1.0.tar.gz"
-  sha256 "579beb9042fd03b727e12d2677eef0779b8d9345e96d8acec75edd1d09e495c3"
+  url "https://github.com/aziontech/azion/archive/refs/tags/4.1.1.tar.gz"
+  sha256 "416428fdb1c0aa027c9200b9e06bb7ebd608641d8af6446604e5ea4e7bee5030"
   license "MIT"
   head "https://github.com/aziontech/azion.git", branch: "dev"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "68717e54d8b1e1ba7d6fe46d6ac12da64cff1b1887a09f9245629105b443648f"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "68717e54d8b1e1ba7d6fe46d6ac12da64cff1b1887a09f9245629105b443648f"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "68717e54d8b1e1ba7d6fe46d6ac12da64cff1b1887a09f9245629105b443648f"
-    sha256 cellar: :any_skip_relocation, sonoma:        "41d638953cf9ae4dfe4f515b6ae505d65c855132c0507c8435edcace329197e3"
-    sha256 cellar: :any_skip_relocation, ventura:       "41d638953cf9ae4dfe4f515b6ae505d65c855132c0507c8435edcace329197e3"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "5566c1279664ffb650927d4c17c95abca20290120dfd05c78199bad39bf99ef7"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "10789bbaf172c5dd3df7bc124f30c3e1724f9973928f9d1ee28cfd0459754566"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "10789bbaf172c5dd3df7bc124f30c3e1724f9973928f9d1ee28cfd0459754566"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "10789bbaf172c5dd3df7bc124f30c3e1724f9973928f9d1ee28cfd0459754566"
+    sha256 cellar: :any_skip_relocation, sonoma:        "cceca0a8dcdcce936914b6bb69a7383e655f68cbe3bfd6e6bdae71d56ffa05e3"
+    sha256 cellar: :any_skip_relocation, ventura:       "cceca0a8dcdcce936914b6bb69a7383e655f68cbe3bfd6e6bdae71d56ffa05e3"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "15fe655dc8445dc36bc7a4eda9cba52a68264e7f9f3d6f81f3160d7d5352839d"
   end
 
   depends_on "go" => :build

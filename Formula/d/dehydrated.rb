@@ -6,13 +6,8 @@ class Dehydrated < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "50d65a084449712eea356f6b150cfd16dd91b0482e9affcc85b8c857d729cc16"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "50d65a084449712eea356f6b150cfd16dd91b0482e9affcc85b8c857d729cc16"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "50d65a084449712eea356f6b150cfd16dd91b0482e9affcc85b8c857d729cc16"
-    sha256 cellar: :any_skip_relocation, sonoma:        "f3150342ef796696d20b730330b6098ce35da74b972d4f14f8ad85932d398de9"
-    sha256 cellar: :any_skip_relocation, ventura:       "f3150342ef796696d20b730330b6098ce35da74b972d4f14f8ad85932d398de9"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "50d65a084449712eea356f6b150cfd16dd91b0482e9affcc85b8c857d729cc16"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "50d65a084449712eea356f6b150cfd16dd91b0482e9affcc85b8c857d729cc16"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, all: "069a4a6c4658ce2051150ae2ee9245b5d40ceb175912ab8428ecd7e1a7519bcd"
   end
 
   def install

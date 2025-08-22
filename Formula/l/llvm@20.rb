@@ -11,6 +11,16 @@ class LlvmAT20 < Formula
     regex(/^llvmorg[._-]v?(20(?:\.\d+)+)$/i)
   end
 
+  bottle do
+    sha256 cellar: :any,                 arm64_sequoia: "a8bbf20183038cbf5c5955bcb7ad88f86b9c52b8f4fa2153300726275277769f"
+    sha256 cellar: :any,                 arm64_sonoma:  "01f6f4e8c815eaaeee09ac435b15a70cb907d8e7c767489579ec8523ffee2642"
+    sha256 cellar: :any,                 arm64_ventura: "720570a2547522ac18f2443993d8aefdb79a7b2bc23e7389608b0ede2c3f3bf2"
+    sha256 cellar: :any,                 sonoma:        "0e0576cbc16d2f109d68074797a4f7333abb6da2720e7569fb51517417bb4d90"
+    sha256 cellar: :any,                 ventura:       "e97507fafff68722e6bab02fde4ac97f13d12e95ba818325fa9184941eaa54e5"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "70d678f015599eb2a158b088a47c67e399b200d49e435277c9ce7b0a4efe62b1"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "8202436b5da09d729ec58b40114662debf730c649b850cc217e0646941518b96"
+  end
+
   keg_only :versioned_formula
 
   # https://llvm.org/docs/GettingStarted.html#requirement

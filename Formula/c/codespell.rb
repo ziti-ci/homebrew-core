@@ -24,6 +24,7 @@ class Codespell < Formula
   end
 
   test do
+    assert_match version.to_s, shell_output("#{bin}/codespell --version")
     assert_equal "1: teh\n\tteh ==> the\n", pipe_output("#{bin}/codespell -", "teh", 65)
   end
 end

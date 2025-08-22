@@ -1,8 +1,8 @@
 class Counts < Formula
   desc "Tool for ad hoc profiling"
   homepage "https://github.com/nnethercote/counts"
-  url "https://github.com/nnethercote/counts/archive/refs/tags/1.0.4.tar.gz"
-  sha256 "fe4f869f9cf49a8aae57858e0ed4c76ea5f849db1445a2013d45a8e020b764c0"
+  url "https://github.com/nnethercote/counts/archive/refs/tags/1.0.6.tar.gz"
+  sha256 "4d3394b32afa98b91fd624a9c4df690d07fa1d6559cd87bb82a4bde6131fbc5f"
   license "Unlicense"
   head "https://github.com/nnethercote/counts.git", branch: "master"
 

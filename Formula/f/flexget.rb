@@ -3,8 +3,8 @@ class Flexget < Formula
 
   desc "Multipurpose automation tool for content"
   homepage "https://www.flexget.com"
-  url "https://files.pythonhosted.org/packages/03/6f/8f88d4e3a61037055760f33ef0fa9c35ff93fe38e6f4cbf4cd580cb8fa3d/flexget-3.17.13.tar.gz"
-  sha256 "a77bd14beab5925265d6a9adf9434d6fbd43175bc0f8d4012648816946ceb4ff"
+  url "https://files.pythonhosted.org/packages/27/84/c048bce45845dbc580b3873f4e89f10c7ea840bcca6a442af94ab7148178/flexget-3.17.14.tar.gz"
+  sha256 "0ed24f6f9193144f23e3cb0fefd6f1994b02b0de335bde6032ce4326ebf792e0"
   license "MIT"
 
   bottle do
@@ -89,8 +89,8 @@ class Flexget < Formula
   end
 
   resource "flask" do
-    url "https://files.pythonhosted.org/packages/c0/de/e47735752347f4128bcf354e0da07ef311a78244eba9e3dc1d4a5ab21a98/flask-3.1.1.tar.gz"
-    sha256 "284c7b8f2f58cb737f0cf1c30fd7eaf0ccfcde196099d24ecede3fc2005aa59e"
+    url "https://files.pythonhosted.org/packages/dc/6d/cfe3c0fcc5e477df242b98bfe186a4c34357b4847e87ecaef04507332dab/flask-3.1.2.tar.gz"
+    sha256 "bf656c15c80190ed628ad08cdfd3aaa35beb087855e2f494910aa3774cc4fd87"
   end
 
   resource "flask-compress" do

@@ -1,8 +1,8 @@
 class Libjodycode < Formula
   desc "Shared code used by several utilities written by Jody Bruchon"
   homepage "https://codeberg.org/jbruchon/libjodycode"
-  url "https://codeberg.org/jbruchon/libjodycode/archive/v4.0.tar.gz"
-  sha256 "46db5897307ac3be92bb048c62f1beb93793dd101dd4cf6c1787688eaf58c094"
+  url "https://codeberg.org/jbruchon/libjodycode/archive/v4.0.1.tar.gz"
+  sha256 "d0365b8b0762a79c3ff7913234099091c365fcae125436343224b4e39da85087"
   license "MIT"
 
   bottle do

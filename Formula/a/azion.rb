@@ -7,12 +7,13 @@ class Azion < Formula
   head "https://github.com/aziontech/azion.git", branch: "dev"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "0b82dc1b8e712cda73f24b53132add0aea6eff3751a2f370e261c8a50e28024b"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "0b82dc1b8e712cda73f24b53132add0aea6eff3751a2f370e261c8a50e28024b"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "0b82dc1b8e712cda73f24b53132add0aea6eff3751a2f370e261c8a50e28024b"
-    sha256 cellar: :any_skip_relocation, sonoma:        "fd6a07ec6758886f5276fc0842a8301317056f90a953c692eacf04f4b5d57433"
-    sha256 cellar: :any_skip_relocation, ventura:       "fd6a07ec6758886f5276fc0842a8301317056f90a953c692eacf04f4b5d57433"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "62cf57b0d5b27d06633fae7eabf12ce078980c5b41162ea3039bd2f1609601b7"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "68717e54d8b1e1ba7d6fe46d6ac12da64cff1b1887a09f9245629105b443648f"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "68717e54d8b1e1ba7d6fe46d6ac12da64cff1b1887a09f9245629105b443648f"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "68717e54d8b1e1ba7d6fe46d6ac12da64cff1b1887a09f9245629105b443648f"
+    sha256 cellar: :any_skip_relocation, sonoma:        "41d638953cf9ae4dfe4f515b6ae505d65c855132c0507c8435edcace329197e3"
+    sha256 cellar: :any_skip_relocation, ventura:       "41d638953cf9ae4dfe4f515b6ae505d65c855132c0507c8435edcace329197e3"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "5566c1279664ffb650927d4c17c95abca20290120dfd05c78199bad39bf99ef7"
   end
 
   depends_on "go" => :build
@@ -21,9 +22,10 @@ class Azion < Formula
     ldflags = %W[
       -s -w
       -X github.com/aziontech/azion-cli/pkg/cmd/version.BinVersion=#{version}
-      -X github.com/aziontech/azion-cli/pkg/constants.StorageApiURL=https://api.azion.com
+      -X github.com/aziontech/azion-cli/pkg/constants.StorageApiURL=https://api.azion.com/v4
       -X github.com/aziontech/azion-cli/pkg/constants.AuthURL=https://sso.azion.com/api
       -X github.com/aziontech/azion-cli/pkg/constants.ApiURL=https://api.azionapi.net
+      -X github.com/aziontech/azion-cli/pkg/constants.ApiV4URL=https://api.azion.com/v4
     ]
     system "go", "build", *std_go_args(ldflags:), "./cmd/azion"
 

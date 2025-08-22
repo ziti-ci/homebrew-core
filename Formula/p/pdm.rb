@@ -3,8 +3,8 @@ class Pdm < Formula
 
   desc "Modern Python package and dependency manager supporting the latest PEP standards"
   homepage "https://pdm-project.org"
-  url "https://files.pythonhosted.org/packages/5a/ef/3dc38b4b78d09de621db5abba5fef7dbc67624c4741cbddfd409fc10c7e7/pdm-2.25.7.tar.gz"
-  sha256 "bf5e315eb6113d5e26b88245db940cbe078a16fd17f924e46bc6352b14317182"
+  url "https://files.pythonhosted.org/packages/fa/28/c5bd4758f35d44cdfa05888e529590de1a7e0c4d67fae83d20b68fb33541/pdm-2.25.9.tar.gz"
+  sha256 "fb5fcd561986db1d83255d01e97e2e16f80debf743934d891a62ff2933ccc80c"
   license "MIT"
   head "https://github.com/pdm-project/pdm.git", branch: "main"
 

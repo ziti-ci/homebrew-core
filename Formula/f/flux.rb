@@ -2,8 +2,8 @@ class Flux < Formula
   desc "Lightweight scripting language for querying databases"
   homepage "https://www.influxdata.com/products/flux/"
   url "https://github.com/influxdata/flux.git",
-      tag:      "v0.197.0",
-      revision: "6f5f1c0c24c7da7a705f9805c2782ba091599c5f"
+      tag:      "v0.198.0",
+      revision: "432969ffee5365e35d7519884e0b4d8e56cce01b"
   license "MIT"
   head "https://github.com/influxdata/flux.git", branch: "master"
 
@@ -40,6 +40,9 @@ class Flux < Formula
   end
 
   def install
+    # `flux-core` Workaround for `error: hiding a lifetime that's elided elsewhere is confusing` with `rust` 1.89+
+    ENV.append_to_rustflags "--allow dead_code --allow mismatched_lifetime_syntaxes"
+
     # Set up the influxdata pkg-config wrapper to enable just-in-time compilation & linking
     # of the Rust components in the server.
     resource("pkg-config-wrapper").stage do

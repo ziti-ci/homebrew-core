@@ -3,8 +3,8 @@ class Netpbm < Formula
   homepage "https://netpbm.sourceforge.net/"
   # Maintainers: Look at https://sourceforge.net/p/netpbm/code/HEAD/tree/
   # for stable versions and matching revisions.
-  url "https://svn.code.sf.net/p/netpbm/code/stable", revision: "5086"
-  version "11.02.17"
+  url "https://svn.code.sf.net/p/netpbm/code/stable", revision: "5106"
+  version "11.02.18"
   license "GPL-3.0-or-later"
   version_scheme 1
   head "https://svn.code.sf.net/p/netpbm/code/trunk"
@@ -15,7 +15,7 @@ class Netpbm < Formula
     strategy :page_match
   end
 
-  no_autobump! because: :requires_manual_review
+  no_autobump! because: :incompatible_version_format
 
   bottle do
     sha256 arm64_sequoia: "3aec77cc9b5bdf4f773cfbd5f96f9f9fcea7f0310d51a5c37e66bfe4c6fc0163"
@@ -43,8 +43,8 @@ class Netpbm < Formula
   resource "html" do
     # Rolling release, latest revision also documents previous software versions
     # NOTE: Keep "revision" and "version" in sync
-    url "https://svn.code.sf.net/p/netpbm/code/userguide", revision: "5071"
-    version "5071"
+    url "https://svn.code.sf.net/p/netpbm/code/userguide", revision: "5103"
+    version "5103"
 
     livecheck do
       url "https://sourceforge.net/p/netpbm/code/HEAD/log/?path=/userguide"

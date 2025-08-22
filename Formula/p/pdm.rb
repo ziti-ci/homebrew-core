@@ -3,19 +3,19 @@ class Pdm < Formula
 
   desc "Modern Python package and dependency manager supporting the latest PEP standards"
   homepage "https://pdm-project.org"
-  url "https://files.pythonhosted.org/packages/5a/ef/3dc38b4b78d09de621db5abba5fef7dbc67624c4741cbddfd409fc10c7e7/pdm-2.25.7.tar.gz"
-  sha256 "bf5e315eb6113d5e26b88245db940cbe078a16fd17f924e46bc6352b14317182"
+  url "https://files.pythonhosted.org/packages/fa/28/c5bd4758f35d44cdfa05888e529590de1a7e0c4d67fae83d20b68fb33541/pdm-2.25.9.tar.gz"
+  sha256 "fb5fcd561986db1d83255d01e97e2e16f80debf743934d891a62ff2933ccc80c"
   license "MIT"
   head "https://github.com/pdm-project/pdm.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "3e9aea326f8fd8b33d7443594c75561d3d054d3d0f558c6f1afedb79332e50fb"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "3e9aea326f8fd8b33d7443594c75561d3d054d3d0f558c6f1afedb79332e50fb"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "3e9aea326f8fd8b33d7443594c75561d3d054d3d0f558c6f1afedb79332e50fb"
-    sha256 cellar: :any_skip_relocation, sonoma:        "dd94e2cfb5abdebf04bd9fa5b5fddf42fab59fbb8d10e0866b4d771902fa3262"
-    sha256 cellar: :any_skip_relocation, ventura:       "dd94e2cfb5abdebf04bd9fa5b5fddf42fab59fbb8d10e0866b4d771902fa3262"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "dd94e2cfb5abdebf04bd9fa5b5fddf42fab59fbb8d10e0866b4d771902fa3262"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "dd94e2cfb5abdebf04bd9fa5b5fddf42fab59fbb8d10e0866b4d771902fa3262"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "d9518e388dcb9396d930afa3829ef728e12543e3c1c0032818e85a6649ad2008"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "d9518e388dcb9396d930afa3829ef728e12543e3c1c0032818e85a6649ad2008"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "d9518e388dcb9396d930afa3829ef728e12543e3c1c0032818e85a6649ad2008"
+    sha256 cellar: :any_skip_relocation, sonoma:        "79ec26732513485099ff2e63ac5d733f79dde0bafe9dfb3b3f4ccb1a7eb38abf"
+    sha256 cellar: :any_skip_relocation, ventura:       "79ec26732513485099ff2e63ac5d733f79dde0bafe9dfb3b3f4ccb1a7eb38abf"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "79ec26732513485099ff2e63ac5d733f79dde0bafe9dfb3b3f4ccb1a7eb38abf"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "79ec26732513485099ff2e63ac5d733f79dde0bafe9dfb3b3f4ccb1a7eb38abf"
   end
 
   depends_on "certifi"

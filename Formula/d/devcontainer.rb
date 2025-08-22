@@ -23,6 +23,8 @@ class Devcontainer < Formula
   end
 
   test do
+    assert_match version.to_s, shell_output("#{bin}/devcontainer --version")
+
     ENV["DOCKER_HOST"] = File::NULL
     # Modified .devcontainer/devcontainer.json from CLI example:
     # https://github.com/devcontainers/cli#try-out-the-cli

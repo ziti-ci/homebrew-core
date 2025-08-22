@@ -10,6 +10,16 @@ class LldAT20 < Formula
     formula "llvm@20"
   end
 
+  bottle do
+    sha256 cellar: :any,                 arm64_sequoia: "3746c0ce88a6134e98379209fc771ece464b353d48f5fe63e4d35af34350021c"
+    sha256 cellar: :any,                 arm64_sonoma:  "6646125d0a82ea3710c55257051c9f9116207d89cf5c42c8a7d9f6e8f4b8fac0"
+    sha256 cellar: :any,                 arm64_ventura: "433b76ece02764aa43cf95702bdfb43a04774c1b636e998af52abae1ade6937d"
+    sha256 cellar: :any,                 sonoma:        "b40aa1b91f8377eeaaa9a60dc070c9302ddd8ad3e3f54023607f8d58085375da"
+    sha256 cellar: :any,                 ventura:       "19566fe747f615ca035d2a28df682976900dd745b5dbb90cb38059bd2027cace"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "5664712e6320e1a4503fd903db1d147ae6e626fd7481a1957030efd8c9d4e9af"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "8414f1488bc24ed303f9aa5b99945b2f922a8a66c44a3cd4335a5d038670e860"
+  end
+
   keg_only :versioned_formula
 
   depends_on "cmake" => :build

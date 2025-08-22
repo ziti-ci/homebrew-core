@@ -1,8 +1,8 @@
 class Legba < Formula
   desc "Multiprotocol credentials bruteforcer/password sprayer and enumerator"
   homepage "https://github.com/evilsocket/legba"
-  url "https://github.com/evilsocket/legba/archive/refs/tags/v0.11.0.tar.gz"
-  sha256 "c5e0cf14d372792ac99d692894d407911106b97f1307494bfa68e791ef2273c7"
+  url "https://github.com/evilsocket/legba/archive/refs/tags/1.1.1.tar.gz"
+  sha256 "a5c7254b19910e2b1816a9e4af3720b772e35d1b0491cb42f90564ca01699d6f"
   license "AGPL-3.0-only"
   head "https://github.com/evilsocket/legba.git", branch: "main"
 
@@ -21,6 +21,8 @@ class Legba < Formula
   depends_on "rust" => :build
   depends_on "openssl@3"
   depends_on "samba"
+
+  uses_from_macos "llvm" => :build # for libclang
 
   def install
     # Ensure that the `openssl` crate picks up the intended library.

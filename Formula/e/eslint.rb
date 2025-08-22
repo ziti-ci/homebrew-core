@@ -7,13 +7,7 @@ class Eslint < Formula
   head "https://github.com/eslint/eslint.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "19393bb61d9aa7ae7121a9296c5be3fee2981d7fd03eae442d28e1ded46646b1"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "19393bb61d9aa7ae7121a9296c5be3fee2981d7fd03eae442d28e1ded46646b1"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "19393bb61d9aa7ae7121a9296c5be3fee2981d7fd03eae442d28e1ded46646b1"
-    sha256 cellar: :any_skip_relocation, sonoma:        "a2e5ed12cbcf5383e0d71063a031366bb345708afaa797cb59838e45fdd03c59"
-    sha256 cellar: :any_skip_relocation, ventura:       "a2e5ed12cbcf5383e0d71063a031366bb345708afaa797cb59838e45fdd03c59"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "19393bb61d9aa7ae7121a9296c5be3fee2981d7fd03eae442d28e1ded46646b1"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "19393bb61d9aa7ae7121a9296c5be3fee2981d7fd03eae442d28e1ded46646b1"
+    sha256 cellar: :any_skip_relocation, all: "575316e85ce14d1c43617a3bc96bdfa6fc093151c4265c205530349b10cbd0cd"
   end
 
   depends_on "node"

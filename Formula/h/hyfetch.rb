@@ -9,13 +9,24 @@ class Hyfetch < Formula
   head "https://github.com/hykilpikonna/hyfetch.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "55446c64fe707ad34df6df6193ccaac2e599597bf6e340a8753881a22f431867"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "55446c64fe707ad34df6df6193ccaac2e599597bf6e340a8753881a22f431867"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "55446c64fe707ad34df6df6193ccaac2e599597bf6e340a8753881a22f431867"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "55446c64fe707ad34df6df6193ccaac2e599597bf6e340a8753881a22f431867"
+    sha256 cellar: :any_skip_relocation, sonoma:        "55446c64fe707ad34df6df6193ccaac2e599597bf6e340a8753881a22f431867"
+    sha256 cellar: :any_skip_relocation, ventura:       "55446c64fe707ad34df6df6193ccaac2e599597bf6e340a8753881a22f431867"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "55446c64fe707ad34df6df6193ccaac2e599597bf6e340a8753881a22f431867"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "55446c64fe707ad34df6df6193ccaac2e599597bf6e340a8753881a22f431867"
   end
 
+  depends_on "rust" => :build
   depends_on "python@3.13"
 
   def install
+    # Install to `buildpath` first or else `virtualenv_install_with_resources` will overwrite it.
+    system "cargo", "install", *std_cargo_args(path: "crates/hyfetch", root: buildpath)
     virtualenv_install_with_resources
+    # Install the rust executable where the Python package expects it.
+    (libexec/Language::Python.site_packages("python3")/"hyfetch/rust").install "bin/hyfetch"
   end
 
   test do
@@ -23,6 +34,7 @@ class Hyfetch < Formula
       {
         "preset": "genderfluid",
         "mode": "rgb",
+        "auto_detect_light_dark": true,
         "light_dark": "dark",
         "lightness": 0.5,
         "color_align": {
@@ -31,6 +43,7 @@ class Hyfetch < Formula
           "fore_back": null
         },
         "backend": "neofetch",
+        "args": "--config none --color_blocks off --disable wm de term gpu",
         "distro": null,
         "pride_month_shown": [],
         "pride_month_disable": false
@@ -39,7 +52,6 @@ class Hyfetch < Formula
 
     system bin/"neowofetch", "--config", "none", "--color_blocks", "off",
                              "--disable", "wm", "de", "term", "gpu"
-    system bin/"hyfetch", "-C", testpath/"hyfetch.json",
-                          "--args=\"--config none --color_blocks off --disable wm de term gpu\""
+    system bin/"hyfetch", "--config-file=#{testpath}/.config/hyfetch.json"
   end
 end

@@ -1,8 +1,8 @@
 class Wgcf < Formula
   desc "Generate WireGuard profile from Cloudflare Warp account"
   homepage "https://github.com/ViRb3/wgcf"
-  url "https://github.com/ViRb3/wgcf/archive/refs/tags/v2.2.28.tar.gz"
-  sha256 "1e51c05cb72a85f5b4bdafe7a2ea6197de3b3e34bfd4e1f3733093e927a0bce3"
+  url "https://github.com/ViRb3/wgcf/archive/refs/tags/v2.2.29.tar.gz"
+  sha256 "25bd436c3d0919c8e76a2e31806520c401c9561663946951746d4027a7fab96a"
   license "MIT"
   head "https://github.com/ViRb3/wgcf.git", branch: "master"
 

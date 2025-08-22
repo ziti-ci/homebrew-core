@@ -16,8 +16,7 @@ class Nuclei < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "680eee93b90988c9b2a3a6bda2d354babb0ab299f5221d40b700845e149c8e8d"
   end
 
-  # use "go" when https://github.com/projectdiscovery/nuclei/pull/6348 is released (in 3.4.8 release?):
-  depends_on "go@1.24" => :build
+  depends_on "go" => :build
 
   def install
     system "go", "build", *std_go_args(ldflags: "-s -w"), "./cmd/nuclei"

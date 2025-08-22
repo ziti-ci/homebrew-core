@@ -1,19 +1,10 @@
 class Ejabberd < Formula
   desc "XMPP application server"
   homepage "https://www.ejabberd.im"
+  url "https://github.com/processone/ejabberd/archive/refs/tags/25.08.tar.gz"
+  sha256 "edc95cff239d74bfb16e437f7cf84f0e86144e5fe764d7ee7dc248b2d59778f1"
   license "GPL-2.0-only"
   head "https://github.com/processone/ejabberd.git", branch: "master"
-
-  stable do
-    url "https://github.com/processone/ejabberd/archive/refs/tags/25.07.tar.gz"
-    sha256 "a980f2817ea03ca78dc5d8d241ba68a533cbcfe371996513a1b24ea371146596"
-
-    # Backport fix for Erlang 28+
-    patch do
-      url "https://github.com/processone/ejabberd/commit/b1c3baa7bd283fe4616d4a9862fecd4f01e5bcea.patch?full_index=1"
-      sha256 "669fe848e8445cc319965a4b23a568d8b8f82140c3bf5a6cd265f9067eac2f7b"
-    end
-  end
 
   # There can be a notable gap between when a version is tagged and a
   # corresponding release is created, so we check the "latest" release instead

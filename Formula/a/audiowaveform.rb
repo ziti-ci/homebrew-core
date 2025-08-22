@@ -11,6 +11,7 @@ class Audiowaveform < Formula
     sha256 cellar: :any,                 arm64_ventura: "d18a60880174cfcab31fffaccd30fd4d9599016abc57bea6876482300082cc18"
     sha256 cellar: :any,                 sonoma:        "4b0a4c44b31fb0d5d4053cdafc13b2f61a7b51511d7c76c5b853745a4ad73544"
     sha256 cellar: :any,                 ventura:       "03b9eb62b31e53d0aed8a618a3e73c402c816e936763a57d243fe536dcd74852"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "1ae6cd104cd3c23dccc7a19265ef3a44168abf208c45064a1788155564ad9394"
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "513241538f7c5d46a3f0b2830649ce4aab77aee49aa08966bf82d9039f829ae0"
   end
 

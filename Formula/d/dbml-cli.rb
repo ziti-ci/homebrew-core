@@ -20,6 +20,9 @@ class DbmlCli < Formula
   def install
     system "npm", "install", *std_npm_args
     bin.install_symlink Dir["#{libexec}/bin/*"]
+
+    # Build an `:all` bottle by removing log file.
+    rm libexec/"lib/node_modules/@dbml/cli/yarn-error.log"
   end
 
   test do

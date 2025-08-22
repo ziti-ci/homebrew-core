@@ -1,10 +1,9 @@
 class Colmap < Formula
   desc "Structure-from-Motion and Multi-View Stereo"
   homepage "https://colmap.github.io/"
-  url "https://github.com/colmap/colmap/archive/refs/tags/3.12.4.tar.gz"
-  sha256 "320cb5a411cd0aa713adc05e208ec34067638e776260efd8098271342d408997"
+  url "https://github.com/colmap/colmap/archive/refs/tags/3.12.5.tar.gz"
+  sha256 "93dfb220cce24d988506bbb1d27d4278eacfd4e372df61d380559d414c1bd9e4"
   license "BSD-3-Clause"
-  revision 2
 
   bottle do
     sha256 cellar: :any, arm64_sequoia: "7266dbeac581a559f354eb3dc2b98b04ad4e45d0a30d0ddb97a8fbe312c21ab6"
@@ -43,12 +42,6 @@ class Colmap < Formula
 
   on_linux do
     depends_on "mesa"
-  end
-
-  # Fix build with Boost 1.89.0, pr ref: https://github.com/colmap/colmap/pull/3553
-  patch do
-    url "https://github.com/colmap/colmap/commit/4995ee6ab747fa34372359f1e12f85908bae88b1.patch?full_index=1"
-    sha256 "e6112f87997213aabf5a24be8e76a7368b72eee4e96dcd23a28659c5d4292be1"
   end
 
   def install

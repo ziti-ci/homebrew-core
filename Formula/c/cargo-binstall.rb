@@ -1,8 +1,8 @@
 class CargoBinstall < Formula
   desc "Binary installation for rust projects"
   homepage "https://github.com/cargo-bins/cargo-binstall"
-  url "https://github.com/cargo-bins/cargo-binstall/archive/refs/tags/v1.14.4.tar.gz"
-  sha256 "047d3c58be54eda727ae69c23320ee77413f3e508505e8c9a53081d0c213e1f7"
+  url "https://github.com/cargo-bins/cargo-binstall/archive/refs/tags/v1.15.0.tar.gz"
+  sha256 "dbd172618a15ca38f4599d97a795f89cfdc0251c215853d38b755f4f4a771892"
   license "GPL-3.0-only"
   head "https://github.com/cargo-bins/cargo-binstall.git", branch: "main"
 
@@ -31,6 +31,8 @@ class CargoBinstall < Formula
   end
 
   test do
+    ENV["BINSTALL_DISABLE_TELEMETRY"] = "true"
+
     output = shell_output("#{bin}/cargo-binstall --dry-run radio-sx128x")
     assert_match "resolve: Resolving package: 'radio-sx128x'", output
 

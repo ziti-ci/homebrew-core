@@ -1,8 +1,8 @@
 class Caddy < Formula
   desc "Powerful, enterprise-ready, open source web server with automatic HTTPS"
   homepage "https://caddyserver.com/"
-  url "https://github.com/caddyserver/caddy/archive/refs/tags/v2.10.0.tar.gz"
-  sha256 "e07e2747c394a6549751950ec8f7457ed346496f131ee38538ae39cf89ebcc68"
+  url "https://github.com/caddyserver/caddy/archive/refs/tags/v2.10.1.tar.gz"
+  sha256 "944ab8ba4a8a497827b16b51a39b45dc6e69c32e49d39486d9da198a7727b8be"
   license "Apache-2.0"
   head "https://github.com/caddyserver/caddy.git", branch: "master"
 
@@ -20,8 +20,8 @@ class Caddy < Formula
   depends_on "go" => :build
 
   resource "xcaddy" do
-    url "https://github.com/caddyserver/xcaddy/archive/refs/tags/v0.4.4.tar.gz"
-    sha256 "5ba32eec2388638cebbe1df861ea223c35074528af6a0424f07e436f07adce72"
+    url "https://github.com/caddyserver/xcaddy/archive/refs/tags/v0.4.5.tar.gz"
+    sha256 "53c6a9e29965aaf19210ac6470935537040e782101057a199098feb33c2674f8"
   end
 
   def install

@@ -28,6 +28,8 @@ class Cfv < Formula
     (testpath/"test/test.txt").write "Homebrew!"
 
     cd "test" do
+      assert_match version.to_s, shell_output("#{bin}/cfv --version")
+
       system bin/"cfv", "-t", "sha1", "-C", "test.txt"
       assert_path_exists Pathname.pwd/"test.sha1"
       assert_match "9afe8b4d99fb2dd5f6b7b3e548b43a038dc3dc38", File.read("test.sha1")

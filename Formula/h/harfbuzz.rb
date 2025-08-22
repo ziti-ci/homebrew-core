@@ -7,13 +7,13 @@ class Harfbuzz < Formula
   head "https://github.com/harfbuzz/harfbuzz.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any, arm64_sequoia: "53abe6e4c73f315e62b575f55e7eddbb1057bf29a975a79f7baf79b27a91072b"
-    sha256 cellar: :any, arm64_sonoma:  "8fdfd3bac6599d866f18ae7995e0fd934828a985ded5296e6dad50674a9b48ee"
-    sha256 cellar: :any, arm64_ventura: "4260dfe684e13ad73bd4103521b6fe040092ccbe63cdd462d93964d8ef81ad65"
-    sha256 cellar: :any, sonoma:        "3696cc9bc459b1b77648e6e06498cbcf305b8ec07ab251f1ad7c73659d9da940"
-    sha256 cellar: :any, ventura:       "d54b8f1c765edfbbeb7ce2e4967093934f13a8874f29d78c7a6d24fa472eece4"
-    sha256               arm64_linux:   "d792c06b4ae9c910623c50c81b076674fe88ac798e98ea1132adc7c4b3cdeacf"
-    sha256               x86_64_linux:  "230111e516568da5aa4c1a37f60916f2ca6aa81c5d5e931b847aaeeefd718424"
+    sha256 cellar: :any, arm64_sequoia: "fa65b0f6f85c06c1405ded55c3424f2a4012d717accd30395444caff009c0aa2"
+    sha256 cellar: :any, arm64_sonoma:  "4a75d42811f8f5687a4437006902cfe173302782eedd6a847f1e7ce981c053c2"
+    sha256 cellar: :any, arm64_ventura: "5420381aec6a5c9b61d80c431b90933822ae35f37648771a2046c2e9016a15ac"
+    sha256 cellar: :any, sonoma:        "61c097a18c23d201e20a85b83117c13baa331cf68390e50caae257f2783b6845"
+    sha256 cellar: :any, ventura:       "ae15e9d3c235ed4e2ad51d77bd1eeb4c95d53b2232b4963f4547baed28b54e72"
+    sha256               arm64_linux:   "c58c0eac4d206fa220d1589ccf806627cb06bb1a1d522fc3c728ee94606b195c"
+    sha256               x86_64_linux:  "f558b21abeb17b57fc963d083db9418e8114eff566ab422217b8c0004f01fa9b"
   end
 
   depends_on "gobject-introspection" => :build

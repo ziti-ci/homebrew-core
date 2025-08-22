@@ -6,6 +6,7 @@ class Chapel < Formula
   url "https://github.com/chapel-lang/chapel/releases/download/2.5.0/chapel-2.5.0.tar.gz"
   sha256 "020220ca9bf52b9f416e9a029bdc465bb1f635c1e274c6ca3c18d1f83e41fce1"
   license "Apache-2.0"
+  revision 1
   head "https://github.com/chapel-lang/chapel.git", branch: "main"
 
   no_autobump! because: :bumped_by_upstream
@@ -24,7 +25,7 @@ class Chapel < Formula
   depends_on "gmp"
   depends_on "hwloc"
   depends_on "jemalloc"
-  depends_on "llvm"
+  depends_on "llvm@20"
   depends_on "pkgconf"
   depends_on "python@3.13"
 

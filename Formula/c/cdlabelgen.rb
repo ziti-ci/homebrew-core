@@ -37,7 +37,12 @@ class Cdlabelgen < Formula
   end
 
   test do
-    system bin/"cdlabelgen", "-c", "TestTitle", "-t", pkgshare/"template.ps", "--output-file", "testout.eps"
-    File.file?("testout.eps")
+    args = %W[
+      --category TestTitle
+      --cover-template #{pkgshare}/template.ps
+      --output-file testout.eps
+    ]
+    system bin/"cdlabelgen", *args
+    assert_path_exists "testout.eps"
   end
 end

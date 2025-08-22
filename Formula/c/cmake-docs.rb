@@ -26,11 +26,13 @@ class CmakeDocs < Formula
   depends_on "sphinx-doc" => :build
 
   def install
-    system "cmake", "-S", "Utilities/Sphinx", "-B", "build", *std_cmake_args,
-                                                             "-DCMAKE_DOC_DIR=share/doc/cmake",
-                                                             "-DCMAKE_MAN_DIR=share/man",
-                                                             "-DSPHINX_MAN=ON",
-                                                             "-DSPHINX_HTML=ON"
+    args = %w[
+      -DCMAKE_DOC_DIR=share/doc/cmake
+      -DCMAKE_MAN_DIR=share/man
+      -DSPHINX_MAN=ON
+      -DSPHINX_HTML=ON
+    ]
+    system "cmake", "-S", "Utilities/Sphinx", "-B", "build", *args, *std_cmake_args
     system "cmake", "--build", "build"
     system "cmake", "--install", "build"
   end

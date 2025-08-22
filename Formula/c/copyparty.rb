@@ -3,8 +3,8 @@ class Copyparty < Formula
 
   desc "Portable file server"
   homepage "https://github.com/9001/copyparty"
-  url "https://files.pythonhosted.org/packages/b3/fc/a6637a4bc3c845bea2de952b38eb48fd88a9692657704481afdb1660dee3/copyparty-1.19.4.tar.gz"
-  sha256 "823295051845e4b8fb49358e239100a5e5ffa9e5c1408eb5b29c352f176ebc64"
+  url "https://files.pythonhosted.org/packages/27/dd/d3b9c1a99dcc1311f42c9e27682080761f18000240c4ae552d667daf66a0/copyparty-1.19.5.tar.gz"
+  sha256 "0fed13437c2f643ede778da050f221f3fa9a9442e796ea4ad1eab8505d21123a"
   license "MIT"
 
   bottle do
@@ -86,8 +86,8 @@ class Copyparty < Formula
   end
 
   resource "pyzmq" do
-    url "https://files.pythonhosted.org/packages/30/5f/557d2032a2f471edbcc227da724c24a1c05887b5cda1e3ae53af98b9e0a5/pyzmq-27.0.1.tar.gz"
-    sha256 "45c549204bc20e7484ffd2555f6cf02e572440ecf2f3bdd60d4404b20fddf64b"
+    url "https://files.pythonhosted.org/packages/f8/66/159f38d184f08b5f971b467f87b1ab142ab1320d5200825c824b32b84b66/pyzmq-27.0.2.tar.gz"
+    sha256 "b398dd713b18de89730447347e96a0240225e154db56e35b6bb8447ffdb07798"
   end
 
   def install

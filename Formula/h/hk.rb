@@ -1,8 +1,8 @@
 class Hk < Formula
   desc "Git hook and pre-commit lint manager"
   homepage "https://hk.jdx.dev"
-  url "https://github.com/jdx/hk/archive/refs/tags/v1.9.2.tar.gz"
-  sha256 "e7cc42551ebb34c1009dbf6f69c1823157cff82568ce81a8733fb58f5ba45f06"
+  url "https://github.com/jdx/hk/archive/refs/tags/v1.10.2.tar.gz"
+  sha256 "131b35f2bb882c7bba88a46414e23a3b402c5304270672342b3165c787336cc3"
   license "MIT"
   head "https://github.com/jdx/hk.git", branch: "main"
 
@@ -24,7 +24,26 @@ class Hk < Formula
 
   uses_from_macos "zlib"
 
+  resource "clx" do
+    url "https://github.com/jdx/clx/archive/refs/tags/v0.2.18.tar.gz"
+    sha256 "071e7cfd5afe6314151cb2153b8375d0706cf89ca684012ae36befdf61a2630c"
+  end
+
+  resource "ensembler" do
+    url "https://github.com/jdx/ensembler/archive/refs/tags/v0.2.11.tar.gz"
+    sha256 "967f98f6dfd19b19e0aa91808ea5b81902d3cd6da254d0fdf10ffbaa756e22bb"
+  end
+
+  resource "xx" do
+    url "https://github.com/jdx/xx/archive/refs/tags/v2.2.0.tar.gz"
+    sha256 "cccdca5c03d0155d758650e4e039996e72e93cc1892c0f93597bb70f504d79f0"
+  end
+
   def install
+    %w[clx ensembler xx].each do |res|
+      (buildpath/res).install resource(res)
+    end
+
     # Ensure the correct `openssl` will be picked up.
     ENV["OPENSSL_DIR"] = Formula["openssl@3"].opt_prefix
     ENV["OPENSSL_NO_VENDOR"] = "1"
@@ -51,6 +70,10 @@ class Hk < Formula
     PKL
 
     system "cargo", "init", "--name=brew"
+
+    system "git", "config", "user.name", "BrewTestBot"
+    system "git", "config", "user.email", "BrewTestBot@test.com"
+
     system "git", "add", "--all"
     system "git", "commit", "-m", "Initial commit"
 

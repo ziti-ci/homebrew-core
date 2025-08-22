@@ -25,6 +25,7 @@ class Diceware < Formula
   end
 
   test do
+    assert_match version.to_s, shell_output("#{bin}/diceware --version")
     assert_match(/(\w+)(-(\w+)){5}/, shell_output("#{bin}/diceware -d-"))
   end
 end

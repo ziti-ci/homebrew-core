@@ -26,11 +26,15 @@ class DitaOt < Formula
     rm(Dir["bin/*.bat", "config/env.bat", "startcmd.*"])
     libexec.install Dir["*"]
     (bin/"dita").write_env_script libexec/"bin/dita", JAVA_HOME: Formula["openjdk"].opt_prefix
+
+    # Build an `:all` bottle by removing doc file.
+    rm libexec/"docsrc/topics/installing-via-homebrew.dita"
   end
 
   test do
     system bin/"dita", "--input=#{libexec}/docsrc/site.ditamap",
-           "--format=html5", "--output=#{testpath}/out"
+                       "--format=html5",
+                       "--output=#{testpath}/out"
     assert_path_exists testpath/"out/index.html"
   end
 end

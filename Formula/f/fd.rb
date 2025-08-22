@@ -22,6 +22,7 @@ class Fd < Formula
   conflicts_with "fdclone", because: "both install `fd` binaries"
 
   def install
+    ENV["JEMALLOC_SYS_WITH_LG_PAGE"] = "16" if Hardware::CPU.arm? && OS.linux?
     system "cargo", "install", *std_cargo_args
 
     generate_completions_from_executable(bin/"fd", "--gen-completions", shells: [:bash, :fish, :pwsh])

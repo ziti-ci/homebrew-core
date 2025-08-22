@@ -26,6 +26,7 @@ class DejaGnu < Formula
 
   head do
     url "https://git.savannah.gnu.org/git/dejagnu.git", branch: "master"
+
     depends_on "autoconf" => :build
     depends_on "automake" => :build
   end

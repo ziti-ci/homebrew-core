@@ -9,15 +9,8 @@ class Fred < Formula
   revision 3
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "bf7e2ff3527b70acf8ae9d3880f9f7272623f831e25453efee8100e4a6beeef5"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "bf7e2ff3527b70acf8ae9d3880f9f7272623f831e25453efee8100e4a6beeef5"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "bf7e2ff3527b70acf8ae9d3880f9f7272623f831e25453efee8100e4a6beeef5"
-    sha256 cellar: :any_skip_relocation, sequoia:       "b3be8042d767192bc4dcfc57dd74458506c4d0f8e2b6771eb11dec225893848b"
-    sha256 cellar: :any_skip_relocation, sonoma:        "b3be8042d767192bc4dcfc57dd74458506c4d0f8e2b6771eb11dec225893848b"
-    sha256 cellar: :any_skip_relocation, ventura:       "b3be8042d767192bc4dcfc57dd74458506c4d0f8e2b6771eb11dec225893848b"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "bf7e2ff3527b70acf8ae9d3880f9f7272623f831e25453efee8100e4a6beeef5"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "bf7e2ff3527b70acf8ae9d3880f9f7272623f831e25453efee8100e4a6beeef5"
+    rebuild 2
+    sha256 cellar: :any_skip_relocation, all: "258eaed74ad70124fe1115405c9e51a8d782607fc744dbcfc5b60cd682089d6d"
   end
 
   depends_on "certifi"

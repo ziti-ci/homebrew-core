@@ -1,9 +1,9 @@
 class Picat < Formula
   desc "Simple, and yet powerful, logic-based multi-paradigm programming language"
   homepage "https://picat-lang.org/"
-  url "https://picat-lang.org/download/picat38_src.tar.gz"
-  version "3.8"
-  sha256 "c238a474f345a1b339acbd00d5fc332bd908e9822b9bd89fb855d2c8a7a10e72"
+  url "https://picat-lang.org/download/picat39_src.tar.gz"
+  version "3.9"
+  sha256 "1d5c8bad46da6017b6fa72238fe38968f6c53d66ab744202eb9c07114b0a19a9"
   license "MPL-2.0"
 
   livecheck do
@@ -11,7 +11,7 @@ class Picat < Formula
     regex(/>\s*?Released version v?(\d+(?:[.#]\d+)+)\s*?,/i)
   end
 
-  no_autobump! because: :requires_manual_review
+  no_autobump! because: :incompatible_version_format
 
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_sequoia: "8baa72e2d29b850efa2c9f048041e4efbf1264b303d2f87907f21ba702022255"

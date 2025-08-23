@@ -7,13 +7,12 @@ class Golines < Formula
   head "https://github.com/segmentio/golines.git", branch: "master"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "0253679e4f9c75f4481d25f95b06b22c67f7436b62120053fff951fe895be818"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "0253679e4f9c75f4481d25f95b06b22c67f7436b62120053fff951fe895be818"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "0253679e4f9c75f4481d25f95b06b22c67f7436b62120053fff951fe895be818"
-    sha256 cellar: :any_skip_relocation, sonoma:        "9fcbf1297b553332b33fd8da6646afd895379ff3614cecb10eebd844dd0031e6"
-    sha256 cellar: :any_skip_relocation, ventura:       "9fcbf1297b553332b33fd8da6646afd895379ff3614cecb10eebd844dd0031e6"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "1869729349e1f224e3e615710ef606a79cf3bba1e03225e2633a78497fd5ee12"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "710c57a0a2617f276e3a28d562681aee915ed9a07df2c26c75dda51f706a76c7"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "710c57a0a2617f276e3a28d562681aee915ed9a07df2c26c75dda51f706a76c7"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "710c57a0a2617f276e3a28d562681aee915ed9a07df2c26c75dda51f706a76c7"
+    sha256 cellar: :any_skip_relocation, sonoma:        "e2ee8ae303535f819313db09acfb54a1cfb649bd9ec3620cf8f9f4a5984fc675"
+    sha256 cellar: :any_skip_relocation, ventura:       "e2ee8ae303535f819313db09acfb54a1cfb649bd9ec3620cf8f9f4a5984fc675"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "e70a09df4e69252b296398c24b6a557c5b16044117eb4d9987ae15c260b7dc57"
   end
 
   depends_on "go" => :build

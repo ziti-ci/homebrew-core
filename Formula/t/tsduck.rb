@@ -7,13 +7,13 @@ class Tsduck < Formula
   head "https://github.com/tsduck/tsduck.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_sequoia: "ee4f7d945e4fbfc8cec8726e34e3918b4e7a81267afdd0858b61e8f54647b262"
-    sha256 cellar: :any,                 arm64_sonoma:  "17617ea29564f33a42224532baa7afd97965b3db0e443487984bbd815bcf2d17"
-    sha256 cellar: :any,                 arm64_ventura: "59bd03c16a5706bcea46ede1657d3f0ed93d5fb79c5cf174d6e9df6ab8de1c8b"
-    sha256 cellar: :any,                 sonoma:        "90e74aa7639dfe8edd07b756779dfa568256650296692cfede27c9f16e689598"
-    sha256 cellar: :any,                 ventura:       "56e41035244c0ee13294e38312b35929348e7ab758ef6e1f7ab5add72b2c247d"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "fecdddf81887acbd722d27c294c86d1ae6768347a01b5b80f70014a8a8d5016a"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "e886eb4452ddfafee2041a67e2233c7a435e344e0ab7e99aded78383eba32587"
+    sha256 cellar: :any,                 arm64_sequoia: "4095f60493497b8ff63e6a07a798f237f6ecf0c878d010bb9ff312cbd88d57ed"
+    sha256 cellar: :any,                 arm64_sonoma:  "8f2ede174499ba252df84ecb351c497c0bb95e0b2f5f8497f4a17972a2a921fd"
+    sha256 cellar: :any,                 arm64_ventura: "3f4e611e71bd9e8915a81bfea6f18afd82663c61e14f5adf1e0d7ee08465192c"
+    sha256 cellar: :any,                 sonoma:        "4726f0d7c067ec1c179fa841e5a354dedae677e490f5e18f3d0f660a89f12d0c"
+    sha256 cellar: :any,                 ventura:       "8c335a1676e4de4e2ef1a0097c952b5d416401adf3f28ab1a8130eb4c7ae5c6e"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "4a1afbb06ef1ba369a6f9ac5ae75240dd67eada89c95821a0d2a6040f62e7f0d"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "89f3b852a4c68b752e3402f0551b2af986627bcfb66e44bc1f796d7e7c3695fd"
   end
 
   depends_on "asciidoctor" => :build

@@ -33,10 +33,9 @@ class HttpServer < Formula
   test do
     port = free_port
 
-    pid = fork do
-      exec bin/"http-server", "-p#{port}"
-    end
-    sleep 3
+    pid = spawn bin/"http-server", "-p#{port}"
+    sleep 10
+    sleep 10 if OS.mac? && Hardware::CPU.intel?
     output = shell_output("curl -sI http://localhost:#{port}")
     assert_match "200 OK", output
   ensure

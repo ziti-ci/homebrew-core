@@ -17,6 +17,7 @@ class Kokkos < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura: "6e844cafaaf72cafd6d230437d95c8ca41dd0d8fe4cf41c98ad386b275640c61"
     sha256 cellar: :any_skip_relocation, sonoma:        "fd82ca6dcac67fe4c1aa34ff3fe6e19e89cf6cad4443743ee08a59a541984331"
     sha256 cellar: :any_skip_relocation, ventura:       "a53bac49f0ca38255e8cb07f94e834b8b9d0fbd2b86d867f1729b804f41118d9"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "419701c3eb2ddcbb4266393fe80286ae22183172f6d10e9ba90fa2bb5cfce840"
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "e2c82880246d0f1fdc8de55176c0e7b19c073dd56b549475d0f42c040491b481"
   end
 

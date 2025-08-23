@@ -1,19 +1,19 @@
 class Tsduck < Formula
   desc "MPEG Transport Stream Toolkit"
   homepage "https://tsduck.io/"
-  url "https://github.com/tsduck/tsduck/archive/refs/tags/v3.41-4299.tar.gz"
-  sha256 "1940946f5d15b9c1fea941e91d4685eb60cf4857a77f55eb3ad71d4e7e79ce65"
+  url "https://github.com/tsduck/tsduck/archive/refs/tags/v3.42-4420.tar.gz"
+  sha256 "311130fbb21e08f8b7ad2adaea6dec618dfdbdafaab5a982f39b181c8bbb7c06"
   license "BSD-2-Clause"
   head "https://github.com/tsduck/tsduck.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_sequoia: "89caf54a4a8b3a60372e677578e3d075b8701fc1bd691a0025967a590ba87dba"
-    sha256 cellar: :any,                 arm64_sonoma:  "a0fbaf64f98fe26a65e7ea920e9035adf3eed5aa637d04bdb652225191335fc4"
-    sha256 cellar: :any,                 arm64_ventura: "e8e21c371612c8b33ee52e36e4bc96cf920fa28d64b7bbc91dff666be6b28233"
-    sha256 cellar: :any,                 sonoma:        "43a5fb8c411c30631c67af3a1d2229906b426bac871a9f03dae988fd1d91f427"
-    sha256 cellar: :any,                 ventura:       "7a2c6c741da948332d34dee8197d55dd27fb41439b97b00bed119c9086d708d0"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "44021b8af87155ac7875e35893fd7b322b8c02ad44ff4d6eb7c61093f3a4876c"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "b249f7b5116a18bcb88e3930d3138450a1873c51f936b9211d7e7ba065d3c823"
+    sha256 cellar: :any,                 arm64_sequoia: "ee4f7d945e4fbfc8cec8726e34e3918b4e7a81267afdd0858b61e8f54647b262"
+    sha256 cellar: :any,                 arm64_sonoma:  "17617ea29564f33a42224532baa7afd97965b3db0e443487984bbd815bcf2d17"
+    sha256 cellar: :any,                 arm64_ventura: "59bd03c16a5706bcea46ede1657d3f0ed93d5fb79c5cf174d6e9df6ab8de1c8b"
+    sha256 cellar: :any,                 sonoma:        "90e74aa7639dfe8edd07b756779dfa568256650296692cfede27c9f16e689598"
+    sha256 cellar: :any,                 ventura:       "56e41035244c0ee13294e38312b35929348e7ab758ef6e1f7ab5add72b2c247d"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "fecdddf81887acbd722d27c294c86d1ae6768347a01b5b80f70014a8a8d5016a"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "e886eb4452ddfafee2041a67e2233c7a435e344e0ab7e99aded78383eba32587"
   end
 
   depends_on "asciidoctor" => :build

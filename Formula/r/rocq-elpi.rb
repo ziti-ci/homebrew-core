@@ -11,6 +11,16 @@ class RocqElpi < Formula
     regex(/^v?(\d+(?:\.\d+)+)$/i)
   end
 
+  bottle do
+    sha256 arm64_sequoia: "0ffd104cb899027d7e0cfdb1aa4818ce7317f1d78ee72a8e29fe9810e03eb02d"
+    sha256 arm64_sonoma:  "35c834dffaa5c2b63470bb25eecf9de98e006c3ec8443e16f4a4a1e1dd4dd3fd"
+    sha256 arm64_ventura: "875f9968fb393289c1198725d89c48d9bf8dc1a249b86cfeb9f9d77b962e97e6"
+    sha256 sonoma:        "8e1b68853b56aca24283becc4cc3259386b19d692a3613a87a7a2ad716d0a238"
+    sha256 ventura:       "964bd5a86c309e58e5fa860490205f7412a16a6416ad82ea3b4200d347b15ace"
+    sha256 arm64_linux:   "dcc4426792ccd5876304c465033bb16b7e6e76460818df5eaed1ab90894b5661"
+    sha256 x86_64_linux:  "944ab0f2ec8bb4680d028dd195f02fe3c3812731f5a4e43a8d8f6b71a71e17e0"
+  end
+
   depends_on "dune" => :build
   depends_on "ocaml" => :build
   depends_on "opam" => :build

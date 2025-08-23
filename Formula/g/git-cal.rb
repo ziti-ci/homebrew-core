@@ -31,9 +31,12 @@ class GitCal < Formula
   end
 
   def install
-    system "perl", "Makefile.PL", "INSTALL_BASE=#{prefix}", "INSTALLSITEMAN1DIR=#{man1}"
+    system "perl", "Makefile.PL", "INSTALL_BASE=#{prefix}", "INSTALLSITEMAN1DIR=#{man1}", "MAN1EXT=1"
     system "make"
     system "make", "install"
+
+    # Build an `:all` bottle
+    chmod 0755, [bin, share, share/"man", man1] # permissions match
   end
 
   test do

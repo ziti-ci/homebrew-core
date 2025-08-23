@@ -6,7 +6,7 @@ class Ipython < Formula
   url "https://files.pythonhosted.org/packages/54/80/406f9e3bde1c1fd9bf5a0be9d090f8ae623e401b7670d8f6fdf2ab679891/ipython-9.4.0.tar.gz"
   sha256 "c033c6d4e7914c3d9768aabe76bbe87ba1dc66a92a05db6bfa1125d81f2ee270"
   license "BSD-3-Clause"
-  head "https://github.com/ipython/ipython.git", branch: "master"
+  head "https://github.com/ipython/ipython.git", branch: "main"
 
   bottle do
     rebuild 1
@@ -98,6 +98,10 @@ class Ipython < Formula
 
   def install
     virtualenv_install_with_resources
+
+    # Build an `:all` bottle
+    prefix = libexec/Language::Python.site_packages("python3")
+    inreplace prefix/"IPython/core/application.py", "/usr/local", HOMEBREW_PREFIX
   end
 
   test do

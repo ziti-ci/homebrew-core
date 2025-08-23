@@ -12,6 +12,7 @@ class Doxx < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura: "325b30f5c19c455bb1ded3e7e64be7d219d11b0b1426069fe311eded0094c6c8"
     sha256 cellar: :any_skip_relocation, sonoma:        "0fe8442a97b65427a9ecbbe074923a4ffcf062a2e83ecf0f270bfa26476e715b"
     sha256 cellar: :any_skip_relocation, ventura:       "a8a50cb92bc4f223e82bd58993e00524b4b5dc3b6e51a21b5eb9176741c70880"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "352b173888121c9e7e64fe475029471424b2a7fce258ff90161b733d76f79c5b"
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "88ad21c8c661a8b9fb89b62cf64a9026d448a1a1c49e65b110bc6e209d4c1a0c"
   end
 

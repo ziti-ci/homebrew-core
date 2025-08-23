@@ -9,14 +9,8 @@ class Ipython < Formula
   head "https://github.com/ipython/ipython.git", branch: "main"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "1f406d1bc19ff3fa1d010f45c505679d4080312bebac842ab943b937a0f4464d"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "1f406d1bc19ff3fa1d010f45c505679d4080312bebac842ab943b937a0f4464d"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "1f406d1bc19ff3fa1d010f45c505679d4080312bebac842ab943b937a0f4464d"
-    sha256 cellar: :any_skip_relocation, sonoma:        "f0e2e11ccdea255f571012757ab10e6710cafbf325f88962d528f6dd4df793f5"
-    sha256 cellar: :any_skip_relocation, ventura:       "f0e2e11ccdea255f571012757ab10e6710cafbf325f88962d528f6dd4df793f5"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "1f406d1bc19ff3fa1d010f45c505679d4080312bebac842ab943b937a0f4464d"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "1f406d1bc19ff3fa1d010f45c505679d4080312bebac842ab943b937a0f4464d"
+    rebuild 2
+    sha256 cellar: :any_skip_relocation, all: "d185391ae2c04fd59610e774edc3025154d93f19686958e44b8e7f9d31a00f4c"
   end
 
   depends_on "python@3.13"

@@ -3,8 +3,8 @@ class Omnara < Formula
 
   desc "Talk to Your AI Agents from Anywhere"
   homepage "https://omnara.com/"
-  url "https://files.pythonhosted.org/packages/ed/63/dcd238c9f68eead3e4695928d28a3179c6ac62f309203e5f3c541a786d6a/omnara-1.5.6.tar.gz"
-  sha256 "b81459dadcc098ed6d9fc391e05525c7577812f08e5c40b06b031917a5cd43de"
+  url "https://files.pythonhosted.org/packages/26/ab/3738b3fe565cec3125dadb45cdd0bb4ea55549ce360a2991617b23de0a13/omnara-1.5.7.tar.gz"
+  sha256 "f41879d770e87b377b8f23e89b34970cc02cc0220e74c563abcc809d085cc226"
   license "Apache-2.0"
 
   bottle do
@@ -54,8 +54,8 @@ class Omnara < Formula
   end
 
   resource "authlib" do
-    url "https://files.pythonhosted.org/packages/8e/a1/d8d1c6f8bc922c0b87ae0d933a8ed57be1bef6970894ed79c2852a153cd3/authlib-1.6.1.tar.gz"
-    sha256 "4dffdbb1460ba6ec8c17981a4c67af7d8af131231b5a36a88a1e8c80c111cdfd"
+    url "https://files.pythonhosted.org/packages/8a/95/e4f4ab5ce465821fe2229e10985ab80462941fe5d96387ae76bafd36f0ba/authlib-1.6.2.tar.gz"
+    sha256 "3bde83ac0392683eeef589cd5ab97e63cbe859e552dd75dca010548e79202cb1"
   end
 
   resource "charset-normalizer" do

@@ -5,6 +5,10 @@ class SupabaseMcpServer < Formula
   sha256 "8b6aa29dbfdd6b719cda7836920f322f07a2820bf486a9d89e855b7d01ea38ad"
   license "MIT"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "5920cc53f93395d484943bdf864f4a827ab9da46a47f349add65b8b43d85c868"
+  end
+
   depends_on "node"
 
   def install

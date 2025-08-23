@@ -5,6 +5,10 @@ class QwenCode < Formula
   sha256 "4c6bd7322cc9d757682ace232d38dd9782bbc17c0c2731f48b587a19c4a1566b"
   license "Apache-2.0"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "9e2fba36805e1c0c2d48cba719fc7995c44efe368b78264adba7a41ba94a7601"
+  end
+
   depends_on "node"
 
   def install

@@ -3,8 +3,8 @@ class Omnara < Formula
 
   desc "Talk to Your AI Agents from Anywhere"
   homepage "https://omnara.com/"
-  url "https://files.pythonhosted.org/packages/0a/f5/53d1fad6563c0d16604fe9b0d86cbd49a1a783490362585bd538f1b106ba/omnara-1.5.5.tar.gz"
-  sha256 "518de4f6cb9d1ecf9b695700d9c306ffe9f6c46c986893ea00e87d7a9285dd6b"
+  url "https://files.pythonhosted.org/packages/ed/63/dcd238c9f68eead3e4695928d28a3179c6ac62f309203e5f3c541a786d6a/omnara-1.5.6.tar.gz"
+  sha256 "b81459dadcc098ed6d9fc391e05525c7577812f08e5c40b06b031917a5cd43de"
   license "Apache-2.0"
 
   bottle do

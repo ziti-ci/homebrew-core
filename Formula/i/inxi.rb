@@ -22,6 +22,9 @@ class Inxi < Formula
     bin.install "inxi"
     man1.install "inxi.1"
 
+    # Build an `:all` bottle
+    inreplace "inxi.changelog", "/usr/local/etc/inxi", "#{HOMEBREW_PREFIX}/etc/inxi"
+
     ["LICENSE.txt", "README.txt", "inxi.changelog"].each do |file|
       prefix.install file
     end

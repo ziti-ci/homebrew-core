@@ -5,6 +5,10 @@ class NotionMcpServer < Formula
   sha256 "a047243d0f6d68556feaa54cb709e65211a230bdbfcfeeab88be572e53833822"
   license "MIT"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "ea0e3e1c6ad1fc260d8508f4f2fa72a6a1e1b6b0d8c784d0ed45c4660a7960c6"
+  end
+
   depends_on "node"
 
   def install

@@ -1,8 +1,8 @@
 class Kokkos < Formula
   desc "C++ Performance Portability Ecosystem for parallel execution and abstraction"
   homepage "https://kokkos.org"
-  url "https://github.com/kokkos/kokkos/releases/download/4.6.02/kokkos-4.6.02.tar.gz"
-  sha256 "baf1ebbe67abe2bbb8bb6aed81b4247d53ae98ab8475e516d9c87e87fa2422ce"
+  url "https://github.com/kokkos/kokkos/releases/download/4.7.00/kokkos-4.7.00.tar.gz"
+  sha256 "126b774a24dde8c1085c4aede7564c0b7492d6a07d85380f2b387a712cea1ff5"
   license "Apache-2.0"
   head "https://github.com/kokkos/kokkos.git", branch: "develop"
 

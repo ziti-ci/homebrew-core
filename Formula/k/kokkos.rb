@@ -12,12 +12,12 @@ class Kokkos < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "26666fe1198bcea56d20c8f858aa5ecf3e4dcc31766910e74c39bf25ade28e82"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "9eaccb23aaafea38ab764a05ef4054da8155a881e62e0ba19ae4f26d9c5702fd"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "ce8f2d69483623f162650c4586a5a6ccacfb3ecbc2f23864c0506aaa8569316a"
-    sha256 cellar: :any_skip_relocation, sonoma:        "a0d37f57f6a027d359db8217801860e66b6f90662fd0e3483bf8c2b1122b1fa0"
-    sha256 cellar: :any_skip_relocation, ventura:       "3c2927bd676c1481e81755ba450ca58258bc5716ebe931f67406e2df9b1bd6ac"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "fcbe74aa9490d0f03ee94eb016711405690a11ad69ed0d2080a37f7dbee70f4a"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "39797d15372aa7af10e5550d93a86dd0c84a88a95e4466bc74555cae81b2a1c7"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "296ba09f08e88b0ae13f81d8cccaaa29c14578b27742fb290af5818acf54f0ee"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "6e844cafaaf72cafd6d230437d95c8ca41dd0d8fe4cf41c98ad386b275640c61"
+    sha256 cellar: :any_skip_relocation, sonoma:        "fd82ca6dcac67fe4c1aa34ff3fe6e19e89cf6cad4443743ee08a59a541984331"
+    sha256 cellar: :any_skip_relocation, ventura:       "a53bac49f0ca38255e8cb07f94e834b8b9d0fbd2b86d867f1729b804f41118d9"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "e2c82880246d0f1fdc8de55176c0e7b19c073dd56b549475d0f42c040491b481"
   end
 
   depends_on "cmake" => :build

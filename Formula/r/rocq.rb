@@ -22,6 +22,16 @@ class Rocq < Formula
     regex(/^v?(\d+(?:\.\d+)+)$/i)
   end
 
+  bottle do
+    sha256 arm64_sequoia: "6a18bc281e4b8db55b9a977f31cc5a23331846fcdc766542e3029b6e1b6df25b"
+    sha256 arm64_sonoma:  "508bb15bb5e66db300ca61124a919cce6e596a75945e789f75a054e8deea782b"
+    sha256 arm64_ventura: "e874da2cbe2c8541518cca26a3be4d2ec55090f147fef311fdcfe32e0ab40da3"
+    sha256 sonoma:        "055b5fc8dbbc8b35add44109a23fc43cff4e7739b2b09b138889f8e6aef1cba0"
+    sha256 ventura:       "14c1364bb9071d85d09c969195ea15f3ab9cf1db999edbd4e4e70a27d1e2d1c6"
+    sha256 arm64_linux:   "6256957748b8928b8457a2e1f2a415c88a609b1a246d500723dd2300d84f6126"
+    sha256 x86_64_linux:  "71cc47f061ad7dee8da795cd2933ca7c0115fcb3c3e2e01e70cc599a4de49068"
+  end
+
   head do
     url "https://github.com/rocq-prover/rocq.git", branch: "master"
 

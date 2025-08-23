@@ -20,6 +20,10 @@ class Graphqurl < Formula
   def install
     system "npm", "install", *std_npm_args
     bin.install_symlink Dir["#{libexec}/bin/*"]
+
+    # Build an `:all` bottle by removing log file.
+    node_modules = libexec/"lib/node_modules/graphqurl/node_modules"
+    rm node_modules/"@oclif/linewrap/yarn-error.log"
   end
 
   test do

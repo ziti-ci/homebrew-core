@@ -6,6 +6,7 @@ class Openldap < Formula
   mirror "http://fresh-center.net/linux/misc/legacy/openldap-2.6.10.tgz"
   sha256 "c065f04aad42737aebd60b2fe4939704ac844266bc0aeaa1609f0cad987be516"
   license "OLDAP-2.8"
+  revision 1
 
   livecheck do
     url "https://www.openldap.org/software/download/OpenLDAP/openldap-release/"
@@ -25,6 +26,7 @@ class Openldap < Formula
 
   keg_only :provided_by_macos
 
+  depends_on "cyrus-sasl"
   depends_on "openssl@3"
 
   uses_from_macos "mandoc" => :build
@@ -64,6 +66,7 @@ class Openldap < Formula
       --enable-translucent
       --enable-unique
       --enable-valsort
+      --with-cyrus-sasl
       --without-systemd
     ]
 

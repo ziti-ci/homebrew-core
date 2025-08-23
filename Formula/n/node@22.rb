@@ -39,6 +39,7 @@ class NodeAT22 < Formula
   depends_on "simdjson"
   depends_on "simdutf"
   depends_on "sqlite"
+  depends_on "uvwasi"
   depends_on "zstd"
 
   uses_from_macos "python", since: :catalina
@@ -77,6 +78,7 @@ class NodeAT22 < Formula
       --shared-simdjson
       --shared-simdutf
       --shared-sqlite
+      --shared-uvwasi
       --shared-zlib
       --shared-zstd
       --shared-brotli-includes=#{Formula["brotli"].include}
@@ -99,6 +101,8 @@ class NodeAT22 < Formula
       --shared-simdutf-libpath=#{Formula["simdutf"].lib}
       --shared-sqlite-includes=#{Formula["sqlite"].include}
       --shared-sqlite-libpath=#{Formula["sqlite"].lib}
+      --shared-uvwasi-includes=#{Formula["uvwasi"].include}/uvwasi
+      --shared-uvwasi-libpath=#{Formula["uvwasi"].lib}
       --shared-zstd-includes=#{Formula["zstd"].include}
       --shared-zstd-libpath=#{Formula["zstd"].lib}
       --openssl-use-def-ca-store
@@ -116,7 +120,6 @@ class NodeAT22 < Formula
     ignored_shared_flags = %w[
       ada
       http-parser
-      uvwasi
     ].map { |library| "--shared-#{library}" }
 
     configure_help = Utils.safe_popen_read("./configure", "--help")

@@ -23,6 +23,7 @@ class Grails < Formula
 
   depends_on "openjdk@17"
 
+  # TODO: grails-forge is merged into core at version 7
   resource "cli" do
     url "https://github.com/apache/grails-forge/releases/download/v6.2.3/grails-cli-6.2.3.zip"
     sha256 "ef78a48238629a89d64996367d0424bc872978caf6c23c3cdae92b106e2b1731"
@@ -39,6 +40,7 @@ class Grails < Formula
   def install
     odie "cli resource needs to be updated" if version != resource("cli").version
 
+    rm_r("bin") # Use cli resource, should be removed at version 7
     libexec.install Dir["*"]
 
     resource("cli").stage do
@@ -84,6 +86,7 @@ class Grails < Formula
       pid = spawn "./gradlew", "--no-daemon", "bootRun", "-Dgrails.server.port=#{port}"
       begin
         sleep 20
+        sleep 20 if OS.mac? && Hardware::CPU.intel?
         assert_equal "Hello Homebrew", shell_output("curl --silent http://localhost:#{port}/greeting/index")
       ensure
         Process.kill "TERM", pid

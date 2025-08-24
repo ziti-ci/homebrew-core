@@ -12,14 +12,8 @@ class Maven < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "cd2749cbc3752b7a6e7d437e0e8d24b371524587315c1b38de349ffba536c838"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "cd2749cbc3752b7a6e7d437e0e8d24b371524587315c1b38de349ffba536c838"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "cd2749cbc3752b7a6e7d437e0e8d24b371524587315c1b38de349ffba536c838"
-    sha256 cellar: :any_skip_relocation, sonoma:        "6938af8a14dfd8646f1b2f02d9a15c8c010ae81262ee7ad47c759ebedf19535b"
-    sha256 cellar: :any_skip_relocation, ventura:       "6938af8a14dfd8646f1b2f02d9a15c8c010ae81262ee7ad47c759ebedf19535b"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "cd2749cbc3752b7a6e7d437e0e8d24b371524587315c1b38de349ffba536c838"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "cd2749cbc3752b7a6e7d437e0e8d24b371524587315c1b38de349ffba536c838"
+    rebuild 2
+    sha256 cellar: :any_skip_relocation, all: "2f1d82c971cd4c85e9d2dac09ecab088398d2313144648110efad51a0eccb53b"
   end
 
   depends_on "openjdk"
@@ -34,6 +28,10 @@ class Maven < Formula
     chmod 0644, "conf/settings.xml"
 
     libexec.install Dir["*"]
+
+    # Build an `:all` bottle by changing the path for `mavenrc`
+    file = libexec/"bin/mvn"
+    inreplace file, "/usr/local/etc/mavenrc", "#{HOMEBREW_PREFIX}/etc/mavenrc"
 
     # Leave conf file in libexec. The mvn symlink will be resolved and the conf
     # file will be found relative to it

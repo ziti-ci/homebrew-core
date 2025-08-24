@@ -31,6 +31,10 @@ class Lunchy < Formula
     bin.env_script_all_files(libexec/"bin", GEM_HOME: ENV["GEM_HOME"])
     bash_completion.install "extras/lunchy-completion.bash" => "lunchy"
     zsh_completion.install "extras/lunchy-completion.zsh" => "_lunchy"
+
+    # Build an `:all` bottle by replacing comment script
+    file = libexec/"gems/lunchy-#{version}/bin/lunchy"
+    inreplace file, "/usr/local/Cellar", "#{HOMEBREW_PREFIX}/Cellar"
   end
 
   test do

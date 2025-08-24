@@ -1,8 +1,8 @@
 class Librespot < Formula
   desc "Open Source Spotify client library"
   homepage "https://github.com/librespot-org/librespot"
-  url "https://github.com/librespot-org/librespot/archive/refs/tags/v0.6.0.tar.gz"
-  sha256 "9ec881edb11e37d31a2b41dd30d56a3413445eedb720e1b0d278567dccfca8fc"
+  url "https://github.com/librespot-org/librespot/archive/refs/tags/v0.7.0.tar.gz"
+  sha256 "61f90b661ba883890a7ed8fe3926372b99252abad11dcacf94f2c89df21b7746"
   license "MIT"
   head "https://github.com/librespot-org/librespot.git", branch: "dev"
 
@@ -26,7 +26,9 @@ class Librespot < Formula
 
   def install
     ENV["COREAUDIO_SDK_PATH"] = MacOS.sdk_path.to_s if OS.mac?
-    system "cargo", "install", "--no-default-features", "--features", "rodio-backend,with-dns-sd", *std_cargo_args
+    system "cargo", "install", "--no-default-features",
+                               "--features", "rodio-backend,with-dns-sd,rustls-tls-native-roots",
+                               *std_cargo_args
   end
 
   test do

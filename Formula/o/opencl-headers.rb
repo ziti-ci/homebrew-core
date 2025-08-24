@@ -24,6 +24,9 @@ class OpenclHeaders < Formula
     system "cmake", "-S", ".", "-B", "build", *std_cmake_args
     system "cmake", "--build", "build"
     system "cmake", "--install", "build"
+
+    # Build an `:all` bottle by adding symlinks same as macOS
+    include.install_symlink "CL" => "OpenCL" if OS.linux?
   end
 
   test do

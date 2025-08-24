@@ -28,6 +28,10 @@ class Jtbl < Formula
   def install
     virtualenv_install_with_resources
     man1.install "man/jtbl.1"
+
+    # Build an `:all` bottle
+    packages = libexec/Language::Python.site_packages("python3")
+    inreplace packages/"jtbl-#{version}.dist-info/METADATA", "/usr/local/Cellar", "#{HOMEBREW_PREFIX}/Cellar"
   end
 
   test do

@@ -27,9 +27,9 @@ class Mpremote < Formula
     virtualenv_install_with_resources
 
     # Build an `:all` bottle.
-    usr_local_files = %w[
+    usr_local_files = %W[
       platformdirs/unix.py
-      platformdirs-4.3.8.dist-info/METADATA
+      platformdirs-#{resource("platformdirs").version}.dist-info/METADATA
     ].map { |file| libexec/Language::Python.site_packages("python3")/file }
     inreplace usr_local_files, "/usr/local", HOMEBREW_PREFIX
 

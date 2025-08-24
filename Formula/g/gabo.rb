@@ -7,12 +7,12 @@ class Gabo < Formula
   head "https://github.com/ashishb/gabo.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "c0d6a3523878e15683d745d577310bd81e5c353b278912da38c8e85fb5e34138"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "c0d6a3523878e15683d745d577310bd81e5c353b278912da38c8e85fb5e34138"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "c0d6a3523878e15683d745d577310bd81e5c353b278912da38c8e85fb5e34138"
-    sha256 cellar: :any_skip_relocation, sonoma:        "7a52fa3e8f5f76c7d7b3c148af4ad22e88d0f1afe18f50d6b4ff63bbcde8299d"
-    sha256 cellar: :any_skip_relocation, ventura:       "7a52fa3e8f5f76c7d7b3c148af4ad22e88d0f1afe18f50d6b4ff63bbcde8299d"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "b76e562875f209c44470c2087f7b9647650ad9aa71a1979c64d7d6ba012f898e"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "a6eae5bb00df93c37ad9bffec423585d4675398c07dbd7e0c215a709805ba32c"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "a6eae5bb00df93c37ad9bffec423585d4675398c07dbd7e0c215a709805ba32c"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "a6eae5bb00df93c37ad9bffec423585d4675398c07dbd7e0c215a709805ba32c"
+    sha256 cellar: :any_skip_relocation, sonoma:        "b6f41afa9c2276668ad7373e042e3f3290be19ba1ffe46d164731826ecce75d7"
+    sha256 cellar: :any_skip_relocation, ventura:       "b6f41afa9c2276668ad7373e042e3f3290be19ba1ffe46d164731826ecce75d7"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "be2861c64505a797f036ea8021b8fbecd2d950c3a8fcc99515a6c40546eab1a6"
   end
 
   depends_on "go" => :build

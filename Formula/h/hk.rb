@@ -1,8 +1,8 @@
 class Hk < Formula
   desc "Git hook and pre-commit lint manager"
   homepage "https://hk.jdx.dev"
-  url "https://github.com/jdx/hk/archive/refs/tags/v1.10.2.tar.gz"
-  sha256 "131b35f2bb882c7bba88a46414e23a3b402c5304270672342b3165c787336cc3"
+  url "https://github.com/jdx/hk/archive/refs/tags/v1.10.4.tar.gz"
+  sha256 "9548c40c38feca29e5a76af0598aa3aff9fe3e6fc39f2dfdfb8462cf5ca87442"
   license "MIT"
   head "https://github.com/jdx/hk.git", branch: "main"
 
@@ -25,8 +25,8 @@ class Hk < Formula
   uses_from_macos "zlib"
 
   resource "clx" do
-    url "https://github.com/jdx/clx/archive/refs/tags/v0.2.18.tar.gz"
-    sha256 "071e7cfd5afe6314151cb2153b8375d0706cf89ca684012ae36befdf61a2630c"
+    url "https://github.com/jdx/clx/archive/refs/tags/v0.2.19.tar.gz"
+    sha256 "b06f39d4f74fb93a4be89152ee87a3c04a25abb1b623466c6b817427a8502a73"
   end
 
   resource "ensembler" do

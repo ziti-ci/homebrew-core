@@ -3,13 +3,13 @@ class Checkdmarc < Formula
 
   desc "Command-line parser for SPF and DMARC DNS records"
   homepage "https://domainaware.github.io/checkdmarc/"
-  url "https://files.pythonhosted.org/packages/2a/86/00b2de56f8c6655aba9156b34e0195b3fb0d2d4e22c1f37a4a31fe30e0f5/checkdmarc-5.8.7.tar.gz"
-  sha256 "31384a8b803bfb6a9a9740e93b913422835d9bebc7064aa8160addcb7b14fa54"
+  url "https://files.pythonhosted.org/packages/ce/a3/e507fae784e62584fa2a832e3cd5639bad4af8834eb02b7c2323d4b0afdd/checkdmarc-5.8.8.tar.gz"
+  sha256 "3f933838c8a32491bac3e5c72f525901406bca38f2e152de8d201bdb4939b3e6"
   license "Apache-2.0"
   head "https://github.com/domainaware/checkdmarc.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "3f31fc7bb4172fd1fa115866388c1be6161dea1b9ee1a10a12b96b902ae9540a"
+    sha256 cellar: :any_skip_relocation, all: "176b642f935674490e3424371d186372af24f18bb1b70c3ff51c0bd4605e6ba9"
   end
 
   depends_on "certifi"
@@ -47,8 +47,8 @@ class Checkdmarc < Formula
   end
 
   resource "publicsuffixlist" do
-    url "https://files.pythonhosted.org/packages/04/a6/e101989f29badffcab533ea4b2b43e128217179db9476748fecde99f29d0/publicsuffixlist-1.0.2.20250815.tar.gz"
-    sha256 "374f0b9423a666f9016c83d487cd1063f34ce70c52e0579f2a7145e17be51f49"
+    url "https://files.pythonhosted.org/packages/17/b3/39e3d5002ca407e8902b92a5d41bef1e8c5e94976fc27eea412d599cee60/publicsuffixlist-1.0.2.20250824.tar.gz"
+    sha256 "01e00e4a8a78212035534b40191a6b62a48a0fa2b8cbef5e5c133f6bcee01fdd"
   end
 
   resource "pyleri" do
@@ -62,8 +62,8 @@ class Checkdmarc < Formula
   end
 
   resource "requests" do
-    url "https://files.pythonhosted.org/packages/e1/0a/929373653770d8a0d7ea76c37de6e41f11eb07559b103b1c02cafb3f7cf8/requests-2.32.4.tar.gz"
-    sha256 "27d0316682c8a29834d3264820024b62a36942083d52caf2f14c0591336d3422"
+    url "https://files.pythonhosted.org/packages/c9/74/b3ff8e6c8446842c3f5c837e9c3dfcfe2018ea6ecef224c710c85ef728f4/requests-2.32.5.tar.gz"
+    sha256 "dbba0bac56e100853db0ea71b82b4dfd5fe2bf6d3754a8893c3af500cec7d7cf"
   end
 
   resource "timeout-decorator" do

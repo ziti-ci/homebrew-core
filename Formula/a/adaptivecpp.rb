@@ -4,6 +4,7 @@ class Adaptivecpp < Formula
   url "https://github.com/AdaptiveCpp/AdaptiveCpp/archive/refs/tags/v25.02.0.tar.gz"
   sha256 "8cc8a3be7bb38f88d7fd51597e0ec924b124d4233f64da62a31b9945b55612ca"
   license "BSD-2-Clause"
+  revision 1
   head "https://github.com/AdaptiveCpp/AdaptiveCpp.git", branch: "develop"
 
   bottle do
@@ -19,11 +20,14 @@ class Adaptivecpp < Formula
   depends_on "cmake" => :build
   depends_on "boost" # needed to use collective_execution_engine.hpp
 
-  uses_from_macos "llvm"
   uses_from_macos "python"
 
   on_macos do
     depends_on "libomp"
+  end
+
+  on_linux do
+    depends_on "llvm@20"
   end
 
   def install

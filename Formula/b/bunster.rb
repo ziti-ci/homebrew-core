@@ -6,6 +6,15 @@ class Bunster < Formula
   license "BSD-3-Clause"
   head "https://github.com/yassinebenaid/bunster.git", branch: "master"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "b582d338176ba738133ad00602adf2bc34f43c1ea6f56b6bfda7c65a05474c8c"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "b582d338176ba738133ad00602adf2bc34f43c1ea6f56b6bfda7c65a05474c8c"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "b582d338176ba738133ad00602adf2bc34f43c1ea6f56b6bfda7c65a05474c8c"
+    sha256 cellar: :any_skip_relocation, sonoma:        "c154f3dafa865c73e98519d29dab24692c12e418a6ef4dbb67d8f5da945634b4"
+    sha256 cellar: :any_skip_relocation, ventura:       "c154f3dafa865c73e98519d29dab24692c12e418a6ef4dbb67d8f5da945634b4"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "3a171f3ab3ab56a91691574af1b10aa145a625438e06a9e98e1d075eee9ba02e"
+  end
+
   depends_on "go"
 
   def install

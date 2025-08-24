@@ -35,6 +35,10 @@ class Maven < Formula
 
     libexec.install Dir["*"]
 
+    # Build an `:all` bottle by changing the path for `mavenrc`
+    file = libexec/"bin/mvn"
+    inreplace file, "/usr/local/etc/mavenrc", "#{HOMEBREW_PREFIX}/etc/mavenrc"
+
     # Leave conf file in libexec. The mvn symlink will be resolved and the conf
     # file will be found relative to it
     Pathname.glob("#{libexec}/bin/*") do |file|

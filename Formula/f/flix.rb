@@ -12,13 +12,7 @@ class Flix < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "fcfbe9a21adf53cf8111ed28004bb2659567f38e86efd24d84348f5ebbd9a12d"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "f5e68c21fcec6284b4c0a895d630fc4a4fd6b02b246cec1b6d0184108648c3d6"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "c58c07f1358841dd99e0201052a768dcdb1c3a2726f945d2ea433b055261ad9c"
-    sha256 cellar: :any_skip_relocation, sonoma:        "8cbf7eb79137ab6e425381ae4b2031bcf2e849d47e8d2ed2703264fd4abff57f"
-    sha256 cellar: :any_skip_relocation, ventura:       "c9d5dfd2b4652688d946783f342aa1d25fac2755a15dad57770a9497accea3c6"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "50b604765d3d75774d1252bea6c0d144c1e6cf3436dff36d414992092f86a2cc"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "54504ea2a1355a02d0a06307a5f23667df8748180afa02a961f8a2e7a84529c9"
+    sha256 cellar: :any_skip_relocation, all: "7e4dff2623b68a74660e2db62fa13e57d52e9f842457e56eab181107fbdc778f"
   end
 
   depends_on "gradle" => :build

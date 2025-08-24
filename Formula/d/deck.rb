@@ -7,12 +7,12 @@ class Deck < Formula
   head "https://github.com/k1LoW/deck.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "256c429c9b7dbd78e939bcaba69975f704d6399e8707b2913e55175eef553861"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "256c429c9b7dbd78e939bcaba69975f704d6399e8707b2913e55175eef553861"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "256c429c9b7dbd78e939bcaba69975f704d6399e8707b2913e55175eef553861"
-    sha256 cellar: :any_skip_relocation, sonoma:        "ee8807c1bf572c69b1ad79e9c141194ad277a502d7360f3d8f7c955945921995"
-    sha256 cellar: :any_skip_relocation, ventura:       "ee8807c1bf572c69b1ad79e9c141194ad277a502d7360f3d8f7c955945921995"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "a8c44fb096a1ee3b113c43159949ee2c94fe9a25d80fc4f8402f80bb5b38e73c"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "6a33151a3b6e922984e60ab96b5767cf28fa322c478f40da2a5a8fc459616359"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "6a33151a3b6e922984e60ab96b5767cf28fa322c478f40da2a5a8fc459616359"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "6a33151a3b6e922984e60ab96b5767cf28fa322c478f40da2a5a8fc459616359"
+    sha256 cellar: :any_skip_relocation, sonoma:        "035ff04f3d7b0c22597574f7d870a37749bcf8a0a88b524c22964fa55bce9367"
+    sha256 cellar: :any_skip_relocation, ventura:       "035ff04f3d7b0c22597574f7d870a37749bcf8a0a88b524c22964fa55bce9367"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "de78c6be20b9b1d91544bf2320f8255a84b8802df8dd8f934ea8f55fe1129da0"
   end
 
   depends_on "go" => :build

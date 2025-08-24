@@ -5,6 +5,10 @@ class NifiToolkit < Formula
   sha256 "d61e8b1cfc5a42df7b7a8a4ae25d22694cc6cdee381198c81d0a815165ab8343"
   license "Apache-2.0"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "28f8e76c304a613c73e7e42463edffe9fa2101ee8604c6e4cfb6c18e50f5bd75"
+  end
+
   depends_on "openjdk@21"
 
   def install

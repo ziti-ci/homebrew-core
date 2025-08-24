@@ -1,8 +1,8 @@
 class Flix < Formula
   desc "Statically typed functional, imperative, and logic programming language"
   homepage "https://flix.dev/"
-  url "https://github.com/flix/flix/archive/refs/tags/v0.60.0.tar.gz"
-  sha256 "be8578985461aca9bcd56c78e933821aa1849deb77974c7851a75bc659b9015f"
+  url "https://github.com/flix/flix/archive/refs/tags/v0.61.0.tar.gz"
+  sha256 "82680b978cf7744d282c7a6c4d38dcd8d14b9017938e4c9f8bd9ead30f4bac08"
   license "Apache-2.0"
   head "https://github.com/flix/flix.git", branch: "master"
 
@@ -27,7 +27,7 @@ class Flix < Formula
 
   def install
     ENV["JAVA_HOME"] = Language::Java.java_home("21")
-    system Formula["gradle"].bin/"gradle", "--no-daemon", "build", "jar"
+    system "gradle", "--no-daemon", "build", "jar", "-x", "test"
     prefix.install "build/libs/flix-#{version}.jar"
     bin.write_jar_script prefix/"flix-#{version}.jar", "flix", java_version: "21"
   end

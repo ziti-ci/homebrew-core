@@ -1,16 +1,14 @@
 class Posh < Formula
   desc "Policy-compliant ordinary shell"
   homepage "https://salsa.debian.org/clint/posh"
-  url "https://salsa.debian.org/clint/posh/-/archive/debian/0.14.1/posh-debian-0.14.1.tar.bz2"
-  sha256 "3c9ca430977d85ad95d439656269b878bd5bde16521b778c222708910d111c80"
+  url "https://salsa.debian.org/clint/posh/-/archive/debian/0.14.2/posh-debian-0.14.2.tar.bz2"
+  sha256 "e78cc733c13087398548acdebf1d805ee5520fc2d9e190d4a7e33ab63a4fde82"
   license "GPL-3.0-or-later"
 
   livecheck do
     url :stable
     regex(%r{^debian/v?(\d+(?:\.\d+)+)$}i)
   end
-
-  no_autobump! because: :requires_manual_review
 
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_sequoia:  "4521f3540d2fab592dafd00531ecb265fb361568e62a608eb3965258f3de58ea"

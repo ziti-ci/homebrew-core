@@ -13,6 +13,7 @@ class PodcastArchiver < Formula
     sha256 cellar: :any,                 arm64_ventura: "158772dc2658c7d42030e2b82625ad2af3a62b631437b71b67dd3eb087cd2451"
     sha256 cellar: :any,                 sonoma:        "59e3e74bbcb84e00c9c5273647792e6822892fb4e61da478fa4c3f244c59f591"
     sha256 cellar: :any,                 ventura:       "cddfcf4bf86a8e294541bc4e1ba080d7e8e27a532c689a180a23f06a4a33a8b3"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "c6cdb78ea3446f3065228fc73532412b4735bd5ec61492cf1e8938feb0b0aa35"
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "26367738e081b3be192351cafce7ee70e0332b7ed1f17b9f552b58f1d6ff3f12"
   end
 

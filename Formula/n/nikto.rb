@@ -28,7 +28,7 @@ class Nikto < Formula
         s.gsub! "# PLUGINDIR=/opt/nikto/plugins",
                 "PLUGINDIR=#{pkgshare}/plugins"
         s.gsub! "# DBDIR=/opt/nikto/databases",
-                "DBDIR=#{var}/lib/nikto/databases"
+                "DBDIR=#{var}/nikto/databases"
         s.gsub! "# TEMPLATEDIR=/opt/nikto/templates",
                 "TEMPLATEDIR=#{pkgshare}/templates"
         s.gsub! "# DOCDIR=/opt/nikto/docs", "DOCDIR=#{pkgshare}/docs"
@@ -42,8 +42,8 @@ class Nikto < Formula
     end
 
     doc.install Dir["documentation/*"]
-    (var/"lib/nikto/databases").mkpath
-    cp_r Dir["program/databases/*"], var/"lib/nikto/databases"
+    (var/"nikto/databases").mkpath
+    cp_r Dir["program/databases/*"], var/"nikto/databases"
   end
 
   test do

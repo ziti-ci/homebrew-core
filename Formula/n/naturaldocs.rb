@@ -33,7 +33,7 @@ class Naturaldocs < Formula
       mono #{libexec}/NaturalDocs.exe "$@"
     BASH
 
-    libexec.install_symlink etc/"naturaldocs" => "config"
+    libexec.install_symlink etc/"naturaldocs" => "Config"
 
     libexec.glob("libSQLite.*").each do |f|
       rm f if f.basename.to_s != "libSQLite.#{os}.#{arch}"

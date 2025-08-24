@@ -1,8 +1,8 @@
 class Hatari < Formula
   desc "Atari ST/STE/TT/Falcon emulator"
   homepage "https://www.hatari-emu.org/"
-  url "https://framagit.org/hatari/releases/-/raw/main/v2.6/hatari-2.6.0.tar.bz2"
-  sha256 "bd98e4c1b218669087f579ab9491178f93e5409bb895b487c899d1f911e9603a"
+  url "https://framagit.org/hatari/releases/-/raw/main/v2.6.1/hatari-2.6.1.tar.bz2"
+  sha256 "b7dc09ebffc1b77da6837d37b116bc5a9b2fd46affff1021124101e3f6e76bc5"
   license "GPL-2.0-or-later"
   head "https://framagit.org/hatari/hatari.git", branch: "main"
 

@@ -26,7 +26,7 @@ class EslintD < Formula
   service do
     run [opt_bin/"eslint_d", "start"]
     keep_alive true
-    working_dir var
+    working_dir var/"eslint_d"
     log_path var/"log/eslint_d.log"
     error_log_path var/"log/eslint_d.err.log"
   end

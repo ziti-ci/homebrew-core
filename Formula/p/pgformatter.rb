@@ -16,7 +16,7 @@ class Pgformatter < Formula
   end
 
   def install
-    system "perl", "Makefile.PL", "DESTDIR=."
+    system "perl", "Makefile.PL", "DESTDIR=.", "MAN1EXT=1"
     system "make", "install"
 
     if OS.linux?
@@ -29,6 +29,10 @@ class Pgformatter < Formula
     (libexec/"lib").install "blib/lib/pgFormatter"
     libexec.install bin/"pg_format"
     bin.install_symlink libexec/"pg_format"
+
+    # Build an `:all` bottle
+    rm_r share/"perl" if OS.linux?
+    chmod 0755, [bin, share, share/"man", man1, man3] # permissions match
   end
 
   test do

@@ -33,7 +33,7 @@ class PrismCli < Formula
     port = free_port
     pid = spawn bin/"prism", "mock", "--port", port.to_s, "https://raw.githubusercontent.com/OAI/OpenAPI-Specification/refs/tags/3.1.1/examples/v3.0/petstore.yaml"
 
-    sleep 5
+    sleep 10
     sleep 15 if OS.mac? && Hardware::CPU.intel?
 
     system "curl", "http://127.0.0.1:#{port}/pets"

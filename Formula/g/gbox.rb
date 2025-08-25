@@ -6,12 +6,12 @@ class Gbox < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "2113635ccb732f5be0c682e8efce73acfbdfc3462f9130e83b4d5fdbfc6e017c"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "14d8982086b75dea2f212375034a17587d5505fcf9e87ab9199cbbd7bd31bf6b"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "56a5ef409f0c4ae987f28a5edbe886de1ad3ee2bf90249ed5a2f12fe4adb6418"
-    sha256 cellar: :any_skip_relocation, sonoma:        "684ba7ad892c60f8d4215c0ccc092d8c2b29926799028b32434bdaecf17c3a6b"
-    sha256 cellar: :any_skip_relocation, ventura:       "a3c1fa0294630a5cf0c80d7d41c6c661d9205b229cf21f1d855a275c2e3e6ac6"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "893dcda533a9f6a2f1b49b00c2be02c8c89a57618844abeb4f63b1dce8ee6511"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "a16a2fa965094faf47e170670b9bb1577647fb9b0520413307993fda79a44b18"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "a00e6482f8b8c7691c0c5ef20682502a4e91788af15ba04de77bf7f2bc059cf3"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "dfcb5fe5e9774c200f69182fbb84e46e4e31dced61833248613f1f22d2c8a657"
+    sha256 cellar: :any_skip_relocation, sonoma:        "d9ebbc1bc091eb5b1469255850030002f0c2532e2578d39b5dbd3db4f3e9d268"
+    sha256 cellar: :any_skip_relocation, ventura:       "19d322d8225961ab43dcf76aa48269daf6f3a5de4fb11c517a5982274d3eb528"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "8cb7a657f247ffab923a084c9fa90ebdb44b384ee80cc8c7bbd52e0c77469c8e"
   end
 
   depends_on "go" => :build

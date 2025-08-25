@@ -6,6 +6,15 @@ class Melt < Formula
   license "MIT"
   head "https://github.com/charmbracelet/melt.git", branch: "main"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "547013e6780070ab0e514c03cad053fcff034ed2bd938b43bb5ece9b71424274"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "547013e6780070ab0e514c03cad053fcff034ed2bd938b43bb5ece9b71424274"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "547013e6780070ab0e514c03cad053fcff034ed2bd938b43bb5ece9b71424274"
+    sha256 cellar: :any_skip_relocation, sonoma:        "01a243d60bb828e77591ce38242f3e63097adff342a71b87eb8864a17234141b"
+    sha256 cellar: :any_skip_relocation, ventura:       "01a243d60bb828e77591ce38242f3e63097adff342a71b87eb8864a17234141b"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "0ea2cb7ae00d2065de9d82efa15f5bbdba7f01a2424f83238a9635ecf4a4cc25"
+  end
+
   depends_on "go" => :build
 
   def install

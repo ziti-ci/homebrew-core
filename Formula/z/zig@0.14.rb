@@ -10,6 +10,15 @@ class ZigAT014 < Formula
     regex(/href=.*?zig[._-]v?(0\.14(?:\.\d+)+)\.t/i)
   end
 
+  bottle do
+    sha256 cellar: :any,                 arm64_sequoia: "03851d2d9118608f887d97b3674d5a8929699855c73fa7bcf6f6dc7c72fdf70b"
+    sha256 cellar: :any,                 arm64_sonoma:  "01f5813d555a56abab6d5076bfc93048b7c792336d9839513df1ccef355644d9"
+    sha256 cellar: :any,                 arm64_ventura: "bf2bb8d09f1eb6c311609f6d5699206199e06d4d60924e1d19c9e72ba0537b6a"
+    sha256 cellar: :any,                 sonoma:        "2e77847e273785c7db555a9f563eaeb2cfe65c0d2310862ef404933c28ee6828"
+    sha256 cellar: :any,                 ventura:       "c7ac8f1ea8b09c4c9706597da2eef4317c56f46801be7fb699b11fde357dfb1d"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "1f53b11bf84acc90c55d583801bd50470ac2532bffbb977d8e47401bf38a5679"
+  end
+
   keg_only :versioned_formula
 
   # Unsupported since Zig 0.15 was released on 2025-08-19, but we are

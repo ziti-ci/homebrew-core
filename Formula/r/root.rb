@@ -1,10 +1,16 @@
 class Root < Formula
   desc "Analyzing petabytes of data, scientifically"
   homepage "https://root.cern"
-  url "https://root.cern/download/root_v6.36.02.source.tar.gz"
-  sha256 "510d677b33ac7ca48aa0d712bdb88d835a1ff6a374ef86f1a1e168fa279eb470"
   license "LGPL-2.1-or-later"
   head "https://github.com/root-project/root.git", branch: "master"
+
+  stable do
+    url "https://root.cern/download/root_v6.36.04.source.tar.gz"
+    sha256 "cc6367d8f563c6d49ca34c09d0b53cb0f41a528db6f86af111fd76744cda4596"
+
+    # Backport part of https://github.com/root-project/root/commit/b2acf687d6b5f887b8f97f35d9b3b011adad5be4
+    patch :DATA
+  end
 
   livecheck do
     url "https://root.cern/install/all_releases/"
@@ -230,3 +236,53 @@ class Root < Formula
     system python3, "-c", "import ROOT; ROOT.gSystem.LoadAllLibraries()"
   end
 end
+
+__END__
+diff --git a/bindings/pyroot/cppyy/CPyCppyy/CMakeLists.txt b/bindings/pyroot/cppyy/CPyCppyy/CMakeLists.txt
+index 911517294b..03406a9663 100644
+--- a/bindings/pyroot/cppyy/CPyCppyy/CMakeLists.txt
++++ b/bindings/pyroot/cppyy/CPyCppyy/CMakeLists.txt
+@@ -104,6 +104,11 @@ target_include_directories(${libname}
+ 
+ set_property(GLOBAL APPEND PROPERTY ROOT_EXPORTED_TARGETS ${libname})
+ 
++if(NOT MSVC)
++  # Make sure that relative RUNPATH to main ROOT libraries is always correct.
++  ROOT_APPEND_LIBDIR_TO_INSTALL_RPATH(${libname} ${CMAKE_INSTALL_PYTHONDIR})
++endif()
++
+ # Install library
+ install(TARGETS ${libname} EXPORT ${CMAKE_PROJECT_NAME}Exports
+                             RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR} COMPONENT libraries
+diff --git a/bindings/pyroot/cppyy/cppyy-backend/CMakeLists.txt b/bindings/pyroot/cppyy/cppyy-backend/CMakeLists.txt
+index f296f3886d..25862bfa44 100644
+--- a/bindings/pyroot/cppyy/cppyy-backend/CMakeLists.txt
++++ b/bindings/pyroot/cppyy/cppyy-backend/CMakeLists.txt
+@@ -38,6 +38,11 @@ add_dependencies(${libname} move_headers)
+ 
+ set_property(GLOBAL APPEND PROPERTY ROOT_EXPORTED_TARGETS ${libname})
+ 
++if(NOT MSVC)
++  # Make sure that relative RUNPATH to main ROOT libraries is always correct.
++  ROOT_APPEND_LIBDIR_TO_INSTALL_RPATH(${libname} ${CMAKE_INSTALL_PYTHONDIR})
++endif()
++
+ # Install library
+ install(TARGETS ${libname} EXPORT ${CMAKE_PROJECT_NAME}Exports
+                             RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR} COMPONENT libraries
+diff --git a/bindings/pyroot/pythonizations/CMakeLists.txt b/bindings/pyroot/pythonizations/CMakeLists.txt
+index e222e04c0e..30ef38edd9 100644
+--- a/bindings/pyroot/pythonizations/CMakeLists.txt
++++ b/bindings/pyroot/pythonizations/CMakeLists.txt
+@@ -210,6 +210,11 @@ endforeach()
+ add_library(PyROOT INTERFACE)
+ target_link_libraries(PyROOT INTERFACE cppyy_backend cppyy ROOTPythonizations)
+ 
++if(NOT MSVC)
++  # Make sure that relative RUNPATH to main ROOT libraries is always correct.
++  ROOT_APPEND_LIBDIR_TO_INSTALL_RPATH(${libname} ${CMAKE_INSTALL_PYTHONDIR})
++endif()
++
+ # Install library
+ install(TARGETS ${libname} EXPORT ${CMAKE_PROJECT_NAME}Exports
+                             RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR} COMPONENT libraries

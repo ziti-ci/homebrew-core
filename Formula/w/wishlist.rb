@@ -6,6 +6,15 @@ class Wishlist < Formula
   license "MIT"
   head "https://github.com/charmbracelet/wishlist.git", branch: "main"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "3e77986d045c2b98710bb331b52d217aa06b058d71a6708ebdda71032633beff"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "3e77986d045c2b98710bb331b52d217aa06b058d71a6708ebdda71032633beff"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "3e77986d045c2b98710bb331b52d217aa06b058d71a6708ebdda71032633beff"
+    sha256 cellar: :any_skip_relocation, sonoma:        "6ac28340cfa526431d73fa37c72eeef3c8da7847ae85034edfbd9f6686728ff9"
+    sha256 cellar: :any_skip_relocation, ventura:       "6ac28340cfa526431d73fa37c72eeef3c8da7847ae85034edfbd9f6686728ff9"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "eb48dabd9a636100ec378e63bbda9ad471a14b742f323556143db04942fe2f04"
+  end
+
   depends_on "go" => :build
 
   def install

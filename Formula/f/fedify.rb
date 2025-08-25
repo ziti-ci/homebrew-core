@@ -7,13 +7,13 @@ class Fedify < Formula
   head "https://github.com/fedify-dev/fedify.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "d4a5bc9924a99365c9f27b2ee5d0d2c9011349e95b569d092b41614c84078e32"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "5304e6cedd604be026156bb10bbec51baff879b5b936b7e4e0a5d61690050aa6"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "250c47fd5c33e637c3da93c5e9ca00e90053aeb61db7075123104a831e6eccc7"
-    sha256 cellar: :any_skip_relocation, sonoma:        "6b3d3199eb063eb160827504ff7596de22fbf6acdbc1044fdde9b65121ef9df2"
-    sha256 cellar: :any_skip_relocation, ventura:       "9195ee2ba8b13855291ab3ded98f06232f70cb7a9105c4919898d4932750845a"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "a30399c88e5c4619094017f32b3bc768206e7b6ddc5f8fbbb8090a9d2fb22dea"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "ba104172e743121d871772d355decb3c2e72afb930b00094eb786ab26890d39a"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "d6ab6c35d9418ac5bc5b209adacb08ea866254a32b65a499aade4ed513dd9ada"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "72e6c21613275fce2d0e4b2eec3feda4c8e058f9e90156a18d8565d1e5f9d071"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "388e239285190122d392cd4f7ab0de033e4acf0a8e1ce49e06658ffcf3c33640"
+    sha256 cellar: :any_skip_relocation, sonoma:        "f956f1987b953bb659792ad352f7431ae1d2ec003e2977ae33b449ba41c31c61"
+    sha256 cellar: :any_skip_relocation, ventura:       "6b8cb704cfdbdeddee13b3dcf54b0d14ccc1ee915472733da9a1ccbe8221ebe5"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "259d377d9936e801a0fe7b5bf3933eb67ef06706a2563dd3af0a358cbbb221a1"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "de976eba1fa6515864fb744b66ea89c3a4063f376dcae88fcadc053db235f97f"
   end
 
   depends_on "deno" => :build

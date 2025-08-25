@@ -6,6 +6,15 @@ class Ggc < Formula
   license "MIT"
   head "https://github.com/bmf-san/ggc.git", branch: "main"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "9080a919ec9c5aadcb4a826d5e186e1cf32e26cc021a8f80b67f890930dce8e0"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "9080a919ec9c5aadcb4a826d5e186e1cf32e26cc021a8f80b67f890930dce8e0"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "9080a919ec9c5aadcb4a826d5e186e1cf32e26cc021a8f80b67f890930dce8e0"
+    sha256 cellar: :any_skip_relocation, sonoma:        "853f537fa86a3c78b48fb9c61a61f7a4f44d0ae1d881fba8a1f6de8fa60c135b"
+    sha256 cellar: :any_skip_relocation, ventura:       "853f537fa86a3c78b48fb9c61a61f7a4f44d0ae1d881fba8a1f6de8fa60c135b"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "acaf23ff1d29b03b2b34832545e30b882d197557ce1b0ff0dd120b543dba0eb0"
+  end
+
   depends_on "go" => :build
 
   def install

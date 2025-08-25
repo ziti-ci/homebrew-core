@@ -12,13 +12,13 @@ class Tenv < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "bc12b9c6383134094f0f09ad6c3addd3b1f7319efeeef6f54803d97af61009ca"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "bc12b9c6383134094f0f09ad6c3addd3b1f7319efeeef6f54803d97af61009ca"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "bc12b9c6383134094f0f09ad6c3addd3b1f7319efeeef6f54803d97af61009ca"
-    sha256 cellar: :any_skip_relocation, sonoma:        "1c8d430d1d8ab60f4ac2bdd94d04e0118020f447fc2220730e3d3853aed7f575"
-    sha256 cellar: :any_skip_relocation, ventura:       "1c8d430d1d8ab60f4ac2bdd94d04e0118020f447fc2220730e3d3853aed7f575"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "7fb02d9744071d812539aca7977584719978767e31b58281f46e005203dcb525"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "4687fd7c1ca72d8bcee9ac889e9da6b245cce9e26bcb901729790102b9971b0d"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "b96df51a328414e2ad5d4bb8f95cb94953dadbb516c456ef940e8a6cda6740ac"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "b96df51a328414e2ad5d4bb8f95cb94953dadbb516c456ef940e8a6cda6740ac"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "b96df51a328414e2ad5d4bb8f95cb94953dadbb516c456ef940e8a6cda6740ac"
+    sha256 cellar: :any_skip_relocation, sonoma:        "2616b23ade2f41d21afe865395ee15a6a0cb7ee6b2c18c746acf53c1a839f1d8"
+    sha256 cellar: :any_skip_relocation, ventura:       "2616b23ade2f41d21afe865395ee15a6a0cb7ee6b2c18c746acf53c1a839f1d8"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "a920766536256b783fadfbca3f082cf16dea68ce3c8e99d6614f36600649c50b"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "f919fde0fed92f5dbe82686d97ee1db952003915936ae77411449285a59d8da9"
   end
 
   depends_on "go" => :build

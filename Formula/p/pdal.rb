@@ -1,10 +1,9 @@
 class Pdal < Formula
   desc "Point data abstraction library"
   homepage "https://www.pdal.io/"
-  url "https://github.com/PDAL/PDAL/releases/download/2.9.0/PDAL-2.9.0-src.tar.bz2"
-  sha256 "f0be2f6575021d0c4751d5babd4c1096d4e5934f86f8461914e9f9c6dc63567d"
+  url "https://github.com/PDAL/PDAL/releases/download/2.9.1/PDAL-2.9.1-src.tar.bz2"
+  sha256 "a5508e30b5d2e5154fd5e686a444ae3f835607807b5d22f26d97d184ff4b74d8"
   license "BSD-3-Clause"
-  revision 1
   head "https://github.com/PDAL/PDAL.git", branch: "master"
 
   livecheck do
@@ -46,18 +45,6 @@ class Pdal < Formula
 
   on_linux do
     depends_on "libunwind"
-  end
-
-  # Two patches below are related to apache-arrow 21.0.0 support
-  # See https://github.com/PDAL/PDAL/pull/4773 and https://github.com/PDAL/PDAL/pull/4777
-  patch do
-    url "https://github.com/PDAL/PDAL/commit/8deb4e577ab6a73e74cd720256e1d574509ea3e9.patch?full_index=1"
-    sha256 "93c4682fa8b1e5f62665967f7917ff97e1285ad4b9b4c227d3b27d0694ae9404"
-  end
-
-  patch do
-    url "https://github.com/PDAL/PDAL/commit/ea822192f6054d6d0b1c68265a185fe4f292194f.patch?full_index=1"
-    sha256 "02258e334a97fe95f4e5942a39734be9e574443e303105ee95aef864717a9dc3"
   end
 
   def install

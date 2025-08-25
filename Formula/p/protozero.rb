@@ -5,6 +5,10 @@ class Protozero < Formula
   sha256 "6c7a896f1dc08435e8cd4f3780ff688cd0bfce6890599b755f6f3cb36398dc25"
   license "BSD-2-Clause"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "0e5449eeed0e64413afe0b49e9bbc162c0a5c9a1d2e91e992adf5c281413ad5a"
+  end
+
   depends_on "cmake" => :build
 
   def install

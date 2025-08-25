@@ -8,13 +8,8 @@ class PythonArgcomplete < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "ab68f1949e1049b9d0d2b844312090763d9b589c5e0cf7727486f987a6a28088"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "ab68f1949e1049b9d0d2b844312090763d9b589c5e0cf7727486f987a6a28088"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "ab68f1949e1049b9d0d2b844312090763d9b589c5e0cf7727486f987a6a28088"
-    sha256 cellar: :any_skip_relocation, sonoma:        "bf80f1c3d1bbc90a5fb4fae7c8452c430db2ddba42d274d2fc8c5e3646c95b29"
-    sha256 cellar: :any_skip_relocation, ventura:       "bf80f1c3d1bbc90a5fb4fae7c8452c430db2ddba42d274d2fc8c5e3646c95b29"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "0afc8245b8dd5253ca6303cae254b3f9ecc25755b13a7d23f71d2040223f3dc5"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "0afc8245b8dd5253ca6303cae254b3f9ecc25755b13a7d23f71d2040223f3dc5"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, all: "c2cd4eb62d9b2b5a7ce86ae22159a097bfad8673e20b2386fd859b1f621490c4"
   end
 
   depends_on "python@3.13"

@@ -17,7 +17,7 @@ class Teku < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "0fe0564c021df4f6780599e1c00a377449ee97be3b26cea5a90a3878bf650ea5"
   end
 
-  depends_on "gradle" => :build
+  depends_on "gradle@8" => :build
   depends_on "openjdk"
 
   def install

@@ -1,8 +1,8 @@
 class Ncspot < Formula
   desc "Cross-platform ncurses Spotify client written in Rust"
   homepage "https://github.com/hrkfdn/ncspot"
-  url "https://github.com/hrkfdn/ncspot/archive/refs/tags/v1.3.0.tar.gz"
-  sha256 "244f0b37b34a5b7f832c77e7fe102b0f66382156e26395cdf7e2dedfe0d71220"
+  url "https://github.com/hrkfdn/ncspot/archive/refs/tags/v1.3.1.tar.gz"
+  sha256 "d767fbe4c742b18a3ef7203162cc55a0976e07e478295445a5de1660666e2f15"
   license "BSD-2-Clause"
 
   bottle do

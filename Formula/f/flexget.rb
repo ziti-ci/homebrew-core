@@ -3,8 +3,8 @@ class Flexget < Formula
 
   desc "Multipurpose automation tool for content"
   homepage "https://www.flexget.com"
-  url "https://files.pythonhosted.org/packages/fb/6a/a60157ecdeefc2876ee30d501c0037abd11f59965bcaa5b7998bbbe02fae/flexget-3.17.16.tar.gz"
-  sha256 "5d876d2873d7dd773fc0adeeb4c3b2836924d18eb7fa83aeb00d659bc988330e"
+  url "https://files.pythonhosted.org/packages/ab/de/f1e2fa6184e31ea05561449e0ffa7a93e22e662b7023ab2cc2965eb69dcb/flexget-3.17.17.tar.gz"
+  sha256 "5f5bee33448c9a51e5df3f236a30311282f6f44b76fe14405728f4483cb10e37"
   license "MIT"
 
   bottle do
@@ -329,8 +329,8 @@ class Flexget < Formula
   end
 
   resource "typing-extensions" do
-    url "https://files.pythonhosted.org/packages/98/5a/da40306b885cc8c09109dc2e1abd358d5684b1425678151cdaed4731c822/typing_extensions-4.14.1.tar.gz"
-    sha256 "38b39f4aeeab64884ce9f74c94263ef78f3c22467c8724005483154c26648d36"
+    url "https://files.pythonhosted.org/packages/72/94/1a15dd82efb362ac84269196e94cf00f187f7ed21c242792a923cdb1c61f/typing_extensions-4.15.0.tar.gz"
+    sha256 "0cea48d173cc12fa28ecabc3b837ea3cf6f38c6d1136f85cbaaf598984861466"
   end
 
   resource "tzdata" do

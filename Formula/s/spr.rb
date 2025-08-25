@@ -1,8 +1,8 @@
 class Spr < Formula
   desc "Submit pull requests for individual, amendable, rebaseable commits to GitHub"
   homepage "https://spacedentist.github.io/spr/"
-  url "https://github.com/spacedentist/spr/archive/refs/tags/v1.3.6.tar.gz"
-  sha256 "a9ee0f3e1c90176841a42f2177a31c83a93a8cfb83bc1507fcb544ff8d997de7"
+  url "https://github.com/spacedentist/spr/archive/refs/tags/v1.3.7.tar.gz"
+  sha256 "6b48524abfecea16e0e7a131f0c44027375a80577cde43355f54928c4921ed6c"
   license "MIT"
   head "https://github.com/spacedentist/spr.git", branch: "master"
 
@@ -26,7 +26,7 @@ class Spr < Formula
   end
 
   def install
-    system "cargo", "install", *std_cargo_args(path: "spr")
+    system "cargo", "install", *std_cargo_args
   end
 
   test do

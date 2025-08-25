@@ -31,6 +31,9 @@ class Plenv < Formula
 
     # Run rehash after installing.
     system bin/"plenv", "rehash"
+
+    # Build an `:all` bottle
+    inreplace libexec/"plenv", "/usr/local/etc/plenv.d", "#{HOMEBREW_PREFIX}/etc/plenv.d"
   end
 
   def caveats

@@ -1,10 +1,9 @@
 class ProtocGenGrpcWeb < Formula
   desc "Protoc plugin that generates code for gRPC-Web clients"
   homepage "https://github.com/grpc/grpc-web"
-  url "https://github.com/grpc/grpc-web/archive/refs/tags/1.5.0.tar.gz"
-  sha256 "d3043633f1c284288e98e44c802860ca7203c7376b89572b5f5a9e376c2392d5"
+  url "https://github.com/grpc/grpc-web/archive/refs/tags/2.0.0.tar.gz"
+  sha256 "bcf1a75904b14ce40ac003dea901852412d0ed818af799e403e3da15a6528b29"
   license "Apache-2.0"
-  revision 13
 
   livecheck do
     url :stable
@@ -28,9 +27,6 @@ class ProtocGenGrpcWeb < Formula
   depends_on "abseil"
   depends_on "protobuf@29"
   depends_on "protoc-gen-js"
-
-  # Backport of https://github.com/grpc/grpc-web/commit/2c39859be8e5bcf55eef129e5a5330149ce460ab
-  patch :DATA
 
   def install
     # Workarounds to build with latest `protobuf` which needs Abseil link flags and C++17
@@ -77,57 +73,3 @@ class ProtocGenGrpcWeb < Formula
     system "tsc", "--lib", "es6", "test.ts"
   end
 end
-
-__END__
-diff --git a/javascript/net/grpc/web/generator/grpc_generator.cc b/javascript/net/grpc/web/generator/grpc_generator.cc
-index 158a335bb..1eb97b35d 100644
---- a/javascript/net/grpc/web/generator/grpc_generator.cc
-+++ b/javascript/net/grpc/web/generator/grpc_generator.cc
-@@ -841,13 +841,11 @@ void PrintProtoDtsMessage(Printer* printer, const Descriptor* desc,
-                      "set$js_field_name$(value?: $js_field_type$): "
-                      "$class_name$;\n");
-     }
--    if (field->has_optional_keyword() ||
--        (field->type() == FieldDescriptor::TYPE_MESSAGE &&
--            !field->is_repeated() && !field->is_map())) {
-+    if (field->has_presence()) {
-       printer->Print(vars, "has$js_field_name$(): boolean;\n");
-     }
--    if (field->type() == FieldDescriptor::TYPE_MESSAGE || field->has_optional_keyword() ||
--        field->is_repeated() || field->is_map()) {
-+    if (field->type() == FieldDescriptor::TYPE_MESSAGE ||
-+        field->has_presence() || field->is_repeated() || field->is_map()) {
-       printer->Print(vars, "clear$js_field_name$(): $class_name$;\n");
-     }
-     if (field->is_repeated() && !field->is_map()) {
-@@ -867,14 +865,12 @@ void PrintProtoDtsMessage(Printer* printer, const Descriptor* desc,
-     printer->Print("\n");
-   }
-
--  for (int i = 0; i < desc->oneof_decl_count(); i++) {
--    const OneofDescriptor* oneof = desc->oneof_decl(i);
--    if (!oneof->is_synthetic()) {
--      vars["js_oneof_name"] = ToUpperCamel(ParseLowerUnderscore(oneof->name()));
--      printer->Print(
--          vars, "get$js_oneof_name$Case(): $class_name$.$js_oneof_name$Case;\n");
--      printer->Print("\n");
--    }
-+  for (int i = 0; i < desc->real_oneof_decl_count(); i++) {
-+    const OneofDescriptor *oneof = desc->real_oneof_decl(i);
-+    vars["js_oneof_name"] = ToUpperCamel(ParseLowerUnderscore(oneof->name()));
-+    printer->Print(
-+        vars, "get$js_oneof_name$Case(): $class_name$.$js_oneof_name$Case;\n");
-+    printer->Print("\n");
-   }
-
-   printer->Print(
-@@ -904,8 +900,7 @@ void PrintProtoDtsMessage(Printer* printer, const Descriptor* desc,
-     }
-     vars["js_field_name"] = js_field_name;
-     vars["js_field_type"] = AsObjectFieldType(field, file);
--    if ((field->type() != FieldDescriptor::TYPE_MESSAGE && !field->has_optional_keyword()) ||
--        field->is_repeated()) {
-+    if (!field->has_presence()) {
-       printer->Print(vars, "$js_field_name$: $js_field_type$,\n");
-     } else {
-       printer->Print(vars, "$js_field_name$?: $js_field_type$,\n");

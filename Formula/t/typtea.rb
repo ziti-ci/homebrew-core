@@ -6,6 +6,15 @@ class Typtea < Formula
   license "MIT"
   head "https://github.com/ashish0kumar/typtea.git", branch: "main"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "29331a5f5f84fbdbf6d724163f70bbcce0bba015850e62f8e4185292b661dcc4"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "29331a5f5f84fbdbf6d724163f70bbcce0bba015850e62f8e4185292b661dcc4"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "29331a5f5f84fbdbf6d724163f70bbcce0bba015850e62f8e4185292b661dcc4"
+    sha256 cellar: :any_skip_relocation, sonoma:        "b7993fc19824a6841a296131340db8f5d9d40e0b92b599ea095e1586db409dde"
+    sha256 cellar: :any_skip_relocation, ventura:       "b7993fc19824a6841a296131340db8f5d9d40e0b92b599ea095e1586db409dde"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "1d9099d3a169a377f90f6b9c703d1f8403f60d12bc77500c79d5157350ab6a14"
+  end
+
   depends_on "go" => :build
 
   def install

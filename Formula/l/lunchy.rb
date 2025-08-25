@@ -9,12 +9,8 @@ class Lunchy < Formula
   no_autobump! because: :requires_manual_review
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "0c17a734e1506ea38877dc23b77d843b7975ab2502a459716c1252eb5569d2a4"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "0c17a734e1506ea38877dc23b77d843b7975ab2502a459716c1252eb5569d2a4"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "0c17a734e1506ea38877dc23b77d843b7975ab2502a459716c1252eb5569d2a4"
-    sha256 cellar: :any_skip_relocation, sonoma:        "185916bb389986bfc7c1e52fab8cd544590dd16860271c12a0665131c4d27314"
-    sha256 cellar: :any_skip_relocation, ventura:       "185916bb389986bfc7c1e52fab8cd544590dd16860271c12a0665131c4d27314"
+    rebuild 2
+    sha256 cellar: :any_skip_relocation, all: "071a71f4b6716723c0c3de5ce2daa1521e2fb339e009ea0df5e8ba1763a6fd8c"
   end
 
   depends_on :macos

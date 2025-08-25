@@ -6,6 +6,15 @@ class Gtrash < Formula
   license "MIT"
   head "https://github.com/umlx5h/gtrash.git", branch: "main"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "857a779ba0bfda17f825bd37e0c694b39abe6c85ff518432e0904026643fa9d6"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "857a779ba0bfda17f825bd37e0c694b39abe6c85ff518432e0904026643fa9d6"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "857a779ba0bfda17f825bd37e0c694b39abe6c85ff518432e0904026643fa9d6"
+    sha256 cellar: :any_skip_relocation, sonoma:        "3596f9c58e086381b19eaf305f014e68f6f000fd7ef05a074f5531f474dccb15"
+    sha256 cellar: :any_skip_relocation, ventura:       "3596f9c58e086381b19eaf305f014e68f6f000fd7ef05a074f5531f474dccb15"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "d3e297de1658a618cb06feb006a9a5498e313aad3ccfcecc11430ef645f129fe"
+  end
+
   depends_on "go" => :build
 
   def install

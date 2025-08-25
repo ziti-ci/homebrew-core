@@ -16,6 +16,7 @@ class ZigAT014 < Formula
     sha256 cellar: :any,                 arm64_ventura: "bf2bb8d09f1eb6c311609f6d5699206199e06d4d60924e1d19c9e72ba0537b6a"
     sha256 cellar: :any,                 sonoma:        "2e77847e273785c7db555a9f563eaeb2cfe65c0d2310862ef404933c28ee6828"
     sha256 cellar: :any,                 ventura:       "c7ac8f1ea8b09c4c9706597da2eef4317c56f46801be7fb699b11fde357dfb1d"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "b8c0ee0e04b687903f8ee93cf9d2c294dd41b872edbb0ff6938db0a888cad051"
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "1f53b11bf84acc90c55d583801bd50470ac2532bffbb977d8e47401bf38a5679"
   end
 

@@ -3,8 +3,8 @@ class Schemathesis < Formula
 
   desc "Testing tool for web applications with specs"
   homepage "https://schemathesis.readthedocs.io/"
-  url "https://files.pythonhosted.org/packages/67/48/2d4310f95ad95e7ffd585c32d326bca864536a5481cc01ca32f653b2941c/schemathesis-4.1.1.tar.gz"
-  sha256 "584ee98222d22640b2fca8f177370f3f6a75500215b83e0bf9aad3d0d4a239c4"
+  url "https://files.pythonhosted.org/packages/0c/b2/37db1b9af1337ee1969c1fdfa98bb767f6b02a1333648a2b398b8d688793/schemathesis-4.1.2.tar.gz"
+  sha256 "88305f08a26dc707aca7bce9123b408fa9dcf9a50c9fd9b5f0203fdadf2ec8e1"
   license "MIT"
 
   bottle do
@@ -90,8 +90,8 @@ class Schemathesis < Formula
   end
 
   resource "hypothesis" do
-    url "https://files.pythonhosted.org/packages/7d/6d/68b8f1468da10dab5e903f6278cdfe88e05631a23009b2d9bf75b23e63f1/hypothesis-6.138.2.tar.gz"
-    sha256 "82e3b2ac709ee3edda4aba2f4b11becfe764f51d104fcdb3e9f95aff1ac81595"
+    url "https://files.pythonhosted.org/packages/19/28/9aa38d1cf2b00d385926fd44318d2b49948c060969ab29e82e8bb654b16c/hypothesis-6.138.3.tar.gz"
+    sha256 "9bffd1382b99e67c46512dac45ec013bae4b39d3d0ef98f0d87535f06d8efc9e"
   end
 
   resource "hypothesis-graphql" do
@@ -240,8 +240,8 @@ class Schemathesis < Formula
   end
 
   resource "starlette" do
-    url "https://files.pythonhosted.org/packages/04/57/d062573f391d062710d4088fa1369428c38d51460ab6fedff920efef932e/starlette-0.47.2.tar.gz"
-    sha256 "6ae9aa5db235e4846decc1e7b79c4f346adf41e9777aebeb49dfd09bbd7023d8"
+    url "https://files.pythonhosted.org/packages/15/b9/cc3017f9a9c9b6e27c5106cc10cc7904653c3eec0729793aec10479dd669/starlette-0.47.3.tar.gz"
+    sha256 "6bc94f839cc176c4858894f1f8908f0ab79dfec1a6b8402f6da9be26ebea52e9"
   end
 
   resource "starlette-testclient" do
@@ -260,8 +260,8 @@ class Schemathesis < Formula
   end
 
   resource "typing-extensions" do
-    url "https://files.pythonhosted.org/packages/98/5a/da40306b885cc8c09109dc2e1abd358d5684b1425678151cdaed4731c822/typing_extensions-4.14.1.tar.gz"
-    sha256 "38b39f4aeeab64884ce9f74c94263ef78f3c22467c8724005483154c26648d36"
+    url "https://files.pythonhosted.org/packages/72/94/1a15dd82efb362ac84269196e94cf00f187f7ed21c242792a923cdb1c61f/typing_extensions-4.15.0.tar.gz"
+    sha256 "0cea48d173cc12fa28ecabc3b837ea3cf6f38c6d1136f85cbaaf598984861466"
   end
 
   resource "uri-template" do

@@ -27,6 +27,12 @@ class PythonArgcomplete < Formula
     bash_completion_script = "argcomplete/bash_completion.d/_python-argcomplete"
     (share/"bash-completion/completions").install bash_completion_script => "python-argcomplete"
     zsh_completion.install_symlink bash_completion/"python-argcomplete" => "_python-argcomplete"
+
+    # Build an `:all` bottle by replacing comments
+    site_packages = libexec/Language::Python.site_packages("python3")
+    inreplace site_packages/"argcomplete-#{version}.dist-info/METADATA",
+              "/opt/homebrew/bin/bash",
+              "$HOMEBREW_PREFIX/bin/bash"
   end
 
   test do

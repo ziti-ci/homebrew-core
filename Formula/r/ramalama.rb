@@ -27,6 +27,12 @@ class Ramalama < Formula
 
   def install
     virtualenv_install_with_resources
+
+    # Build an `:all` bottle by replacing comments
+    site_packages = libexec/Language::Python.site_packages("python3")
+    inreplace site_packages/"argcomplete-#{resource("argcomplete").version}.dist-info/METADATA",
+              "/opt/homebrew/bin/bash",
+              "$HOMEBREW_PREFIX/bin/bash"
   end
 
   test do

@@ -11,16 +11,12 @@ class Libosmium < Formula
 
   depends_on "boost" => :build
   depends_on "cmake" => :build
+  depends_on "protozero" => :build
   depends_on "lz4"
 
   uses_from_macos "bzip2"
   uses_from_macos "expat"
   uses_from_macos "zlib"
-
-  resource "protozero" do
-    url "https://github.com/mapbox/protozero/archive/refs/tags/v1.8.0.tar.gz"
-    sha256 "d95ca543fc42bd22b8c4bce1e6d691ce1711eda4b4910f7863449e6517fade6b"
-  end
 
   # Backport support for CMake 4
   patch do
@@ -29,16 +25,16 @@ class Libosmium < Formula
   end
 
   def install
-    resource("protozero").stage { libexec.install "include" }
-
     args = %W[
+      -DBUILD_EXAMPLES=OFF
+      -DBUILD_WITH_CCACHE=OFF
       -DINSTALL_GDALCPP=ON
       -DINSTALL_UTFCPP=ON
-      -DPROTOZERO_INCLUDE_DIR=#{libexec}/include
+      -DPROTOZERO_INCLUDE_DIR=#{Formula["protozero"].opt_include}
     ]
 
+    # We only install headers, so we can skip `cmake --build`.
     system "cmake", "-S", ".", "-B", "build", *args, *std_cmake_args
-    system "cmake", "--build", "build"
     system "cmake", "--install", "build"
   end
 

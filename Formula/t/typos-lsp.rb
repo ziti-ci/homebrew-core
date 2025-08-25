@@ -1,8 +1,8 @@
 class TyposLsp < Formula
   desc "Language Server for typos-cli"
   homepage "https://github.com/tekumara/typos-lsp"
-  url "https://github.com/tekumara/typos-lsp/archive/refs/tags/v0.1.41.tar.gz"
-  sha256 "54182549823ba14d411d06b20a17765061f5393955a82a4cce3bf2b51ea7fe6b"
+  url "https://github.com/tekumara/typos-lsp/archive/refs/tags/v0.1.42.tar.gz"
+  sha256 "296168e4e9d6db3c457ade75292f734450f65d19aa7c79e1751a7b09367c10b8"
   license "MIT"
 
   livecheck do

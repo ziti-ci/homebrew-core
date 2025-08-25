@@ -1,8 +1,8 @@
 class Certgraph < Formula
   desc "Crawl the graph of certificate Alternate Names"
   homepage "https://github.com/lanrat/certgraph"
-  url "https://github.com/lanrat/certgraph/archive/refs/tags/v0.1.1.tar.gz"
-  sha256 "2749ee2fa102019e847e316b1cbb25d7cd5cd8b5e49969cef290972019187452"
+  url "https://github.com/lanrat/certgraph/archive/refs/tags/v0.1.2.tar.gz"
+  sha256 "233b6bf6c081d88c63ed26b2d11d09a74e55f3dfc860823fdf946dc455a1d135"
   license "GPL-2.0-or-later"
   version_scheme 1
   head "https://github.com/lanrat/certgraph.git", branch: "main"

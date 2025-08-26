@@ -12,6 +12,16 @@ class FfmpegAT7 < Formula
     regex(/href=.*?ffmpeg[._-]v?(7\.(?:\.\d+)+)\.t/i)
   end
 
+  bottle do
+    sha256 arm64_sequoia: "7968732900f92865a021c53a946200834b9c56f5e9a7b3788fb9eaefa3bf0eeb"
+    sha256 arm64_sonoma:  "c36c5a2608476b13ec6b077f9ad54dc27f057a68d22717e4bc21abe8bbefe718"
+    sha256 arm64_ventura: "7ddffc72aae76f3633fa8f0a479866f57f7caba7fa7b5e85109b83588d15600d"
+    sha256 sonoma:        "c4e03e018eee6896978c4963a647f35508cc6bf6dac052c311215f92fb4f379b"
+    sha256 ventura:       "82881bcd8533707e2fa2268bb4c4e78724df4895bc5771b6e6d049d10c022564"
+    sha256 arm64_linux:   "8c562ee687d5dcc8452e29051c34cd9583473d7071e3b3e98d24c15106c8d698"
+    sha256 x86_64_linux:  "f9baa8a75c46f5c6f76fe667e0f1d9292e154fad39f446745ddc8bd16629961e"
+  end
+
   keg_only :versioned_formula
 
   depends_on "pkgconf" => :build

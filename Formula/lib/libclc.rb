@@ -1,8 +1,8 @@
 class Libclc < Formula
   desc "Implementation of the library requirements of the OpenCL C programming language"
   homepage "https://libclc.llvm.org/"
-  url "https://github.com/llvm/llvm-project/releases/download/llvmorg-20.1.8/libclc-20.1.8.src.tar.xz"
-  sha256 "ecd83a52859742f71f4c332538f8bee54a6743374a233b5a85017de22d75c227"
+  url "https://github.com/llvm/llvm-project/releases/download/llvmorg-21.1.0/libclc-21.1.0.src.tar.xz"
+  sha256 "1fa36516a5bd56fd2bd4e6d327a85b6ee226747a79a17b004fc1a09933376743"
   license "Apache-2.0" => { with: "LLVM-exception" }
 
   livecheck do
@@ -51,6 +51,8 @@ class Libclc < Formula
     EOS
 
     system llvm_bin/"clang", *clang_args, "./add_sat.cl"
-    assert_match "@llvm.sadd.sat.i8", shell_output("#{llvm_bin}/llvm-dis ./add_sat.bc -o -")
+    ir = shell_output("#{llvm_bin}/llvm-dis ./add_sat.bc -o -")
+    assert_match('target triple = "nvptx-unknown-nvidiacl"', ir)
+    assert_match(/define .* @foo\(/, ir)
   end
 end

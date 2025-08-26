@@ -1,10 +1,9 @@
 class Monero < Formula
   desc "Official Monero wallet and CPU miner"
   homepage "https://www.getmonero.org/downloads/#cli"
-  url "https://downloads.getmonero.org/cli/monero-source-v0.18.4.1.tar.bz2"
-  sha256 "e70e44cae986123c39b77a89a9ee5db431c050a55cc64442993482d085104103"
+  url "https://downloads.getmonero.org/cli/monero-source-v0.18.4.2.tar.bz2"
+  sha256 "e9ec2062b3547db58f00102e6905621116ab7f56a331e0bc9b9e892607b87d24"
   license "BSD-3-Clause"
-  revision 1
 
   livecheck do
     url "https://downloads.getmonero.org/cli/source"
@@ -37,12 +36,6 @@ class Monero < Formula
   depends_on "readline"
   depends_on "unbound"
   depends_on "zeromq"
-
-  # Fix build with Boost 1.89.0, pr ref: https://github.com/monero-project/monero/pull/10036
-  patch do
-    url "https://github.com/monero-project/monero/commit/f61294dc6bd9fe65d584526138178a2419f3832a.patch?full_index=1"
-    sha256 "c0da585e4f06c942c4be9c829fff5483f49204dcfb4258dea7f7c6dd9be5304a"
-  end
 
   def install
     system "cmake", "-S", ".", "-B", "build", *std_cmake_args

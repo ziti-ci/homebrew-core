@@ -1,8 +1,8 @@
 class KubectlAi < Formula
   desc "AI powered Kubernetes Assistant"
   homepage "https://github.com/GoogleCloudPlatform/kubectl-ai"
-  url "https://github.com/GoogleCloudPlatform/kubectl-ai/archive/refs/tags/v0.0.22.tar.gz"
-  sha256 "c8a78503b5ef73aa3019fea86daa25f84c02e35c529070a87359351b10df5d04"
+  url "https://github.com/GoogleCloudPlatform/kubectl-ai/archive/refs/tags/v0.0.23.tar.gz"
+  sha256 "265de8135d26d5262a6de46839ec9ff262cd3fa2c1141b9529ca2ae744001aed"
   license "Apache-2.0"
 
   livecheck do

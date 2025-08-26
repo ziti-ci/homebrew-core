@@ -4,13 +4,30 @@ class Freeswitch < Formula
   license "MPL-1.1"
 
   stable do
-    # TODO: Switch to `ffmpeg` and `pcre2` on next release
+    # TODO: Switch to `pcre2` on next release
     url "https://github.com/signalwire/freeswitch.git",
         tag:      "v1.10.12",
         revision: "a88d069d6ffb74df797bcaf001f7e63181c07a09"
 
-    depends_on "ffmpeg@5"
     depends_on "pcre"
+
+    # Backport support for FFmpeg 7.1
+    patch do
+      url "https://github.com/signalwire/freeswitch/commit/9dccd0b6e6761434d54d75d6385cdc7a7b3fa39c.patch?full_index=1"
+      sha256 "b08adbb5507d655fe0f6f6b2338a724a97413eb2323b6804ae453c86be1fed84"
+    end
+    patch do
+      url "https://github.com/signalwire/freeswitch/commit/58776f3eed03951e3a712c5124a12616f5aa735f.patch?full_index=1"
+      sha256 "30248f603ff433bf1a4e1e45c3b2dd0779604bac7546c522ed77f49e2240ff7a"
+    end
+    patch do
+      url "https://github.com/signalwire/freeswitch/commit/1fd9ac9dd1bdae6e1bd794119f8e5328fe4c7f6c.patch?full_index=1"
+      sha256 "38774910ce5fd337fc6dd1ae44d6693facb8aa3f387568b870755f836c29aef9"
+    end
+    patch do
+      url "https://github.com/signalwire/freeswitch/commit/066b92c5894b07a4879a26a9f6a1cdcf59e016ea.patch?full_index=1"
+      sha256 "e3b17c6d3f8b084b981398fc913b260c7b3085c1baa6842cf702ba10b1c8b4c5"
+    end
   end
 
   livecheck do
@@ -33,7 +50,6 @@ class Freeswitch < Formula
   head do
     url "https://github.com/signalwire/freeswitch.git", branch: "master"
 
-    depends_on "ffmpeg"
     depends_on "pcre2"
   end
 
@@ -44,6 +60,7 @@ class Freeswitch < Formula
   depends_on "pkgconf" => :build
   depends_on "yasm" => :build
 
+  depends_on "ffmpeg@7"
   depends_on "freetype"
   depends_on "jpeg-turbo"
   depends_on "ldns"

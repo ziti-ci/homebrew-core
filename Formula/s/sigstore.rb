@@ -10,13 +10,13 @@ class Sigstore < Formula
   head "https://github.com/sigstore/sigstore-python.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any,                 arm64_sequoia: "367a20912f34469d4cf92e04ea2fc1258978d131915989c8483669dd5f838952"
-    sha256 cellar: :any,                 arm64_sonoma:  "47cd5a16b6f9788bcdf7f40791180df133bde5d4bc670292a46283cf71c7dbd0"
-    sha256 cellar: :any,                 arm64_ventura: "78a86dca05e779b358063cef5080a0a01b8a532d60414ec239ce89fa49e0ad43"
-    sha256 cellar: :any,                 sonoma:        "f2b0b3e6f76e8044a06f3dd6ee210947bef1fe75d0c8e3e12c27d2b104d262f3"
-    sha256 cellar: :any,                 ventura:       "869e02ab5032be37ae2024a4657a460b190fd7b64e0c99fa01cb1f52efa12180"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "027a3b594bf45ca298b65d4ccccd4026256aea4e2f39e3d6c45952e427222f0f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "610011094ceeba7d28d175094a97dc7dcf61ca91ef6f9d3330fd20685e3ac686"
+    sha256 cellar: :any,                 arm64_sequoia: "c2dcbe1c6e463472c294b0149c25f77e367f7b67147e354eb7833bcea18d2bd4"
+    sha256 cellar: :any,                 arm64_sonoma:  "c7a2bea0a03ab0052637123cf624018f34461a388b477e5dedc31305d7e9e21b"
+    sha256 cellar: :any,                 arm64_ventura: "c70f264515798f67cd990defde90c88dd5699f9967cd9bfed94da69d1eb27632"
+    sha256 cellar: :any,                 sonoma:        "1bb5a18d5b7d776240aacd764dc620f7d84dd606b15d64bc58daf2418d74d116"
+    sha256 cellar: :any,                 ventura:       "004bdc6f681e46877865c6f576665c804a60cced9c65334bcea3018250b09132"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "7fe72c4087efe867d21cee5d8b63b6cd5da446b63aa4f72ba3dc219f6808b907"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "21ec06756145b21f4a51a317c2f57d9fd04531dbbad5cdccc3e8a92232788d2e"
   end
 
   depends_on "pkgconf" => :build # for rfc3161-client

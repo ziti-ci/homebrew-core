@@ -1,4 +1,5 @@
 class Sby < Formula
+  include Language::Python::Virtualenv
   include Language::Python::Shebang
 
   desc "Front-end for Yosys-based formal verification flows"
@@ -23,9 +24,18 @@ class Sby < Formula
   depends_on "yosys"
 
   def install
-    system "python3.13", "-m", "pip", "install", *std_pip_args(build_isolation: true), "click"
+    venv = virtualenv_create(libexec, "python3.13")
+    venv.pip_install "click"
+
     system "make", "install", "PREFIX=#{prefix}"
-    rewrite_shebang detected_python_shebang, bin/"sby"
+    rewrite_shebang python_shebang_rewrite_info(venv.root/"bin/python"), bin/"sby"
+
+    # Build an `:all` bottle
+    return unless OS.mac?
+
+    inreplace bin/"sby",
+              "release_version = 'SBY '",
+              "release_version = 'SBY v#{version}'"
   end
 
   test do

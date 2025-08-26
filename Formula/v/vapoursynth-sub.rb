@@ -23,9 +23,16 @@ class VapoursynthSub < Formula
   depends_on "meson" => :build
   depends_on "ninja" => :build
   depends_on "pkgconf" => :build
-  depends_on "ffmpeg@7"
+  depends_on "ffmpeg"
   depends_on "libass"
   depends_on "vapoursynth"
+
+  # Apply open PR to support FFmpeg 8
+  # PR ref: https://github.com/vapoursynth/subtext/pull/17
+  patch do
+    url "https://github.com/vapoursynth/subtext/commit/09c9e2bb87a635cdc5377c70983f8ceb7fae5841.patch?full_index=1"
+    sha256 "362498e7e97d5039dcf6bed4b146e6f3995dda321ceb4c78545e44dbe5062255"
+  end
 
   def install
     # Upstream build system wants to install directly into vapoursynth's libdir and does not respect

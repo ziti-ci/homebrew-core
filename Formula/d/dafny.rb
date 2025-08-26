@@ -1,11 +1,9 @@
 class Dafny < Formula
   desc "Verification-aware programming language"
   homepage "https://github.com/dafny-lang/dafny/blob/master/README.md"
-  url "https://github.com/dafny-lang/dafny/archive/refs/tags/v4.10.0.tar.gz"
-  sha256 "bd643ae9cd5b697505ca3682fa4d15238c6746701eaa1eeba4c541006674da40"
+  url "https://github.com/dafny-lang/dafny/archive/refs/tags/v4.11.0.tar.gz"
+  sha256 "05417a2250cea13494318a60d86bd0dc6d9622bd625d9f4fbeb42854462e6798"
   license "MIT"
-
-  no_autobump! because: :requires_manual_review
 
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_sequoia: "b0379afe58205e4e147a773cfe4e45102e4b6bda9a2a40e862641730e23381b6"
@@ -16,7 +14,8 @@ class Dafny < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "3e7397f8784ded9a6688b1e1a3e5ee31b2278d44e55462429395f1b374b3b736"
   end
 
-  depends_on "gradle" => :build
+  # Upstream uses v8 and v9 is not yet compatible
+  depends_on "gradle@8" => :build
   depends_on "openjdk" => [:build, :test]
 
   depends_on "dotnet@8"

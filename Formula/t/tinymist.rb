@@ -1,8 +1,8 @@
 class Tinymist < Formula
-  desc "Language server for Typst"
+  desc "Services for Typst"
   homepage "https://myriad-dreamin.github.io/tinymist/"
-  url "https://github.com/Myriad-Dreamin/tinymist/archive/refs/tags/v0.13.22.tar.gz"
-  sha256 "810d570ca1da24cf3eb4410d143211483a24b9d914214a8794658da7d697810b"
+  url "https://github.com/Myriad-Dreamin/tinymist/archive/refs/tags/v0.13.24.tar.gz"
+  sha256 "01bfe347daa3784bc507e57b0f7fb57bcacb7f695e38aa9b320eb6810e7d3b14"
   license "Apache-2.0"
   head "https://github.com/Myriad-Dreamin/tinymist.git", branch: "main"
 
@@ -27,10 +27,12 @@ class Tinymist < Formula
   depends_on "rust" => :build
 
   def install
-    system "cargo", "install", *std_cargo_args(path: "crates/tinymist")
+    system "cargo", "install", *std_cargo_args(path: "crates/tinymist-cli")
   end
 
   test do
+    system bin/"tinymist", "probe"
+
     json = <<~JSON
       {
         "jsonrpc": "2.0",
@@ -44,7 +46,7 @@ class Tinymist < Formula
     JSON
 
     input = "Content-Length: #{json.size}\r\n\r\n#{json}"
-    output = IO.popen(bin/"tinymist", "w+") do |pipe|
+    output = IO.popen([bin/"tinymist", "lsp"], "w+") do |pipe|
       pipe.write(input)
       sleep 1
       pipe.close_write

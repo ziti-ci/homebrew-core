@@ -20,6 +20,10 @@ class Seam < Formula
   def install
     system "npm", "install", *std_npm_args
     bin.install_symlink Dir["#{libexec}/bin/*"]
+
+    # Build an `:all` bottle by removing workflow files
+    node_modules = libexec/"lib/node_modules"
+    rm_r node_modules/"seam-cli/ldid/.github"
   end
 
   test do

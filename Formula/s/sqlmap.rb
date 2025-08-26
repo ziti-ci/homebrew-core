@@ -25,19 +25,14 @@ class Sqlmap < Formula
   def install
     libexec.install Dir["*"]
 
-    files = [
-      libexec/"lib/core/dicts.py",
-      libexec/"lib/core/settings.py",
-      libexec/"lib/request/basic.py",
-      libexec/"thirdparty/magic/magic.py",
-    ]
-    inreplace files, "/usr/local", HOMEBREW_PREFIX
-
     %w[sqlmap sqlmapapi].each do |cmd|
       rewrite_shebang detected_python_shebang, libexec/"#{cmd}.py"
       bin.install_symlink libexec/"#{cmd}.py"
       bin.install_symlink bin/"#{cmd}.py" => cmd
     end
+
+    # Build an `:all` bottle
+    inreplace libexec/"thirdparty/magic/magic.py", "/usr/local/Cellar", "#{HOMEBREW_PREFIX}/Cellar"
   end
 
   test do

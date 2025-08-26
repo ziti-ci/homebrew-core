@@ -1,8 +1,8 @@
 class Planus < Formula
   desc "Alternative compiler for flatbuffers,"
   homepage "https://github.com/planus-org/planus"
-  url "https://github.com/planus-org/planus/archive/refs/tags/v1.1.1.tar.gz"
-  sha256 "d79f5d9a1acfcadc86376537c297853dcd6f326016f8049c28df57bb4f39c957"
+  url "https://github.com/planus-org/planus/archive/refs/tags/v1.2.0.tar.gz"
+  sha256 "b703a3ea88fbe6e5afee6b190c85805b589512c6ac56c0a1e35c115f4cb96bcc"
   license any_of: ["Apache-2.0", "MIT"]
   head "https://github.com/planus-org/planus.git", branch: "main"
 

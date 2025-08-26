@@ -24,7 +24,11 @@ class Spack < Formula
   uses_from_macos "python"
 
   def install
-    rm Dir["bin/*.bat", "bin/*.ps1", "bin/haspywin.py"] # Remove Windows files.
+    # Remove Windows files
+    rm Dir["bin/*.bat", "bin/*.ps1", "bin/haspywin.py"]
+    # Build an `:all` bottle by removing test files
+    rm_r "lib/spack/spack/test"
+
     prefix.install Dir["*"]
   end
 

@@ -11,11 +11,11 @@ class Libslax < Formula
   end
 
   bottle do
-    sha256 arm64_sequoia: "e03cfaf6ff9d854e6ac7e3e7f43ca057c6a6a57a795c10db151f1ac6b47944f6"
-    sha256 arm64_sonoma:  "ca76593554bb1055686d3c015b4a7568d0a37e7b85566049d840a9281f948341"
-    sha256 arm64_ventura: "1ad9235389d063c10aac42a4612d1acb5ce4bc84d9146769e969a7ac1c458c67"
-    sha256 sonoma:        "4858964b3586b184243e194085c882a05ba3ee7e64fee5253218e43840af7007"
-    sha256 ventura:       "c5185c695ef1fa24beff9eda6016ecbc9eca42f86b555791776894dada3e49b8"
+    sha256 arm64_sequoia: "6f6c93212b2fd3099e730116bee98ad61fa5c8bab6e20d6b54d27e20ae789ec5"
+    sha256 arm64_sonoma:  "9b414bd048b9db9260c46345d5518559b1106d86b6ac318444acf4d6b2ef6605"
+    sha256 arm64_ventura: "a9c26523a518372f3046748e74ebd0da8db2b1408d9bd5e641944a33b3338e67"
+    sha256 sonoma:        "af1f73ee5a96a72a62f8fba2f0dfe5ef02e1fd17ac6d8d8176a0265c73a3ba0c"
+    sha256 ventura:       "8d81b199e964178f69edc81aaf74f36358c8d364d41458d1ccfcba1e5291e61a"
   end
 
   head do

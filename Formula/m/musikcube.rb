@@ -34,13 +34,13 @@ class Musikcube < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_sequoia: "f73dfdfe63a9d034ac0bfff95a25efe4144b6f82955335ef1d8e11db6d78cad0"
-    sha256 cellar: :any,                 arm64_sonoma:  "686b56f4049b753532bab59ed5b36981f705d8689654b1670438774add89a6d0"
-    sha256 cellar: :any,                 arm64_ventura: "4ec1abcb7d9a85fc28ceae28af1a1014d7de50e3aef60411d09922f6021762ee"
-    sha256 cellar: :any,                 sonoma:        "7df9f38a3362c63f77a79bd668021e4fde8351d389768808a23599ea37c12662"
-    sha256 cellar: :any,                 ventura:       "089a80a914b6798ddc2280b64f0a4db3bb9df588538b53b22b2e760080452ceb"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "0b968756c76097c32a5a47f8573bd330d16c2e8c792aa9c07cfc7d26f784339f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "9b9242501e64de113097a77d7b3e5353ec15192e4261e25637f046a3aa392331"
+    sha256 cellar: :any,                 arm64_sequoia: "cf79b80bc3b9d1c62757930527c947ea38edb5ddecded668fa95e31e9becf9b6"
+    sha256 cellar: :any,                 arm64_sonoma:  "923c6ee06ff03152a13079b4131de8d8fbe299fc641ae53d32e8bba8417b43e2"
+    sha256 cellar: :any,                 arm64_ventura: "177dbd5de61bc91dfdcc1439ea08dae06f380d9a2b24ee29aa7d2ac67c061f95"
+    sha256 cellar: :any,                 sonoma:        "ee0f7571d7c24c23878efd2be044d3d94212c5e4c9333fa9d80e5d976f976a60"
+    sha256 cellar: :any,                 ventura:       "8e21d3867dcc25f8a060e0a5633dc09638142b15809d5a0461a7b1717cb285c2"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "f7b8ecb5582f85dce4d2449fa5d02af6da23fcd9f97e601de4ab195414f88b37"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "69bb5bdc4e1eb638e26dfbfd20f9938855ed2a5c8b3029d4be78de758c622da3"
   end
 
   depends_on "asio" => :build

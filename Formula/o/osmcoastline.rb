@@ -18,7 +18,7 @@ class Osmcoastline < Formula
 
   depends_on "cmake" => :build
   depends_on "libosmium" => :build
-
+  depends_on "protozero" => :build
   depends_on "expat"
   depends_on "gdal"
   depends_on "geos"
@@ -39,7 +39,7 @@ class Osmcoastline < Formula
         .each { |llvm_lib| ENV.remove "HOMEBREW_LIBRARY_PATHS", llvm_lib }
     end
 
-    protozero = Formula["libosmium"].opt_libexec/"include"
+    protozero = Formula["protozero"].opt_include
     args = %W[
       -DPROTOZERO_INCLUDE_DIR=#{protozero}
     ]

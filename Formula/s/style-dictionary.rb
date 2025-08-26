@@ -20,6 +20,13 @@ class StyleDictionary < Formula
   def install
     system "npm", "install", *std_npm_args
     bin.install_symlink Dir["#{libexec}/bin/*"]
+
+    # Build an `:all` bottle by removing example files
+    examples = libexec/"lib/node_modules/style-dictionary/examples"
+    rm %w[
+      advanced/create-react-native-app/android/app/proguard-rules.pro
+      complete/android/demo/proguard-rules.pro
+    ].map { |file| examples/file }
   end
 
   test do

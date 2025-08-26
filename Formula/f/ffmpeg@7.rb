@@ -9,7 +9,7 @@ class FfmpegAT7 < Formula
 
   livecheck do
     url "https://ffmpeg.org/download.html"
-    regex(/href=.*?ffmpeg[._-]v?(7\.(?:\.\d+)+)\.t/i)
+    regex(/href=.*?ffmpeg[._-]v?(7(?:\.\d+)+)\.t/i)
   end
 
   bottle do

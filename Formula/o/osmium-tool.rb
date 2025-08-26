@@ -20,6 +20,7 @@ class OsmiumTool < Formula
   depends_on "libosmium" => :build
   depends_on "nlohmann-json" => :build
   depends_on "pandoc" => :build
+  depends_on "protozero" => :build
   depends_on "boost"
   depends_on "lz4"
 
@@ -28,7 +29,7 @@ class OsmiumTool < Formula
   uses_from_macos "zlib"
 
   def install
-    protozero = Formula["libosmium"].opt_libexec/"include"
+    protozero = Formula["protozero"].opt_include
 
     system "cmake", "-S", ".", "-B", "build", "-DPROTOZERO_INCLUDE_DIR=#{protozero}", *std_cmake_args
     system "cmake", "--build", "build"

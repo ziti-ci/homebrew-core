@@ -1,8 +1,8 @@
 class Tabiew < Formula
   desc "TUI to view and query tabular files (CSV,TSV, Parquet, etc.)"
   homepage "https://github.com/shshemi/tabiew"
-  url "https://github.com/shshemi/tabiew/archive/refs/tags/v0.11.0.tar.gz"
-  sha256 "67a123d541a95a10ba18f2e0bc2e4f14c01dae818a3d6dff9ca9faa294fccafb"
+  url "https://github.com/shshemi/tabiew/archive/refs/tags/v0.11.1.tar.gz"
+  sha256 "da3b74987f318471aa9701a80deb69837be82df9c9308f4380abfb26df2abf79"
   license "MIT"
 
   bottle do
@@ -15,7 +15,9 @@ class Tabiew < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "bef526043638ab5caadc869f08c3850655eb6ddfe05088105e29b5f655d769bb"
   end
 
+  depends_on "pkgconf" => :build
   depends_on "rust" => :build
+  depends_on "openssl@3"
 
   conflicts_with "watcher", because: "both install `tw` binaries"
 

@@ -1,8 +1,8 @@
 class Garnet < Formula
   desc "High-performance cache-store"
   homepage "https://microsoft.github.io/garnet/"
-  url "https://github.com/microsoft/garnet/archive/refs/tags/v1.0.82.tar.gz"
-  sha256 "5e70a30f8850283484b4283d803634fbeafd82f3b4ea008e0e7c61a254df643d"
+  url "https://github.com/microsoft/garnet/archive/refs/tags/v1.0.83.tar.gz"
+  sha256 "ed3d11acfae3349df09f5e5c75114b13f78ebfb7453614ad5b9560c9f4c1ec9c"
   license "MIT"
 
   bottle do
@@ -24,6 +24,9 @@ class Garnet < Formula
   end
 
   def install
+    # Ignore dotnet version specification and use homebrew one
+    rm "global.json"
+
     if OS.linux?
       cd "libs/storage/Tsavorite/cc" do
         # Fix to cmake version 4 compatibility

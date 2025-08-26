@@ -7,15 +7,13 @@ class Chromaprint < Formula
   revision 3
 
   bottle do
-    sha256 cellar: :any,                 arm64_sequoia:  "ecb32f5039c199a8f9f81329c5a09390f3c5307c3c012e10849aedadc835cf4a"
-    sha256 cellar: :any,                 arm64_sonoma:   "e7f17d4e0a9d74e817a74187aafba610b424ac935ad9292df6cee1a46dc1f52f"
-    sha256 cellar: :any,                 arm64_ventura:  "0230fecdaa48f58457d80c654a1ca214234ed4cc0d3cdc424aa204c3bd59741a"
-    sha256 cellar: :any,                 arm64_monterey: "89c3ed17fb7d5310008a89e76328d1bc4a91216d4d9a5031ac2bd6ffaaa70afa"
-    sha256 cellar: :any,                 sonoma:         "fa5ea59aa76dde0b837ae13d1bf433a54e45d109e07a61131f8da7cdcc658e33"
-    sha256 cellar: :any,                 ventura:        "55a6af3551894017729941b114a1011b30c14bc524a4cd6323c42fe6fa5c8968"
-    sha256 cellar: :any,                 monterey:       "d6d20851c92be78865b588a89579a87ca1dfa178c6bc845b4a741670c8acb503"
-    sha256 cellar: :any_skip_relocation, arm64_linux:    "6749d2ec540c676697f0052743987d5ee8a0e226bd2823abaf236894b5f6aab6"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "66ae2d2c38e63316a2a33ffbbdf601fd3145c2a13f5ac708180ca859613d8481"
+    sha256 cellar: :any,                 arm64_sequoia: "d074eaa951816006df71b92cf9b94151020a32f787b5ac0e60d7d8303e5cfd4a"
+    sha256 cellar: :any,                 arm64_sonoma:  "85ad4051988d6609b4ad6a52da3bb0237698ec177562c91bdbe2c2567fdc3eb5"
+    sha256 cellar: :any,                 arm64_ventura: "045e4296445d7df2b6ca92c7f38be54e6800b15b8f9f73f5096faa46cc80af65"
+    sha256 cellar: :any,                 sonoma:        "ed813b567bc41715b232e3f6d0c60ceb8c14c578de63d5b0ab237f3a8cb6885e"
+    sha256 cellar: :any,                 ventura:       "e741aaa28a560fd83e13f4d5af424b7b8b037dace190e7c20a752ebe866f19db"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "7f11ec9c1500c4454e72b8e593cada9e2d45c5a7c83df7c45563cbc28440abd7"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "8637d14ed163ba4bfcbabb76f53c33046945d33b3159c1d0e563369688a68902"
   end
 
   depends_on "cmake" => :build

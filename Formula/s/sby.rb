@@ -10,13 +10,8 @@ class Sby < Formula
   head "https://github.com/YosysHQ/sby.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "78bfffdccf6ecdf7810d134880eb5abcaac9ab38af6dbe315df846caa88b6f90"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "78bfffdccf6ecdf7810d134880eb5abcaac9ab38af6dbe315df846caa88b6f90"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "78bfffdccf6ecdf7810d134880eb5abcaac9ab38af6dbe315df846caa88b6f90"
-    sha256 cellar: :any_skip_relocation, sonoma:        "78bfffdccf6ecdf7810d134880eb5abcaac9ab38af6dbe315df846caa88b6f90"
-    sha256 cellar: :any_skip_relocation, ventura:       "78bfffdccf6ecdf7810d134880eb5abcaac9ab38af6dbe315df846caa88b6f90"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "9860ebf9d3c2bb36945a3207c53890ca66407d498ba08069c5c4f07ed7ec33ac"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "9860ebf9d3c2bb36945a3207c53890ca66407d498ba08069c5c4f07ed7ec33ac"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, all: "18d6376f9bec6e09a8e29b126fb132efc13215c6b6b6649adb8f1d47e0b5b20e"
   end
 
   depends_on "yices2" => :test

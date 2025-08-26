@@ -16,7 +16,7 @@ class VideoCompare < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "caff00ea46afbbf7c2c5da0bf3d8e9f92ffd0f2cf0fb04ba5d4396a20f13fcb1"
   end
 
-  depends_on "ffmpeg@7"
+  depends_on "ffmpeg"
   depends_on "sdl2"
   depends_on "sdl2_ttf"
 

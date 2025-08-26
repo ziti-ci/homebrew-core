@@ -7,12 +7,12 @@ class Sttr < Formula
   head "https://github.com/abhimanyu003/sttr.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "5c5f46278b4ba6a72af5f05ca3edbee04324ba531928a0091b96f1e1db6008b1"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "5c5f46278b4ba6a72af5f05ca3edbee04324ba531928a0091b96f1e1db6008b1"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "5c5f46278b4ba6a72af5f05ca3edbee04324ba531928a0091b96f1e1db6008b1"
-    sha256 cellar: :any_skip_relocation, sonoma:        "c72eaa56ef8829347dcf133ae8b0fde5454343459654464e690249b2ba3bc610"
-    sha256 cellar: :any_skip_relocation, ventura:       "c72eaa56ef8829347dcf133ae8b0fde5454343459654464e690249b2ba3bc610"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "4af644def0c89973296cf525a709ab820bc3dc0cf8fb28fff8a9ffbe5b3b70d9"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "d015f628e3b46037094749ffa2c33d891137b394a86acf21bd5ad7d58552572b"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "d015f628e3b46037094749ffa2c33d891137b394a86acf21bd5ad7d58552572b"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "d015f628e3b46037094749ffa2c33d891137b394a86acf21bd5ad7d58552572b"
+    sha256 cellar: :any_skip_relocation, sonoma:        "8c842e04ea0c7792a2fe6df9ae3097eeaa744721e928e0743a6e892aae36addd"
+    sha256 cellar: :any_skip_relocation, ventura:       "8c842e04ea0c7792a2fe6df9ae3097eeaa744721e928e0743a6e892aae36addd"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "51dd4666518f8b010cbbb6f1f2c3d05afe6c1729bbc28cd3b4ba3f2557a855cd"
   end
 
   depends_on "go" => :build

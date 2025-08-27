@@ -1,8 +1,8 @@
 class Tcpreplay < Formula
   desc "Replay saved tcpdump files at arbitrary speeds"
   homepage "https://tcpreplay.appneta.com/"
-  url "https://github.com/appneta/tcpreplay/releases/download/v4.5.1/tcpreplay-4.5.1.tar.gz"
-  sha256 "2de79bfd67ec92ca9ae2ffb50456dd1d53ff40f3fa71b422c65e8062013c9e85"
+  url "https://github.com/appneta/tcpreplay/releases/download/v4.5.2/tcpreplay-4.5.2.tar.gz"
+  sha256 "ccff3bb29469a04ccc20ed0b518e3e43c4a7b5a876339d9435bfd9db7fe5d0f1"
   license all_of: ["BSD-2-Clause", "BSD-3-Clause", "BSD-4-Clause", "GPL-3.0-or-later", "ISC"]
 
   bottle do
@@ -23,6 +23,13 @@ class Tcpreplay < Formula
   depends_on "libdnet"
 
   uses_from_macos "libpcap"
+
+  on_sonoma :or_older do
+    # Fix build failure due to signature mismatch for `TAILQ_FOREACH_REVERSE`
+    # between the bundled `queue.h` and system `queue.h`.
+    # https://github.com/appneta/tcpreplay/issues/981
+    patch :DATA
+  end
 
   def install
     args = %W[
@@ -51,3 +58,18 @@ class Tcpreplay < Formula
     system bin/"tcpreplay", "--version"
   end
 end
+
+__END__
+diff --git i/src/fragroute/mod.c w/src/fragroute/mod.c
+index e7effdc6..ed6feb7d 100644
+--- i/src/fragroute/mod.c
++++ w/src/fragroute/mod.c
+@@ -177,7 +177,7 @@ mod_close(void)
+ {
+     struct rule *rule;
+ 
+-    TAILQ_FOREACH_REVERSE(rule, &rules, next, head)
++    TAILQ_FOREACH_REVERSE(rule, &rules, head, next)
+     {
+         if (rule->mod->close != NULL)
+             rule->data = rule->mod->close(rule->data);

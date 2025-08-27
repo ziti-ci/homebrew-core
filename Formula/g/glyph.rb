@@ -21,7 +21,7 @@ class Glyph < Formula
 
   depends_on "pkgconf" => :build
   depends_on "zig@0.14" => :build # https://github.com/seatedro/glyph/issues/32
-  depends_on "ffmpeg@7"
+  depends_on "ffmpeg"
 
   def install
     # Fix illegal instruction errors when using bottles on older CPUs.

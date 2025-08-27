@@ -26,6 +26,16 @@ class Musikcube < Formula
       # Remove submodule modification as `patch` can't handle this
       patch :DATA
     end
+
+    # Backport support for FFmpeg 8.0
+    patch do
+      url "https://github.com/clangen/musikcube/commit/a0433606af616b6d1146d10c964195dd81d244c8.patch?full_index=1"
+      sha256 "ba1f480663d28e0d25f84c11e9b60a03600f37976794fd58349e038ac85e2229"
+    end
+    patch do
+      url "https://github.com/clangen/musikcube/commit/1a5887f6dcd8f0c3ed7ddef400a7dc1114721459.patch?full_index=1"
+      sha256 "a04ce7b24631d371ea77373026d617661cfe091b94cd356e349d77561b8bda84"
+    end
   end
 
   livecheck do
@@ -47,7 +57,7 @@ class Musikcube < Formula
   depends_on "cmake" => :build
   depends_on "pkgconf" => :build
 
-  depends_on "ffmpeg@7"
+  depends_on "ffmpeg"
   depends_on "game-music-emu"
   depends_on "lame"
   depends_on "libev"

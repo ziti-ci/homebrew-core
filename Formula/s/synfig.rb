@@ -5,7 +5,7 @@ class Synfig < Formula
   url "https://github.com/synfig/synfig/releases/download/v1.5.3/synfig-1.5.3.tar.gz"
   sha256 "913c9cee6e5ad8fd6db3b3607c5b5ae0312f9ee6720c60619e3a97da98501ea8"
   license "GPL-3.0-or-later"
-  revision 2
+  revision 3
   head "https://github.com/synfig/synfig.git", branch: "master"
 
   livecheck do
@@ -31,7 +31,7 @@ class Synfig < Formula
 
   depends_on "cairo"
   depends_on "etl"
-  depends_on "ffmpeg@7"
+  depends_on "ffmpeg"
   depends_on "fftw"
   depends_on "fontconfig"
   depends_on "freetype"
@@ -88,7 +88,6 @@ class Synfig < Formula
       }
     CPP
 
-    ENV.prepend_path "PKG_CONFIG_PATH", Formula["ffmpeg@7"].opt_lib/"pkgconfig"
     pkgconf_flags = shell_output("pkgconf --cflags --libs libavcodec synfig").chomp.split
     system ENV.cxx, "-std=c++11", "test.cpp", "-o", "test", *pkgconf_flags
     system "./test"

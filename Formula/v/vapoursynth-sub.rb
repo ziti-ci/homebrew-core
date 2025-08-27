@@ -11,13 +11,14 @@ class VapoursynthSub < Formula
   no_autobump! because: :requires_manual_review
 
   bottle do
-    sha256 cellar: :any, arm64_sequoia: "dc3a3b0bbe86e9002719ed243c5e06c4e0b7264ec2981873f1fb7a2435f6655c"
-    sha256 cellar: :any, arm64_sonoma:  "8f8fb2470401d82aa19f72b3c8762da0626afc1cbfa6e1415c79505a01e827f2"
-    sha256 cellar: :any, arm64_ventura: "b8f5f2b5924b6cfe30971a4048af1a317709864c0e97dfe056a1fff0c2de733d"
-    sha256 cellar: :any, sonoma:        "757db63885fd16e48acd8e0c2d3b20040ec81a43c8a0cf4df64e7edc36068c17"
-    sha256 cellar: :any, ventura:       "5ebd9057c6fdb0b330f2c5e833b762f5f15f63adda79c8e9b1c064189c65ece2"
-    sha256               arm64_linux:   "13dc72e858111a297be71c83e9b38527532cacbc0ce3cf70c99f7244e9bfbbe8"
-    sha256               x86_64_linux:  "ec2c94f30b72c1169ca23e5d84c2e9340c656250e01f0ace66c7f756a67dcc13"
+    rebuild 1
+    sha256 cellar: :any, arm64_sequoia: "4c5a5ece07feae55fe604f485bf45c3005565a2479ce6cb318f0732bddd529ff"
+    sha256 cellar: :any, arm64_sonoma:  "73845ff92fa1677f86fbbccf84d5e2cd461078f650fe1372edefa4f9e7538b41"
+    sha256 cellar: :any, arm64_ventura: "8d5b3e8589adfc64e774b1b9f717406c56b552aea8f4cdd8ac97750411492e91"
+    sha256 cellar: :any, sonoma:        "c4fa3e6025b1835664760fa97c5971cf31179cddae818de5d18e03655e04bcfc"
+    sha256 cellar: :any, ventura:       "047cfdebb5cf5bee06d1238db056ab7a70896b040bb25c7ffffe0d94f025504a"
+    sha256               arm64_linux:   "2bbe3501f1c999b11558063e691155ead7aaa80b6e68ee9f69e0ec992b3835e4"
+    sha256               x86_64_linux:  "20aa5b0a19e74a404e14a24328ff7de1e07101682c44063d57677d50d7b3007e"
   end
 
   depends_on "meson" => :build

@@ -7,12 +7,12 @@ class K6 < Formula
   head "https://github.com/grafana/k6.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "973def25cf7f920af410a372d2f6abf6b3f5952c4e42ec757e81f71e95ccb226"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "973def25cf7f920af410a372d2f6abf6b3f5952c4e42ec757e81f71e95ccb226"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "973def25cf7f920af410a372d2f6abf6b3f5952c4e42ec757e81f71e95ccb226"
-    sha256 cellar: :any_skip_relocation, sonoma:        "e8dfb40f111be91201f1dd923216d8570919ffd5a430a3dcedc0d4eca257aa71"
-    sha256 cellar: :any_skip_relocation, ventura:       "e8dfb40f111be91201f1dd923216d8570919ffd5a430a3dcedc0d4eca257aa71"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "c644896f7eed313bcc552b3938e1cb238daab16b94737a7d775f8c1d24d3b5e8"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "5305e17e6dec848193b2f8f52831d3ef68bc14b520e5f61186dd377337e87c2c"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "5305e17e6dec848193b2f8f52831d3ef68bc14b520e5f61186dd377337e87c2c"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "5305e17e6dec848193b2f8f52831d3ef68bc14b520e5f61186dd377337e87c2c"
+    sha256 cellar: :any_skip_relocation, sonoma:        "f41123f61400bb4dae6c80f44b01af48377527e3e1e3d129f695e11fb6a34ef3"
+    sha256 cellar: :any_skip_relocation, ventura:       "f41123f61400bb4dae6c80f44b01af48377527e3e1e3d129f695e11fb6a34ef3"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "c3a2f69f16448e0762e9ae1f2d8c324c42bc1071a6a915648b1173f0dbe78176"
   end
 
   depends_on "go" => :build

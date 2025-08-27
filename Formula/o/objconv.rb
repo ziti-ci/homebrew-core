@@ -2,8 +2,8 @@ class Objconv < Formula
   desc "Object file converter"
   homepage "https://www.agner.org/optimize/#objconv"
   url "https://www.agner.org/optimize/objconv.zip"
-  version "2025-08-16"
-  sha256 "e259dd2e01e78311a7734fb2aedcf6a83ddf09360081dfe0968290db37b73039"
+  version "2025-08-26"
+  sha256 "9d3139e90e187f556cbb52db55ffa86041030455ca2941923b78602500216b72"
   license "GPL-3.0-or-later"
 
   livecheck do

@@ -8,13 +8,8 @@ class Virtualenvwrapper < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "e51d9ccf87aee13767c929170db8e7012d2ada9085798e262868fda6388252b5"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "e51d9ccf87aee13767c929170db8e7012d2ada9085798e262868fda6388252b5"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "e51d9ccf87aee13767c929170db8e7012d2ada9085798e262868fda6388252b5"
-    sha256 cellar: :any_skip_relocation, sonoma:        "8e47b3f80979e56edd1b3bec6e2513b941508a182773534c9c9f63a84c5f59ac"
-    sha256 cellar: :any_skip_relocation, ventura:       "8e47b3f80979e56edd1b3bec6e2513b941508a182773534c9c9f63a84c5f59ac"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "a71fc25071321758866cdbb5ef9d2a111d9d6279ca800c4814d5271c3f426001"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "41c4a7cb2fdb39da69b11eb2e7a89f0772b43df9d8f98100b986f1d6e480b998"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, all: "11c07d0473e9177377e77fd5d9e15e0a6c63b3aa1c87e031bbf8f9ed179badfa"
   end
 
   depends_on "python@3.13"

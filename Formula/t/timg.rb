@@ -17,13 +17,14 @@ class Timg < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_sequoia: "483bf681c8b822ef5271e84cd4c599c5425ec8a0b28cd345a320f68af2b05617"
-    sha256 cellar: :any,                 arm64_sonoma:  "aa033521f4b1ea224bc84058d7fdbda534aac3f1a65318f69d198ae0b17990b7"
-    sha256 cellar: :any,                 arm64_ventura: "072d74e851550ad40d8c4c6011ea488adc1f4ffbffbcdb26f3cdd08bba2f9faf"
-    sha256 cellar: :any,                 sonoma:        "cf7446cd124bebfdd8d9a3b260bdbe554837baf0d1306f723fad5db7df46c2b6"
-    sha256 cellar: :any,                 ventura:       "59848ba255ac59552c72931388d576b0c3ae8656f8d8e8076660df4a2b723730"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "d6fb0793782cb954bc2223399b8f17922187f91e0834940ceff2db630e571052"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "c55773fb422d5931ac926c0e6c3ddf52f437a0ed46974951cf304ce781990b24"
+    rebuild 1
+    sha256 cellar: :any,                 arm64_sequoia: "44fe7c963249e79c47026c8183be7c7e930a6cbd9d4f413782691cd119ccc9e2"
+    sha256 cellar: :any,                 arm64_sonoma:  "cc49b201ed92aae26f956ba474679024d89bf3733643d0698c888bdc7df73815"
+    sha256 cellar: :any,                 arm64_ventura: "08971a6483522c51da06ed0b1894f03901276a66aa753940182df01d7dc162f1"
+    sha256 cellar: :any,                 sonoma:        "54e371e256646fddea9cdc752198fb10c50423bbccb66e71d128c367f2a216db"
+    sha256 cellar: :any,                 ventura:       "0cc3d5aaedb27e74ee0ee2792377ba423879e0fcc532ef5ec5f75afb5c1347c2"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "61dc9fe1ee8b93499091ca39cde2b895eb6aed3bf6c1e59a66762f76264e794d"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "76f8acbbdd54951fc1ffaf513c26621a3c01619a59b93b07f679df4119b5e1f0"
   end
 
   depends_on "cmake" => :build

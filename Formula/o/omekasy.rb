@@ -12,6 +12,7 @@ class Omekasy < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura: "60215eebac2b7bf72f95b6b1deb0d73a50070bad4bc9b3d41a83a1eba7bb48f2"
     sha256 cellar: :any_skip_relocation, sonoma:        "ffb3cb8ae428ce6dc0996da234ec6ae3ba34cd4a891e15f59486f18a3652b115"
     sha256 cellar: :any_skip_relocation, ventura:       "6a78a6792a171d0c382e9b0452d7bea97ee9a1c62daf9650d0ec05dd935eb43f"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "49a297886d8b90eb498b4436c7ef4fde2c72c0f98d1d687a23fa44c0bef9890d"
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "9fc9e6b08ffd9ad5ee37b0f26604c9574b616c7923e12bd5abe22dbcb28122f5"
   end
 

@@ -1,17 +1,15 @@
 class Patchutils < Formula
   desc "Small collection of programs that operate on patch files"
   homepage "http://cyberelk.net/tim/software/patchutils/"
-  url "http://cyberelk.net/tim/data/patchutils/stable/patchutils-0.4.2.tar.xz"
-  mirror "https://deb.debian.org/debian/pool/main/p/patchutils/patchutils_0.4.2.orig.tar.xz"
-  sha256 "8875b0965fe33de62b890f6cd793be7fafe41a4e552edbf641f1fed5ebbf45ed"
+  url "http://cyberelk.net/tim/data/patchutils/stable/patchutils-0.4.3.tar.xz"
+  mirror "https://deb.debian.org/debian/pool/main/p/patchutils/patchutils_0.4.3.orig.tar.xz"
+  sha256 "0efc96a9565fd156fc1064fdcc54c82b6229db0d402827c4c48b02f6ef956445"
   license all_of: ["GPL-2.0-or-later", "LGPL-2.1-or-later"]
 
   livecheck do
     url "http://cyberelk.net/tim/data/patchutils/stable/"
     regex(/href=.*?patchutils[._-]v?(\d+(?:\.\d+)+)\.t/i)
   end
-
-  no_autobump! because: :requires_manual_review
 
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_sequoia:  "ebaaeda4882f4e6dd9d0846db19d4def5d2d3a975996c7c41ab3d38dfaaa19d5"
@@ -40,9 +38,9 @@ class Patchutils < Formula
   depends_on "xmlto" => :build
 
   def install
-    ENV["XML_CATALOG_FILES"] = "#{etc}/xml/catalog" if build.head?
+    ENV["XML_CATALOG_FILES"] = "#{etc}/xml/catalog"
     system "./bootstrap" if build.head?
-    system "./configure", "--disable-dependency-tracking", "--prefix=#{prefix}"
+    system "./configure", *std_configure_args
     system "make", "install"
   end
 

@@ -11,6 +11,7 @@ class Caesiumclt < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura: "60e8022db4f9c2e6d4c00a09740679e996c2e2d5ab5cfc919a0e814447df91d8"
     sha256 cellar: :any_skip_relocation, sonoma:        "3a236826b7adb2e06ba4715dbc52640a9a919a200c7a2b159da7ed5a9fb4b171"
     sha256 cellar: :any_skip_relocation, ventura:       "748cf3dd29e505e0fceeac9f812f5b196e39455fa7ed1d7224a7be5f7b17098f"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "e78fb0c25875f369e81779bd980831447766b9650e9f1cd158c25437373f69c3"
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "13baa9b40a5634c68f39f830184ce2f01d145639e21db0bf1a630cd3c9c9dba1"
   end
 

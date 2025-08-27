@@ -1,11 +1,20 @@
 class Timg < Formula
   desc "Terminal image and video viewer"
   homepage "https://timg.sh/"
-  url "https://github.com/hzeller/timg/archive/refs/tags/v1.6.2.tar.gz"
-  sha256 "a5fb4443f55552d15a8b22b9ca4cb5874eb1a988d3b98fe31d61d19b2c7b9e56"
   license "GPL-2.0-only"
   revision 1
   head "https://github.com/hzeller/timg.git", branch: "main"
+
+  stable do
+    url "https://github.com/hzeller/timg/archive/refs/tags/v1.6.2.tar.gz"
+    sha256 "a5fb4443f55552d15a8b22b9ca4cb5874eb1a988d3b98fe31d61d19b2c7b9e56"
+
+    # Backport support for FFmpeg 8.0
+    patch do
+      url "https://github.com/hzeller/timg/commit/158e465da4a5ab1aa5af855dae3f1aa78b731a23.patch?full_index=1"
+      sha256 "6204606c02178d4afff6c22cbe7d38784602c49c66e73f1980f5cdfa375723a7"
+    end
+  end
 
   bottle do
     sha256 cellar: :any,                 arm64_sequoia: "483bf681c8b822ef5271e84cd4c599c5425ec8a0b28cd345a320f68af2b05617"
@@ -20,7 +29,7 @@ class Timg < Formula
   depends_on "cmake" => :build
   depends_on "pkgconf" => :build
   depends_on "cairo"
-  depends_on "ffmpeg@7"
+  depends_on "ffmpeg"
   depends_on "glib"
   depends_on "graphicsmagick"
   depends_on "jpeg-turbo"

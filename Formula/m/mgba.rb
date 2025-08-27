@@ -24,10 +24,9 @@ class Mgba < Formula
   depends_on "cmake" => :build
   depends_on "pkgconf" => :build
 
-  depends_on "ffmpeg@7"
+  depends_on "ffmpeg"
   depends_on "libepoxy"
   depends_on "libpng"
-  depends_on "libsamplerate"
   depends_on "libzip"
   depends_on "lua"
   depends_on "qt@5"

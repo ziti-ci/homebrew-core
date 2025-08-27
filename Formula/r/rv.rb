@@ -9,6 +9,7 @@ class Rv < Formula
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_sequoia: "94c6bbe1b437bbb36302db2e26643d242b09979ad6a3ba658166cdda98af6322"
     sha256 cellar: :any_skip_relocation, arm64_sonoma:  "53ed5d2045999d26e314aa0f3b036a9a84bd598531b012850d053d0a22ed870b"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "585b81b20768b490182c80ed92e5446b882ae19b136e6a48696b9f55d72ab2de"
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "e574314b6462e38b839deb91c41879522d14a0ddd755bf81fd0a125382277ac2"
   end
 

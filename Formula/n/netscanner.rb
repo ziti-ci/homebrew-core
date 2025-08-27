@@ -12,6 +12,7 @@ class Netscanner < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura: "457b9ebece7265aef139b9f72f3cc9304cb9da345a0d8a7598732d31c8b24900"
     sha256 cellar: :any_skip_relocation, sonoma:        "0d8b5c71568111b671f317a4c8e1f676c2d6bce3736fe620e7e0f35b5c39ca19"
     sha256 cellar: :any_skip_relocation, ventura:       "d75f758710f6a73e9ec214a11e20c1bd3aa091c1042dd82ba16a098c57c9dc9a"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "e9b62e202cf8b8f8c5fd3c700aece19d41fe4cbfe4a63a3ca499c49d98196be0"
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "1b9e389005e065ed119a75aeefc77f513408bcd380ba199a8b55e6e7d80a6eca"
   end
 

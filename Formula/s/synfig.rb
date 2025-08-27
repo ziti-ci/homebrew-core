@@ -16,11 +16,11 @@ class Synfig < Formula
   no_autobump! because: :requires_manual_review
 
   bottle do
-    sha256                               arm64_sonoma:  "874944b05891c59695ff2db7d9ccece4297c3eadc5d3700499699a9be14977e1"
-    sha256                               arm64_ventura: "950daa1ac3dfd7c6ad66071fe60807beb2d508cc94872ad2c9a5494d278dfef8"
-    sha256                               sonoma:        "51c1bfcd664a5163081b7cd1b198a30a3f93661bfb0180c7e9f6c0165090cfbd"
-    sha256                               ventura:       "1ca46bdf9ced9af39f3c679252ae5bedf802fb6814ef3f6d7507a20be5c05336"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "070671c26baba156cf1fd71ad07873761a7d5e4b230af6dc6bdeb9aeb19ea7c2"
+    sha256                               arm64_sonoma:  "3c3a98577381b53308561bed6a7b384fe937e07a90370920e99ec8961baa7ee4"
+    sha256                               arm64_ventura: "417d5f08a21f086cac5f783e38c25c0892dd926e6c68b56be06480a58cc3e918"
+    sha256                               sonoma:        "2e3ba3584439484f6b26d6f83c4479862eabc64a72b8a1fc4ac69bd819055af4"
+    sha256                               ventura:       "5aecf1d776296f38eaeb436669755a56bc2e2e87ad7cb16bb3bf688393a7e171"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "bf67766653f8f6273dbf9b5285dbbbd16aeb1d11032505d11ef142b178cc42fb"
   end
 
   depends_on "autoconf" => :build

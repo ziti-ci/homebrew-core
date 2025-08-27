@@ -8,14 +8,13 @@ class Pyspelling < Formula
   license "MIT"
 
   bottle do
-    rebuild 2
-    sha256 cellar: :any,                 arm64_sequoia: "f364a5e63736d91e836130acd9578fd23178557d496b47a8085bc5ea68c9e556"
-    sha256 cellar: :any,                 arm64_sonoma:  "a0b442e7373165dbfb8f25214b59a65f777b184297b119fab94e3e0ca6c86694"
-    sha256 cellar: :any,                 arm64_ventura: "48009640d75f18f1846423c97fbd40f3380efea76eb8a62769e588ea222fe978"
-    sha256 cellar: :any,                 sonoma:        "8ba1a7461c8dcb5b99bcc94b1ab9a3475ec188db46b6a96963c277175728413f"
-    sha256 cellar: :any,                 ventura:       "de5ae39942a758e650b22e596f9e0a81107f7dc964cbfe0281428fca71537cc5"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "26c14629d1fd22e1d6b83af9b72891b1160f08d3fdcc28c9c4aa529e4910168a"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "fd3f06b840816904dffb43f08a37efdf852255d22b6f4a393abe28319b5ea116"
+    sha256 cellar: :any,                 arm64_sequoia: "56b569bbf6a38dc26c47df5325212468f75ddb5f5809672948294db126273c2a"
+    sha256 cellar: :any,                 arm64_sonoma:  "7524282f70b1fedadcb636fad65d98b8c5813a353c754e505eb0c9764dea7d4e"
+    sha256 cellar: :any,                 arm64_ventura: "776eda5513b84fbe395300fb59541abc0643ef5e631042f9deacfd76d0d85c11"
+    sha256 cellar: :any,                 sonoma:        "d6ca132d25a2d953ee71f58f5d92b70d994d49590187559a0c580d581dbf502c"
+    sha256 cellar: :any,                 ventura:       "df3a9d8e993ddfe610b55150104856c4ddb8b71564669fc96b98c182c9fffb65"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "b514fcb5374cbaf19ca7870558d2b566368d44aba02d676ae66076a4959bfdd4"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "0e453cb9ab623206b1ef428c7f939c1b1ec8af6a50e30ed0717980754a3b0bcf"
   end
 
   depends_on "aspell" => :test

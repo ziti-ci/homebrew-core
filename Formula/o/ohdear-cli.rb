@@ -8,7 +8,7 @@ class OhdearCli < Formula
   no_autobump! because: :requires_manual_review
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "a50e6af3e8761b8e0812f8fc4c559767dad2e83be01af862eabebb366aa26f82"
+    sha256 cellar: :any_skip_relocation, all: "f610a110de9f9bf223b8107dd9bd718c53d20d97fcf1962ccd6cea4a972c1327"
   end
 
   depends_on "php"

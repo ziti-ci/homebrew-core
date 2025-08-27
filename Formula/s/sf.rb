@@ -13,7 +13,7 @@ class Sf < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "d795cd98b1c7407cc276bb391f5a5827282851ee6f3ba9b67d424964f8a5b7a2"
+    sha256 cellar: :any_skip_relocation, all: "e02528685528f542b6dc27b2507a7dec3ddc4c4d6696326ca7c1800bab57287e"
   end
 
   depends_on "node"

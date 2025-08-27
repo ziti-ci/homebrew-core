@@ -8,13 +8,8 @@ class Nox < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "3e2714259195a768dc9390d04a0d2f9f0bcc1a1bd6cad293b3865a0b305eac9b"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "3e2714259195a768dc9390d04a0d2f9f0bcc1a1bd6cad293b3865a0b305eac9b"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "3e2714259195a768dc9390d04a0d2f9f0bcc1a1bd6cad293b3865a0b305eac9b"
-    sha256 cellar: :any_skip_relocation, sonoma:        "f9718d5d586aad781bf74f6808694ffe294b2e7ef40e07bd185ced9c9831531c"
-    sha256 cellar: :any_skip_relocation, ventura:       "f9718d5d586aad781bf74f6808694ffe294b2e7ef40e07bd185ced9c9831531c"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "8fe7df1af903820f571e1d6b1c08449a743f06e9908e1bcd6005eed4225a0140"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "8fe7df1af903820f571e1d6b1c08449a743f06e9908e1bcd6005eed4225a0140"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, all: "dfe6707c09a9fed17147b7876d9682feb20eea8f2b1ef95169b36bca661492a3"
   end
 
   depends_on "python@3.13"

@@ -10,8 +10,7 @@ class Px < Formula
   no_autobump! because: :bumped_by_upstream
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, all: "183335621aa8e62d880d13704dd7874429d902c1011456da751143de205cbca3"
+    sha256 cellar: :any_skip_relocation, all: "dbc12da3ec4c8724b3126a1d814f35b3278888e3d93e423f82fca6f1e15d635f"
   end
 
   depends_on "python@3.13"

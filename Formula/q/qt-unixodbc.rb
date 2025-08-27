@@ -10,11 +10,11 @@ class QtUnixodbc < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_sonoma:  "008516acadded77ae23ec47e414b8e24272b7cc801b55b92a6ccafd6c79d16ae"
-    sha256 cellar: :any,                 arm64_ventura: "1d0bebc732a467039ccdaf09460fea2dbd3e9b33ef86f6a1eaafd7a446e6bab0"
-    sha256 cellar: :any,                 sonoma:        "49504baad6787bbf4cc4f0f3a5ca4434031a391188477bcb77e9f7b1644e79a7"
-    sha256 cellar: :any,                 ventura:       "43b22dcf309ae6caefd5d55d32e13ba7c76390d7957019abf6afa1c4a639509e"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "6faa277119ee47e8ac430a414c56a7d44d7e70e63497fcdce5eb471596688ecd"
+    sha256 cellar: :any,                 arm64_sonoma:  "99f9724eb9dc946625134eaef75c61a23785d7622619593eff9ab7eb5c5cc017"
+    sha256 cellar: :any,                 arm64_ventura: "874af04c2f8cde2db0f3e5a8499320e0d5cb4a6e82592e5d5a045db6f6fa27d5"
+    sha256 cellar: :any,                 sonoma:        "8163ba5ee996ff6f480ba940885d1b698b0667e8278911fefb2ffb988fc73d87"
+    sha256 cellar: :any,                 ventura:       "4765796212fecdc004051670411185862832870745995236b6dd63fb73fed98c"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "9339cba01e6d0d19f7443023abb30735787e126c28de7e9d95a03e6dbf828f23"
   end
 
   depends_on "cmake" => [:build, :test]

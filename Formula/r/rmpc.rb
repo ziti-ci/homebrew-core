@@ -11,6 +11,7 @@ class Rmpc < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura: "44b890cbdb18fa990bd3ad3ec2eb2250f7600b9dcab0c1870c96023e77a25acf"
     sha256 cellar: :any_skip_relocation, sonoma:        "b96a2bbf4cc69d44711769f593f98339e71115b406f31482724b24d8fb2c3c20"
     sha256 cellar: :any_skip_relocation, ventura:       "3545dd59252302959d7f43ca65fdc00b059691172680f27914d99ede9c77d821"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "f020ec622900283a52792838aa3429d6c3cc83c857b0a99e9da04e041873ac32"
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "4b0f1327ee81b5074ecb363855443f745260cccb09c1fb2e6b1dfa18d4c95f48"
   end
 

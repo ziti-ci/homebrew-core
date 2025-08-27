@@ -6,6 +6,15 @@ class TwoMs < Formula
   license "Apache-2.0"
   head "https://github.com/Checkmarx/2ms.git", branch: "master"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "8badbb0373b9ae4d3b1a158bde6dd0fbe11f9bd19e37ac2ce24eb2afcb96f324"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "d3f82712e0ff75d0377706bdcbfb3b18bf068722e2349fb63554a0b38377369c"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "41673fc6b52ed2cc84cd0f810aa74d83178b7f220ac545f546d6a73983cdc0d6"
+    sha256 cellar: :any_skip_relocation, sonoma:        "abd0547e62694755bb3939bf6b1c59edec97ce49c1b15e401c66d4e9c2bef0d7"
+    sha256 cellar: :any_skip_relocation, ventura:       "5838c73e628351c3b6eedf65d3d33532b0ce6d7601ed1d1ddee5b60cb7d007d8"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "ff6f710f5a932c25c6c8d401432a25381770c697e17b4f841ef4960b876f07f8"
+  end
+
   depends_on "go" => :build
 
   def install

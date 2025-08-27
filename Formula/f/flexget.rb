@@ -3,8 +3,8 @@ class Flexget < Formula
 
   desc "Multipurpose automation tool for content"
   homepage "https://www.flexget.com"
-  url "https://files.pythonhosted.org/packages/ab/de/f1e2fa6184e31ea05561449e0ffa7a93e22e662b7023ab2cc2965eb69dcb/flexget-3.17.17.tar.gz"
-  sha256 "5f5bee33448c9a51e5df3f236a30311282f6f44b76fe14405728f4483cb10e37"
+  url "https://files.pythonhosted.org/packages/1c/92/b24a7d6766677f63cf826a3da23dfce4087d6268fb1473a795d9bded4aee/flexget-3.18.0.tar.gz"
+  sha256 "736f530f4bda325440c9416f92df3feff19d96711b93b56d14ba90761440a4e7"
   license "MIT"
 
   bottle do
@@ -289,8 +289,8 @@ class Flexget < Formula
   end
 
   resource "rpds-py" do
-    url "https://files.pythonhosted.org/packages/1e/d9/991a0dee12d9fc53ed027e26a26a64b151d77252ac477e22666b9688bc16/rpds_py-0.27.0.tar.gz"
-    sha256 "8b23cf252f180cda89220b378d917180f29d313cd6a07b2431c0d3b776aae86f"
+    url "https://files.pythonhosted.org/packages/e9/dd/2c0cbe774744272b0ae725f44032c77bdcab6e8bcf544bffa3b6e70c8dba/rpds_py-0.27.1.tar.gz"
+    sha256 "26a1c73171d10b7acccbded82bf6a586ab8203601e565badc74bbbf8bc5a10f8"
   end
 
   resource "rpyc" do
@@ -314,8 +314,8 @@ class Flexget < Formula
   end
 
   resource "soupsieve" do
-    url "https://files.pythonhosted.org/packages/3f/f4/4a80cd6ef364b2e8b65b15816a843c0980f7a5a2b4dc701fc574952aa19f/soupsieve-2.7.tar.gz"
-    sha256 "ad282f9b6926286d2ead4750552c8a6142bc4c783fd66b0293547c8fe6ae126a"
+    url "https://files.pythonhosted.org/packages/6d/e6/21ccce3262dd4889aa3332e5a119a3491a95e8f60939870a3a035aabac0d/soupsieve-2.8.tar.gz"
+    sha256 "e2dd4a40a628cb5f28f6d4b0db8800b8f581b65bb380b97de22ba5ca8d72572f"
   end
 
   resource "sqlalchemy" do

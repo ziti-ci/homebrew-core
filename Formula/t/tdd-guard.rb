@@ -5,6 +5,10 @@ class TddGuard < Formula
   sha256 "92f4c8d3b91b21cbb2115219b2eb9d7e0f64c9277b0fa880bb898b33cdcea86f"
   license "MIT"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "71b36234c63db6cf404348012770eb91d7261cf3bba0a922a480b98c885f7768"
+  end
+
   depends_on "node"
 
   def install

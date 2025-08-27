@@ -1,8 +1,8 @@
 class Awsdac < Formula
   desc "CLI tool for drawing AWS architecture"
   homepage "https://github.com/awslabs/diagram-as-code"
-  url "https://github.com/awslabs/diagram-as-code/archive/refs/tags/v0.21.12.tar.gz"
-  sha256 "a76dd16b75c2f3f4c2686b076aa3ac7133cc9f16669e38cb47d3f2978f4e6c08"
+  url "https://github.com/awslabs/diagram-as-code/archive/refs/tags/v0.22.tar.gz"
+  sha256 "17c945bdf7d240f6419eff7cf02ed481c722904e2eaae927900908e50dc4d4bc"
   license "Apache-2.0"
   head "https://github.com/awslabs/diagram-as-code.git", branch: "main"
 
@@ -19,16 +19,15 @@ class Awsdac < Formula
 
   def install
     system "go", "build", *std_go_args(ldflags: "-s -w -X main.version=#{version}"), "./cmd/awsdac"
+
+    pkgshare.install "examples/alb-ec2.yaml"
   end
 
   test do
-    (testpath/"test.yaml").write <<~YAML
-      Diagram:
-        Resources:
-          Canvas:
-            Type: AWS::Diagram::Canvas
-    YAML
-    assert_equal "[Completed] AWS infrastructure diagram generated: output.png",
-      shell_output("#{bin}/awsdac test.yaml").strip
+    assert_match version.to_s, shell_output("#{bin}/awsdac --version")
+
+    cp pkgshare/"alb-ec2.yaml", testpath/"test.yaml"
+    expected = "[Completed] AWS infrastructure diagram generated: output.png"
+    assert_equal expected, shell_output("#{bin}/awsdac test.yaml").strip
   end
 end

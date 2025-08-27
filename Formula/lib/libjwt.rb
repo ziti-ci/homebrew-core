@@ -1,8 +1,8 @@
 class Libjwt < Formula
   desc "JSON Web Token C library"
   homepage "https://libjwt.io/"
-  url "https://github.com/benmcollins/libjwt/releases/download/v3.2.1/libjwt-3.2.1.tar.xz"
-  sha256 "b7800a6b085855690b401b41dbdf0bcb49207d5fe43c13abbdc8106c16a9250c"
+  url "https://github.com/benmcollins/libjwt/releases/download/v3.2.2/libjwt-3.2.2.tar.xz"
+  sha256 "a1813e1e0eebe4aad04f04137a4e80f2b17f79fd6c6211e36cf3a5854390cdfc"
   license "MPL-2.0"
   head "https://github.com/benmcollins/libjwt.git", branch: "master"
 

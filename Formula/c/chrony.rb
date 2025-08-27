@@ -1,8 +1,8 @@
 class Chrony < Formula
   desc "Versatile implementation of the Network Time Protocol (NTP)"
   homepage "https://chrony-project.org"
-  url "https://chrony-project.org/releases/chrony-4.7.tar.gz"
-  sha256 "c0de41a8c051e5d32b101b5f7014b98ca978b18e592f30ce6840b6d4602d947b"
+  url "https://chrony-project.org/releases/chrony-4.8.tar.gz"
+  sha256 "33ea8eb2a4daeaa506e8fcafd5d6d89027ed6f2f0609645c6f149b560d301706"
   license "GPL-2.0-only"
 
   livecheck do

@@ -3,9 +3,8 @@ class Px < Formula
 
   desc "Ps and top for human beings (px / ptop)"
   homepage "https://github.com/walles/px"
-  url "https://github.com/walles/px.git",
-      tag:      "3.6.13",
-      revision: "e6bd4779970fc448cabb5b714cb737005d6c4318"
+  url "https://files.pythonhosted.org/packages/6c/84/0d8c82c54f5014340df9e44d89e0c09a9261a61bfce656f0a7f09eb3c275/pxpx-3.7.0.tar.gz"
+  sha256 "18961d377c41f65fa944b5c08db6f60a5919c15dbcd83df9f8e95ff594241cb0"
   license "MIT"
 
   no_autobump! because: :bumped_by_upstream
@@ -24,8 +23,6 @@ class Px < Formula
 
   def install
     virtualenv_install_with_resources
-
-    man1.install Dir["doc/*.1"]
   end
 
   test do

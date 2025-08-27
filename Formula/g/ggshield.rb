@@ -3,8 +3,8 @@ class Ggshield < Formula
 
   desc "Scanner for secrets and sensitive data in code"
   homepage "https://www.gitguardian.com"
-  url "https://files.pythonhosted.org/packages/9e/0c/1f827a1559a0e49663b1969c906c8a776ad02d57bb7c1b500477e2331cdd/ggshield-1.42.0.tar.gz"
-  sha256 "c897f5ebf3595f0178ea8ee8aab668869782b8aa1e08664ce430c0ca51f93618"
+  url "https://files.pythonhosted.org/packages/5c/4f/e15920114bdddd1522cbf28a5892427d214440f525840ccc5f321f503de6/ggshield-1.43.0.tar.gz"
+  sha256 "2bca72d8c779d1997ffaf39f25b29298e414348168d8d73b9d593e98dd9b6dac"
   license "MIT"
   head "https://github.com/GitGuardian/ggshield.git", branch: "main"
 
@@ -74,8 +74,8 @@ class Ggshield < Formula
   end
 
   resource "pygitguardian" do
-    url "https://files.pythonhosted.org/packages/3d/59/212db6c6b92919c34851db4b13ad3a0b2e4bd10c822d0c2073b62a45af0c/pygitguardian-1.24.0.tar.gz"
-    sha256 "c2ced95adb0a936f8ce34cba6a0b11d3cc9ac67fc33144986efb4b8b433e391a"
+    url "https://files.pythonhosted.org/packages/d6/c3/327e12e34978605a7cc5d4b250c70b386e0640b2578eb25bbd299ec79587/pygitguardian-1.25.0.tar.gz"
+    sha256 "1a76792eb6182f1bf1066da41e67c603454d5826be5e54ae9cca7af135b29b05"
   end
 
   resource "pygments" do
@@ -99,8 +99,8 @@ class Ggshield < Formula
   end
 
   resource "requests" do
-    url "https://files.pythonhosted.org/packages/e1/0a/929373653770d8a0d7ea76c37de6e41f11eb07559b103b1c02cafb3f7cf8/requests-2.32.4.tar.gz"
-    sha256 "27d0316682c8a29834d3264820024b62a36942083d52caf2f14c0591336d3422"
+    url "https://files.pythonhosted.org/packages/c9/74/b3ff8e6c8446842c3f5c837e9c3dfcfe2018ea6ecef224c710c85ef728f4/requests-2.32.5.tar.gz"
+    sha256 "dbba0bac56e100853db0ea71b82b4dfd5fe2bf6d3754a8893c3af500cec7d7cf"
   end
 
   resource "rich" do
@@ -114,8 +114,8 @@ class Ggshield < Formula
   end
 
   resource "truststore" do
-    url "https://files.pythonhosted.org/packages/0f/a7/b7a43228762966a13598a404f3dfb4803ea29a906f449d8b0e73ed0bcd30/truststore-0.10.1.tar.gz"
-    sha256 "eda021616b59021812e800fa0a071e51b266721bef3ce092db8a699e21c63539"
+    url "https://files.pythonhosted.org/packages/53/a3/1585216310e344e8102c22482f6060c7a6ea0322b63e026372e6dcefcfd6/truststore-0.10.4.tar.gz"
+    sha256 "9d91bd436463ad5e4ee4aba766628dd6cd7010cf3e2461756b3303710eebc301"
   end
 
   resource "typing-extensions" do

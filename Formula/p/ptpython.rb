@@ -9,8 +9,7 @@ class Ptpython < Formula
   head "https://github.com/prompt-toolkit/ptpython.git", branch: "main"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, all: "59ae67e245727f79b8648139528fcaeff15827ad57ad04e5817252f412c07a77"
+    sha256 cellar: :any_skip_relocation, all: "6199a5816dd34e7d1801ef4339a113bdcfecd9be19571966cddc72568b45a34a"
   end
 
   depends_on "python@3.13"

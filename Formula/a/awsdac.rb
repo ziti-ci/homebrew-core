@@ -7,11 +7,11 @@ class Awsdac < Formula
   head "https://github.com/awslabs/diagram-as-code.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "68b74169cb9060d22e2971e6b993f7758fe519741106ca946e4f3d9ecfebd665"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "68b74169cb9060d22e2971e6b993f7758fe519741106ca946e4f3d9ecfebd665"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "68b74169cb9060d22e2971e6b993f7758fe519741106ca946e4f3d9ecfebd665"
-    sha256 cellar: :any_skip_relocation, sonoma:        "96d86ac180085943a1999254fd90b4b5a4dc94fef2b385cad713258e2d1bbed5"
-    sha256 cellar: :any_skip_relocation, ventura:       "96d86ac180085943a1999254fd90b4b5a4dc94fef2b385cad713258e2d1bbed5"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "5b6981460ac521c51ca81dfe7a3f7e1bd96cd5b1b1245b89a6f4345c87c94f4a"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "5b6981460ac521c51ca81dfe7a3f7e1bd96cd5b1b1245b89a6f4345c87c94f4a"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "5b6981460ac521c51ca81dfe7a3f7e1bd96cd5b1b1245b89a6f4345c87c94f4a"
+    sha256 cellar: :any_skip_relocation, sonoma:        "b9c7230112af30cc31f606956cbd660757164e1257a44f46d5b12839226c62b9"
+    sha256 cellar: :any_skip_relocation, ventura:       "b9c7230112af30cc31f606956cbd660757164e1257a44f46d5b12839226c62b9"
   end
 
   depends_on "go" => :build

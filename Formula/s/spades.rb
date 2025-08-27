@@ -6,7 +6,7 @@ class Spades < Formula
   url "https://github.com/ablab/spades/releases/download/v4.2.0/SPAdes-4.2.0.tar.gz"
   sha256 "043322129f8536411f1172b7d1c9adfcb6d49d152c10066ccc03e86b6f615a6b"
   license "GPL-2.0-only"
-  head "https://github.com/ablab/spades.git", branch: "next"
+  head "https://github.com/ablab/spades.git", branch: "main"
 
   livecheck do
     url :stable
@@ -26,17 +26,10 @@ class Spades < Formula
   depends_on "cmake" => :build
   depends_on "python@3.13"
 
-  uses_from_macos "bzip2"
-  uses_from_macos "ncurses"
-  uses_from_macos "zlib"
+  uses_from_macos "bzip2" => :build
 
   on_macos do
     depends_on "libomp"
-  end
-
-  on_linux do
-    depends_on "jemalloc"
-    depends_on "readline"
   end
 
   def install

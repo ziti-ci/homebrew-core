@@ -5,6 +5,10 @@ class Claudekit < Formula
   sha256 "550f0211d84eaadd6478b8f9432bcffc197dbeec74d89c4635dac145d9cf4d13"
   license "MIT"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "1de650deda69424a92aec1a00d4627930e1692b575c7970a244e5754acf998e9"
+  end
+
   depends_on "node"
 
   def install

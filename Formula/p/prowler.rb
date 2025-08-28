@@ -3,10 +3,9 @@ class Prowler < Formula
 
   desc "Tool for cloud security assessments, audits, incident response, and more"
   homepage "https://prowler.com/"
-  url "https://files.pythonhosted.org/packages/5a/ca/73f306b71c1858b6ca85d7f505b1b009798131f3e54f3a7e909da88fe48e/prowler-5.10.2.tar.gz"
-  sha256 "8325661aed288453d4fdd933421c12837ce4b5c8758105a2409b22868bf62136"
+  url "https://files.pythonhosted.org/packages/09/75/495231b1250dfbd1de0fff793571d3180fa5c1b960e0532bc7af7de6eda4/prowler-5.11.0.tar.gz"
+  sha256 "ce78a0ed7ea52a49dc138bc23b2164df6532b8d40a3818b31f20cb8c5351957a"
   license "Apache-2.0"
-  revision 1
   head "https://github.com/prowler-cloud/prowler.git", branch: "master"
 
   bottle do
@@ -100,6 +99,11 @@ class Prowler < Formula
     sha256 "511206ae90aec1726a4d6ff5a92d754bd0c0f1e8751891368d30fb70b62955f1"
   end
 
+  resource "azure-mgmt-apimanagement" do
+    url "https://files.pythonhosted.org/packages/25/e4/3e536f0374bccb203886ef7aeb1148e063de6be31187034179ddcbf1adff/azure_mgmt_apimanagement-5.0.0.tar.gz"
+    sha256 "0ab7fe17e70fe3154cd840ff47d19d7a4610217003eaa7c21acf3511a6e57999"
+  end
+
   resource "azure-mgmt-applicationinsights" do
     url "https://files.pythonhosted.org/packages/e7/8b/f3c8886ecd90d440458c4cc2b1db4ff47215f189cc3c0ba3cf11b7d4d64e/azure_mgmt_applicationinsights-4.1.0.tar.gz"
     sha256 "15531390f12ce3d767cd3f1949af36aa39077c145c952fec4d80303c86ec7b6c"
@@ -143,6 +147,11 @@ class Prowler < Formula
   resource "azure-mgmt-keyvault" do
     url "https://files.pythonhosted.org/packages/6f/c9/c9cd047729de3996656da854e361636dafa4f5e9b35af449abe23ec75582/azure-mgmt-keyvault-10.3.1.tar.gz"
     sha256 "34b92956aefbdd571cae5a03f7078e037d8087b2c00cfa6748835dc73abb5a30"
+  end
+
+  resource "azure-mgmt-loganalytics" do
+    url "https://files.pythonhosted.org/packages/8d/66/99802a1711cadb1c41e322dd42aaa3acfb58c70aba13e0f0cdbead21e6c4/azure-mgmt-loganalytics-12.0.0.zip"
+    sha256 "da128a7e0291be7fa2063848df92a9180cf5c16d42adc09d2bc2efd711536bfb"
   end
 
   resource "azure-mgmt-monitor" do
@@ -203,6 +212,11 @@ class Prowler < Formula
   resource "azure-mgmt-web" do
     url "https://files.pythonhosted.org/packages/3a/55/5a24bc2d98830f0dc224e2baaf28b0091b7b646b390dc35c8234ae2f4830/azure_mgmt_web-8.0.0.tar.gz"
     sha256 "c8d9c042c09db7aacb20270a9effed4d4e651e365af32d80897b84dc7bf35098"
+  end
+
+  resource "azure-monitor-query" do
+    url "https://files.pythonhosted.org/packages/04/c0/e5c760f38224575f1eba35c319842f2be30fab599854ba9bd0b19d39c261/azure_monitor_query-2.0.0.tar.gz"
+    sha256 "7b05f2fcac4fb67fc9f77a7d4c5d98a0f3099fb73b57c69ec1b080773994671b"
   end
 
   resource "azure-storage-blob" do
@@ -376,8 +390,8 @@ class Prowler < Formula
   end
 
   resource "iamdata" do
-    url "https://files.pythonhosted.org/packages/9b/d2/b0058757930bbe93554524c48b20ad5d063370eb87f61a080b1e36689418/iamdata-0.1.202508261.tar.gz"
-    sha256 "e6afe5f3851631f363232786e2f5c7f11c1d5d87c0984828742862344abfe1d6"
+    url "https://files.pythonhosted.org/packages/95/4b/5ab11ef8cb2a0b46fb6264e3deabcca98213fc6317c171e74c825560ff11/iamdata-0.1.202508281.tar.gz"
+    sha256 "12fc705811c05f825f4a9fde577e73b47b6f5000d0aa5a5c5c31fa41a8c1c2dc"
   end
 
   resource "idna" do
@@ -646,8 +660,8 @@ class Prowler < Formula
   end
 
   resource "rpds-py" do
-    url "https://files.pythonhosted.org/packages/1e/d9/991a0dee12d9fc53ed027e26a26a64b151d77252ac477e22666b9688bc16/rpds_py-0.27.0.tar.gz"
-    sha256 "8b23cf252f180cda89220b378d917180f29d313cd6a07b2431c0d3b776aae86f"
+    url "https://files.pythonhosted.org/packages/e9/dd/2c0cbe774744272b0ae725f44032c77bdcab6e8bcf544bffa3b6e70c8dba/rpds_py-0.27.1.tar.gz"
+    sha256 "26a1c73171d10b7acccbded82bf6a586ab8203601e565badc74bbbf8bc5a10f8"
   end
 
   resource "rsa" do

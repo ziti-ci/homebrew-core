@@ -1,8 +1,8 @@
 class SagittariusScheme < Formula
   desc "Free Scheme implementation supporting R6RS and R7RS"
-  homepage "https://bitbucket.org/ktakashi/sagittarius-scheme/wiki/Home"
-  url "https://bitbucket.org/ktakashi/sagittarius-scheme/downloads/sagittarius-0.9.12.tar.gz"
-  sha256 "c3a690902effbca3bc7b1bc3a6c4ac2f22d7ae6e0548a87c5d818982c784208d"
+  homepage "https://github.com/ktakashi/sagittarius-scheme"
+  url "https://github.com/ktakashi/sagittarius-scheme/releases/download/v0.9.13/sagittarius-0.9.13.tar.gz"
+  sha256 "8cf812190c43738a9d6021e677c928a80c05cad1a03047c1868c865ccfd65773"
   license "BSD-2-Clause"
 
   bottle do

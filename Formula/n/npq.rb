@@ -1,12 +1,12 @@
 class Npq < Formula
   desc "Audit npm packages before you install them"
   homepage "https://github.com/lirantal/npq"
-  url "https://registry.npmjs.org/npq/-/npq-3.11.5.tgz"
-  sha256 "e3a50c94ce67ab26fe80c88c097f98a5d5c8ee705613686a0485186758ce29a8"
+  url "https://registry.npmjs.org/npq/-/npq-3.12.0.tgz"
+  sha256 "9bcaf8969d7bf68fffed053e07574c9614da9f5507ba1c170eac505e17c50106"
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "cb5819ede2698b3ed33846ba0828e27675131da974a189ee80522576b7eb2f63"
+    sha256 cellar: :any_skip_relocation, all: "83aa6cf7b578bda46e289a400365eb832bb3805add285c78eb914a4d6188adf2"
   end
 
   depends_on "node"
@@ -19,7 +19,7 @@ class Npq < Formula
   test do
     assert_match version.to_s, shell_output("#{bin}/npq --version")
 
-    output = shell_output("#{bin}/npq install npq --dry-run", 255)
+    output = shell_output("#{bin}/npq install npq --dry-run")
     assert_match "Packages with issues found", output
   end
 end

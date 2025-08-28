@@ -6,15 +6,13 @@ class Tcpreplay < Formula
   license all_of: ["BSD-2-Clause", "BSD-3-Clause", "BSD-4-Clause", "GPL-3.0-or-later", "ISC"]
 
   bottle do
-    sha256 cellar: :any,                 arm64_sequoia:  "bcccd1cdd60de8e54a46850f8fb3404cdc94983c6b8239da2268fac5b2fe5516"
-    sha256 cellar: :any,                 arm64_sonoma:   "53cefd654ed79a5dd9783f598d97877ddf748251ec6e10c96a15ac8c74cd2166"
-    sha256 cellar: :any,                 arm64_ventura:  "6ba083d208f7da09c4b24635bad3fcbecae67f95ac016bdcd6d08880ad1b5c89"
-    sha256 cellar: :any,                 arm64_monterey: "9bcef2805cf1df5fb206f40e3f6094bb21766738c3f7c84338693b33e99fa64f"
-    sha256 cellar: :any,                 sonoma:         "5d4306409a7a2ab05625d584a7ead36034ab5643cc07534abbda61c53277075e"
-    sha256 cellar: :any,                 ventura:        "c5c5eb557b954ac8ba90b74c8be124e3dc8b8da5ce4b4e50958248663797ad04"
-    sha256 cellar: :any,                 monterey:       "f1477033f2820e1cde521bf37693a2171ffd9466ad9daa99cb583e30ba3e6999"
-    sha256 cellar: :any_skip_relocation, arm64_linux:    "c48be7412a372a52364ba3f23b8e714f1c5946e6c82b99d3e8370cc758bed039"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "8f67650d054f423e98ef5804aa5e9401ca0895a84e8d0552d97b2e182372b8eb"
+    sha256 cellar: :any,                 arm64_sequoia: "e1d0937d05aafd45c31f68cc66122d3bbd37d7fddca7772af45bd17f9d7ad16b"
+    sha256 cellar: :any,                 arm64_sonoma:  "151b9f95a3924504efbd0458e1136d24eee4555989cacd7f3289daaae63c1d8e"
+    sha256 cellar: :any,                 arm64_ventura: "bebe392ee113e4351695149aa69c3a5f49a23141e29d5a1d87653994add8266c"
+    sha256 cellar: :any,                 sonoma:        "02f52b95155aa75b197e8c1c726acb334c3f3c24bf76fcd1823bed6610afbc0e"
+    sha256 cellar: :any,                 ventura:       "8c7ab5e0ffd729cda025aa995fa9bb607c47170d44c41dc438f82f1032cd22f1"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "7adebd39df6e58f28d5da9cb969966b411a6e6dcf844e0fc65956ce9fea96a29"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "1602f54ea30d09b224bf50cb03fd4c505aafc866a73a8eb58182bca38dae5dbd"
   end
 
   depends_on "autoconf" => :build

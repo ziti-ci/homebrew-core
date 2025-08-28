@@ -24,6 +24,12 @@ class Elf2uf2Rs < Formula
     depends_on "systemd" # for libudev
   end
 
+  # Fix compatibility issues with latest Rust: https://github.com/JoNil/elf2uf2-rs/issues/40, https://github.com/JoNil/elf2uf2-rs/pull/41
+  patch do
+    url "https://github.com/JoNil/elf2uf2-rs/commit/c1639b9e8bcaaaab653f9fa0e358fed0e8a7ce76.patch?full_index=1"
+    sha256 "3bbcfa39c01bd705f7b021c1e5117bd9a91fa51c4c13c998a43ba17adf9616a7"
+  end
+
   def install
     system "cargo", "install", *std_cargo_args
     (pkgshare/"examples").install Dir.glob("*.elf")

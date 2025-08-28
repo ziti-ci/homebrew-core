@@ -19,6 +19,7 @@ class Awsdac < Formula
 
   def install
     system "go", "build", *std_go_args(ldflags: "-s -w -X main.version=#{version}"), "./cmd/awsdac"
+    system "go", "build", *std_go_args(ldflags: "-s -w -X main.version=#{version}", output: bin/"awsdac-mcp-server"), "./cmd/awsdac-mcp-server"
 
     pkgshare.install "examples/alb-ec2.yaml"
   end
@@ -29,5 +30,14 @@ class Awsdac < Formula
     cp pkgshare/"alb-ec2.yaml", testpath/"test.yaml"
     expected = "[Completed] AWS infrastructure diagram generated: output.png"
     assert_equal expected, shell_output("#{bin}/awsdac test.yaml").strip
+
+    # Test awsdac-mcp-server with MCP protocol
+    json = <<~JSON
+      {"jsonrpc":"2.0","id":1,"method":"initialize","params":{"protocolVersion":"2025-03-26"}}
+      {"jsonrpc":"2.0","id":2,"method":"tools/list"}
+    JSON
+
+    output = pipe_output(bin/"awsdac-mcp-server", json, 0)
+    assert_match "Generate AWS architecture diagrams", output
   end
 end

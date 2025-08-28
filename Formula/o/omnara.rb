@@ -3,8 +3,8 @@ class Omnara < Formula
 
   desc "Talk to Your AI Agents from Anywhere"
   homepage "https://omnara.com/"
-  url "https://files.pythonhosted.org/packages/31/eb/040383289f54f0e9d5c8b6d8a9ee2c913e7c38ebc8a492c42967fb4fdc39/omnara-1.5.9.tar.gz"
-  sha256 "62769204df1c34f521337407c21a4ba919b9c1f95fcddd6c25289328d4efc8f8"
+  url "https://files.pythonhosted.org/packages/28/d1/a40297ea2eba613782c00c12f55fae7f6de35bc62f38f0b9b32861c328a7/omnara-1.6.1.tar.gz"
+  sha256 "2b184d856b87903ec093a4c26b9aaea37760f2fe77b9b954d39e3156c305fd56"
   license "Apache-2.0"
 
   bottle do
@@ -299,8 +299,8 @@ class Omnara < Formula
   end
 
   resource "rpds-py" do
-    url "https://files.pythonhosted.org/packages/1e/d9/991a0dee12d9fc53ed027e26a26a64b151d77252ac477e22666b9688bc16/rpds_py-0.27.0.tar.gz"
-    sha256 "8b23cf252f180cda89220b378d917180f29d313cd6a07b2431c0d3b776aae86f"
+    url "https://files.pythonhosted.org/packages/e9/dd/2c0cbe774744272b0ae725f44032c77bdcab6e8bcf544bffa3b6e70c8dba/rpds_py-0.27.1.tar.gz"
+    sha256 "26a1c73171d10b7acccbded82bf6a586ab8203601e565badc74bbbf8bc5a10f8"
   end
 
   resource "six" do

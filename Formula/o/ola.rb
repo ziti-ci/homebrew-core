@@ -66,6 +66,15 @@ class Ola < Formula
   uses_from_macos "flex" => :build
   uses_from_macos "ncurses"
 
+  on_sequoia do
+    # Use LLVM 18 to work around https://github.com/OpenLightingProject/ola/issues/1982
+    # Would be more accurate to check for Xcode 16.3 or clang 1700.0.13.3 as the change
+    # is not related to linker but this doesn't seem available via DSL for dependencies.
+    # Xcode 16.4 doesn't hit this as Apple temporarily reverted LLVM change:
+    # https://developer.apple.com/documentation/xcode-release-notes/xcode-16_4-release-notes#Apple-Clang-Compiler
+    depends_on "llvm@18" => :build if DevelopmentTools.ld64_version == "1167.4.1"
+  end
+
   on_linux do
     depends_on "util-linux"
   end
@@ -94,12 +103,18 @@ class Ola < Formula
     # Workaround to build with newer Protobuf due to Abseil C++ standard
     # Issue ref: https://github.com/OpenLightingProject/ola/issues/1879
     inreplace "configure.ac", "-std=gnu++11", "-std=gnu++17"
-    if ENV.compiler == :clang
+    if ENV.compiler.to_s.match?("clang")
       # Workaround until https://github.com/OpenLightingProject/ola/pull/1889
       ENV.append "CXXFLAGS", "-D_LIBCPP_ENABLE_CXX17_REMOVED_AUTO_PTR"
       # Workaround until https://github.com/OpenLightingProject/ola/pull/1890
       ENV.append "CXXFLAGS", "-D_LIBCPP_ENABLE_CXX17_REMOVED_BINDERS"
       ENV.append "CXXFLAGS", "-D_LIBCPP_ENABLE_CXX17_REMOVED_UNARY_BINARY_FUNCTION"
+    end
+
+    # Aligned with dependency conditional. Remove when fixed upstream
+    if DevelopmentTools.ld64_version == "1167.4.1"
+      ENV["CXX"] = Formula["llvm@18"].opt_bin/"clang++"
+      ENV.append_to_cflags "-I#{Formula["protobuf@29"].opt_include} -I#{HOMEBREW_PREFIX}/include"
     end
 
     # Skip flaky python tests. Remove when no longer running tests

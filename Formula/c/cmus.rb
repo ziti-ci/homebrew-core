@@ -4,7 +4,7 @@ class Cmus < Formula
   url "https://github.com/cmus/cmus/archive/refs/tags/v2.12.0.tar.gz"
   sha256 "44b96cd5f84b0d84c33097c48454232d5e6a19cd33b9b6503ba9c13b6686bfc7"
   license "GPL-2.0-or-later"
-  revision 2
+  revision 3
   head "https://github.com/cmus/cmus.git", branch: "master"
 
   bottle do
@@ -19,7 +19,7 @@ class Cmus < Formula
 
   depends_on "pkgconf" => :build
   depends_on "faad2"
-  depends_on "ffmpeg"
+  depends_on "ffmpeg@7"
   depends_on "flac"
   depends_on "libao" # See https://github.com/cmus/cmus/issues/1130
   depends_on "libcue"
@@ -49,6 +49,26 @@ class Cmus < Formula
 
   test do
     plugins = shell_output("#{bin}/cmus --plugins")
-    assert_match "ao", plugins
+    expected_plugins = %w[
+      aac
+      cue
+      ffmpeg
+      flac
+      mad
+      mp4
+      opus
+      vorbis
+      wav
+      ao
+    ]
+    expected_plugins += if OS.mac?
+      %w[coreaudio]
+    else
+      %w[alsa pulse]
+    end
+
+    expected_plugins.each do |plugin|
+      assert_match plugin, plugins, "#{plugin} plugin not found!"
+    end
   end
 end

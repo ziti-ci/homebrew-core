@@ -7,13 +7,13 @@ class Wrkflw < Formula
   head "https://github.com/bahdotsh/wrkflw.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "2cdc93b9ceca16cc5ebb3ad60b8a528350432504cfd63100e0bb064eb604a753"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "4a6bc88815738aac31195f2bfbce2dd7443bc70ce5c845b6a44c67ab3323e70b"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "7ce38aee0a1152f3abeb775076f94c4ced15633fe562242bce209fb163457810"
-    sha256 cellar: :any_skip_relocation, sonoma:        "afe8cc1cd4d6f1f23a749ab1d38c6b73611a28a43941ace73979808e62674b3e"
-    sha256 cellar: :any_skip_relocation, ventura:       "ff1ddac302e1b385767a7f77f0dfcab961b5e685352ad7448503c36329a3da3d"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "36181ee18fda7e3439521ecf5e0ecbf85e27b93d6fd80c57193ea06d42cefbd6"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "be7b9b1b9f46fc50c117d2934e4c9e8b0da0de29885ba6079bebd632cbbac9cc"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "422be820b81d0cedbfb08a6c6de26aee2d18f2307833829ae79a4774b7300083"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "a1d30017f1b862e5f80280d528e8f0f3102ac84929e7f027980f6b8bd16820a8"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "6cb08557c188026fc014bcf57bc297da41da0af543fe100eb71b283842c5b184"
+    sha256 cellar: :any_skip_relocation, sonoma:        "376d725d88c18dbf64ab4009deebc183a4b2743b3ae0f34ee039a1fdd8d319db"
+    sha256 cellar: :any_skip_relocation, ventura:       "1aa659603391224ad0c563e549c9332654cada9abfe2bae30e6a85099c4ad629"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "1ead6cd51ba7953a0dbd2f5ccb910ec5226ce0eeb5ad88ddf900570f97586305"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "d7028d774eb8df2735903c1b85e789c1df4f260c7e82fb6ee4b39f272e97dce2"
   end
 
   depends_on "pkgconf" => :build

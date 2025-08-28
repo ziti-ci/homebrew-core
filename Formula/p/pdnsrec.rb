@@ -1,10 +1,9 @@
 class Pdnsrec < Formula
   desc "Non-authoritative/recursing DNS server"
   homepage "https://www.powerdns.com/powerdns-recursor"
-  url "https://downloads.powerdns.com/releases/pdns-recursor-5.2.5.tar.bz2"
-  sha256 "a8a657a7abd6e9d237cdd26753f7dcf5ccd5b8c48ac8120b08d2b8d57a1d856a"
+  url "https://downloads.powerdns.com/releases/pdns-recursor-5.3.0.tar.xz"
+  sha256 "6b9f85b6df17c339cbff448d9824bee6da6a5cf884abd99835d1dafdccdda0e6"
   license "GPL-2.0-only" => { with: "openvpn-openssl-exception" }
-  revision 1
 
   livecheck do
     url "https://downloads.powerdns.com/releases/"
@@ -22,6 +21,7 @@ class Pdnsrec < Formula
   end
 
   depends_on "pkgconf" => :build
+  depends_on "python@3.13" => :build
   depends_on "rust" => :build
   depends_on "boost"
   depends_on "lua"
@@ -42,10 +42,6 @@ class Pdnsrec < Formula
   end
 
   def install
-    # Workaround for Boost 1.89.0 until fixed upstream.
-    # Issue ref: https://github.com/PowerDNS/pdns/issues/15972
-    ENV["boost_cv_lib_system"] = "yes"
-
     ENV.cxx11
     ENV.llvm_clang if OS.mac? && (DevelopmentTools.clang_build_version <= 1100)
 

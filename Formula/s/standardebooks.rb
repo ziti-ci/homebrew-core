@@ -8,6 +8,15 @@ class Standardebooks < Formula
   license "GPL-3.0-or-later"
   head "https://github.com/standardebooks/tools.git", branch: "master"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "4b4a2d9c81d6bf6a20ee022404cb1423ff341a1f271b657d0793afec865f2031"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "55b14281ccb203e588f550ca8a8bf6797049d887fc152030b37ef3d1f1a8aeb7"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "ec36aca8b95016a9ec77b6437ee936544b115462cd23836e59d080ee4f183d50"
+    sha256 cellar: :any_skip_relocation, sonoma:        "f82684773ba82fbd06b8efa09f1ca0b405fe56a5dbfc67d114ecc141ec10bb9d"
+    sha256 cellar: :any_skip_relocation, ventura:       "d7ed4369db52db7a049e27d0ba43e2415466d4455e9693b540a376c22e765251"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "cb045061093b60a2b8adb7cc731bee0d8841838d24551a3bf6abeac6bcd532df"
+  end
+
   depends_on "rust" => :build # for selenium
   depends_on "certifi"
   depends_on "cffi"

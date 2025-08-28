@@ -1,8 +1,8 @@
 class Wrkflw < Formula
   desc "Validate and execute GitHub Actions workflows locally"
   homepage "https://github.com/bahdotsh/wrkflw"
-  url "https://github.com/bahdotsh/wrkflw/archive/refs/tags/v0.7.1.tar.gz"
-  sha256 "3d972f95f56e73f803d0d998674befa97c7e620885c0e81fe131ff6cbabf6bf4"
+  url "https://github.com/bahdotsh/wrkflw/archive/refs/tags/v0.7.2.tar.gz"
+  sha256 "037bc349c9c7718cb157f9606e89287df01675fabd1e8f96ca838ad0b10fa6f5"
   license "MIT"
   head "https://github.com/bahdotsh/wrkflw.git", branch: "main"
 

@@ -3,10 +3,9 @@ class Vdirsyncer < Formula
 
   desc "Synchronize calendars and contacts"
   homepage "https://github.com/pimutils/vdirsyncer"
-  url "https://files.pythonhosted.org/packages/ee/c2/50eb6b430f447c062ae3cd07d1a354d768bdb1443580bd4ae16ec8c8296d/vdirsyncer-0.19.3.tar.gz"
-  sha256 "e437851feb985dec3544654f8f9cf6dd109b0b03f7e19956086603092ffeb28f"
+  url "https://files.pythonhosted.org/packages/2e/f6/94ed82de371cc80784ffe90e0dac8ce9f5d272c01d614415a5e800ffb303/vdirsyncer-0.20.0.tar.gz"
+  sha256 "feb1a533500a95c14fd155733a1056fe359192553d82c07c6ba04fcbfc40b12d"
   license "BSD-3-Clause"
-  revision 4
   head "https://github.com/pimutils/vdirsyncer.git", branch: "main"
 
   bottle do
@@ -44,13 +43,8 @@ class Vdirsyncer < Formula
   end
 
   resource "aiostream" do
-    url "https://files.pythonhosted.org/packages/9f/92/e10c6232f2e2e21a24ae9e6534292bd2d808ae43b719298f5599a2a38e4b/aiostream-0.4.5.tar.gz"
-    sha256 "3ecbf87085230fbcd9605c32ca20c4fb41af02c71d076eab246ea22e35947d88"
-  end
-
-  resource "atomicwrites" do
-    url "https://files.pythonhosted.org/packages/87/c6/53da25344e3e3a9c01095a89f16dbcda021c609ddb42dd6d7c0528236fb2/atomicwrites-1.4.1.tar.gz"
-    sha256 "81b2c9071a49367a7f770170e5eec8cb66567cfbbc8c73d20ce5ca4a8d71cf11"
+    url "https://files.pythonhosted.org/packages/bf/1c/d5ae5c059529a98610fc15268e39506a4f8467501983afb5e45d34dc18db/aiostream-0.7.0.tar.gz"
+    sha256 "5ab4acd44ef5f583b6488c32ade465f43c3d7b0df039f1ee49dfb1fd1e255e02"
   end
 
   resource "attrs" do
@@ -59,8 +53,8 @@ class Vdirsyncer < Formula
   end
 
   resource "charset-normalizer" do
-    url "https://files.pythonhosted.org/packages/e4/33/89c2ced2b67d1c2a61c19c6751aa8902d46ce3dacb23600a283619f5a12d/charset_normalizer-3.4.2.tar.gz"
-    sha256 "5baececa9ecba31eff645232d59845c07aa030f0c81ee70184a90d35099a0e63"
+    url "https://files.pythonhosted.org/packages/83/2d/5fd176ceb9b2fc619e63405525573493ca23441330fcdaee6bef9460e924/charset_normalizer-3.4.3.tar.gz"
+    sha256 "6fce4b8500244f6fcb71465d4a4930d132ba9ab8e71a7859e6a5d59851068d14"
   end
 
   resource "click" do
@@ -84,8 +78,8 @@ class Vdirsyncer < Formula
   end
 
   resource "multidict" do
-    url "https://files.pythonhosted.org/packages/3d/2c/5dad12e82fbdf7470f29bff2171484bf07cb3b16ada60a6589af8f376440/multidict-6.6.3.tar.gz"
-    sha256 "798a9eb12dab0a6c2e29c1de6f3468af5cb2da6053a20dfa3344907eed0937cc"
+    url "https://files.pythonhosted.org/packages/69/7f/0652e6ed47ab288e3756ea9c0df8b14950781184d4bd7883f4d87dd41245/multidict-6.6.4.tar.gz"
+    sha256 "d2d4e4787672911b48350df02ed3fa3fffdc2f2e8ca06dd6afdf34189b76a9dd"
   end
 
   resource "oauthlib" do
@@ -99,8 +93,13 @@ class Vdirsyncer < Formula
   end
 
   resource "requests" do
-    url "https://files.pythonhosted.org/packages/e1/0a/929373653770d8a0d7ea76c37de6e41f11eb07559b103b1c02cafb3f7cf8/requests-2.32.4.tar.gz"
-    sha256 "27d0316682c8a29834d3264820024b62a36942083d52caf2f14c0591336d3422"
+    url "https://files.pythonhosted.org/packages/c9/74/b3ff8e6c8446842c3f5c837e9c3dfcfe2018ea6ecef224c710c85ef728f4/requests-2.32.5.tar.gz"
+    sha256 "dbba0bac56e100853db0ea71b82b4dfd5fe2bf6d3754a8893c3af500cec7d7cf"
+  end
+
+  resource "typing-extensions" do
+    url "https://files.pythonhosted.org/packages/72/94/1a15dd82efb362ac84269196e94cf00f187f7ed21c242792a923cdb1c61f/typing_extensions-4.15.0.tar.gz"
+    sha256 "0cea48d173cc12fa28ecabc3b837ea3cf6f38c6d1136f85cbaaf598984861466"
   end
 
   resource "urllib3" do

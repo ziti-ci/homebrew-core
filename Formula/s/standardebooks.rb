@@ -14,6 +14,7 @@ class Standardebooks < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura: "ec36aca8b95016a9ec77b6437ee936544b115462cd23836e59d080ee4f183d50"
     sha256 cellar: :any_skip_relocation, sonoma:        "f82684773ba82fbd06b8efa09f1ca0b405fe56a5dbfc67d114ecc141ec10bb9d"
     sha256 cellar: :any_skip_relocation, ventura:       "d7ed4369db52db7a049e27d0ba43e2415466d4455e9693b540a376c22e765251"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "af8042184321156a420bb5850133f8168a7ca6856b05044cade29cf201e646f4"
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "cb045061093b60a2b8adb7cc731bee0d8841838d24551a3bf6abeac6bcd532df"
   end
 

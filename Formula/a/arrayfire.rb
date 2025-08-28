@@ -25,10 +25,19 @@ class Arrayfire < Formula
   depends_on "openblas"
   depends_on "spdlog"
 
+  uses_from_macos "llvm" => :build
+
   on_linux do
     depends_on "opencl-headers" => :build
     depends_on "opencl-icd-loader"
     depends_on "pocl"
+  end
+
+  fails_with :gcc do
+    cause <<~CAUSE
+      Building with GCC and CMake CXX_EXTENSIONS disabled causes OpenCL headers
+      to not expose cl_image_desc.mem_object which is needed by Boost.Compute.
+    CAUSE
   end
 
   # Backport fix for missing include for climits header
@@ -123,15 +132,15 @@ index e7a2e08..5da74a9 100644
 -        if (ver.minor() == -1) show_minor = false;
 -        if (ver.patch() == -1) show_patch = false;
 -        if (show_major && !show_minor && !show_patch) {
-+        if (show_major && (ver.minor() == -1) && (ver.patch() == -1)) {
++        if (show_major && (!show_minor || ver.minor() == -1) && (!show_patch || ver.patch() == -1)) {
              return format_to(ctx.out(), "{}", ver.major());
          }
 -        if (show_major && show_minor && !show_patch) {
-+        if (show_major && (ver.minor() != -1) && (ver.patch() == -1)) {
++        if (show_major && (show_minor && ver.minor() != -1) && (!show_patch || ver.patch() == -1)) {
              return format_to(ctx.out(), "{}.{}", ver.major(), ver.minor());
          }
 -        if (show_major && show_minor && show_patch) {
-+        if (show_major && (ver.minor() != -1) && (ver.patch() != -1)) {
++        if (show_major && (show_minor && ver.minor() != -1) && (show_patch && ver.patch() != -1)) {
              return format_to(ctx.out(), "{}.{}.{}", ver.major(), ver.minor(),
                               ver.patch());
          }

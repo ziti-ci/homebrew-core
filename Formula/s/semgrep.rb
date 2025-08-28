@@ -4,8 +4,8 @@ class Semgrep < Formula
   desc "Easily detect and prevent bugs and anti-patterns in your codebase"
   homepage "https://semgrep.dev"
   url "https://github.com/semgrep/semgrep.git",
-      tag:      "v1.133.0",
-      revision: "763730c878a1ff6f9f4b42594ce87d8e0f11248e"
+      tag:      "v1.134.0",
+      revision: "32f65fd7e3c1dce0422dce8b24749bb83c53a05d"
   license "LGPL-2.1-only"
   head "https://github.com/semgrep/semgrep.git", branch: "develop"
 
@@ -228,8 +228,8 @@ class Semgrep < Formula
   end
 
   resource "rpds-py" do
-    url "https://files.pythonhosted.org/packages/1e/d9/991a0dee12d9fc53ed027e26a26a64b151d77252ac477e22666b9688bc16/rpds_py-0.27.0.tar.gz"
-    sha256 "8b23cf252f180cda89220b378d917180f29d313cd6a07b2431c0d3b776aae86f"
+    url "https://files.pythonhosted.org/packages/e9/dd/2c0cbe774744272b0ae725f44032c77bdcab6e8bcf544bffa3b6e70c8dba/rpds_py-0.27.1.tar.gz"
+    sha256 "26a1c73171d10b7acccbded82bf6a586ab8203601e565badc74bbbf8bc5a10f8"
   end
 
   resource "ruamel-yaml" do
@@ -253,8 +253,8 @@ class Semgrep < Formula
   end
 
   resource "typing-extensions" do
-    url "https://files.pythonhosted.org/packages/98/5a/da40306b885cc8c09109dc2e1abd358d5684b1425678151cdaed4731c822/typing_extensions-4.14.1.tar.gz"
-    sha256 "38b39f4aeeab64884ce9f74c94263ef78f3c22467c8724005483154c26648d36"
+    url "https://files.pythonhosted.org/packages/72/94/1a15dd82efb362ac84269196e94cf00f187f7ed21c242792a923cdb1c61f/typing_extensions-4.15.0.tar.gz"
+    sha256 "0cea48d173cc12fa28ecabc3b837ea3cf6f38c6d1136f85cbaaf598984861466"
   end
 
   resource "urllib3" do

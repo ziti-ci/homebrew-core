@@ -6,6 +6,15 @@ class Imagineer < Formula
   license any_of: ["Apache-2.0", "MIT"]
   head "https://github.com/foresterre/imagineer.git", branch: "main"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "892c752f9fc92344c70641c0f7d844a92e67bce6dadc0284acaad63dc33adbd3"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "ca30b3c969ee7ed9047b97cbdabb8b11daefdfde8798244a2a127e31f7e6c54d"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "e1308d6bc4541aa18bfc40a1d40ae5fba35584624669aeebd234802858937765"
+    sha256 cellar: :any_skip_relocation, sonoma:        "8f4057299fe24aa4fe3991b89269ca831417b64f96f6aef7f92b06a34ba3a4fb"
+    sha256 cellar: :any_skip_relocation, ventura:       "b9058702f0d82940053f9c6f17ba5967d84cd17d9d04c62bf3ec960322b70c43"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "221eef6b88965107e0ecbad082d7bbb16394df8f1f8eb26786e8735a8b367941"
+  end
+
   depends_on "rust" => :build
 
   on_intel do

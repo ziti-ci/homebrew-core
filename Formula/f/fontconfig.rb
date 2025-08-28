@@ -1,13 +1,14 @@
 class Fontconfig < Formula
   desc "XML-based font configuration API for X Windows"
   homepage "https://wiki.freedesktop.org/www/Software/fontconfig/"
-  url "https://www.freedesktop.org/software/fontconfig/release/fontconfig-2.16.0.tar.xz"
-  sha256 "6a33dc555cc9ba8b10caf7695878ef134eeb36d0af366041f639b1da9b6ed220"
+  url "https://gitlab.freedesktop.org/fontconfig/fontconfig/-/archive/2.17.1/fontconfig-2.17.1.tar.gz"
+  sha256 "82e73b26adad651b236e5f5d4b3074daf8ff0910188808496326bd3449e5261d"
   license "MIT"
+  head "https://gitlab.freedesktop.org/fontconfig/fontconfig.git", branch: "main"
 
   livecheck do
     url :stable
-    regex(/href=.*?fontconfig[._-]v?(\d+\.\d+\.(?:\d|[0-8]\d+))\.t/i)
+    regex(/v?(\d+\.\d+\.(?:\d|[0-8]\d+))/i)
   end
 
   bottle do
@@ -20,15 +21,9 @@ class Fontconfig < Formula
     sha256 x86_64_linux:  "040b8c1ce9fd3d3022f26e1400b19b757cfd993da9e819c5c0956d3a38f42f00"
   end
 
-  head do
-    url "https://gitlab.freedesktop.org/fontconfig/fontconfig.git"
-
-    depends_on "autoconf" => :build
-    depends_on "automake" => :build
-    depends_on "gettext" => :build
-    depends_on "libtool" => :build
-  end
-
+  depends_on "gettext" => :build
+  depends_on "meson" => :build
+  depends_on "ninja" => :build
   depends_on "pkgconf" => :build
   depends_on "freetype"
 
@@ -36,6 +31,10 @@ class Fontconfig < Formula
   uses_from_macos "python" => :build, since: :catalina
   uses_from_macos "bzip2"
   uses_from_macos "expat"
+
+  on_macos do
+    depends_on "gettext"
+  end
 
   on_linux do
     depends_on "gettext" => :build
@@ -54,21 +53,23 @@ class Fontconfig < Formula
       font_dirs << Dir["/System/Library/Assets{,V2}/com_apple_MobileAsset_Font*"].max
     end
 
-    system "autoreconf", "--force", "--install", "--verbose" if build.head?
-    ENV["UUID_CFLAGS"] = "-I#{Formula["util-linux"].include}" if OS.linux?
-    system "./configure", "--disable-silent-rules",
-                          "--disable-docs",
-                          "--enable-static",
-                          "--with-add-fonts=#{font_dirs.join(",")}",
-                          "--localstatedir=#{var}",
-                          "--sysconfdir=#{etc}",
-                          *std_configure_args
-    system "make", "install", "RUN_FC_CACHE_TEST=false"
+    args = %W[
+      --localstatedir=#{var}
+      --sysconfdir=#{etc}
+      -Ddoc=disabled
+      -Dtests=disabled
+      -Dtools=enabled
+      -Dcache-build=disabled
+      -Dadditional-fonts-dirs=#{font_dirs}
+    ]
+    system "meson", "setup", "build", *args, *std_meson_args
+    system "meson", "compile", "-C", "build", "--verbose"
+    system "meson", "install", "-C", "build"
   end
 
   def post_install
     ohai "Regenerating font cache, this may take a while"
-    system bin/"fc-cache", "-frv"
+    system bin/"fc-cache", "--force", "--really-force", "--verbose"
   end
 
   test do

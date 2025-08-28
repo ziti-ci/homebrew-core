@@ -1,8 +1,8 @@
 class Asyncapi < Formula
   desc "All in one CLI for all AsyncAPI tools"
   homepage "https://github.com/asyncapi/cli"
-  url "https://registry.npmjs.org/@asyncapi/cli/-/cli-3.4.1.tgz"
-  sha256 "f7188ebb90ca5db13844c9b585ddaee15341736fbc6301fd68c3d9085267800a"
+  url "https://registry.npmjs.org/@asyncapi/cli/-/cli-3.4.2.tgz"
+  sha256 "8d7c72b067d7d237ab74593e2cd517987538fed3806aad9465ab683d82542cfb"
   license "Apache-2.0"
 
   no_autobump! because: :bumped_by_upstream

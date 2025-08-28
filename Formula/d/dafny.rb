@@ -6,12 +6,12 @@ class Dafny < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "b0379afe58205e4e147a773cfe4e45102e4b6bda9a2a40e862641730e23381b6"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "8e361b9620dab3bc75b0f55c708fac271c5da152a11aade9873838b52af43c9c"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "72f8fd00da940888a1a2cb7a5ad9ca0919a1537f2b2901336fd21e760f11cc6f"
-    sha256 cellar: :any_skip_relocation, ventura:       "a717a33ebf39dcfa1bf658103e5e70d07961643d9652c4823f6969beb47735ee"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "25b428296abab12015268dbdb33f5a15707c5df5754665126cd2a78088b73b27"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "3e7397f8784ded9a6688b1e1a3e5ee31b2278d44e55462429395f1b374b3b736"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "296346300fcb84014e88bcd5e6a43a3f59c1f5b90f6c4f9c9ff5e6664459f104"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "399f9dc444e83573e736e553df66faeb0c492abe5efc5d547c64b6f5732825e4"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "212a957c6cff6a2b3709544c5ed25d75231aa25cd7c46f0dd2b4b7407add8b8f"
+    sha256 cellar: :any_skip_relocation, ventura:       "531c8d8608f45143c240ebcdb7c7bc92a47cf23d20b972f9d0d435318198a569"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "61c5799971f66478103d85b42562172496531a3aa2e8e8566befc75079bb7154"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "af77022b146755d7d3504323a153d62fd2d234fd23b831884555d1d6a037e16f"
   end
 
   # Upstream uses v8 and v9 is not yet compatible

@@ -7,12 +7,12 @@ class Godap < Formula
   head "https://github.com/Macmod/godap.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "e1f21d3e7fad07512b9f5697c251311a00dde15fe365d179017a81d698914d3a"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "e1f21d3e7fad07512b9f5697c251311a00dde15fe365d179017a81d698914d3a"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "e1f21d3e7fad07512b9f5697c251311a00dde15fe365d179017a81d698914d3a"
-    sha256 cellar: :any_skip_relocation, sonoma:        "0b7e35888e9d5f1e5586f8d6c1101dec44a28bbfd4f1964674c443997bbf0dea"
-    sha256 cellar: :any_skip_relocation, ventura:       "0b7e35888e9d5f1e5586f8d6c1101dec44a28bbfd4f1964674c443997bbf0dea"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "d3806997b15103355d597475de81055385692105ded8bcc4dd4a424dedfbc905"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "62370a7cb13319a0bb099c2d8ab0d6cc7f5c05e704fa23c0e33af39b6505179f"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "62370a7cb13319a0bb099c2d8ab0d6cc7f5c05e704fa23c0e33af39b6505179f"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "62370a7cb13319a0bb099c2d8ab0d6cc7f5c05e704fa23c0e33af39b6505179f"
+    sha256 cellar: :any_skip_relocation, sonoma:        "4aee3f2cdd062d384e8e1400535510098b75c2ed4fec7e73183734308cdc2798"
+    sha256 cellar: :any_skip_relocation, ventura:       "4aee3f2cdd062d384e8e1400535510098b75c2ed4fec7e73183734308cdc2798"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "e2dae7760fd93ea6ccdb0052cbd62ffd58a096c016b997d9faa4478b0b6391ab"
   end
 
   depends_on "go" => :build

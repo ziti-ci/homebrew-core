@@ -1,12 +1,10 @@
 class Polypolish < Formula
   desc "Short-read polishing tool for long-read assemblies"
   homepage "https://github.com/rrwick/Polypolish"
-  url "https://github.com/rrwick/Polypolish/archive/refs/tags/v0.6.0.tar.gz"
-  sha256 "99ea799352cecf6723b73fb4c5c64dd2091ff1cdab6eef10309e06c642e56855"
+  url "https://github.com/rrwick/Polypolish/archive/refs/tags/v0.6.1.tar.gz"
+  sha256 "7a9b803aac87a7963c08c162c502f90f9cf93b1f58d1502047eefc43aca65bde"
   license "GPL-3.0-or-later"
   head "https://github.com/rrwick/Polypolish.git", branch: "main"
-
-  no_autobump! because: :requires_manual_review
 
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_sequoia: "c1422d344c3b60428cf5e201ecbe405edad60e3f0404ce8029e3d713846220ae"

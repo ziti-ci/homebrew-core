@@ -49,6 +49,13 @@ class Proxygen < Formula
     sha256 "4e64f687017888af90c4c6e691923db75c1e067fc8b722b038d05ee67707767c"
   end
 
+  # Fix name of `liblibhttperf2`.
+  # https://github.com/facebook/proxygen/pull/574
+  patch do
+    url "https://github.com/facebook/proxygen/commit/415ed3320f3d110f1d8c6846ca0582a4db7d225a.patch?full_index=1"
+    sha256 "4ea28c2f87732526afad0f2b2b66be330ad3d4fc18d0f20eb5e1242b557a6fcf"
+  end
+
   def install
     args = ["-DBUILD_SHARED_LIBS=ON", "-DCMAKE_INSTALL_RPATH=#{rpath}"]
     if OS.mac?

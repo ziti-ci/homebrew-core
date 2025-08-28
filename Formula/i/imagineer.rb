@@ -12,6 +12,7 @@ class Imagineer < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura: "e1308d6bc4541aa18bfc40a1d40ae5fba35584624669aeebd234802858937765"
     sha256 cellar: :any_skip_relocation, sonoma:        "8f4057299fe24aa4fe3991b89269ca831417b64f96f6aef7f92b06a34ba3a4fb"
     sha256 cellar: :any_skip_relocation, ventura:       "b9058702f0d82940053f9c6f17ba5967d84cd17d9d04c62bf3ec960322b70c43"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "0e6bbcfec405b3c2f501296234ce3b1a6dd9c01a855b4d27023d5c9e20c2821f"
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "221eef6b88965107e0ecbad082d7bbb16394df8f1f8eb26786e8735a8b367941"
   end
 

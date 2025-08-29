@@ -12,13 +12,14 @@ class Fastfetch < Formula
   end
 
   bottle do
-    sha256                               arm64_sequoia: "aebd71914e67b89d5782f940e2fb0bc61f0b2bfdd8d4e5ce4419377b1e6d28f9"
-    sha256                               arm64_sonoma:  "62b2bc0ef575b46ef172b0f449a9fd38d381d9999f5c8ced787b856c0494ce56"
-    sha256                               arm64_ventura: "c123bf188441254ae23f7fa69c81de8de95c6333e0d1c08b74cd83ac2edf2feb"
-    sha256 cellar: :any_skip_relocation, sonoma:        "35221dea247e7210048a2d93bdb33884d560b74352b94f5efb9a902c2ad86a29"
-    sha256 cellar: :any_skip_relocation, ventura:       "6c509eb2e2e495349f7e3961a29d7634299cdd8a87484e0dcbb78abc971dee9d"
-    sha256                               arm64_linux:   "46196326570032fc61aa6df75c871cf6ef517bfbe4076d1e7017a96d2e683e78"
-    sha256                               x86_64_linux:  "9e1c6ce3a0bdca5b4e050c869cb4bf8fcf80abd2f4c315724c28b9e302973c31"
+    rebuild 1
+    sha256               arm64_sequoia: "18a95eccf9146536ea498e8e127f3e545f13217bf1776ea16eb12f0518d321e8"
+    sha256               arm64_sonoma:  "38f30754769e916e9cf23e819b5de2c310d99f9f08738dfbf086f34a24dc49dd"
+    sha256               arm64_ventura: "637b4d0941d7a8b1b475cd09fedd6e7dfa8d92b1bcace2577ec9554663e382bc"
+    sha256 cellar: :any, sonoma:        "d6ac9cd545c3bf750804894b3aaca4f76bbc859601dafb0ed2f191dcdf7b8e35"
+    sha256 cellar: :any, ventura:       "4932e5696f10c639bbd3438a8d47861bccfee34e3e157ebe1622e66300ad1a35"
+    sha256               arm64_linux:   "5fe4a7d41234c2bfb4f6184734b11d3427632d5efb5574ceda8b08dccab601ad"
+    sha256               x86_64_linux:  "184879eefddfa66bbde806a04708c7e92482a31051d6d069ca534eb34057eb6b"
   end
 
   depends_on "chafa" => :build
@@ -28,6 +29,7 @@ class Fastfetch < Formula
   depends_on "pkgconf" => :build
   depends_on "python@3.13" => :build
   depends_on "vulkan-loader" => :build
+  depends_on "yyjson"
 
   uses_from_macos "sqlite" => :build
   uses_from_macos "zlib" => :build
@@ -52,6 +54,7 @@ class Fastfetch < Formula
     args = %W[
       -DCMAKE_INSTALL_SYSCONFDIR=#{etc}
       -DDBUILD_FLASHFETCH=OFF
+      -DENABLE_SYSTEM_YYJSON=ON
     ]
     system "cmake", "-S", ".", "-B", "build", *args, *std_cmake_args
     system "cmake", "--build", "build"

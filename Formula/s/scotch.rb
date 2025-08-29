@@ -1,8 +1,8 @@
 class Scotch < Formula
   desc "Package for graph partitioning, graph clustering, and sparse matrix ordering"
   homepage "https://gitlab.inria.fr/scotch/scotch"
-  url "https://gitlab.inria.fr/scotch/scotch/-/archive/v7.0.8/scotch-v7.0.8.tar.bz2"
-  sha256 "f4f05f56ad2c3219d9c6118eaa21d07af5c266cdc59db194b5fd47efe1ec1448"
+  url "https://gitlab.inria.fr/scotch/scotch/-/archive/v7.0.9/scotch-v7.0.9.tar.bz2"
+  sha256 "99402474a84dfa4fba360ca1a26b29ee53a0aa4ddd2c170931b124760fb43148"
   license "CECILL-C"
   head "https://gitlab.inria.fr/scotch/scotch.git", branch: "master"
 

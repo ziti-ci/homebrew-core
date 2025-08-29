@@ -7,6 +7,15 @@ class Ramalama < Formula
   sha256 "f372433dc6a9bf0adc01b3f0b252101a44fd13fc19ad0f73b0a5ebdf81d69b10"
   license "MIT"
 
+  bottle do
+    sha256 cellar: :any,                 arm64_sequoia: "7cbccba124cb9cbf53be6c9697c3d6d6e4093a2e0ec8ca74eaaaace26a541a52"
+    sha256 cellar: :any,                 arm64_sonoma:  "d5ec57d539577878758052575e2ddc75f7dfed3f2d4a2405cf7fd18e9b479b92"
+    sha256 cellar: :any,                 arm64_ventura: "5b0d3c26906beaa58c9f536abb730b012658bc7695c7ac548cfd963e0f4c5f13"
+    sha256 cellar: :any,                 sonoma:        "85f611d8689e57ff431667d79dfc336d49a2a7028d3f7a18ffa0dcbf61bbb998"
+    sha256 cellar: :any,                 ventura:       "c1ff20e08cd98205cb74122c7b11ebb163ce404f1154641035b75437f91ff64b"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "90fb4bcc49c2089e3d58d9ebf25122ad8df6297ece47a236feea932c080a4508"
+  end
+
   depends_on "libyaml"
   depends_on "llama.cpp"
   depends_on "python@3.13"

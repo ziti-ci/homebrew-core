@@ -1,10 +1,10 @@
 class RancherCli < Formula
   desc "Unified tool to manage your Rancher server"
   homepage "https://github.com/rancher/cli"
-  url "https://github.com/rancher/cli/archive/refs/tags/v2.12.0.tar.gz"
-  sha256 "f5e3cba6e4156c68ce0785216898376b636cca8c032cb3807328805eba502189"
+  url "https://github.com/rancher/cli/archive/refs/tags/v2.12.1.tar.gz"
+  sha256 "238ca8a3a4a07a27bdb0ef7d6268da5e46474983d5ad69e3f8304f08c565f63a"
   license "Apache-2.0"
-  head "https://github.com/rancher/cli.git", branch: "master"
+  head "https://github.com/rancher/cli.git", branch: "main"
 
   # Upstream creates releases that use a stable tag (e.g., `v1.2.3`) but are
   # labeled as "pre-release" on GitHub before the version is released, so it's

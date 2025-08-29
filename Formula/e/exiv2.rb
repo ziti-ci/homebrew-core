@@ -1,8 +1,8 @@
 class Exiv2 < Formula
   desc "EXIF and IPTC metadata manipulation library and tools"
   homepage "https://exiv2.org/"
-  url "https://github.com/Exiv2/exiv2/archive/refs/tags/v0.28.5.tar.gz"
-  sha256 "e1671f744e379a87ba0c984617406fdf8c0ad0c594e5122f525b2fb7c28d394d"
+  url "https://github.com/Exiv2/exiv2/archive/refs/tags/v0.28.6.tar.gz"
+  sha256 "9d481117b97afa5324bf3ea0ad79f5c2939ae94ba0d0f5f8eb23aee16d9ec58d"
   license "GPL-2.0-or-later"
   head "https://github.com/Exiv2/exiv2.git", branch: "main"
 

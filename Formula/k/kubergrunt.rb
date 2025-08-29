@@ -15,12 +15,12 @@ class Kubergrunt < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "c92c42cc7988e63ce4da5c0778ef21ada0914eaf4ad717fcefdb9440a13de626"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "c92c42cc7988e63ce4da5c0778ef21ada0914eaf4ad717fcefdb9440a13de626"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "c92c42cc7988e63ce4da5c0778ef21ada0914eaf4ad717fcefdb9440a13de626"
-    sha256 cellar: :any_skip_relocation, sonoma:        "53beab4bc207f4f210f6320a00e6373849d54d8deeca151bffc5aa50aea1ad6e"
-    sha256 cellar: :any_skip_relocation, ventura:       "53beab4bc207f4f210f6320a00e6373849d54d8deeca151bffc5aa50aea1ad6e"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "a31c4ca12248553d428ef49350cad310d282bb0d26e149034cb0234c70e15bcf"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "61c55447cab24d70343e2553edd152cd5dd134c62680fe138ace08735b6cef4b"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "61c55447cab24d70343e2553edd152cd5dd134c62680fe138ace08735b6cef4b"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "61c55447cab24d70343e2553edd152cd5dd134c62680fe138ace08735b6cef4b"
+    sha256 cellar: :any_skip_relocation, sonoma:        "ba407942115d5ee35a47cd89e13a1ecc0029884bf31ab2fdfcfc20b136754ac1"
+    sha256 cellar: :any_skip_relocation, ventura:       "ba407942115d5ee35a47cd89e13a1ecc0029884bf31ab2fdfcfc20b136754ac1"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "0137a796ef71081d841b10e6bd85920557dbd5b060a081742df2834053e56e88"
   end
 
   depends_on "go" => :build

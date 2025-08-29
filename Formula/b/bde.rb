@@ -1,8 +1,8 @@
 class Bde < Formula
   desc "Basic Development Environment: foundational C++ libraries used at Bloomberg"
   homepage "https://github.com/bloomberg/bde"
-  url "https://github.com/bloomberg/bde/archive/refs/tags/4.28.0.0.tar.gz"
-  sha256 "842b1ff2b5677886436cc537fd9ce2b68eb867be95024ee9a0f8ef1e1be78dfc"
+  url "https://github.com/bloomberg/bde/archive/refs/tags/4.29.0.0.tar.gz"
+  sha256 "2f6e952092b8ac311afc8c113ead9d673d16a7cb1c76e350504c9785718cb7cb"
   license "Apache-2.0"
 
   livecheck do
@@ -26,8 +26,8 @@ class Bde < Formula
   depends_on "pcre2"
 
   resource "bde-tools" do
-    url "https://github.com/bloomberg/bde-tools/archive/refs/tags/4.27.0.0.tar.gz"
-    sha256 "934c5f1599f1c4e05f82e20e610f78532aa37d9868311e7cfc39b789c48fa1b5"
+    url "https://github.com/bloomberg/bde-tools/archive/refs/tags/4.29.0.0.tar.gz"
+    sha256 "0e9fb2871cf0df9df2d86c240d736e94f47de67de4ccfeacb1f03e4a6a1f3a09"
 
     livecheck do
       regex(/^v?(\d+\.\d+\.\d+\.\d+)$/i)

@@ -7,12 +7,12 @@ class Regclient < Formula
   head "https://github.com/regclient/regclient.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "539bee7039acb2ac9fb3eb9a0ff755f2d7348bc9b03f1c1a6fe4b0a6f4373bef"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "539bee7039acb2ac9fb3eb9a0ff755f2d7348bc9b03f1c1a6fe4b0a6f4373bef"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "539bee7039acb2ac9fb3eb9a0ff755f2d7348bc9b03f1c1a6fe4b0a6f4373bef"
-    sha256 cellar: :any_skip_relocation, sonoma:        "d1845439cadcf263e42708ca52240b939c431956d46f71221bbe847308a9dea0"
-    sha256 cellar: :any_skip_relocation, ventura:       "d1845439cadcf263e42708ca52240b939c431956d46f71221bbe847308a9dea0"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "ba9003aab90173418bd0a4ded783692cdb7a177129c279a24a21144a54f6c019"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "1ee086607d20229b30ebbf7cec5d8ea366138f4500acb5ac1885299d2e6bdf49"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "1ee086607d20229b30ebbf7cec5d8ea366138f4500acb5ac1885299d2e6bdf49"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "1ee086607d20229b30ebbf7cec5d8ea366138f4500acb5ac1885299d2e6bdf49"
+    sha256 cellar: :any_skip_relocation, sonoma:        "715745cdec3c559a0beee810c5d25dec5d9d02077de5e5763dfa4f51b7a3563f"
+    sha256 cellar: :any_skip_relocation, ventura:       "715745cdec3c559a0beee810c5d25dec5d9d02077de5e5763dfa4f51b7a3563f"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "8d55e4b69373d1d3720c91b8d0ed0ebd30961ef5a90bebbd414e2d5cf40162e6"
   end
 
   depends_on "go" => :build

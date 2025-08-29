@@ -1,8 +1,8 @@
 class Readpe < Formula
   desc "PE analysis toolkit"
   homepage "https://github.com/mentebinaria/readpe"
-  url "https://github.com/mentebinaria/readpe/archive/refs/tags/v0.85.tar.gz"
-  sha256 "2747a3ee87c7fb1ed0a13242816752a94603adb6ae0d9f507b019ac582c394eb"
+  url "https://github.com/mentebinaria/readpe/archive/refs/tags/v0.85.1.tar.gz"
+  sha256 "3218099d94c81488a4b042d86f64a4076835e1f2f2aff8ed4d58f01c20567507"
   license "GPL-2.0-or-later"
   head "https://github.com/mentebinaria/readpe.git", branch: "master"
 

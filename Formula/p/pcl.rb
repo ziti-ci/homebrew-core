@@ -4,6 +4,7 @@ class Pcl < Formula
   url "https://github.com/PointCloudLibrary/pcl/archive/refs/tags/pcl-1.15.1.tar.gz"
   sha256 "e1d862c7b6bd27a45884a825a2e509bfcbd4561307d5bfe17ce5c8a3d94a6c29"
   license "BSD-3-Clause"
+  revision 1
   head "https://github.com/PointCloudLibrary/pcl.git", branch: "master"
 
   bottle do

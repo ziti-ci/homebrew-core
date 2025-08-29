@@ -8,11 +8,12 @@ class Arrayfire < Formula
 
   bottle do
     rebuild 1
-    sha256 cellar: :any, arm64_sequoia: "fdf1c8013720008558454d66f2390c04bb82d33416f82d69cb35632bc6dc266c"
-    sha256 cellar: :any, arm64_sonoma:  "f94b4f07a17c86b0e56ac0ee0e6bb5a75d91112b79213977685a06cd9e072b5a"
-    sha256 cellar: :any, arm64_ventura: "5005319ee0b289f49222ba08554d0e911fed8def11055f5bc0e3eac338b278ad"
-    sha256 cellar: :any, sonoma:        "17b8f29a9302e75f8ed5924930a712b6637c1a4878bd222f22dbfa5344161b09"
-    sha256 cellar: :any, ventura:       "76d0d5e3e17d25ce307003d9f7a608f6869afcc6128d82241613ea39473ac6f4"
+    sha256 cellar: :any,                 arm64_sequoia: "fdf1c8013720008558454d66f2390c04bb82d33416f82d69cb35632bc6dc266c"
+    sha256 cellar: :any,                 arm64_sonoma:  "f94b4f07a17c86b0e56ac0ee0e6bb5a75d91112b79213977685a06cd9e072b5a"
+    sha256 cellar: :any,                 arm64_ventura: "5005319ee0b289f49222ba08554d0e911fed8def11055f5bc0e3eac338b278ad"
+    sha256 cellar: :any,                 sonoma:        "17b8f29a9302e75f8ed5924930a712b6637c1a4878bd222f22dbfa5344161b09"
+    sha256 cellar: :any,                 ventura:       "76d0d5e3e17d25ce307003d9f7a608f6869afcc6128d82241613ea39473ac6f4"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "5f4062b6bc7951d8220fb010a7d884575dd23a7a3dcd8d6d05a3f2f99ce864e2"
   end
 
   depends_on "boost" => :build

@@ -29,7 +29,6 @@ class Fontconfig < Formula
 
   uses_from_macos "gperf" => :build
   uses_from_macos "python" => :build, since: :catalina
-  uses_from_macos "bzip2"
   uses_from_macos "expat"
 
   on_macos do
@@ -37,8 +36,6 @@ class Fontconfig < Formula
   end
 
   on_linux do
-    depends_on "gettext" => :build
-    depends_on "json-c" => :build
     depends_on "util-linux"
   end
 

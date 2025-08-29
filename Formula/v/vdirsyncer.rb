@@ -9,14 +9,14 @@ class Vdirsyncer < Formula
   head "https://github.com/pimutils/vdirsyncer.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "f78855f28b30651d389eb5f2af1a7f1e97f219a325e47dd35678ae0efcb63cdc"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "1a43f63a03a74085aeedc94fd6927f397a4b139c72cdbb65b2b76b512528bbb0"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "b38750494434bb434df17c074abbe87fe684aa86ff4e05a9d6ccddbdc36a5593"
-    sha256 cellar: :any_skip_relocation, sequoia:       "1e2679ebed7633a12daa16c17ff86b8b4369c1e5fd89889081934bb58e3a45e8"
-    sha256 cellar: :any_skip_relocation, sonoma:        "cd21c3cd1d5b9315c8104bc8caeeb50a0f3fc1b68c58f5521d5293d81e4ce7e8"
-    sha256 cellar: :any_skip_relocation, ventura:       "a3a8797ffb67b203de3d55d71dfcf65b0270c9e1a57497245b5c9612747eab0e"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "07f0a22e73e1a76a8b68172daa1c296f2c1e3d3e845f825ee155a1e92f394b22"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "c8688df9033fae3ea9cc00ae6e0f80d211674b5a00f1d186637c18be732b3191"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "bc57571024d407086066c3f78a09120ecf270565cf276cfc6b5c3d527429452e"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "e72ac8e2abc60d1ec9f5c25e9bcb5234a377f4443cc5cec8642b7bfafb747232"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "c9586dd233fa9a3b34a3bdfc538d93d04f1a11fffe03f3f12f2fd9c7035a982c"
+    sha256 cellar: :any_skip_relocation, sequoia:       "4bfff9faaf8fe5ef1d707fa3fa6b7441eba68cd086410aa6db31e5c53809ec6b"
+    sha256 cellar: :any_skip_relocation, sonoma:        "b6409d94c610a11c44c081432e703c8fe10f86a2dee6a509bff513f1c69cc2a6"
+    sha256 cellar: :any_skip_relocation, ventura:       "f0de31a8bf0faa2cb04e912902c2b3a8bce229865eec6c5570ba37cc17ceba82"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "f736f0c58a9827971d357ff4f9334c0707b59a1415fe213268235ed4d9569e4c"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "d48858ed37bf30a02d459ffc89d4f170cfccb382747ce215f1798c1f06acec15"
   end
 
   depends_on "certifi"

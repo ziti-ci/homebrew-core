@@ -1,8 +1,8 @@
 class Rv < Formula
   desc "Ruby version manager"
   homepage "https://github.com/spinel-coop/rv"
-  url "https://github.com/spinel-coop/rv/archive/refs/tags/v0.1.0.tar.gz"
-  sha256 "8fafaed9ffcdd2af3326831d914d032388f9ee0df6b195efe93a4a8d6ae8940d"
+  url "https://github.com/spinel-coop/rv/archive/refs/tags/v0.1.1.tar.gz"
+  sha256 "1548dc6411fabc6b6b91e1faca08f0f1d78b3dcbb05a0c17e42e8ec959b9c4dd"
   license any_of: ["Apache-2.0", "MIT"]
   head "https://github.com/spinel-coop/rv.git", branch: "main"
 

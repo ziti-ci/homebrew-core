@@ -5,8 +5,8 @@ class Icloudpd < Formula
   homepage "https://github.com/icloud-photos-downloader/icloud_photos_downloader"
   # We use a git checkout as scripts/patch_version runs git commands to update SHA
   url "https://github.com/icloud-photos-downloader/icloud_photos_downloader.git",
-      tag:      "v1.31.0",
-      revision: "2f77ee52199ff77a632f4bd04595197c0fd7656a"
+      tag:      "v1.32.0",
+      revision: "9519784c2019ca154f3a43a50060af1cdaf1a605"
   license "MIT"
   head "https://github.com/icloud-photos-downloader/icloud_photos_downloader.git", branch: "master"
 
@@ -38,8 +38,8 @@ class Icloudpd < Formula
   end
 
   resource "click" do
-    url "https://files.pythonhosted.org/packages/b9/2e/0090cbf739cee7d23781ad4b89a9894a41538e4fcf4c31dcdd705b78eb8b/click-8.1.8.tar.gz"
-    sha256 "ed53c9d8990d83c2a27deae68e4ee337473f6330c040a31d4225c9574d16096a"
+    url "https://files.pythonhosted.org/packages/60/6c/8ca2efa64cf75a977a0d7fac081354553ebe483345c734fb6b6515d96bbc/click-8.2.1.tar.gz"
+    sha256 "27c491cc05d968d271d5a1db13e3b5a184636d9d930f148c50b038f0d0646202"
   end
 
   resource "flask" do
@@ -68,8 +68,8 @@ class Icloudpd < Formula
   end
 
   resource "jaraco-functools" do
-    url "https://files.pythonhosted.org/packages/49/1c/831faaaa0f090b711c355c6d8b2abf277c72133aab472b6932b03322294c/jaraco_functools-4.2.1.tar.gz"
-    sha256 "be634abfccabce56fa3053f8c7ebe37b682683a4ee7793670ced17bab0087353"
+    url "https://files.pythonhosted.org/packages/f7/ed/1aa2d585304ec07262e1a83a9889880701079dde796ac7b1d1826f40c63d/jaraco_functools-4.3.0.tar.gz"
+    sha256 "cfd13ad0dd2c47a3600b439ef72d8615d482cedcff1632930d6f28924d92f294"
   end
 
   resource "jinja2" do

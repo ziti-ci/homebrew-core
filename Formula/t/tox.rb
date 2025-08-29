@@ -3,8 +3,8 @@ class Tox < Formula
 
   desc "Generic Python virtualenv management and test command-line tool"
   homepage "https://tox.wiki/en/latest/"
-  url "https://files.pythonhosted.org/packages/cf/01/321c98e3cc584fd101d869c85be2a8236a41a84842bc6af5c078b10c2126/tox-4.28.4.tar.gz"
-  sha256 "b5b14c6307bd8994ff1eba5074275826620325ee1a4f61316959d562bfd70b9d"
+  url "https://files.pythonhosted.org/packages/cc/22/a6e962733036faa8cf778fe065ac301f5bb6986b5adb0d3f965fa8bb2934/tox-4.29.0.tar.gz"
+  sha256 "7b3a2bb43974285110eee35a859f2b3f2e87a24f6e1011d83f466b7c75835bd2"
   license "MIT"
 
   bottle do

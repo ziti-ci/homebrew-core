@@ -3,8 +3,8 @@ class Mlx < Formula
 
   desc "Array framework for Apple silicon"
   homepage "https://github.com/ml-explore/mlx"
-  url "https://github.com/ml-explore/mlx/archive/refs/tags/v0.28.0.tar.gz"
-  sha256 "b341dee8243a142d360a8369607ca9733bc6029970493ff43343058a43d7d18f"
+  url "https://github.com/ml-explore/mlx/archive/refs/tags/v0.29.0.tar.gz"
+  sha256 "7b5a43673f822e5ae28507f43127b10080db3e8da73d99a2efa5b34dbadd2bc4"
   license all_of: [
     "MIT", # main license
     "Apache-2.0", # metal-cpp resource
@@ -48,8 +48,8 @@ class Mlx < Formula
 
   # Update to GIT_TAG at https://github.com/ml-explore/mlx/blob/v#{version}/mlx/io/CMakeLists.txt
   resource "gguflib" do
-    url "https://github.com/antirez/gguf-tools/archive/af7d88d808a7608a33723fba067036202910acb3.tar.gz"
-    sha256 "1ee2dde74a3f9506af9ad61d7638a5e87b5e891b5e36a5dd3d5f412a8ce8dd03"
+    url "https://github.com/antirez/gguf-tools/archive/8fa6eb65236618e28fd7710a0fba565f7faa1848.tar.gz"
+    sha256 "9e30bc1eb82cc2231150d39ce37dcdd6f844d6994fba18da83fc537a487ba86f"
   end
 
   def python3

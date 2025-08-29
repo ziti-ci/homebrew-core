@@ -1,8 +1,8 @@
 class Gbox < Formula
   desc "Self-hostable sandbox for AI Agents to execute commands and surf web"
   homepage "https://gbox.ai"
-  url "https://github.com/babelcloud/gbox/releases/download/v0.1.7/gbox-v0.1.7.tar.gz"
-  sha256 "4fe828140713d863a9995ce0e93f11d20f5b9e46ea1270065842d8bd6363e7d2"
+  url "https://github.com/babelcloud/gbox/releases/download/v0.1.8/gbox-v0.1.8.tar.gz"
+  sha256 "b4a219a747b8917515c8ddd2e25bbf688bece9a0f1cffda2068b9f1b78613abb"
   license "Apache-2.0"
 
   bottle do
@@ -29,13 +29,10 @@ class Gbox < Formula
     # Test gbox version
     assert_match version.to_s, shell_output("#{bin}/gbox --version")
 
-    # Test gbox profile management
-    add_output = shell_output("#{bin}/gbox profile add -k xxx -n gbox-user -o local")
-    assert_match "Profile added successfully", add_output
+    # gbox validates the API key when adding a profile
+    add_output = shell_output("#{bin}/gbox profile add -k xxx 2>&1", 1)
+    assert_match "Error: failed to validate API key", add_output
 
-    current_output = shell_output("#{bin}/gbox profile current")
-    assert_match "Profile Name: gbox-user", current_output
-    assert_match "Organization Name: local", current_output
-    assert_match "API Key: xxx", current_output
+    assert_match "mcpServers", shell_output("#{bin}/gbox mcp export")
   end
 end

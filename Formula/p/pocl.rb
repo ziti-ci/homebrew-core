@@ -59,11 +59,15 @@ class Pocl < Formula
       -DLLVM_LIBDIR=#{llvm.opt_lib}
       -DLLVM_INCLUDEDIR=#{llvm.opt_include}
     ]
-    if Hardware::CPU.intel?
-      # Only x86_64 supports "distro" which allows runtime detection of SSE/AVX
-      args << "-DKERNELLIB_HOST_CPU_VARIANTS=distro"
-    elsif OS.mac?
-      args << "-DLLC_HOST_CPU=apple-m1"
+    if build.bottle?
+      args << if Hardware::CPU.intel?
+        # Only x86_64 supports "distro" which allows runtime detection of SSE/AVX
+        "-DKERNELLIB_HOST_CPU_VARIANTS=distro"
+      elsif OS.mac?
+        "-DLLC_HOST_CPU=apple-m1"
+      else
+        "-DLLC_HOST_CPU=generic"
+      end
     end
 
     system "cmake", "-S", ".", "-B", "build", *args, *std_cmake_args

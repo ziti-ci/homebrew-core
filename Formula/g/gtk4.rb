@@ -1,8 +1,8 @@
 class Gtk4 < Formula
   desc "Toolkit for creating graphical user interfaces"
   homepage "https://gtk.org/"
-  url "https://download.gnome.org/sources/gtk/4.18/gtk-4.18.6.tar.xz"
-  sha256 "e1817c650ddc3261f9a8345b3b22a26a5d80af154630dedc03cc7becefffd0fa"
+  url "https://download.gnome.org/sources/gtk/4.20/gtk-4.20.0.tar.xz"
+  sha256 "79e51e62f7f0cff32904569b0cebc96297d0ebfafa6de8172073c69ce0391a98"
   license "LGPL-2.1-or-later"
 
   livecheck do
@@ -40,6 +40,7 @@ class Gtk4 < Formula
   depends_on "jpeg-turbo"
   depends_on "libepoxy"
   depends_on "libpng"
+  depends_on "librsvg"
   depends_on "libtiff"
   depends_on "pango"
 

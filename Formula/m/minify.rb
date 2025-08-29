@@ -7,12 +7,12 @@ class Minify < Formula
   head "https://github.com/tdewolff/minify.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "54e83b371cc92047eb862df45c173199fa5b7526010e571175ce6156503f2b10"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "54e83b371cc92047eb862df45c173199fa5b7526010e571175ce6156503f2b10"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "54e83b371cc92047eb862df45c173199fa5b7526010e571175ce6156503f2b10"
-    sha256 cellar: :any_skip_relocation, sonoma:        "3f0e7773f4faf23b98e4e8da13e70c84647f7948d2f0c75553bb9195627f74d0"
-    sha256 cellar: :any_skip_relocation, ventura:       "3f0e7773f4faf23b98e4e8da13e70c84647f7948d2f0c75553bb9195627f74d0"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "799179f0381df0d4d5ebf728bf8b5079076817fd61da799abd2e836b7efb061f"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "6bcb25065b073c06ca91086f670ef933b7049aa9ef6f040b5167ed3f70cbc961"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "6bcb25065b073c06ca91086f670ef933b7049aa9ef6f040b5167ed3f70cbc961"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "6bcb25065b073c06ca91086f670ef933b7049aa9ef6f040b5167ed3f70cbc961"
+    sha256 cellar: :any_skip_relocation, sonoma:        "55837acbafa6a461ff99d6865512a0ddcb74d983b3612f3cc2d3ad05ad8ff02d"
+    sha256 cellar: :any_skip_relocation, ventura:       "55837acbafa6a461ff99d6865512a0ddcb74d983b3612f3cc2d3ad05ad8ff02d"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "87f177cdc635afb04c9d35b05e77da4d1e22ef1cd1cd23c53b91c006315c4410"
   end
 
   depends_on "go" => :build

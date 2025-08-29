@@ -1,9 +1,19 @@
 class Gtkmm4 < Formula
   desc "C++ interfaces for GTK+ and GNOME"
   homepage "https://www.gtkmm.org/"
-  url "https://download.gnome.org/sources/gtkmm/4.18/gtkmm-4.18.0.tar.xz"
-  sha256 "2ee31c15479fc4d8e958b03c8b5fbbc8e17bc122c2a2f544497b4e05619e33ec"
   license "LGPL-2.1-or-later"
+  revision 1
+
+  stable do
+    url "https://download.gnome.org/sources/gtkmm/4.18/gtkmm-4.18.0.tar.xz"
+    sha256 "2ee31c15479fc4d8e958b03c8b5fbbc8e17bc122c2a2f544497b4e05619e33ec"
+
+    # Fix build failure with Gtk4 >=4.20.0
+    # https://gitlab.gnome.org/GNOME/gtkmm/-/commit/94959145f8b9248e7f6384fb293f1429599f614d
+    # We can't use the upstream commit because it requires re-generating pre-generated files in the tarball.
+    # This requires many extra dependencies (see the `head` spec) and fails on Linux for some reason.
+    patch :DATA
+  end
 
   livecheck do
     url :stable
@@ -18,6 +28,18 @@ class Gtkmm4 < Formula
     sha256 cellar: :any, ventura:       "af5a7c6f8fbbb6069fb4cc9bdbd11e78e072f43e5f391896924c01bf19c3ab50"
     sha256               arm64_linux:   "b6d3373334c215ec185f7e17c90f1f50798d12c37934a6f7cabf54c619a4c484"
     sha256               x86_64_linux:  "e6406579298ce93e310bcdea9fb9b7d9a201ccf3446f65d04259c7988f0d68c2"
+  end
+
+  head do
+    url "https://gitlab.gnome.org/GNOME/gtkmm.git", branch: "master"
+
+    depends_on "mm-common" => :build
+    uses_from_macos "m4" => :build
+    uses_from_macos "perl" => :build
+
+    on_linux do
+      depends_on "perl-xml-parser" => :build
+    end
   end
 
   depends_on "meson" => :build
@@ -35,7 +57,7 @@ class Gtkmm4 < Formula
   depends_on "pangomm"
 
   def install
-    system "meson", "setup", "build", *std_meson_args
+    system "meson", "setup", "build", "-Dbuild-documentation=false", *std_meson_args
     system "meson", "compile", "-C", "build", "--verbose"
     system "meson", "install", "-C", "build"
   end
@@ -57,3 +79,22 @@ class Gtkmm4 < Formula
     system "./test"
   end
 end
+
+__END__
+diff --git i/untracked/gtk/gtkmm/iconpaintable.h w/untracked/gtk/gtkmm/iconpaintable.h
+index dfdedf3..432ab1b 100644
+--- i/untracked/gtk/gtkmm/iconpaintable.h
++++ w/untracked/gtk/gtkmm/iconpaintable.h
+@@ -29,11 +29,10 @@
+ #include <glibmm/object.h>
+ #include <gdkmm/paintable.h>
+ #include <giomm/file.h>
++#include <gtk/gtk.h>
+ 
+ 
+ #ifndef DOXYGEN_SHOULD_SKIP_THIS
+-using GtkIconPaintable = struct _GtkIconPaintable;
+-using GtkIconPaintableClass = struct _GtkIconPaintableClass;
+ #endif /* DOXYGEN_SHOULD_SKIP_THIS */
+ 
+ 

@@ -1,8 +1,8 @@
 class Brush < Formula
   desc "Bourne RUsty SHell (command interpreter)"
   homepage "https://github.com/reubeno/brush"
-  url "https://github.com/reubeno/brush/archive/refs/tags/brush-shell-v0.2.21.tar.gz"
-  sha256 "8604f4d5feb28a3466687f491d6bbad9d9e19c258e3c8c8d68209da5266b67cd"
+  url "https://github.com/reubeno/brush/archive/refs/tags/brush-shell-v0.2.22.tar.gz"
+  sha256 "ea32dd57534b446edda66ed215325d07c10cf6f357b3b6272081dab853968be4"
   license "MIT"
   head "https://github.com/reubeno/brush.git", branch: "main"
 
@@ -22,6 +22,13 @@ class Brush < Formula
   end
 
   depends_on "rust" => :build
+
+  # Fix to get correct exit code for the version and help commands, should be removed in next release
+  # PR ref: https://github.com/reubeno/brush/pull/667
+  patch do
+    url "https://github.com/reubeno/brush/commit/d4e09d98abf95f5a941ea8709b93805c9523994b.patch?full_index=1"
+    sha256 "51b36a680380b41a1f9703035a3198ea0b3d7bdb66e1762d4e219fd7715a61f2"
+  end
 
   def install
     system "cargo", "install", *std_cargo_args(path: "brush-shell")

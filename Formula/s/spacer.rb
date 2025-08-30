@@ -1,8 +1,8 @@
 class Spacer < Formula
   desc "Small command-line utility for adding spacers to command output"
   homepage "https://github.com/samwho/spacer"
-  url "https://github.com/samwho/spacer/archive/refs/tags/v0.4.5.tar.gz"
-  sha256 "543ad6081bb61cfd69aa5feb88efb4c10b217a4755c871f688e44693ff3b5b1c"
+  url "https://github.com/samwho/spacer/archive/refs/tags/v0.5.0.tar.gz"
+  sha256 "310b08c538c04bae779a1c4786430e974801e8880a4c5256dc0877bc82b61af0"
   license "MIT"
 
   bottle do

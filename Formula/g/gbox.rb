@@ -1,5 +1,5 @@
 class Gbox < Formula
-  desc "Self-hostable sandbox for AI Agents to execute commands and surf web"
+  desc "Provides environments for AI Agents to operate computer and mobile devices"
   homepage "https://gbox.ai"
   url "https://github.com/babelcloud/gbox/releases/download/v0.1.8/gbox-v0.1.8.tar.gz"
   sha256 "b4a219a747b8917515c8ddd2e25bbf688bece9a0f1cffda2068b9f1b78613abb"
@@ -16,6 +16,7 @@ class Gbox < Formula
 
   depends_on "go" => :build
   depends_on "rsync" => :build
+  depends_on "frpc"
   depends_on "yq"
 
   uses_from_macos "jq"

@@ -1,18 +1,18 @@
 class Deck < Formula
   desc "Creates slide deck using Markdown and Google Slides"
   homepage "https://github.com/k1LoW/deck"
-  url "https://github.com/k1LoW/deck/archive/refs/tags/v1.17.2.tar.gz"
-  sha256 "c128208f9a1babc64e3420f625a65b0b112360afef7666f7e5806daa631b45ce"
+  url "https://github.com/k1LoW/deck/archive/refs/tags/v1.18.0.tar.gz"
+  sha256 "d86929b6f7f0a69cfcddb832d8ef620c0dd6f3825a03efb10b2ff9d44613149e"
   license "MIT"
   head "https://github.com/k1LoW/deck.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "2e7872557d7d4bf16c565e650f09f5630874283f1eb05a173aca7684c370e730"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "2e7872557d7d4bf16c565e650f09f5630874283f1eb05a173aca7684c370e730"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "2e7872557d7d4bf16c565e650f09f5630874283f1eb05a173aca7684c370e730"
-    sha256 cellar: :any_skip_relocation, sonoma:        "f0f64c5fd16bdb8e6db679fac43a7e854426cdbef39d30c8ba44c1ede52db901"
-    sha256 cellar: :any_skip_relocation, ventura:       "f0f64c5fd16bdb8e6db679fac43a7e854426cdbef39d30c8ba44c1ede52db901"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "b162e9dbb3222c49f7942cc17c674422c6d86f3f0bca32db61ab5407a95a25c0"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "0c3b278da09b7c792417177059e8da0878ab0bea7e1bda32340b7ca30ca0ab32"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "0c3b278da09b7c792417177059e8da0878ab0bea7e1bda32340b7ca30ca0ab32"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "0c3b278da09b7c792417177059e8da0878ab0bea7e1bda32340b7ca30ca0ab32"
+    sha256 cellar: :any_skip_relocation, sonoma:        "795b9588b8807773adaef9c0c606eb751dfe9c37976efe4a4046bbe9d000bc49"
+    sha256 cellar: :any_skip_relocation, ventura:       "795b9588b8807773adaef9c0c606eb751dfe9c37976efe4a4046bbe9d000bc49"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "109539a09f0db040d5b845b180e52115795c8be035717d789e135111102e8f9d"
   end
 
   depends_on "go" => :build

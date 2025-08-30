@@ -1,8 +1,8 @@
 class Caesiumclt < Formula
   desc "Fast and efficient lossy and/or lossless image compression tool"
   homepage "https://github.com/Lymphatus/caesium-clt"
-  url "https://github.com/Lymphatus/caesium-clt/archive/refs/tags/v1.0.0.tar.gz"
-  sha256 "2ba935780d3798a3047ff87c7b855531ca2472114460704b99191cc069203f07"
+  url "https://github.com/Lymphatus/caesium-clt/archive/refs/tags/v1.0.1.tar.gz"
+  sha256 "97cb373faa583226449ee71cc89fdad275afd3dbd1fc22a0b82d25959c95a2a0"
   license "Apache-2.0"
 
   bottle do

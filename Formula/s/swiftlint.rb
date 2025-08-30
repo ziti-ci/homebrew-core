@@ -7,7 +7,7 @@ class Swiftlint < Formula
   license "MIT"
   head "https://github.com/realm/SwiftLint.git", branch: "main"
 
-  no_autobump! because: :requires_manual_review
+  no_autobump! because: :bumped_by_upstream
 
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_sequoia: "ff2334d36d563ef25bbd8e86e7abfb6c5f12339cf60db80844ab4e227ad87fa3"

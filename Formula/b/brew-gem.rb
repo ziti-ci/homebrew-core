@@ -17,7 +17,7 @@ class BrewGem < Formula
   no_autobump! because: :requires_manual_review
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "e11e8436e3bc9f8580b2e29da9b07e023ab594b1c928bf600fac5274a35e543d"
+    sha256 cellar: :any_skip_relocation, all: "ef38079c55d47695e059adeed9a24ca3921ef4f33712c1c5ca7d963c6750a55b"
   end
 
   uses_from_macos "ruby"

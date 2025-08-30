@@ -35,10 +35,19 @@ class St < Formula
   def install
     ENV.prepend_create_path "PERL5LIB", lib/"perl5/"
 
-    system "perl", "Makefile.PL", "INSTALL_BASE=#{prefix}", "INSTALLSITEMAN1DIR=#{man1}", "INSTALLSITEMAN3DIR=#{man3}"
+    args = %W[
+      INSTALL_BASE=#{prefix}
+      INSTALLSITEMAN1DIR=#{man1}
+      INSTALLSITEMAN3DIR=#{man3}
+      MAN1EXT=1
+    ]
+    system "perl", "Makefile.PL", *args
     system "make", "install"
 
     bin.env_script_all_files libexec/"bin", PERL5LIB: ENV["PERL5LIB"]
+
+    # Build an `:all` bottle
+    chmod 0755, [bin, lib/"perl5/App", share, share/"man", man1, man3] # permissions match
   end
 
   test do

@@ -9,8 +9,7 @@ class GitTools < Formula
   head "https://github.com/MestreLion/git-tools.git", branch: "main"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, all: "e366dc448c4d69062807a793bc8fdd6ae66a17a0a785b71a1f36f661eb7fbd35"
+    sha256 cellar: :any_skip_relocation, all: "ba1a42e203720e6a74dcdfefb2653be957015fbd115415686b119975f111bdb6"
   end
 
   uses_from_macos "python", since: :catalina

@@ -1,18 +1,18 @@
 class LivekitCli < Formula
   desc "Command-line interface to LiveKit"
   homepage "https://livekit.io"
-  url "https://github.com/livekit/livekit-cli/archive/refs/tags/v2.5.3.tar.gz"
-  sha256 "0829509fd0f1e92c65249959c53ab65a406e76f88a04f21347323072bc0118dc"
+  url "https://github.com/livekit/livekit-cli/archive/refs/tags/v2.5.4.tar.gz"
+  sha256 "1fb72b9710beb74c2a66978f7dd68d69723bcbae8dc3368cd4b2262d50c19cf7"
   license "Apache-2.0"
   head "https://github.com/livekit/livekit-cli.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "fbc73594063d280231ed6f4fe4996b09790df0dcb2090668445ac455b512706b"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "2a3736e7d0d4cf6798152e2c28bfd9634aff201cf7bc54dcc096d6b43585e00d"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "8e8165bed960d0f6ce23285559fe918dc1189f84fc5d0fec7dd48e9d2e5f5d4f"
-    sha256 cellar: :any_skip_relocation, sonoma:        "c192a33a25e074b0492cbd0a50d0afd9c815cc84720c4184fa4381e52b7b85e6"
-    sha256 cellar: :any_skip_relocation, ventura:       "041d170500a0e964e4f1d00e1cd775ae454803d37309846747666af198c5c0a3"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "300c877f3fdac46dbda0324c3f7bd5e7de2b1fb64fa0c751a7eace2e9d5899f2"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "565156fbb8ec538e1f4148e5e5e9ef4b67b3bdc1b9bcd8e07b23f838b0a23af6"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "7687fa06a742c28f7a43003395e47db93befa15f73e8471e2d8f70e701b0605b"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "17fe58547bb0c009cf5f4c9a1363f5709796c74d75ab1f48483c665377bd54cf"
+    sha256 cellar: :any_skip_relocation, sonoma:        "ba8189547b836afb48104081b95ce975168d393b8092676a9dc91702f64a92f2"
+    sha256 cellar: :any_skip_relocation, ventura:       "8f905b456e43330443af07a66013e0029cba85863631fb52bc638f1d5c3ecf4e"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "c86dd13f863ac914be85af84132888bad4bd4147ba6bd4e5d3233546fa376bab"
   end
 
   depends_on "go" => :build

@@ -25,10 +25,10 @@ class PerlXmlParser < Formula
 
   def install
     system "perl", "Makefile.PL", "INSTALL_BASE=#{prefix}"
-    system "make", "PERL5LIB=#{ENV["PERL5LIB"]}"
+    system "make"
     system "make", "install"
 
-    man.install prefix/"man"
+    share.install prefix/"man"
     perl_version = Formula["perl"].version.major_minor.to_s
     site_perl = lib/"perl5/site_perl"/perl_version
     (lib/"perl5").find do |pn|

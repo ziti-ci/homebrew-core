@@ -9,7 +9,7 @@ class RubyBuild < Formula
   no_autobump! because: :requires_manual_review
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "511e2150d2128145ae708620890e89a4c1da1e4b95650c66f3a90f988afb24d4"
+    sha256 cellar: :any_skip_relocation, all: "fdc15aef39d5db7e92e71e24167966c9b41482dd4fcf852e10062231cb7343d1"
   end
 
   depends_on "autoconf"

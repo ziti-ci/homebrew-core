@@ -7,8 +7,7 @@ class Inxi < Formula
   head "https://codeberg.org/smxi/inxi.git", branch: "master"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, all: "f66640719a9a4ac39e0eb2947b315e46066c7808ed30d6f9898b18c5b696e421"
+    sha256 cellar: :any_skip_relocation, all: "2d9b0d9030b98c4e9724c76ed1a65d5f56a67a9e585fdab3388dda856dc2164e"
   end
 
   uses_from_macos "perl"

@@ -24,6 +24,8 @@ class Binutils < Formula
   uses_from_macos "bison" => :build
   uses_from_macos "zlib"
 
+  skip_clean "etc/ld.so.conf"
+
   link_overwrite "bin/dwp"
 
   def install
@@ -61,9 +63,13 @@ class Binutils < Formula
       bin_files = bin.children.select(&:elf?)
       system "strip", *bin_files, *lib.glob("*.a")
     end
+
+    # Allow ld to find brew glibc. A broken symlink falls back to /etc/ld.so.conf
+    (prefix/"etc").install_symlink etc/"ld.so.conf" if OS.linux?
   end
 
   test do
     assert_match "Usage:", shell_output("#{bin}/strings #{bin}/strings")
+    assert_predicate prefix/"etc/ld.so.conf", :symlink? if OS.linux?
   end
 end

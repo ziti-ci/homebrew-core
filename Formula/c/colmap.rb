@@ -29,7 +29,7 @@ class Colmap < Formula
   depends_on "lz4"
   depends_on "metis"
   depends_on "poselib"
-  depends_on "qt@5"
+  depends_on "qt"
   depends_on "suite-sparse"
 
   uses_from_macos "sqlite"
@@ -44,9 +44,13 @@ class Colmap < Formula
     depends_on "mesa"
   end
 
-  def install
-    ENV.append_path "CMAKE_PREFIX_PATH", Formula["qt@5"].prefix
+  # Backport support for Qt6
+  patch do
+    url "https://github.com/colmap/colmap/commit/1625d9e8c97aa8beef0df0c00430c1c3d79190ab.patch?full_index=1"
+    sha256 "146e444bfe7209b046a8a5a9f14acb84bd381295ba7f2cc70a38f768e9137136"
+  end
 
+  def install
     args = %w[
       -DCUDA_ENABLED=OFF
       -DFETCH_POSELIB=OFF

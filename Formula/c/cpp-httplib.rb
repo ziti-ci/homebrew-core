@@ -6,7 +6,7 @@ class CppHttplib < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "7984bf9a74071441856ef2d4438441caeb7faa859ed5b2eaf76d5109958ca1c4"
+    sha256 cellar: :any_skip_relocation, all: "6d66edab7b828ace6acdd53665e8fa71e90b00a87afdc7229f080cbbf6cbd3b4"
   end
 
   depends_on "cmake" => :build

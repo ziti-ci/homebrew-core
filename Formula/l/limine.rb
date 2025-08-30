@@ -1,8 +1,8 @@
 class Limine < Formula
   desc "Modern, advanced, portable, multiprotocol bootloader and boot manager"
   homepage "https://limine-bootloader.org"
-  url "https://github.com/limine-bootloader/limine/releases/download/v9.6.1/limine-9.6.1.tar.gz"
-  sha256 "fc601e671d9286d0be568a8d3bf481f07e242cb81d2c073f440195c45e8899b7"
+  url "https://codeberg.org/Limine/Limine/releases/download/v9.6.5/limine-9.6.5.tar.gz"
+  sha256 "777b5e156e9e48a1be54859bb8eb396bd7f4731bf616cb1ea647237e57bb126b"
   license "BSD-2-Clause"
 
   livecheck do
@@ -36,11 +36,11 @@ class Limine < Formula
     # build system's defaults for the target tools.
     llvm_bins = Formula["llvm"].opt_bin
 
-    system "./configure", *std_configure_args, "--enable-all"
-    system "make",
+    system "./configure", *std_configure_args, "--enable-all",
            "TOOLCHAIN_FOR_TARGET=#{llvm_bins}/llvm-",
            "CC_FOR_TARGET=#{llvm_bins}/clang",
            "LD_FOR_TARGET=ld.lld"
+    system "make"
     system "make", "install"
   end
 

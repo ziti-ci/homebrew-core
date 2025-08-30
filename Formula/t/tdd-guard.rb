@@ -6,7 +6,7 @@ class TddGuard < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "71b36234c63db6cf404348012770eb91d7261cf3bba0a922a480b98c885f7768"
+    sha256 cellar: :any_skip_relocation, all: "a623b063955d4712d4e8ecc2688d33c42112f4835b45c7bc7ff575a6f7e9ffcf"
   end
 
   depends_on "node"

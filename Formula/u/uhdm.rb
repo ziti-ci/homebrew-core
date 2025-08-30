@@ -3,8 +3,8 @@ class Uhdm < Formula
 
   desc "Universal Hardware Data Model, modeling of the SystemVerilog Object Model"
   homepage "https://github.com/chipsalliance/UHDM"
-  url "https://github.com/chipsalliance/UHDM/archive/refs/tags/v1.85.tar.gz"
-  sha256 "3f91d3a4098e09b12839020c3a216004919b60e8c9a1311fb9a0232390ae04e8"
+  url "https://github.com/chipsalliance/UHDM/archive/refs/tags/v1.86.tar.gz"
+  sha256 "179203b166be5d1be12b901c69c6a569ebebf4fe47bc674b1268bd9319216fce"
   license "Apache-2.0"
   head "https://github.com/chipsalliance/UHDM.git", branch: "master"
 

@@ -5,6 +5,15 @@ class GnomePapers < Formula
   sha256 "0cc8d72c71d3d8aab1be10ae1941a4cd92cd1e2a7e830ab7680e2c82dfb19c0b"
   license "GPL-2.0-or-later"
 
+  bottle do
+    sha256 arm64_sequoia: "d9708f3c4d341496455119f0cbf14e9feb94bcfa3a6742f1ba1ac2b8a330d2d1"
+    sha256 arm64_sonoma:  "8a46f67637a9c9126948caa7b93048ee24aa314f9cc6a8f0b1ac664bf2bc0771"
+    sha256 arm64_ventura: "95f5d01e5cc470b223e26df75f92d968554e07856150f8b61e66c1a369d5f7a7"
+    sha256 sonoma:        "977966489988c8819b3b5b53bdbb5e584edc9618a7c6a6d256dae5a1cdd1ef8e"
+    sha256 ventura:       "6594e4cb62781155b467d0db3928f2288586774537f3ce1a9c003740003564f6"
+    sha256 x86_64_linux:  "719b56150089db56278c1493c45dcfdfc75d25f0cc921a59e6e557e601ea6ea0"
+  end
+
   depends_on "desktop-file-utils" => :build
   depends_on "gobject-introspection" => :build
   depends_on "itstool" => :build

@@ -7,7 +7,7 @@ class Jsign < Formula
   head "https://github.com/ebourg/jsign.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "398d1b30442ae333b029ad878b635c9f1301be644aa5b2b838de8eb93b039eda"
+    sha256 cellar: :any_skip_relocation, all: "1413911edeeefb33e063376892dfdfe174ba76f6fc83e8a343db0a8175093997"
   end
 
   depends_on "maven" => :build

@@ -1,8 +1,8 @@
 class Bkmr < Formula
   desc "Unified CLI Tool for Bookmark, Snippet, and Knowledge Management"
   homepage "https://github.com/sysid/bkmr"
-  url "https://github.com/sysid/bkmr/archive/refs/tags/v5.1.1.tar.gz"
-  sha256 "95da6d320acd7d66b872806ff874408d9102f96de959d43cc298c6834da6cc3a"
+  url "https://github.com/sysid/bkmr/archive/refs/tags/v6.2.1.tar.gz"
+  sha256 "48ab7e312ec7adac65cf32b997a17eedd4a3d42e75c3f8b7d95bd2a6fa86a959"
   license "BSD-3-Clause"
   head "https://github.com/sysid/bkmr.git", branch: "main"
 
@@ -34,15 +34,12 @@ class Bkmr < Formula
 
       system "cargo", "install", *std_cargo_args
     end
-
-    generate_completions_from_executable(bin/"bkmr", "completion")
   end
 
   test do
     assert_match version.to_s, shell_output("#{bin}/bkmr --version")
 
-    output = shell_output("#{bin}/bkmr info")
-    assert_match "Database URL: #{testpath}/.config/bkmr/bkmr.db", output
-    assert_match "Database Statistics", output
+    expected_output = "No database configured or the configured database does not exist."
+    assert_match expected_output, shell_output("#{bin}/bkmr info 2>&1", 1)
   end
 end

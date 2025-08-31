@@ -3,18 +3,18 @@ class PodcastArchiver < Formula
 
   desc "Archive all episodes from your favorite podcasts"
   homepage "https://codeberg.org/janw/podcast-archiver"
-  url "https://files.pythonhosted.org/packages/b6/f1/723ea4a06d092cd7bee35e0bac60778a611430c02afc73b5068df4a2e5af/podcast_archiver-2.3.1.tar.gz"
-  sha256 "80d18e9489b77603337109d84bc46e0fd83fffc82a5639ee81603cc71586c1be"
+  url "https://files.pythonhosted.org/packages/6a/05/dee5221997041f5553597bef45271e04942c62bacb0c40ab05479f008e4c/podcast_archiver-2.3.4.tar.gz"
+  sha256 "442759515c2cb10a58afa53873859969465fee6293e76251d7ac6c9077f78c3e"
   license "MIT"
 
   bottle do
-    sha256 cellar: :any,                 arm64_sequoia: "e9fd929afb21b344ee3b56c25adc887428b8ed52e00f79eda549b0e0ac4c1c29"
-    sha256 cellar: :any,                 arm64_sonoma:  "0c0f9668aa653fc147c28efe2ce5a035b8aaf6df921febc1cb4ba54b8a001819"
-    sha256 cellar: :any,                 arm64_ventura: "158772dc2658c7d42030e2b82625ad2af3a62b631437b71b67dd3eb087cd2451"
-    sha256 cellar: :any,                 sonoma:        "59e3e74bbcb84e00c9c5273647792e6822892fb4e61da478fa4c3f244c59f591"
-    sha256 cellar: :any,                 ventura:       "cddfcf4bf86a8e294541bc4e1ba080d7e8e27a532c689a180a23f06a4a33a8b3"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "c6cdb78ea3446f3065228fc73532412b4735bd5ec61492cf1e8938feb0b0aa35"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "26367738e081b3be192351cafce7ee70e0332b7ed1f17b9f552b58f1d6ff3f12"
+    sha256 cellar: :any,                 arm64_sequoia: "c99c002eb057da23c16a8bdcc1497744a92a21b55686c25122ecae97ed716073"
+    sha256 cellar: :any,                 arm64_sonoma:  "1d68bb452c4f39f39a54b8607251c1f12b22b32c5bc2493a6bdace93ca96d2aa"
+    sha256 cellar: :any,                 arm64_ventura: "75740060213340f534c49f4460bc99c36b8aaf06112e1d6bdd9be9a08cd7d7ab"
+    sha256 cellar: :any,                 sonoma:        "6c9d0ffe8258f93cbff395a10ccfe6cb33a3b76c46d6e91cec958df9656bab8c"
+    sha256 cellar: :any,                 ventura:       "195730e36181bccb2ec32d3a430c0f359fb37f1b1f746261b9b8783f6248374d"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "cb3d500d4bcf79c2f43ee6220c58205d67b07982d0d6c3196037436c60193148"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "8b779dbc649546a5ead7b7f09b85e3e8854785c4beea10511364b09f741c7075"
   end
 
   depends_on "rust" => :build # for pydantic_core
@@ -62,8 +62,8 @@ class PodcastArchiver < Formula
   end
 
   resource "platformdirs" do
-    url "https://files.pythonhosted.org/packages/fe/8b/3c73abc9c759ecd3f1f7ceff6685840859e8070c4d947c93fae71f6a0bf2/platformdirs-4.3.8.tar.gz"
-    sha256 "3d512d96e16bcb959a814c9f348431070822a6496326a4be0911c40b5a74c2bc"
+    url "https://files.pythonhosted.org/packages/23/e8/21db9c9987b0e728855bd57bff6984f67952bea55d6f75e055c46b5383e8/platformdirs-4.4.0.tar.gz"
+    sha256 "ca753cf4d81dc309bc67b0ea38fd15dc97bc30ce419a7f58d13eb3bf14c4febf"
   end
 
   resource "pydantic" do
@@ -122,8 +122,8 @@ class PodcastArchiver < Formula
   end
 
   resource "typing-extensions" do
-    url "https://files.pythonhosted.org/packages/98/5a/da40306b885cc8c09109dc2e1abd358d5684b1425678151cdaed4731c822/typing_extensions-4.14.1.tar.gz"
-    sha256 "38b39f4aeeab64884ce9f74c94263ef78f3c22467c8724005483154c26648d36"
+    url "https://files.pythonhosted.org/packages/72/94/1a15dd82efb362ac84269196e94cf00f187f7ed21c242792a923cdb1c61f/typing_extensions-4.15.0.tar.gz"
+    sha256 "0cea48d173cc12fa28ecabc3b837ea3cf6f38c6d1136f85cbaaf598984861466"
   end
 
   resource "typing-inspection" do

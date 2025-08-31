@@ -15,13 +15,13 @@ class Gom < Formula
   no_autobump! because: :incompatible_version_format
 
   bottle do
-    sha256 cellar: :any, arm64_sequoia: "653c39bbf08707dc8fc4204ce7b2317ff5304cf9050910df166292b34b68abdc"
-    sha256 cellar: :any, arm64_sonoma:  "5a91a0b28b4eb4621c687882d85be9d61fb9055affb380a9975ea884bbc56956"
-    sha256 cellar: :any, arm64_ventura: "ce76f0563174a6410e3352dab6eaaa91be8a88cce5daf7e6595397631d5da76d"
-    sha256 cellar: :any, sonoma:        "1018395f8e1ec4725a0bc5484871d0648f543bcf1c5c3bfd2587b0c00e9c9bc2"
-    sha256 cellar: :any, ventura:       "d6e41c8ef3f8f84204e1f368e7af8734b1243b75d069c6e7b3266f656d03fc15"
-    sha256               arm64_linux:   "7f79d6810958568ec1e2c7ad7d93b404c148ce0d4a41cf83647c263b1c5750f2"
-    sha256               x86_64_linux:  "0121f2c07b7e91f5b2fc56bc19d034e604540c927efe6e3fa2a28acfc707c66c"
+    sha256 cellar: :any, arm64_sequoia: "286804e2a0f7f463371deb3b386ea5943a2546725f730d9023b1c8ef94b58229"
+    sha256 cellar: :any, arm64_sonoma:  "a1da7b8efd1e81f0e2042e6b6ab12ae7ee6d59078b618f9084646cfa813e8077"
+    sha256 cellar: :any, arm64_ventura: "8710fd832106faaf1887b3a6c13959cd42879f780fe2173c798d50a675f0cfc7"
+    sha256 cellar: :any, sonoma:        "4355ac5f7df2cecbf3c4f08ddbb993a8452f1919d1c06f2de625b4afac9bf658"
+    sha256 cellar: :any, ventura:       "f91f8be1c52a4af4c309591d915fe0a78909255466255e3d913d0dbe535f37d6"
+    sha256               arm64_linux:   "c0aae5f129a2a49b67386a4bce25ad16758c54e9db383da740a51c6b954f388e"
+    sha256               x86_64_linux:  "682a80579b541d47fd4e224e9c4d03d2bdd73d436fcba5c0877898bdaa38c185"
   end
 
   depends_on "gobject-introspection" => :build

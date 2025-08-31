@@ -3,18 +3,18 @@ class Gamdl < Formula
 
   desc "Python CLI app for downloading Apple Music songs, music videos and post videos"
   homepage "https://github.com/glomatico/gamdl"
-  url "https://files.pythonhosted.org/packages/5a/39/1df1d79205bbe2f58bec133aecfa0f82971edbf4080f537bb50222180700/gamdl-2.6.1.tar.gz"
-  sha256 "cd18662567882129905a274226c111abcb7c92a117b742ee87f751426889904a"
+  url "https://files.pythonhosted.org/packages/35/76/994c2e9a1a96c7d1022d7a390f08e8e7a92ca7aa371bb64dafa9effa54d2/gamdl-2.6.2.tar.gz"
+  sha256 "6531592f9f7d19f0836abfa95cfc02b80312065fec951f0a107a2390f9a9d099"
   license "MIT"
 
   bottle do
-    sha256 cellar: :any,                 arm64_sequoia: "9f66d2fce4413a175eb4148f1e17b8bbe323aed34c3225ef63c24f9c8f012501"
-    sha256 cellar: :any,                 arm64_sonoma:  "d503dd1da135e8b8daeb9e4ef85a3ec04aad760212e12bdf21bdbbee447aa331"
-    sha256 cellar: :any,                 arm64_ventura: "b55139e02afa1ec05368ec943e7a31163f2176a64a854091bddfec8e67c830e5"
-    sha256 cellar: :any,                 sonoma:        "cdd5fb62a0892a132c6ad043077459c3351d51a62c5209ab25cbf850ad167d17"
-    sha256 cellar: :any,                 ventura:       "b4fbd9deb7113c0572af92dc404e47696a4c98c049de1bb874ac316a235d8156"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "4c372001916c1294dd82ca775c4e9f074cc0e41700afd0d4938ae6e94ccda42d"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "780905c0571e07b03a1852d62240534ce573e643ad819283ccea95013b4e980c"
+    sha256 cellar: :any,                 arm64_sequoia: "e6bfeab4c52bffd700b1c347890f3627c61756edd21104ad70063dc94707ce52"
+    sha256 cellar: :any,                 arm64_sonoma:  "748b1925d9e550ba37c111c90fbba9ade5999d1d9115ab5310c8c25a3f03ff83"
+    sha256 cellar: :any,                 arm64_ventura: "48cdbcbcb70c551b80617753d17f2d3b1265b678c8b6a50c421a10a5f8c46c0b"
+    sha256 cellar: :any,                 sonoma:        "14cf4df808204b252bc00524d20dc0179dd3e5aa88990296b531b04add36890c"
+    sha256 cellar: :any,                 ventura:       "bfdfc0a1761b6d853810f3b084479b12ab596fc47bc21ae1193edd541f19d8a1"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "f61dd4cc1207c09a9c942f96cc6b050b8edc78b13f334fb2fb2992dcc606a570"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "3a5223297f771c40e25d1c75f1cd50d1a942ab6095a08e07f8aa7b9e2f7f1ee3"
   end
 
   depends_on "certifi"

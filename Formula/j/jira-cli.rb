@@ -1,8 +1,8 @@
 class JiraCli < Formula
   desc "Feature-rich interactive Jira CLI"
   homepage "https://github.com/ankitpokhrel/jira-cli"
-  url "https://github.com/ankitpokhrel/jira-cli/archive/refs/tags/v1.6.0.tar.gz"
-  sha256 "89989534ae3f254be7a13dde51bfcf1c58f36cbf26ad3de9e333ead36579c007"
+  url "https://github.com/ankitpokhrel/jira-cli/archive/refs/tags/v1.7.0.tar.gz"
+  sha256 "6b1ecbd2228626cdc987548d8d83faae074c7a167cef737a9ac9180a03767154"
   license "MIT"
   head "https://github.com/ankitpokhrel/jira-cli.git", branch: "main"
 

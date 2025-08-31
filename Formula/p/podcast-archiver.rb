@@ -3,8 +3,8 @@ class PodcastArchiver < Formula
 
   desc "Archive all episodes from your favorite podcasts"
   homepage "https://codeberg.org/janw/podcast-archiver"
-  url "https://files.pythonhosted.org/packages/6a/05/dee5221997041f5553597bef45271e04942c62bacb0c40ab05479f008e4c/podcast_archiver-2.3.4.tar.gz"
-  sha256 "442759515c2cb10a58afa53873859969465fee6293e76251d7ac6c9077f78c3e"
+  url "https://files.pythonhosted.org/packages/96/05/8f08025cbfb32ad8a0589d90e69c9da04d4ecf201b48815569a114ffed2e/podcast_archiver-2.3.5.tar.gz"
+  sha256 "1c157df1202d1ce05e2303d7d729e4e1e87ba202cba6f51c6024b38a2236b937"
   license "MIT"
 
   bottle do

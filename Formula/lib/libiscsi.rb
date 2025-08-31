@@ -1,12 +1,10 @@
 class Libiscsi < Formula
   desc "Client library and utilities for iscsi"
   homepage "https://github.com/sahlberg/libiscsi"
-  url "https://github.com/sahlberg/libiscsi/archive/refs/tags/1.20.2.tar.gz"
-  sha256 "2b2a773ea0d3a708c1cafe61bbee780325fb1aafec6477f17d3f403e8732c9bf"
+  url "https://github.com/sahlberg/libiscsi/archive/refs/tags/1.20.3.tar.gz"
+  sha256 "212f6e1fd8e7ddb4b02208aafc6de600f6f330f40359babeefdd83b0c79d47a1"
   license all_of: [:public_domain, "LGPL-2.1-or-later", "GPL-2.0-or-later"]
   head "https://github.com/sahlberg/libiscsi.git", branch: "master"
-
-  no_autobump! because: :requires_manual_review
 
   bottle do
     sha256 cellar: :any,                 arm64_sequoia: "356c93d6460c560bde748339a32b9c55da3f12f87456b92ad2b66fa18b97a1ad"

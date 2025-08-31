@@ -1,10 +1,9 @@
 class PerconaServerAT80 < Formula
   desc "Drop-in MySQL replacement"
   homepage "https://www.percona.com"
-  url "https://downloads.percona.com/downloads/Percona-Server-8.0/Percona-Server-8.0.42-33/source/tarball/percona-server-8.0.42-33.tar.gz"
-  sha256 "503766073d515635ff9118afbe4ebd18f76d8cb8d64e094ac6d7a22f15ca4067"
+  url "https://downloads.percona.com/downloads/Percona-Server-8.0/Percona-Server-8.0.43-34/source/tarball/percona-server-8.0.43-34.tar.gz"
+  sha256 "4469b5e3873559f366eb632c7c231e01aa700c1b9c13cce869085dbe1ec9203e"
   license "BSD-3-Clause"
-  revision 3
 
   livecheck do
     url "https://www.percona.com/products-api.php", post_form: {
@@ -102,13 +101,8 @@ class PerconaServerAT80 < Formula
   end
 
   patch :p0 do
-    url "https://raw.githubusercontent.com/freebsd/freebsd-ports/1a02a961a2d53f21bf208f07903a97cc46f43e17/databases/mysql80-server/files/patch-sql_mdl__context__backup.h"
-    sha256 "e515b565d1501648ce3de0add12b67c63aecb3ec4db3794de72c4eeb301ff343"
-  end
-
-  patch :p0 do
-    url "https://raw.githubusercontent.com/freebsd/freebsd-ports/1a02a961a2d53f21bf208f07903a97cc46f43e17/databases/mysql80-server/files/patch-sql_range__optimizer_index__range__scan__plan.cc"
-    sha256 "44b5e76373fadd97560d66dae0dac14d98ae9a5c32d58d876bfe694016872bc7"
+    url "https://raw.githubusercontent.com/freebsd/freebsd-ports/1a72b413508501423ddfa576f6f50681cef398fa/databases/mysql80-server/files/patch-sql_mdl__context__backup.h"
+    sha256 "69be131aca93a8a263a394d61e8f388a9f560d1b19fa0fe8a2f2609bbc9b817d"
   end
 
   patch :p0 do
@@ -122,13 +116,8 @@ class PerconaServerAT80 < Formula
   end
 
   patch :p0 do
-    url "https://raw.githubusercontent.com/freebsd/freebsd-ports/1a02a961a2d53f21bf208f07903a97cc46f43e17/databases/mysql80-server/files/patch-sql_stream__cipher.h"
-    sha256 "9a11d4658f60a63f3f10ff97a5170e865afde3ebee3e703d8272aba3cf6e32d0"
-  end
-
-  patch :p0 do
-    url "https://raw.githubusercontent.com/freebsd/freebsd-ports/1a02a961a2d53f21bf208f07903a97cc46f43e17/databases/mysql80-server/files/patch-unittest_gunit_binlogevents_transaction__compression-t.cc"
-    sha256 "3bd0c22a2ee30a7b1e682e645dbdf473d4f0d6f8e5ffc447f088c5f1bf21efd7"
+    url "https://raw.githubusercontent.com/freebsd/freebsd-ports/1a72b413508501423ddfa576f6f50681cef398fa/databases/mysql80-server/files/patch-sql_stream__cipher.h"
+    sha256 "ab29351becd9ff8a6a3fcc37abcdfaace5dbc7176b776bce95e6679ee9f81efb"
   end
 
   patch :p0 do

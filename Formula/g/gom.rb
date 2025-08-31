@@ -1,8 +1,8 @@
 class Gom < Formula
   desc "GObject wrapper around SQLite"
   homepage "https://wiki.gnome.org/Projects/Gom"
-  url "https://download.gnome.org/sources/gom/0.5/gom-0.5.3.tar.xz"
-  sha256 "069d0909fbdc6b4d27edf7a879366194e3ab508b03548bf5b89ff63546d20177"
+  url "https://download.gnome.org/sources/gom/0.5/gom-0.5.4.tar.xz"
+  sha256 "57ba806fe080a937d5664178d21bad7653b2c561ea128187a7b10bc1762b7f65"
   license "LGPL-2.1-or-later"
 
   # We use a common regex because gom doesn't use GNOME's "even-numbered
@@ -12,7 +12,7 @@ class Gom < Formula
     regex(/gom[._-]v?(\d+(?:\.\d+)+)\.t/i)
   end
 
-  no_autobump! because: :requires_manual_review
+  no_autobump! because: :incompatible_version_format
 
   bottle do
     sha256 cellar: :any, arm64_sequoia: "653c39bbf08707dc8fc4204ce7b2317ff5304cf9050910df166292b34b68abdc"

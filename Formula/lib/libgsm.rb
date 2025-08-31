@@ -1,16 +1,14 @@
 class Libgsm < Formula
   desc "Lossy speech compression library"
   homepage "https://www.quut.com/gsm/"
-  url "https://www.quut.com/gsm/gsm-1.0.22.tar.gz"
-  sha256 "f0072e91f6bb85a878b2f6dbf4a0b7c850c4deb8049d554c65340b3bf69df0ac"
+  url "https://www.quut.com/gsm/gsm-1.0.23.tar.gz"
+  sha256 "8b7591a85ac9adce858f2053005e6b2eb20c23b8b8a868dffb2969645fa323c0"
   license "TU-Berlin-2.0"
 
   livecheck do
     url :homepage
     regex(/href=.*?gsm[._-]v?(\d+(?:\.\d+)+)\.t/i)
   end
-
-  no_autobump! because: :requires_manual_review
 
   bottle do
     rebuild 1

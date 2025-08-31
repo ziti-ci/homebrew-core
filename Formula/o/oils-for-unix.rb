@@ -1,8 +1,8 @@
 class OilsForUnix < Formula
   desc "Bash-compatible Unix shell with more consistent syntax and semantics"
   homepage "https://oils.pub/"
-  url "https://oils.pub/download/oils-for-unix-0.34.0.tar.gz"
-  sha256 "469018ef475a1ca9e8397c02f75b2dc63882a4a2e20d77a303d74a728ae31a22"
+  url "https://oils.pub/download/oils-for-unix-0.35.0.tar.gz"
+  sha256 "b0d1475a5d549786968786f47b15bf244e1d4c3bf9119c11714997b11f96fdca"
   license "Apache-2.0"
 
   livecheck do

@@ -18,13 +18,13 @@ class Kea < Formula
   end
 
   bottle do
-    sha256 arm64_sequoia: "f0e83d9140f20f6355907c13ff072dfe70132db802effe8d485b8cb01e1ef2d2"
-    sha256 arm64_sonoma:  "bf539cf6840a30b7b4b4fec39e24e63118cabb9c0035d9c3b36929d725df22c0"
-    sha256 arm64_ventura: "5ba48075f58961f427074a7b828dd18a5cf1b1c20015a009b25ac77db2c84e82"
-    sha256 sonoma:        "a94f296cdd03ec1b144daf89a0d39784c690faacd60dc1d58a3adeb0ce6de845"
-    sha256 ventura:       "1e0e8f7dc19a6e593793d59ff68e56efb5b7e78a7e0c4db8c43eba4bb888e820"
-    sha256 arm64_linux:   "b0bc98ac3a87fd3b035560adc0b6ebaa58b329026b9887f2de464dfbc32f9800"
-    sha256 x86_64_linux:  "4eda8328fcd0007696b0e3effd87578eab7b118bc058e4be7c6b2d5cda41f44a"
+    sha256 arm64_sequoia: "a0a5b7453df2b1268d9a169fd4038eaeec0b1927a33666d55007a11814ce3f5c"
+    sha256 arm64_sonoma:  "51deee455cf31915852f855c6d9b693b05e3448a01abe36435eba8ee48797c4e"
+    sha256 arm64_ventura: "3a3f166dfc98ee179e54f5ff4c844e7bd59435a93c9d11771fb98700a702afeb"
+    sha256 sonoma:        "c403d0f93390d854fac900001d242d4e4fc6e9d451390cbd2e7bc54ce6acdb90"
+    sha256 ventura:       "1c9c7c3f3d2425e84fc6c917aa9b84ae86f6210c92161278391ba4d18aabbd3f"
+    sha256 arm64_linux:   "16e8c3806ebf07dd4fd910211e5fc29abe2c46f4d75240be2cd03fd03dfaf30c"
+    sha256 x86_64_linux:  "e479046d56e9d10f7e90843b7337c6318b5c7c8bf1dd17815c65845fe9e94c36"
   end
 
   depends_on "bison" => :build

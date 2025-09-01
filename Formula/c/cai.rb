@@ -12,6 +12,7 @@ class Cai < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura: "c9d7292bd88ae5b997ea3e9cd01a838210efd4b1d9ae39c601265c81f24bb984"
     sha256 cellar: :any_skip_relocation, sonoma:        "44732608ba49fac105865075d4d85c79ed0551a4728e440f4f59933f8fca28ed"
     sha256 cellar: :any_skip_relocation, ventura:       "36a90f28a6668537a7acc45116a6c54de5d209110c6e0cd83d588473fcade6a0"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "e9057ca47aaeec34d15170ab08263d63a6304150677bb7b8d369111601b0ab2d"
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "234ed79f33a701debfb463ed91b1a6843f8a728bd700a98b157994e947fd2a1a"
   end
 

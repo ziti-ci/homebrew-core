@@ -1,10 +1,9 @@
 class Tenere < Formula
   desc "TUI interface for LLMs written in Rust"
   homepage "https://github.com/pythops/tenere"
-  url "https://github.com/pythops/tenere/archive/refs/tags/v0.11.2.tar.gz"
-  sha256 "865c9b041faf935545dbb9753b33a8ff09bf4bfd8917d25ca93f5dc0c0cac114"
+  url "https://github.com/pythops/tenere/archive/refs/tags/v0.11.3.tar.gz"
+  sha256 "3605fcdff3dbd5d153ed6126e98274994bd00ed83a2a1f5587058d75797257a8"
   license "GPL-3.0-or-later"
-  revision 1
 
   bottle do
     rebuild 1
@@ -19,15 +18,13 @@ class Tenere < Formula
 
   depends_on "pkgconf" => :build
   depends_on "rust" => :build
+  depends_on "libgit2@1.8"
   depends_on "oniguruma"
 
   uses_from_macos "zlib"
 
   def install
-    # TODO: ENV["LIBGIT2_NO_VENDOR"] = "1"
-    libgit2_version = File.read("Cargo.lock")[/name = "libgit2-sys"\nversion = "(.+)\+(.+)"/, 2]
-    odie "Unbundled libgit2 as now using #{libgit2_version}!" if Version.new(libgit2_version) >= "1.8"
-
+    ENV["LIBGIT2_NO_VENDOR"] = "1"
     ENV["RUSTONIG_SYSTEM_LIBONIG"] = "1"
 
     system "cargo", "install", *std_cargo_args

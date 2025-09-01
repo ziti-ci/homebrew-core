@@ -6,6 +6,15 @@ class Openapi < Formula
   license "MIT"
   head "https://github.com/speakeasy-api/openapi.git", branch: "main"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "abde836a07dc5738b01357bbbacd940ebe2d44c865847de49cbd79926e4ffdb9"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "abde836a07dc5738b01357bbbacd940ebe2d44c865847de49cbd79926e4ffdb9"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "abde836a07dc5738b01357bbbacd940ebe2d44c865847de49cbd79926e4ffdb9"
+    sha256 cellar: :any_skip_relocation, sonoma:        "d4a892baf5ce8d9dd057fa4ec3aef81e50053a3b3da0c2df912fbd1ca0f80d04"
+    sha256 cellar: :any_skip_relocation, ventura:       "d4a892baf5ce8d9dd057fa4ec3aef81e50053a3b3da0c2df912fbd1ca0f80d04"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "982630ddd89b591763d41cd0f31c2cede134f78f46aab1be6f111e01600aad9a"
+  end
+
   depends_on "go" => :build
 
   def install

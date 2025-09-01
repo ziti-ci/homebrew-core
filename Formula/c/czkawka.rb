@@ -37,8 +37,8 @@ class Czkawka < Formula
   end
 
   def install
-    system "cargo", "install", *std_cargo_args(path: "czkawka_cli")
-    system "cargo", "install", *std_cargo_args(path: "czkawka_gui")
+    system "cargo", "install", "--features", "heif,libraw,libavif", *std_cargo_args(path: "czkawka_cli")
+    system "cargo", "install", "--features", "heif,libraw,libavif", *std_cargo_args(path: "czkawka_gui")
   end
 
   def post_install

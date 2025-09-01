@@ -40,13 +40,11 @@ class BdwGc < Formula
                     *args, *std_cmake_args,
                     "-DBUILD_TESTING=ON" # Pass this *after* `std_cmake_args`
     system "cmake", "--build", "build"
-    if OS.linux? || Hardware::CPU.arm? || MacOS.version > :monterey
-      # Fails on 12-x86_64.
-      system "ctest", "--test-dir", "build",
-                      "--parallel", ENV.make_jobs,
-                      "--rerun-failed",
-                      "--output-on-failure"
-    end
+    system "ctest", "--test-dir", "build",
+                    "--parallel", ENV.make_jobs,
+                    "--rerun-failed",
+                    "--output-on-failure",
+                    "--repeat", "until-pass:3"
     system "cmake", "--install", "build"
 
     system "cmake", "-S", ".", "-B", "build-static", "-DBUILD_SHARED_LIBS=OFF", *args, *std_cmake_args

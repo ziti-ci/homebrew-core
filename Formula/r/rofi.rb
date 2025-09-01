@@ -1,8 +1,8 @@
 class Rofi < Formula
   desc "Window switcher, application launcher and dmenu replacement"
   homepage "https://davatorium.github.io/rofi/"
-  url "https://github.com/davatorium/rofi/releases/download/1.7.9.1/rofi-1.7.9.1.tar.gz"
-  sha256 "bb2c0f073b4422acc51a3f97d05275a82464750a33d2f4b120e3d866bb7b9ae5"
+  url "https://github.com/davatorium/rofi/releases/download/2.0.0/rofi-2.0.0.tar.gz"
+  sha256 "f81659b175306ff487e35d88d6b36128e85a793bfb56b64fa22c62eb54c4abd0"
   license "MIT"
   head "https://github.com/davatorium/rofi.git", branch: "next"
 
@@ -21,9 +21,10 @@ class Rofi < Formula
     sha256 x86_64_linux:  "73a4c5573499a78fefd0d2a58c15ba6069bf5169b6a3064f2951c650e1dfa889"
   end
 
-  depends_on "autoconf" => :build
-  depends_on "automake" => :build
+  depends_on "bison" => :build
   depends_on "check" => :build
+  depends_on "meson" => :build
+  depends_on "ninja" => :build
   depends_on "pkgconf" => :build
 
   depends_on "cairo"
@@ -40,20 +41,12 @@ class Rofi < Formula
   depends_on "xcb-util-wm"
   depends_on "xorg-server"
 
-  uses_from_macos "bison" => :build
   uses_from_macos "flex" => :build
 
-  on_macos do
-    depends_on "xcb-util-keysyms"
-  end
-
   def install
-    system "autoreconf", "--force", "--install", "--verbose" if build.head?
-
-    mkdir "build" do
-      system "../configure", "--disable-silent-rules", *std_configure_args
-      system "make", "install"
-    end
+    system "meson", "setup", "build", *std_meson_args
+    system "meson", "compile", "-C", "build", "--verbose"
+    system "meson", "install", "-C", "build"
   end
 
   test do

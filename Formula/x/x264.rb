@@ -3,8 +3,8 @@ class X264 < Formula
   homepage "https://www.videolan.org/developers/x264.html"
   # the latest commit on the stable branch
   url "https://code.videolan.org/videolan/x264.git",
-      revision: "31e19f92f00c7003fa115047ce50978bc98c3a0d"
-  version "r3108"
+      revision: "b35605ace3ddf7c1a5d67a2eb553f034aef41d55"
+  version "r3222"
   license "GPL-2.0-or-later"
   head "https://code.videolan.org/videolan/x264.git", branch: "master"
 
@@ -38,7 +38,7 @@ class X264 < Formula
     end
   end
 
-  no_autobump! because: :requires_manual_review
+  no_autobump! because: :incompatible_version_format
 
   bottle do
     sha256 cellar: :any,                 arm64_sequoia:  "599b5307d2eed20dd72830c722dd30faeca5fa7f87b9a36c122ed575311d84fc"

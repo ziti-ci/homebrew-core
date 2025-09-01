@@ -12,6 +12,7 @@ class CargoGeiger < Formula
     sha256 cellar: :any,                 arm64_ventura: "7890875c7fac5293f1539c395f1c351baee3f36c0ed4bbfce8b8b978147f2657"
     sha256 cellar: :any,                 sonoma:        "e6a929160640559d7a5672c62f39f75f7758b58c42a9133cd34c1ca6d67b4404"
     sha256 cellar: :any,                 ventura:       "3a3eea35f5874bb431f9d15bc7e0482ba51eb875cf882b73712e54a3880bf8f0"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "ce942bfd54c6ee4970534db6283104d6359aa21a7900a2b52b87d85ab95ea688"
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "cbc058716b342a7642895eb32a45da08a6aadaf12df134c2fddfaebcd8ad3556"
   end
 

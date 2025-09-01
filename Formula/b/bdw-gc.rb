@@ -1,10 +1,10 @@
 class BdwGc < Formula
   desc "Garbage collector for C and C++"
   homepage "https://www.hboehm.info/gc/"
-  url "https://github.com/ivmai/bdwgc/releases/download/v8.2.8/gc-8.2.8.tar.gz"
+  url "https://github.com/bdwgc/bdwgc/releases/download/v8.2.8/gc-8.2.8.tar.gz"
   sha256 "7649020621cb26325e1fb5c8742590d92fb48ce5c259b502faf7d9fb5dabb160"
   license "MIT"
-  head "https://github.com/ivmai/bdwgc.git", branch: "master"
+  head "https://github.com/bdwgc/bdwgc.git", branch: "master"
 
   livecheck do
     url :stable

@@ -1,8 +1,8 @@
 class Proxygen < Formula
   desc "Collection of C++ HTTP libraries"
   homepage "https://github.com/facebook/proxygen"
-  url "https://github.com/facebook/proxygen/releases/download/v2025.08.25.00/proxygen-v2025.08.25.00.tar.gz"
-  sha256 "e7397cbe93bb8567438f033bc5b1e407b074061c72783d3f55388e416b63fcf0"
+  url "https://github.com/facebook/proxygen/releases/download/v2025.09.01.00/proxygen-v2025.09.01.00.tar.gz"
+  sha256 "f8602dfd40e4d2a72726c5f63cc430a6abac7e72fa005739be695b3d5d4fc31e"
   license "BSD-3-Clause"
   head "https://github.com/facebook/proxygen.git", branch: "main"
 
@@ -37,25 +37,15 @@ class Proxygen < Formula
 
   conflicts_with "hq", because: "both install `hq` binaries"
 
-  # Fix build with Boost 1.89.0, pr ref: https://github.com/facebook/proxygen/pull/570
-  patch do
-    url "https://github.com/facebook/proxygen/commit/10af948d7ff29bc8601e83127a9d9ab1c441fc58.patch?full_index=1"
-    sha256 "161937c94727ab34976d5f2f602e6b7fcaecc7c86236ce0f6cbd809a5f852379"
-  end
-
-  # Fix various symbol resolution errors.
-  # https://github.com/facebook/proxygen/pull/572
-  patch do
-    url "https://github.com/facebook/proxygen/commit/7ad708b2206e4400240af5fd08e429b1b0cbedb3.patch?full_index=1"
-    sha256 "4e64f687017888af90c4c6e691923db75c1e067fc8b722b038d05ee67707767c"
-  end
-
   # Fix name of `liblibhttperf2`.
   # https://github.com/facebook/proxygen/pull/574
   patch do
     url "https://github.com/facebook/proxygen/commit/415ed3320f3d110f1d8c6846ca0582a4db7d225a.patch?full_index=1"
     sha256 "4ea28c2f87732526afad0f2b2b66be330ad3d4fc18d0f20eb5e1242b557a6fcf"
   end
+
+  # Fix build with Boost 1.89.0, pr ref: https://github.com/facebook/proxygen/pull/570
+  patch :DATA
 
   def install
     args = ["-DBUILD_SHARED_LIBS=ON", "-DCMAKE_INSTALL_RPATH=#{rpath}"]
@@ -81,3 +71,56 @@ class Proxygen < Formula
     Process.kill "TERM", pid
   end
 end
+
+__END__
+diff --git i/CMakeLists.txt w/CMakeLists.txt
+index cc189df..9d61345 100644
+--- i/CMakeLists.txt
++++ w/CMakeLists.txt
+@@ -80,17 +80,21 @@ find_package(ZLIB REQUIRED)
+ find_package(OpenSSL REQUIRED)
+ find_package(Threads)
+ find_package(c-ares REQUIRED)
+-find_package(Boost 1.58 REQUIRED
+-  COMPONENTS
++set(PROXYGEN_BOOST_COMPONENTS
+     iostreams
+     context
+     filesystem
+     program_options
+     regex
+-    system
+     thread
+     chrono
+ )
++find_package(Boost 1.58 REQUIRED COMPONENTS ${PROXYGEN_BOOST_COMPONENTS})
++if (Boost_MAJOR_VERSION EQUAL 1 AND Boost_MINOR_VERSION LESS 69)
++    list(APPEND PROXYGEN_BOOST_COMPONENTS system)
++    find_package(Boost 1.58 REQUIRED COMPONENTS ${PROXYGEN_BOOST_COMPONENTS})
++endif()
++string(REPLACE ";" " " PROXYGEN_BOOST_COMPONENTS "${PROXYGEN_BOOST_COMPONENTS}")
+ 
+ list(APPEND
+     _PROXYGEN_COMMON_COMPILE_OPTIONS
+diff --git i/cmake/proxygen-config.cmake.in w/cmake/proxygen-config.cmake.in
+index 8899242..114aaf7 100644
+--- i/cmake/proxygen-config.cmake.in
++++ w/cmake/proxygen-config.cmake.in
+@@ -31,16 +31,7 @@ find_dependency(Fizz)
+ find_dependency(ZLIB)
+ find_dependency(OpenSSL)
+ find_dependency(Threads)
+-find_dependency(Boost 1.58 REQUIRED
+-  COMPONENTS
+-    iostreams
+-    context
+-    filesystem
+-    program_options
+-    regex
+-    system
+-    thread
+-)
++find_dependency(Boost 1.58 REQUIRED COMPONENTS @PROXYGEN_BOOST_COMPONENTS@)
+ find_dependency(c-ares REQUIRED)
+ 
+ if(NOT TARGET proxygen::proxygen)

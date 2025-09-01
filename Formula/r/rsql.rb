@@ -1,8 +1,8 @@
 class Rsql < Formula
   desc "CLI for relational databases and common data file formats"
   homepage "https://github.com/theseus-rs/rsql"
-  url "https://github.com/theseus-rs/rsql/archive/refs/tags/v0.19.1.tar.gz"
-  sha256 "4dc7f6bdbf1fe9646ca64e307db4249f1f28adaa0858a9fb0ae1a04ebf199e82"
+  url "https://github.com/theseus-rs/rsql/archive/refs/tags/v0.19.2.tar.gz"
+  sha256 "a6bf445998062dbb1a840895d42783ed947e42265422aba2bbdb8a669d2177d6"
   license any_of: ["Apache-2.0", "MIT"]
   head "https://github.com/theseus-rs/rsql.git", branch: "main"
 

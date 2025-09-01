@@ -6,6 +6,15 @@ class CargoGeiger < Formula
   license any_of: ["Apache-2.0", "MIT"]
   head "https://github.com/geiger-rs/cargo-geiger.git", branch: "master"
 
+  bottle do
+    sha256 cellar: :any,                 arm64_sequoia: "cac5e30bb6fb7f9ddfa71d2e37cdc8797cd4d9a23fb58efe9124640f90e758d1"
+    sha256 cellar: :any,                 arm64_sonoma:  "1c9f1b649a75fd9ed039649aa5e6036579aa20cab80f897733d8039721336233"
+    sha256 cellar: :any,                 arm64_ventura: "7890875c7fac5293f1539c395f1c351baee3f36c0ed4bbfce8b8b978147f2657"
+    sha256 cellar: :any,                 sonoma:        "e6a929160640559d7a5672c62f39f75f7758b58c42a9133cd34c1ca6d67b4404"
+    sha256 cellar: :any,                 ventura:       "3a3eea35f5874bb431f9d15bc7e0482ba51eb875cf882b73712e54a3880bf8f0"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "cbc058716b342a7642895eb32a45da08a6aadaf12df134c2fddfaebcd8ad3556"
+  end
+
   depends_on "pkgconf" => :build
   depends_on "rust" => :build
   depends_on "rustup" => :test

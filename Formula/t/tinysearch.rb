@@ -1,8 +1,8 @@
 class Tinysearch < Formula
   desc "Tiny, full-text search engine for static websites built with Rust and Wasm"
   homepage "https://github.com/tinysearch/tinysearch"
-  url "https://github.com/tinysearch/tinysearch/archive/refs/tags/v0.9.0.tar.gz"
-  sha256 "90b035d0d41fe166e5a5ce18668d1c3098a7e64c17fcb8bfc7a3ba11c24019a4"
+  url "https://github.com/tinysearch/tinysearch/archive/refs/tags/v0.10.0.tar.gz"
+  sha256 "6262df7566e9bd5557f60a9217258cbd73bc62061c74fb372e07cf4188775ccb"
   license any_of: ["Apache-2.0", "MIT"]
   head "https://github.com/tinysearch/tinysearch.git", branch: "master"
 

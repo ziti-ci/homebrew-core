@@ -6,7 +6,7 @@ class TlExpected < Formula
   license "CC0-1.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "281c1fbf5f9bc62c2c7ef1c5d7af6ddb37877a2cb32044e5fd908f8e5420a4c3"
+    sha256 cellar: :any_skip_relocation, all: "c0a6195be54cf7f219a4a6f4d9f4fd5955b00f24a786f21d28a48a0d7bd3b98b"
   end
 
   depends_on "cmake" => :build

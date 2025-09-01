@@ -20,6 +20,8 @@ class Ov < Formula
   def install
     ldflags = "-s -w -X main.Version=#{version} -X main.Revision=#{tap.user}"
     system "go", "build", *std_go_args(ldflags:)
+
+    generate_completions_from_executable(bin/"ov", "--completion", shells: [:bash, :zsh, :fish, :pwsh])
   end
 
   test do

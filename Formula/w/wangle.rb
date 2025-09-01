@@ -7,13 +7,13 @@ class Wangle < Formula
   head "https://github.com/facebook/wangle.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any,                 arm64_sequoia: "17e7f0b3bcfd489d45e68ceb7cf8e047cddd714c7ddfde0452861e4e631e5fed"
-    sha256 cellar: :any,                 arm64_sonoma:  "e9616d476dabca1caab22e93adbf29643c2cfae2790646e3f90cd289d7da5fb2"
-    sha256 cellar: :any,                 arm64_ventura: "cab4ee31c2dbcc1a7a37d138d0d97f0f7fc1d546bef0ee1da4af9f00b2448f63"
-    sha256 cellar: :any,                 sonoma:        "15d97ede9a3b53443de660d63713354f4fbe8d04b0859d784573258aa711420d"
-    sha256 cellar: :any,                 ventura:       "32054ca7b3b66f40099288764b03dadcbc81f86172ab9a4438f1f53da9647429"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "8afd6b085afb84f218a0671e0c294e76835af46b28a8ccf53e6ab7827386e639"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "db0cfdef9a09b711394e0b54f9945f261b99ddd292f9c27fb4455f46c6d043cf"
+    sha256 cellar: :any,                 arm64_sequoia: "24ac5a30e3b8adc1b97fe2e2bd0e698e327ce17fd21861ab8ca207fa9b261a5b"
+    sha256 cellar: :any,                 arm64_sonoma:  "9c9840dfb1313b211769814cf622eaac2ece21b864b72fdc9afb3656493ce36f"
+    sha256 cellar: :any,                 arm64_ventura: "f87802fa9af68b800d04af0c502492836d26342113c36028c40e1943da507d93"
+    sha256 cellar: :any,                 sonoma:        "4762b3b68da99285f6432e0caa198206a47b48c918ba48cf0c6f0db6cb1a671f"
+    sha256 cellar: :any,                 ventura:       "99a298b6b62547213a3831f0974077957fd5269766c57e1b545df493070a0af1"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "1a358be9efe63266c177940c250cbf5d58e7d5220a728cb2f9e7c5222e4042c2"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "be48b3888d92f28a20b5bb1c92d2708d57ee5a54af853d666e500b9f494949ff"
   end
 
   depends_on "cmake" => [:build, :test]

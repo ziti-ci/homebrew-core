@@ -7,6 +7,10 @@ class Darker < Formula
   sha256 "eb53776f037fcf42b1f5a56f62fb841cd871d95a78a388536dc91dc4355ce8bb"
   license "BSD-3-Clause"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "32b956ff31dab57b624e2ead8863eabb56cc9447dee37707d523183167fa10f6"
+  end
+
   depends_on "python@3.13"
 
   resource "black" do

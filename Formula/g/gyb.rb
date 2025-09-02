@@ -6,10 +6,15 @@ class Gyb < Formula
   homepage "https://github.com/GAM-team/got-your-back/"
   # Check gyb.py imports for any changes. Update pypi_formula_mappings.json (if necessary)
   # and then run `brew update-python-resources gyb`.
-  url "https://github.com/GAM-team/got-your-back/archive/refs/tags/v1.90.tar.gz"
-  sha256 "9f090cb5b1b4b1209801e2cae1d2d0065581c0d2d366682db1e2e74cc4609ec9"
+  url "https://github.com/GAM-team/got-your-back/archive/refs/tags/v1.93.tar.gz"
+  sha256 "b3a2580302ab4cfe529b98cf9ebd5e310c371dc942130d34489fd9d4e59b10c5"
   license "Apache-2.0"
   head "https://github.com/GAM-team/got-your-back.git", branch: "main"
+
+  livecheck do
+    url :stable
+    regex(/^v?(\d+(?:\.\d+)+)$/i)
+  end
 
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_sequoia: "34b0c3a81ac14cf5ceef0612e95e8699d9b34febe10f692a76b7d0575ae888d1"
@@ -40,8 +45,8 @@ class Gyb < Formula
   end
 
   resource "google-api-python-client" do
-    url "https://files.pythonhosted.org/packages/73/ed/6e7865324252ea0a9f7c8171a3a00439a1e8447a5dc08e6d6c483777bb38/google_api_python_client-2.179.0.tar.gz"
-    sha256 "76a774a49dd58af52e74ce7114db387e58f0aaf6760c9cf9201ab6d731d8bd8d"
+    url "https://files.pythonhosted.org/packages/c2/96/5561a5d7e37781c880ca90975a70d61940ec1648b2b12e991311a9e39f83/google_api_python_client-2.181.0.tar.gz"
+    sha256 "d7060962a274a16a2c6f8fb4b1569324dbff11bfbca8eb050b88ead1dd32261c"
   end
 
   resource "google-auth" do
@@ -65,8 +70,8 @@ class Gyb < Formula
   end
 
   resource "httplib2" do
-    url "https://files.pythonhosted.org/packages/3d/ad/2371116b22d616c194aa25ec410c9c6c37f23599dcd590502b74db197584/httplib2-0.22.0.tar.gz"
-    sha256 "d7a10bc5ef5ab08322488bde8c726eeee5c8618723fdb399597ec58f3d82df81"
+    url "https://files.pythonhosted.org/packages/5b/75/1d10a90b3411f707c10c226fa918cf4f5e0578113caa223369130f702b6b/httplib2-0.30.0.tar.gz"
+    sha256 "d5b23c11fcf8e57e00ff91b7008656af0f6242c8886fd97065c97509e4e548c5"
   end
 
   resource "idna" do

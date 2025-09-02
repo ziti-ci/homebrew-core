@@ -1,8 +1,8 @@
 class Pixi < Formula
   desc "Package management made easy"
   homepage "https://pixi.sh"
-  url "https://github.com/prefix-dev/pixi/archive/refs/tags/v0.53.0.tar.gz"
-  sha256 "29e9b24198ddf8be72a851e7c52746db80a136708460b4f24f49b975185d397a"
+  url "https://github.com/prefix-dev/pixi/archive/refs/tags/v0.54.0.tar.gz"
+  sha256 "ce74792a4668a9ca0b5f99e6f03c41f76f8f3bd83f48224d4de2267de43bc627"
   license "BSD-3-Clause"
   head "https://github.com/prefix-dev/pixi.git", branch: "main"
 
@@ -42,7 +42,7 @@ class Pixi < Formula
       `self-update` has been disabled for this build.
       Run `brew upgrade pixi` instead.
     EOS
-    system "cargo", "install", *std_cargo_args
+    system "cargo", "install", *std_cargo_args(path: "crates/pixi")
 
     generate_completions_from_executable(bin/"pixi", "completion", "-s")
   end

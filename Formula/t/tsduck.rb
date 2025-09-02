@@ -6,6 +6,11 @@ class Tsduck < Formula
   license "BSD-2-Clause"
   head "https://github.com/tsduck/tsduck.git", branch: "master"
 
+  livecheck do
+    url :stable
+    strategy :github_latest
+  end
+
   bottle do
     sha256 cellar: :any,                 arm64_sequoia: "4095f60493497b8ff63e6a07a798f237f6ecf0c878d010bb9ff312cbd88d57ed"
     sha256 cellar: :any,                 arm64_sonoma:  "8f2ede174499ba252df84ecb351c497c0bb95e0b2f5f8497f4a17972a2a921fd"

@@ -16,14 +16,13 @@ class GccAT12 < Formula
   no_autobump! because: :requires_manual_review
 
   bottle do
-    sha256                               arm64_sonoma:   "55614581a8985550c5cc84cd29f7122d4aca5d11f60c5ff119e7432419c2b9d8"
-    sha256                               arm64_ventura:  "1466d203d2b62e3771a0d1935314747e6a098793622f6a007c23acaf8185731b"
-    sha256                               arm64_monterey: "94bc560bcbfc98966d891656b3a0705958bdac330dfab3a9913c4c412e2f5885"
-    sha256                               sonoma:         "de57cdd8fc489a7fb88f7af19a730af87a14418c7181e5ba03e20c40e4d65738"
-    sha256                               ventura:        "cbaf8ac753711e7c39e90cc3abf3dee9847dea8908e5e575bd4065ffeef0c9b0"
-    sha256                               monterey:       "436e51d082e7cfaa612458fdd2703f530abcd49730e7634ce659700fedb033e1"
-    sha256 cellar: :any_skip_relocation, arm64_linux:    "b7650f4cbd3cbb0bd79ca6d895fe25e2314b498f096592f65288f525568cc0ee"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "50b8eb4f9125e36b9daad5dcd7cf470d6780d1ab2a1bad652793299fc6036770"
+    rebuild 1
+    sha256 arm64_sonoma:  "e2f7681adadb3fa649c8ec44d21b7bcae6ebe10fe70887d1da349b35f94b3709"
+    sha256 arm64_ventura: "400deedecf290d7045833cb2f847ef282c293c41206a5d97c23ec1397cfe339e"
+    sha256 sonoma:        "5221d99ee23796033e14dd23f0e225a919e18cc3d9f65d106bf347eb1d02f144"
+    sha256 ventura:       "ac115cdeb5aba08514237c700850ee5cac9d384374c0d06261e9fb0f645e07d3"
+    sha256 arm64_linux:   "9bea822c1ff8f1b2140b7c9e57104b0da6b5476390d456904973735cd0c70d6c"
+    sha256 x86_64_linux:  "ac0a35304f2f9242ad99f0c048525a27990b80663912ef993e5fab00ee6e9050"
   end
 
   # The bottles are built on systems with the CLT installed, and do not work

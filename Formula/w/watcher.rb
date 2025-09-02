@@ -1,19 +1,30 @@
 class Watcher < Formula
   desc "Filesystem watcher, works anywhere, simple, efficient and friendly"
   homepage "https://github.com/e-dant/watcher"
-  url "https://github.com/e-dant/watcher/archive/refs/tags/0.13.6.tar.gz"
-  sha256 "d2a9890b5d394311ca08cea53f6ecc1e9e2566a5adfe4e829a26ac1d7d974dfa"
   license "MIT"
   head "https://github.com/e-dant/watcher.git", branch: "release"
 
+  # TODO: Remove `stable` block when patch is no longer needed.
+  stable do
+    url "https://github.com/e-dant/watcher/archive/refs/tags/0.13.7.tar.gz"
+    sha256 "d9b65ba4aaba325d113fc0a307c9cc297a09eaf72de0c22496a4848aea9a2893"
+
+    # Fix generation of `.pc` files.
+    # https://github.com/e-dant/watcher/pull/90
+    patch do
+      url "https://github.com/e-dant/watcher/commit/de05a8c4d1cbeb4fa3e5db388603853889db8910.patch?full_index=1"
+      sha256 "86c1f4d366d5ab314a1a96a8966d12ccb46902b924dd6362ddb47ab1859681d7"
+    end
+  end
+
   bottle do
-    sha256 cellar: :any,                 arm64_sequoia: "f71809a7937ee6d36f429d5edabb3455ee90c7a2c0ffd1e263ca5b87f2623978"
-    sha256 cellar: :any,                 arm64_sonoma:  "e1f6cc5b98e72cb77b1dd02707dc2c13f32aa644253eb24e7db4dce37960c299"
-    sha256 cellar: :any,                 arm64_ventura: "703b5264a40f62cf192dd70c97a84776fb9c29816c9149f56d27407b16b89bdf"
-    sha256 cellar: :any,                 sonoma:        "33bbd0c78a1faadc10b4473c422c958281cf368c424c3c52cc2df7bb4a195bec"
-    sha256 cellar: :any,                 ventura:       "9137c812d670de80acd11b43a544c53f86ca45502c3c5b74ca761f3838053033"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "9e5ef87b148b16035b38adaa38466f232bf0c9f2f00074418d08fcb15db5c60b"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "df14bd94e63e3dae0bb6f658307897275e50c87c11470a6b0e98ec31fb242c83"
+    sha256 cellar: :any,                 arm64_sequoia: "88978779d9adbd52e905797fec0b4296311ee45195da68bb30b3cf2cae2e5304"
+    sha256 cellar: :any,                 arm64_sonoma:  "0bd14316c193f1d22a1a451dde171daa584e19ba26cb9fd8cad208db66a03659"
+    sha256 cellar: :any,                 arm64_ventura: "772f477fa33808b9e6dea70dd856b140d52501f2141ca72dab8bdafe400cb427"
+    sha256 cellar: :any,                 sonoma:        "9573d3e116e14794c643713d96e2a79108b4c975857a15c9cfc79047d19ac719"
+    sha256 cellar: :any,                 ventura:       "1bc722937041a74ebe2c5252c99915c6256c232513f8bd2e53bfe92f4b4ea331"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "5e68690c3f5f4d60ce4b91f927cffdc933cf057791097f9528f63b9e47119202"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "8faf66477436e091e9f8163911151a3cbb8ba2a8bfe82e49588a164b6336ac55"
   end
 
   depends_on "cmake" => :build

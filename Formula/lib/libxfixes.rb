@@ -1,11 +1,9 @@
 class Libxfixes < Formula
   desc "X.Org: Header files for the XFIXES extension"
   homepage "https://www.x.org/"
-  url "https://www.x.org/archive/individual/lib/libXfixes-6.0.1.tar.xz"
-  sha256 "b695f93cd2499421ab02d22744458e650ccc88c1d4c8130d60200213abc02d58"
+  url "https://www.x.org/archive/individual/lib/libXfixes-6.0.2.tar.xz"
+  sha256 "39f115d72d9c5f8111e4684164d3d68cc1fd21f9b27ff2401b08fddfc0f409ba"
   license "MIT"
-
-  no_autobump! because: :requires_manual_review
 
   bottle do
     sha256 cellar: :any,                 arm64_sequoia:  "d8cf5f8d0134815b458eeaf44dd0e18357322bfeba750b4a79c7619ce24568a8"

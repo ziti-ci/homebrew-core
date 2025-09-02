@@ -3,8 +3,8 @@ class CoreLightning < Formula
 
   desc "Lightning Network implementation focusing on spec compliance and performance"
   homepage "https://github.com/ElementsProject/lightning"
-  url "https://github.com/ElementsProject/lightning/releases/download/v25.05/clightning-v25.05.zip"
-  sha256 "00d633a63570f6419db0dbd75b503bb04ba0f6eb469894da6fced2a8949d8007"
+  url "https://github.com/ElementsProject/lightning/releases/download/v25.09/clightning-v25.09.zip"
+  sha256 "a97f44647b83b44718094f1838c6c74e8dc90c0009f2773a37b17ff80004a67e"
   license "MIT"
   head "https://github.com/ElementsProject/lightning.git", branch: "master"
 
@@ -77,6 +77,8 @@ class CoreLightning < Formula
 
     system "./configure", "--prefix=#{prefix}"
     system "make", "install"
+
+    rm_r Dir["#{bin}/*.dSYM"]
   end
 
   test do

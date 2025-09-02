@@ -6,6 +6,15 @@ class Gonzo < Formula
   license "MIT"
   head "https://github.com/control-theory/gonzo.git", branch: "main"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "e7278b69a50a39290b1591c071cdb4545329bed2eb15672e4587e6c47d78e277"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "e7278b69a50a39290b1591c071cdb4545329bed2eb15672e4587e6c47d78e277"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "e7278b69a50a39290b1591c071cdb4545329bed2eb15672e4587e6c47d78e277"
+    sha256 cellar: :any_skip_relocation, sonoma:        "28399c3651c7680a6fa2b59f2f206829da51e64d7cd0137abc286df706d1c94e"
+    sha256 cellar: :any_skip_relocation, ventura:       "28399c3651c7680a6fa2b59f2f206829da51e64d7cd0137abc286df706d1c94e"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "4441b1f6f49ade64a091ddc1243e5a357cdcf2a576dcaf4553213a86f08fe380"
+  end
+
   depends_on "go" => :build
 
   def install

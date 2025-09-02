@@ -1,8 +1,8 @@
 class Uvwasi < Formula
   desc "WASI syscall API built atop libuv"
   homepage "https://github.com/nodejs/uvwasi"
-  url "https://github.com/nodejs/uvwasi/archive/refs/tags/v0.0.21.tar.gz"
-  sha256 "5cf32f166c493f41c0de7f3fd578d0be1b692c81c54f0c68889e62240fe9ab60"
+  url "https://github.com/nodejs/uvwasi/archive/refs/tags/v0.0.22.tar.gz"
+  sha256 "255b5d4b961ab73ac00d10909cd2a431670fc708004421f07267e8d6ef8a1bc8"
   license "MIT"
   head "https://github.com/nodejs/uvwasi.git", branch: "main"
 
@@ -34,7 +34,7 @@ class Uvwasi < Formula
       #include <stdlib.h>
       #include <string.h>
       #include "uv.h"
-      #include "uvwasi/uvwasi.h"
+      #include "uvwasi.h"
 
       int main(void) {
         uvwasi_t uvwasi;

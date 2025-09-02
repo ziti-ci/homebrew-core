@@ -1,8 +1,8 @@
 class ParallelDiskUsage < Formula
   desc "Highly parallelized, blazing fast directory tree analyzer"
   homepage "https://github.com/KSXGitHub/parallel-disk-usage"
-  url "https://github.com/KSXGitHub/parallel-disk-usage/archive/refs/tags/0.21.0.tar.gz"
-  sha256 "7d049539cdb8db8ff450e5b5e88e038a8a2bce10d8e7ca9afbba9783bed33433"
+  url "https://github.com/KSXGitHub/parallel-disk-usage/archive/refs/tags/0.21.1.tar.gz"
+  sha256 "738344d89d0e7208ae501f1a96babfa5bfddac13a925c0a6a7332d759a3e643b"
   license "Apache-2.0"
   head "https://github.com/KSXGitHub/parallel-disk-usage.git", branch: "master"
 

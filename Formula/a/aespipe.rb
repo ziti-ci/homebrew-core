@@ -1,8 +1,8 @@
 class Aespipe < Formula
   desc "AES encryption or decryption for pipes"
   homepage "https://loop-aes.sourceforge.net/"
-  url "https://loop-aes.sourceforge.net/aespipe/aespipe-v2.4i.tar.bz2"
-  sha256 "b41c7aaac2542e59d8ff58c1ff9d87b52d4a8c1847b799c8afec91d94517c75e"
+  url "https://loop-aes.sourceforge.net/aespipe/aespipe-v2.4j.tar.bz2"
+  sha256 "448fe1e58612c184951645ddd926fc5bdb64fc4f2f828c766c82aa1127e9a3e2"
   license "GPL-2.0-or-later"
 
   livecheck do

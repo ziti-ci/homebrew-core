@@ -12,13 +12,13 @@ class Bkmr < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "9ad31e0bceb043476b6116791166480a0a758cdb8b0504d1513b471511aea94a"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "3350b87d7a4cf7c53c668dfef7a57e2ffb7f0b3ce13a271ac30c839854e2f3b4"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "2bac518659b7b48c93f9601d3f1af47e738430bd34e5e8987bb1d3a84bedb9c0"
-    sha256 cellar: :any_skip_relocation, sonoma:        "e2e06fd24d1b7c2ee3b10c6adf6256ec43a3082b5f76279e2d9f68f3b7c7e5b0"
-    sha256 cellar: :any_skip_relocation, ventura:       "d64792e30c7a33bf86fa23749935a580abdde521d4cabea312107c183aabc36e"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "fffc5691b11d95e6e019ffb650aa810e6ced5d0dd18c1056abbe14cd34507995"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "881f666cd8806872dc46e33ec2638a828b1a2d27bbe4ac103e5a7d6e52ac9f5d"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "0287e9f7aa6391635d9251c65a1220b4a819a391136dc29d7987f5c81adeb2d7"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "b48bd07f3cb849498493b9b627e54caaa9a718ff3529cad5030ea49f40b96cb5"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "d580abfbc4680785cab2ca86f5e3579ac827ef8b88936c7d0bc9874ada6a0590"
+    sha256 cellar: :any_skip_relocation, sonoma:        "d339f9224dc99f616f51d278f59e9a0544b1805ca2607bda7249bfd7e872bff3"
+    sha256 cellar: :any_skip_relocation, ventura:       "37843b373482319c715861f4a4ad68daef9f2ed2f014583d82509132a43ca647"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "2854567d14f43056d6e86f621326ca5266fb165be5760973f94a0c3a3a69c1e2"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "9eedb372086c51611487c0151f5e03d711d599cac7a0865a29f95209678a6df3"
   end
 
   depends_on "rust" => :build

@@ -12,6 +12,7 @@ class GoLibrespot < Formula
     sha256 cellar: :any,                 arm64_ventura: "48360bf34f1fa7396224cd8301991d8dd95067c95d29ab1d2e4d4683103e7140"
     sha256 cellar: :any,                 sonoma:        "cc0e07fd00c3638e397ff8988f2aa287a1a688ef48648119d6d73a36945df4a9"
     sha256 cellar: :any,                 ventura:       "c69cdd6d48c67941d4ef22225b7c755e53c772dc81bcab61ce4593b5211475a7"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "adcb0aa698023ec878b814c8829eed96dea090b647d0324f9864ad8105c46728"
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "41a8f04961a86a633373480afe82f53debbe61d891a8171af57fd587dff441c7"
   end
 

@@ -1,21 +1,10 @@
 class Watcher < Formula
   desc "Filesystem watcher, works anywhere, simple, efficient and friendly"
   homepage "https://github.com/e-dant/watcher"
+  url "https://github.com/e-dant/watcher/archive/refs/tags/0.13.8.tar.gz"
+  sha256 "8e1ac50617bed910be829da3701f42d8419038703db934a09e5ec896e6ef679c"
   license "MIT"
   head "https://github.com/e-dant/watcher.git", branch: "release"
-
-  # TODO: Remove `stable` block when patch is no longer needed.
-  stable do
-    url "https://github.com/e-dant/watcher/archive/refs/tags/0.13.7.tar.gz"
-    sha256 "d9b65ba4aaba325d113fc0a307c9cc297a09eaf72de0c22496a4848aea9a2893"
-
-    # Fix generation of `.pc` files.
-    # https://github.com/e-dant/watcher/pull/90
-    patch do
-      url "https://github.com/e-dant/watcher/commit/de05a8c4d1cbeb4fa3e5db388603853889db8910.patch?full_index=1"
-      sha256 "86c1f4d366d5ab314a1a96a8966d12ccb46902b924dd6362ddb47ab1859681d7"
-    end
-  end
 
   bottle do
     sha256 cellar: :any,                 arm64_sequoia: "88978779d9adbd52e905797fec0b4296311ee45195da68bb30b3cf2cae2e5304"

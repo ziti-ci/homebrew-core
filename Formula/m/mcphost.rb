@@ -7,12 +7,12 @@ class Mcphost < Formula
   head "https://github.com/mark3labs/mcphost.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "db32ead8d59d9ad71077a13574a193be40802d5ae36be5fe39eca66ea1649abe"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "db32ead8d59d9ad71077a13574a193be40802d5ae36be5fe39eca66ea1649abe"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "db32ead8d59d9ad71077a13574a193be40802d5ae36be5fe39eca66ea1649abe"
-    sha256 cellar: :any_skip_relocation, sonoma:        "eb54c650d1147812a97e187657731154be0fe815c88372c9427a1e08e441cf40"
-    sha256 cellar: :any_skip_relocation, ventura:       "eb54c650d1147812a97e187657731154be0fe815c88372c9427a1e08e441cf40"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "4dc424b53e21f2268de9dcbb857134eb9351e4cefdb154cb1f89c732e77ce7fc"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "b9023920e8eb7416432a30ddec51e54474e688eaf4eb89d9da91f997e8300630"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "b9023920e8eb7416432a30ddec51e54474e688eaf4eb89d9da91f997e8300630"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "b9023920e8eb7416432a30ddec51e54474e688eaf4eb89d9da91f997e8300630"
+    sha256 cellar: :any_skip_relocation, sonoma:        "8a45eae900fae19fd5602270904693c4fc4f00c23b0bd03ed48e65e41b5648a2"
+    sha256 cellar: :any_skip_relocation, ventura:       "8a45eae900fae19fd5602270904693c4fc4f00c23b0bd03ed48e65e41b5648a2"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "9e18f7439f1ee444de078228b9769ddee92c52069f29081200bf0c47a68baebd"
   end
 
   depends_on "go" => :build

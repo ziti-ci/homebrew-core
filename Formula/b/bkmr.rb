@@ -1,8 +1,8 @@
 class Bkmr < Formula
   desc "Unified CLI Tool for Bookmark, Snippet, and Knowledge Management"
   homepage "https://github.com/sysid/bkmr"
-  url "https://github.com/sysid/bkmr/archive/refs/tags/v6.2.1.tar.gz"
-  sha256 "48ab7e312ec7adac65cf32b997a17eedd4a3d42e75c3f8b7d95bd2a6fa86a959"
+  url "https://github.com/sysid/bkmr/archive/refs/tags/v6.2.2.tar.gz"
+  sha256 "d71572679f7e416c03aeb467498aeaee75065b8b9fcf745ad64c59556af7cf19"
   license "BSD-3-Clause"
   head "https://github.com/sysid/bkmr.git", branch: "main"
 
@@ -39,7 +39,7 @@ class Bkmr < Formula
   test do
     assert_match version.to_s, shell_output("#{bin}/bkmr --version")
 
-    expected_output = "No database configured or the configured database does not exist."
+    expected_output = "The configured database does not exist"
     assert_match expected_output, shell_output("#{bin}/bkmr info 2>&1", 1)
   end
 end

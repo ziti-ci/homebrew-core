@@ -3,8 +3,8 @@ class Flexget < Formula
 
   desc "Multipurpose automation tool for content"
   homepage "https://www.flexget.com"
-  url "https://files.pythonhosted.org/packages/3b/bf/51f4d90e1394325af2cd4fcdcbfb17d6fa6757665af16dfe1a6491e344ea/flexget-3.18.2.tar.gz"
-  sha256 "04e1329f2423496f49ceab638963c470fb42692a47c1c8e73f09ff4f31bac6cf"
+  url "https://files.pythonhosted.org/packages/10/78/f890ec6ca84e32a69aae49ba1910c9c803ed43b9fbd7e0ed0f5892f6e562/flexget-3.18.3.tar.gz"
+  sha256 "070859c42e7dbd5e2ef8d5745fec6bf74454b3648cdb1be372b65e86f6d6413a"
   license "MIT"
 
   bottle do
@@ -199,8 +199,8 @@ class Flexget < Formula
   end
 
   resource "more-itertools" do
-    url "https://files.pythonhosted.org/packages/ce/a0/834b0cebabbfc7e311f30b46c8188790a37f89fc8d756660346fe5abfd09/more_itertools-10.7.0.tar.gz"
-    sha256 "9fddd5403be01a94b204faadcff459ec3568cf110265d3c54323e1e866ad29d3"
+    url "https://files.pythonhosted.org/packages/ea/5d/38b681d3fce7a266dd9ab73c66959406d565b3e85f21d5e66e1181d93721/more_itertools-10.8.0.tar.gz"
+    sha256 "f638ddf8a1a0d134181275fb5d58b086ead7c6a72429ad725c67503f13ba30bd"
   end
 
   resource "packaging" do

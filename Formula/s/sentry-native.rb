@@ -1,8 +1,8 @@
 class SentryNative < Formula
   desc "Sentry SDK for C, C++ and native applications"
   homepage "https://docs.sentry.io/platforms/native/"
-  url "https://github.com/getsentry/sentry-native/archive/refs/tags/0.10.0.tar.gz"
-  sha256 "ff7ef6549c258f144a85809a8f0d64b300b2ae7d6f18dc685b706923b861f015"
+  url "https://github.com/getsentry/sentry-native/archive/refs/tags/0.10.1.tar.gz"
+  sha256 "29937d907ec9f8acc6531e64c2dc9bacb4a6cd32c65f5c327574474c934d93f5"
   license "MIT"
 
   bottle do
@@ -28,7 +28,7 @@ class SentryNative < Formula
   # No recent tagged releases, use the latest commit
   resource "crashpad" do
     url "https://github.com/getsentry/crashpad.git",
-        revision: "e24b0f9e760e27464fe2ed30fdd7be45a27a67ad"
+        revision: "137d0f478391c0df8f80072db2548a7ba7e4c13f"
   end
 
   # No recent tagged releases, use the latest commit

@@ -1,8 +1,8 @@
 class AwsLc < Formula
   desc "General-purpose cryptographic library"
   homepage "https://github.com/aws/aws-lc"
-  url "https://github.com/aws/aws-lc/archive/refs/tags/v1.59.0.tar.gz"
-  sha256 "fcc179ab0f7801b8416bf27cb16cfb8ee7dff78df364afdf432ba5eb50f42b22"
+  url "https://github.com/aws/aws-lc/archive/refs/tags/v1.60.0.tar.gz"
+  sha256 "3a064651f2454c64b1435dbcc6e623faae35937816b37b0c99ffaf223879c166"
   license all_of: ["Apache-2.0", "ISC", "OpenSSL", "MIT", "BSD-3-Clause"]
 
   livecheck do
@@ -28,11 +28,17 @@ class AwsLc < Formula
   uses_from_macos "perl"
 
   def install
-    args = %w[
-      -DCMAKE_INSTALL_INCLUDEDIR=include
+    args = %W[
+      -DBUILD_SHARED_LIBS=ON
       -DCMAKE_INSTALL_BINDIR=bin
+      -DCMAKE_INSTALL_INCLUDEDIR=include
+      -DCMAKE_INSTALL_RPATH=#{rpath}
     ]
     system "cmake", "-S", ".", "-B", "build", *args, *std_cmake_args
+
+    # The jitter entropy collector must be built without optimisations
+    ENV.O0 { system "cmake", "--build", "build", "--target", "jitterentropy" }
+
     system "cmake", "--build", "build"
     system "cmake", "--install", "build"
   end

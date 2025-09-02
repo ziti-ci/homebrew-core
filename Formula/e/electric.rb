@@ -1,8 +1,8 @@
 class Electric < Formula
   desc "Real-time sync for Postgres"
   homepage "https://electric-sql.com"
-  url "https://github.com/electric-sql/electric/archive/refs/tags/@core/sync-service@1.1.7.tar.gz"
-  sha256 "10898eab1ba7acef571aab92ce99cbced6aadf834e7ced178f424f64f36230f9"
+  url "https://github.com/electric-sql/electric/archive/refs/tags/@core/sync-service@1.1.8.tar.gz"
+  sha256 "ed4afd9b403c393ecad21cd93761dc0751a0abae6ec03d38ae9d0da1016bccbc"
   license "Apache-2.0"
 
   bottle do

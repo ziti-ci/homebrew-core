@@ -11,6 +11,7 @@ class Mklittlefs < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura: "48862fcd19df8ee2370233baa3ea48a92c27ad25dc5a3f8fc8c0aa404b4cf81d"
     sha256 cellar: :any_skip_relocation, sonoma:        "8c49d44f1d0ccd0ae7597dadf8a3c40e932cc5d775135d450fdb8df8a6d173c3"
     sha256 cellar: :any_skip_relocation, ventura:       "69a5cc92966e36ce10c658fc2b5e1e1d7f8e99a2cb727e5b2bc7eaa9f59ef710"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "718c5352d9f335d60515c74268ebbc2cbbb879a82e4063893418fedbf9601a42"
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "f08d3944b06a3190264af01ab13388745ebd1783419c4637cf248d1590f886a8"
   end
 

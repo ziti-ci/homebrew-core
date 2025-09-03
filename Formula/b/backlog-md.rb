@@ -1,8 +1,8 @@
 class BacklogMd < Formula
   desc "Markdown‑native Task Manager & Kanban visualizer for any Git repository"
   homepage "https://github.com/MrLesk/Backlog.md"
-  url "https://registry.npmjs.org/backlog.md/-/backlog.md-1.8.3.tgz"
-  sha256 "708f795c01aed0c7fa605bd81bae6b8e1a7dd95748798524f884f270cb57c0f1"
+  url "https://registry.npmjs.org/backlog.md/-/backlog.md-1.9.1.tgz"
+  sha256 "592e1872b9469852d044834f96b37bc2620437592ba9f20cc017ac7d0509b6d7"
   license "MIT"
 
   bottle do
@@ -25,14 +25,8 @@ class BacklogMd < Formula
   test do
     assert_match version.to_s, shell_output("#{bin}/backlog --version")
 
-    port = free_port
-    pid = fork do
-      exec bin/"backlog", "browser", "--no-open", "--port", port.to_s
-    end
-    sleep 2
-    assert_match "<title>Backlog.md - Task Management</title>", shell_output("curl -s http://localhost:#{port}")
-  ensure
-    Process.kill("TERM", pid)
-    Process.wait(pid)
+    system "git", "init"
+    system bin/"backlog", "init", "--defaults", "foobar"
+    assert_path_exists testpath/"backlog"
   end
 end

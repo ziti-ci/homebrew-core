@@ -18,13 +18,14 @@ class Uvwasi < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_sequoia: "a1301aacda0bff9a5b103cde120e19aaac78ffbe5f09705b1c1d2325bd4be626"
-    sha256 cellar: :any,                 arm64_sonoma:  "80082a287224d9ecfa860812342997f6a628a3dd286357220bf61e90ff8ed2ba"
-    sha256 cellar: :any,                 arm64_ventura: "b3158be5a25f98230d95aea8795e5b58fd165bd85284392f172c6c57412ae954"
-    sha256 cellar: :any,                 sonoma:        "066b2018420140f16dde996fb33d354f2452365882bb86298ec2d88019b9ec80"
-    sha256 cellar: :any,                 ventura:       "055ffa830b53b3aeb6c491b173df544a32b2747d95cb0799870b04008880117e"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "0a42e7a904d8a5378a7ce378cc3662334bb6e779b16fe96d951824a1e219e26e"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "13e9282ff7b6fb954ae33c4d63fad37e38fc72f7f593957fe1896e02d1488bd4"
+    rebuild 1
+    sha256 cellar: :any,                 arm64_sequoia: "0e3092289f2097b20a62893123dd9aa2bf5a41d1cc525394648c62d57df2fbe5"
+    sha256 cellar: :any,                 arm64_sonoma:  "e571f34d903851533a284fbb5e5ed7cfc459b93d58b63c0c0f0af6449bfede9c"
+    sha256 cellar: :any,                 arm64_ventura: "a17e40393f81fa0bf392923d922199567a34b1b07dd1a7184da54e241ddf0edb"
+    sha256 cellar: :any,                 sonoma:        "0d535568557aeaa842fb26c0a2311ba8435fcd75c2f9375e6be7546ff2b35d69"
+    sha256 cellar: :any,                 ventura:       "32d31a06edac199f59f3e483ae14b681dbbda701632b4884566c16a42be848eb"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "84f2832cdb777a9b8cb48c831df3d8943d66b140965c4894533aac0b54d2826e"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "76137fa691e632245a36a06689eff1545f21a07573164f6fbf82ead3cf337f9c"
   end
 
   depends_on "cmake" => :build

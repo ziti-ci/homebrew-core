@@ -2,8 +2,8 @@ class Aom < Formula
   desc "Codec library for encoding and decoding AV1 video streams"
   homepage "https://aomedia.googlesource.com/aom"
   url "https://aomedia.googlesource.com/aom.git",
-      tag:      "v3.12.1",
-      revision: "10aece4157eb79315da205f39e19bf6ab3ee30d0"
+      tag:      "v3.13.0",
+      revision: "d9c115ce0951324dee243041ef810e27202de20f"
   license "BSD-2-Clause"
   head "https://aomedia.googlesource.com/aom.git", branch: "main"
 

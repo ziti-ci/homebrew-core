@@ -1,8 +1,8 @@
 class Openapi < Formula
   desc "CLI tools for working with OpenAPI, Arazzo and Overlay specifications"
   homepage "https://github.com/speakeasy-api/openapi"
-  url "https://github.com/speakeasy-api/openapi/archive/refs/tags/v1.6.1.tar.gz"
-  sha256 "2d1cb22b79b515ba0faefdb721b2d199f8094d76badb671ead88bd1454e76e10"
+  url "https://github.com/speakeasy-api/openapi/archive/refs/tags/v1.6.2.tar.gz"
+  sha256 "68d9fcadc1f346650cf1df2fbe8b943fd9d17a1564ae6c921290d307cac45741"
   license "MIT"
   head "https://github.com/speakeasy-api/openapi.git", branch: "main"
 
@@ -21,7 +21,7 @@ class Openapi < Formula
     ldflags = %W[
       -s -w
       -X main.version=#{version}
-      -X main.commit=#{stable.specs[:revision]}
+      -X main.commit=#{tap.user}
       -X main.date=#{time.iso8601}
     ]
     system "go", "build", *std_go_args(ldflags:), "./cmd/openapi"

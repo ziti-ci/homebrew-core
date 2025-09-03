@@ -1,8 +1,8 @@
 class Nsd < Formula
   desc "Name server daemon"
   homepage "https://www.nlnetlabs.nl/projects/nsd/"
-  url "https://www.nlnetlabs.nl/downloads/nsd/nsd-4.12.0.tar.gz"
-  sha256 "f9ecc2cf79ba50580f2df62918efc440084c5bf11057db44c19aa9643cd4b5e8"
+  url "https://www.nlnetlabs.nl/downloads/nsd/nsd-4.13.0.tar.gz"
+  sha256 "971380b8c9f074b44cc411321e83ec7a1a3edcdd6fc06851ef20bff40685ec5c"
   license "BSD-3-Clause"
 
   # We check the GitHub repo tags instead of
@@ -36,6 +36,7 @@ class Nsd < Formula
 
     system "./configure", "--sysconfdir=#{etc}",
                           "--localstatedir=#{var}",
+                          "--disable-dnstap",
                           "--with-libevent=#{Formula["libevent"].opt_prefix}",
                           "--with-ssl=#{Formula["openssl@3"].opt_prefix}",
                           *std_configure_args

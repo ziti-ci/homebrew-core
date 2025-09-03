@@ -8,13 +8,13 @@ class Omnara < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any,                 arm64_sequoia: "6be59504d1da15183917cb17221c99249c9dca1e6a77d498478037a6b1c0de7c"
-    sha256 cellar: :any,                 arm64_sonoma:  "4347e5c203d4047a2e801b3bd27f85d0d792478b3f1a78b000fe955524fc967b"
-    sha256 cellar: :any,                 arm64_ventura: "05eb8d1e2305facfd7fbf24150b670216df2db49daf33f9a35c4cfc7194f79ac"
-    sha256 cellar: :any,                 sonoma:        "db75ca799ac610a22e34ec1a38e36e0b5cb687206b52431334db87e105128137"
-    sha256 cellar: :any,                 ventura:       "8a64fd09f7bbebf73aee677e0432a7be9d6d1408004ac34f6284ad604a06ce70"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "9fc4e06ff07bdd8f5d9584ffc88f3b1b883c59f8203f095142cd6ac6f97cdf58"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "5fdb72ddb682b9f426c27b0c4a4adf14e4c3a26dec4bffc6c6bbf2092381f9af"
+    sha256 cellar: :any,                 arm64_sequoia: "4b1452e6a7c8bc740c34949e7f675acc834cddfdae8b08175f17092b3a71812a"
+    sha256 cellar: :any,                 arm64_sonoma:  "193498f0b7bbb470bdcb1bb385ab53b7d16e61070f5b241cb2d1c680e54c1098"
+    sha256 cellar: :any,                 arm64_ventura: "1f17efc7d96af7f3819e12c39c87616738b465b0faf4b63824847a4df2474d62"
+    sha256 cellar: :any,                 sonoma:        "a9b9e62f2e6791b2eaca7f7fd1f1cbab74d2fb40e97f7cb4daf5ae2ee199ab93"
+    sha256 cellar: :any,                 ventura:       "6b06a3287d09c42afdfff343e8751ee5292cf9574cc62b538c85adbbf8fc648a"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "69654a5bc484f364e5927c119273f31f13e93e9c697ef2cbe724a1542da800a3"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "9117d77689369999467a6e878df4562c4845c4b5ac8a5a3e68df97f029cfa641"
   end
 
   depends_on "rust" => :build # for pydantic-core

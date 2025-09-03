@@ -6,13 +6,13 @@ class Menhir < Formula
   license "GPL-3.0-or-later"
 
   bottle do
-    sha256 cellar: :any,                 arm64_sequoia: "9b2468fc64410b839861ee2531605435a84c67ec1732b3b10a6f6f58df942026"
-    sha256 cellar: :any,                 arm64_sonoma:  "21faae7f40879726a7182fc3a2b06782d05f20ac7c6a78c24c89924e9b987d5f"
-    sha256 cellar: :any,                 arm64_ventura: "e4ab6e13c7d88cd011a87a1ab70c1402b91d52c6e063ca9b053488a5cb4dd7fb"
-    sha256 cellar: :any,                 sonoma:        "21785efb5af4a838f5677dc7c5b13d84baa8b59d8bb3fb6e3f89fc36a9e3f013"
-    sha256 cellar: :any,                 ventura:       "2ed3b598496bb3807dd23ab878d762f9a10138d34ebbbf35e6a06e77a0c45afd"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "3c8e624c73e5eb0cda890d15259ce19b2fb6d81a5f9f8bf1a375d82087fbf662"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "e470ee3bce1d4a0c52223cc49d7cbce48c7115fe819a54bcd09bf2e66b1187d8"
+    sha256 cellar: :any,                 arm64_sequoia: "1d7d2a92006bd116b33eba485235f3d4b120c56b54780734609a6932df2362ff"
+    sha256 cellar: :any,                 arm64_sonoma:  "73db65eda2bf6a6daf1203d702aa63b96bdf66c96fc0e0c66b1da1f1237a45da"
+    sha256 cellar: :any,                 arm64_ventura: "c89bb55894224a694a69a601d1bed304bbe4ac4a08eb8918ff1d2ecf7b3405e6"
+    sha256 cellar: :any,                 sonoma:        "14810d2c725e18865fd50b291d7c5fe87275ef6f81064b1a243ea18788a41a1d"
+    sha256 cellar: :any,                 ventura:       "b59480b3cc6ae7760906589344290b687e4477c2b41a2b9803f5d1e8b29aae7a"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "7b6b8a0e8d6a387d1b74a10808941c2efd82667da6b40e0917e93559d72f6bd9"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "17a9cedc5c1a3057b77aff7fe719c75a67ef48197142c554c776d8438191b133"
   end
 
   depends_on "dune" => :build

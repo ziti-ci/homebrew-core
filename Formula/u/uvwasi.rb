@@ -1,19 +1,19 @@
 class Uvwasi < Formula
   desc "WASI syscall API built atop libuv"
   homepage "https://github.com/nodejs/uvwasi"
-  url "https://github.com/nodejs/uvwasi/archive/refs/tags/v0.0.21.tar.gz"
-  sha256 "5cf32f166c493f41c0de7f3fd578d0be1b692c81c54f0c68889e62240fe9ab60"
+  url "https://github.com/nodejs/uvwasi/archive/refs/tags/v0.0.22.tar.gz"
+  sha256 "255b5d4b961ab73ac00d10909cd2a431670fc708004421f07267e8d6ef8a1bc8"
   license "MIT"
   head "https://github.com/nodejs/uvwasi.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any,                 arm64_sequoia: "e9bc1d223efb41a0bee91c928bf2d85a57179c0ab37713dfd6941f046f3f50e9"
-    sha256 cellar: :any,                 arm64_sonoma:  "957553fa84683816e9e111fcfeb9ef2199b2d0fc26cdccc4e9927e5e7aa84aab"
-    sha256 cellar: :any,                 arm64_ventura: "28edfaafaf6fa3cea2414466622439a65d5d4ab98ddb4610ee3b16c62d25d65a"
-    sha256 cellar: :any,                 sonoma:        "075cf1c7a4ded621c47d59adaee755993f7aeb5bc282b42dcffcf7478fdb66bd"
-    sha256 cellar: :any,                 ventura:       "688985b4bedff51f9f0f26a94a694ea2cfe9b88c932e1ef3ae741e92ff1b835a"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "75425694689a0cbb61f9132e10f647f503eaa2a5370017dbe58f24ff5ab33b61"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "0af054bb833db53e6ee07eed754630fcd7c24abcd088a8fe15b8c9f76a9c6065"
+    sha256 cellar: :any,                 arm64_sequoia: "a1301aacda0bff9a5b103cde120e19aaac78ffbe5f09705b1c1d2325bd4be626"
+    sha256 cellar: :any,                 arm64_sonoma:  "80082a287224d9ecfa860812342997f6a628a3dd286357220bf61e90ff8ed2ba"
+    sha256 cellar: :any,                 arm64_ventura: "b3158be5a25f98230d95aea8795e5b58fd165bd85284392f172c6c57412ae954"
+    sha256 cellar: :any,                 sonoma:        "066b2018420140f16dde996fb33d354f2452365882bb86298ec2d88019b9ec80"
+    sha256 cellar: :any,                 ventura:       "055ffa830b53b3aeb6c491b173df544a32b2747d95cb0799870b04008880117e"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "0a42e7a904d8a5378a7ce378cc3662334bb6e779b16fe96d951824a1e219e26e"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "13e9282ff7b6fb954ae33c4d63fad37e38fc72f7f593957fe1896e02d1488bd4"
   end
 
   depends_on "cmake" => :build
@@ -34,7 +34,7 @@ class Uvwasi < Formula
       #include <stdlib.h>
       #include <string.h>
       #include "uv.h"
-      #include "uvwasi/uvwasi.h"
+      #include "uvwasi.h"
 
       int main(void) {
         uvwasi_t uvwasi;

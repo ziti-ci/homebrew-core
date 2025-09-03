@@ -1,8 +1,8 @@
 class Cotp < Formula
   desc "TOTP/HOTP authenticator app with import functionality"
   homepage "https://github.com/replydev/cotp"
-  url "https://github.com/replydev/cotp/archive/refs/tags/v1.9.6.tar.gz"
-  sha256 "4a712b2f01575cecad02d44ee49f941a70f18d9548ae163ff938885457ccc71a"
+  url "https://github.com/replydev/cotp/archive/refs/tags/v1.9.7.tar.gz"
+  sha256 "6234805a8eb20a71d2acb07ad8d7827bd5c98c653b7eb733bab0f90cbb9f6212"
   license "GPL-3.0-only"
   head "https://github.com/replydev/cotp.git", branch: "main"
 

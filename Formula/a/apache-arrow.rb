@@ -18,13 +18,14 @@ class ApacheArrow < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_sequoia: "eba5d4c9a454c16ded50064c80bb320f90ba445eca8c77c6017eb7cde2a8c504"
-    sha256 cellar: :any, arm64_sonoma:  "af749d9e8df7978ac004bcf05c38f4a6ba507f104580e2059389135a689cb011"
-    sha256 cellar: :any, arm64_ventura: "fc6d23d58ccc71935689628183b3aa840c66b1ff5b9abeb3b5d7977dd542a716"
-    sha256 cellar: :any, sonoma:        "507bffe11e9ae71a249e4850efe8a456460a76f10de7ad6284bd1c70f5839bba"
-    sha256 cellar: :any, ventura:       "a3b31372594423387c0a0bd459742b59f0514362171bc4d3f62d0747003d3fd2"
-    sha256               arm64_linux:   "f7c33c06cc5a2e7c4150bf09be9768487fa871f330205b3a9f4e711965c03ba1"
-    sha256               x86_64_linux:  "daa359dbdab868134e045b05eea76d9b227cff4137bca8e615b859dbadd28c2c"
+    rebuild 1
+    sha256 cellar: :any, arm64_sequoia: "a831bbc2b0bc3906d7a6cff8a9a7a2f135540146e974de25cb397c6ec8b0b206"
+    sha256 cellar: :any, arm64_sonoma:  "ba9ff23dd0b501553dbe5dccff2899c37dbef928989c9c4738f00c4f6d4c6ac5"
+    sha256 cellar: :any, arm64_ventura: "3855488d7c3df0b532c23340d18e3c91f4d1242e9c2ed9f25438d9ab02baacb7"
+    sha256 cellar: :any, sonoma:        "2483e43494d672a1d71c4f98809e1fddba418ecd1b660bb2fd602ccec390a1d8"
+    sha256 cellar: :any, ventura:       "2a58b770230894592bc4697cc0698a4a2ffb8687288fc3de79f96ba39385d083"
+    sha256               arm64_linux:   "e07a6fd683cf1d8c97e12d430f8ab7e3b0e734b1596ae3bf90c93a16c1dfdd71"
+    sha256               x86_64_linux:  "88c017ac20a81aa3a6fe845ac0a812f41774241b8a27f7ddd27e34d43df01525"
   end
 
   depends_on "boost" => :build

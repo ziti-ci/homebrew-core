@@ -1,8 +1,8 @@
 class JpegTurbo < Formula
   desc "JPEG image codec that aids compression and decompression"
   homepage "https://www.libjpeg-turbo.org/"
-  url "https://github.com/libjpeg-turbo/libjpeg-turbo/releases/download/3.1.1/libjpeg-turbo-3.1.1.tar.gz"
-  sha256 "aadc97ea91f6ef078b0ae3a62bba69e008d9a7db19b34e4ac973b19b71b4217c"
+  url "https://github.com/libjpeg-turbo/libjpeg-turbo/releases/download/3.1.2/libjpeg-turbo-3.1.2.tar.gz"
+  sha256 "8f0012234b464ce50890c490f18194f913a7b1f4e6a03d6644179fa0f867d0cf"
   license all_of: [
     "IJG", # libjpeg API library and programs
     "Zlib", # libjpeg-turbo SIMD source code

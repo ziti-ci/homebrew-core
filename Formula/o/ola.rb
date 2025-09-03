@@ -166,6 +166,11 @@ class Ola < Formula
     EOS
   end
 
+  service do
+    run [opt_bin/"olad", "--no-http-quit"]
+    error_log_path var/"log/olad.log"
+  end
+
   test do
     ENV.prepend_path "PYTHONPATH", extra_python_path
     system bin/"ola_plugin_state", "-h"

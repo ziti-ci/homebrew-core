@@ -3,8 +3,8 @@ class Omnara < Formula
 
   desc "Talk to Your AI Agents from Anywhere"
   homepage "https://omnara.com/"
-  url "https://files.pythonhosted.org/packages/60/2b/d96091b23de24dd609b67964bc1740b75a31c80077cd9aa1a96f33614279/omnara-1.6.2.tar.gz"
-  sha256 "488b281f50c43cfdb4fd8abdacfc186fd11d3669c03e0e486cf374d6523d3151"
+  url "https://files.pythonhosted.org/packages/8d/87/180de32c95a4b7289b4405176eb1f1b457ae3fa2a294cb19a321c468f793/omnara-1.6.3.tar.gz"
+  sha256 "a9364aa4b1569916e9b7496b66a04206494157c9ceffdbd069f9ce87321ee798"
   license "Apache-2.0"
 
   bottle do
@@ -199,8 +199,8 @@ class Omnara < Formula
   end
 
   resource "more-itertools" do
-    url "https://files.pythonhosted.org/packages/ce/a0/834b0cebabbfc7e311f30b46c8188790a37f89fc8d756660346fe5abfd09/more_itertools-10.7.0.tar.gz"
-    sha256 "9fddd5403be01a94b204faadcff459ec3568cf110265d3c54323e1e866ad29d3"
+    url "https://files.pythonhosted.org/packages/ea/5d/38b681d3fce7a266dd9ab73c66959406d565b3e85f21d5e66e1181d93721/more_itertools-10.8.0.tar.gz"
+    sha256 "f638ddf8a1a0d134181275fb5d58b086ead7c6a72429ad725c67503f13ba30bd"
   end
 
   resource "multidict" do
@@ -209,8 +209,8 @@ class Omnara < Formula
   end
 
   resource "openai" do
-    url "https://files.pythonhosted.org/packages/07/55/da5598ed5c6bdd9939633854049cddc5cbac0da938dfcfcb3c6b119c16c0/openai-1.102.0.tar.gz"
-    sha256 "2e0153bcd64a6523071e90211cbfca1f2bbc5ceedd0993ba932a5869f93b7fc9"
+    url "https://files.pythonhosted.org/packages/94/dc/965b3528ed0435b717acca45e2541d94bd827c0520ce172366323c9edcab/openai-1.104.2.tar.gz"
+    sha256 "9b582ead9dd208753f89dae8e36b6548c6ada076e87ba3db36630e29239661ab"
   end
 
   resource "openapi-core" do

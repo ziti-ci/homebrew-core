@@ -25,7 +25,7 @@ class Pixman < Formula
   depends_on "pkgconf" => :test
 
   def install
-    system "meson", "setup", "build", *std_meson_args
+    system "meson", "setup", "build", "--default-library=both", *std_meson_args
     system "meson", "compile", "-C", "build", "--verbose"
     system "meson", "install", "-C", "build"
   end

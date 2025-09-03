@@ -1,21 +1,10 @@
 class Uvwasi < Formula
   desc "WASI syscall API built atop libuv"
   homepage "https://github.com/nodejs/uvwasi"
+  url "https://github.com/nodejs/uvwasi/archive/refs/tags/v0.0.23.tar.gz"
+  sha256 "cdb148aac298883b51da887657deca910c7c02f35435e24f125cef536fe8d5e1"
   license "MIT"
   head "https://github.com/nodejs/uvwasi.git", branch: "main"
-
-  # TODO: Remove `stable` block when patch is no longer needed.
-  stable do
-    url "https://github.com/nodejs/uvwasi/archive/refs/tags/v0.0.22.tar.gz"
-    sha256 "255b5d4b961ab73ac00d10909cd2a431670fc708004421f07267e8d6ef8a1bc8"
-
-    # Ensure all symbols required by Node are exported.
-    # https://github.com/nodejs/uvwasi/pull/311
-    patch do
-      url "https://github.com/nodejs/uvwasi/commit/7803a3183b4ed3ab975311eeb014365e56a85950.patch?full_index=1"
-      sha256 "736e47f765c63316bb99af6599219780822d1ba708a96bfe9ae1176ad2ca6c43"
-    end
-  end
 
   bottle do
     rebuild 1

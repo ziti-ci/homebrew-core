@@ -1,16 +1,14 @@
 class Ngspice < Formula
   desc "Spice circuit simulator"
   homepage "https://ngspice.sourceforge.io/"
-  url "https://downloads.sourceforge.net/project/ngspice/ng-spice-rework/44.2/ngspice-44.2.tar.gz"
-  sha256 "e7dadfb7bd5474fd22409c1e5a67acdec19f77e597df68e17c5549bc1390d7fd"
+  url "https://downloads.sourceforge.net/project/ngspice/ng-spice-rework/45/ngspice-45.tar.gz"
+  sha256 "f1aad8abac2828a7b71da66411de8e406524e75f3066e46755439c490442d734"
   license :cannot_represent
 
   livecheck do
     url :stable
     regex(%r{url=.*?/ngspice[._-]v?(\d+(?:\.\d+)*)\.t}i)
   end
-
-  no_autobump! because: :requires_manual_review
 
   bottle do
     sha256 arm64_sequoia: "1ffc6582d286ba7c1055977a97500cd471eb9f9841c25367fcd1d95732236ef8"

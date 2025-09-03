@@ -1,8 +1,8 @@
 class Uriparser < Formula
   desc "URI parsing library (strictly RFC 3986 compliant)"
   homepage "https://uriparser.github.io/"
-  url "https://github.com/uriparser/uriparser/releases/download/uriparser-0.9.8/uriparser-0.9.8.tar.bz2"
-  sha256 "72d1b559be3a1806f788a3d9be34a1b063d42aa238b29ba4ee633d6effcd33bd"
+  url "https://github.com/uriparser/uriparser/releases/download/uriparser-0.9.9/uriparser-0.9.9.tar.bz2"
+  sha256 "027b923c0ce89786d8cf7a842ef77dcfff3a6a097c0e67d241b447d1eae8db4c"
   license "BSD-3-Clause"
   head "https://github.com/uriparser/uriparser.git", branch: "master"
 

@@ -3,10 +3,9 @@ class Openvino < Formula
 
   desc "Open Visual Inference And Optimization toolkit for AI inference"
   homepage "https://docs.openvino.ai"
-  url "https://github.com/openvinotoolkit/openvino/archive/refs/tags/2025.2.0.tar.gz"
-  sha256 "15cd5c9beb320a8feadd18bcae40970608de154d5057277281dc53dd7023e383"
+  url "https://github.com/openvinotoolkit/openvino/archive/refs/tags/2025.3.0.tar.gz"
+  sha256 "969a1b881ad0103dd522b5b09738434261d1158ebb23acb000eafef55268f7be"
   license "Apache-2.0"
-  revision 3
   head "https://github.com/openvinotoolkit/openvino.git", branch: "master"
 
   livecheck do
@@ -47,8 +46,8 @@ class Openvino < Formula
     depends_on "opencl-icd-loader"
 
     resource "onednn_gpu" do
-      url "https://github.com/uxlfoundation/oneDNN/archive/c7d59a12849295c8bdf6401b8ea3968f4346ee0c.tar.gz"
-      sha256 "05bc693ee788768f18397bd235ad40f55261e4336a683469a50072bfddbf9f98"
+      url "https://github.com/uxlfoundation/oneDNN/archive/8edf6bb60fdaa2769f3cebf44bd2ee94da00744c.tar.gz"
+      sha256 "c943ab6e9cc6c382de48e76cb62ba075554a89b438876d945e5355e22588e06d"
     end
   end
 
@@ -83,8 +82,8 @@ class Openvino < Formula
   end
 
   resource "onednn_cpu" do
-    url "https://github.com/openvinotoolkit/oneDNN/archive/793dd02883483385fb7ee3b1af1e4273ce833444.tar.gz"
-    sha256 "f6ae708f5b78361cab2c544a976d66bd7ccd74b4b6df7710d4d86a383f6916f9"
+    url "https://github.com/openvinotoolkit/oneDNN/archive/3d7a6f1d068d8ae08f189aa4baa93d177bc07507.tar.gz"
+    sha256 "354fa9c44a6feaea06230082e1b9f53ea853836a29e4030320ba8e480357614b"
   end
 
   resource "openvino-telemetry" do
@@ -99,13 +98,6 @@ class Openvino < Formula
 
   def python3
     "python3.13"
-  end
-
-  # Fix to add adhoc sign back for Homebrew.
-  # Remove patch when available in release.
-  patch do
-    url "https://github.com/openvinotoolkit/openvino/commit/f89181e38b64eee8296623c1caf9870164beff89.patch?full_index=1"
-    sha256 "6483957f1ed1ad41bb50e699b177c69991380c2b44fae3567180dfa4d82e3374"
   end
 
   def install
@@ -165,6 +157,7 @@ class Openvino < Formula
       -DENABLE_SYSTEM_FLATBUFFERS=ON
       -DENABLE_SYSTEM_SNAPPY=ON
       -DProtobuf_USE_STATIC_LIBS=OFF
+      -DOV_FORCE_ADHOC_SIGN=ON
     ]
     if OS.mac?
       cmake_args << "-DCMAKE_OSX_DEPLOYMENT_TARGET=#{MacOS.version}.0"

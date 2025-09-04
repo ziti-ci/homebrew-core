@@ -10,6 +10,10 @@ class TinyRemapper < Formula
     regex(%r{<version>v?(\d+(?:\.\d+)+)</version>}i)
   end
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "99a430d8364a495aab6a8d0567737652cc7cd9e64606cb76ba10120eef0c8926"
+  end
+
   depends_on "openjdk"
 
   def install

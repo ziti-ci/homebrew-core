@@ -15,13 +15,13 @@ class Openssh < Formula
   no_autobump! because: :requires_manual_review
 
   bottle do
-    sha256 arm64_sequoia: "0f9bafc94fa471cbb2385c7d6c94555007562649922e994db8c0445a509f7309"
-    sha256 arm64_sonoma:  "3d29bd75979fa18a5ffedeb87e980935130badc1e66eb1b03fbe939395d69faa"
-    sha256 arm64_ventura: "f5ce25d2a671debd1114ce92ba6fc9ecefafce11d8e3fed5287fe29039cb547a"
-    sha256 sonoma:        "abfddd2952c084d370508dbc9f73d841b21a79086798e503f433973c0a96d8f2"
-    sha256 ventura:       "4b3a0a5eedf70dd18d80c2062d2fd3ac370e774b928d21c227dd09d0b18598de"
-    sha256 arm64_linux:   "3161bee35d5c534421e678ac88d5c9c5c4b9cc3027ef84de29158c21b4753853"
-    sha256 x86_64_linux:  "94e604bf4f8b0554621c22291d50063101c43bd4b99b48dbd0c7120a1f5178b5"
+    sha256 arm64_sequoia: "7389e350d66dd63bfde69bf423bdc64ffc640e2cca096c05dc68aa98a546ef2a"
+    sha256 arm64_sonoma:  "efda31ef626a2499082eb8fdcff8915377b29be10284cd502bd74753dc42621d"
+    sha256 arm64_ventura: "83893341782c137e23dcdd013f87f89a12560495917813c7d183da60c21cce7b"
+    sha256 sonoma:        "d1753b8276aadc6a66fc34f56a2fd5ce9579e183fe1a0a1767fd06b5c0a9dc92"
+    sha256 ventura:       "707390e3d5b6fe706149fd59fd86280c516768757daf3b8552fb1f61abe41f15"
+    sha256 arm64_linux:   "738203080c24306d9e150bf798da8d611d4aa026b998646a94f764f9a088d143"
+    sha256 x86_64_linux:  "255e49b74598babda42059eb0176a79d4a45f79704518fbc4a86deec9e4b2849"
   end
 
   # Please don't resubmit the keychain patch option. It will never be accepted.

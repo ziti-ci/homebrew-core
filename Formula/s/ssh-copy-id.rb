@@ -15,7 +15,7 @@ class SshCopyId < Formula
   no_autobump! because: :requires_manual_review
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "38fb758068e8bbbfb6ed35f280b124280544fdbfbd247ed7db798ca3710c5427"
+    sha256 cellar: :any_skip_relocation, all: "008b7d12fec5d688411b2afa7c2c9139ee1e4645132dc0aaf7a7409d7dda1d63"
   end
 
   keg_only :provided_by_macos

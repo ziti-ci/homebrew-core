@@ -1,8 +1,8 @@
 class Kalker < Formula
   desc "Full-featured calculator with math syntax"
   homepage "https://kalker.strct.net"
-  url "https://github.com/PaddiM8/kalker/archive/refs/tags/v2.2.1.tar.gz"
-  sha256 "a6ccf096301a37d2bbb14fdacfc8c801a8b058b0fd38929639d03c4868564adf"
+  url "https://github.com/PaddiM8/kalker/archive/refs/tags/v2.2.2.tar.gz"
+  sha256 "4f35555e19c8a1a05ceba6a7043088a00fea3fbf780bbd4af90696172ce9f7c3"
   license "MIT"
 
   bottle do
@@ -19,10 +19,10 @@ class Kalker < Formula
 
   uses_from_macos "m4" => :build
 
-  # bump wasm-bindgen to build against rust 1.87, upstream pr ref, https://github.com/PaddiM8/kalker/pull/167
+  # Fix to version bump, should be removed with next release
   patch do
-    url "https://github.com/PaddiM8/kalker/commit/81bf66950a9dfeca4ab5fdd12774c93e40021eb1.patch?full_index=1"
-    sha256 "ea3bb71fc4c0b688d0823518a3d193092fab537abe9d78b887c3f89a39001c60"
+    url "https://github.com/PaddiM8/kalker/commit/bff6f279634aec9a60ec866c1e3f137b9ba1a007.patch?full_index=1"
+    sha256 "e74ab1f67fc678e4b6d8bf04dee5893ceba0378b2f079459c397027496cfe5b1"
   end
 
   def install
@@ -32,7 +32,7 @@ class Kalker < Formula
   end
 
   test do
-    assert_equal shell_output("#{bin}/kalker 'sum(n=1, 3, 2n+1)'").chomp, "= 15"
     assert_match version.to_s, shell_output("#{bin}/kalker -h")
+    assert_equal "= 15", shell_output("#{bin}/kalker 'sum(n=1, 3, 2n+1)'").chomp
   end
 end

@@ -1,8 +1,8 @@
 class KymaCli < Formula
   desc "Kyma command-line interface"
   homepage "https://kyma-project.io"
-  url "https://github.com/kyma-project/cli/archive/refs/tags/3.0.1.tar.gz"
-  sha256 "503a7a248e6c5bca55ddaf2366203c7e6f161335bcce9dc253d88e381c48732b"
+  url "https://github.com/kyma-project/cli/archive/refs/tags/3.1.0.tar.gz"
+  sha256 "883d938c55e89e92dad8e17ed46c38e47b2c46fdc8ddd1995160970798e83ee3"
   license "Apache-2.0"
   head "https://github.com/kyma-project/cli.git", branch: "main"
 
@@ -37,9 +37,9 @@ class KymaCli < Formula
   end
 
   test do
-    assert_match "failed to create cluster connection",
-      shell_output("#{bin}/kyma alpha kubeconfig generate --token test-token --skip-extensions 2>&1", 1)
-
     assert_match "Kyma-CLI Version: #{version}", shell_output("#{bin}/kyma version")
+
+    output = shell_output("#{bin}/kyma alpha kubeconfig generate --token test-token --skip-extensions 2>&1", 1)
+    assert_match "try setting KUBERNETES_MASTER environment variable", output
   end
 end

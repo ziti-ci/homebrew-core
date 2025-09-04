@@ -7,15 +7,13 @@ class Uriparser < Formula
   head "https://github.com/uriparser/uriparser.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_sequoia:  "7cee35b2ea5693567cabf7ef30e9a6c8f35423ccad4cba6fa4f9dff90727d79e"
-    sha256 cellar: :any,                 arm64_sonoma:   "1afad33dd8c8d67dd454030f96ca7b71fd625b088ba4e7354f52eb789995d2af"
-    sha256 cellar: :any,                 arm64_ventura:  "71f1d1f2919cd33409df57ff9464007a85aaf5ed23b496b1fc3311be22edb07e"
-    sha256 cellar: :any,                 arm64_monterey: "0f9231a7cc6bd6bf5578ec959b4951a9fa2bdf22a9f1ed571c5f3d9c2eccdc65"
-    sha256 cellar: :any,                 sonoma:         "9f1884bfa5687f65eca6be5aec1e0c5618f5faa404290d0827bb3c390828fcee"
-    sha256 cellar: :any,                 ventura:        "8df3c1c481bb8dca64b708dd35cc514e3743827b4d6b544aa5418d4ed90e868e"
-    sha256 cellar: :any,                 monterey:       "942834f010ac0ac2d508277f6f4c8d00d229654bf02de7528df7d53d5ca72771"
-    sha256 cellar: :any_skip_relocation, arm64_linux:    "93dc11e4bc86e1a410469220e448cbef25afb05dddc71ab5aed53ebcf818fcb4"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "690d05924e1dcfe664e3e0891326fa6c19aa61c178d1cff63a361013cad4b001"
+    sha256 cellar: :any,                 arm64_sequoia: "e2c29d08c85241f773b135ee33da1ddb8927b7c54c82130fdedd5de90a1b1422"
+    sha256 cellar: :any,                 arm64_sonoma:  "a630502ffbbf1043adc36494c0323bb8769ef9f90b2fbf0a682ea69bd7f052d3"
+    sha256 cellar: :any,                 arm64_ventura: "f516ff326638f85478d18d4d68ee8ef700094465610ad77d5334145f80ae86aa"
+    sha256 cellar: :any,                 sonoma:        "16c96a36df667b883749319d432e153a17ba8b92d4e095842372393cd56e1eda"
+    sha256 cellar: :any,                 ventura:       "0d58050aad70cd35e623b6f166035c83239ab5cac6602a618f7b8574caa78206"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "3d6268670d5d5700b71984169dbced8cfc9f9e0416c23efcedc29825f447464c"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "ecc58cbb61b010dc4464969c6af86038df87e03b858e3f8164faeeb42993945f"
   end
 
   depends_on "cmake" => :build

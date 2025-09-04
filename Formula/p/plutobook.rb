@@ -5,6 +5,15 @@ class Plutobook < Formula
   sha256 "51d984a6efd6137fc2fa3416f8fee5d0fb9c2e17c3a0614f349de3af9f7aa093"
   license "MIT"
 
+  bottle do
+    sha256 cellar: :any, arm64_sequoia: "1ca3e3159e11d28e421bcc5203d3321a2e14b63b90b1cc8f1f1a8a4400ea44f8"
+    sha256 cellar: :any, arm64_sonoma:  "9d7bec20c8fb07c813c38364dea512b36ef7a37939c203c931e385518f76d7e8"
+    sha256 cellar: :any, arm64_ventura: "bb819b4c2de899d3e0ee1c600830de3151ea86284d13d754080ce5513856dc9e"
+    sha256 cellar: :any, sonoma:        "5445fa9a5c5871165846b93db5a53ff5d3d55fe7aa9eadc9d41bd9228dbf1cad"
+    sha256 cellar: :any, ventura:       "7f3d14be468c6d71a128b67f65914ec817c293a831b810195e7f9fdcb4f813b8"
+    sha256               x86_64_linux:  "95f3995698d369a7f6ecc75820c9d919fadcc5311010d34de15f78fa584b5f76"
+  end
+
   depends_on "meson" => :build
   depends_on "ninja" => :build
   depends_on "pkgconf" => :build

@@ -14,15 +14,14 @@ class Reuse < Formula
   head "https://github.com/fsfe/reuse-tool.git", branch: "main"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "d1e9f42fa50e4ea82dfc2ec88faa06102e6d63adaebed112141fe37a73f369a2"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "065c54ba3e7145fcf12b9a192cee1f42f67ad186b44acd701b4e652bbf2195e6"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "3cad642852cfd7db606fb7dc082896e7137e1a19feda1cfa95402d125b05cae2"
-    sha256 cellar: :any_skip_relocation, sequoia:       "b79ec9d7b73d04d864bb93e2e0f5e43db800e6c7298b7156999c3e4aa049fd8f"
-    sha256 cellar: :any_skip_relocation, sonoma:        "c16b46afcd6e0b55ac2382273c90be328c8d7ef52d0a542ff624287674e17c7c"
-    sha256 cellar: :any_skip_relocation, ventura:       "92748e494749e18874c7994a7d0b5eda97ef6b5e12f8e00505237078855b824e"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "e47f42279757e80d33c84fcdc29f9c20d1cbd6c41b823377f535a36d690f40dd"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "94cbf470095413b03b88b4941dd402628f9d48a3e89e851ebe9239a6c7065bcc"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "fef2ced1149ec1cbed6bcedadd626f1db1eaa8b2d343819f0922818a1c355f20"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "a18e06c7533e7901d1b476a2a15f78f0585ae335448b6b9085db9a53db8aa9b5"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "619e637ab782797434703a833997858908080a88880efd809c264200fb29f671"
+    sha256 cellar: :any_skip_relocation, sequoia:       "e4b06adb4a6a30a02b92bd9abc111fd2af893027c69910d6cf35b632e5b7ecb7"
+    sha256 cellar: :any_skip_relocation, sonoma:        "b02ea4f97c45a3ad23ee37eec807cbb1119f5dc287384dd4ba63c8aef77b3b14"
+    sha256 cellar: :any_skip_relocation, ventura:       "b166431fd3aacfe94bfa36ce6fb0a9afbf7ffc9659f5171a47ae338f6735a1d6"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "ee237c62978acab04e6fa8a080a85f9f8136fb04e553743ace6fe0734b354c90"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "3c19b18ecd1b4bed5f4d129611a7cb54cef12c6d7d024d4a7194723f189a19a3"
   end
 
   depends_on "python@3.13"

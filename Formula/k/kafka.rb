@@ -12,14 +12,13 @@ class Kafka < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "73ba51ee035a8ffecc3b205a8272ac62c0529a4e52f48f114ad3e8404405b288"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "73ba51ee035a8ffecc3b205a8272ac62c0529a4e52f48f114ad3e8404405b288"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "73ba51ee035a8ffecc3b205a8272ac62c0529a4e52f48f114ad3e8404405b288"
-    sha256 cellar: :any_skip_relocation, sonoma:        "4666ab9b22fd319f6d1344897a84ce4641f3282afee243c61c5ff6ee46303f4f"
-    sha256 cellar: :any_skip_relocation, ventura:       "4666ab9b22fd319f6d1344897a84ce4641f3282afee243c61c5ff6ee46303f4f"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "73ba51ee035a8ffecc3b205a8272ac62c0529a4e52f48f114ad3e8404405b288"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "73ba51ee035a8ffecc3b205a8272ac62c0529a4e52f48f114ad3e8404405b288"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "f8fcbe529216de1ca2aca9eb41755ef7053ae2e644bf5989b047d660e2930e8c"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "f8fcbe529216de1ca2aca9eb41755ef7053ae2e644bf5989b047d660e2930e8c"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "f8fcbe529216de1ca2aca9eb41755ef7053ae2e644bf5989b047d660e2930e8c"
+    sha256 cellar: :any_skip_relocation, sonoma:        "f4e31d32baf7d26a3dc4b675c893732ddf56979bc0e925a3890658a04f6a1fa6"
+    sha256 cellar: :any_skip_relocation, ventura:       "f4e31d32baf7d26a3dc4b675c893732ddf56979bc0e925a3890658a04f6a1fa6"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "f8fcbe529216de1ca2aca9eb41755ef7053ae2e644bf5989b047d660e2930e8c"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "f8fcbe529216de1ca2aca9eb41755ef7053ae2e644bf5989b047d660e2930e8c"
   end
 
   depends_on "openjdk"

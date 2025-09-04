@@ -3,8 +3,8 @@ class Hyfetch < Formula
 
   desc "Fast, highly customisable system info script with LGBTQ+ pride flags"
   homepage "https://github.com/hykilpikonna/hyfetch"
-  url "https://files.pythonhosted.org/packages/71/ac/16335a530041683e3c193694cc9db3b53ebfed9dab3db3b69d485bda8ce4/hyfetch-2.0.1.tar.gz"
-  sha256 "bec29bfa0bc2b7309782348a0ca7c906cb481a3375da04b3c7f58a6f5cb512f9"
+  url "https://files.pythonhosted.org/packages/35/f2/8b24d32c63110d3ba7e5e4c88827827cb05eb4e3d14c6652304c546b0e71/hyfetch-2.0.2.tar.gz"
+  sha256 "d11eed4b6082095a9e41272fb846e9ed029b172847c9d30e8646eabee9da2b12"
   license "MIT"
   head "https://github.com/hykilpikonna/hyfetch.git", branch: "master"
 

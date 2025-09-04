@@ -1,8 +1,8 @@
 class Discount < Formula
   desc "C implementation of Markdown"
   homepage "https://www.pell.portland.or.us/~orc/Code/discount/"
-  url "https://www.pell.portland.or.us/~orc/Code/discount/discount-2.2.7d.tar.bz2"
-  sha256 "12a2041e96ae8cde17e08ff1a215d331580a5c58688daa5a18842b6bb5b77b52"
+  url "https://www.pell.portland.or.us/~orc/Code/discount/discount-3.0.1.tar.bz2"
+  sha256 "472c31c84b0c00962ed4f004889de4b0745b18f7865ad5b9aab07fd84dd2971e"
   license "BSD-3-Clause"
   head "https://github.com/Orc/discount.git", branch: "main"
 
@@ -10,8 +10,6 @@ class Discount < Formula
     url :homepage
     regex(/href=.*?discount[._-]v?(\d+(?:\.\d+)+[a-z]?)\.t/i)
   end
-
-  no_autobump! because: :requires_manual_review
 
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_sequoia:  "a570a68edd737474736b516db39db9a072785ff13735f226d0cd8ea056648311"

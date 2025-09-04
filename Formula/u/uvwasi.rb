@@ -7,14 +7,13 @@ class Uvwasi < Formula
   head "https://github.com/nodejs/uvwasi.git", branch: "main"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any,                 arm64_sequoia: "0e3092289f2097b20a62893123dd9aa2bf5a41d1cc525394648c62d57df2fbe5"
-    sha256 cellar: :any,                 arm64_sonoma:  "e571f34d903851533a284fbb5e5ed7cfc459b93d58b63c0c0f0af6449bfede9c"
-    sha256 cellar: :any,                 arm64_ventura: "a17e40393f81fa0bf392923d922199567a34b1b07dd1a7184da54e241ddf0edb"
-    sha256 cellar: :any,                 sonoma:        "0d535568557aeaa842fb26c0a2311ba8435fcd75c2f9375e6be7546ff2b35d69"
-    sha256 cellar: :any,                 ventura:       "32d31a06edac199f59f3e483ae14b681dbbda701632b4884566c16a42be848eb"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "84f2832cdb777a9b8cb48c831df3d8943d66b140965c4894533aac0b54d2826e"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "76137fa691e632245a36a06689eff1545f21a07573164f6fbf82ead3cf337f9c"
+    sha256 cellar: :any,                 arm64_sequoia: "8b31bdacb3dce4e40fd0ac0e6336b1b7b1c22e8dd5fe5cfafc0b51bce6929f45"
+    sha256 cellar: :any,                 arm64_sonoma:  "cf6eb3a3af1367282339d67f382e6de64784acbb6ae2b187e0426eccde316b19"
+    sha256 cellar: :any,                 arm64_ventura: "5d12020d1e8759edd22722fc6ec2aa5a612caf8ce866d99a9ec3ab56b0b62037"
+    sha256 cellar: :any,                 sonoma:        "392d42e11570e542d8c92a15e9dee999a54123a4c6b5ce3a62bc8bb9c9f60a31"
+    sha256 cellar: :any,                 ventura:       "6f9d934dcf6137d14f5d7ca900bb4b98fabdc75f54b4ff50c1a5bf0d7887e08f"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "cf3afd69d0ff59b4e9582c30ba2eba0e1191189fdbf60b90c78f780abe14f8c5"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "583140b528fddaf20e1206d0eadf158ac95dd4f7e00f14b8605c08c2c60f5f8f"
   end
 
   depends_on "cmake" => :build

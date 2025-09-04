@@ -13,6 +13,7 @@ class Plutoprint < Formula
     sha256 cellar: :any,                 arm64_ventura: "d8f56880b26cd51abdd93fb423959eae3454d603f8fe000c41f411a2da2cbcbc"
     sha256 cellar: :any,                 sonoma:        "87ac3e7b0be2ddabf7f2fb18bae6d594eafc2f8e9b93adbf8b19946b45ff8213"
     sha256 cellar: :any,                 ventura:       "1b68863b5c31c3cba94561571b39dd571192c0cd0670d4d853fd220ad48b30bb"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "e2758bfd8026b7be69e1ea9b542f596635e1137764328f261d2789e50d9d3775"
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "b289becd2a56ae0d25a6cfe4f82e1d4f45af92a76a81be67b3999692e04d7d5b"
   end
 

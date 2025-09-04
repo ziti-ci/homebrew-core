@@ -27,7 +27,7 @@ class Hubble < Formula
   depends_on "go" => :build
 
   def install
-    ldflags = "-s -w -X github.com/cilium/hubble/pkg.Version=#{version}"
+    ldflags = "-s -w -X github.com/cilium/cilium/hubble/pkg.Version=#{version}"
     system "go", "build", *std_go_args(ldflags:)
 
     generate_completions_from_executable(bin/"hubble", "completion")
@@ -35,5 +35,6 @@ class Hubble < Formula
 
   test do
     assert_match(/tls-allow-insecure:/, shell_output("#{bin}/hubble config get"))
+    assert_match version.to_s, shell_output("#{bin}/hubble version")
   end
 end

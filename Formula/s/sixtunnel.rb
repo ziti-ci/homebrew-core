@@ -1,8 +1,8 @@
 class Sixtunnel < Formula
   desc "Tunnelling for application that don't speak IPv6"
   homepage "https://github.com/wojtekka/6tunnel"
-  url "https://github.com/wojtekka/6tunnel/releases/download/0.13/6tunnel-0.13.tar.gz"
-  sha256 "8bc00d8dcd086d13328d868a78e204d8988b214e0c0f7fbdd0794ffe23207fe5"
+  url "https://github.com/wojtekka/6tunnel/releases/download/0.14/6tunnel-0.14.tar.gz"
+  sha256 "6945312793079408f1ab40071cee68e70158a23560145f1d424a3eb16227f235"
   license "GPL-2.0-only"
 
   no_autobump! because: :requires_manual_review

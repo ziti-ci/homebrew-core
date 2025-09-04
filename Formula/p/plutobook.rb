@@ -11,6 +11,7 @@ class Plutobook < Formula
     sha256 cellar: :any, arm64_ventura: "bb819b4c2de899d3e0ee1c600830de3151ea86284d13d754080ce5513856dc9e"
     sha256 cellar: :any, sonoma:        "5445fa9a5c5871165846b93db5a53ff5d3d55fe7aa9eadc9d41bd9228dbf1cad"
     sha256 cellar: :any, ventura:       "7f3d14be468c6d71a128b67f65914ec817c293a831b810195e7f9fdcb4f813b8"
+    sha256               arm64_linux:   "e9a1e3b91decdbb1fca4f61a579b8f10d11395f246bc603ecf7cdf7e7b269e61"
     sha256               x86_64_linux:  "95f3995698d369a7f6ecc75820c9d919fadcc5311010d34de15f78fa584b5f76"
   end
 

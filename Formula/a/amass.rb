@@ -1,8 +1,8 @@
 class Amass < Formula
   desc "In-depth attack surface mapping and asset discovery"
   homepage "https://owasp.org/www-project-amass/"
-  url "https://github.com/owasp-amass/amass/archive/refs/tags/v5.0.0.tar.gz"
-  sha256 "38ec3964141c54099a2ca44c7add920e7a24101ca8eaa9a369d395541d28fe32"
+  url "https://github.com/owasp-amass/amass/archive/refs/tags/v5.0.1.tar.gz"
+  sha256 "975b23891423a29767d9d83c4d4d501e5ae524288be424b0052e61a9fe8a2869"
   license "Apache-2.0"
   head "https://github.com/owasp-amass/amass.git", branch: "main"
 
@@ -16,6 +16,12 @@ class Amass < Formula
   end
 
   depends_on "go" => :build
+
+  # version patch, upstream pr ref, https://github.com/owasp-amass/amass/pull/1083
+  patch do
+    url "https://github.com/owasp-amass/amass/commit/fbdb97b6884e0ac01526c9c555a1e4a37533fa95.patch?full_index=1"
+    sha256 "188412fb8e1663bacfd222828974a792a40c3e795dee62133244e27a45772883"
+  end
 
   def install
     ENV["CGO_ENABLED"] = "0"

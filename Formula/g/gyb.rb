@@ -6,8 +6,8 @@ class Gyb < Formula
   homepage "https://github.com/GAM-team/got-your-back/"
   # Check gyb.py imports for any changes. Update pypi_formula_mappings.json (if necessary)
   # and then run `brew update-python-resources gyb`.
-  url "https://github.com/GAM-team/got-your-back/archive/refs/tags/v1.93.tar.gz"
-  sha256 "b3a2580302ab4cfe529b98cf9ebd5e310c371dc942130d34489fd9d4e59b10c5"
+  url "https://github.com/GAM-team/got-your-back/archive/refs/tags/v1.94.tar.gz"
+  sha256 "9e62b792b4821061909a56dc6547f4ee9a07ace79ab95ac89f2e7f9c888437f4"
   license "Apache-2.0"
   head "https://github.com/GAM-team/got-your-back.git", branch: "main"
 

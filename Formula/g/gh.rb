@@ -35,8 +35,7 @@ class Gh < Formula
 
     ldflags = %w[-s -w]
 
-    # FIXME: we shouldn't need this, but patchelf.rb does not seem to work well with the layout of Aarch64 ELF files
-    ldflags += ["-extld", ENV.cc] if OS.linux? && Hardware::CPU.arm?
+    ENV["CGO_ENABLED"] = "0" if OS.linux? && Hardware::CPU.arm?
 
     with_env(
       "GH_VERSION"   => gh_version,

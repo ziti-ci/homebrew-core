@@ -2,6 +2,7 @@ class Rocq < Formula
   desc "Proof assistant for higher-order logic"
   homepage "https://rocq-prover.org/"
   license "LGPL-2.1-only"
+  revision 1
 
   stable do
     url "https://github.com/rocq-prover/rocq/releases/download/V9.0.0/rocq-9.0.0.tar.gz"

@@ -6,13 +6,13 @@ class Jsrepo < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any,                 arm64_sequoia: "406bbade2f2aa698d1c73481c71488b326403cbbb928f23eef126d380b506f36"
-    sha256 cellar: :any,                 arm64_sonoma:  "406bbade2f2aa698d1c73481c71488b326403cbbb928f23eef126d380b506f36"
-    sha256 cellar: :any,                 arm64_ventura: "406bbade2f2aa698d1c73481c71488b326403cbbb928f23eef126d380b506f36"
-    sha256 cellar: :any,                 sonoma:        "0f3df6244e338bed2cdb76c34e7d07ef05d2c83e90c106f4d79a85b9120aab10"
-    sha256 cellar: :any,                 ventura:       "0f3df6244e338bed2cdb76c34e7d07ef05d2c83e90c106f4d79a85b9120aab10"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "f8e958a0bc6fe5e9e409c2d6ab4bebff9209b8df1eac058e8219eb22147eef62"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "58dd64948c9b48d1c551f41f502e23272ed9f067e49ee7274942d0f62faef80e"
+    sha256 cellar: :any,                 arm64_sequoia: "5f858c5bd54ebdb889e75e201ca02bb273a1d7498d4f538fafc2f4bdc6d0e4e1"
+    sha256 cellar: :any,                 arm64_sonoma:  "5f858c5bd54ebdb889e75e201ca02bb273a1d7498d4f538fafc2f4bdc6d0e4e1"
+    sha256 cellar: :any,                 arm64_ventura: "5f858c5bd54ebdb889e75e201ca02bb273a1d7498d4f538fafc2f4bdc6d0e4e1"
+    sha256 cellar: :any,                 sonoma:        "e5ee21da2f09a36f997f9a282d389b0561237ec3568bab28749a7b7397bff4be"
+    sha256 cellar: :any,                 ventura:       "e5ee21da2f09a36f997f9a282d389b0561237ec3568bab28749a7b7397bff4be"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "17043015689115d76efe0d43d428570ded5fc082bd535c4c7ea32c6eb6d24da4"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "37843a1f2b8e9e12204ec88b2641403a6d730f2a053dfcac444b869050a5236e"
   end
 
   depends_on "node"

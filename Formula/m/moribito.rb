@@ -6,6 +6,15 @@ class Moribito < Formula
   license "MIT"
   head "https://github.com/ericschmar/moribito.git", branch: "develop"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "37034fa0d7d8f39b905f495d15d385ebad49b085045dc6ea469d29af44e2194b"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "37034fa0d7d8f39b905f495d15d385ebad49b085045dc6ea469d29af44e2194b"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "37034fa0d7d8f39b905f495d15d385ebad49b085045dc6ea469d29af44e2194b"
+    sha256 cellar: :any_skip_relocation, sonoma:        "b60752bdc952a103dc312c9ea4f404f1e0b260e5914fde7d810f91a996f31db2"
+    sha256 cellar: :any_skip_relocation, ventura:       "b60752bdc952a103dc312c9ea4f404f1e0b260e5914fde7d810f91a996f31db2"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "9c70137bf656cf11da599cd653e60ad2976f1a5b00ee756ce9f6ec93766a3b27"
+  end
+
   depends_on "go" => :build
 
   def install

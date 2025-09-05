@@ -1,8 +1,8 @@
 class Harsh < Formula
   desc "Habit tracking for geeks"
   homepage "https://github.com/wakatara/harsh"
-  url "https://github.com/wakatara/harsh/archive/refs/tags/v0.11.1.tar.gz"
-  sha256 "6b6712eea2e27bb0ed195355bc113b3820fc9bc60f55d24c415832489056abdc"
+  url "https://github.com/wakatara/harsh/archive/refs/tags/v0.11.2.tar.gz"
+  sha256 "fcb3ce1ed338319d473f1c2034ee9be1854d24cff3ae51dc9d287e7c3cff4884"
   license "MIT"
   head "https://github.com/wakatara/harsh.git", branch: "master"
 
@@ -22,7 +22,7 @@ class Harsh < Formula
   end
 
   test do
-    assert_match version.to_s, shell_output("#{bin}/harsh --version")
     assert_match "Welcome to harsh!", shell_output("#{bin}/harsh todo")
+    assert_match version.to_s, shell_output("#{bin}/harsh --version")
   end
 end

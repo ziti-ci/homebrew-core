@@ -17,6 +17,9 @@ class FlowControl < Formula
     sha256 x86_64_linux:  "47791b0fb0591a8eeb5c87c6fdf37061ed0457c7a6ae61b289e551f3daece8bb"
   end
 
+  # Aligned to `zig@0.14` formula. Can be removed if upstream updates to newer Zig.
+  deprecate! date: "2026-02-19", because: "does not build with Zig >= 0.15"
+
   depends_on "zig@0.14" => :build
 
   def install

@@ -1,10 +1,9 @@
 class Arrayfire < Formula
   desc "General purpose GPU library"
   homepage "https://arrayfire.com"
-  url "https://github.com/arrayfire/arrayfire/releases/download/v3.9.0/arrayfire-full-3.9.0.tar.bz2"
-  sha256 "8356c52bf3b5243e28297f4b56822191355216f002f3e301d83c9310a4b22348"
+  url "https://github.com/arrayfire/arrayfire/releases/download/v3.10.0/arrayfire-full-3.10.0.tar.bz2"
+  sha256 "74e14b92a3e5a3ed6b79b000c7625b6223400836ec2ba724c3b356282ea741b3"
   license "BSD-3-Clause"
-  revision 4
 
   bottle do
     rebuild 1
@@ -39,12 +38,6 @@ class Arrayfire < Formula
       Building with GCC and CMake CXX_EXTENSIONS disabled causes OpenCL headers
       to not expose cl_image_desc.mem_object which is needed by Boost.Compute.
     CAUSE
-  end
-
-  # Backport fix for missing include for climits header
-  patch do
-    url "https://github.com/arrayfire/arrayfire/commit/cb09bfc5457489d6da434a7841b9098dded58cc0.patch?full_index=1"
-    sha256 "4b5628d1b6164e3b6747868adaa8aeccb92d87d8df2ac6baca6f01580a8b10f7"
   end
 
   # fmt 11 compatibility

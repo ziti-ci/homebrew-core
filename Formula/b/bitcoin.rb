@@ -1,8 +1,8 @@
 class Bitcoin < Formula
   desc "Decentralized, peer to peer payment network"
   homepage "https://bitcoincore.org/"
-  url "https://bitcoincore.org/bin/bitcoin-core-29.0/bitcoin-29.0.tar.gz"
-  sha256 "882c782c34a3bf2eacd1fae5cdc58b35b869883512f197f7d6dc8f195decfdaa"
+  url "https://bitcoincore.org/bin/bitcoin-core-29.1/bitcoin-29.1.tar.gz"
+  sha256 "067f624ae273b0d85a1554ffd7c098923351a647204e67034df6cc1dfacfa06b"
   license all_of: [
     "MIT",
     "BSD-3-Clause", # src/crc32c, src/leveldb
@@ -30,10 +30,15 @@ class Bitcoin < Formula
   depends_on "cmake" => :build
   depends_on "pkgconf" => :build
   depends_on "libevent"
-  depends_on macos: :big_sur
+  depends_on macos: :sonoma # Needs C++20 features not available on Ventura
   depends_on "zeromq"
 
   uses_from_macos "sqlite"
+
+  on_ventura do
+    # For C++20 (Ventura seems to be missing the `source_location` header).
+    depends_on "llvm" => :build
+  end
 
   fails_with :gcc do
     version "10"
@@ -83,6 +88,7 @@ class Bitcoin < Formula
     end
 
     ENV.runtime_cpu_detection
+    ENV.llvm_clang if OS.mac? && MacOS.version == :ventura
     args = %W[
       -DWITH_BDB=ON
       -DBerkeleyDB_INCLUDE_DIR:PATH=#{buildpath}/bdb/include

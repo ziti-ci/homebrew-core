@@ -8,7 +8,8 @@ class GitFilterRepo < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "719c848f3c0611b909c5d2c3a603bbe5b29e8cbee1aacf7f31e92e4618b4aff0"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, all: "774b68744bca239b25b7e82693204f198c6ab1224ded38d8dd33ec1c23c245d8"
   end
 
   uses_from_macos "git", since: :catalina # git 2.22.0+ is required

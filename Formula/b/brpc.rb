@@ -20,7 +20,6 @@ class Brpc < Formula
   depends_on "cmake" => :build
   depends_on "abseil"
   depends_on "gflags"
-  depends_on "gperftools"
   depends_on "leveldb"
   depends_on "openssl@3"
   depends_on "protobuf@29"
@@ -32,13 +31,6 @@ class Brpc < Formula
   def install
     inreplace "CMakeLists.txt", "/usr/local/opt/openssl",
                                 Formula["openssl@3"].opt_prefix
-
-    # `leveldb` links with `tcmalloc`, so should `brpc` and its dependents.
-    # Fixes: src/tcmalloc.cc:300] Attempt to free invalid pointer 0x143e0d610
-    inreplace "CMakeLists.txt", "-DNO_TCMALLOC", ""
-    tcmalloc_ldflags = "-L#{Formula["gperftools"].opt_lib} -ltcmalloc"
-    ENV.append "LDFLAGS", tcmalloc_ldflags
-    inreplace "cmake/brpc.pc.in", /^Libs:(.*)$/, "Libs:\\1 #{tcmalloc_ldflags}"
 
     args = %w[
       -DBUILD_SHARED_LIBS=ON
@@ -82,16 +74,13 @@ class Brpc < Formula
     CPP
 
     protobuf = Formula["protobuf@29"]
-    gperftools = Formula["gperftools"]
     flags = %W[
       -I#{include}
       -I#{protobuf.opt_include}
       -L#{lib}
       -L#{protobuf.opt_lib}
-      -L#{gperftools.opt_lib}
       -lbrpc
       -lprotobuf
-      -ltcmalloc
     ]
     # Work around for undefined reference to symbol
     # '_ZN4absl12lts_2024072212log_internal21CheckOpMessageBuilder7ForVar2Ev'

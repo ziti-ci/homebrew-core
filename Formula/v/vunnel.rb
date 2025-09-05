@@ -3,8 +3,8 @@ class Vunnel < Formula
 
   desc "Tool for collecting vulnerability data from various sources"
   homepage "https://github.com/anchore/vunnel"
-  url "https://files.pythonhosted.org/packages/21/29/eb1e6e1760d1447db095c89dd1848decc7e875eded884f6a33b527786c6c/vunnel-0.38.1.tar.gz"
-  sha256 "c635e601ec89bd60fedf64980538afe879e370715ef5cf36de86d985c58e55c0"
+  url "https://files.pythonhosted.org/packages/04/ef/88d747a718216761361bb7c5299bf32d2eb6169630a4c694005fc10ca5a7/vunnel-0.38.2.tar.gz"
+  sha256 "77cb394812e8d81ab4d02e467be5adc03517189ff1eeec543d9367d5e9831edb"
   license "Apache-2.0"
   head "https://github.com/anchore/vunnel.git", branch: "main"
 
@@ -162,8 +162,8 @@ class Vunnel < Formula
   end
 
   resource "pytest" do
-    url "https://files.pythonhosted.org/packages/08/ba/45911d754e8eba3d5a841a5ce61a65a685ff1798421ac054f85aa8747dfb/pytest-8.4.1.tar.gz"
-    sha256 "7c67fd69174877359ed9371ec3af8a3d2b04741818c51e5e99cc1742251fa93c"
+    url "https://files.pythonhosted.org/packages/a3/5c/00a0e072241553e1a7496d638deababa67c5058571567b92a7eaa258397c/pytest-8.4.2.tar.gz"
+    sha256 "86c0d0b93306b961d58d62a4db4879f27fe25513d4b969df351abdddb3c30e01"
   end
 
   resource "pytest-snapshot" do

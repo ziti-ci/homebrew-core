@@ -3,18 +3,18 @@ class Locust < Formula
 
   desc "Scalable user load testing tool written in Python"
   homepage "https://locust.io/"
-  url "https://files.pythonhosted.org/packages/95/c8/10aa5445c404eed389b56877e6714c1787190cc09dd70059ce3765979ec5/locust-2.39.1.tar.gz"
-  sha256 "6bdd19e27edf9a1c84391d6cf6e9a737dfb832be7dfbf39053191ae31b9cc498"
+  url "https://files.pythonhosted.org/packages/3a/d3/c07ddb329f0d416cf2b5d0a7ed40fa29f0af7c1817f0190389aaf9d67d74/locust-2.40.0.tar.gz"
+  sha256 "785651592b1486b26ce69d763aeea1b6269b951c0862af8c3095e5a77a48eb23"
   license "MIT"
 
   bottle do
-    sha256 cellar: :any,                 arm64_sequoia: "da8108b7892b42090c678be667e2f9e5c76a38955a7cb850933da0e4457da0d2"
-    sha256 cellar: :any,                 arm64_sonoma:  "b7f100dfbb00bd8ccffd0e28620278faab772325d2d1c75247625a76eb5b4400"
-    sha256 cellar: :any,                 arm64_ventura: "376056a6e43efb363d8c7961e7f312e34b1b7bec52baf1ffaae163f7e3b3d0d5"
-    sha256 cellar: :any,                 sonoma:        "650051e7e9e9b54835c5c574ba25f5985ed1919482dd653145a0f83e47de5311"
-    sha256 cellar: :any,                 ventura:       "91c3289fbd04722acb75b3f05fa8e93edf86281285fe789e4fa008ec3bc87b6d"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "9e5298c73039a5f4662e8e43acab8dc5425221c694131191fd59ee69ed81d9cc"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "5a44cea4caa4ea9593a52048932c9dfafe0a50fba43087c4753a5a90313e9e09"
+    sha256 cellar: :any,                 arm64_sequoia: "c84759fc99534c0ae865979690d6d878082f1bd6f8dbd25048d2ad42b7db17c2"
+    sha256 cellar: :any,                 arm64_sonoma:  "14d75f8a35fcba73cd1d7a99cd62f8bb5c5e42fb977a219f4a3b7fc143781638"
+    sha256 cellar: :any,                 arm64_ventura: "c34ff96fa022ba604493888353346944f3c4f2b6d76a4aa7d2a8ec2b31abe9d8"
+    sha256 cellar: :any,                 sonoma:        "4304a0c15751ea8ce2eb7511220d57b48a2033e5e0f8c408af06975c13b7b494"
+    sha256 cellar: :any,                 ventura:       "7ccc0811c9c3daba9d2f146c8ce374cd07b617661f2775199e570b4a4f7debab"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "f3f3af2e202152c8f52ff87ee27022c780d1beb5c984d01a49ecd784578f9ca1"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "04f97abe7565fceadbdeff91022ac7217fe0056b92b490c0fdb21a6441ccc1df"
   end
 
   depends_on "cmake" => :build # for pyzmq
@@ -93,6 +93,11 @@ class Locust < Formula
     sha256 "12f65c9b470abda6dc35cf8e63cc574b1c52b11df2c86030af0ac09b01b13ea9"
   end
 
+  resource "iniconfig" do
+    url "https://files.pythonhosted.org/packages/f2/97/ebf4da567aa6827c909642694d71c9fcf53e5b504f2d96afea02718862f3/iniconfig-2.1.0.tar.gz"
+    sha256 "3abbd2e30b36733fee78f9c7f7308f2d0050e88f0087fd25c2645f63c773e1c7"
+  end
+
   resource "itsdangerous" do
     url "https://files.pythonhosted.org/packages/9c/cb/8ac0172223afbccb63986cc25049b154ecfb5e85932587206f42317be31d/itsdangerous-2.2.0.tar.gz"
     sha256 "e0050c0b7da1eea53ffaf149c0cfbb5c6e2e2b69c4bef22c81fa6eb73e5f6173"
@@ -118,14 +123,34 @@ class Locust < Formula
     sha256 "77b79ce34a2bdab2594f490c8e80dd62a02d650b91a75159a63ec413b8d104cd"
   end
 
+  resource "packaging" do
+    url "https://files.pythonhosted.org/packages/a1/d4/1fc4078c65507b51b96ca8f8c3ba19e6a61c8253c72794544580a7b6c24d/packaging-25.0.tar.gz"
+    sha256 "d443872c98d677bf60f6a1f2f8c1cb748e8fe762d2bf9d3148b5599295b0fc4f"
+  end
+
   resource "platformdirs" do
     url "https://files.pythonhosted.org/packages/23/e8/21db9c9987b0e728855bd57bff6984f67952bea55d6f75e055c46b5383e8/platformdirs-4.4.0.tar.gz"
     sha256 "ca753cf4d81dc309bc67b0ea38fd15dc97bc30ce419a7f58d13eb3bf14c4febf"
   end
 
+  resource "pluggy" do
+    url "https://files.pythonhosted.org/packages/f9/e2/3e91f31a7d2b083fe6ef3fa267035b518369d9511ffab804f839851d2779/pluggy-1.6.0.tar.gz"
+    sha256 "7dcc130b76258d33b90f61b658791dede3486c3e6bfb003ee5c9bfb396dd22f3"
+  end
+
   resource "psutil" do
     url "https://files.pythonhosted.org/packages/2a/80/336820c1ad9286a4ded7e845b2eccfcb27851ab8ac6abece774a6ff4d3de/psutil-7.0.0.tar.gz"
     sha256 "7be9c3eba38beccb6495ea33afd982a44074b78f28c434a1f51cc07fd315c456"
+  end
+
+  resource "pygments" do
+    url "https://files.pythonhosted.org/packages/b0/77/a5b8c569bf593b0140bde72ea885a803b82086995367bf2037de0159d924/pygments-2.19.2.tar.gz"
+    sha256 "636cb2477cec7f8952536970bc533bc43743542f70392ae026374600add5b887"
+  end
+
+  resource "pytest" do
+    url "https://files.pythonhosted.org/packages/a3/5c/00a0e072241553e1a7496d638deababa67c5058571567b92a7eaa258397c/pytest-8.4.2.tar.gz"
+    sha256 "86c0d0b93306b961d58d62a4db4879f27fe25513d4b969df351abdddb3c30e01"
   end
 
   resource "python-engineio" do

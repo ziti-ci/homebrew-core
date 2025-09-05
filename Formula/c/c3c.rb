@@ -1,10 +1,9 @@
 class C3c < Formula
   desc "Compiler for the C3 language"
   homepage "https://github.com/c3lang/c3c"
-  url "https://github.com/c3lang/c3c/archive/refs/tags/v0.7.4.tar.gz"
-  sha256 "410267a3d771ac4b4d6bcc29be0faf30d4959c24b31f9d1bd00661656072dc2b"
+  url "https://github.com/c3lang/c3c/archive/refs/tags/v0.7.5.tar.gz"
+  sha256 "11ac63dde96e0458becf072126555eaa818a117f388f7f3c92330e1220096418"
   license "LGPL-3.0-only"
-  revision 1
   head "https://github.com/c3lang/c3c.git", branch: "master"
 
   # Upstream creates releases that use a stable tag (e.g., `v1.2.3`) but are

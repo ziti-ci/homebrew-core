@@ -5,6 +5,10 @@ class Seqan3 < Formula
   sha256 "8e000e6788f1e2ada071b36f64231d56f18e2d687ab4122d86cd3aefc6c87743"
   license all_of: ["BSD-3-Clause", "CC-BY-4.0", "CC0-1.0", "MIT", "Zlib"]
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "a635a8d9cfb3c75f5e2372778210d4e955fb600679f52303c325a2124a624bb5"
+  end
+
   depends_on "cereal" => :build
   depends_on "cmake" => :build
 

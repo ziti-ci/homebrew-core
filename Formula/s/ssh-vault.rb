@@ -1,12 +1,12 @@
 class SshVault < Formula
   desc "Encrypt/decrypt using SSH keys"
   homepage "https://ssh-vault.com/"
-  url "https://github.com/ssh-vault/ssh-vault/archive/refs/tags/1.1.0.tar.gz"
-  sha256 "3bde1ad4d1f8f0eb7ade501e4b12a89e83b6508675d46286462af1eccbda646c"
+  url "https://github.com/ssh-vault/ssh-vault/archive/refs/tags/1.1.2.tar.gz"
+  sha256 "02315986e9e968dee14a55acec196b3f86375f39bbebf9a78486f77f156b21f6"
   license "BSD-3-Clause"
   head "https://github.com/ssh-vault/ssh-vault.git", branch: "main"
 
-  no_autobump! because: :requires_manual_review
+  no_autobump! because: :bumped_by_upstream
 
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_sequoia: "c27ff2adc2e2a950011fb85982e3475dd00f95696354090bd0d498448a65aa76"

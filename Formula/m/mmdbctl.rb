@@ -7,12 +7,12 @@ class Mmdbctl < Formula
   head "https://github.com/ipinfo/mmdbctl.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "32af5fb6ace4686dc1a624dadabb094be9c280f58fad3b10f892a452eeb415a5"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "32af5fb6ace4686dc1a624dadabb094be9c280f58fad3b10f892a452eeb415a5"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "32af5fb6ace4686dc1a624dadabb094be9c280f58fad3b10f892a452eeb415a5"
-    sha256 cellar: :any_skip_relocation, sonoma:        "8152bb594c50bfea37db1fce61244638710bada48c1cf4e25377018e6b80f9c0"
-    sha256 cellar: :any_skip_relocation, ventura:       "8152bb594c50bfea37db1fce61244638710bada48c1cf4e25377018e6b80f9c0"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "b989aa9b091f0af0fb337c856e4ea5ae1cf1ef09f20977f82b5c529d5bfa25d2"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "1d83aff861970e82984f2a19c2fe0b969a786f5f2133148bfb51c3d88646426a"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "1d83aff861970e82984f2a19c2fe0b969a786f5f2133148bfb51c3d88646426a"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "1d83aff861970e82984f2a19c2fe0b969a786f5f2133148bfb51c3d88646426a"
+    sha256 cellar: :any_skip_relocation, sonoma:        "bce3a893ebc1b01a1dbe6bcc7f972b634f4e463d7244373ff4dfb778a1639614"
+    sha256 cellar: :any_skip_relocation, ventura:       "bce3a893ebc1b01a1dbe6bcc7f972b634f4e463d7244373ff4dfb778a1639614"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "fec967e1d52cb9782b28147f9c503a135d4b2ed175895ea79c139bdb59583b41"
   end
 
   depends_on "go" => :build

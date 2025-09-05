@@ -1,9 +1,8 @@
 class Yutu < Formula
   desc "MCP server and CLI for YouTube"
   homepage "https://github.com/eat-pray-ai/yutu"
-  url "https://github.com/eat-pray-ai/yutu.git",
-      tag:      "v0.10.1",
-      revision: "16f8f0e9b996a2804263f9e4a709101a76517bc1"
+  url "https://github.com/eat-pray-ai/yutu/archive/refs/tags/v0.10.2.tar.gz"
+  sha256 "4b57f005467b9ac1606b80408b9a85287366619bb84e058dcb5d259047ae8950"
   license "Apache-2.0"
   head "https://github.com/eat-pray-ai/yutu.git", branch: "main"
 
@@ -25,17 +24,17 @@ class Yutu < Formula
       -X #{mod}.Os=#{OS.mac? ? "darwin" : "linux"}
       -X #{mod}.Arch=#{Hardware::CPU.arch}
       -X #{mod}.Version=v#{version}
-      -X #{mod}.Commit=#{Utils.git_short_head(length: 7)}
+      -X #{mod}.Commit=#{tap.user}
       -X #{mod}.CommitDate=#{time.iso8601}
     ]
     system "go", "build", *std_go_args(ldflags:)
 
-    generate_completions_from_executable(bin/"yutu", "completion")
+    generate_completions_from_executable(bin/"yutu", "completion", shells: [:bash, :zsh, :fish, :pwsh])
   end
 
   test do
-    assert_match "yutu🐰 version v#{version}", shell_output("#{bin}/yutu version 2>&1")
+    assert_match version.to_s, shell_output("#{bin}/yutu version 2>&1")
 
-    assert_match "Please configure OAuth 2.0", shell_output("#{bin}/yutu auth 2>&1", 1)
+    assert_match "failed to parse client secret", shell_output("#{bin}/yutu auth 2>&1", 1)
   end
 end

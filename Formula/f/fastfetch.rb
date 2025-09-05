@@ -1,8 +1,8 @@
 class Fastfetch < Formula
   desc "Like neofetch, but much faster because written mostly in C"
   homepage "https://github.com/fastfetch-cli/fastfetch"
-  url "https://github.com/fastfetch-cli/fastfetch/archive/refs/tags/2.51.1.tar.gz"
-  sha256 "38755082ff0f7123616b98de5f032de76d0cc5837b5204cf5c88ee6c52a77bf6"
+  url "https://github.com/fastfetch-cli/fastfetch/archive/refs/tags/2.52.0.tar.gz"
+  sha256 "6199c4cacc0b411fde7ec6c66d12829459284c6cdfb4bacce7b535190d5cd94c"
   license "MIT"
   head "https://github.com/fastfetch-cli/fastfetch.git", branch: "dev"
 
@@ -53,7 +53,7 @@ class Fastfetch < Formula
   def install
     args = %W[
       -DCMAKE_INSTALL_SYSCONFDIR=#{etc}
-      -DDBUILD_FLASHFETCH=OFF
+      -DBUILD_FLASHFETCH=OFF
       -DENABLE_SYSTEM_YYJSON=ON
     ]
     system "cmake", "-S", ".", "-B", "build", *args, *std_cmake_args

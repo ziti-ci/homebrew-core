@@ -1,8 +1,8 @@
 class Awsdac < Formula
   desc "CLI tool for drawing AWS architecture"
   homepage "https://github.com/awslabs/diagram-as-code"
-  url "https://github.com/awslabs/diagram-as-code/archive/refs/tags/v0.22.tar.gz"
-  sha256 "17c945bdf7d240f6419eff7cf02ed481c722904e2eaae927900908e50dc4d4bc"
+  url "https://github.com/awslabs/diagram-as-code/archive/refs/tags/v0.22.1.tar.gz"
+  sha256 "fd2d5057ad893c73d38e50e1709276cb58ad69a2f697c024d859c815ce5a5183"
   license "Apache-2.0"
   head "https://github.com/awslabs/diagram-as-code.git", branch: "main"
 

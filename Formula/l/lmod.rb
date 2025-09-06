@@ -18,10 +18,10 @@ class Lmod < Formula
   depends_on "luarocks" => :build
   depends_on "pkgconf" => :build
   depends_on "lua"
+  depends_on "tcl-tk"
 
   uses_from_macos "bc" => :build
   uses_from_macos "libxcrypt"
-  uses_from_macos "tcl-tk"
 
   on_macos do
     depends_on "gnu-sed" => :build
@@ -56,14 +56,8 @@ class Lmod < Formula
       end
     end
 
-    # pkgconf cannot find tcl-tk on Linux correctly, so we manually set the include and libs
-    if OS.linux?
-      tcltk_version = Formula["tcl-tk"].version.major_minor
-      ENV["TCL_INCLUDE"] = "-I#{Formula["tcl-tk"].opt_include}/tcl-tk"
-      ENV["TCL_LIBS"] = "-L#{Formula["tcl-tk"].opt_lib} -ltcl#{tcltk_version} -ltclstub"
-      # Homebrew installed tcl-tk library has major_minor version suffix
-      inreplace "configure", "'' tcl tcl8.8 tcl8.7 tcl8.6 tcl8.5", "'' tcl#{tcltk_version}"
-    end
+    # configure overrides PKG_CONFIG_PATH with TCL_PKG_CONFIG_DIR value
+    ENV["TCL_PKG_CONFIG_DIR"] = ENV["PKG_CONFIG_PATH"]
 
     system "./configure", "--with-siteControlPrefix=yes", "--prefix=#{prefix}"
     system "make", "install"

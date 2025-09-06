@@ -17,13 +17,11 @@ class Bitcoin < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_sequoia: "8fa8fcf7ccb91a577436dcacdc6ff4140b960518466de5c6086788c5b705e737"
-    sha256 cellar: :any, arm64_sonoma:  "dc06414451b6958961bbb761c30596111a1108b90553990b2c23e4583c59cced"
-    sha256 cellar: :any, arm64_ventura: "b44e261cc593181a6d7911747ceb9fcac26ef45e2c464539133291032226a050"
-    sha256 cellar: :any, sonoma:        "060611cfbfba123b4c61cb4622d292ba56995184581a466d7967eb6263dce0c3"
-    sha256 cellar: :any, ventura:       "4ad32aea3bf5f4f2f0cab5e1d25a2a6ae8e7cdec9322fa8f3942f0968cd2bfa8"
-    sha256               arm64_linux:   "70752d59e92fe46e0942521e9d05c02ae73e0003258c7ec0da481e30fd8a6c09"
-    sha256               x86_64_linux:  "a1dfba272b3381616eec1ea655b2cf320070b48985272517fb36277917188efe"
+    sha256 cellar: :any, arm64_sequoia: "84de602ee27ca2d2653952586d88ecc79f0d3cd5318182ff9474780bcb2f4a47"
+    sha256 cellar: :any, arm64_sonoma:  "e5af87cb95089b561a98f2a13037570f1128ee427c54ec52e57f7a1ea08cfbcf"
+    sha256 cellar: :any, sonoma:        "b62278e3ada8701c9a542bee64adeaf50a5c8b1aa5b7cf172f9a96ddf24aed3b"
+    sha256               arm64_linux:   "d1ca6acf2612a816805f118f1625b04ba332b23f1a97d2c3febed168862207a7"
+    sha256               x86_64_linux:  "b7290cd2f6e3e5b41170d1d3fd7c7460c4a715bdb97cd5205655a68c454383cc"
   end
 
   depends_on "boost" => :build

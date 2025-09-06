@@ -29,10 +29,10 @@ class Weechat < Formula
   depends_on "perl"
   depends_on "python@3.13"
   depends_on "ruby"
+  depends_on "tcl-tk"
   depends_on "zstd"
 
   uses_from_macos "curl"
-  uses_from_macos "tcl-tk"
   uses_from_macos "zlib"
 
   on_macos do
@@ -41,18 +41,18 @@ class Weechat < Formula
   end
 
   def install
+    tcltk = Formula["tcl-tk"]
     args = %W[
       -DENABLE_MAN=ON
       -DENABLE_GUILE=OFF
       -DCA_FILE=#{Formula["gnutls"].pkgetc}/cert.pem
       -DENABLE_JAVASCRIPT=OFF
       -DENABLE_PHP=OFF
+      -DTCL_INCLUDE_PATH=#{tcltk.opt_include}/tcl-tk
+      -DTCL_LIBRARY=#{tcltk.opt_lib/shared_library("libtcl#{tcltk.version.major_minor}")}
+      -DTK_INCLUDE_PATH=#{tcltk.opt_include}/tcl-tk
+      -DTK_LIBRARY=#{tcltk.opt_lib/shared_library("libtcl#{tcltk.version.major}tk#{tcltk.version.major_minor}")}
     ]
-
-    if OS.linux?
-      args << "-DTCL_INCLUDE_PATH=#{Formula["tcl-tk"].opt_include}/tcl-tk"
-      args << "-DTK_INCLUDE_PATH=#{Formula["tcl-tk"].opt_include}/tcl-tk"
-    end
 
     system "cmake", "-S", ".", "-B", "build", *args, *std_cmake_args
     system "cmake", "--build", "build"

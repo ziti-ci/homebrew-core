@@ -12,7 +12,6 @@ class Dysk < Formula
   end
 
   depends_on "rust" => :build
-  depends_on :linux
 
   def install
     system "cargo", "install", *std_cargo_args

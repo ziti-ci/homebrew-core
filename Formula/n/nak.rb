@@ -1,8 +1,8 @@
 class Nak < Formula
   desc "CLI for doing all things nostr"
   homepage "https://github.com/fiatjaf/nak"
-  url "https://github.com/fiatjaf/nak/archive/refs/tags/v0.15.4.tar.gz"
-  sha256 "1281fda378b3215e128df4b5f60770a5b5a4b4918d4158b321e6789270e311bc"
+  url "https://github.com/fiatjaf/nak/archive/refs/tags/v0.16.1.tar.gz"
+  sha256 "0f86d7ce10414e6648cf3cadfd616582184b7c28e944398de6e71bd0334c476f"
   license "Unlicense"
   head "https://github.com/fiatjaf/nak.git", branch: "master"
 
@@ -24,6 +24,6 @@ class Nak < Formula
   test do
     assert_match version.to_s, shell_output("#{bin}/nak --version")
     assert_match "hello from the nostr army knife", shell_output("#{bin}/nak event")
-    assert_match "\"method\":\"listblockedips\"", shell_output("#{bin}/nak relay listblockedips")
+    assert_match "failed to fetch 'listblockedips'", shell_output("#{bin}/nak relay listblockedips 2>&1")
   end
 end

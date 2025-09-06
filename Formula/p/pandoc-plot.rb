@@ -16,11 +16,13 @@ class PandocPlot < Formula
   end
 
   depends_on "cabal-install" => :build
-  depends_on "ghc@9.10" => :build
+  depends_on "ghc" => :build
   depends_on "graphviz" => :test
 
+  depends_on "gmp"
   depends_on "pandoc"
 
+  uses_from_macos "libffi"
   uses_from_macos "zlib"
 
   def install

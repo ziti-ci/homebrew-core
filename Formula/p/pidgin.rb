@@ -15,11 +15,11 @@ class Pidgin < Formula
     depends_on "libgnt"
     depends_on "libotr"
     depends_on "ncurses" # due to `libgnt`
+    depends_on "tcl-tk@8" # ignores TCL 9
 
     uses_from_macos "cyrus-sasl"
     uses_from_macos "expat"
     uses_from_macos "perl"
-    uses_from_macos "tcl-tk"
 
     on_macos do
       depends_on "harfbuzz"
@@ -123,20 +123,10 @@ class Pidgin < Formula
       --enable-consoleui
       --enable-gnutls
       --with-ncurses-headers=#{Formula["ncurses"].opt_include}
+      --with-tclconfig=#{Formula["tcl-tk@8"].opt_lib}
+      --with-tkconfig=#{Formula["tcl-tk@8"].opt_lib}
     ]
-
-    args += if OS.mac?
-      %W[
-        --with-tclconfig=#{MacOS.sdk_path}/System/Library/Frameworks/Tcl.framework
-        --with-tkconfig=#{MacOS.sdk_path}/System/Library/Frameworks/Tk.framework
-        --without-x
-      ]
-    else
-      %W[
-        --with-tclconfig=#{Formula["tcl-tk"].opt_lib}
-        --with-tkconfig=#{Formula["tcl-tk"].opt_lib}
-      ]
-    end
+    args << "--without-x" if OS.mac?
 
     # patch pidgin to read plugins and allow them to live in separate formulae which can
     # all install their symlinks into these directories. See:

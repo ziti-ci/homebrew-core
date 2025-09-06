@@ -22,20 +22,17 @@ class X3270 < Formula
 
   depends_on "openssl@3"
   depends_on "readline"
+  depends_on "tcl-tk@8"
 
   uses_from_macos "python" => :build
   uses_from_macos "ncurses"
-
-  on_linux do
-    depends_on "tcl-tk@8"
-  end
 
   def install
     # Fix to read SOURCE_DATE_EPOCH as an unix timestamp not a date string
     inreplace "Common/mkversion.py", "strptime(os.environ['SOURCE_DATE_EPOCH'], '%a %b %d %H:%M:%S %Z %Y')",
                                      "fromtimestamp(int(os.environ['SOURCE_DATE_EPOCH']))"
 
-    ENV.append "CPPFLAGS", "-I#{Formula["tcl-tk@8"].opt_include}/tcl-tk" if OS.linux?
+    ENV.append "CPPFLAGS", "-I#{Formula["tcl-tk@8"].opt_include}/tcl-tk"
 
     args = %w[
       --enable-c3270

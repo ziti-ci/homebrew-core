@@ -22,8 +22,7 @@ class Gensio < Formula
   depends_on "glib"
   depends_on "openssl@3"
   depends_on "python@3.13"
-
-  uses_from_macos "tcl-tk"
+  depends_on "tcl-tk"
 
   on_macos do
     depends_on "gettext"
@@ -42,13 +41,15 @@ class Gensio < Formula
   end
 
   def install
+    tcltk = Formula["tcl-tk"]
     args = %W[
       --disable-silent-rules
       --with-python=#{which(python3)}
       --with-pythoninstall=#{lib}/gensio-python
+      --with-tclcflags=-I#{tcltk.opt_include}/tcl-tk
+      --with-tcllibs=-ltcl#{tcltk.version.major_minor}
       --sysconfdir=#{etc}
     ]
-    args << "--with-tclcflags=-I#{HOMEBREW_PREFIX}/include/tcl-tk" if OS.linux?
 
     system "./configure", *args, *std_configure_args
     system "make", "install"

@@ -11,7 +11,7 @@ class Keychain < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "426ab593c7a025a794d941bf562d7bd1f9505d43c719962d97f351b9602a74ae"
+    sha256 cellar: :any_skip_relocation, all: "6077b11f52f19e3c9d0616e7970adb8ecdc8cfc209c22a161531a5e9e65bfb6b"
   end
 
   def install

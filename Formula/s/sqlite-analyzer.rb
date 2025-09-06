@@ -23,19 +23,15 @@ class SqliteAnalyzer < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "84bb4ebf263f3e396a44870a6510a14688f203927f196199d81e72c00e66e0d5"
   end
 
+  depends_on "tcl-tk"
   uses_from_macos "sqlite" => :test
-  uses_from_macos "tcl-tk"
+
+  on_macos do
+    depends_on "libtommath"
+  end
 
   def install
-    tcl = if OS.mac?
-      MacOS.sdk_path/"System/Library/Frameworks/Tcl.framework"
-    else
-      Formula["tcl-tk"].opt_lib
-    end
-
-    system "./configure", "--disable-debug",
-                          "--with-tcl=#{tcl}",
-                          "--prefix=#{prefix}"
+    system "./configure", "--with-tcl=#{Formula["tcl-tk"].opt_lib}", *std_configure_args
     system "make", "sqlite3_analyzer"
     bin.install "sqlite3_analyzer"
   end

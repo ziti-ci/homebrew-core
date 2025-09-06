@@ -1,12 +1,10 @@
 class RbenvGemset < Formula
   desc "Adds basic gemset support to rbenv"
   homepage "https://github.com/jf/rbenv-gemset"
-  url "https://github.com/jf/rbenv-gemset/archive/refs/tags/v0.5.10.tar.gz"
-  sha256 "91b9e6f0cced09a40df5817277c35c654d39feaea4318cc63a5962689b649c94"
+  url "https://github.com/jf/rbenv-gemset/archive/refs/tags/v0.5.100.tar.gz"
+  sha256 "371fc84e35e40c7c25339cb67599a0a768bc7d3d4daafb05e02ab960bde64ce4"
   license :public_domain
   head "https://github.com/jf/rbenv-gemset.git", branch: "master"
-
-  no_autobump! because: :requires_manual_review
 
   bottle do
     rebuild 1

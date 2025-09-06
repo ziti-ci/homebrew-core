@@ -1,8 +1,8 @@
 class Acpica < Formula
   desc "OS-independent implementation of the ACPI specification"
   homepage "https://github.com/acpica/acpica"
-  url "https://github.com/acpica/acpica/releases/download/R2025_04_04/acpica-unix2-20250404.tar.gz"
-  sha256 "2abeef0b11d208aa9607d8acde07f3e5cee8cc7a43fc354701efa8075b2e5a9f"
+  url "https://github.com/acpica/acpica/releases/download/20250807/acpica-unix2-20250807.tar.gz"
+  sha256 "a3df5eb6b21324075d6aff9b1743e200fba5a1b21f35686c2d2b4466b2df6886"
   license any_of: ["Intel-ACPI", "GPL-2.0-only", "BSD-3-Clause"]
   head "https://github.com/acpica/acpica.git", branch: "master"
 
@@ -11,7 +11,7 @@ class Acpica < Formula
     regex(/href=.*?acpica-unix[._-]v?(\d+(?:\.\d+)*)\.t/i)
   end
 
-  no_autobump! because: :requires_manual_review
+  no_autobump! because: :incompatible_version_format
 
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_sequoia: "5ea322ed5e903610d9264f0a46378ab8cd867dba115ef74782dce02bcfd51c80"

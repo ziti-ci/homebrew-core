@@ -18,11 +18,13 @@ class HopenpgpTools < Formula
   end
 
   depends_on "cabal-install" => :build
-  depends_on "ghc@9.10" => :build
+  depends_on "ghc" => :build
   depends_on "pkgconf" => :build
   depends_on "gnupg" => :test
+  depends_on "gmp"
   depends_on "nettle"
 
+  uses_from_macos "libffi"
   uses_from_macos "zlib"
 
   # TODO: Remove resource once new release ixset-typed release is available
@@ -35,6 +37,8 @@ class HopenpgpTools < Formula
       url "https://github.com/well-typed/ixset-typed/commit/460901368dcb452d352a17bcd4b8f60200a6fa71.patch?full_index=1"
       sha256 "e284534df9ff14f49dad95a6745137c36c7a6335e896201c577d709794882e4c"
     end
+    # Backport https://github.com/well-typed/ixset-typed/commit/1ee029539a77b0c7d854660707c9daa957d6fb11
+    patch :DATA
   end
 
   def install
@@ -74,3 +78,18 @@ class HopenpgpTools < Formula
     end
   end
 end
+
+__END__
+diff --git a/ixset-typed.cabal b/ixset-typed.cabal
+index 888d8a7..e42b86b 100644
+--- a/ixset-typed.cabal
++++ b/ixset-typed.cabal
+@@ -38,7 +38,7 @@ library
+                      deepseq          >= 1.3 && < 2,
+                      safecopy         >= 0.8 && < 0.11,
+                      syb              >= 0.4 && < 1,
+-                     template-haskell >= 2.8 && < 2.23
++                     template-haskell >= 2.8 && < 2.24
+ 
+   hs-source-dirs:    src
+   exposed-modules:

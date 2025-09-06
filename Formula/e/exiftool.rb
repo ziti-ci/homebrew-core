@@ -3,9 +3,9 @@ class Exiftool < Formula
   homepage "https://exiftool.org"
   # Ensure release is tagged production before submitting.
   # https://exiftool.org/history.html
-  url "https://exiftool.org/Image-ExifTool-13.30.tar.gz"
-  mirror "https://cpan.metacpan.org/authors/id/E/EX/EXIFTOOL/Image-ExifTool-13.30.tar.gz"
-  sha256 "885afd06c4efcc60d1df703cc88ba7ddc3bb6fed854cfbaa9e6cd72adfbe8da9"
+  url "https://exiftool.org/Image-ExifTool-13.35.tar.gz"
+  mirror "https://cpan.metacpan.org/authors/id/E/EX/EXIFTOOL/Image-ExifTool-13.35.tar.gz"
+  sha256 "03ef47e8b38add4801082fd6b399b9d7d9d77eaea03f7bca175537931563cd16"
   license any_of: ["Artistic-1.0-Perl", "GPL-1.0-or-later"]
 
   livecheck do
@@ -48,8 +48,8 @@ class Exiftool < Formula
   end
 
   resource "Path::Tiny" do
-    url "https://cpan.metacpan.org/authors/id/D/DA/DAGOLDEN/Path-Tiny-0.148.tar.gz"
-    sha256 "818aed754b74f399e42c238bea738e20a52af89a6e3feb58bec9d0130eea4746"
+    url "https://cpan.metacpan.org/authors/id/D/DA/DAGOLDEN/Path-Tiny-0.150.tar.gz"
+    sha256 "ff20713d1a14d257af9c78209001f40dc177e4b9d1496115cbd8726d577946c7"
   end
 
   resource "Alien::Build" do
@@ -58,8 +58,8 @@ class Exiftool < Formula
   end
 
   resource "Mozilla::CA" do
-    url "https://cpan.metacpan.org/authors/id/L/LW/LWP/Mozilla-CA-20250202.tar.gz"
-    sha256 "32d43ce8cb3b201813898f0c4c593a08df350c1e47484e043fc8adebbda60dbf"
+    url "https://cpan.metacpan.org/authors/id/L/LW/LWP/Mozilla-CA-20250602.tar.gz"
+    sha256 "adeac0752440b2da094e8036bab6c857e22172457658868f5ac364f0c7b35481"
   end
 
   resource "Sort::Versions" do

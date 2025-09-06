@@ -1,11 +1,14 @@
 class Openmsx < Formula
   desc "MSX emulator"
   homepage "https://openmsx.org/"
-  url "https://github.com/openMSX/openMSX/releases/download/RELEASE_20_0/openmsx-20.0.tar.gz"
-  sha256 "4c645e5a063e00919fa04720d39f62fb8dcb6321276637b16b5788dea5cd1ebf"
   license "GPL-2.0-or-later"
   revision 1
-  head "https://github.com/openMSX/openMSX.git", branch: "master"
+
+  stable do
+    url "https://github.com/openMSX/openMSX/releases/download/RELEASE_20_0/openmsx-20.0.tar.gz"
+    sha256 "4c645e5a063e00919fa04720d39f62fb8dcb6321276637b16b5788dea5cd1ebf"
+    depends_on "tcl-tk@8"
+  end
 
   livecheck do
     url :stable
@@ -30,6 +33,11 @@ class Openmsx < Formula
     sha256               x86_64_linux:  "e0c3322fa46edfeb2f35a85ad63b62d183e166fcb6c16b8541b93186a46a010f"
   end
 
+  head do
+    url "https://github.com/openMSX/openMSX.git", branch: "master"
+    depends_on "tcl-tk"
+  end
+
   depends_on "freetype"
   depends_on "glew"
   depends_on "libogg"
@@ -43,7 +51,7 @@ class Openmsx < Formula
   uses_from_macos "zlib"
 
   on_ventura :or_older do
-    depends_on "llvm" => :build
+    depends_on "llvm"
 
     fails_with :clang do
       cause "Requires C++20"
@@ -53,7 +61,6 @@ class Openmsx < Formula
   on_linux do
     depends_on "alsa-lib"
     depends_on "mesa"
-    depends_on "tcl-tk@8"
   end
 
   fails_with :gcc do
@@ -62,7 +69,13 @@ class Openmsx < Formula
   end
 
   def install
-    ENV.llvm_clang if OS.mac? && MacOS.version <= :ventura
+    if OS.mac? && MacOS.version <= :ventura
+      ENV.llvm_clang
+      ENV.prepend "LDFLAGS", "-L#{Formula["llvm"].opt_lib}/unwind -lunwind"
+      # When using Homebrew's superenv shims, we need to use HOMEBREW_LIBRARY_PATHS
+      # rather than LDFLAGS for libc++ in order to correctly link to LLVM's libc++.
+      ENV.prepend_path "HOMEBREW_LIBRARY_PATHS", Formula["llvm"].opt_lib/"c++"
+    end
 
     # Hardcode prefix
     inreplace "build/custom.mk", "/opt/openMSX", prefix
@@ -70,10 +83,10 @@ class Openmsx < Formula
     inreplace "build/probe.py", "/usr/local", HOMEBREW_PREFIX
 
     # Help finding Tcl (https://github.com/openMSX/openMSX/issues/1082)
-    ENV["TCL_CONFIG"] = OS.mac? ? MacOS.sdk_path/"System/Library/Frameworks/Tcl.framework" : Formula["tcl-tk@8"].lib
+    ENV["TCL_CONFIG"] = Formula[build.head? ? "tcl-tk" : "tcl-tk@8"].opt_lib
 
     system "./configure"
-    system "make", "CXX=#{ENV.cxx}"
+    system "make", "CXX=#{ENV.cxx}", "LDFLAGS=#{ENV.ldflags}"
 
     if OS.mac?
       prefix.install Dir["derived/**/openMSX.app"]

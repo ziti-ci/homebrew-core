@@ -23,7 +23,7 @@ class Gambit < Formula
   depends_on "autoconf" => :build
   depends_on "automake" => :build
   depends_on "libtool" => :build
-  depends_on "wxwidgets@3.2"
+  depends_on "wxwidgets"
 
   def install
     wxwidgets = deps.find { |dep| dep.name.match?(/^wxwidgets(@\d+(\.\d+)*)?$/) }.to_formula

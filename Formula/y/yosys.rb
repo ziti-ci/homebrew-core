@@ -18,17 +18,14 @@ class Yosys < Formula
 
   depends_on "bison" => :build
   depends_on "pkgconf" => :build
+  depends_on "libtommath"
   depends_on "readline"
+  depends_on "tcl-tk"
 
   uses_from_macos "flex"
   uses_from_macos "libffi", since: :catalina
   uses_from_macos "python"
-  uses_from_macos "tcl-tk"
   uses_from_macos "zlib"
-
-  on_linux do
-    depends_on "libtommath"
-  end
 
   def install
     ENV.append "LINKFLAGS", "-L#{Formula["readline"].opt_lib}"

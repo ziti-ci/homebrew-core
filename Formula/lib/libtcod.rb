@@ -1,16 +1,14 @@
 class Libtcod < Formula
   desc "API for roguelike developers"
   homepage "https://github.com/libtcod/libtcod"
-  url "https://github.com/libtcod/libtcod/archive/refs/tags/2.1.1.tar.gz"
-  sha256 "ee9cc60140f480f72cb2321d5aa50beeaa829b0a4a651e8a37e2ba938ea23caa"
+  url "https://github.com/libtcod/libtcod/archive/refs/tags/2.2.1.tar.gz"
+  sha256 "5eb8e30d937840986c11c7baa22ffa93252aa4ac1824fe2c5fa1d760b3496a8e"
   license all_of: [
     "BSD-3-Clause",
     "Zlib", # src/vendor/lodepng.c
     { all_of: ["MIT", "Unicode-DFS-2015"] }, # src/vendor/utf8proc/utf8proc.c
     { any_of: ["MIT", "Unlicense"] }, # src/vendor/stb_truetype.h
   ]
-
-  no_autobump! because: :requires_manual_review
 
   bottle do
     sha256 cellar: :any,                 arm64_sequoia: "fdf83b0198f348818e794ebc1e0d4532f8c1cce635984534ebdc4891f4261aa0"

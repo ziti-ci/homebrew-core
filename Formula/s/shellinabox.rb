@@ -1,12 +1,9 @@
 class Shellinabox < Formula
   desc "Export command-line tools to web based terminal emulator"
   homepage "https://github.com/shellinabox/shellinabox"
-  url "https://github.com/shellinabox/shellinabox/archive/refs/tags/v2.20.tar.gz"
-  sha256 "27a5ec6c3439f87aee238c47cc56e7357a6249e5ca9ed0f044f0057ef389d81e"
+  url "https://github.com/shellinabox/shellinabox/archive/refs/tags/v2.21.tar.gz"
+  sha256 "2a8f94beb286d0851bb146f7a7c480a8740f59b959cbd274e21a8fcbf0a7f307"
   license "GPL-2.0-only"
-  revision 1
-
-  no_autobump! because: :requires_manual_review
 
   bottle do
     rebuild 2

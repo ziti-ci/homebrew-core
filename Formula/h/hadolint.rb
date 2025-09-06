@@ -16,14 +16,20 @@ class Hadolint < Formula
   end
 
   depends_on "cabal-install" => :build
-  depends_on "ghc@9.10" => :build
+  depends_on "ghc" => :build
+  depends_on "gmp"
 
+  uses_from_macos "libffi"
   uses_from_macos "xz"
   uses_from_macos "zlib"
 
   def install
+    # Workaround for GHC 9.12 until https://github.com/phadej/puresat/pull/7
+    # and base is updated in https://github.com/phadej/spdx
+    args = ["--allow-newer=puresat:base,spdx:base"]
+
     system "cabal", "v2-update"
-    system "cabal", "v2-install", *std_cabal_v2_args
+    system "cabal", "v2-install", *args, *std_cabal_v2_args
   end
 
   test do

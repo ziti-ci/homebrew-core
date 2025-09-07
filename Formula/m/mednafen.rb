@@ -28,6 +28,7 @@ class Mednafen < Formula
   depends_on "libsndfile"
   depends_on "lzo"
   depends_on macos: :sierra # needs clock_gettime
+  depends_on "musepack"
   depends_on "sdl2"
   depends_on "zstd"
 
@@ -35,9 +36,6 @@ class Mednafen < Formula
 
   on_macos do
     depends_on "gettext"
-    # musepack is not bottled on Linux
-    # https://github.com/Homebrew/homebrew-core/pull/92041
-    depends_on "musepack"
   end
 
   on_linux do
@@ -49,9 +47,9 @@ class Mednafen < Formula
     args = %w[
       --with-external-lzo
       --with-external-libzstd
+      --with-external-mpcdec
       --enable-ss
     ]
-    args << "--with-external-mpcdec" if OS.mac? # musepack
 
     system "./configure", *args, *std_configure_args
     system "make", "install"

@@ -28,6 +28,7 @@ class Openblas < Formula
 
   keg_only :shadowed_by_macos, "macOS provides BLAS in Accelerate.framework"
 
+  depends_on "pkgconf" => :test
   depends_on "gcc" # for gfortran
   fails_with :clang
 
@@ -61,6 +62,7 @@ class Openblas < Formula
 
     lib.install_symlink shared_library("libopenblas") => shared_library("libblas")
     lib.install_symlink shared_library("libopenblas") => shared_library("liblapack")
+    pkgshare.install "cpp_thread_test"
   end
 
   test do
@@ -85,8 +87,16 @@ class Openblas < Formula
         return 0;
       }
     C
-    system ENV.cc, "test.c", "-I#{include}", "-L#{lib}", "-lopenblas",
-                   "-o", "test"
+    system ENV.cc, "test.c", "-I#{include}", "-L#{lib}", "-lopenblas", "-o", "test"
     system "./test"
+
+    cp_r pkgshare/"cpp_thread_test/.", testpath
+    ENV.prepend_path "PKG_CONFIG_PATH", lib/"pkgconfig" if OS.mac?
+    flags = shell_output("pkgconf --cflags --libs openblas").chomp.split
+    %w[dgemm_thread_safety dgemv_thread_safety].each do |test|
+      inreplace "#{test}.cpp", '"../cblas.h"', '"cblas.h"'
+      system ENV.cxx, *ENV.cxxflags.to_s.split, "-std=c++11", "#{test}.cpp", "-o", test, *flags
+      system "./#{test}"
+    end
   end
 end

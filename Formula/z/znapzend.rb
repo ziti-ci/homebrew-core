@@ -29,12 +29,8 @@ class Znapzend < Formula
   uses_from_macos "perl", since: :big_sur
 
   def install
-    system "./configure", "--disable-silent-rules",
-                          "--prefix=#{prefix}"
+    system "./configure", "--disable-silent-rules", *std_configure_args
     system "make", "install"
-  end
-
-  def post_install
     (var/"log/znapzend").mkpath
     (var/"run/znapzend").mkpath
   end

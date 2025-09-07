@@ -18,6 +18,8 @@ class Spack < Formula
 
   uses_from_macos "python"
 
+  skip_clean "var/spack/junit-report"
+
   def install
     # Remove Windows files
     rm Dir["bin/*.bat", "bin/*.ps1", "bin/haspywin.py"]
@@ -25,10 +27,7 @@ class Spack < Formula
     rm_r "lib/spack/spack/test"
 
     prefix.install Dir["*"]
-  end
-
-  def post_install
-    mkdir_p prefix/"var/spack/junit-report" unless (prefix/"var/spack/junit-report").exist?
+    (prefix/"var/spack/junit-report").mkpath
   end
 
   test do

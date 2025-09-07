@@ -12,13 +12,13 @@ class Ngspice < Formula
   end
 
   bottle do
-    sha256 arm64_sequoia: "e1fbc716699bedd11ac0040cafb2d54fc7765d164f432f99e9a5b32751934330"
-    sha256 arm64_sonoma:  "696062f1262576c544cc2946d8297a467019e7fbc3209289ab380718ac83a9d0"
-    sha256 arm64_ventura: "16f6bdf8892dbf381e4821c695b9cd3e29c102b167fec621f71009a31def195b"
-    sha256 sonoma:        "1f1d40b5cf95971d18d44d64de9422d493a7defc5eef7600daa2de3bd7af304a"
-    sha256 ventura:       "e918e90c17a14c699bbd5985d69fa1a56f916aacba200bc82fe298e52df45268"
-    sha256 arm64_linux:   "959ef6bd9de4cef70e5dd50111aa46864c7101832bd1e5db86a408f630af4d24"
-    sha256 x86_64_linux:  "b39aff234f3c3b2f7520ed58837b70778c619dba4a56b9d4f29c3157bb99f482"
+    sha256 arm64_sequoia: "4f819c80ddd4483301f7e01871aeb3049f9e219e22d315052423bde23ccb242d"
+    sha256 arm64_sonoma:  "4226d7fb2762659a85353d5d6bebba7f9c3808a5ade8a0ea4fabe2dff6e8e6b3"
+    sha256 arm64_ventura: "bb9832d330e7aa8d6e7642f2b7502af8aa6112b68ea4a2dd6fb0c97154c4492e"
+    sha256 sonoma:        "e589ca50ee6186e1ebe7d078df4cab987786504dce9f8e49f21686ffe775fe69"
+    sha256 ventura:       "525615c53f2f18720430f273b141d5f0da96a1180232f1838cd2e4418c51d1d0"
+    sha256 arm64_linux:   "943fc32abf2e74b11faa47f458a0c39c7789ca041bef2fe1ea5358b95afa67a6"
+    sha256 x86_64_linux:  "4825e30255d2c0fdb9d41e374ddf3984eb38f5eaae5e9e1a0439abd425c35eb7"
   end
 
   depends_on "autoconf" => :build

@@ -23,11 +23,11 @@ class Audacious < Formula
   end
 
   bottle do
-    sha256 arm64_sonoma:  "a22ac4daf6c2fd62c97aca4d7b1663d0b2d927fc0197ebf0c368eacf95ed2f7a"
-    sha256 arm64_ventura: "bbac9b3a6b48026c8b2d1d53d98192067c504f03394e5feb119dbc1a06aff964"
-    sha256 sonoma:        "98953e475f6d647204c512a7d6c8a63f9c1d7413d0748d695d89164f454feb52"
-    sha256 ventura:       "530f6c0a4263fbd644e75c007c1762d582f2652a64a0037bcea2f735ecfdd1b3"
-    sha256 x86_64_linux:  "d7351794505a034f7b1287602f4f6430bbddf5f04fd0f44c4ccd5f7889000b81"
+    sha256 arm64_sonoma:  "ec5a613c9c634e0e53fa1a39e52fbdd4d1cd48dcbf9d009ed547cd34b5e26a52"
+    sha256 arm64_ventura: "0fc42570974a4671bce5381306c275810c1e032e3eb449a23e36b6d6d67dbc2b"
+    sha256 sonoma:        "2f37ac529fefa8d6e1165942699c2371bff51984df7b49daef35aa25cec68172"
+    sha256 ventura:       "b06c1d390c4123eb885f785f776dcf1148fb299be937a478a97b9c3d62cb1eb7"
+    sha256 x86_64_linux:  "bad3cbe9fb783f5c087d26d1ff4425dc0b72f44f1b5327883e935add9161827c"
   end
 
   head do

@@ -7,6 +7,10 @@ class Specify < Formula
   sha256 "9eab4a52eebabbebe4b843e34386af9d56ae0c3cf668f5e429ccce05b1824fb7"
   license "MIT"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "875a4e7ca81a54a0e71d29dbba5fddb1cf26be16771b08b15b3a35a97062d60d"
+  end
+
   depends_on "certifi"
   depends_on "python@3.13"
 

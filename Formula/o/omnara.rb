@@ -3,18 +3,18 @@ class Omnara < Formula
 
   desc "Talk to Your AI Agents from Anywhere"
   homepage "https://omnara.com/"
-  url "https://files.pythonhosted.org/packages/d0/49/e381178adb0eee3d35244f0a37085c5c73e545b4ad5860e45a5fff1d9ca5/omnara-1.6.6.tar.gz"
-  sha256 "ac35831746ec162ab1fdb1fd5c2656a4b26a7d39e39322419d8e1efb820f88cd"
+  url "https://files.pythonhosted.org/packages/a5/44/9e0f8d95dbdeb6c226af238f38bc52205f71d1766b0608926b1dae7468cf/omnara-1.6.7.tar.gz"
+  sha256 "8afcd3748b8084e8b38612043ada7dfb6a02077c158408633f94cb0ab3041e88"
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any,                 arm64_sequoia: "43323dea5e92230347faff2e10c935867729f38ee965e17dd9881e9515d630e2"
-    sha256 cellar: :any,                 arm64_sonoma:  "b2d0c28654d4ab11ecceb710de6ddbcc76927001aa01715303169efeae29fcd9"
-    sha256 cellar: :any,                 arm64_ventura: "c89370a26640ae635ccda32477b18f58e9750ffe19542ec1005f408ac9a42618"
-    sha256 cellar: :any,                 sonoma:        "db1d2dd7c71487298b6c85c5ab4cd47b47771c7a9ad48c1247fe99e25981e6b5"
-    sha256 cellar: :any,                 ventura:       "1d158fc223620d230f16d9679f4f87cf09d89e9c878ca7476f02e9b403d276e2"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "3e611caf52e01a8405619d4a8043f400a531451c84048a4e170d44962e77cca8"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "0b9d24f2b8e3c881a8c072e51c5854a795805b9c97d9a58981f0a63bb7979be0"
+    sha256 cellar: :any,                 arm64_sequoia: "30585dbc25956195fbbc2fd83814a5f44e9a02ade4b95e6872776116e02e6064"
+    sha256 cellar: :any,                 arm64_sonoma:  "7c28317d1d334cc10e26f4aee4d5ce15099cecdc44b13bea188a6182b7a54360"
+    sha256 cellar: :any,                 arm64_ventura: "e073a96d913294db60ea4f84c0b2531c4c7ef3c545ebc3a3545f4d6754c66851"
+    sha256 cellar: :any,                 sonoma:        "20bcf09e6373aa71ddf02235c151a09c95b44704938c27c51e5c7bf3a2d7de72"
+    sha256 cellar: :any,                 ventura:       "5ebc8868c498e4251c3b4fe110780871d8ea6c223dfb93549ff38d4f8fb28720"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "793f0b4dc28a934ab8d09fadd1f86b6ff6310a9bdd18f9b24d4571eaefa8751c"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "b1e462d1fff151088f6cd8c79a0b15145baedf30abc77770797d1eee39c71811"
   end
 
   depends_on "rust" => :build # for pydantic-core
@@ -79,8 +79,8 @@ class Omnara < Formula
   end
 
   resource "dnspython" do
-    url "https://files.pythonhosted.org/packages/b5/4a/263763cb2ba3816dd94b08ad3a33d5fdae34ecb856678773cc40a3605829/dnspython-2.7.0.tar.gz"
-    sha256 "ce9c432eda0dc91cf618a5cedf1a4e142651196bbcd2c80e89ed5a907e5cfaf1"
+    url "https://files.pythonhosted.org/packages/8c/8b/57666417c0f90f08bcafa776861060426765fdb422eb10212086fb811d26/dnspython-2.8.0.tar.gz"
+    sha256 "181d3c6996452cb1189c4046c61599b84a5a86e099562ffde77d26984ff26d0f"
   end
 
   resource "docstring-parser" do

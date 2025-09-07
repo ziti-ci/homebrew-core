@@ -27,22 +27,13 @@ class Zookeeper < Formula
   depends_on "openjdk"
   depends_on "openssl@3"
 
-  resource "default_logback_xml" do
-    url "https://raw.githubusercontent.com/apache/zookeeper/release-3.9.4/conf/logback.xml"
-    sha256 "2fae7f51e4f92e8e3536e5f9ac193cb0f4237d194b982bb00b5c8644389c901f"
-  end
-
   def default_zk_env
     <<~EOS
-      [ -z "$ZOOCFGDIR" ] && export ZOOCFGDIR="#{etc}/zookeeper"
+      [ -z "$ZOOCFGDIR" ] && export ZOOCFGDIR="#{pkgetc}"
     EOS
   end
 
   def install
-    if build.stable? && version != resource("default_logback_xml").version
-      odie "default_logback_xml resource needs to be updated"
-    end
-
     system "mvn", "install", "-Pfull-build", "-DskipTests"
 
     system "tar", "-xf", "zookeeper-assembly/target/apache-zookeeper-#{version}-bin.tar.gz"
@@ -55,8 +46,6 @@ class Zookeeper < Formula
     include.install Dir[libpfx+"/usr/include/*"]
     lib.install Dir[libpfx+"/usr/lib/*"]
 
-    bin.mkpath
-    (etc/"zookeeper").mkpath
     (var/"log/zookeeper").mkpath
     (var/"run/zookeeper/data").mkpath
 
@@ -68,28 +57,18 @@ class Zookeeper < Formula
       (bin+bin_name).write <<~EOS
         #!/bin/bash
         export JAVA_HOME="${JAVA_HOME:-#{Formula["openjdk"].opt_prefix}}"
-        . "#{etc}/zookeeper/defaults"
+        . "#{pkgetc}/defaults"
         exec "#{libexec}/bin/#{script_name}" "$@"
       EOS
     end
 
+    (buildpath/"defaults").write(default_zk_env)
+    cp "conf/logback.xml", "logback.xml"
     cp "conf/zoo_sample.cfg", "conf/zoo.cfg"
     inreplace "conf/zoo.cfg",
               /^dataDir=.*/, "dataDir=#{var}/run/zookeeper/data"
-    (etc/"zookeeper").install "conf/zoo.cfg"
-
+    pkgetc.install "conf/zoo.cfg", "defaults", "logback.xml"
     (pkgshare/"examples").install "conf/logback.xml", "conf/zoo_sample.cfg"
-  end
-
-  def post_install
-    tmpdir = Pathname.new(Dir.mktmpdir)
-    tmpdir.install resource("default_logback_xml")
-
-    defaults = etc/"zookeeper/defaults"
-    defaults.write(default_zk_env) unless defaults.exist?
-
-    logback_xml = etc/"zookeeper/logback.xml"
-    logback_xml.write(tmpdir/"default_logback_xml") unless logback_xml.exist?
   end
 
   service do
@@ -101,6 +80,6 @@ class Zookeeper < Formula
 
   test do
     output = shell_output("#{bin}/zkServer -h 2>&1")
-    assert_match "Using config: #{etc}/zookeeper/zoo.cfg", output
+    assert_match "Using config: #{pkgetc}/zoo.cfg", output
   end
 end

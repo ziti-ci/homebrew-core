@@ -9,13 +9,13 @@ class Pdfalyzer < Formula
   head "https://github.com/michelcrypt4d4mus/pdfalyzer.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_sequoia: "964c223ac5b12ce6f7434a39c49c0aaec4144d4731701b4f23bee233625b6d7f"
-    sha256 cellar: :any,                 arm64_sonoma:  "a4e5c6575878d8b2d1c9c7beeed3942079b1e050aaeea437760ef8e816022103"
-    sha256 cellar: :any,                 arm64_ventura: "0f7682a8e9d3aa40703fabbfeb969051e0588721ec248158da2077fc72dab14e"
-    sha256 cellar: :any,                 sonoma:        "d1321ae5b81ecebc00e3a1179ab329ce46fa09ca14e663849bbd234c9fcb87a4"
-    sha256 cellar: :any,                 ventura:       "04d34b7f059d20cbc2704cebcb6d78d7dc43c3a71fd7cf0d60ad9eb936676df1"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "4a946c2316fc6ffde6f7d1b7f94227de572b4f6d7d2c886c49ec408cdb378799"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "1f7298630b5d9fe8532da1d096ddffa10c42f5ef9809a050e10219f404778216"
+    sha256 cellar: :any,                 arm64_sequoia: "7b2392e5ffea8d4c7c636b81dbafc1bed22e06bb543dda5821af1906c5a7ccf8"
+    sha256 cellar: :any,                 arm64_sonoma:  "530bb28ecec232fb638823c430ff7cccd7a37e56e6b0d00c149dd941c1f13553"
+    sha256 cellar: :any,                 arm64_ventura: "a38bfbd300b347ce669255301710891b565548ba2eff66f436b4e22520c203e5"
+    sha256 cellar: :any,                 sonoma:        "bcafd6bfd96e47b0ec1486e506bf5cb6f2080f90fc7185badcf95488d3be8f17"
+    sha256 cellar: :any,                 ventura:       "0cd63e4806de2968d529b59083f832ceebfd319695154a60c03b92d8902f157c"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "4dcc5cae43bfdb28701317f0a2418d2ea02093b19d79317a47b9b8ec92fb3b68"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "2477e619c7d65139a6bd2f99a9caad5f75ad7eccf524c7209df2b1dffdc5a06a"
   end
 
   depends_on "openssl@3"

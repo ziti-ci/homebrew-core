@@ -57,6 +57,7 @@ class GiDocgen < Formula
 
   def install
     virtualenv_install_with_resources
+    (share/"pkgconfig").install_symlink libexec/"share/pkgconfig/gi-docgen.pc"
   end
 
   test do

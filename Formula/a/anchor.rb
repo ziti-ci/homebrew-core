@@ -11,6 +11,7 @@ class Anchor < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura: "ca4ffdfb9aae0ff812731a31069abd21513c73f62ea515987c5f46eef69cf7e3"
     sha256 cellar: :any_skip_relocation, sonoma:        "7eb7eaa89f2196a477b656fb3cb49a4266c6304e905ac33e9b7d747c6bd123b3"
     sha256 cellar: :any_skip_relocation, ventura:       "066844da5df515e3839334c969b030b9301dafe6f567b08f7d550410a57a5aad"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "872bcc6d409302f716595e7bc6707c46737548ef649da6bc13745e38cc4bffe0"
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "da2bad29f4d7784c6ed6ef79c00a6120963086dcc9ad17fc98e87bd7465d6fe2"
   end
 

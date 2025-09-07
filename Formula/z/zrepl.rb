@@ -28,9 +28,6 @@ class Zrepl < Formula
 
   def install
     system "go", "build", *std_go_args(ldflags: "-s -w -X github.com/zrepl/zrepl/version.zreplVersion=#{version}")
-  end
-
-  def post_install
     (var/"log/zrepl").mkpath
     (var/"run/zrepl").mkpath
     (etc/"zrepl").mkpath

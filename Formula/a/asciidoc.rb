@@ -23,6 +23,8 @@ class Asciidoc < Formula
   depends_on "python@3.13"
   depends_on "source-highlight"
 
+  uses_from_macos "libxml2"
+
   def install
     virtualenv_install_with_resources
   end

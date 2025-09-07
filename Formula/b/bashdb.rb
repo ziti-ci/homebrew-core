@@ -18,14 +18,13 @@ class Bashdb < Formula
   no_autobump! because: :incompatible_version_format
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "8f2ec4abf07b97ccf17dd28f503864ff00ea05049a9b844de637612b85478aa7"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "8f2ec4abf07b97ccf17dd28f503864ff00ea05049a9b844de637612b85478aa7"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "8f2ec4abf07b97ccf17dd28f503864ff00ea05049a9b844de637612b85478aa7"
-    sha256 cellar: :any_skip_relocation, sonoma:        "a66264c4831ecc61cf6ea6fbebfa335cf2152742017132ca9309068a0870b8ac"
-    sha256 cellar: :any_skip_relocation, ventura:       "a66264c4831ecc61cf6ea6fbebfa335cf2152742017132ca9309068a0870b8ac"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "1c3880ed9494d5dbe3a1dbebf971e66fbdf4edabdad128cc44ece337d906c28c"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "8f2ec4abf07b97ccf17dd28f503864ff00ea05049a9b844de637612b85478aa7"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "2aedb1af38194b056e6f3a31ff73c2995782f41d714955991a5d749abe53eb14"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "2aedb1af38194b056e6f3a31ff73c2995782f41d714955991a5d749abe53eb14"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "2aedb1af38194b056e6f3a31ff73c2995782f41d714955991a5d749abe53eb14"
+    sha256 cellar: :any_skip_relocation, sonoma:        "ce33c2ad50ddabd3cbff0c1a2b6e0f9ebaf8ff28609df48fafd6d7e8e1c8962d"
+    sha256 cellar: :any_skip_relocation, ventura:       "ce33c2ad50ddabd3cbff0c1a2b6e0f9ebaf8ff28609df48fafd6d7e8e1c8962d"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "2aedb1af38194b056e6f3a31ff73c2995782f41d714955991a5d749abe53eb14"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "2aedb1af38194b056e6f3a31ff73c2995782f41d714955991a5d749abe53eb14"
   end
 
   depends_on "bash"

@@ -1,8 +1,8 @@
 class Netatalk < Formula
   desc "File server for Macs, compliant with Apple Filing Protocol (AFP)"
   homepage "https://netatalk.io"
-  url "https://github.com/Netatalk/netatalk/releases/download/netatalk-4-3-1/netatalk-4.3.1.tar.xz"
-  sha256 "248e2eea8066c7d3e7fed62c54a3df37b4158bb45247ebdf64efe2e3797c04d5"
+  url "https://github.com/Netatalk/netatalk/releases/download/netatalk-4-3-2/netatalk-4.3.2.tar.xz"
+  sha256 "2977b4fd113182f0cc183337ba23d5701fb2be4e0dfcec7ee575b4d73a738d3a"
   license all_of: [
     "GPL-2.0-only",
     "GPL-2.0-or-later",
@@ -55,7 +55,6 @@ class Netatalk < Formula
   conflicts_with "ad", because: "both install `ad` binaries"
 
   def install
-    inreplace "meson.build", "if init_cmd != ''", "if init_cmd != '' and get_option('with-init-hooks') == true"
     inreplace "distrib/initscripts/macos.netatalk.in", "@sbindir@", opt_sbin
     inreplace "distrib/initscripts/macos.netatalk.plist.in", "@bindir@", opt_bin
     inreplace "distrib/initscripts/macos.netatalk.plist.in", "@sbindir@", opt_sbin

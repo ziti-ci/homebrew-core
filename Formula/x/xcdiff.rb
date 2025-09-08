@@ -2,8 +2,8 @@ class Xcdiff < Formula
   desc "Tool to diff xcodeproj files"
   homepage "https://github.com/bloomberg/xcdiff"
   url "https://github.com/bloomberg/xcdiff.git",
-      tag:      "0.13.0",
-      revision: "99301ee4578224f0660a1312abc465c5a37176c5"
+      tag:      "0.14.0",
+      revision: "c2b9cab9f85fe1f1e96ce51d3678f565d3aa8c96"
   license "Apache-2.0"
   head "https://github.com/bloomberg/xcdiff.git", branch: "main"
 

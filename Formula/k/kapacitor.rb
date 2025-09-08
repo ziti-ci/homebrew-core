@@ -2,8 +2,8 @@ class Kapacitor < Formula
   desc "Open source time series data processor"
   homepage "https://github.com/influxdata/kapacitor"
   url "https://github.com/influxdata/kapacitor.git",
-      tag:      "v1.8.0",
-      revision: "c5848b64d04a1dc4039611491891dd06872ef348"
+      tag:      "v1.8.1",
+      revision: "ca9618e5382acb845868c80d2271c25f5dd1e9aa"
   license "MIT"
   head "https://github.com/influxdata/kapacitor.git", branch: "master"
 
@@ -32,13 +32,12 @@ class Kapacitor < Formula
     sha256 "769deabe12733224eaebbfff3b5a9d69491b0158bdf58bbbbc7089326d33a9c8"
   end
 
-  # build patch for 1.8.0 release
-  patch do
-    url "https://raw.githubusercontent.com/Homebrew/formula-patches/2ce7d3fffb94533cc1940dfc0391806007b1644f/kapacitor/1.8.0.patch"
-    sha256 "1be60924e908504afb52bdefbddbcba65fb2812b63f430918406f68ad0d5e941"
-  end
-
   def install
+    # `flux-core` Workaround for `error: hiding a lifetime that's elided elsewhere is confusing` with `rust` 1.89+
+    ENV.append_to_rustflags "--allow dead_code --allow mismatched_lifetime_syntaxes"
+    # `flux` Workaround for `error: private item shadows public glob re-export`
+    ENV.append_to_rustflags "--allow hidden_glob_reexports"
+
     resource("pkg-config-wrapper").stage do
       system "go", "build", *std_go_args, "-o", buildpath/"bootstrap/pkg-config"
     end

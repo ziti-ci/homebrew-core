@@ -5,7 +5,10 @@ class Jemalloc < Formula
   sha256 "2db82d1e7119df3e71b7640219b6dfe84789bc0537983c3b7ac4f7189aecfeaa"
   license "BSD-2-Clause"
 
-  no_autobump! because: :requires_manual_review
+  # TODO: See if Meta continues releases https://github.com/facebook/jemalloc/discussions/7
+  livecheck do
+    skip "archived, see https://jasone.github.io/2025/06/12/jemalloc-postmortem/"
+  end
 
   bottle do
     sha256 cellar: :any,                 arm64_sequoia:  "e5e0394bcc4feeb5db140387352090773761aebe3ff8ae42faf4990b2360fec6"
@@ -35,6 +38,7 @@ class Jemalloc < Formula
       --prefix=#{prefix}
       --with-jemalloc-prefix=
     ]
+    args << "--with-lg-page=16" if Hardware::CPU.arch == :arm64 && OS.linux?
 
     if build.head?
       args << "--with-xslroot=#{Formula["docbook-xsl"].opt_prefix}/docbook-xsl"

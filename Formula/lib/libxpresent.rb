@@ -1,11 +1,9 @@
 class Libxpresent < Formula
   desc "Xlib-based library for the X Present Extension"
   homepage "https://gitlab.freedesktop.org/xorg/lib/libxpresent"
-  url "https://www.x.org/archive/individual/lib/libXpresent-1.0.1.tar.xz"
-  sha256 "b964df9e5a066daa5e08d2dc82692c57ca27d00b8cc257e8e960c9f1cf26231b"
+  url "https://www.x.org/archive/individual/lib/libXpresent-1.0.2.tar.xz"
+  sha256 "4e5b21b4812206a4b223013606ae31170502c1043038777a1ef8f70c09d37602"
   license "MIT"
-
-  no_autobump! because: :requires_manual_review
 
   bottle do
     sha256 cellar: :any,                 arm64_sequoia:  "7e63498b20190e5cafd0a9adfe036c47a39bcc561518f856d01d168fb801997a"

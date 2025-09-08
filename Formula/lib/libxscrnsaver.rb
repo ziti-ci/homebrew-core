@@ -1,11 +1,9 @@
 class Libxscrnsaver < Formula
   desc "X.Org: X11 Screen Saver extension client library"
   homepage "https://www.x.org/"
-  url "https://www.x.org/archive/individual/lib/libXScrnSaver-1.2.4.tar.xz"
-  sha256 "75cd2859f38e207a090cac980d76bc71e9da99d48d09703584e00585abc920fe"
+  url "https://www.x.org/archive/individual/lib/libXScrnSaver-1.2.5.tar.xz"
+  sha256 "5057365f847253e0e275871441e10ff7846c8322a5d88e1e187d326de1cd8d00"
   license "MIT"
-
-  no_autobump! because: :requires_manual_review
 
   bottle do
     sha256 cellar: :any,                 arm64_sequoia:  "0b3b6f538e4e11629f54b74f0603e9fca13439e3ab37ff3899c9081d4dc80258"

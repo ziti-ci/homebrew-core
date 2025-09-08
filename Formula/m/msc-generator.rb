@@ -1,10 +1,9 @@
 class MscGenerator < Formula
   desc "Draws signalling charts from textual description"
   homepage "https://gitlab.com/msc-generator/msc-generator"
-  url "https://gitlab.com/api/v4/projects/31167732/packages/generic/msc-generator/8.6.2/msc-generator-8.6.2.tar.gz"
-  sha256 "7d565cf5ff39e2ecb04d29daec0eaf674278f6d0a1cb507eed580fe8bc8a0893"
+  url "https://gitlab.com/api/v4/projects/31167732/packages/generic/msc-generator/8.6.3/msc-generator-8.6.3.tar.gz"
+  sha256 "476115a4f4dc3f71fae43071c388db6323bf2298f9d3b6f5214557a570ceacf2"
   license "AGPL-3.0-or-later"
-  revision 2
 
   livecheck do
     url "https://gitlab.com/api/v4/projects/31167732/packages"
@@ -61,11 +60,6 @@ class MscGenerator < Formula
   end
 
   def install
-    # Issue ref: https://gitlab.com/msc-generator/msc-generator/-/issues/96
-    odie "Check if workarounds for newer GraphViz can be removed!" if version > "8.6.2"
-    ENV.append_to_cflags "-DGRAPHVIZ_VER=#{Formula["graphviz"].version.major}00 -DTRUE=1"
-    inreplace "src/libgvgen/gvgraphs.cpp", "std::max((float)0, std::min((float)1,", "std::max(0.0, std::min(1.0,"
-
     args = %w[--disable-font-checks --disable-silent-rules]
     make = "make"
 

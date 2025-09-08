@@ -16,12 +16,12 @@ class Oxen < Formula
   no_autobump! because: :bumped_by_upstream
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "d459e4b90d2937cd6cd2042eb0a80d1ffc6020488bd0b4e5f31c138bc096c1b7"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "41c76a5a8d2da738c23fedd839808c341f5eb59abd08b8c3eb4394d6cc841b20"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "c70971b26eb94b21e71ad6a1f7a696500c236b47b6315cb5c542f24bce0ceb68"
-    sha256 cellar: :any_skip_relocation, sonoma:        "79fb5793baca1c018dcb449a714ce9c403e92c7b89c17e581ae43941b1f6540e"
-    sha256 cellar: :any_skip_relocation, ventura:       "9f6d30356b63854047399e24d3d2880408f2c75c488080f38a014f02adb224f3"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "09b58c632052f96adf88a95a1ccfe7b5d5e018148fd4f641dbe9d3085f3d7109"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "9aa96612c3e08ea162bd8ab0ccbdf885f1bcc960782d4a0023fb44ceb27d5507"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "caa335e6a2b2e7055edff9a5da5fa0cbda20c0d12369b329b17dbe715194afe7"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "bb9b6c1c2a03e0cf5a37ede1a92b0e7a944a85781e5561a9160493312e15c3fd"
+    sha256 cellar: :any_skip_relocation, sonoma:        "5916e6e95c88fae3cac66f9d5267c45a971e741b0ff69ec391ed0c50d7d45ef0"
+    sha256 cellar: :any_skip_relocation, ventura:       "22bdc91f215bb87839f5130734d264682addb27948fb0153feee02be15418693"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "7fadd9f21a229c0c6169b504d3b3c7f6298a1ea28824d95731f8b49a9145cf47"
   end
 
   depends_on "cmake" => :build # for libz-ng-sys

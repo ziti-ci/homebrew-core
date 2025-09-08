@@ -3,8 +3,8 @@ class Btcli < Formula
 
   desc "Bittensor command-line tool"
   homepage "https://docs.bittensor.com/btcli"
-  url "https://files.pythonhosted.org/packages/eb/30/1cb273be1293a537af823141e20ae486e4364a5b61181ea822501af2ad40/bittensor_cli-9.10.2.tar.gz"
-  sha256 "83c090b310c3d7a36f25d99714b60dd6edfa9ce320f7c92487ffbb8583db3a16"
+  url "https://files.pythonhosted.org/packages/aa/64/cf95f11a3acd840b1ef37604476bc77f159bd3eb516aedf8227bfa2cd59a/bittensor_cli-9.11.0.tar.gz"
+  sha256 "0664a8e1982bd507cac80d1da210176ee066ad048b4c191878afa62bf1b63013"
   license "MIT"
   head "https://github.com/opentensor/btcli.git", branch: "main"
 
@@ -43,9 +43,14 @@ class Btcli < Formula
     sha256 "f47eecd9468083c2029cc99945502cb7708b082c232f9aca65da147157b251c7"
   end
 
+  resource "aiosqlite" do
+    url "https://files.pythonhosted.org/packages/13/7d/8bca2bf9a247c2c5dfeec1d7a5f40db6518f88d314b8bca9da29670d2671/aiosqlite-0.21.0.tar.gz"
+    sha256 "131bb8056daa3bc875608c631c678cda73922a2d4ba8aec373b19f18c17e7aa3"
+  end
+
   resource "async-substrate-interface" do
-    url "https://files.pythonhosted.org/packages/12/a5/569502432ce7e072572ccdfe56e9de13b2e0ffae25fa03508cc839dd42f4/async_substrate_interface-1.5.1.tar.gz"
-    sha256 "7da149e05ca955682790be6eb4c56f48e565e7af3eb0e00bd3857b37c9f6369e"
+    url "https://files.pythonhosted.org/packages/93/f9/29a26c144b5c2f02b9e27899980e7370602e4f7820c71c2d9418fd17cfd9/async_substrate_interface-1.5.2.tar.gz"
+    sha256 "8d763550f691eed99f351daebba25001201171965a358f47efb3ea122228bf68"
   end
 
   resource "attrs" do
@@ -134,8 +139,8 @@ class Btcli < Formula
   end
 
   resource "narwhals" do
-    url "https://files.pythonhosted.org/packages/39/30/7a55d6b4345f0fa27e762754a30ca7d5ba52ee53a2f4878a9d5e641b1d5b/narwhals-2.3.0.tar.gz"
-    sha256 "b66bc4ab7b6746354f60c4b3941e3ce60c066588c35360e2dc6c063489000a16"
+    url "https://files.pythonhosted.org/packages/ec/8f/b0a99455f6e5fe2d4e77deeee8b133cfa06e1f5441c77a70defdbbfbf639/narwhals-2.4.0.tar.gz"
+    sha256 "a71931f7fb3c8e082cbe18ef0740644d87d60eba841ddfa9ba9394de1d43062f"
   end
 
   resource "netaddr" do

@@ -3,8 +3,8 @@ class Xml2rfc < Formula
 
   desc "Tool to convert XML RFC7749 to the original ASCII or the new HTML look-and-feel"
   homepage "https://xml2rfc.tools.ietf.org/"
-  url "https://files.pythonhosted.org/packages/ab/c5/2f2518d2da9c7434109235c8dfd463b78208afabc8cae8321d536c29d09d/xml2rfc-3.30.1.tar.gz"
-  sha256 "9299d9a9f02c41a51da28674c54cf4ed99f457ea121edcc0727026fcfd21d746"
+  url "https://files.pythonhosted.org/packages/3a/b3/06d002c0cdaafce50abc5dca04ff293a63797c9a44f9a1c6750499d5f9b6/xml2rfc-3.30.2.tar.gz"
+  sha256 "dfd9f23288cfa805ad5bb613c9540dc1b349da98e117a16e0ca887d2261ed311"
   license "BSD-3-Clause"
   head "https://github.com/ietf-tools/xml2rfc.git", branch: "main"
 
@@ -73,8 +73,8 @@ class Xml2rfc < Formula
   end
 
   resource "platformdirs" do
-    url "https://files.pythonhosted.org/packages/fe/8b/3c73abc9c759ecd3f1f7ceff6685840859e8070c4d947c93fae71f6a0bf2/platformdirs-4.3.8.tar.gz"
-    sha256 "3d512d96e16bcb959a814c9f348431070822a6496326a4be0911c40b5a74c2bc"
+    url "https://files.pythonhosted.org/packages/23/e8/21db9c9987b0e728855bd57bff6984f67952bea55d6f75e055c46b5383e8/platformdirs-4.4.0.tar.gz"
+    sha256 "ca753cf4d81dc309bc67b0ea38fd15dc97bc30ce419a7f58d13eb3bf14c4febf"
   end
 
   resource "pycountry" do

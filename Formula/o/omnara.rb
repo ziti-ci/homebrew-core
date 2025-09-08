@@ -3,8 +3,8 @@ class Omnara < Formula
 
   desc "Talk to Your AI Agents from Anywhere"
   homepage "https://omnara.com/"
-  url "https://files.pythonhosted.org/packages/a5/44/9e0f8d95dbdeb6c226af238f38bc52205f71d1766b0608926b1dae7468cf/omnara-1.6.7.tar.gz"
-  sha256 "8afcd3748b8084e8b38612043ada7dfb6a02077c158408633f94cb0ab3041e88"
+  url "https://files.pythonhosted.org/packages/0e/29/03f800a7b1dc7e49f93cb02961e1a7afabaef0d24215ee334d507f1a9bef/omnara-1.6.8.tar.gz"
+  sha256 "bb98909f3308e119f68f2a13533fa3107075943fe5f8d7302da1155272841b53"
   license "Apache-2.0"
 
   bottle do
@@ -159,8 +159,8 @@ class Omnara < Formula
   end
 
   resource "jsonschema-specifications" do
-    url "https://files.pythonhosted.org/packages/bf/ce/46fbd9c8119cfc3581ee5643ea49464d168028cfb5caff5fc0596d0cf914/jsonschema_specifications-2025.4.1.tar.gz"
-    sha256 "630159c9f4dbea161a6a2205c3011cc4f18ff381b189fff48bb39b9bf26ae608"
+    url "https://files.pythonhosted.org/packages/19/74/a633ee74eb36c44aa6d1095e7cc5569bebf04342ee146178e2d36600708b/jsonschema_specifications-2025.9.1.tar.gz"
+    sha256 "b540987f239e745613c7a9176f3edb72b832a4ac465cf02712288397832b5e8d"
   end
 
   resource "lazy-object-proxy" do

@@ -8,8 +8,7 @@ class Visidata < Formula
   license "GPL-3.0-or-later"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, all: "a58ebbff5715caf4599c4e2ecce0b28d1830df60525dd18b2269bc923910feae"
+    sha256 cellar: :any_skip_relocation, all: "e3d5f4243f36d12249d4719368f24bb73edf7b972312c2a862a2aefb5831398d"
   end
 
   depends_on "python@3.13"

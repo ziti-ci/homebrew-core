@@ -1,10 +1,9 @@
 class GdkPixbuf < Formula
   desc "Toolkit for image loading and pixel buffer manipulation"
   homepage "https://gtk.org"
-  url "https://download.gnome.org/sources/gdk-pixbuf/2.42/gdk-pixbuf-2.42.12.tar.xz"
-  sha256 "b9505b3445b9a7e48ced34760c3bcb73e966df3ac94c95a148cb669ab748e3c7"
+  url "https://download.gnome.org/sources/gdk-pixbuf/2.44/gdk-pixbuf-2.44.0.tar.xz"
+  sha256 "31d65c2db14d321b9d862a323fc63002179cf3cc0b10d04db6ed55ffaed00db3"
   license "LGPL-2.1-or-later"
-  revision 1
 
   bottle do
     sha256 arm64_sequoia: "64089a3ef04afef0dc8601d22cd534fdc155bef2458bf1a97e6e90f25b7529ad"
@@ -64,6 +63,7 @@ class GdkPixbuf < Formula
                                       "-Djpeg=enabled",
                                       "-Dothers=enabled",
                                       "-Dintrospection=enabled",
+                                      "-Dglycin=disabled",
                                       *std_meson_args
     system "meson", "compile", "-C", "build", "--verbose"
     system "meson", "install", "-C", "build"

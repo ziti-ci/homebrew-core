@@ -12,12 +12,12 @@ class Redress < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "cd863dad65eb916989574bdc2bddab8813194753b68cdfe3bc0c5ed7db866e92"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "cd863dad65eb916989574bdc2bddab8813194753b68cdfe3bc0c5ed7db866e92"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "cd863dad65eb916989574bdc2bddab8813194753b68cdfe3bc0c5ed7db866e92"
-    sha256 cellar: :any_skip_relocation, sonoma:        "f036516154d4a6570dc2a390ac396c2e7fb7fb240aceca4724cdf5bef4db3d1a"
-    sha256 cellar: :any_skip_relocation, ventura:       "f036516154d4a6570dc2a390ac396c2e7fb7fb240aceca4724cdf5bef4db3d1a"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "a67967f3b078d7b7bc680225486a679a56cd3088fcd2dba70366b0c0801f17cf"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "0825776df4a8e3f73ace96b3743698741b2ed05a97376ada1192d4efb82558fc"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "0825776df4a8e3f73ace96b3743698741b2ed05a97376ada1192d4efb82558fc"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "0825776df4a8e3f73ace96b3743698741b2ed05a97376ada1192d4efb82558fc"
+    sha256 cellar: :any_skip_relocation, sonoma:        "f5e39e207ff98a6ed6057bec387dfbb58ca95b53fda6c0c653c1de55acc41672"
+    sha256 cellar: :any_skip_relocation, ventura:       "f5e39e207ff98a6ed6057bec387dfbb58ca95b53fda6c0c653c1de55acc41672"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "dbcef32f4ff8599605fdba0d6888eac1d84badad437f43ad820b6125cda7d9a5"
   end
 
   depends_on "go" => :build

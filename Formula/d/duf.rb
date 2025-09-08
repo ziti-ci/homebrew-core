@@ -1,12 +1,10 @@
 class Duf < Formula
   desc "Disk Usage/Free Utility - a better 'df' alternative"
   homepage "https://github.com/muesli/duf"
-  url "https://github.com/muesli/duf/archive/refs/tags/v0.8.1.tar.gz"
-  sha256 "ebc3880540b25186ace220c09af859f867251f4ecaef435525a141d98d71a27a"
+  url "https://github.com/muesli/duf/archive/refs/tags/v0.9.0.tar.gz"
+  sha256 "a81883475ab5591840882892a85185b7cda153e87f4d3978b45dec215761585c"
   license "MIT"
   head "https://github.com/muesli/duf.git", branch: "master"
-
-  no_autobump! because: :requires_manual_review
 
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_sequoia:  "643ad7ae4f361bb24fd34c0f0e0ece98bd541ac3be3fd78af2bc7648346318e7"

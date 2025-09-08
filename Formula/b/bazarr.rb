@@ -80,18 +80,12 @@ class Bazarr < Formula
     cp Dir[libexec/"data/config/*"], pkgetc
 
     libexec.install_symlink pkgvar => "data"
-  end
 
-  def post_install
-    pkgvar = var/"bazarr"
-
-    config_file = pkgetc/"config.ini"
-    unless config_file.exist?
-      config_file.write <<~INI
-        [backup]
-        folder = #{pkgvar}/backup
-      INI
-    end
+    (buildpath/"config.ini").write <<~INI
+      [backup]
+      folder = #{pkgvar}/backup
+    INI
+    pkgetc.install "config.ini"
   end
 
   service do

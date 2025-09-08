@@ -58,9 +58,6 @@ class BaculaFd < Formula
     inreplace prefix/"etc/bacula_config", "#{Superenv.shims_path}/", ""
 
     (var/"lib/bacula").mkpath
-  end
-
-  def post_install
     (var/"run").mkpath
   end
 

@@ -1,11 +1,9 @@
 class Libxres < Formula
   desc "X.Org: X-Resource extension client library"
   homepage "https://www.x.org/"
-  url "https://www.x.org/archive/individual/lib/libXres-1.2.2.tar.xz"
-  sha256 "9a7446f3484b9b7538ac5ee30d2c1ce9e5b7fbbaf1440e02f6cca186a1fa745f"
+  url "https://www.x.org/archive/individual/lib/libXres-1.2.3.tar.xz"
+  sha256 "d2de8f5401d6c86a8992791654547eb8def585dfdc0c08cc16e24ef6aeeb69dc"
   license "MIT"
-
-  no_autobump! because: :requires_manual_review
 
   bottle do
     sha256 cellar: :any,                 arm64_sequoia:  "e7f72b305f5c62fa3bd025cb437a533e0d5fd903bbf165d8b86f0e19e163474a"

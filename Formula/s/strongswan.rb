@@ -4,6 +4,7 @@ class Strongswan < Formula
   url "https://download.strongswan.org/strongswan-6.0.2.tar.bz2"
   sha256 "b8bfc897b84001fd810a281918d6c9ce37503cae0f41b39c43d4aba0201277cf"
   license "GPL-2.0-or-later"
+  revision 1
 
   livecheck do
     url "https://download.strongswan.org/"
@@ -52,6 +53,7 @@ class Strongswan < Formula
       --enable-eap-identity
       --enable-eap-md5
       --enable-eap-mschapv2
+      --enable-eap-peap
       --enable-ikev1
       --enable-ikev2
       --enable-kdf

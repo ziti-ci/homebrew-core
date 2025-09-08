@@ -3,8 +3,8 @@ class Snakemake < Formula
 
   desc "Pythonic workflow system"
   homepage "https://snakemake.readthedocs.io/"
-  url "https://files.pythonhosted.org/packages/44/f5/2a80ff958185b51439a017aef1ab14544371a437be1312b7944073a8ba09/snakemake-9.11.0.tar.gz"
-  sha256 "f4b64d1b52525487e74f05a4ee6912fca9a42af2736c522e6c3abd6d361ba1c5"
+  url "https://files.pythonhosted.org/packages/7b/99/528d1d62c136a8f19c8a8a9743223e763be0f1fff28090380a4e574d54a6/snakemake-9.11.1.tar.gz"
+  sha256 "b04bd4804821b0f0910fc967154b72ec113cbfc171837322bf26ad9d3798f75c"
   license "MIT"
   head "https://github.com/snakemake/snakemake.git", branch: "main"
 
@@ -110,8 +110,8 @@ class Snakemake < Formula
   end
 
   resource "jsonschema-specifications" do
-    url "https://files.pythonhosted.org/packages/bf/ce/46fbd9c8119cfc3581ee5643ea49464d168028cfb5caff5fc0596d0cf914/jsonschema_specifications-2025.4.1.tar.gz"
-    sha256 "630159c9f4dbea161a6a2205c3011cc4f18ff381b189fff48bb39b9bf26ae608"
+    url "https://files.pythonhosted.org/packages/19/74/a633ee74eb36c44aa6d1095e7cc5569bebf04342ee146178e2d36600708b/jsonschema_specifications-2025.9.1.tar.gz"
+    sha256 "b540987f239e745613c7a9176f3edb72b832a4ac465cf02712288397832b5e8d"
   end
 
   resource "jupyter-core" do
@@ -175,8 +175,8 @@ class Snakemake < Formula
   end
 
   resource "smart-open" do
-    url "https://files.pythonhosted.org/packages/18/2b/5e7234c68ed5bc872ad6ae77b8a421c2ed70dcb1190b44dc1abdeed5e347/smart_open-7.3.0.post1.tar.gz"
-    sha256 "ce6a3d9bc1afbf6234ad13c010b77f8cd36d24636811e3c52c3b5160f5214d1e"
+    url "https://files.pythonhosted.org/packages/16/be/bf2d60280a9d7fac98ece2150a22538fa4332cda67d04d9618c8406f791e/smart_open-7.3.1.tar.gz"
+    sha256 "b33fee8dffd206f189d5e704106a8723afb4210d2ff47e0e1f7fbe436187a990"
   end
 
   resource "smmap" do

@@ -3,18 +3,18 @@ class Omnara < Formula
 
   desc "Talk to Your AI Agents from Anywhere"
   homepage "https://omnara.com/"
-  url "https://files.pythonhosted.org/packages/0e/29/03f800a7b1dc7e49f93cb02961e1a7afabaef0d24215ee334d507f1a9bef/omnara-1.6.8.tar.gz"
-  sha256 "bb98909f3308e119f68f2a13533fa3107075943fe5f8d7302da1155272841b53"
+  url "https://files.pythonhosted.org/packages/05/c2/a5b6191ddb8ae1411c90309ad694fc001f7f00dcbc20b47528f9bcfd9eee/omnara-1.6.9.tar.gz"
+  sha256 "ba3a7d65cb5b73026d0d68d61e1f27c76890dcf97f4fe28752ca644e7fc7adca"
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any,                 arm64_sequoia: "6d85afff61d0daee787795cd66d4c36855eeda752571e61bdd99d58eb38343cc"
-    sha256 cellar: :any,                 arm64_sonoma:  "fdef79559b600b56007830dc59ca76dc8dbb938c8fd929b465cbd9bb7f391dd4"
-    sha256 cellar: :any,                 arm64_ventura: "616beb51ae79ca2cc47d87bd734f38d24d9a31c98090e69bf621aa759dfd5295"
-    sha256 cellar: :any,                 sonoma:        "f27cd4d231adf6d561b35a13b0bd2454825994180a7f3e84d1bf1725e8d095dc"
-    sha256 cellar: :any,                 ventura:       "4ac6a73983acb81aed63ec5175ac20065f68275e2979c1d1c4fc22c082517973"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "283be985702abd04ebd9f1f48ad1dc58f636459e30fd8ae7c2c04e1b3db5ee42"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "6a0d2ddd95f591f620198836f0daee9bdd34f74ec3a85650f36b64a94c0887db"
+    sha256 cellar: :any,                 arm64_sequoia: "3a530b2f52acb467b1ee7aff11d9c53372cfb2fb0c5b46c41e7b76ea15838127"
+    sha256 cellar: :any,                 arm64_sonoma:  "70aec3ae100ece5bcf0cb00c6050be4bcf0cc0f2730cfd5ef7ffc6110d0457ba"
+    sha256 cellar: :any,                 arm64_ventura: "441305a345a3b610087d568d755cb3fb9b1c413b460bdd87dd679f24703735fe"
+    sha256 cellar: :any,                 sonoma:        "5b4d6b7dad7699fd99909986a147e43480a13ae43918d4bfa0cd9db57ab7104f"
+    sha256 cellar: :any,                 ventura:       "20ac424b81ef44036ce4ce5032f5176f85f7ef651adf99cdef8b6313be0174ac"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "efb946f43e1f2e492b620c670b76ffe08f683cc796e58307857e1c42054a47b8"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "7a784d6c036bef0b9453b66b5d03c153c641f758370641799f00e1f078cf76a5"
   end
 
   depends_on "rust" => :build # for pydantic-core

@@ -3,8 +3,8 @@ class Cycode < Formula
 
   desc "Boost security in your dev lifecycle via SAST, SCA, Secrets & IaC scanning"
   homepage "https://github.com/cycodehq/cycode-cli"
-  url "https://files.pythonhosted.org/packages/59/2d/aed0417fc18f4ebe6db075c40fa5573d42d7aa15d9acf9ab7c85742b98a1/cycode-3.4.0.tar.gz"
-  sha256 "5d6d002b4f0bfa5fa5d840030f7243a4a51417001a3a3762337a57c1b78c2d10"
+  url "https://files.pythonhosted.org/packages/01/5a/5263fbf3db307f26d292514f6c8738731d18ceca77aa8758bb4bd20eea01/cycode-3.4.1.tar.gz"
+  sha256 "9195c93673e5bdd75e42b58597d91a5ddb5c91b21cf72467299a8e3aa625e36c"
   license "MIT"
   head "https://github.com/cycodehq/cycode-cli.git", branch: "main"
 
@@ -110,8 +110,8 @@ class Cycode < Formula
   end
 
   resource "jsonschema-specifications" do
-    url "https://files.pythonhosted.org/packages/bf/ce/46fbd9c8119cfc3581ee5643ea49464d168028cfb5caff5fc0596d0cf914/jsonschema_specifications-2025.4.1.tar.gz"
-    sha256 "630159c9f4dbea161a6a2205c3011cc4f18ff381b189fff48bb39b9bf26ae608"
+    url "https://files.pythonhosted.org/packages/19/74/a633ee74eb36c44aa6d1095e7cc5569bebf04342ee146178e2d36600708b/jsonschema_specifications-2025.9.1.tar.gz"
+    sha256 "b540987f239e745613c7a9176f3edb72b832a4ac465cf02712288397832b5e8d"
   end
 
   resource "markdown-it-py" do
@@ -215,8 +215,8 @@ class Cycode < Formula
   end
 
   resource "sentry-sdk" do
-    url "https://files.pythonhosted.org/packages/72/75/6223b9ffa0bf5a79ece08055469be73c18034e46ed082742a0899cc58351/sentry_sdk-2.35.1.tar.gz"
-    sha256 "241b41e059632fe1f7c54ae6e1b93af9456aebdfc297be9cf7ecfd6da5167e8e"
+    url "https://files.pythonhosted.org/packages/af/9a/0b2eafc31d5c7551b6bef54ca10d29adea471e0bd16bfe985a9dc4b6633e/sentry_sdk-2.37.0.tar.gz"
+    sha256 "2c661a482dd5accf3df58464f31733545745bb4d5cf8f5e46e0e1c4eed88479f"
   end
 
   resource "shellingham" do

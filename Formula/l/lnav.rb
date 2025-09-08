@@ -1,8 +1,8 @@
 class Lnav < Formula
   desc "Curses-based tool for viewing and analyzing log files"
   homepage "https://lnav.org/"
-  url "https://github.com/tstack/lnav/releases/download/v0.13.0/lnav-0.13.0.tar.gz"
-  sha256 "1d24b9bdb59e3de995de95f6f029ace664e56a80fb0db945077687e86de586b7"
+  url "https://github.com/tstack/lnav/releases/download/v0.13.1/lnav-0.13.1.tar.gz"
+  sha256 "b6443702d56c35b3b8598f9b1bbd1cbf4548e5c213caf01680af7207bb25610b"
   license "BSD-2-Clause"
 
   livecheck do
@@ -23,10 +23,12 @@ class Lnav < Formula
   head do
     url "https://github.com/tstack/lnav.git", branch: "master"
 
-    depends_on "autoconf" => :build
-    depends_on "automake" => :build
     depends_on "re2c" => :build
   end
+
+  # TODO: Make autoconf and automake build deps on head only upon next release
+  depends_on "autoconf" => :build
+  depends_on "automake" => :build
 
   depends_on "rust" => :build
   depends_on "libarchive"
@@ -40,8 +42,16 @@ class Lnav < Formula
   uses_from_macos "curl"
   uses_from_macos "zlib"
 
+  # Fix to error: windows.h: No such file or directory, should be removed in next release
+  # Issue ref: https://github.com/tstack/lnav/issues/1538
+  patch do
+    url "https://github.com/tstack/lnav/commit/5df522e53fea7f07f113c2d83093cd789f8496ef.patch?full_index=1"
+    sha256 "cf2c00335fb56dbb0bfeee958ad4c14687aeb7e8c9ef097f4f5fad9c75f0c4d7"
+  end
+
   def install
-    system "./autogen.sh" if build.head?
+    # TODO: Run autogen.sh on head only upon next release
+    system "autoreconf", "--force", "--install", "--verbose"
     system "./configure", "--with-sqlite3=#{Formula["sqlite"].opt_prefix}",
                           "--with-readline=#{Formula["readline"].opt_prefix}",
                           "--with-libarchive=#{Formula["libarchive"].opt_prefix}",

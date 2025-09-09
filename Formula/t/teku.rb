@@ -8,7 +8,7 @@ class Teku < Formula
   head "https://github.com/ConsenSys/teku.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "aa648829ab4ebd8893d80217793961d188281a23fa5e803ecadd378f955a075c"
+    sha256 cellar: :any_skip_relocation, all: "5abdeef110818f2f40867034031c39e98d16d926115e5e647e63d9e7b0d5ff90"
   end
 
   depends_on "gradle@8" => :build

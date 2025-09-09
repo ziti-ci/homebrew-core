@@ -1,8 +1,8 @@
 class AnycableGo < Formula
   desc "WebSocket server with action cable protocol"
   homepage "https://github.com/anycable/anycable"
-  url "https://github.com/anycable/anycable/archive/refs/tags/v1.6.4.tar.gz"
-  sha256 "469d6b3ab79c14532615c47f613211dd0d842183088f62df6ee0e2e01faf5904"
+  url "https://github.com/anycable/anycable/archive/refs/tags/v1.6.5.tar.gz"
+  sha256 "86cd32e7be5c1ae369022992b6256c3d46f5b22591975827b3c5510484c69847"
   license "MIT"
   head "https://github.com/anycable/anycable.git", branch: "main"
 
@@ -41,6 +41,7 @@ class AnycableGo < Formula
       exec "#{bin}/anycable-go --port=#{port}"
     end
     sleep 1
+    sleep 2 if OS.mac? && Hardware::CPU.intel?
     output = shell_output("curl -sI http://localhost:#{port}/health")
     assert_match(/200 OK/m, output)
   ensure

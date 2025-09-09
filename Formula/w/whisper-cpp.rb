@@ -12,14 +12,14 @@ class WhisperCpp < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any,                 arm64_sequoia: "a73cf5e83024ca4be20996941443aa93392da1fcbbc2ae55cdebac7bc4fa207d"
-    sha256 cellar: :any,                 arm64_sonoma:  "f4f410f47e9e03b246402f2daad42be01edb540d2cabc39990779cb74a124baa"
-    sha256 cellar: :any,                 arm64_ventura: "5336c0e2520fc446581b790f5a3564f0d8a444cd748d51463c188544909bee52"
-    sha256 cellar: :any,                 sonoma:        "9bb84f02266e026d80315d1c0f8e722c044bde8a613ab3930c6f13aae2da0f2c"
-    sha256 cellar: :any,                 ventura:       "367c853764388de25be607ab96f04e95f85fbfd10039f18314d004184fd4fa31"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "17f816c8fdd222aa6bd436f3c600c6879dabecd1200eeacf2f06387321949491"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "46439542dcdc28917c98189f25be850036d7f8dab84895872f25fbe61752bd51"
+    rebuild 2
+    sha256 cellar: :any,                 arm64_sequoia: "636c1047e486565c633ee7c8d5fe1516523455c8e0bbf411cb8c3da64bfa7bbf"
+    sha256 cellar: :any,                 arm64_sonoma:  "32283223f15857d4cee69dbb2cd40d4d41628e92be3ddf0b73abc1210d03d0de"
+    sha256 cellar: :any,                 arm64_ventura: "b2d967c489972e2b33e18e2f522edadb4b6c3ebf649bd3b210da2f0e11c966dc"
+    sha256 cellar: :any,                 sonoma:        "0014e64387e00ca1bb880fac360591ebfda759f5734da27cda53bb22596c2688"
+    sha256 cellar: :any,                 ventura:       "db5386e09a395aa027e0841dbe2c86adea1baa9afceb93a509afa8836ae97dad"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "5afc447df4b6c96c221b734f3e5f8604430a9185b9b9549d6f6b0eb3d73359b6"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "d2c39e9121a09f776b2ebe83d75541e8abd7011d0a2e8aeb620eeab5b950a4d5"
   end
 
   depends_on "cmake" => :build
@@ -43,7 +43,7 @@ class WhisperCpp < Formula
     system "cmake", "--build", "build"
     system "cmake", "--install", "build"
     # avoid publishing header files since they will conflict with llama.cpp
-    rm_r include
+    rm include.glob("gg*.h")
 
     # for backward compatibility with existing installs
     (bin/"whisper-cpp").write <<~SHELL

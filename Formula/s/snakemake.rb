@@ -3,8 +3,8 @@ class Snakemake < Formula
 
   desc "Pythonic workflow system"
   homepage "https://snakemake.readthedocs.io/"
-  url "https://files.pythonhosted.org/packages/7b/99/528d1d62c136a8f19c8a8a9743223e763be0f1fff28090380a4e574d54a6/snakemake-9.11.1.tar.gz"
-  sha256 "b04bd4804821b0f0910fc967154b72ec113cbfc171837322bf26ad9d3798f75c"
+  url "https://files.pythonhosted.org/packages/c9/67/88cbc1c18f0c97f07b7e2a0d722f4297a2398f7e6c095a30ec80d75b2126/snakemake-9.11.2.tar.gz"
+  sha256 "d0905992f6db8f887bb40234336a7979d9088886a7cabfb4334557c400d66ec9"
   license "MIT"
   head "https://github.com/snakemake/snakemake.git", branch: "main"
 
@@ -205,8 +205,8 @@ class Snakemake < Formula
   end
 
   resource "snakemake-interface-scheduler-plugins" do
-    url "https://files.pythonhosted.org/packages/a5/5d/98bed261d20fdb05f35338b682d5b4476a4f67dfc75b86897c5b9a1404c7/snakemake_interface_scheduler_plugins-2.0.0.tar.gz"
-    sha256 "98e3983c7baebb2122ce6e1a95dffe3fe74c8a8c9528e20c99d8e5c3645d83ca"
+    url "https://files.pythonhosted.org/packages/ae/bf/b431786d74071726c6aed5f3536a03a4834c4a0286f5381e7be44269671a/snakemake_interface_scheduler_plugins-2.0.1.tar.gz"
+    sha256 "c22deccc6df4c702e67d012650571fa858e8577b759d8cb4729d16b087852b43"
   end
 
   resource "snakemake-interface-storage-plugins" do

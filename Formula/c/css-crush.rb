@@ -7,7 +7,7 @@ class CssCrush < Formula
   head "https://github.com/peteboere/css-crush.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "57dca95e7404936bc249a6934132a3942e31f4c1574e99dce5907c32bc14ad77"
+    sha256 cellar: :any_skip_relocation, all: "76b89826d8214ed32749b25d382cbfd780d61e56c9043c52695ef0458a403ee2"
   end
 
   depends_on "php"

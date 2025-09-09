@@ -43,7 +43,7 @@ class WhisperCpp < Formula
     system "cmake", "--build", "build"
     system "cmake", "--install", "build"
     # avoid publishing header files since they will conflict with llama.cpp
-    rm_r include
+    rm include.glob("gg*.h")
 
     # for backward compatibility with existing installs
     (bin/"whisper-cpp").write <<~SHELL

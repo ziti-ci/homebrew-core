@@ -11,6 +11,7 @@ class Openapv < Formula
     sha256 cellar: :any,                 arm64_ventura: "35e5fb95d7f04ebeba88f0f30209982528e4d30099b2da74227d576914015cbf"
     sha256 cellar: :any,                 sonoma:        "05d47700e425a5ca1650e6b6776c5b6744d696daa5da090b7bd4b971c6707f7f"
     sha256 cellar: :any,                 ventura:       "c8e87477ea25f6e451745900e9df2951893c45c5f274515eaff3d02369481c65"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "46c2fa840f5db7b9a98bc9f98759b11fbb494e05debbba1d53b307e3192374c0"
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "704c3989f5f58eb419f60e9978509f0b4dee9be62b6f30716c94a36f23ab45a1"
   end
 

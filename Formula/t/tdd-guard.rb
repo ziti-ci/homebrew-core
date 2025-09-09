@@ -1,19 +1,20 @@
 class TddGuard < Formula
   desc "Automated TDD enforcement for Claude Code"
   homepage "https://github.com/nizos/tdd-guard"
-  url "https://registry.npmjs.org/tdd-guard/-/tdd-guard-0.11.0.tgz"
-  sha256 "4e1ecd682bb6756f8a076d00e47fc512300912f66092b31e92a333d3ec071f04"
+  url "https://registry.npmjs.org/tdd-guard/-/tdd-guard-1.0.0.tgz"
+  sha256 "edd3a754771c724cceb6ab0f0a505e449614bd393aefd5d4f6b88d0682b26fd4"
   license "MIT"
-
-  bottle do
-    sha256 cellar: :any_skip_relocation, all: "382c7d21a2adbb8e4c6eb3e3f82d887215a3ac1cdb76b2e6810fffa03f2d136c"
-  end
 
   depends_on "node"
 
   def install
     system "npm", "install", *std_npm_args
     bin.install_symlink Dir["#{libexec}/bin/*"]
+
+    # Remove incompatible pre-built binaries
+    node_modules = libexec/"lib/node_modules/tdd-guard/node_modules"
+    ripgrep_vendor_dir = node_modules/"@anthropic-ai/claude-code/vendor/ripgrep"
+    rm_r(ripgrep_vendor_dir)
   end
 
   test do

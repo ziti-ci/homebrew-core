@@ -3,8 +3,8 @@ class Omnara < Formula
 
   desc "Talk to Your AI Agents from Anywhere"
   homepage "https://omnara.com/"
-  url "https://files.pythonhosted.org/packages/8d/c3/5861179f6827c1727109c8ca11171e60982dac6d1293fcb736de67e347e3/omnara-1.6.11.tar.gz"
-  sha256 "2e894a5dbb9262a9077ed863a1ba95ef1de4ac25e0b0cd638cb9bc91a5481e67"
+  url "https://files.pythonhosted.org/packages/85/29/706c1d13add673d78c4c39a8aa83164aa11f90efe46e7d19e376fc6f7806/omnara-1.6.12.tar.gz"
+  sha256 "1c90cf75052811c2684961fb45bb4928a23551aabc9dc3520512ac0e96e2addc"
   license "Apache-2.0"
 
   bottle do
@@ -74,8 +74,8 @@ class Omnara < Formula
   end
 
   resource "cyclopts" do
-    url "https://files.pythonhosted.org/packages/ea/7a/28b63c43d4c17d6587abcfef648841d39543158bcc47b5d40a03b8831f7a/cyclopts-3.23.1.tar.gz"
-    sha256 "ca6a5e9b326caf156d79f3932e2f88b95629e59fd371c0b3a89732b7619edacb"
+    url "https://files.pythonhosted.org/packages/30/ca/7782da3b03242d5f0a16c20371dff99d4bd1fedafe26bc48ff82e42be8c9/cyclopts-3.24.0.tar.gz"
+    sha256 "de6964a041dfb3c57bf043b41e68c43548227a17de1bad246e3a0bfc5c4b7417"
   end
 
   resource "dnspython" do

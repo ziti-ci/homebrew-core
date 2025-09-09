@@ -5,6 +5,15 @@ class Recur < Formula
   sha256 "cf776be19cf0e55c7e8a29b546d813e1dc562c05b220cba291cb4812917bd6a7"
   license "MIT"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "149117659c69734078b7f8fc1b04dbd5e2656460b033bff06669ca1f48e9bd94"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "149117659c69734078b7f8fc1b04dbd5e2656460b033bff06669ca1f48e9bd94"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "149117659c69734078b7f8fc1b04dbd5e2656460b033bff06669ca1f48e9bd94"
+    sha256 cellar: :any_skip_relocation, sonoma:        "23ef406ebd94bc895b9af4c80947ebeecdcf8a5a559949c0fabc9df4cf00a161"
+    sha256 cellar: :any_skip_relocation, ventura:       "23ef406ebd94bc895b9af4c80947ebeecdcf8a5a559949c0fabc9df4cf00a161"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "afadb0c61c3dffaa2203399824a6debcd7cc82ef28b1f50f18a226a25d2869ca"
+  end
+
   depends_on "go" => :build
 
   def install

@@ -23,12 +23,13 @@ class WhisperCpp < Formula
   end
 
   depends_on "cmake" => :build
+  depends_on "pkgconf" => :test
   depends_on "sdl2"
 
   def install
     args = %W[
       -DBUILD_SHARED_LIBS=ON
-      -DCMAKE_INSTALL_RPATH=#{rpath(target: prefix/"libinternal")}
+      -DCMAKE_INSTALL_RPATH=#{rpath}
       -DGGML_METAL=#{(OS.mac? && !Hardware::CPU.intel?) ? "ON" : "OFF"}
       -DGGML_METAL_EMBED_LIBRARY=#{OS.mac? ? "ON" : "OFF"}
       -DGGML_NATIVE=#{build.bottle? ? "OFF" : "ON"}
@@ -38,18 +39,24 @@ class WhisperCpp < Formula
       -DWHISPER_BUILD_SERVER=OFF
     ]
 
-    # avoid installing libggml libraries to "lib" since they would conflict with llama.cpp
-    system "cmake", "-S", ".", "-B", "build", *args, *std_cmake_args(install_libdir: "libinternal")
+    # avoid installing into prefix as ggml libraries/headers would conflict with llama.cpp
+    # TODO: change this once ggml has releases, https://github.com/ggml-org/ggml/issues/1333
+    system "cmake", "-S", ".", "-B", "build", *args, *std_cmake_args(install_prefix: libexec)
     system "cmake", "--build", "build"
     system "cmake", "--install", "build"
-    # avoid publishing header files since they will conflict with llama.cpp
-    rm include.glob("gg*.h")
+
+    # Expose executables and pkgconfig files
+    bin.install_symlink libexec.glob("bin/*")
+    (lib/"pkgconfig").install_symlink libexec.glob("lib/pkgconfig/*")
 
     # for backward compatibility with existing installs
+    odie "Remove whisper-cpp script and libinternal" if build.stable? && version >= "1.8.0"
+    prefix.install_symlink libexec/"lib" => "libinternal"
     (bin/"whisper-cpp").write <<~SHELL
       #!/bin/bash
       here="${BASH_SOURCE[0]}"
-      echo "${BASH_SOURCE[0]}: warning: whisper-cpp is deprecated. Use whisper-cli instead." >&2
+      echo "warning: whisper-cpp is deprecated. Use whisper-cli instead." >&2
+      echo "warning: the compatibility script will be removed in 1.8.0." >&2
       exec "$(dirname "$here")/whisper-cli" "$@"
     SHELL
 
@@ -70,5 +77,23 @@ class WhisperCpp < Formula
     model = pkgshare/"for-tests-ggml-tiny.bin"
     output = shell_output("#{bin}/whisper-cli --model #{model} #{pkgshare}/jfk.wav 2>&1")
     assert_match "processing '#{pkgshare}/jfk.wav' (176000 samples, 11.0 sec)", output
+
+    (testpath/"test.cpp").write <<~CPP
+      #include <whisper.h>
+      #include <cassert>
+      int main() {
+        ggml_backend_load_all();
+        struct whisper_context_params cparams = whisper_context_default_params();
+        struct whisper_context * ctx = whisper_init_from_file_with_params("#{model}", cparams);
+        assert(ctx != nullptr);
+        whisper_free(ctx);
+        return 0;
+      }
+    CPP
+
+    flags = shell_output("pkgconf --cflags --libs whisper").chomp.split
+    flags << "-Wl,-rpath,#{libexec}/lib" if OS.linux?
+    system ENV.cxx, "-std=c++11", "test.cpp", "-o", "test", *flags
+    system "./test"
   end
 end

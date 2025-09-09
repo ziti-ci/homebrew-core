@@ -6,13 +6,13 @@ class Openapv < Formula
   license "BSD-3-Clause"
 
   bottle do
-    sha256 cellar: :any,                 arm64_sequoia: "fa6f9e147add30dbcf5c1c2eac4429c9661d520d906c7a23e5b2ba03e28ece23"
-    sha256 cellar: :any,                 arm64_sonoma:  "9afe2ab82d578279265025b38aec68c738581683ee1e7808f5e493819af13643"
-    sha256 cellar: :any,                 arm64_ventura: "35e5fb95d7f04ebeba88f0f30209982528e4d30099b2da74227d576914015cbf"
-    sha256 cellar: :any,                 sonoma:        "05d47700e425a5ca1650e6b6776c5b6744d696daa5da090b7bd4b971c6707f7f"
-    sha256 cellar: :any,                 ventura:       "c8e87477ea25f6e451745900e9df2951893c45c5f274515eaff3d02369481c65"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "46c2fa840f5db7b9a98bc9f98759b11fbb494e05debbba1d53b307e3192374c0"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "704c3989f5f58eb419f60e9978509f0b4dee9be62b6f30716c94a36f23ab45a1"
+    sha256 cellar: :any,                 arm64_sequoia: "4338fcad05732c7704ac85d7cd094c9c75589117def176e24270449033aa28ea"
+    sha256 cellar: :any,                 arm64_sonoma:  "fe0be30a5c3b1afd0be83b2e0b8cf4169e93091b57a467d4068138162c2ee551"
+    sha256 cellar: :any,                 arm64_ventura: "ecb5318dd94fa54e445075fbe45944f3e08b43cae0b421c99a4d0bbe611147ed"
+    sha256 cellar: :any,                 sonoma:        "4637646fc6477fe69c9ef3d549364285866e3b157ac1ad48e602180b8fb5515c"
+    sha256 cellar: :any,                 ventura:       "ed1d54e21f22638ebac413307f7044359b239963d0e1c1039f3aee7e46d9a776"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "1d71d90a898bcdfb6b6ea1e2c7c36e03871db39c898e1ad4c1bee746df8c42a5"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "d5db440d8e9c86855e484c759e45fe59ac8850485a9616313147b2164c3499f5"
   end
 
   depends_on "cmake" => :build

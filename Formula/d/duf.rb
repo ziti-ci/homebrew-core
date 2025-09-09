@@ -7,13 +7,13 @@ class Duf < Formula
   head "https://github.com/muesli/duf.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "5923cec9d00d0a742a8637a29c6f30ee3541cec3a4293fcb55320f3cf65001db"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "5923cec9d00d0a742a8637a29c6f30ee3541cec3a4293fcb55320f3cf65001db"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "5923cec9d00d0a742a8637a29c6f30ee3541cec3a4293fcb55320f3cf65001db"
-    sha256 cellar: :any_skip_relocation, sonoma:        "0c182ae004c6d96d4aec6fa924144fe2b2f77d005cefdfb946223a633e862dc1"
-    sha256 cellar: :any_skip_relocation, ventura:       "0c182ae004c6d96d4aec6fa924144fe2b2f77d005cefdfb946223a633e862dc1"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "519c3ecacc8fcbe2f4a8037d04cc92326afeb89a10eee477fbdac4a3719441c9"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "e0f5adabfdfb438f709761c44ed136c42c5a5f09951d8fa00f1ac52dbad3c099"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "d84f7a6e5b52412a9daa6ec83c42a63f648f688032bef46944006fb430459216"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "d84f7a6e5b52412a9daa6ec83c42a63f648f688032bef46944006fb430459216"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "d84f7a6e5b52412a9daa6ec83c42a63f648f688032bef46944006fb430459216"
+    sha256 cellar: :any_skip_relocation, sonoma:        "92a705a34e2553e02be84c25e9bf3b3fb9ad78b18347e865ff42969e6df7ad58"
+    sha256 cellar: :any_skip_relocation, ventura:       "92a705a34e2553e02be84c25e9bf3b3fb9ad78b18347e865ff42969e6df7ad58"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "227b9aac9896faac935cdc96b7d7b92faf882b1ced3657f31d9fe2d32af10fb6"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "714eb9bcedcf3abb357b93cd8c85ad9d70adda67064254de44e40fdf12128ae2"
   end
 
   depends_on "go" => :build

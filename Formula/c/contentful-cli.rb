@@ -6,13 +6,13 @@ class ContentfulCli < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "bae1edf784885646f6f1a4f280db38fce54dba15161f0304adf500c7330e5f60"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "bae1edf784885646f6f1a4f280db38fce54dba15161f0304adf500c7330e5f60"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "bae1edf784885646f6f1a4f280db38fce54dba15161f0304adf500c7330e5f60"
-    sha256 cellar: :any_skip_relocation, sonoma:        "bae1edf784885646f6f1a4f280db38fce54dba15161f0304adf500c7330e5f60"
-    sha256 cellar: :any_skip_relocation, ventura:       "bae1edf784885646f6f1a4f280db38fce54dba15161f0304adf500c7330e5f60"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "bae1edf784885646f6f1a4f280db38fce54dba15161f0304adf500c7330e5f60"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "d35692309e5754540bd400acfc8232362fd69ed77c6f4b247eae71eb749fa935"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "18e941cf0c54adadbc4257610997804c112dd3d6c6d8be32cfbc71fa1c4ebf59"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "18e941cf0c54adadbc4257610997804c112dd3d6c6d8be32cfbc71fa1c4ebf59"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "18e941cf0c54adadbc4257610997804c112dd3d6c6d8be32cfbc71fa1c4ebf59"
+    sha256 cellar: :any_skip_relocation, sonoma:        "18e941cf0c54adadbc4257610997804c112dd3d6c6d8be32cfbc71fa1c4ebf59"
+    sha256 cellar: :any_skip_relocation, ventura:       "18e941cf0c54adadbc4257610997804c112dd3d6c6d8be32cfbc71fa1c4ebf59"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "18e941cf0c54adadbc4257610997804c112dd3d6c6d8be32cfbc71fa1c4ebf59"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "f813c9fc856f6815e5991db32779a544f1b2be16b4472f9ecdd55641d789f06d"
   end
 
   depends_on "node"

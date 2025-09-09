@@ -12,7 +12,7 @@ class Flix < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "4ebf9af420764ade78be025c202de58e9b05d61b25c6d3d90d9bfdbedb603573"
+    sha256 cellar: :any_skip_relocation, all: "eed580b16dc4a9119222860565c0a99b8a97daa983b1c26f504da096cd669a02"
   end
 
   depends_on "gradle" => :build

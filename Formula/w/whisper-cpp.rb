@@ -12,14 +12,14 @@ class WhisperCpp < Formula
   end
 
   bottle do
-    rebuild 2
-    sha256 cellar: :any,                 arm64_sequoia: "636c1047e486565c633ee7c8d5fe1516523455c8e0bbf411cb8c3da64bfa7bbf"
-    sha256 cellar: :any,                 arm64_sonoma:  "32283223f15857d4cee69dbb2cd40d4d41628e92be3ddf0b73abc1210d03d0de"
-    sha256 cellar: :any,                 arm64_ventura: "b2d967c489972e2b33e18e2f522edadb4b6c3ebf649bd3b210da2f0e11c966dc"
-    sha256 cellar: :any,                 sonoma:        "0014e64387e00ca1bb880fac360591ebfda759f5734da27cda53bb22596c2688"
-    sha256 cellar: :any,                 ventura:       "db5386e09a395aa027e0841dbe2c86adea1baa9afceb93a509afa8836ae97dad"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "5afc447df4b6c96c221b734f3e5f8604430a9185b9b9549d6f6b0eb3d73359b6"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "d2c39e9121a09f776b2ebe83d75541e8abd7011d0a2e8aeb620eeab5b950a4d5"
+    rebuild 3
+    sha256 cellar: :any,                 arm64_sequoia: "c06e2df81e481d21d041b2359f4e4a5def132854953c1866bc1366f338ef3766"
+    sha256 cellar: :any,                 arm64_sonoma:  "4b5ac49039fad3567a76cbce49658aa54000e13f6e19738b7d85e29239559ad5"
+    sha256 cellar: :any,                 arm64_ventura: "3eead42cfcafc558679fb9a0f0c5e566ac62428ef4304fdc3eb1208e77392929"
+    sha256 cellar: :any,                 sonoma:        "79f2d1f047cf8412e0f81d8d50bfaf5902f26ce27a217d9ee428f8426bf8daf7"
+    sha256 cellar: :any,                 ventura:       "ae15cc17825603c006f9451a7dbdb2d39aa02a287776baa534af3917d497201f"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "2ca8140c5ef5a2fe5cb1803319bf96b447df01b3e85c68a5e2ac367a6ec10319"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "28ea46f12511f444b3e4dbb9bbd0b32dee68766b147ff708265206899b16bec9"
   end
 
   depends_on "cmake" => :build

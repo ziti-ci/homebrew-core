@@ -5,6 +5,15 @@ class Openapv < Formula
   sha256 "0519bd151a04ec19384e038bad55d6ddf6d8948e378c0cf62d29d5ef4ba8c672"
   license "BSD-3-Clause"
 
+  bottle do
+    sha256 cellar: :any,                 arm64_sequoia: "fa6f9e147add30dbcf5c1c2eac4429c9661d520d906c7a23e5b2ba03e28ece23"
+    sha256 cellar: :any,                 arm64_sonoma:  "9afe2ab82d578279265025b38aec68c738581683ee1e7808f5e493819af13643"
+    sha256 cellar: :any,                 arm64_ventura: "35e5fb95d7f04ebeba88f0f30209982528e4d30099b2da74227d576914015cbf"
+    sha256 cellar: :any,                 sonoma:        "05d47700e425a5ca1650e6b6776c5b6744d696daa5da090b7bd4b971c6707f7f"
+    sha256 cellar: :any,                 ventura:       "c8e87477ea25f6e451745900e9df2951893c45c5f274515eaff3d02369481c65"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "704c3989f5f58eb419f60e9978509f0b4dee9be62b6f30716c94a36f23ab45a1"
+  end
+
   depends_on "cmake" => :build
 
   def install

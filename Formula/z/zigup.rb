@@ -24,7 +24,7 @@ class Zigup < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "439dd70b4af2e1dca1d755c3a724b400c717cd12b5cd20569abfea58e9d732a4"
   end
 
-  depends_on "zig" => :build
+  depends_on "zig@0.14" => :build
 
   def install
     # Fix illegal instruction errors when using bottles on older CPUs.

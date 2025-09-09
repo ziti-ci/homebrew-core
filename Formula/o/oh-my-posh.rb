@@ -1,8 +1,8 @@
 class OhMyPosh < Formula
   desc "Prompt theme engine for any shell"
   homepage "https://ohmyposh.dev"
-  url "https://github.com/JanDeDobbeleer/oh-my-posh/archive/refs/tags/v26.20.1.tar.gz"
-  sha256 "d7bf83ba76271f963ef2ad10db0d734e77533754e82c554c8e9e7fac961bf588"
+  url "https://github.com/JanDeDobbeleer/oh-my-posh/archive/refs/tags/v26.21.0.tar.gz"
+  sha256 "017a4bc1224ba3e639872590f6962466c65584fe8d0850a9d6fc7b940e4468ad"
   license "MIT"
   head "https://github.com/JanDeDobbeleer/oh-my-posh.git", branch: "main"
 
@@ -43,6 +43,6 @@ class OhMyPosh < Formula
   test do
     assert_match version.to_s, shell_output("#{bin}/oh-my-posh version")
     output = shell_output("#{bin}/oh-my-posh init bash")
-    assert_match(%r{.cache/oh-my-posh/init\.#{version}\.default\.\d+\.sh}, output)
+    assert_match(%r{.cache/oh-my-posh/init\.\d+\.sh}, output)
   end
 end

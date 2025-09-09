@@ -4,6 +4,7 @@ class Telegraf < Formula
   url "https://github.com/influxdata/telegraf/archive/refs/tags/v1.36.1.tar.gz"
   sha256 "2478f4c9543300ed44cc0a3329e5a4c6095d9a6eae86aa2deab4ff9d19c1fdd5"
   license "MIT"
+  revision 1
   head "https://github.com/influxdata/telegraf.git", branch: "master"
 
   livecheck do
@@ -38,6 +39,7 @@ class Telegraf < Formula
     working_dir var
     log_path var/"log/telegraf.log"
     error_log_path var/"log/telegraf.log"
+    environment_variables HOME: HOMEBREW_PREFIX
   end
 
   test do

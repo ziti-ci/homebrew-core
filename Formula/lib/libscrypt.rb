@@ -8,6 +8,7 @@ class Libscrypt < Formula
   no_autobump! because: :requires_manual_review
 
   bottle do
+    sha256 cellar: :any,                 arm64_tahoe:    "1282d862a6fe6bda7018c46eb83f037202246c3f8ba35fcddae779effc79b266"
     sha256 cellar: :any,                 arm64_sequoia:  "7a251107f146f88d993fa4fe542c8fbd92d9123904359f91ac5f44aedbb90344"
     sha256 cellar: :any,                 arm64_sonoma:   "78e0f597bcaeb181e0845127db7303d52a4ae34df6f6c61c2759006a45f716ab"
     sha256 cellar: :any,                 arm64_ventura:  "27b5cd1ef28e190b9f73c5c617ee652b331eab24cb25bd3129335ad1c0299f76"

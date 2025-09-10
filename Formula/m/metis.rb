@@ -35,6 +35,12 @@ class Metis < Formula
   depends_on "cmake" => :build
 
   def install
+    # Fix build with CMake 4.0+.
+    inreplace "CMakeLists.txt",
+              "cmake_minimum_required(VERSION 2.8)",
+              "cmake_minimum_required(VERSION 3.10)"
+    ENV.append "LDFLAGS", "-Wl,-rpath,#{rpath}"
+
     system "make", "config", "prefix=#{prefix}", "shared=1"
     system "make", "install"
 

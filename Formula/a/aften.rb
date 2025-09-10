@@ -46,6 +46,11 @@ class Aften < Formula
   patch :DATA
 
   def install
+    # Fix build with CMake 4.0+.
+    inreplace "CMakeLists.txt",
+              "CMAKE_MINIMUM_REQUIRED(VERSION 2.4)",
+              "CMAKE_MINIMUM_REQUIRED(VERSION 3.10)"
+
     mkdir "default" do
       system "cmake", "-DSHARED=ON", "..", *std_cmake_args
       system "make", "install"

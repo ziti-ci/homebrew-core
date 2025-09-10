@@ -20,6 +20,7 @@ class Libusrsctp < Formula
   no_autobump! because: :requires_manual_review
 
   bottle do
+    sha256 cellar: :any,                 arm64_tahoe:    "6103700921dd7e4269e9cd22540acc5d28e30e3ca10a3aa57aa75bf5f05c9378"
     sha256 cellar: :any,                 arm64_sequoia:  "26779b22a8b35e70131a4fb010839955453e8d703f682d77b411c5900d2543ab"
     sha256 cellar: :any,                 arm64_sonoma:   "d87af9c75847214b4101934141dd53dc3e5992304bd8f97aace95c683a2fa435"
     sha256 cellar: :any,                 arm64_ventura:  "27f59644b7711afcde95e34c6258a4f62bedaff91e7de90356494a511fa85f35"

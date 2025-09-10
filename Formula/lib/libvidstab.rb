@@ -1,6 +1,6 @@
 class Libvidstab < Formula
   desc "Transcode video stabilization plugin"
-  homepage "http://public.hronopik.de/vid.stab/"
+  homepage "https://github.com/georgmartius/vid.stab"
   url "https://github.com/georgmartius/vid.stab/archive/refs/tags/v1.1.1.tar.gz"
   sha256 "9001b6df73933555e56deac19a0f225aae152abbc0e97dc70034814a1943f3d4"
   license "GPL-2.0-or-later"
@@ -25,7 +25,11 @@ class Libvidstab < Formula
   depends_on "pkgconf" => :test
 
   def install
-    system "cmake", "-S", ".", "-B", "build", "-DUSE_OMP=OFF", *std_cmake_args
+    args = %w[
+      -DUSE_OMP=OFF
+      -DCMAKE_POLICY_VERSION_MINIMUM=3.5
+    ]
+    system "cmake", "-S", ".", "-B", "build", *args, *std_cmake_args
     system "cmake", "--build", "build"
     system "cmake", "--install", "build"
   end

@@ -12,13 +12,13 @@ class Tanka < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "0429c8c19c27ff02d3b4c31ac304bd8040b6e46655bc8068f8731006b8e53fe1"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "0429c8c19c27ff02d3b4c31ac304bd8040b6e46655bc8068f8731006b8e53fe1"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "0429c8c19c27ff02d3b4c31ac304bd8040b6e46655bc8068f8731006b8e53fe1"
-    sha256 cellar: :any_skip_relocation, sonoma:        "11fb3642ce95882d18e5e1547a0fd3ac2580b92db4c7e349b6a5c4593dd8d54f"
-    sha256 cellar: :any_skip_relocation, ventura:       "11fb3642ce95882d18e5e1547a0fd3ac2580b92db4c7e349b6a5c4593dd8d54f"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "2633e51428aea5d139e847126e0a571711f3e0cb2ed8b4c08e1af2b215420c3f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "2da2f79cdbf20090ca11999f373c62d347b792d7fbaa96c73d743c2b17c135cf"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "ba5f87f1a0bf34796946413f0507b6f7f44862de0a11207fa7d8421695a43aa0"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "ba5f87f1a0bf34796946413f0507b6f7f44862de0a11207fa7d8421695a43aa0"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "ba5f87f1a0bf34796946413f0507b6f7f44862de0a11207fa7d8421695a43aa0"
+    sha256 cellar: :any_skip_relocation, sonoma:        "90c897898b81e7717985a96fbeddeea2866dd462b10cfdc6294e56561e3177c9"
+    sha256 cellar: :any_skip_relocation, ventura:       "90c897898b81e7717985a96fbeddeea2866dd462b10cfdc6294e56561e3177c9"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "45f6db59b95d3e5473efc91f85afe5a672337401baafef0fb53a94cb75426ba8"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "3b5e7865362e8c922da248429736a650f8ed87b3fa840e9c49e0eb9dbb473c6f"
   end
 
   depends_on "go" => :build

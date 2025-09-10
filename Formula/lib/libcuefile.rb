@@ -38,6 +38,10 @@ class Libcuefile < Formula
   def install
     # Fix compile with newer Clang
     ENV.append_to_cflags "-Wno-implicit-function-declaration" if DevelopmentTools.clang_build_version >= 1403
+    # Fix build with CMake 4.0+.
+    inreplace "CMakeLists.txt",
+              "CMAKE_MINIMUM_REQUIRED(VERSION 2.4)",
+              "CMAKE_MINIMUM_REQUIRED(VERSION 3.10)"
 
     system "cmake", "-S", ".", "-B", "build", *std_cmake_args
     system "cmake", "--build", "build"

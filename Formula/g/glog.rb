@@ -9,6 +9,7 @@ class Glog < Formula
   no_autobump! because: :requires_manual_review
 
   bottle do
+    sha256 cellar: :any,                 arm64_tahoe:    "22e30e147c631d409947ade4fa0b3c4cbb3d24d2c319fafa726d521aef9276c6"
     sha256 cellar: :any,                 arm64_sequoia:  "ec3e50551d26e47f5171580fdc065b895db01fd90a4283e472a1d8ff01d53c54"
     sha256 cellar: :any,                 arm64_sonoma:   "c6eb9b8ce678f03a87a9864ea498434b44a206cd331322ed771824a71320a97a"
     sha256 cellar: :any,                 arm64_ventura:  "7f027456418cf100e83da0cab5dd2f01b03650d25727fc129ae8bfc80031469f"

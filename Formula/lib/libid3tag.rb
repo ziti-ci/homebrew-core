@@ -26,6 +26,13 @@ class Libid3tag < Formula
   uses_from_macos "gperf"
   uses_from_macos "zlib"
 
+  # Allow build with CMake 4.0.0
+  # Remove on next release.
+  patch do
+    url "https://codeberg.org/tenacityteam/libid3tag/commit/eee94b22508a066f7b9bc1ae05d2d85982e73959.patch"
+    sha256 "f4278e88cb23b0a2aa2bb2c074c6fc2e61029b6d0d77856f4439c3f75f888cbc"
+  end
+
   def install
     system "cmake", "-S", ".", "-B", "build", *std_cmake_args
     system "cmake", "--build", "build"

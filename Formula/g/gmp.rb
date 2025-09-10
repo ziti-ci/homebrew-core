@@ -16,6 +16,7 @@ class Gmp < Formula
   no_autobump! because: :requires_manual_review
 
   bottle do
+    sha256 cellar: :any,                 arm64_tahoe:    "db8075f389ca0a9f9aba54762c93760db66ef92ee989f4a32b5e13b4b987339c"
     sha256 cellar: :any,                 arm64_sequoia:  "6683d73d6677d28e1e8d1b92d6ebfbc068c1d33e19b79114a22a648a99ba5991"
     sha256 cellar: :any,                 arm64_sonoma:   "78e4f40cba6419cf7e2d81e9c945d1e93744511bd5230bdfac1b69ed894914b4"
     sha256 cellar: :any,                 arm64_ventura:  "98c163edfbe7bdc0c14f88d7d34fa2764ecb9cab9f749600b861012700603260"

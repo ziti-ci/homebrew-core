@@ -1,11 +1,9 @@
 class Asyncapi < Formula
   desc "All in one CLI for all AsyncAPI tools"
   homepage "https://github.com/asyncapi/cli"
-  url "https://registry.npmjs.org/@asyncapi/cli/-/cli-3.4.2.tgz"
-  sha256 "8d7c72b067d7d237ab74593e2cd517987538fed3806aad9465ab683d82542cfb"
+  url "https://registry.npmjs.org/@asyncapi/cli/-/cli-3.5.1.tgz"
+  sha256 "6917d63cb059d5e36515978e70c0e41108b8481120072ddceabcd091c0e81dca"
   license "Apache-2.0"
-
-  no_autobump! because: :bumped_by_upstream
 
   bottle do
     sha256 cellar: :any,                 arm64_sequoia: "f91f212c104c792964caa0ec59784393f828c0484d116fc699794e1704ad3ee2"

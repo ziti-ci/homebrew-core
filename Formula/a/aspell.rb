@@ -555,6 +555,12 @@ class Aspell < Formula
     sha256 "3fa255cd0b20e6229a53df972fd3c5ed8481db11cfd0347dd3da629bbb7a6796"
   end
 
+  # Backport fix for newer Apple Clang and GCC 15
+  patch do
+    url "https://github.com/GNUAspell/aspell/commit/ee6cbb12ff36a1e6618d7388a78dd4e0a2b44041.patch?full_index=1"
+    sha256 "96e6b23947744e5d1374640a38cf20ec541b64c00a063cbed6d1fcc3e3fc19ee"
+  end
+
   # const problems with llvm: https://www.freebsd.org/cgi/query-pr.cgi?pr=180565&cat=
   patch :DATA
 

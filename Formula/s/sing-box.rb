@@ -7,12 +7,12 @@ class SingBox < Formula
   head "https://github.com/SagerNet/sing-box.git", branch: "dev-next"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "018bdbc7421713c542c89005d0f8209181592d90e70b7b24836576d50c3d7860"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "bc2ed996e5270b9c1b24abb31e86f5ab83d85dcc4f1426d8515b18b58cd876e7"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "293db341d606400cd947b4e5f9566ad3cbf6ace058a252a7a10bb64b17f022b0"
-    sha256 cellar: :any_skip_relocation, sonoma:        "f4eb140f729fd97465d11f1090126dbb88e5cf71c498aec0b3fb2d84f02f57b2"
-    sha256 cellar: :any_skip_relocation, ventura:       "a6aeba2b80b2eec180641331cc50bd0c1f2756770ee8cd4690b0aab013091f34"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "2ed6f42b101f77c8cbfe4d80bd7ee97a423f49956ec534f57bf127f0df1ef248"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "e82dc3544994fb29ef947bb71e9f4177c18de3335c79c4791bbcaecb032d76aa"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "811febe1b5256f96b8c9c9126a25a71b73427989e21f9f7575ad76a6dd399ba5"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "f85496c883beb0cd312f1bc4caa5cdd1802f248a0e546e8512809ef072fa5f98"
+    sha256 cellar: :any_skip_relocation, sonoma:        "146b36638d810c9e2d32b046e7605725b0ccc502339ab5cef36235987ea86241"
+    sha256 cellar: :any_skip_relocation, ventura:       "a8acf55ef192e9d2c16b4b1c7fd1b32ada868e2b46cb8991e7a2340c0117b1c2"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "91629a5b027e81ac93617efd833c59938145c341d3b301f6db387484e307a6b5"
   end
 
   depends_on "go" => :build

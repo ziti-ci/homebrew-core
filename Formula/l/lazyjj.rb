@@ -1,8 +1,8 @@
 class Lazyjj < Formula
   desc "TUI for Jujutsu/jj"
   homepage "https://github.com/Cretezy/lazyjj"
-  url "https://github.com/Cretezy/lazyjj/archive/refs/tags/v0.6.0.tar.gz"
-  sha256 "7bffeee7b5db5ae93f9a679d9a12f26b14f5b3e12a7825bd5596124e31070289"
+  url "https://github.com/Cretezy/lazyjj/archive/refs/tags/v0.6.1.tar.gz"
+  sha256 "34a702d55ec4c5d0ca016d4f71f4061ccca347ac88c80018229f6cf50141e208"
   license "Apache-2.0"
   head "https://github.com/Cretezy/lazyjj.git", branch: "main"
 
@@ -18,12 +18,6 @@ class Lazyjj < Formula
 
   depends_on "rust" => :build
   depends_on "jj"
-
-  # version patch, upstream pr ref, https://github.com/Cretezy/lazyjj/pull/164
-  patch do
-    url "https://github.com/Cretezy/lazyjj/commit/89505a3987825cd3f2c49deadc17c7f807e336e6.patch?full_index=1"
-    sha256 "dd68657451c2a050d1b82034e1f21be93702f7600f08246d23fb6e74f6b58809"
-  end
 
   def install
     system "cargo", "install", *std_cargo_args

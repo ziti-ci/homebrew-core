@@ -7,6 +7,7 @@ class Libvpx < Formula
   head "https://chromium.googlesource.com/webm/libvpx.git", branch: "main"
 
   bottle do
+    sha256 cellar: :any,                 arm64_tahoe:   "2330f87a86f70808560a0d7fa23167d2ed966377cee123244710ddec2e636277"
     sha256 cellar: :any,                 arm64_sequoia: "2f2d553f2f66735705b3962dca32a4a16bbfbe443c17898c0cea110d13bb012d"
     sha256 cellar: :any,                 arm64_sonoma:  "7eff9f3e0be6983c8018e445dd1b3242fa6631a2b2d410b1db989436224af387"
     sha256 cellar: :any,                 arm64_ventura: "8fc8387529166f2b569d3f804921d5ba26a3db0ce3c825338f3085f67dbf7675"

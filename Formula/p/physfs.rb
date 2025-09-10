@@ -31,6 +31,13 @@ class Physfs < Formula
   end
 
   def install
+    # Workaround for CMake 4.0+. Remove on next release.
+    if build.stable?
+      odie "Remove CMake 4 workaround!" if version > "3.2.0"
+      inreplace "CMakeLists.txt", "cmake_minimum_required(VERSION 3.0)",
+                                  "cmake_minimum_required(VERSION 3.10)"
+    end
+
     system "cmake", "-S", ".", "-B", "build",
                     "-DPHYSFS_BUILD_TEST=TRUE",
                     "-DCMAKE_EXE_LINKER_FLAGS=-Wl,-rpath,#{rpath}",

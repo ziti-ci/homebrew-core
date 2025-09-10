@@ -24,8 +24,10 @@ class YamlCpp < Formula
   depends_on "cmake" => :build
 
   def install
+    # Workaround to build with CMake 4
+    inreplace "CMakeLists.txt", "cmake_minimum_required(VERSION 3.4)",
+                                "cmake_minimum_required(VERSION 3.10)"
     args = ["-DYAML_BUILD_SHARED_LIBS=ON", "-DYAML_CPP_BUILD_TESTS=OFF"]
-
     system "cmake", "-S", ".", "-B", "build", *args, *std_cmake_args
     system "cmake", "--build", "build"
     system "cmake", "--install", "build"

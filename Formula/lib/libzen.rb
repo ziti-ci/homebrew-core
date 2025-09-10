@@ -1,11 +1,20 @@
 class Libzen < Formula
   desc "Shared library for libmediainfo"
   homepage "https://github.com/MediaArea/ZenLib"
-  url "https://mediaarea.net/download/source/libzen/0.4.41/libzen_0.4.41.tar.bz2"
-  sha256 "eb237d7d3dca6dc6ba068719420a27de0934a783ccaeb2867562b35af3901e2d"
   license "Zlib"
   revision 1
   head "https://github.com/MediaArea/ZenLib.git", branch: "master"
+
+  stable do
+    url "https://mediaarea.net/download/source/libzen/0.4.41/libzen_0.4.41.tar.bz2"
+    sha256 "eb237d7d3dca6dc6ba068719420a27de0934a783ccaeb2867562b35af3901e2d"
+
+    # Fixes build with CMake 4.0+. Remove on next release.
+    patch do
+      url "https://github.com/MediaArea/ZenLib/commit/2350bc442963ba9e4ddcf4e67ba1ff2c95d44635.patch?full_index=1"
+      sha256 "fea2e76c5017ab98f2501dfdc24bedf4682b7336544529a08d9e1827c4de6bae"
+    end
+  end
 
   no_autobump! because: :requires_manual_review
 

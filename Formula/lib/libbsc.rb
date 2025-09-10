@@ -1,8 +1,8 @@
 class Libbsc < Formula
   desc "High performance block-sorting data compression library"
   homepage "http://libbsc.com"
-  url "https://github.com/IlyaGrebnov/libbsc/archive/refs/tags/v3.3.11.tar.gz"
-  sha256 "3a71c406981b5b53d968b2647b87f1520212a1fad7c5c98e6953b81d7805c4b7"
+  url "https://github.com/IlyaGrebnov/libbsc/archive/refs/tags/v3.3.12.tar.gz"
+  sha256 "3d8eee9351468bdd3fb3bc28dda0e24cfc0332997eb0210ea7bd548d77c3d194"
   license "Apache-2.0"
 
   bottle do

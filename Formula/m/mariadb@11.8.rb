@@ -17,6 +17,15 @@ class MariadbAT118 < Formula
     end
   end
 
+  bottle do
+    sha256 arm64_sequoia: "3c946531e97a4c5f2eba0dbefb50916cfe0894b21d2a3365b13af7933ff3e6d7"
+    sha256 arm64_sonoma:  "c40dee363157c6100d3df103e0b95012844cf331d967372a43c5424277c255ab"
+    sha256 arm64_ventura: "c4fc900ed4d0c1f0b186a316b40c9b86e9dd121ca4f6dbae28c0a30276c20b13"
+    sha256 sonoma:        "02af9c50b486ed6b1f98feb8d57e24eca953694b9e05efdfbb3df23771fe78ea"
+    sha256 ventura:       "30f4860ed00795746bd2866bbf620ba0f386dbd9e003ad0a6c7ae4ce30f98f1d"
+    sha256 x86_64_linux:  "bc8345bc1ac4cbc52323f82e635fc838db9defeacbae859a71fad5f111d4426a"
+  end
+
   keg_only :versioned_formula
 
   # End-of-life on 2028-06-04: https://mariadb.org/about/#maintenance-policy

@@ -23,10 +23,13 @@ class Libscrypt < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "62ae9fdeea1cbe282839585250e2adacea715d313975bf6eb863a579aa669a21"
   end
 
-  def install
-    # `-Os` leads to bugs. https://github.com/technion/libscrypt/issues/60
-    ENV.O1
+  # Backport fix for aliasing violations
+  patch do
+    url "https://github.com/technion/libscrypt/commit/7b574b9c517a3d1f9bd0e265a5f287155293cb85.patch?full_index=1"
+    sha256 "5f3b4eaef826191318b57d1c0fe2889d76d18bf17746af2ba5417ccf27ec039f"
+  end
 
+  def install
     args = ["PREFIX=#{prefix}"]
     install_target = "install"
 

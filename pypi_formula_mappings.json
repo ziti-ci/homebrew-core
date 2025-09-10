@@ -576,9 +576,6 @@
   "mat2": {
     "exclude_packages": ["pygobject"]
   },
-  "mathlibtools": {
-    "exclude_packages": ["certifi", "cryptography"]
-  },
   "mcp-proxy": {
     "exclude_packages": ["certifi"]
   },

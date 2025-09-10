@@ -11,13 +11,13 @@ class Libclc < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "c42a66d132343fe931a0f63fc84c5f33fce1401b314dd6cc9308b6c9b18d8332"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "c42a66d132343fe931a0f63fc84c5f33fce1401b314dd6cc9308b6c9b18d8332"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "c42a66d132343fe931a0f63fc84c5f33fce1401b314dd6cc9308b6c9b18d8332"
-    sha256 cellar: :any_skip_relocation, sonoma:        "c42a66d132343fe931a0f63fc84c5f33fce1401b314dd6cc9308b6c9b18d8332"
-    sha256 cellar: :any_skip_relocation, ventura:       "c42a66d132343fe931a0f63fc84c5f33fce1401b314dd6cc9308b6c9b18d8332"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "c42a66d132343fe931a0f63fc84c5f33fce1401b314dd6cc9308b6c9b18d8332"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "2cbb7c69a2fcc5955f2d4f4fbba7a8b62d4d59a4e55991b6497a12c45bb40e2c"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "a659e3f78e86000f6bb834bb62b82ed6a08644940ac68b3a0c8562ea0ac2f2ab"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "a659e3f78e86000f6bb834bb62b82ed6a08644940ac68b3a0c8562ea0ac2f2ab"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "a659e3f78e86000f6bb834bb62b82ed6a08644940ac68b3a0c8562ea0ac2f2ab"
+    sha256 cellar: :any_skip_relocation, sonoma:        "a659e3f78e86000f6bb834bb62b82ed6a08644940ac68b3a0c8562ea0ac2f2ab"
+    sha256 cellar: :any_skip_relocation, ventura:       "a659e3f78e86000f6bb834bb62b82ed6a08644940ac68b3a0c8562ea0ac2f2ab"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "a659e3f78e86000f6bb834bb62b82ed6a08644940ac68b3a0c8562ea0ac2f2ab"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "6da5aec26780439194c1c2a9c3b434834b541f0205a1bd7fa354fd1ea67a8bb7"
   end
 
   depends_on "cmake" => :build

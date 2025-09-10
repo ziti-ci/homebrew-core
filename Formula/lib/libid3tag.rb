@@ -9,6 +9,7 @@ class Libid3tag < Formula
 
   bottle do
     rebuild 1
+    sha256 cellar: :any,                 arm64_tahoe:    "bf039c13ec5c83ddad086ffc8d351ceab2c7424d7ee91804de65c736787ca07c"
     sha256 cellar: :any,                 arm64_sequoia:  "511a214c725978fd5596e7bb1a4c1b9846d3f95a59c1da05aa49ac687d997d07"
     sha256 cellar: :any,                 arm64_sonoma:   "ddcf954105ff32bf933c7989b29b275c73eff81c6f036aae28646aa282b2d693"
     sha256 cellar: :any,                 arm64_ventura:  "cb4c5b313fafc30aa641a61fb0aa8b84b8c7232d7eea9e6d55c486664d129dc2"

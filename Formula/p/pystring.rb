@@ -25,6 +25,9 @@ class Pystring < Formula
   depends_on "cmake" => :build
 
   def install
+    # Fix build with CMake 4.0+. Remove on next release.
+    inreplace "CMakeLists.txt", "cmake_minimum_required(VERSION 3.2)",
+                                "cmake_minimum_required(VERSION 3.10)"
     system "cmake", "-S", ".", "-B", "build", *std_cmake_args
     system "cmake", "--build", "build"
     system "cmake", "--install", "build"

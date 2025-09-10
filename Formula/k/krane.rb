@@ -11,6 +11,7 @@ class Krane < Formula
     sha256 cellar: :any,                 arm64_ventura: "7c85916b26253502d989f58658c19c079913000d63d46494cd3d06e2846f8963"
     sha256 cellar: :any,                 sonoma:        "2cae7c04ee830f5bf9b8d0a7f0f591745bb364870ee5f23cd94a939629a253a6"
     sha256 cellar: :any,                 ventura:       "ba11bc1cbe6b7909092515d1169910434990661343925cdb5810c007b9bb4138"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "069256ab557509408359332121cd8a5db3b527b285d0efaecadd1208418caa34"
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "1f5d90697be08c584ac5b633fee95ce09bd09166c29f04764ba13b231a603332"
   end
 

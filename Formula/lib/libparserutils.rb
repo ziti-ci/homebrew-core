@@ -37,7 +37,7 @@ class Libparserutils < Formula
 
   test do
     system ENV.cc, pkgshare/"test/cscodec-utf8.c", "-I#{include}", "-L#{lib}", "-lparserutils", "-o", "cscodec-utf8"
-    output = shell_output(testpath/"cscodec-utf8 #{pkgshare}/test/data/cscodec-utf8/UTF-8-test.txt")
+    output = shell_output("#{testpath}/cscodec-utf8 #{pkgshare}/test/data/cscodec-utf8/UTF-8-test.txt")
     assert_match "PASS", output
   end
 end

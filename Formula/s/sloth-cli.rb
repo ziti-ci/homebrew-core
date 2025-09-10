@@ -12,12 +12,12 @@ class SlothCli < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "d1c990842a4c39840e5f0240f27d9da5157d7d8bc016f3391f52b3b6766bafcd"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "170c93b4b71a8f35fc9ed555f4a04144978de36f33e591ce6f54826ec6ebc735"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "a277f241361a71ab209b262a8e1398153f01dee27aa516d74964e60e58b0b065"
-    sha256 cellar: :any_skip_relocation, sonoma:        "b59a01ec305744639a17c93f970bf0cdbdd46911762ff76a0df40bc5bcf41873"
-    sha256 cellar: :any_skip_relocation, ventura:       "eac5fbb9da7a44730c8dfff467cfec9f4ea0e3c14ddd6c6eb7460ccdc148a0e0"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "08c465be42d6e6b202aed56db3778072d4650aae2e78ac5aee752c6db0e1ea5b"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "ae96943b9b9a9edcb04e824a1a4df89ce423c62f6f31af46129a4bfd221aa7cb"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "5291b1caef4f672715f6c31b82efde32956e4318d72439ba5640596e595365ee"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "376063402c9cac1589b7502331bde641368c14eec1968affed12e98233fb23c5"
+    sha256 cellar: :any_skip_relocation, sonoma:        "d583190bf96ecf2c6d997b51382aa470e99411eeabc8b10b8d361bbed62f86c2"
+    sha256 cellar: :any_skip_relocation, ventura:       "1ac69a22fc2117ddaef0294a4b7d27f07c4ef4357c921e9483412fb623707681"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "1fc25e9c595fa04de2379fc1df0cc05958e4d0d425ddce2ce8b7f4b9b77b5bb8"
   end
 
   depends_on "go" => :build

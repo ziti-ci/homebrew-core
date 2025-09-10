@@ -19,6 +19,13 @@ class CBlosc < Formula
 
   depends_on "cmake" => :build
 
+  # Update minimal cmake version
+  # Remove on next release.
+  patch do
+    url "https://github.com/Blosc/c-blosc/commit/051b9d2cb9437e375dead8574f66d80ebce47bee.patch?full_index=1"
+    sha256 "756460f653877c12575889f20640605ecc2e49ab72583fba62f59642098fcd63"
+  end
+
   def install
     system "cmake", "-S", ".", "-B", "build", *std_cmake_args
     system "cmake", "--build", "build"

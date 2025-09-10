@@ -1,8 +1,8 @@
 class Xray < Formula
   desc "Platform for building proxies to bypass network restrictions"
   homepage "https://xtls.github.io/"
-  url "https://github.com/XTLS/Xray-core/archive/refs/tags/v25.9.10.tar.gz"
-  sha256 "c26b1e3533540f63acb641cea9af660fae60bd50b6ee4a9904858a073161f3dd"
+  url "https://github.com/XTLS/Xray-core/archive/refs/tags/v25.9.11.tar.gz"
+  sha256 "9bccd2681183698bf860b1af5407f97b4b60090324aa3ef1546e446612d44e1f"
   license all_of: ["MPL-2.0", "CC-BY-SA-4.0"]
   head "https://github.com/XTLS/Xray-core.git", branch: "main"
 

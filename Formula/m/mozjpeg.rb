@@ -32,6 +32,8 @@ class Mozjpeg < Formula
 
   def install
     args = std_cmake_args - %w[-DCMAKE_INSTALL_LIBDIR=lib]
+    # Workaround to build with CMake 4
+    args << "-DCMAKE_POLICY_VERSION_MINIMUM=3.5"
     system "cmake", "-S", ".", "-B", "build", "-DCMAKE_INSTALL_LIBDIR=#{lib}", *args
     system "cmake", "--build", "build"
     system "cmake", "--install", "build"

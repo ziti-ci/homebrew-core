@@ -6,15 +6,13 @@ class Cjson < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any,                 arm64_sequoia:  "369cf21b89c82a4f1834fb3c8a128f5bf970f22bbb13376652448fbde998dad9"
-    sha256 cellar: :any,                 arm64_sonoma:   "6deee0399f8b92240122c7cb8dee5a3f3e7b26f9cec147b9d0baffb3c6a804dc"
-    sha256 cellar: :any,                 arm64_ventura:  "f8cd3c29957ec2a1007c52197f924e7f5262da5809bf928a451b25ea95df5203"
-    sha256 cellar: :any,                 arm64_monterey: "8dbfc2c100bf1710e3cbc477526e3ba5694f0b1162452252932d4c6ed2ea8a9f"
-    sha256 cellar: :any,                 sonoma:         "1b0c17ed9045b0feb0ba140a31ab247876055ac753cd1fe1d55c0e9fc334e332"
-    sha256 cellar: :any,                 ventura:        "d9587b4d465d2fb40c4cfc6a7c843a97fc9f0aef817b036ffd7418b10cbdd6d1"
-    sha256 cellar: :any,                 monterey:       "5173b927f124a5e5f1cdc8c9625e41b91d489f779837e59e245b9fae38b36cc2"
-    sha256 cellar: :any_skip_relocation, arm64_linux:    "57ba06b3ad967e32a2ce13c1b63d908624e377ac1679b323800ffa7d9ef84613"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "9ad376a8e59ceadee7ca6ec2ba000a8d1b5359a38e964afb3ca05fed166294da"
+    sha256 cellar: :any,                 arm64_sequoia: "02864d4e743d0b31edf050ab99325b77cbd34bde4a0fee2258c4903fb7cac621"
+    sha256 cellar: :any,                 arm64_sonoma:  "a55942b2cb916d0ee9e84a1d658ba2b71915296e5e9a943fb1b9f99e73449a27"
+    sha256 cellar: :any,                 arm64_ventura: "ca30e93594455cda8c6d73e1b409a0b7cb71b294d6044d5d58ea0bb6e088b648"
+    sha256 cellar: :any,                 sonoma:        "38330ec91289eb1a460d5f0db4bdf61dd897d919fd1bd217eb2fd0fdf7c11fe3"
+    sha256 cellar: :any,                 ventura:       "4c462770205bcd357dc350b46f6a5a3ef62f4ddf34a13d10b4064eaa57389f94"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "3110d0581424dd08bfe03086bc2325c6c0a6610486e4f18f3453bd36d9fb36c5"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "26f2f08e3a78ef1026622802b4147d2ba47c6ae9df9114d68343c55d6fd63183"
   end
 
   depends_on "cmake" => :build

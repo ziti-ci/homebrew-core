@@ -1,12 +1,10 @@
 class Zns < Formula
   desc "CLI tool for querying DNS records with readable, colored output"
   homepage "https://github.com/znscli/zns"
-  url "https://github.com/znscli/zns/archive/refs/tags/v0.3.0.tar.gz"
-  sha256 "5e7b4cf641429fa153df24d2088744ed5d09ec9d77151c828611262f85feaa15"
+  url "https://github.com/znscli/zns/archive/refs/tags/v0.4.0.tar.gz"
+  sha256 "ae3aebc174ee839168b6b91f37a082d3efe275202927aa87743b04b87a8d13d8"
   license "MIT"
   head "https://github.com/znscli/zns.git", branch: "main"
-
-  no_autobump! because: :requires_manual_review
 
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_sequoia: "6b44e23dcd5f00ee7363edded2f65a8cff2e348a89af0ed97c267278625e285d"

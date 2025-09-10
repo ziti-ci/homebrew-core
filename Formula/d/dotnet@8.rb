@@ -12,6 +12,7 @@ class DotnetAT8 < Formula
   end
 
   bottle do
+    sha256 cellar: :any,                 arm64_tahoe:   "49626198e1ef0c292688d530a5a5d66a6721fabb3e18c7455412ae3dd3b9c067"
     sha256 cellar: :any,                 arm64_sequoia: "fd1b5d919cecee555f16c4ea0f1bf1ba98c860e9f9a133bf726bc34a05d0150a"
     sha256 cellar: :any,                 arm64_sonoma:  "c6863845bacfe212fb1816040522189e20d51c7d1d8e61c6d832f03385fe544c"
     sha256 cellar: :any,                 arm64_ventura: "525a25d8b8b0142cc8d060a277d0d53941058901e5a9c17f5d21f359d63fe2aa"

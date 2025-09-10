@@ -25,6 +25,12 @@ class ConsoleBridge < Formula
   depends_on "cmake" => :build
   depends_on "pkgconf" => :test
 
+  # Fix build with CMake 4.0+. Remove on next release.
+  patch do
+    url "https://github.com/ros/console_bridge/commit/81ec67f6daf3cd19ef506e00f02efb1645597b9c.patch?full_index=1"
+    sha256 "b2746b536b72e391c1a37363a1d8e2203d50229057bf0767f3ceae8e57784a16"
+  end
+
   def install
     system "cmake", "-S", ".", "-B", "build", *std_cmake_args
     system "cmake", "--build", "build"

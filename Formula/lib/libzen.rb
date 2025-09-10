@@ -19,6 +19,7 @@ class Libzen < Formula
   no_autobump! because: :requires_manual_review
 
   bottle do
+    sha256 cellar: :any,                 arm64_tahoe:    "ac591a473fcc4560644040121ea380ff05b3c9d376cae1e9126c40a62e2daf03"
     sha256 cellar: :any,                 arm64_sequoia:  "de3f0317ed82fd66a7bf6d5a4e876693c932b1a32f2974b02c4abf7b9ab79221"
     sha256 cellar: :any,                 arm64_sonoma:   "c12e982c8e86f4c1fd8b5aeb9e2f29a5f9d4f83c106b0ba68383e43e67fdec5f"
     sha256 cellar: :any,                 arm64_ventura:  "2550179d73b7f536e5684ae85b7487d8e9f5da7eeda4fa4a3008d01a121a9b9e"

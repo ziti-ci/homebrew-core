@@ -8,6 +8,7 @@ class Libvidstab < Formula
   no_autobump! because: :requires_manual_review
 
   bottle do
+    sha256 cellar: :any,                 arm64_tahoe:    "92e26eba0998b49ac6c3e2b5111e59007df158ffe697af89ed427c1f1fe7be0c"
     sha256 cellar: :any,                 arm64_sequoia:  "f76b62fb9580b75861cc5a6d639500d095823d32bef7aa6f636fee2d87b724e9"
     sha256 cellar: :any,                 arm64_sonoma:   "f006d60e59a43562474571f2a7e2be72273cc9bd7b2df04d0c21da861ebfcab8"
     sha256 cellar: :any,                 arm64_ventura:  "25efabe3bf9a85b25065758c1ea62ef096bf2e334ce073450ef4478f7e469b38"

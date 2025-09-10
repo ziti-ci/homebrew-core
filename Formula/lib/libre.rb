@@ -1,8 +1,8 @@
 class Libre < Formula
   desc "Toolkit library for asynchronous network I/O with protocol stacks"
   homepage "https://github.com/baresip/re"
-  url "https://github.com/baresip/re/archive/refs/tags/v4.0.0.tar.gz"
-  sha256 "7cef2b2b3cdbbd857cc12fdf429de1e74cb540e7cf9f1abc2dc5a90acee6b06a"
+  url "https://github.com/baresip/re/archive/refs/tags/v4.1.0.tar.gz"
+  sha256 "96fe5776d14aad6a4801bad8052e2cee8911d8498cac9c455b0f303210449e0a"
   license "BSD-3-Clause"
 
   bottle do

@@ -8,6 +8,7 @@ class ConsoleBridge < Formula
   no_autobump! because: :requires_manual_review
 
   bottle do
+    sha256 cellar: :any,                 arm64_tahoe:    "3a7225a144262d03cbc7d58b1eb2494c190060d9c1b4d3dbc36507c3911dbc37"
     sha256 cellar: :any,                 arm64_sequoia:  "4e7abd68f93d725996578fc7af640e0403cb35142fabc9654177802ea92f7903"
     sha256 cellar: :any,                 arm64_sonoma:   "826ec53bb4f99a675cc5e7deb5fa6823690af3983ab80f2fe01d46d3a9c1577b"
     sha256 cellar: :any,                 arm64_ventura:  "e4e12d390436e00eeaeda56b85f5f575dc89f8f9f412b39e59f42f34b4c66610"

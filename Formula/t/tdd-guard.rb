@@ -5,6 +5,15 @@ class TddGuard < Formula
   sha256 "edd3a754771c724cceb6ab0f0a505e449614bd393aefd5d4f6b88d0682b26fd4"
   license "MIT"
 
+  bottle do
+    sha256 cellar: :any,                 arm64_sequoia: "5ff2842dfbc41b0be65c40f34dd0f7cd3dd1034172c4fa171b2f43921e41654b"
+    sha256 cellar: :any,                 arm64_sonoma:  "5ff2842dfbc41b0be65c40f34dd0f7cd3dd1034172c4fa171b2f43921e41654b"
+    sha256 cellar: :any,                 arm64_ventura: "5ff2842dfbc41b0be65c40f34dd0f7cd3dd1034172c4fa171b2f43921e41654b"
+    sha256 cellar: :any,                 sonoma:        "4ff0c88dff92e1579767fd401da4b3e21edc9c35b8117c9e8fb71f3a7d1366c4"
+    sha256 cellar: :any,                 ventura:       "4ff0c88dff92e1579767fd401da4b3e21edc9c35b8117c9e8fb71f3a7d1366c4"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "8124f22e16339cc5b66f4dc2b5e54757472f0e06aee3be34e55c64c70e7164f2"
+  end
+
   depends_on "node"
 
   def install

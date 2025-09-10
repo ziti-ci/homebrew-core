@@ -36,6 +36,11 @@ class Libreplaygain < Formula
   depends_on "cmake" => :build
 
   def install
+    # Fix build with CMake 4.0+.
+    inreplace "CMakeLists.txt",
+              "CMAKE_MINIMUM_REQUIRED(VERSION 2.4)",
+              "CMAKE_MINIMUM_REQUIRED(VERSION 3.10)"
+
     system "cmake", "-S", ".", "-B", "build", *std_cmake_args
     system "cmake", "--build", "build"
     system "cmake", "--install", "build"

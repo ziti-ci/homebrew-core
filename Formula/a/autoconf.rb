@@ -13,6 +13,7 @@ class Autoconf < Formula
 
   bottle do
     rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:    "3374908e36c28948511beea4bdb005556f3d3c382a1377301c9b8eba2bf8ee77"
     sha256 cellar: :any_skip_relocation, arm64_sequoia:  "b1d110e2efd457a5e56c4469f2d6741109d542801a401fe08b750d0614581a9a"
     sha256 cellar: :any_skip_relocation, arm64_sonoma:   "c3674a4dfa3794e022b1adbcd9c954c91192d38822080c7162d073d6609b903a"
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "c3674a4dfa3794e022b1adbcd9c954c91192d38822080c7162d073d6609b903a"

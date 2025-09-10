@@ -6,6 +6,7 @@ class P11Kit < Formula
   license "BSD-3-Clause"
 
   bottle do
+    sha256 arm64_tahoe:   "e0e8c2104e2dcd949f3b97366279c901522053f57c2189d0314b4744ac5093d0"
     sha256 arm64_sequoia: "60dcadb4ab610a38b5d8e83ab4d3d5bf66ef39b490fcd99773b6eaa900fd523b"
     sha256 arm64_sonoma:  "e39a2ccbf0f1401c60557725332f5171db750ffc148ce9d03fe433f19a66d963"
     sha256 arm64_ventura: "bca93592779f526e7a4e540f56f1da510f17fedfc60287940249b2bbce9b3330"

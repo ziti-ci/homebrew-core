@@ -1,8 +1,8 @@
 class Gdcm < Formula
   desc "Grassroots DICOM library and utilities for medical files"
   homepage "https://sourceforge.net/projects/gdcm/"
-  url "https://github.com/malaterre/GDCM/archive/refs/tags/v3.0.24.tar.gz"
-  sha256 "d88519a094797c645ca34797a24a14efc10965829c4c3352c8ef33782a556336"
+  url "https://github.com/malaterre/GDCM/archive/refs/tags/v3.2.0.tar.gz"
+  sha256 "1b10e8aa74d29258b10eeab95565c2de1a3b818250ea29ed54cbc85cbf096bbb"
   license "BSD-3-Clause"
 
   livecheck do
@@ -97,7 +97,7 @@ class Gdcm < Formula
       }
     CPP
 
-    system ENV.cxx, "-std=c++11", "test.cxx", "-o", "test", "-I#{include}/gdcm-3.0", "-L#{lib}", "-lgdcmDSED"
+    system ENV.cxx, "-std=c++11", "test.cxx", "-o", "test", "-I#{include}/gdcm-#{version.major_minor}", "-L#{lib}", "-lgdcmDSED"
     system "./test"
 
     system python3, "-c", "import gdcm"

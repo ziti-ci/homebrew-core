@@ -1,7 +1,10 @@
 class OpenalSoft < Formula
   desc "Implementation of the OpenAL 3D audio API"
   homepage "https://openal-soft.org/"
-  url "https://openal-soft.org/openal-releases/openal-soft-1.24.3.tar.bz2"
+  # TODO: Remove distfiles.gentoo.org URL when openal-soft.org SSL is fixed.
+  # https://github.com/kcat/openal-soft/issues/1176
+  url "https://distfiles.gentoo.org/distfiles/08/openal-soft-1.24.3.tar.bz2"
+  mirror "https://openal-soft.org/openal-releases/openal-soft-1.24.3.tar.bz2"
   sha256 "cb5e6197a1c0da0edcf2a81024953cc8fa8545c3b9474e48c852af709d587892"
   license "LGPL-2.0-or-later"
   head "https://github.com/kcat/openal-soft.git", branch: "master"

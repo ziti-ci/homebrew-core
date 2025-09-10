@@ -3,10 +3,9 @@ class Fwupd < Formula
 
   desc "Firmware update daemon"
   homepage "https://github.com/fwupd/fwupd"
-  url "https://github.com/fwupd/fwupd/releases/download/2.0.14/fwupd-2.0.14.tar.xz"
-  sha256 "3dc0bdc3b23aa7b56c3b4057e323a30db30f38b51c76b93948b1a4b5b2c833f2"
+  url "https://github.com/fwupd/fwupd/releases/download/2.0.15/fwupd-2.0.15.tar.xz"
+  sha256 "4a437965a1b9ef7d6d1690c47036fccaab7908906899f3eb4f8381fb9e1bc7f0"
   license "LGPL-2.1-or-later"
-  revision 1
   head "https://github.com/fwupd/fwupd.git", branch: "main"
 
   bottle do
@@ -19,8 +18,7 @@ class Fwupd < Formula
     sha256 x86_64_linux:  "a96c15a2dd958d0b5f2ad81597577c980d2d6e6b709eefb0505dc7c57a6add30"
   end
 
-  depends_on "gettext" => :build
-  depends_on "gi-docgen" => :build
+  depends_on "gettext" => :build # for msgfmt
   depends_on "gobject-introspection" => :build
   depends_on "meson" => :build
   depends_on "ninja" => :build
@@ -81,6 +79,7 @@ class Fwupd < Formula
                     "-Dplugin_modem_manager=disabled",
                     "-Dplugin_uefi_capsule_splash=false",
                     "-Dtests=false",
+                    "-Ddocs=disabled",
                     "-Dvendor_ids_dir=#{Formula["usb.ids"].opt_share}/misc/usb.ids",
                     *std_meson_args
     system "meson", "compile", "-C", "build", "--verbose"

@@ -6,6 +6,7 @@ class Cjson < Formula
   license "MIT"
 
   bottle do
+    sha256 cellar: :any,                 arm64_tahoe:   "3949c4efc1e2bb3de33dff83f7bb3322465f4e459b05b9c8ecafb50f9589453a"
     sha256 cellar: :any,                 arm64_sequoia: "02864d4e743d0b31edf050ab99325b77cbd34bde4a0fee2258c4903fb7cac621"
     sha256 cellar: :any,                 arm64_sonoma:  "a55942b2cb916d0ee9e84a1d658ba2b71915296e5e9a943fb1b9f99e73449a27"
     sha256 cellar: :any,                 arm64_ventura: "ca30e93594455cda8c6d73e1b409a0b7cb71b294d6044d5d58ea0bb6e088b648"

@@ -5,6 +5,10 @@ class Dqlite < Formula
   sha256 "ce569a30958b6f673cbb7f8632706bc6868bc5b82ae4b04e0f63f3ad24125aaf"
   license "LGPL-3.0-only"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "4fce20b238a62fa6905f384297b8db3ddb2444842295d12d50ec588e9c790646"
+  end
+
   depends_on "autoconf" => :build
   depends_on "automake" => :build
   depends_on "libtool" => :build

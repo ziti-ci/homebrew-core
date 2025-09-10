@@ -7,6 +7,7 @@ class M4 < Formula
   license "GPL-3.0-or-later"
 
   bottle do
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "e53f47d0d6e20a4392d1d907c44e1bad20af6aaaa03f5f18fe18f0f980bc0780"
     sha256 cellar: :any_skip_relocation, arm64_sequoia: "80bd9ecaa8798a7db6a2e86acc61089dc31d83e6e9e01495a6a57c3703155f47"
     sha256 cellar: :any_skip_relocation, arm64_sonoma:  "d218aa1dbe24f70c8386a85aa8e95ffa1a4b875e3ce031061ac45541144f8cba"
     sha256 cellar: :any_skip_relocation, arm64_ventura: "d2542fbf7937c71d36279c65313915039fc083dd831831f7b0a6a88caf0ed936"

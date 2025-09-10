@@ -12,12 +12,12 @@ class DotnetAT8 < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_sequoia: "a1533a5ee0abebcf8cd5375fa9e658a24b7bfe43e6eb4926b0116389905d0874"
-    sha256 cellar: :any,                 arm64_sonoma:  "38f152bfc38fda11c49439cf81ea3834a4b26cf1958fa6c9098fa3779bfeff5d"
-    sha256 cellar: :any,                 arm64_ventura: "4641171c13c132095c06891f9eabdec3701159633bb460d90bb8790fb4461df2"
-    sha256 cellar: :any,                 ventura:       "5ec3552d6011c88ce9fb3bb3f6d481735f566248a84986381c0925ae4f2388a0"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "3efb94d22d00c717ed9eea249d9a32878680eeddab7302dc42df44143b2e487f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "b398e8863265c71b7b816333907023e44c60059bbc10094cd6506b739e82d519"
+    sha256 cellar: :any,                 arm64_sequoia: "fd1b5d919cecee555f16c4ea0f1bf1ba98c860e9f9a133bf726bc34a05d0150a"
+    sha256 cellar: :any,                 arm64_sonoma:  "c6863845bacfe212fb1816040522189e20d51c7d1d8e61c6d832f03385fe544c"
+    sha256 cellar: :any,                 arm64_ventura: "525a25d8b8b0142cc8d060a277d0d53941058901e5a9c17f5d21f359d63fe2aa"
+    sha256 cellar: :any,                 ventura:       "7fe1d416e4f401cc091fd44ebc730dd318a862cd48be8c6aa4f019f61349e3be"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "e64eaef2f46d4eddcd6e964d54418fa8c5fae8f55be8d8ca99a0fa48c07ef352"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "e309e937d2ea858e9056561452ce609d3b7d37b272d1821c7dfe3ae85c3a3d53"
   end
 
   keg_only :versioned_formula

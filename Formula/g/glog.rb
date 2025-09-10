@@ -23,11 +23,18 @@ class Glog < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "04695a6df86ea26cadda86975bc9ad9c1ec112e8325e2bbc5f25939b42698463"
   end
 
+  deprecate! date: "2025-12-10", because: :repo_archived, replacement_formula: "abseil"
+
   depends_on "cmake" => :build
   depends_on "gflags"
 
   def install
-    system "cmake", "-S", ".", "-B", "build", "-DBUILD_SHARED_LIBS=ON", *std_cmake_args
+    args = %w[
+      -DBUILD_SHARED_LIBS=ON
+    ]
+    # Workaround to build with CMake 4
+    args << "-DCMAKE_POLICY_VERSION_MINIMUM=3.5"
+    system "cmake", "-S", ".", "-B", "build", *args, *std_cmake_args
     system "cmake", "--build", "build"
     system "cmake", "--build", "build", "--target", "install"
   end

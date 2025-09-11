@@ -7,13 +7,13 @@ class Lazyjj < Formula
   head "https://github.com/Cretezy/lazyjj.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "31a21d5ae014fcf22bdcc2a23967238c4a28507d7304ef5925d26d5de6d9eeb4"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "dae5384923a806a5390bc021f54eefb39301ea051be57344e140584e1aaa2352"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "13e4d591f14642e7f8b32039feea2333dfd5aa1e37c3c28809e2b5b225b52da3"
-    sha256 cellar: :any_skip_relocation, sonoma:        "a1ab52e8ab92e55bc98167c24178cf73c1ff487fa745a3280e5f3cb8fcc5c712"
-    sha256 cellar: :any_skip_relocation, ventura:       "68f1a4806aa8ce2f8b16b410546f88f51836fe577ca9655a01f89aa496b620c2"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "8b500473b4ddfac36e2cdcdc26558d54b7b8ebe1d4566ded66311f9df94a8849"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "b9c1ee9cac680a4b7a18943c48f8c42756a8655555bfa00ca19c42c7ca58953a"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "6ed3836f114f0532751221dfdfa587c024ee3d2744122e432134b61d00a7fe11"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "bc9af5259b9c06bf516af13c9093f49f9b9f7205de8f5de14109b947f67de3d1"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "23134bf49a95b53f0e8a6e66f9e9b1d668152b03ff851ae890938720a49407d6"
+    sha256 cellar: :any_skip_relocation, sonoma:        "d974fc54a97bc59287f4be8dc743f0bc333a892c51ee2a00a0b267aec6fb123a"
+    sha256 cellar: :any_skip_relocation, ventura:       "1924e3d0562c7094f55e29a0d214e7d114137a78a1da6514c6171a119720e649"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "adba3877089a9cd7b45dd398b8e16e06d2f62db3d6297d470f9bc13db7541cc5"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "355ec9f7c70a53c3f9b80171821709738cfc7e9bde7f38a5498f537a9d6c6811"
   end
 
   depends_on "rust" => :build

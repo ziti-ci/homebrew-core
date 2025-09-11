@@ -31,15 +31,18 @@ class Davix < Formula
   end
 
   def install
-    args = std_cmake_args + %W[
-      -DEMBEDDED_LIBCURL=FALSE
+    # Remove `-DCMAKE_POLICY_VERSION_MINIMUM=3.5` once fixed upstream
+    # Issue ref: https://github.com/cern-fts/davix/issues/139
+    args = %W[
+      -DCMAKE_POLICY_VERSION_MINIMUM=3.5
       -DCMAKE_INSTALL_RPATH=#{rpath}
       -DLIB_SUFFIX=
       -DBENCH_TESTS=FALSE
       -DDAVIX_TESTS=FALSE
+      -DEMBEDDED_LIBCURL=FALSE
     ]
 
-    system "cmake", "-S", ".", "-B", "build", *args
+    system "cmake", "-S", ".", "-B", "build", *args, *std_cmake_args
     system "cmake", "--build", "build"
     system "cmake", "--install", "build"
   end

@@ -6,6 +6,7 @@ class Weaviate < Formula
   license "BSD-3-Clause"
 
   bottle do
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "ec75d19a398e781637479f3b4c3d2f7f45f14139ae46307558fa37b1d6d6654e"
     sha256 cellar: :any_skip_relocation, arm64_sequoia: "ec75d19a398e781637479f3b4c3d2f7f45f14139ae46307558fa37b1d6d6654e"
     sha256 cellar: :any_skip_relocation, arm64_sonoma:  "ec75d19a398e781637479f3b4c3d2f7f45f14139ae46307558fa37b1d6d6654e"
     sha256 cellar: :any_skip_relocation, arm64_ventura: "ec75d19a398e781637479f3b4c3d2f7f45f14139ae46307558fa37b1d6d6654e"

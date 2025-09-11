@@ -47,7 +47,7 @@ class Gh < Formula
       system "make", "bin/gh", "manpages"
     end
     bin.install "bin/gh"
-    man1.install builpath.glob("share/man/man1/gh*.1")
+    man1.install buildpath.glob("share/man/man1/gh*.1")
     generate_completions_from_executable(bin/"gh", "completion", "-s")
   end
 

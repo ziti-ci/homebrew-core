@@ -1,8 +1,8 @@
 class Render < Formula
   desc "Command-line interface for Render"
   homepage "https://render.com/docs/cli"
-  url "https://github.com/render-oss/cli/archive/refs/tags/v2.1.5.tar.gz"
-  sha256 "27d4c9357c7f609c9478859675cf5c4b30c0d09318caabeca464cbef6327f027"
+  url "https://github.com/render-oss/cli/archive/refs/tags/v2.2.0.tar.gz"
+  sha256 "6c03f69652f5bd5e8e7adb3d20f987cbf84b33dd7a9a056cd6c8787f658d63dd"
   license "Apache-2.0"
   head "https://github.com/render-oss/cli.git", branch: "main"
 

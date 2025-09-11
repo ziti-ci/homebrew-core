@@ -24,9 +24,25 @@ class Wasm3 < Formula
   end
 
   depends_on "cmake" => :build
+  depends_on "uvwasi"
 
   def install
-    system "cmake", "-S", ".", "-B", "build", *std_cmake_args
+    # Unbundled uvwasi and link to shared library
+    inreplace "CMakeLists.txt" do |s|
+      s.gsub! "FetchContent_GetProperties(uvwasi)",
+              "FetchContent_MakeAvailable(uvwasi)"
+      s.gsub! "target_link_libraries(${OUT_FILE} uvwasi_a uv_a)",
+              "target_link_libraries(${OUT_FILE} uvwasi::uvwasi)"
+    end
+
+    # We bypass brew's dependency provider to set `FETCHCONTENT_TRY_FIND_PACKAGE_MODE`
+    # which redirects FetchContent_Declare() to find_package() and helps find our `uvwasi`.
+    # To re-block fetches, we use the not-recommended `FETCHCONTENT_FULLY_DISCONNECTED`.
+    system "cmake", "-S", ".", "-B", "build",
+                    "-DHOMEBREW_ALLOW_FETCHCONTENT=ON",
+                    "-DFETCHCONTENT_FULLY_DISCONNECTED=ON",
+                    "-DFETCHCONTENT_TRY_FIND_PACKAGE_MODE=ALWAYS",
+                    *std_cmake_args
     system "cmake", "--build", "build"
     bin.install "build/wasm3"
   end

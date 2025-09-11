@@ -22,23 +22,17 @@ class Libuv < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "dd1d243f009617c2ff2d97c5cd08a93512f93accf7d7c1987a649db2b91ac03e"
   end
 
-  depends_on "autoconf" => :build
-  depends_on "automake" => :build
-  depends_on "libtool" => :build
-  depends_on "pkgconf" => :build
+  depends_on "cmake" => :build
   depends_on "sphinx-doc" => :build
 
   def install
     # This isn't yet handled by the make install process sadly.
-    cd "docs" do
-      system "make", "man"
-      man1.install "build/man/libuv.1"
-    end
+    system "make", "-C", "docs", "man"
+    man1.install "docs/build/man/libuv.1"
 
-    system "./autogen.sh"
-    system "./configure", "--disable-silent-rules", *std_configure_args
-    system "make"
-    system "make", "install"
+    system "cmake", "-S", ".", "-B", "build", *std_cmake_args
+    system "cmake", "--build", "build"
+    system "cmake", "--install", "build"
   end
 
   test do

@@ -17,6 +17,7 @@ class Mysql < Formula
   no_autobump! because: :incompatible_version_format
 
   bottle do
+    sha256 arm64_tahoe:   "260f1e609a63da0b520c67bca081f09029dc8716c832dde2b4b0c7056fb54a36"
     sha256 arm64_sequoia: "6e82a798b7e2c92925ec4050cb7156f9cbd71f84beb6eabf37e7d3bc3439ab96"
     sha256 arm64_sonoma:  "6bc623e931afb78577d17893709d8f85349514304c2d41557d407ca3a93e496a"
     sha256 arm64_ventura: "5bfd1df734e17a2c03cc2615f6422a68cb7b3aacc3d7c9df6196373c019112d0"

@@ -3,8 +3,8 @@ class Tmt < Formula
 
   desc "Test Management Tool"
   homepage "https://tmt.readthedocs.io"
-  url "https://files.pythonhosted.org/packages/bb/ea/6960d40b45064476f6f45e89f5db68994f1dbcaaa2f88b45c697aaf5a3be/tmt-1.56.0.tar.gz"
-  sha256 "21a49857f0bdc565936f82daad8583769690d366515f7f473d76c2bdf723c2c9"
+  url "https://files.pythonhosted.org/packages/4b/04/27f2fcf38db7a509e8548a8106e1305e1f24b2252361c0e95c00949c8c8f/tmt-1.57.0.tar.gz"
+  sha256 "625b1edbfd2c97b8434c415c8ef85d7c1b152f150a0a2651c01d4b06845005c8"
   license "MIT"
 
   bottle do
@@ -83,8 +83,8 @@ class Tmt < Formula
   end
 
   resource "jsonschema-specifications" do
-    url "https://files.pythonhosted.org/packages/bf/ce/46fbd9c8119cfc3581ee5643ea49464d168028cfb5caff5fc0596d0cf914/jsonschema_specifications-2025.4.1.tar.gz"
-    sha256 "630159c9f4dbea161a6a2205c3011cc4f18ff381b189fff48bb39b9bf26ae608"
+    url "https://files.pythonhosted.org/packages/19/74/a633ee74eb36c44aa6d1095e7cc5569bebf04342ee146178e2d36600708b/jsonschema_specifications-2025.9.1.tar.gz"
+    sha256 "b540987f239e745613c7a9176f3edb72b832a4ac465cf02712288397832b5e8d"
   end
 
   resource "markupsafe" do

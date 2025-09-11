@@ -40,6 +40,12 @@ class Bullet < Formula
       -DBULLET2_MULTITHREADING=ON
     ] + std_cmake_args(find_framework: "FIRST")
 
+    # Workaround to build with CMake 4
+    common_args << "-DCMAKE_POLICY_VERSION_MINIMUM=3.5"
+
+    # Temporary fix for https://github.com/bulletphysics/bullet3/issues/4733
+    common_args << "-D_CURRENT_OSX_VERSION=#{MacOS.full_version}" if OS.mac?
+
     system "cmake", "-S", ".", "-B", "build_double",
                     "-DBUILD_SHARED_LIBS=ON",
                     "-DCMAKE_INSTALL_RPATH=#{loader_path}",

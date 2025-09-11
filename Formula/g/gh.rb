@@ -14,6 +14,7 @@ class Gh < Formula
   no_autobump! because: :requires_manual_review
 
   bottle do
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "bdc5f1450eaae1974b45156a284eb59d1ec515f6063ebcbea97c82568f472af4"
     sha256 cellar: :any_skip_relocation, arm64_sequoia: "bdc5f1450eaae1974b45156a284eb59d1ec515f6063ebcbea97c82568f472af4"
     sha256 cellar: :any_skip_relocation, arm64_sonoma:  "bdc5f1450eaae1974b45156a284eb59d1ec515f6063ebcbea97c82568f472af4"
     sha256 cellar: :any_skip_relocation, arm64_ventura: "bdc5f1450eaae1974b45156a284eb59d1ec515f6063ebcbea97c82568f472af4"

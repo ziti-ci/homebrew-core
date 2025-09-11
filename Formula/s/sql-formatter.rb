@@ -1,8 +1,8 @@
 class SqlFormatter < Formula
   desc "Whitespace formatter for different query languages"
   homepage "https://sql-formatter-org.github.io/sql-formatter/"
-  url "https://registry.npmjs.org/sql-formatter/-/sql-formatter-15.6.8.tgz"
-  sha256 "6b8cbdbaab209525c31b493ef4b48b75e7968b2f35bec7256fb74a649eab9c09"
+  url "https://registry.npmjs.org/sql-formatter/-/sql-formatter-15.6.9.tgz"
+  sha256 "2cab264b49704d96e8aa8c76e806e7a151a05f064e8bb4a55abe6f9d39b59032"
   license "MIT"
 
   bottle do

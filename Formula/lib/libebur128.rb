@@ -28,7 +28,8 @@ class Libebur128 < Formula
   depends_on "speex"
 
   def install
-    system "cmake", "-S", ".", "-B", "build", *std_cmake_args
+    # Upstream issue for CMake 4 workaround: https://github.com/jiixyj/libebur128/issues/134
+    system "cmake", "-S", ".", "-B", "build", "-DCMAKE_POLICY_VERSION_MINIMUM=3.5", *std_cmake_args
     system "cmake", "--build", "build"
     system "cmake", "--install", "build"
   end

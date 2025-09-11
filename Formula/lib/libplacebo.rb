@@ -34,6 +34,7 @@ class Libplacebo < Formula
 
   bottle do
     rebuild 1
+    sha256 cellar: :any, arm64_tahoe:   "3664b8f58b9d80bfeed7e54efbdca3202a1cff86e9658b10b503bd3ca6c91014"
     sha256 cellar: :any, arm64_sequoia: "4e5f0af5ad2cb7d838cff63d56a50d7db5e9f7ca27c2045a546834397853240f"
     sha256 cellar: :any, arm64_sonoma:  "ad9bf481e31cfd2425500328d11163c3186063233778d07505c854c7bf8b5e71"
     sha256 cellar: :any, arm64_ventura: "84c2732b7169fdc2b799db8e5263f813667b2848742e2f1860a93cf3059e5eac"

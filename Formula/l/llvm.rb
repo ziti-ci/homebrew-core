@@ -23,6 +23,7 @@ class Llvm < Formula
   end
 
   bottle do
+    sha256 cellar: :any,                 arm64_tahoe:   "5032ffa3dee0109de164f602f2906dbfb107dbe04f5c6d7dbc415d3b5aee507e"
     sha256 cellar: :any,                 arm64_sequoia: "1d1e860def7950d7753a213c6de93455c605ddf84b828bc8510b5caccf881277"
     sha256 cellar: :any,                 arm64_sonoma:  "ad9c478fbba3951eed5c1a92d9fb2843765f9ff8a835df25a195eadecdcf2ed4"
     sha256 cellar: :any,                 arm64_ventura: "f5df9612c5196f3e59233732e28754848505111dc6531aa316054635a3683ddb"

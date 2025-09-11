@@ -38,6 +38,12 @@ class Libmusicbrainz < Formula
     sha256 "ee0c63e56a17156bca13b157744a54aeed6e19b39f65b14f2a5ac4e504358c8e"
   end
 
+  # cmake: Set minimum required version to 3.5 for CMake 4+
+  patch do
+    url "https://github.com/metabrainz/libmusicbrainz/commit/9d216e08aadf436dd166876d566efe033510adc6.patch?full_index=1"
+    sha256 "2074078fabd6920ec085df06d1fd28a3eced86176788e17f3ea67a1d40d1189d"
+  end
+
   def install
     system "cmake", "-S", ".", "-B", ".", *std_cmake_args
     system "cmake", "--build", "."

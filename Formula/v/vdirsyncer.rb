@@ -9,6 +9,7 @@ class Vdirsyncer < Formula
   head "https://github.com/pimutils/vdirsyncer.git", branch: "main"
 
   bottle do
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "af221ee46a6cb2cb0e5f9cc7f4d511014cb0c6c349e6025d31373403a7f97cab"
     sha256 cellar: :any_skip_relocation, arm64_sequoia: "bc57571024d407086066c3f78a09120ecf270565cf276cfc6b5c3d527429452e"
     sha256 cellar: :any_skip_relocation, arm64_sonoma:  "e72ac8e2abc60d1ec9f5c25e9bcb5234a377f4443cc5cec8642b7bfafb747232"
     sha256 cellar: :any_skip_relocation, arm64_ventura: "c9586dd233fa9a3b34a3bdfc538d93d04f1a11fffe03f3f12f2fd9c7035a982c"

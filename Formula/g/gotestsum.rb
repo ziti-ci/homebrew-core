@@ -1,8 +1,8 @@
 class Gotestsum < Formula
   desc "Human friendly `go test` runner"
   homepage "https://github.com/gotestyourself/gotestsum"
-  url "https://github.com/gotestyourself/gotestsum/archive/refs/tags/v1.12.3.tar.gz"
-  sha256 "a78487894e411d8c96980b99201f165ba82281b5c20f10762638e0e6b5a75938"
+  url "https://github.com/gotestyourself/gotestsum/archive/refs/tags/v1.13.0.tar.gz"
+  sha256 "e64d58e1bf4f4c4b82b3a703ed5046ea2b4eb827d2a7ba2ead3216bb5fb85547"
   license "Apache-2.0"
   head "https://github.com/gotestyourself/gotestsum.git", branch: "main"
 
@@ -16,6 +16,13 @@ class Gotestsum < Formula
   end
 
   depends_on "go" => [:build, :test]
+
+  # Workaround to inject version as ldflags
+  # PR ref: https://github.com/gotestyourself/gotestsum/pull/528
+  patch do
+    url "https://github.com/gotestyourself/gotestsum/commit/47842dbc0c69364e0bacb61cc1ac4fce5ed2b6c5.patch?full_index=1"
+    sha256 "ed666978dac6b6757b1e71978d8f2bf9726aee5939ebca0d3837efd3073f718c"
+  end
 
   def install
     ldflags = "-s -w -X gotest.tools/gotestsum/cmd.version=#{version}"

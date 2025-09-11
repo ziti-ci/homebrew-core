@@ -1,8 +1,8 @@
 class Xray < Formula
   desc "Platform for building proxies to bypass network restrictions"
   homepage "https://xtls.github.io/"
-  url "https://github.com/XTLS/Xray-core/archive/refs/tags/v25.9.10.tar.gz"
-  sha256 "c26b1e3533540f63acb641cea9af660fae60bd50b6ee4a9904858a073161f3dd"
+  url "https://github.com/XTLS/Xray-core/archive/refs/tags/v25.9.11.tar.gz"
+  sha256 "9bccd2681183698bf860b1af5407f97b4b60090324aa3ef1546e446612d44e1f"
   license all_of: ["MPL-2.0", "CC-BY-SA-4.0"]
   head "https://github.com/XTLS/Xray-core.git", branch: "main"
 
@@ -12,12 +12,12 @@ class Xray < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "4004bb34022e2c9ccebe83fc4af3de4ebc145c14f2e4ba11ef0fa02a8394ac6a"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "4004bb34022e2c9ccebe83fc4af3de4ebc145c14f2e4ba11ef0fa02a8394ac6a"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "4004bb34022e2c9ccebe83fc4af3de4ebc145c14f2e4ba11ef0fa02a8394ac6a"
-    sha256 cellar: :any_skip_relocation, sonoma:        "225998d0e42a5e1ca7bf8ef4118c899561240eb35ba6c64e479b27dd050be583"
-    sha256 cellar: :any_skip_relocation, ventura:       "225998d0e42a5e1ca7bf8ef4118c899561240eb35ba6c64e479b27dd050be583"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "9b907a72a19a8427ceb72a0344ce22eee722bfcd018d1175097f2f41f91c6300"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "ae072697abe3cbfe40ebfe6c0b766d2d5bb8b789389a88b678a3ce9d05a6ed63"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "ae072697abe3cbfe40ebfe6c0b766d2d5bb8b789389a88b678a3ce9d05a6ed63"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "ae072697abe3cbfe40ebfe6c0b766d2d5bb8b789389a88b678a3ce9d05a6ed63"
+    sha256 cellar: :any_skip_relocation, sonoma:        "3ede56078ad6f89ce8536e38e12ec6729aa6d750624585b8788fbb34d15f1bb8"
+    sha256 cellar: :any_skip_relocation, ventura:       "3ede56078ad6f89ce8536e38e12ec6729aa6d750624585b8788fbb34d15f1bb8"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "ad89d5433512f712d169d08bde964a220e0c1ea827f98afa9fb96a91d45d6912"
   end
 
   depends_on "go" => :build

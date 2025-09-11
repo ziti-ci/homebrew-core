@@ -32,7 +32,23 @@ class Graphite2 < Formula
   end
 
   def install
-    system "cmake", "-S", ".", "-B", "build", *std_cmake_args
+    # CMake: Raised required version to 3.5
+    cmake_policy_files = %w[CMakeLists.txt src/CMakeLists.txt]
+    cmake_files = cmake_policy_files + %w[
+      gr2fonttest
+      tests/bittwiddling
+      tests/json
+      tests/sparsetest
+      tests/utftest
+    ].map { |f| "#{f}/CMakeLists.txt" }
+
+    inreplace cmake_files, "CMAKE_MINIMUM_REQUIRED(VERSION 2.8.0 FATAL_ERROR)", "CMAKE_MINIMUM_REQUIRED(VERSION 3.5)"
+    inreplace cmake_policy_files, "cmake_policy(SET CMP0012 NEW)", ""
+
+    args = %W[
+      -DCMAKE_INSTALL_RPATH=#{rpath}
+    ]
+    system "cmake", "-S", ".", "-B", "build", *args, *std_cmake_args
     system "cmake", "--build", "build"
     system "cmake", "--install", "build"
   end

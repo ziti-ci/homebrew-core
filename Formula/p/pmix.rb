@@ -20,6 +20,7 @@ class Pmix < Formula
   end
 
   bottle do
+    sha256 arm64_tahoe:   "0e5f353dd812019287f31b381c551b9a3f77772ab712ab1607b930a2c3a52f84"
     sha256 arm64_sequoia: "1ee7ba6f1b0345697fb712c5ad5bc85135675dc4d6b61bca1b11cbcc401aea4f"
     sha256 arm64_sonoma:  "9ab0329a6e1145d5ef30f62a00682cd62f9d1b08de40a7a5038dbbee9070b324"
     sha256 arm64_ventura: "7a317bc1c072c4d5abd971b5b85e349bef1e65b1bd772ab6979766caff48b71b"

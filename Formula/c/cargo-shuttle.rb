@@ -1,8 +1,8 @@
 class CargoShuttle < Formula
   desc "Build & ship backends without writing any infrastructure files"
   homepage "https://shuttle.dev"
-  url "https://github.com/shuttle-hq/shuttle/archive/refs/tags/v0.56.6.tar.gz"
-  sha256 "10550369e65f964bb7bd86a6dd79090d7f0434601f665016882116eeae690272"
+  url "https://github.com/shuttle-hq/shuttle/archive/refs/tags/v0.57.0.tar.gz"
+  sha256 "155ad17fb2d7021aac55563a3fd6e387ec893fac8de1d3378879e77b936a134e"
   license "Apache-2.0"
   head "https://github.com/shuttle-hq/shuttle.git", branch: "main"
 
@@ -40,6 +40,6 @@ class CargoShuttle < Formula
     assert_match version.to_s, shell_output("#{bin}/shuttle --version")
     assert_match "Unauthorized", shell_output("#{bin}/shuttle account 2>&1", 1)
     output = shell_output("#{bin}/shuttle deployment status 2>&1", 1)
-    assert_match "ailed to find a Rust project in this directory.", output
+    assert_match "Failed to find a Rust project", output
   end
 end

@@ -2,7 +2,7 @@ class Valkey < Formula
   desc "High-performance data structure server that primarily serves key/value workloads"
   homepage "https://valkey.io"
   url "https://github.com/valkey-io/valkey/archive/refs/tags/8.1.3.tar.gz"
-  sha256 "6b167eb7072f5785c0c0af807960889a3d346fc3d0ecb571064b019ee365ee00"
+  sha256 "8f862b3b0a72fd40587793964539589f6f83d01361ca1598b370cfaa301e0ec0"
   license all_of: [
     "BSD-3-Clause",
     "BSD-2-Clause", # deps/jemalloc, deps/linenoise, src/lzf*

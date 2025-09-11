@@ -41,14 +41,24 @@ class Clblas < Formula
   end
 
   def install
-    system "cmake", "src", *std_cmake_args,
+    # Workaround for CMake 4 and CMP0048 as project looks unmaintained.
+    # Can consider deprecating if bandicoot migrates to alternative like CLBlast:
+    # https://gitlab.com/bandicoot-lib/bandicoot-code/-/issues/34
+    ENV["CMAKE_POLICY_VERSION_MINIMUM"] = "3.5"
+    version_str = "#{version.major.to_i}.#{version.minor.to_i}.#{version.patch.to_i}"
+    inreplace "src/CMakeLists.txt", "project(clBLAS C CXX)",
+                                    "project(clBLAS VERSION #{version_str} LANGUAGES C CXX)"
+
+    system "cmake", "-S", "src", "-B", "build",
                     "-DBUILD_CLIENT=OFF",
                     "-DBUILD_KTEST=OFF",
                     "-DBUILD_TEST=OFF",
                     "-DCMAKE_MACOSX_RPATH:BOOL=ON",
                     "-DPYTHON_EXECUTABLE=#{which("python3") || which("python")}",
-                    "-DSUFFIX_LIB:STRING="
-    system "make", "install"
+                    "-DSUFFIX_LIB:STRING=",
+                    *std_cmake_args
+    system "cmake", "--build", "build"
+    system "cmake", "--install", "build"
     pkgshare.install "src/samples/example_srot.c"
   end
 

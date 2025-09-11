@@ -17,10 +17,17 @@ class ElmFormat < Formula
   end
 
   depends_on "cabal-install" => :build
-  depends_on "ghc@9.6" => :build
+  depends_on "ghc" => :build
   depends_on "hpack" => :build
+  depends_on "gmp"
+
+  uses_from_macos "libffi"
 
   def install
+    # Remove requirement on specific patch GHC
+    (buildpath/"cabal.project.freeze").truncate(0)
+    inreplace "cabal.project", /^with-compiler: .*$/, ""
+
     system "cabal", "v2-update"
 
     # Directly running `cabal v2-install` fails: Invalid file name in tar archive: "avh4-lib-0.0.0.1/../"

@@ -9,6 +9,7 @@ class Micropython < Formula
     sha256 cellar: :any_skip_relocation, arm64_sequoia: "0ab765f5f1bc6fa2898c55f91bc30a0d0f1c8581296c0d0453e259be597bae1d"
     sha256 cellar: :any_skip_relocation, arm64_sonoma:  "f2ecdd66d12c3eb0c78b8d1d85c09c50253f5b5cc5075caaf7ddaa852ab898b9"
     sha256 cellar: :any_skip_relocation, arm64_ventura: "122acd6b2da763a9f73f0407c00cf83edba31a4bcf6def7a56836d6d8e57da0e"
+    sha256 cellar: :any_skip_relocation, tahoe:         "92ac93ba0e90802dcd12bfd9f7584baabb2b8cf7ed8165615e4aacf488463693"
     sha256 cellar: :any_skip_relocation, sequoia:       "80401bccc9ea2bda8139bda5e3866ff866b1109e9bd33b7a6224140ee4f9d1a0"
     sha256 cellar: :any_skip_relocation, sonoma:        "6391ea2db27df106305c64d2d9f0ceef198532b5fd377bbe4f38635cd65b17ea"
     sha256 cellar: :any_skip_relocation, ventura:       "1eaf682cf59c352b82b4fa32a7f312c32a9e2bf60a696a435bb525eced8aedf1"

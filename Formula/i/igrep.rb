@@ -11,6 +11,7 @@ class Igrep < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura: "13aa62146a39d0ca77fd0447083250a91895c525366416a3a6b4f89cd7339916"
     sha256 cellar: :any_skip_relocation, sonoma:        "cec39eb06f65f3f609ed041178d24d9b421076c6bb5cde8b2b497f3f4c11e135"
     sha256 cellar: :any_skip_relocation, ventura:       "c3d75de9c19cfeef74696cac8f70b7ae883abe652b3235bdd8533f34c793f869"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "b40c50a1fef708517db4d64b7847c46b6b0ddd0a2f2a28459a265b1c33077fba"
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "2b6d905e2675588fe40f375b699b30c314ac1e2b18606ce416d3ddac103ec4a1"
   end
 

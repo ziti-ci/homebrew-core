@@ -6,13 +6,13 @@ class FirebaseCli < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "1b8968ce9ca9f39c7fbcf9e6e9db008add9860e548b5cead1df6759338005ccb"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "7bf98d1c2d366776bde8552acffcedbc3b2dd3e8d70a7f19e91b55018d51a9ef"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "7bf98d1c2d366776bde8552acffcedbc3b2dd3e8d70a7f19e91b55018d51a9ef"
-    sha256 cellar: :any_skip_relocation, sonoma:        "edc06a103e697d9d3cb3eed39dc4ba78841633a38fcd915445c6b6f22887ba54"
-    sha256 cellar: :any_skip_relocation, ventura:       "edc06a103e697d9d3cb3eed39dc4ba78841633a38fcd915445c6b6f22887ba54"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "2c631774c21593e37553f75e56f1b5aba0dc8888a8c96073a53d7bb6e8e7e694"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "c036765bc0abb699c58f4296b80ee6d19e3a705016c368c230ce7b59fdd9c5fc"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "a3a2d312da40afe36ca1c7bd00edb55e33b232d95280c7dc15ebe2e8579a0930"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "a3a2d312da40afe36ca1c7bd00edb55e33b232d95280c7dc15ebe2e8579a0930"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "a3a2d312da40afe36ca1c7bd00edb55e33b232d95280c7dc15ebe2e8579a0930"
+    sha256 cellar: :any_skip_relocation, sonoma:        "9e5fd04cfe45cf461e3940bbd05b0b5ad125f14f3fe613e2b21da6b2ac18fffc"
+    sha256 cellar: :any_skip_relocation, ventura:       "9e5fd04cfe45cf461e3940bbd05b0b5ad125f14f3fe613e2b21da6b2ac18fffc"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "678f7ffa32c6a94b68ab0945db11841f2a44684fec9ea4c12f316c15beea3b38"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "6030ea7f6869158e68ddf0bba27c228647f1b59d13835c5983180c71861e316d"
   end
 
   depends_on "node"

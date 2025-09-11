@@ -3,8 +3,8 @@ class Mcpm < Formula
 
   desc "Open source, community-driven MCP server and client manager"
   homepage "https://mcpm.sh/"
-  url "https://files.pythonhosted.org/packages/dd/85/34127cab100c2c1701ed9dd129a7a77929069429f97ece697d38478a0b0e/mcpm-2.7.1.tar.gz"
-  sha256 "5ec1e02ea3b46a5b715f6e7565a7ef48d02980ed709ca4425e8b7b753d279830"
+  url "https://files.pythonhosted.org/packages/75/a0/392551cc01875438a436f6742b0d0527684fcf12f236b66c4eded537433d/mcpm-2.8.0.tar.gz"
+  sha256 "3e0a584f0bae4bc8b29ccb2d54d39b99e0c84f2bcf65baf1b27b414f8f35b663"
   license "MIT"
 
   bottle do
@@ -58,8 +58,8 @@ class Mcpm < Formula
   end
 
   resource "dnspython" do
-    url "https://files.pythonhosted.org/packages/b5/4a/263763cb2ba3816dd94b08ad3a33d5fdae34ecb856678773cc40a3605829/dnspython-2.7.0.tar.gz"
-    sha256 "ce9c432eda0dc91cf618a5cedf1a4e142651196bbcd2c80e89ed5a907e5cfaf1"
+    url "https://files.pythonhosted.org/packages/8c/8b/57666417c0f90f08bcafa776861060426765fdb422eb10212086fb811d26/dnspython-2.8.0.tar.gz"
+    sha256 "181d3c6996452cb1189c4046c61599b84a5a86e099562ffde77d26984ff26d0f"
   end
 
   resource "duckdb" do
@@ -123,8 +123,8 @@ class Mcpm < Formula
   end
 
   resource "jsonschema-specifications" do
-    url "https://files.pythonhosted.org/packages/bf/ce/46fbd9c8119cfc3581ee5643ea49464d168028cfb5caff5fc0596d0cf914/jsonschema_specifications-2025.4.1.tar.gz"
-    sha256 "630159c9f4dbea161a6a2205c3011cc4f18ff381b189fff48bb39b9bf26ae608"
+    url "https://files.pythonhosted.org/packages/19/74/a633ee74eb36c44aa6d1095e7cc5569bebf04342ee146178e2d36600708b/jsonschema_specifications-2025.9.1.tar.gz"
+    sha256 "b540987f239e745613c7a9176f3edb72b832a4ac465cf02712288397832b5e8d"
   end
 
   resource "loguru" do
@@ -198,8 +198,8 @@ class Mcpm < Formula
   end
 
   resource "pytest" do
-    url "https://files.pythonhosted.org/packages/08/ba/45911d754e8eba3d5a841a5ce61a65a685ff1798421ac054f85aa8747dfb/pytest-8.4.1.tar.gz"
-    sha256 "7c67fd69174877359ed9371ec3af8a3d2b04741818c51e5e99cc1742251fa93c"
+    url "https://files.pythonhosted.org/packages/a3/5c/00a0e072241553e1a7496d638deababa67c5058571567b92a7eaa258397c/pytest-8.4.2.tar.gz"
+    sha256 "86c0d0b93306b961d58d62a4db4879f27fe25513d4b969df351abdddb3c30e01"
   end
 
   resource "python-dotenv" do
@@ -238,8 +238,8 @@ class Mcpm < Formula
   end
 
   resource "rich-gradient" do
-    url "https://files.pythonhosted.org/packages/bd/90/fe0cd9d18358294c681beeb51bbeb3505f53c6fca1cc119f06d1ab51f3b7/rich_gradient-0.3.3.tar.gz"
-    sha256 "4351050e45fe4c23ed80448e13637aa15a72e2d998925c2234896529a209820e"
+    url "https://files.pythonhosted.org/packages/d0/84/96d127cd95de0cdb9da475f1e305fbc834099a80fde6b45bc915b2a77548/rich_gradient-0.3.4.tar.gz"
+    sha256 "b84366496027dbee28712c7fa9bf10c632e47deb32ac868032afbc794e12b400"
   end
 
   resource "rpds-py" do
@@ -288,8 +288,8 @@ class Mcpm < Formula
   end
 
   resource "typer" do
-    url "https://files.pythonhosted.org/packages/dd/82/f4bfed3bc18c6ebd6f828320811bbe4098f92a31adf4040bee59c4ae02ea/typer-0.17.3.tar.gz"
-    sha256 "0c600503d472bcf98d29914d4dcd67f80c24cc245395e2e00ba3603c9332e8ba"
+    url "https://files.pythonhosted.org/packages/92/e8/2a73ccf9874ec4c7638f172efc8972ceab13a0e3480b389d6ed822f7a822/typer-0.17.4.tar.gz"
+    sha256 "b77dc07d849312fd2bb5e7f20a7af8985c7ec360c45b051ed5412f64d8dc1580"
   end
 
   resource "typing-extensions" do

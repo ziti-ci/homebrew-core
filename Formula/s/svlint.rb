@@ -1,8 +1,8 @@
 class Svlint < Formula
   desc "SystemVerilog linter"
   homepage "https://github.com/dalance/svlint"
-  url "https://github.com/dalance/svlint/archive/refs/tags/v0.9.3.tar.gz"
-  sha256 "ed07d77dd72fe49c086df407ed74e321d210eb19dc0dc353ebcf23414116ccfd"
+  url "https://github.com/dalance/svlint/archive/refs/tags/v0.9.4.tar.gz"
+  sha256 "989555c119fb24b93aaec3ebf4dc8a4469f8a61880f7482683316180a2062a54"
   license "MIT"
   head "https://github.com/dalance/svlint.git", branch: "master"
 

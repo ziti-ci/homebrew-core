@@ -4,6 +4,7 @@ class Openexr < Formula
   url "https://github.com/AcademySoftwareFoundation/openexr/archive/refs/tags/v3.4.0.tar.gz"
   sha256 "d7b31637d7adc359f5e5a7517ba918cb5997bc1a4ae7a808ec874cdf91da93c0"
   license "BSD-3-Clause"
+  revision 1
 
   bottle do
     sha256 cellar: :any,                 arm64_tahoe:   "0b87332a88c224b8090af828120ddbf32a054ebc5b854cf4f377e6c7e5064c99"
@@ -33,6 +34,9 @@ class Openexr < Formula
   link_overwrite "lib/libIlmThread.so"
 
   def install
+    # Workaround with `openjph` >= 0.23 that doesn't include the prefix for cmake files
+    inreplace "src/lib/OpenEXRCore/internal_ht.cpp", "<ojph_", "<openjph/ojph_"
+
     system "cmake", "-S", ".", "-B", "build", *std_cmake_args
     system "cmake", "--build", "build"
     system "cmake", "--install", "build"

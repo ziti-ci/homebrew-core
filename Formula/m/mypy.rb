@@ -3,8 +3,8 @@ class Mypy < Formula
 
   desc "Experimental optional static type checker for Python"
   homepage "https://www.mypy-lang.org/"
-  url "https://files.pythonhosted.org/packages/8e/22/ea637422dedf0bf36f3ef238eab4e455e2a0dcc3082b5cc067615347ab8e/mypy-1.17.1.tar.gz"
-  sha256 "25e01ec741ab5bb3eec8ba9cdb0f769230368a22c959c4937360efb89b7e9f01"
+  url "https://files.pythonhosted.org/packages/14/a3/931e09fc02d7ba96da65266884da4e4a8806adcdb8a57faaacc6edf1d538/mypy-1.18.1.tar.gz"
+  sha256 "9e988c64ad3ac5987f43f5154f884747faf62141b7f842e87465b45299eea5a9"
   license "MIT"
   head "https://github.com/python/mypy.git", branch: "master"
 
@@ -31,8 +31,8 @@ class Mypy < Formula
   end
 
   resource "typing-extensions" do
-    url "https://files.pythonhosted.org/packages/98/5a/da40306b885cc8c09109dc2e1abd358d5684b1425678151cdaed4731c822/typing_extensions-4.14.1.tar.gz"
-    sha256 "38b39f4aeeab64884ce9f74c94263ef78f3c22467c8724005483154c26648d36"
+    url "https://files.pythonhosted.org/packages/72/94/1a15dd82efb362ac84269196e94cf00f187f7ed21c242792a923cdb1c61f/typing_extensions-4.15.0.tar.gz"
+    sha256 "0cea48d173cc12fa28ecabc3b837ea3cf6f38c6d1136f85cbaaf598984861466"
   end
 
   def install

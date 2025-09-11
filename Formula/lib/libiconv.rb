@@ -7,6 +7,7 @@ class Libiconv < Formula
   license all_of: ["GPL-3.0-or-later", "LGPL-2.0-or-later"]
 
   bottle do
+    sha256 cellar: :any, arm64_tahoe:   "8a61991512d58131934103c9ca06ece31c6219c0fe30efb9cba93dbc95edea18"
     sha256 cellar: :any, arm64_sequoia: "9e1ae85546acf11cfebe7552c70808a9b19418229726501f2bb7b3bceee47966"
     sha256 cellar: :any, arm64_sonoma:  "3f75b595baa51417a65a1fc7e3f9dc3bace9e14b40d03a6b5814342f5ee9f89e"
     sha256 cellar: :any, arm64_ventura: "aa195231486c152454575759ec79d6b48b3aa3deab8ee37c0d19e99f98573eb5"

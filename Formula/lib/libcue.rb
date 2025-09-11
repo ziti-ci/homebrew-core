@@ -25,7 +25,10 @@ class Libcue < Formula
   uses_from_macos "flex" => :build
 
   def install
-    system "cmake", "-S", ".", "-B", "build", "-DBUILD_SHARED_LIBS=ON", *std_cmake_args
+    system "cmake", "-S", ".", "-B", "build",
+                    "-DBUILD_SHARED_LIBS=ON",
+                    "-DCMAKE_POLICY_VERSION_MINIMUM=3.5",
+                    *std_cmake_args
     system "cmake", "--build", "build"
     system "cmake", "--install", "build"
 

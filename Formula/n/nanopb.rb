@@ -16,6 +16,7 @@ class Nanopb < Formula
 
   bottle do
     rebuild 1
+    sha256 cellar: :any,                 arm64_tahoe:   "d2b3e4f7a291d667e54ffc6c2ff6b317a3dcfa9b32b830206f2c9d078d86a150"
     sha256 cellar: :any,                 arm64_sequoia: "ecb816f68b51bbaebabfaf9b4f502a0db3ca799a3e0c5f413cd2f5bcfc0decfa"
     sha256 cellar: :any,                 arm64_sonoma:  "656534571186e6f68cb4cf2198c63918abd46e610156a3e71c4f7682a3fc0b0d"
     sha256 cellar: :any,                 arm64_ventura: "31af3f51d7520ed6792329f69a72e016aa7a0c64d1d3ef82ed16757d86dfd0ce"

@@ -48,6 +48,7 @@ class Glui < Formula
         #include <cassert>
         #include <GL/glui.h>
         int main() {
+          glutDisplayFunc([](){});
           GLUI *glui = GLUI_Master.create_glui("GLUI");
           assert(glui != nullptr);
           return 0;
@@ -63,6 +64,7 @@ class Glui < Formula
         #include <GL/glut.h>
         int main(int argc, char **argv) {
           glutInit(&argc, argv);
+          glutDisplayFunc([](){});
           GLUI *glui = GLUI_Master.create_glui("GLUI");
           assert(glui != nullptr);
           return 0;

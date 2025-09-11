@@ -66,7 +66,7 @@ class G2o < Formula
     end
 
     resource("homebrew-testdata").stage do
-      last_output = shell_output(testpath/"simple_optimize intel.g2o 2>&1").lines.last
+      last_output = shell_output("#{testpath}/simple_optimize intel.g2o 2>&1").lines.last
       assert_match("edges= 1837", last_output)
     end
   end

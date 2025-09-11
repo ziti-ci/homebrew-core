@@ -13,6 +13,7 @@ class TclTk < Formula
 
   bottle do
     rebuild 2
+    sha256 arm64_tahoe:   "b631e4d2682c782a22c063a0263ae099c3f8239e35a38ea492f7ee9da711f3a5"
     sha256 arm64_sequoia: "e019a7b2e5d62f7533c9b23627c2da661ffccec2a2f9afa056e7d558f7128aeb"
     sha256 arm64_sonoma:  "305a01bf826d8287810ec7cd74f8b28b991ee2efa1377afb7d79a241b77f458a"
     sha256 arm64_ventura: "f7203825cf7ab0e9fb018eaad0cfa04f01d11a7b4eb06d4f878af09493bbae70"

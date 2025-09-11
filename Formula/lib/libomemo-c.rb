@@ -6,6 +6,7 @@ class LibomemoC < Formula
   license "GPL-3.0-only"
 
   bottle do
+    sha256 cellar: :any,                 arm64_tahoe:   "6aeea5ebef3efeaa6574535934720c669623385944ba942643c71826b54b2e09"
     sha256 cellar: :any,                 arm64_sequoia: "10b6d82f6c30e6f9434ed1655ddebda4c01cfb37e1814dc7cbf87b6dbcd683d0"
     sha256 cellar: :any,                 arm64_sonoma:  "d006d2ce0817b007a29e695a8c819a14b453ca7ec3608a10c294b4767f2279a5"
     sha256 cellar: :any,                 arm64_ventura: "c838d8370dd068a5a5ae9ea20ce6caa55de0344d35a2bdf8421b8f91c2640b8d"

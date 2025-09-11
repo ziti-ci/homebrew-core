@@ -9,6 +9,7 @@ class Graphite2 < Formula
   no_autobump! because: :requires_manual_review
 
   bottle do
+    sha256 cellar: :any,                 arm64_tahoe:    "f21bef3300cfbed567eb476ac1825af9fd32abbcb222c1005b45aa6e3617347b"
     sha256 cellar: :any,                 arm64_sequoia:  "150b286ab4cfc8696fcd3fa4e7fa24c9825f024ef991899850b850e6f334100f"
     sha256 cellar: :any,                 arm64_sonoma:   "4cdee055db9958e12662c53661fab627057d3553974d15b289e2955b439f4a9d"
     sha256 cellar: :any,                 arm64_ventura:  "3ec770419ed60d211670f73bf078512824151b460c5c37740ee8b83e3dbb8357"

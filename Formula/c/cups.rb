@@ -3,8 +3,8 @@ class Cups < Formula
   homepage "https://github.com/OpenPrinting/cups"
   # This is the author's fork of CUPS. Debian have switched to this fork:
   # https://lists.debian.org/debian-printing/2020/12/msg00006.html
-  url "https://github.com/OpenPrinting/cups/releases/download/v2.4.12/cups-2.4.12-source.tar.gz"
-  sha256 "b1dde191a4ae2760c47220c82ca6155a28c382701e6c1a0159d1054990231d59"
+  url "https://github.com/OpenPrinting/cups/releases/download/v2.4.13/cups-2.4.13-source.tar.gz"
+  sha256 "8255ecf037be72660de24a73bcada042fc5bf509fc87bc8ad16cd0675735c1a8"
   license "Apache-2.0"
   head "https://github.com/OpenPrinting/cups.git", branch: "master"
 
@@ -14,13 +14,13 @@ class Cups < Formula
   end
 
   bottle do
-    sha256 arm64_sequoia: "705e803a739ead8c04537615685fedf880afc88a536315d939571a98911f7936"
-    sha256 arm64_sonoma:  "dc4da71981a402f2cdf66008cec93ab1480826254633a815e835d442b32c8536"
-    sha256 arm64_ventura: "1cfe5a32e6973737ae86e1f16b8cc104b5b5ac57243b8b787356adf687785c35"
-    sha256 sonoma:        "38bf81dc15a0dca73492c12fc6912926bac447bd71fe4b3d0e7c5b6245dbd985"
-    sha256 ventura:       "fd22e936b6d275b404c3a0b094624950b9dc27eb9924be1592792eec4e955c50"
-    sha256 arm64_linux:   "ac4a05c8d6c069d1e486948aceee4edd97d8ff765b3282e077c69ca2d122580c"
-    sha256 x86_64_linux:  "bf9ed3c684e203a1809506737ca7d167dbc4911019344298663f02792fb4fcaa"
+    sha256 arm64_sequoia: "76d34f500a5b78cb5ffaa2a1bc1e86fd311b09ac320a5b84801bc99476a2bb71"
+    sha256 arm64_sonoma:  "92b54d896f2e162a2bfd09900d37f9a9f5f70ff034b889d7438ff486136ef020"
+    sha256 arm64_ventura: "159feb431684706b02fc426d6ca1f0873d977cb10f3b2859ce32aa6eb27af42e"
+    sha256 sonoma:        "e828cd3f54a34644fa7956dcbefb1c3a4632cfd088942c4e1284395b002399e6"
+    sha256 ventura:       "52f2e22e318e86be801f33224f294cb0f6a9b1d128ca61f960213b3a13e90cdc"
+    sha256 arm64_linux:   "2fff676be7015b70281d75eca4df1b4c9386ae844b116203c637381b743ed145"
+    sha256 x86_64_linux:  "a55866d0be06c40834a291dfc51adafd9b7aa63aeb1a6bafe6a72124475a2c35"
   end
 
   keg_only :provided_by_macos

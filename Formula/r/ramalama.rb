@@ -3,8 +3,8 @@ class Ramalama < Formula
 
   desc "Goal of RamaLama is to make working with AI boring"
   homepage "https://github.com/containers/ramalama"
-  url "https://files.pythonhosted.org/packages/f9/8e/2de9843021e00b490a0ab7238da11699341804c1c5b76ae5cd9f980df5de/ramalama-0.12.1.tar.gz"
-  sha256 "f372433dc6a9bf0adc01b3f0b252101a44fd13fc19ad0f73b0a5ebdf81d69b10"
+  url "https://files.pythonhosted.org/packages/ff/d9/ccd94fabde435a22815485e68d1800bd74b57ccda51cab6528930651bca5/ramalama-0.12.2.tar.gz"
+  sha256 "a1eabbb03e2d5f926a3dfef953fcaaedbc13b58002cda81306b0f9fd1558d915"
   license "MIT"
 
   bottle do
@@ -37,7 +37,7 @@ class Ramalama < Formula
   test do
     system bin/"ramalama", "pull", "tinyllama"
     list_output = shell_output("#{bin}/ramalama list")
-    assert_match "tinyllama", list_output
+    assert_match "TinyLlama", list_output
 
     inspect_output = shell_output("#{bin}/ramalama inspect tinyllama")
     assert_match "Format: GGUF", inspect_output

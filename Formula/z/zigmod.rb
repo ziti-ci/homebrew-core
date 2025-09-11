@@ -20,13 +20,14 @@ class Zigmod < Formula
   end
 
   depends_on "pkgconf" => :build
-  depends_on "zig"
+  depends_on "zig@0.14"
 
   def install
     # Fix illegal instruction errors when using bottles on older CPUs.
     # https://github.com/Homebrew/homebrew-core/issues/92282
     cpu = case Hardware.oldest_cpu
     when :arm_vortex_tempest then "apple_m1" # See `zig targets`.
+    when :armv8 then "xgene1" # Closest to `-march=armv8-a`
     else Hardware.oldest_cpu
     end
 

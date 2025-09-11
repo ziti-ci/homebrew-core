@@ -37,6 +37,9 @@ class NetcdfCxx < Formula
     # https://github.com/Unidata/netcdf-cxx4/issues/151#issuecomment-2041111870
     args << "-DHDF5_C_LIBRARY_hdf5=#{Formula["hdf5"].opt_lib}"
 
+    # Workaround to build with CMake 4
+    args << "-DCMAKE_POLICY_VERSION_MINIMUM=3.5"
+
     system "cmake", "-S", ".", "-B", "build_shared", *args, "-DBUILD_SHARED_LIBS=ON"
     system "cmake", "--build", "build_shared"
     system "cmake", "--install", "build_shared"

@@ -26,6 +26,9 @@ class Clblast < Formula
   end
 
   def install
+    # Backport support for CMake 4, remove in next release
+    inreplace "CMakeLists.txt", "cmake_minimum_required(VERSION 2.8.11)", "cmake_minimum_required(VERSION 3.10)"
+
     system "cmake", "-S", ".", "-B", "build", "-DCMAKE_INSTALL_RPATH=#{rpath}", *std_cmake_args
     system "cmake", "--build", "build"
     system "cmake", "--install", "build"

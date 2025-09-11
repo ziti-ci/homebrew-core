@@ -27,7 +27,16 @@ class Keystone < Formula
   end
 
   def install
-    system "cmake", "-S", ".", "-B", "build", "-DPYTHON_EXECUTABLE=#{python}", *std_cmake_args
+    args = %W[
+      -DPYTHON_EXECUTABLE=#{python}
+    ]
+
+    # Workaround to build with CMake 4
+    inreplace %w[CMakeLists.txt llvm/CMakeLists.txt],
+              "cmake_policy(SET CMP0051 OLD)", ""
+    args << "-DCMAKE_POLICY_VERSION_MINIMUM=3.5"
+
+    system "cmake", "-S", ".", "-B", "build", *args, *std_cmake_args
     system "cmake", "--build", "build"
     system "cmake", "--install", "build"
   end

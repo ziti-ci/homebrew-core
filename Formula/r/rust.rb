@@ -16,6 +16,7 @@ class Rust < Formula
   end
 
   bottle do
+    sha256 cellar: :any,                 arm64_tahoe:   "0436d82ec2803595a5b659c2b441a3ea9aa02cc70accbaa10803b42ab7f25403"
     sha256 cellar: :any,                 arm64_sequoia: "dbcd171187b97b0ca7fc9147e347a226500153fd6f46b8034702a490c2d3c633"
     sha256 cellar: :any,                 arm64_sonoma:  "b0cf975408077c6fb6abdec5733f91a052c55dd4dc5755183b94c1a85f52ca7d"
     sha256 cellar: :any,                 arm64_ventura: "90262213b95acade24d5fbda0b11b363b1967d55cf1ba9a1438fb0e0d949932e"

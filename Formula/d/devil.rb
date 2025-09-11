@@ -59,7 +59,10 @@ class Devil < Formula
   patch :DATA
 
   def install
-    system "cmake", "-S", "DevIL", "-B", "build", *std_cmake_args
+    system "cmake", "-S", "DevIL", "-B", "build",
+                    "-DCMAKE_INSTALL_RPATH=#{rpath}",
+                    "-DCMAKE_POLICY_VERSION_MINIMUM=3.5",
+                    *std_cmake_args
     system "cmake", "--build", "build"
     system "cmake", "--install", "build"
   end

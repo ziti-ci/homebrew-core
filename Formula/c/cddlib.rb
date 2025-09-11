@@ -1,12 +1,10 @@
 class Cddlib < Formula
   desc "Double description method for general polyhedral cones"
   homepage "https://www.inf.ethz.ch/personal/fukudak/cdd_home/"
-  url "https://github.com/cddlib/cddlib/releases/download/0.94m/cddlib-0.94m.tar.gz"
-  sha256 "70dffdb3369b8704dc75428a1b3c42ab9047b81ce039f12f427e2eb2b1b0dee2"
+  url "https://github.com/cddlib/cddlib/releases/download/0.94n/cddlib-0.94n.tar.gz"
+  sha256 "b87ee07ba2c1d0ab92a3e4eccacdf568f981a095a392e3b9efd7e7e4a9e125b1"
   license "GPL-2.0-or-later"
   version_scheme 1
-
-  no_autobump! because: :requires_manual_review
 
   bottle do
     sha256 cellar: :any,                 arm64_sequoia:  "2660439f6e26917107af0a3e236d4ca2a9985b93f07dab226edcf7c2b16d5f01"

@@ -1,8 +1,8 @@
 class Gobo < Formula
   desc "Free and portable Eiffel tools and libraries"
-  homepage "http://www.gobosoft.com/"
-  url "https://downloads.sourceforge.net/project/gobo-eiffel/gobo-eiffel/22.01/gobo2201-src.tar.gz"
-  sha256 "ed2d82ce3c271e60914a42bde1d1c99446df8902ae1b62fd0e4dca2b99de8068"
+  homepage "https://www.gobosoft.com/"
+  url "https://downloads.sourceforge.net/project/gobo-eiffel/gobo-eiffel/25.09/gobo-25.09.tar.gz"
+  sha256 "40f7b64dbbeca28865c78df07194ac5da2ec701a41c53ed7e137337a03a2e38a"
   license "MIT"
 
   no_autobump! because: :requires_manual_review
@@ -25,13 +25,6 @@ class Gobo < Formula
   depends_on "eiffelstudio" => :test
 
   def install
-    # Workaround to support arm64 linux as upstream is based on an older Eiffel.
-    # EiffelStduio 23.09 was first open-source version to support arm64 linux.
-    if OS.linux? && Hardware::CPU.arm?
-      inreplace "tool/gec/bootstrap/gec8.c", 'GE_ms8("linux-x86-64", 12);', 'GE_ms8("linux-arm64", 11);'
-      inreplace "library/tools/src/support/et_ise_variables.e", ':= "linux-x86-64"', ':= "linux-arm64"'
-    end
-
     ENV["GOBO"] = buildpath
     ENV.prepend_path "PATH", buildpath/"bin"
     # The value for compiler needs to be an unversioned name, but it will still use

@@ -5,6 +5,7 @@ class Zip < Formula
   version "3.0"
   sha256 "f0e8bb1f9b7eb0b01285495a2699df3a4b766784c1765a8f1aeedf63c0806369"
   license "Info-ZIP"
+  revision 1
 
   livecheck do
     url :stable
@@ -36,20 +37,26 @@ class Zip < Formula
 
   # Upstream is unmaintained so we use the Debian patchset:
   # https://packages.debian.org/sid/zip
+  # Skipping 12-fix-build-with-gcc-14.patch as may be glibc-only
   patch do
-    url "https://deb.debian.org/debian/pool/main/z/zip/zip_3.0-11.debian.tar.xz"
-    sha256 "c5c0714a88592f9e02146bfe4a8d26cd9bd97e8d33b1efc8b37784997caa40ed"
+    url "https://deb.debian.org/debian/pool/main/z/zip/zip_3.0-15.debian.tar.xz"
+    sha256 "6dc1711c67640e8d1dee867ff53e84387ddb980c40885bd088ac98c330bffce9"
     apply %w[
-      patches/01-typo-it-is-transferring-not-transfering
-      patches/02-typo-it-is-privileges-not-priviliges
-      patches/03-manpages-in-section-1-not-in-section-1l
-      patches/04-do-not-set-unwanted-cflags
-      patches/05-typo-it-is-preceding-not-preceeding
-      patches/06-stack-markings-to-avoid-executable-stack
-      patches/07-fclose-in-file-not-fclose-x
-      patches/08-hardening-build-fix-1
-      patches/09-hardening-build-fix-2
-      patches/10-remove-build-date
+      patches/01-typo-it-is-transferring-not-transfering.patch
+      patches/02-typo-it-is-privileges-not-priviliges.patch
+      patches/03-manpages-in-section-1-not-in-section-1l.patch
+      patches/04-do-not-set-unwanted-cflags.patch
+      patches/05-typo-it-is-preceding-not-preceeding.patch
+      patches/06-stack-markings-to-avoid-executable-stack.patch
+      patches/07-fclose-in-file-not-fclose-x.patch
+      patches/08-hardening-build-fix-1.patch
+      patches/09-hardening-build-fix-2.patch
+      patches/10-remove-build-date.patch
+      patches/11-typo-it-is-ambiguities-not-amgibuities.patch
+      patches/13-typo-it-is-os-2-not-risc-os-2.patch
+      patches/14-buffer-overflow-unicode-filename.patch
+      patches/15-buffer-overflow-cve-2018-13410.patch
+      patches/16-fix-symlink-update-detection.patch
     ]
   end
 

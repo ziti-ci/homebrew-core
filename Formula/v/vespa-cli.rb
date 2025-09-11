@@ -1,8 +1,8 @@
 class VespaCli < Formula
   desc "Command-line tool for Vespa.ai"
   homepage "https://vespa.ai"
-  url "https://github.com/vespa-engine/vespa/archive/refs/tags/v8.578.22.tar.gz"
-  sha256 "76d04f7208d405631f4f03265307b4a1e3cf740bbe237a2d9338da1e94a48b75"
+  url "https://github.com/vespa-engine/vespa/archive/refs/tags/v8.579.17.tar.gz"
+  sha256 "5fe7efee2ca94e3a068ba2cf237f7e45076844a00ba9a6b42409e1e0539c4a91"
   license "Apache-2.0"
 
   livecheck do
@@ -10,8 +10,6 @@ class VespaCli < Formula
     regex(/\D*?(\d+(?:\.\d+)+)(?:-\d+)?/i)
     strategy :github_latest
   end
-
-  no_autobump! because: :bumped_by_upstream
 
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_sequoia: "f977c950d2961860c511534ed06a1d44d7ce46d0eb13e216d330a60332082e3e"

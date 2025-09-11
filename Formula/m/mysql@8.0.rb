@@ -17,6 +17,7 @@ class MysqlAT80 < Formula
   no_autobump! because: :requires_manual_review
 
   bottle do
+    sha256 arm64_tahoe:   "beb7fdd760760aaefbee111e2c79881662f7d306ce977f839f50dd17d3c913b3"
     sha256 arm64_sequoia: "439c907122db68dae5bccd5bd64d4cd61b56337586183462a370dde96c5bec44"
     sha256 arm64_sonoma:  "0c774e4e3af7def9666283b902d288811722dc7dd10b29340ed8765c1d501117"
     sha256 arm64_ventura: "b3bc3ca9b2a54cd06cab9d53cff256bdee1fd02646e4277ae938645f81e50cc4"

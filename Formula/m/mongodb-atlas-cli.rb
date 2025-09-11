@@ -1,8 +1,8 @@
 class MongodbAtlasCli < Formula
   desc "Atlas CLI enables you to manage your MongoDB Atlas"
   homepage "https://www.mongodb.com/docs/atlas/cli/stable/"
-  url "https://github.com/mongodb/mongodb-atlas-cli/archive/refs/tags/atlascli/v1.46.4.tar.gz"
-  sha256 "d3ddd1a1f3dc603cb2516215517c56278ea88557bed954fbb6ea3d51a1dd00e5"
+  url "https://github.com/mongodb/mongodb-atlas-cli/archive/refs/tags/atlascli/v1.47.0.tar.gz"
+  sha256 "f32667d98f118854e11ca718077adfcc501dc92ebe5d9adde9b94b8d75d1fb28"
   license "Apache-2.0"
   head "https://github.com/mongodb/mongodb-atlas-cli.git", branch: "master"
 
@@ -37,7 +37,7 @@ class MongodbAtlasCli < Formula
 
   test do
     assert_match "atlascli version: #{version}", shell_output("#{bin}/atlas --version")
-    assert_match "Error: this action requires authentication", shell_output("#{bin}/atlas projects ls 2>&1", 1)
+    assert_match "Error: unauthorized", shell_output("#{bin}/atlas projects ls 2>&1", 1)
     assert_match "PROFILE NAME", shell_output("#{bin}/atlas config ls")
   end
 end

@@ -20,6 +20,8 @@ class Libiconv < Formula
   depends_on "automake" => :build
   depends_on :macos # is not needed on Linux, where iconv.h is provided by glibc
 
+  uses_from_macos "gperf"
+
   patch do
     url "https://raw.githubusercontent.com/Homebrew/patches/9be2793af/libiconv/patch-utf8mac.diff"
     sha256 "e8128732f22f63b5c656659786d2cf76f1450008f36bcf541285268c66cabeab"
@@ -33,13 +35,20 @@ class Libiconv < Formula
     # Reported at https://savannah.gnu.org/bugs/index.php?66170
     ENV.append_to_cflags "-Wno-incompatible-function-pointer-types" if DevelopmentTools.clang_build_version >= 1500
 
-    system "./configure", "--disable-debug",
-                          "--disable-dependency-tracking",
-                          "--prefix=#{prefix}",
-                          "--enable-extra-encodings",
-                          "--enable-static",
-                          "--docdir=#{doc}"
-    system "make", "-f", "Makefile.devel", "CFLAGS=#{ENV.cflags}", "CC=#{ENV.cc}"
+    args = %W[
+      --enable-extra-encodings
+      --enable-static
+      --docdir=#{doc}
+    ]
+    system "./configure", *args, *std_configure_args
+
+    make_args = %W[
+      CFLAGS=#{ENV.cflags}
+      CC=#{ENV.cc}
+      ACLOCAL=aclocal
+      AUTOMAKE=automake
+    ]
+    system "make", "-f", "Makefile.devel", *make_args
     system "make", "install"
   end
 

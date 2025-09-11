@@ -27,7 +27,10 @@ class Libbtbb < Formula
   depends_on "python@3.13"
 
   def install
-    system "cmake", "-S", ".", "-B", "build", "-DENABLE_PYTHON=OFF", *std_cmake_args
+    args = %w[-DENABLE_PYTHON=OFF]
+    # Workaround to build with CMake 4
+    args << "-DCMAKE_POLICY_VERSION_MINIMUM=3.5"
+    system "cmake", "-S", ".", "-B", "build", *args, *std_cmake_args
     system "cmake", "--build", "build"
     system "cmake", "--install", "build"
 

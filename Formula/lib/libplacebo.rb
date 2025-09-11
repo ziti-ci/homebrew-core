@@ -24,6 +24,12 @@ class Libplacebo < Formula
       url "https://files.pythonhosted.org/packages/b2/97/5d42485e71dfc078108a86d6de8fa46db44a1a9295e89c5d6d4a06e23a62/markupsafe-3.0.2.tar.gz"
       sha256 "ee55d3edf80167e48ea11a923c7386f4669df67d7994554387f84e7d8b0a2bf0"
     end
+
+    # Backport fix for Python 3.13.6+
+    patch do
+      url "https://code.videolan.org/videolan/libplacebo/-/commit/12509c0f1ee8c22ae163017f0a5e7b8a9d983a17.diff"
+      sha256 "14ab95f72600c2c6862475838ca5bd498a3a52082f6fdca696473856e503f7f7"
+    end
   end
 
   bottle do

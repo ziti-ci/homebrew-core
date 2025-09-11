@@ -29,7 +29,18 @@ class Hackrf < Formula
   depends_on "libusb"
 
   def install
-    args = OS.linux? ? ["-DUDEV_RULES_GROUP=plugdev", "-DUDEV_RULES_PATH=#{lib}/udev/rules.d"] : []
+    args = %W[
+      -DCMAKE_INSTALL_RPATH=#{rpath}
+    ]
+    if OS.linux?
+      args += %W[
+        -DUDEV_RULES_GROUP=plugdev
+        -DUDEV_RULES_PATH=#{lib}/udev/rules.d
+      ]
+    end
+
+    # Workaround to build with CMake 4
+    args << "-DCMAKE_POLICY_VERSION_MINIMUM=3.5"
 
     system "cmake", "-S", "host", "-B", "build", *args, *std_cmake_args
     system "cmake", "--build", "build"

@@ -3,8 +3,8 @@ class Omnara < Formula
 
   desc "Talk to Your AI Agents from Anywhere"
   homepage "https://omnara.com/"
-  url "https://files.pythonhosted.org/packages/85/29/706c1d13add673d78c4c39a8aa83164aa11f90efe46e7d19e376fc6f7806/omnara-1.6.12.tar.gz"
-  sha256 "1c90cf75052811c2684961fb45bb4928a23551aabc9dc3520512ac0e96e2addc"
+  url "https://files.pythonhosted.org/packages/c7/fe/54cf273dbdcc6436c5c23df494ff8f6cdc35d3168c8cdaf9c2739b5e69db/omnara-1.6.13.tar.gz"
+  sha256 "57d3a5b7255812660c950fc8d0febeeeea03c26d0e82732a174abf2043f9f355"
   license "Apache-2.0"
 
   bottle do
@@ -179,8 +179,8 @@ class Omnara < Formula
   end
 
   resource "mcp" do
-    url "https://files.pythonhosted.org/packages/66/3c/82c400c2d50afdac4fbefb5b4031fd327e2ad1f23ccef8eee13c5909aa48/mcp-1.13.1.tar.gz"
-    sha256 "165306a8fd7991dc80334edd2de07798175a56461043b7ae907b279794a834c5"
+    url "https://files.pythonhosted.org/packages/95/fd/d6e941a52446198b73e5e4a953441f667f1469aeb06fb382d9f6729d6168/mcp-1.14.0.tar.gz"
+    sha256 "2e7d98b195e08b2abc1dc6191f6f3dc0059604ac13ee6a40f88676274787fac4"
   end
 
   resource "mdurl" do

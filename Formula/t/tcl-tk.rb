@@ -51,13 +51,14 @@ class TclTk < Formula
     sha256 "642c2c679c9017ab6fded03324e4ce9b5f4292473b62520e82aacebb63c0ce20"
   end
 
-  # There is no tcltls release compatible with TCL 9 so using latest
-  # check-in at https://core.tcl-lang.org/tcltls/timeline
+  # There is no tcltls release compatible with TCL 9 and upstream Fossil repo
+  # added bot check that breaks download so instead track the Debian version.
+  # TODO: Track official versions once available
   # Ref: https://core.tcl-lang.org/tcltls/tktview/f5a0fe8ddf
   # Ref: https://sourceforge.net/p/tcl/mailman/tcl-core/thread/eab3a8bf-b846-45ef-a80c-6bc94d6dfe91@elmicron.de/
   resource "tcltls" do
-    url "https://core.tcl-lang.org/tcltls/tarball/e03e54ee87/tcltls-e03e54ee87.tar.gz"
-    sha256 "db473afa98924c0a2b44ecacea35bb2609e6810de1df389ad55bb3688023f8d1"
+    url "https://deb.debian.org/debian/pool/main/t/tcltls/tcltls_1.8.0.orig.tar.gz"
+    sha256 "720a9e0bed3ba41b1ad141443c8651b7d0dc8fc9087f2077accb1ba9a5736489"
   end
 
   resource "tk" do
@@ -139,6 +140,7 @@ class TclTk < Formula
                             "--prefix=#{prefix}",
                             "--with-tcl=#{lib}",
                             "--with-tclinclude=#{include}/tcl-tk",
+                            "--includedir=#{include}/tcl-tk",
                             "--mandir=#{man}"
       system "make", "install"
     end

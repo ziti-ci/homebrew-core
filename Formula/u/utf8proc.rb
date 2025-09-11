@@ -1,8 +1,8 @@
 class Utf8proc < Formula
   desc "Clean C library for processing UTF-8 Unicode data"
   homepage "https://juliastrings.github.io/utf8proc/"
-  url "https://github.com/JuliaStrings/utf8proc/archive/refs/tags/v2.10.0.tar.gz"
-  sha256 "6f4f1b639daa6dca9f80bc5db1233e9cbaa31a67790887106160b33ef743f136"
+  url "https://github.com/JuliaStrings/utf8proc/archive/refs/tags/v2.11.0.tar.gz"
+  sha256 "c24379b5fa0a429a1f9a3fc23b44a75f2b141a34c09146a529a55d20a5808070"
   license all_of: ["MIT", "Unicode-DFS-2015"]
   head "https://github.com/JuliaStrings/utf8proc.git", branch: "master"
 

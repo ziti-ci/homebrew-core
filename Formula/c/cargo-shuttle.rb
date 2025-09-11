@@ -1,8 +1,8 @@
 class CargoShuttle < Formula
   desc "Build & ship backends without writing any infrastructure files"
   homepage "https://shuttle.dev"
-  url "https://github.com/shuttle-hq/shuttle/archive/refs/tags/v0.57.0.tar.gz"
-  sha256 "155ad17fb2d7021aac55563a3fd6e387ec893fac8de1d3378879e77b936a134e"
+  url "https://github.com/shuttle-hq/shuttle/archive/refs/tags/v0.57.1.tar.gz"
+  sha256 "3f17e62f6a2526e3ce4be9bd1b35329bebbf5e4ab32c4c51831e2ec999ca8943"
   license "Apache-2.0"
   head "https://github.com/shuttle-hq/shuttle.git", branch: "main"
 

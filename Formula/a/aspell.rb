@@ -8,6 +8,7 @@ class Aspell < Formula
   revision 1
 
   bottle do
+    sha256 arm64_tahoe:    "383f92d2e0a58c88f3d8022f0bbf068d8111fd754fc320d389a866c4b9bc5ca2"
     sha256 arm64_sequoia:  "2dead356b82d0553b5a4efe4ed8a061649c8e2d04fbc7f96293cfc2956813de7"
     sha256 arm64_sonoma:   "8d5594cd0235f14ef183062e5e1ff997470f0c5cf9a522cd488997f206df28ae"
     sha256 arm64_ventura:  "c36b4d14b5b78a2b61a21878bec4a060376fc72a2bdd975c0a32c0f88fc0865b"

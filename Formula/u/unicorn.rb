@@ -11,6 +11,7 @@ class Unicorn < Formula
 
   bottle do
     rebuild 1
+    sha256 cellar: :any,                 arm64_tahoe:   "e317a3a90c3c1209bd849383f6b3a4b12c4bce696e1265c86ed4f4982581d274"
     sha256 cellar: :any,                 arm64_sequoia: "717aaa05f34162a41e10f5abfe602e4782dd96f36f430cf95a54a383f946a138"
     sha256 cellar: :any,                 arm64_sonoma:  "ea180ba3dcebf82a08b4f609d165939c6882117b5b05d928ce82ca9e932f9a4c"
     sha256 cellar: :any,                 arm64_ventura: "4840fa33b6992f0c941c4df168c856af825d1e4304a8c3b93f61dab9a72e6adb"

@@ -7,13 +7,13 @@ class CargoShuttle < Formula
   head "https://github.com/shuttle-hq/shuttle.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any,                 arm64_sequoia: "30b00e05b0c3a4da68b43a9842de51ec2356895edb9bda699b45fb765e3830fb"
-    sha256 cellar: :any,                 arm64_sonoma:  "e3b40f6dc2c2b8e26600955f3ee82a7d301f99a7b752995d4261a100e34f4147"
-    sha256 cellar: :any,                 arm64_ventura: "7e32317f04d694559c036470fd3dfedfa309b2ba8c918cc7f76329296c8ecc13"
-    sha256 cellar: :any,                 sonoma:        "7900b0c068ddbcb37f7b31c67b0555826a562534b8cb4b6839ca4f6af96ad559"
-    sha256 cellar: :any,                 ventura:       "c9b51afc485e0a778e04a545be0fc923050929823ab063eb6919966ce55f3fd3"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "dd1bac5c670ce7df86dcebc3c354d02fc82dd7b845f00d2b33a940f6e1b6ccf9"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "3983690938d13f3736859a96ad6d1b9dcc6cfca8c167d09872a0169f189ce7fc"
+    sha256 cellar: :any,                 arm64_sequoia: "5830c4a45616551fe4dbf4aa0851ae33fb8cd4987b8ec7cba3b7a4e554b2fe74"
+    sha256 cellar: :any,                 arm64_sonoma:  "e7d77c0c262799e5ee9c9367da015573157bffce666ce38a1669f488ee64aae2"
+    sha256 cellar: :any,                 arm64_ventura: "e7ff5efa5b6617bf1024c2608394160fafce7e6666fbe801f2045d54612357f4"
+    sha256 cellar: :any,                 sonoma:        "81cf33e75b001099077149eb1ddde2cc4520ea1e30e7c587f13453535a6dfc96"
+    sha256 cellar: :any,                 ventura:       "6d37afff2e991924d7ef57523a775a04731e72c2dea684a17e13a6410b153bfe"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "0548bf9f35c4fa158a57cea0c34c6a24663fc211d7a6982d833697fcbc466c4f"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "706dd5fd982160de0b09ed654235f63f8830ad435f9a1a34815bd0efc251a7c4"
   end
 
   depends_on "pkgconf" => :build

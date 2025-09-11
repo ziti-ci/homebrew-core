@@ -29,6 +29,12 @@ class Yajl < Formula
 
   depends_on "cmake" => :build
 
+  # Workaround to build with CMake 4
+  patch do
+    url "https://github.com/lloyd/yajl/commit/6fe59ca50dfd65bdb3d1c87a27245b2dd1a072f9.patch?full_index=1"
+    sha256 "b059e4181aca7c50c71924632b5e1dc263ea05a2e7fc6def095c0cc65398282c"
+  end
+
   def install
     ENV.deparallelize
 

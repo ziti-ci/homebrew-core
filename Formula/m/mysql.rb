@@ -4,6 +4,7 @@ class Mysql < Formula
   # homepage "https://dev.mysql.com/doc/refman/9.3/en/"
   homepage "https://github.com/mysql/mysql-server"
   url "https://cdn.mysql.com/Downloads/MySQL-9.4/mysql-9.4.0.tar.gz"
+  mirror "https://repo.mysql.com/apt/ubuntu/pool/mysql-innovation/m/mysql-community/mysql-community_9.4.0.orig.tar.gz"
   sha256 "6bb509c54e58b54abbefa49e296e7220f5e7cfe446914ba3615f594967cfa921"
   license "GPL-2.0-only" => { with: "Universal-FOSS-exception-1.0" }
   revision 3

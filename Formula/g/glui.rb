@@ -23,6 +23,8 @@ class Glui < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "a89d82496e644e5501928803452b47ff2399c9386757b6013e9a58868255bf90"
   end
 
+  depends_on "cmake" => :build
+
   on_linux do
     depends_on "freeglut"
     depends_on "mesa"
@@ -35,11 +37,25 @@ class Glui < Formula
     sha256 "b1afada854f920692ab7cb6b6292034f3488936c4332e3e996798ee494a3fdd7"
   end
 
+  # Backport fix for CMake build linking on macOS
+  patch do
+    url "https://github.com/libglui/glui/commit/eaca63aea72ed4db055514dfec2abc71a106aa70.patch?full_index=1"
+    sha256 "81cd6400037f9082ffd2926a01458c40c0d81c71cb7786cb667909ef64b1541b"
+  end
+
+  # Backport support for CMake install
+  patch do
+    url "https://github.com/libglui/glui/commit/4299e8fa43bb1e67370be36cad4b21115ab88af9.patch?full_index=1"
+    sha256 "9070d9a3f44ffd3787762125fb194d92e24a9bc0b5e27bc5571ac09718199404"
+  end
+
   def install
-    system "make", "setup"
-    system "make", "lib/libglui.a"
-    lib.install "lib/libglui.a"
-    include.install "include/GL"
+    # Find framework first to avoid linking to XQuartz libraries if installed
+    system "cmake", "-S", ".", "-B", "build",
+                    "-DCMAKE_POLICY_VERSION_MINIMUM=3.5",
+                    *std_cmake_args(find_framework: "FIRST")
+    system "cmake", "--build", "build"
+    system "cmake", "--install", "build"
   end
 
   test do

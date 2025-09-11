@@ -4,7 +4,7 @@ class Blitz < Formula
   url "https://github.com/blitzpp/blitz/archive/refs/tags/1.0.2.tar.gz"
   sha256 "500db9c3b2617e1f03d0e548977aec10d36811ba1c43bb5ef250c0e3853ae1c2"
   license "Artistic-2.0"
-  head "https://github.com/blitzpp/blitz.git", branch: "master"
+  head "https://github.com/blitzpp/blitz.git", branch: "main"
 
   no_autobump! because: :requires_manual_review
 
@@ -30,7 +30,9 @@ class Blitz < Formula
   uses_from_macos "python" => :build
 
   def install
-    system "cmake", "-S", ".", "-B", "build", *std_cmake_args
+    # Workaround to build with CMake 4
+    args = %w[-DCMAKE_POLICY_VERSION_MINIMUM=3.5]
+    system "cmake", "-S", ".", "-B", "build", *args, *std_cmake_args
     system "cmake", "--build", "build"
     system "cmake", "--install", "build"
   end

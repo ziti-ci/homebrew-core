@@ -25,6 +25,12 @@ class JwtHack < Formula
     depends_on "openssl@3" => :build
   end
 
+  # add missing fields, upstream pr ref, https://github.com/hahwul/jwt-hack/pull/77
+  patch do
+    url "https://github.com/hahwul/jwt-hack/commit/7e607dd3d261a1a97e4bf1a056aecd9a3ba2f686.patch?full_index=1"
+    sha256 "52a71652d0621103994e175eb29ed26991e5fcfba459feeadf66ecc07688eb56"
+  end
+
   def install
     system "cargo", "install", *std_cargo_args
   end

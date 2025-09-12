@@ -14,6 +14,7 @@ class Gitingest < Formula
     sha256 cellar: :any,                 arm64_ventura: "bde8af127cc409051c74670e04620e11020ad02220fb4509895480c155d519f5"
     sha256 cellar: :any,                 sonoma:        "b7856fca688f589ac8451bb1c06c8445149645150cd4076bb56f95067eb66520"
     sha256 cellar: :any,                 ventura:       "4097f91577743b6ecd20049cab75eb547fcaa4d16c22bde00edeadc1f3ceeff2"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "4758289236f6193a570fa26ff468dfb87219e2c3f076385bc9c0d1e8e48208d9"
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "c2bd156be689dc08d39f27715f039133a0e087b747f3bd8008a8c70712f2ae5b"
   end
 

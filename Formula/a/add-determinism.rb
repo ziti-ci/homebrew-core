@@ -6,8 +6,7 @@ class AddDeterminism < Formula
   license "GPL-3.0-or-later"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_linux:  "5a1f38d1d36f4c56ee8a025f92c03984e4d38fccc6f01791c6aed66876bab144"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "831ddbdb5f413ad31507abe11a6ad88e3f591439600a32c3bda7e27eee969c4e"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "767dc6d4f1508e275358111572148658c5e6a2c1cf43a4eac965c3d659d2ef4e"
   end
 
   depends_on "llvm" => :build

@@ -64,7 +64,7 @@ class Hashcat < Formula
     ]
     system "make", *args
     system "make", "install", *args
-    bin.install "hashcat" => "hashcat_bin"
+    mv bin/"hashcat", bin/"hashcat_bin"
     (bin/"hashcat").write_env_script bin/"hashcat_bin", XDG_DATA_HOME: share
   end
 

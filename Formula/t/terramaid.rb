@@ -7,13 +7,10 @@ class Terramaid < Formula
   head "https://github.com/RoseSecurity/Terramaid.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "f2242d757ceec72f484f14717b00ba353d8ae78225188dc6f34f560102aecd22"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "4d7335adf0af9aec226f576e4c63bc476ef809ff35aab591dd9136a3603e26b5"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "4d7335adf0af9aec226f576e4c63bc476ef809ff35aab591dd9136a3603e26b5"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "4d7335adf0af9aec226f576e4c63bc476ef809ff35aab591dd9136a3603e26b5"
-    sha256 cellar: :any_skip_relocation, sonoma:        "b5a8610e7841bc1800f041c69779679105a9c8caee060a2526e7f7018fbfa534"
-    sha256 cellar: :any_skip_relocation, ventura:       "b5a8610e7841bc1800f041c69779679105a9c8caee060a2526e7f7018fbfa534"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "54ea3cb0d705a2ed687aa69a3392790af9f7deb1f1e3b0e807c8e97c3cf05a69"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "9e1e2c426929b914905c827f9b35aa50789fc07316ad9a6bd4d673eea741b8f3"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "9e1e2c426929b914905c827f9b35aa50789fc07316ad9a6bd4d673eea741b8f3"
+    sha256 cellar: :any_skip_relocation, sonoma:        "aad356c90ad9687a54ec5e5858b8822dece1ced6960b243dca37e900abc07649"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "e354b3f9ecd904eaa3d44871c1b4f4e37e448b4145bfdeaeeda41f11631af5df"
   end
 
   depends_on "go" => [:build, :test]

@@ -15,6 +15,7 @@ class Fish < Formula
   pour_bottle? only_if: :default_prefix
 
   bottle do
+    sha256                               arm64_tahoe:   "0578ba2bf7118c9dc8c61c72f9f5d2aca1ee3151d297244b6cde6faee576680d"
     sha256                               arm64_sequoia: "b3d13561b06761af6ebdcfc744b22d27b69dfa0a3b7910f08a63541af4717b0d"
     sha256                               arm64_sonoma:  "cf3564c7d104066440fa8f9f6365c14d6252ad057393005d81457bd1a2767d2a"
     sha256                               sonoma:        "f9740b35d347d72e94237851bf88b028ae821bc444dc3796fadac379b2d9becb"

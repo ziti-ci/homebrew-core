@@ -7,6 +7,7 @@ class Gotestsum < Formula
   head "https://github.com/gotestyourself/gotestsum.git", branch: "main"
 
   bottle do
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "14e0a77f3a209ac4a89f01392dfe1287abd44e0feff5a074836a245c93175ce4"
     sha256 cellar: :any_skip_relocation, arm64_sequoia: "14e0a77f3a209ac4a89f01392dfe1287abd44e0feff5a074836a245c93175ce4"
     sha256 cellar: :any_skip_relocation, arm64_sonoma:  "14e0a77f3a209ac4a89f01392dfe1287abd44e0feff5a074836a245c93175ce4"
     sha256 cellar: :any_skip_relocation, sonoma:        "56fbdac1bdbbd18d6bd1143d82682005c595e1853145b7bd719c3eb3ebbaf43a"

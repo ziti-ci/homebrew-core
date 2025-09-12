@@ -6,6 +6,7 @@ class Libselinux < Formula
   license :public_domain
 
   bottle do
+    sha256 cellar: :any_skip_relocation, arm64_linux:  "455ac9f48180d1ee022319db56c4aec5cdf130eafc3cc647b10230159688597e"
     sha256 cellar: :any_skip_relocation, x86_64_linux: "5239cd516c3408456195f3922e76a447476eee220df3a03bb13be8de12d31bf7"
   end
 

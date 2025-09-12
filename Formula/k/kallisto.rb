@@ -21,9 +21,23 @@ class Kallisto < Formula
 
   uses_from_macos "zlib"
 
+  # Fix compilation error in Bifrost
+  # https://github.com/pachterlab/kallisto/issues/488
+  patch do
+    url "https://github.com/pmelsted/bifrost/commit/d228b532a2cd5d3a598092ea4c46d1e997e50737.patch?full_index=1"
+    sha256 "75ae03575fc1ab9826504ec297d2b424fe779dae6e9edebdeaf78a8a8b4e55cd"
+    directory "ext/bifrost"
+  end
+
   def install
+    # Fix to error: unsupported option '-mno-avx2'
+    inreplace "ext/bifrost/CMakeLists.txt", "-mno-avx2", ""
+
     ENV["SDKROOT"] = MacOS.sdk_path if OS.mac?
     ENV.deparallelize
+
+    # Workaround to build with CMake 4
+    ENV["CMAKE_POLICY_VERSION_MINIMUM"] = "3.5"
 
     system "cmake", "-S", ".", "-B", "build", "-DUSE_HDF5=ON", *std_cmake_args
     system "cmake", "--build", "build"

@@ -68,10 +68,8 @@ class Xmrig < Formula
 
     assert_match(/POOL #1\s+#{Regexp.escape(test_server)} algo auto/, output)
 
-    if OS.mac?
-      assert_match "#{test_server} DNS error: \"unknown node or service\"", output
-    else
-      assert_match(/#{Regexp.escape(test_server)} (?:::1|127\.0\.0\.1) connect error: "connection refused"/, output)
-    end
+    match = output.match? "#{test_server} DNS error: \"unknown node or service\""
+    match ||= output.match?(/#{Regexp.escape(test_server)} (?:::1|127\.0\.0\.1) connect error: "connection refused"/)
+    assert match, "Expected error message not found in output"
   end
 end

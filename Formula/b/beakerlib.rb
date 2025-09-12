@@ -6,6 +6,7 @@ class Beakerlib < Formula
   license "GPL-2.0-only"
 
   bottle do
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "67c41cdb44b346377b71971b913532f6c71c9f5f5bfc3fd6b45f5fc958391880"
     sha256 cellar: :any_skip_relocation, arm64_sequoia: "9b0aa3088b422da626306b144531c0c4a3d27dfa6007d626528396c26c2c6cc0"
     sha256 cellar: :any_skip_relocation, arm64_sonoma:  "ae58c4f636b46fbb6180e2adf0320421a2cee7b164ca7212fd98edc1aa7f44ad"
     sha256 cellar: :any_skip_relocation, sonoma:        "9a35040b3c16fca97747cdc815bf33e5d207e8269bb8a1c7acb9cca010e61735"

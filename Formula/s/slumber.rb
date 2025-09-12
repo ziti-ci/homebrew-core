@@ -1,8 +1,8 @@
 class Slumber < Formula
   desc "Terminal-based HTTP/REST client"
   homepage "https://slumber.lucaspickering.me/"
-  url "https://github.com/LucasPickering/slumber/archive/refs/tags/v3.4.0.tar.gz"
-  sha256 "6be559a499be09b5db22d5a6b3401a6592412d2c938d1a9ce8bd8c7cd40648c7"
+  url "https://github.com/LucasPickering/slumber/archive/refs/tags/v4.0.0.tar.gz"
+  sha256 "01ccc586dceeb63bfa8c2f4797db4f0d5d52f51a2cb7b757a37da98333f4f960"
   license "MIT"
   head "https://github.com/LucasPickering/slumber.git", branch: "master"
 
@@ -27,20 +27,11 @@ class Slumber < Formula
 
     system bin/"slumber", "new"
     assert_match <<~YAML, (testpath/"slumber.yml").read
-      # For basic usage info, see:
-      # https://slumber.lucaspickering.me/getting_started.html
-      # For all collection options, see:
-      # https://slumber.lucaspickering.me/api/request_collection/index.html
-
-      name: My Collection
-
-      # Profiles are groups of data you can easily switch between. A common usage is
-      # to define profiles for various environments of a REST service
       profiles:
         example:
           name: Example Profile
           data:
-            host: https://httpbin.org
+            host: https://my-host
     YAML
   end
 end

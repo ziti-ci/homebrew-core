@@ -1,10 +1,10 @@
 class Leiningen < Formula
   desc "Build tool for Clojure"
   homepage "https://github.com/technomancy/leiningen"
-  url "https://github.com/technomancy/leiningen/archive/refs/tags/2.11.2.tar.gz"
-  sha256 "fe9ee17786be6c3cf4615688a2a82c173369657d84c1b2ffc00b7cd5fd7df1bc"
+  url "https://github.com/technomancy/leiningen/archive/refs/tags/2.12.0.tar.gz"
+  sha256 "a190d92325b552621b1709a42a2cb78c74ffd795269f48e7619031e1127ad542"
   license "EPL-1.0"
-  head "https://github.com/technomancy/leiningen.git", branch: "master"
+  head "https://github.com/technomancy/leiningen.git", branch: "main"
 
   bottle do
     rebuild 1
@@ -14,8 +14,8 @@ class Leiningen < Formula
   depends_on "openjdk"
 
   resource "jar" do
-    url "https://github.com/technomancy/leiningen/releases/download/2.11.2/leiningen-2.11.2-standalone.jar"
-    sha256 "7d31ae23ae769e927438b0cd55d15a93e7dabab09fd4fc15877979161e108774"
+    url "https://github.com/technomancy/leiningen/releases/download/2.12.0/leiningen-2.12.0-standalone.jar"
+    sha256 "b721a573af631784f27ccb52e719e6d1287d9d3951ad56d316d38f7ecfa81aa2"
 
     livecheck do
       formula :parent

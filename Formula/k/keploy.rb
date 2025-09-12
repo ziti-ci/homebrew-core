@@ -7,6 +7,7 @@ class Keploy < Formula
   head "https://github.com/keploy/keploy.git", branch: "main"
 
   bottle do
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "0c0e82ae0cd82dfa6d36c3a0cc2948e750f7c7fd138cc23336ec64d23c018102"
     sha256 cellar: :any_skip_relocation, arm64_sequoia: "0c0e82ae0cd82dfa6d36c3a0cc2948e750f7c7fd138cc23336ec64d23c018102"
     sha256 cellar: :any_skip_relocation, arm64_sonoma:  "0c0e82ae0cd82dfa6d36c3a0cc2948e750f7c7fd138cc23336ec64d23c018102"
     sha256 cellar: :any_skip_relocation, sonoma:        "826931c2e2960b421495cc5fcd33f6c8457f055b6fdecca6f4fdef783b507663"

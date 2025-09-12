@@ -9,6 +9,7 @@ class TrojanGo < Formula
 
   bottle do
     rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "e5ff7287bf3913b64c7f3a691df6229bd4a2dbb5f44d46e73ce1b36b968bfdc2"
     sha256 cellar: :any_skip_relocation, arm64_sequoia: "e5ff7287bf3913b64c7f3a691df6229bd4a2dbb5f44d46e73ce1b36b968bfdc2"
     sha256 cellar: :any_skip_relocation, arm64_sonoma:  "e5ff7287bf3913b64c7f3a691df6229bd4a2dbb5f44d46e73ce1b36b968bfdc2"
     sha256 cellar: :any_skip_relocation, sonoma:        "aef59484731100b7a80263353a251ad5c33281f0f3ce0fe4c3c427f42aaa3867"

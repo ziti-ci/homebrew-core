@@ -36,9 +36,8 @@ class Hishtory < Formula
   test do
     assert_match version.to_s, shell_output("#{bin}/hishtory --version")
 
-    output = shell_output("#{bin}/hishtory init")
+    output = shell_output("#{bin}/hishtory init --offline")
     assert_match "Setting secret hishtory key", output
-
     assert_match "Enabled: true", shell_output("#{bin}/hishtory status")
   end
 end

@@ -11,6 +11,7 @@ class AzureCoreCpp < Formula
   end
 
   bottle do
+    sha256 cellar: :any,                 arm64_tahoe:   "147b229f3cd5c72c2b6ff353dbd34a0677a5a140ab3d0352d51718a24fd7173e"
     sha256 cellar: :any,                 arm64_sequoia: "ba3db1c8658ac6e079e8ce49ff6100da42895193000081b2db75b5d5d39e5aee"
     sha256 cellar: :any,                 arm64_sonoma:  "32853f153fba753256d26039b0ca9da4a39d1c22b94a5ee94e5af03a599747ac"
     sha256 cellar: :any,                 arm64_ventura: "4966615792bec9650801744bccbe9d872d26b6a7974e6da7372fe61939d0fc4d"

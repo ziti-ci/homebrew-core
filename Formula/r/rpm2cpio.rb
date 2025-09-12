@@ -39,11 +39,11 @@ class Rpm2cpio < Formula
 
   test do
     resource "homebrew-testdata" do
-      url "https://rpmfind.net/linux/fedora/linux/releases/39/Everything/x86_64/os/Packages/h/hello-2.12.1-2.fc39.x86_64.rpm"
-      sha256 "10f9944f95ca54f224133cffab1cfab0c40e3adb64e4190d3d9e8f9dbed680f9"
+      url "https://github.com/github/gh-ost/releases/download/v1.1.7/gh-ost-1.1.7-1.x86_64.rpm"
+      sha256 "9e7c91d07ccae51c653252b8c58c148032f3785223bfa8e531eba81aa912b71a"
     end
 
     testpath.install resource "homebrew-testdata"
-    system bin/"rpm2cpio", "hello-2.12.1-2.fc39.x86_64.rpm"
+    system bin/"rpm2cpio", "gh-ost-1.1.7-1.x86_64.rpm"
   end
 end

@@ -8,6 +8,7 @@ class Gitingest < Formula
   license "MIT"
 
   bottle do
+    sha256 cellar: :any,                 arm64_tahoe:   "68eef31fc59a1ae7d078f8631dcb28e3cecddbb48ca9679ca632dac66cb10d4e"
     sha256 cellar: :any,                 arm64_sequoia: "3b39d0569b59a67a966c18d8de18c670c896531aa73ac96a04f7c4a6fc4960c3"
     sha256 cellar: :any,                 arm64_sonoma:  "ad6695789436fc5f5a187dbf1335c93779058a163cc9a15c26d8d2fe6d93d08c"
     sha256 cellar: :any,                 arm64_ventura: "bde8af127cc409051c74670e04620e11020ad02220fb4509895480c155d519f5"

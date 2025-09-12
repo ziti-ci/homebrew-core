@@ -5,6 +5,10 @@ class Libselinux < Formula
   sha256 "e7ee2c01dba64a0c35c9d7c9c0e06209d8186b325b0638a0d83f915cc3c101e8"
   license :public_domain
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "5239cd516c3408456195f3922e76a447476eee220df3a03bb13be8de12d31bf7"
+  end
+
   depends_on "pkgconf" => :build
   depends_on "libsepol"
   depends_on :linux

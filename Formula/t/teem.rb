@@ -10,6 +10,7 @@ class Teem < Formula
   no_autobump! because: :requires_manual_review
 
   bottle do
+    sha256 cellar: :any,                 arm64_tahoe:    "f4d6028758c3ab8fc8c0aac33a7d8ba0326c175d0cc4e2b0ec717b2d20e923da"
     sha256 cellar: :any,                 arm64_sequoia:  "81b45cdf2ea8755adac691f6e58accc314cf9ddfe9152c3f017fd839df3da9c2"
     sha256 cellar: :any,                 arm64_sonoma:   "3e9555bbe75fe5a36a3f62a36434158fa024153accdb69266ffce6d59254fed7"
     sha256 cellar: :any,                 arm64_ventura:  "675bc15ec206fbcdd01c475ae95b82f8fbb5f8143bd781ee87ba09971eb75d84"

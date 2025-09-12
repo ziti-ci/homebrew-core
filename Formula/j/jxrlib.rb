@@ -41,7 +41,12 @@ class Jxrlib < Formula
 
   def install
     inreplace "CMakeLists.txt", "@VERSION@", version.to_s
-    system "cmake", "-S", ".", "-B", "build", *std_cmake_args
+    args = %W[
+      -DCMAKE_INSTALL_RPATH=#{rpath}
+    ]
+    # Workaround to build with CMake 4
+    args << "-DCMAKE_POLICY_VERSION_MINIMUM=3.5"
+    system "cmake", "-S", ".", "-B", "build", *args, *std_cmake_args
     system "cmake", "--build", "build"
     system "cmake", "--install", "build"
   end

@@ -10,6 +10,13 @@ class Tkrzw < Formula
     regex(/href=.*?tkrzw[._-]v?(\d+(?:\.\d+)+)\.t/i)
   end
 
+  bottle do
+    sha256 arm64_sequoia: "ab5d487ff3e9827fdc4c61a698a2bd94ac7476b90530dcff5644a325ba8a93a7"
+    sha256 arm64_sonoma:  "70cbd979207abeae3c522f5f1a8fd8bf72eeeafdd015e80d780b185e7668b14c"
+    sha256 sonoma:        "c8a0f6879237655ef6a8e0a25293b3be58e87f6e65c0441690e409ad9337b75f"
+    sha256 x86_64_linux:  "8071105a6bd977363587e9d2995cc5d7b1a53da7a905d082df4033598ef1728e"
+  end
+
   uses_from_macos "zlib"
 
   def install

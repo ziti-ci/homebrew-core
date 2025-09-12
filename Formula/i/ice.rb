@@ -37,12 +37,22 @@ class Ice < Formula
   end
 
   def install
+    extra_cxxflags = []
+
     # Workaround for Xcode 16 (LLVM 17) Clang bug that causes:
     # include/Ice/OutgoingAsync.h: error: declaration shadows a local variable [-Werror,-Wshadow-uncaptured-local]
     # Ref: https://github.com/llvm/llvm-project/issues/81307
     # Ref: https://github.com/llvm/llvm-project/issues/71976
-    if DevelopmentTools.clang_build_version == 1600
-      inreplace "config/Make.rules.Darwin", "-Wno-shadow-field ", "\\0-Wno-shadow-uncaptured-local "
+    extra_cxxflags << "-Wno-shadow-uncaptured-local" if DevelopmentTools.clang_build_version >= 1600
+
+    # Workaround for macOS 26 SDK
+    extra_cxxflags << "-Wno-deprecated-declarations" if DevelopmentTools.clang_build_version >= 1700
+
+    # Workaround for Xcode 26 (Clang 17)
+    extra_cxxflags << "-Wno-reserved-user-defined-literal" if DevelopmentTools.clang_build_version >= 1700
+
+    unless extra_cxxflags.empty?
+      inreplace "config/Make.rules.Darwin", "-Wdocumentation ", "\\0#{extra_cxxflags.join(" ")} "
     end
 
     args = [
@@ -54,7 +64,7 @@ class Ice < Formula
       "CONFIGS=shared cpp11-shared xcodesdk cpp11-xcodesdk",
       "PLATFORMS=all",
       "SKIP=slice2confluence",
-      "LANGUAGES=cpp objective-c",
+      "LANGUAGES=cpp",
     ]
 
     # Fails with Xcode < 12.5

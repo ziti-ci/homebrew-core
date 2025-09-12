@@ -7,6 +7,7 @@ class Scipy < Formula
   head "https://github.com/scipy/scipy.git", branch: "main"
 
   bottle do
+    sha256 cellar: :any,                 arm64_tahoe:   "f96f9f685193d313639627c319be7515f7322555375f2cdae5c19f9eef23a272"
     sha256 cellar: :any,                 arm64_sequoia: "ab949c80e39fdb61080bfe88dccefe6c1c0641a02429015bf3fe808677ea5c41"
     sha256 cellar: :any,                 arm64_sonoma:  "ea167510b98d450dfc2e1c6d00e91ffac9a2020c06128af553c9bdadaa670098"
     sha256 cellar: :any,                 arm64_ventura: "ab9ab867b6ea7fd35828586614002cbf4bb1667a64b45101dc1f3a5515a499fc"

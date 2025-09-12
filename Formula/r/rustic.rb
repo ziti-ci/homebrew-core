@@ -1,12 +1,10 @@
 class Rustic < Formula
   desc "Fast, encrypted, and deduplicated backups powered by Rust"
   homepage "https://rustic.cli.rs"
-  url "https://github.com/rustic-rs/rustic/archive/refs/tags/v0.9.5.tar.gz"
-  sha256 "cb26f48325897946e7e6995d7617741586dfee0229ada1dfecb01e8ac90c4967"
+  url "https://github.com/rustic-rs/rustic/archive/refs/tags/v0.10.0.tar.gz"
+  sha256 "d67cc86a0e589788c74bee8ab86fd9637b64253751c03fb35a16455457a4684b"
   license "Apache-2.0"
   head "https://github.com/rustic-rs/rustic.git", branch: "main"
-
-  no_autobump! because: :requires_manual_review
 
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_sequoia: "855e62b8c968742aa7c9a601d2e421559e9b78cb9f5ef3fbab6ca24fb456a89c"

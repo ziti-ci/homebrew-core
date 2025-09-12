@@ -9,6 +9,7 @@ class H2o < Formula
   no_autobump! because: :requires_manual_review
 
   bottle do
+    sha256 arm64_tahoe:    "32c8d30fc271c3dafe6d2a2a6e0883adf6201cdefa4c3dfd105ad051ce5ae2b3"
     sha256 arm64_sequoia:  "c54b0d937a91c61b234753347dd756cb2a26dcb3b7f1aa37252b55fb9ee065ae"
     sha256 arm64_sonoma:   "02473fe011f04525a6e4fd604baa839c43988ca3fc96396774d96200e79daf87"
     sha256 arm64_ventura:  "1227fcbf6a078a4448106c6e60af24e1bb271823a50590bf201e4887784b8edb"

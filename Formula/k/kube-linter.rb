@@ -7,6 +7,7 @@ class KubeLinter < Formula
   head "https://github.com/stackrox/kube-linter.git", branch: "main"
 
   bottle do
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "7380829a0f6ae2880c44efe2bf18395b7e1e620b2f2b23fc70516b7063aa7964"
     sha256 cellar: :any_skip_relocation, arm64_sequoia: "7380829a0f6ae2880c44efe2bf18395b7e1e620b2f2b23fc70516b7063aa7964"
     sha256 cellar: :any_skip_relocation, arm64_sonoma:  "7380829a0f6ae2880c44efe2bf18395b7e1e620b2f2b23fc70516b7063aa7964"
     sha256 cellar: :any_skip_relocation, sonoma:        "25bbb4d6dd5cce47ca9ad4be319ac607113f2f91bd84841eac7e3fe8420349b8"

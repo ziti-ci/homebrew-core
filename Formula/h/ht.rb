@@ -40,6 +40,12 @@ class Ht < Formula
     end
   end
 
+  # Fix C++11 compatibility issues
+  patch do
+    url "https://github.com/sebastianbiallas/ht/commit/e52dfb86aa2c370d7d1ac2e046a4b9babc93bac9.patch?full_index=1"
+    sha256 "0119c3973d2cc4ac56c7f28061ce0426eab169695ae7b81e1514f9347740ab26"
+  end
+
   def install
     # Fix compilation with Xcode 9
     # https://github.com/sebastianbiallas/ht/pull/18

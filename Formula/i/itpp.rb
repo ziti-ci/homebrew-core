@@ -38,7 +38,7 @@ class Itpp < Formula
     # Reported upstream at: https://sourceforge.net/p/itpp/bugs/262/
     mv "VERSION", "VERSION.txt"
 
-    system "cmake", "-S", ".", "-B", "build", *std_cmake_args
+    system "cmake", "-S", ".", "-B", "build", "-DCMAKE_POLICY_VERSION_MINIMUM=3.5", *std_cmake_args
     system "cmake", "--build", "build"
     system "cmake", "--install", "build"
   end

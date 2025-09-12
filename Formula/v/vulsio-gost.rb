@@ -18,6 +18,12 @@ class VulsioGost < Formula
 
   conflicts_with "gost", because: "both install `gost` binaries"
 
+  # Backport fix for fetching Debian CVE DB
+  patch do
+    url "https://github.com/vulsio/gost/commit/e609fd898e22ce4e75f09e90e0a2c4fef7671111.patch?full_index=1"
+    sha256 "9eeed9c0a0e1b4ca38176851207556d6f51d0e9f0b53819e846fef3d1acaf84d"
+  end
+
   def install
     ldflags = %W[
       -s -w

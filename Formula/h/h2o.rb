@@ -33,18 +33,21 @@ class H2o < Formula
     # https://github.com/Homebrew/brew/pull/251
     ENV.delete("SDKROOT")
 
-    args = std_cmake_args + %W[
+    args = %W[
       -DWITH_BUNDLED_SSL=OFF
       -DOPENSSL_ROOT_DIR=#{Formula["openssl@3"].opt_prefix}
     ]
 
+    # Workaround to build with CMake 4
+    args << "-DCMAKE_POLICY_VERSION_MINIMUM=3.5"
+
     # Build shared library.
-    system "cmake", "-S", ".", "-B", "build_shared", *args, "-DBUILD_SHARED_LIBS=ON"
+    system "cmake", "-S", ".", "-B", "build_shared", *args, "-DBUILD_SHARED_LIBS=ON", *std_cmake_args
     system "cmake", "--build", "build_shared"
     system "cmake", "--install", "build_shared"
 
     # Build static library.
-    system "cmake", "-S", ".", "-B", "build_static", *args, "-DBUILD_SHARED_LIBS=OFF"
+    system "cmake", "-S", ".", "-B", "build_static", *args, "-DBUILD_SHARED_LIBS=OFF", *std_cmake_args
     system "cmake", "--build", "build_static"
     lib.install "build_static/libh2o-evloop.a"
 

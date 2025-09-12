@@ -9,6 +9,7 @@ class Libsepol < Formula
     sha256 cellar: :any,                 arm64_sequoia: "694496f68034e506cc74f711234a738bdc86fe6862c50c4d94056e7992c891e6"
     sha256 cellar: :any,                 arm64_sonoma:  "4acda6a9f6bb64c0054b960c8c89c0b99ae8efb2f4cf826d02945da75d230c0f"
     sha256 cellar: :any,                 sonoma:        "45d2a4183e993e5bff4bba540d7bc371008d9de8677f6bd47fdaa6a30e54a5de"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "702706e29712219dc32584ebd10bca2c2d19bccb71453cd83d500fd7deccf43a"
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "8c3d5fb345b92690961611fcf1894419a137c4b370af1151fe6cd251d20f5d32"
   end
 

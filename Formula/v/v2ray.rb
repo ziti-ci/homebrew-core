@@ -13,6 +13,7 @@ class V2ray < Formula
 
   bottle do
     rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "9b6699829a0e14d214b0f7269db661ef8b1820c362fff18e513844696eb2e812"
     sha256 cellar: :any_skip_relocation, arm64_sequoia: "9b6699829a0e14d214b0f7269db661ef8b1820c362fff18e513844696eb2e812"
     sha256 cellar: :any_skip_relocation, arm64_sonoma:  "9b6699829a0e14d214b0f7269db661ef8b1820c362fff18e513844696eb2e812"
     sha256 cellar: :any_skip_relocation, sonoma:        "3d6179fb87a999e7d4c51f26a0d93e40651b621c9e92b3b47e7f1dac165f87ed"

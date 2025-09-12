@@ -1,10 +1,9 @@
 class Pgsync < Formula
   desc "Sync Postgres data between databases"
   homepage "https://github.com/ankane/pgsync"
-  url "https://github.com/ankane/pgsync/archive/refs/tags/v0.8.0.tar.gz"
-  sha256 "385aa0be8683ae4877fc6b39a3a4a0664680ed1631559fadd7b5113d7724ecea"
+  url "https://github.com/ankane/pgsync/archive/refs/tags/v0.8.1.tar.gz"
+  sha256 "485c38e4c5bfec943bf8781f8c8ca4b773011c5767fb30be44d373566f40d5dc"
   license "MIT"
-  revision 1
 
   no_autobump! because: :requires_manual_review
 
@@ -22,13 +21,13 @@ class Pgsync < Formula
   depends_on "ruby"
 
   resource "parallel" do
-    url "https://rubygems.org/gems/parallel-1.25.1.gem"
-    sha256 "12e089b9aa36ea2343f6e93f18cfcebd031798253db8260590d26a7f70b1ab90"
+    url "https://rubygems.org/gems/parallel-1.27.0.gem"
+    sha256 "4ac151e1806b755fb4e2dc2332cbf0e54f2e24ba821ff2d3dcf86bf6dc4ae130"
   end
 
   resource "pg" do
-    url "https://rubygems.org/gems/pg-1.5.6.gem"
-    sha256 "4bc3ad2438825eea68457373555e3fd4ea1a82027b8a6be98ef57c0d57292b1c"
+    url "https://rubygems.org/gems/pg-1.6.2.gem"
+    sha256 "58614afd405cc9c2c9e15bffe8432e0d6cfc58b722344ad4a47c73a85189c875"
   end
 
   resource "slop" do

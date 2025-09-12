@@ -7,6 +7,7 @@ class GithubMcpServer < Formula
   head "https://github.com/github/github-mcp-server.git", branch: "main"
 
   bottle do
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "e0683b12f431d74b6f098e3a2e577932827388ad52b1bc887dffcaaee1b75352"
     sha256 cellar: :any_skip_relocation, arm64_sequoia: "aeba47ffbc2ab8f64c059260a366d5b32cf846d9094b4d77df38cbf9bff8a52a"
     sha256 cellar: :any_skip_relocation, arm64_sonoma:  "aeba47ffbc2ab8f64c059260a366d5b32cf846d9094b4d77df38cbf9bff8a52a"
     sha256 cellar: :any_skip_relocation, arm64_ventura: "aeba47ffbc2ab8f64c059260a366d5b32cf846d9094b4d77df38cbf9bff8a52a"

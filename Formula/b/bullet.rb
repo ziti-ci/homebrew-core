@@ -10,6 +10,7 @@ class Bullet < Formula
 
   bottle do
     rebuild 3
+    sha256 cellar: :any,                 arm64_tahoe:   "395e22b8e53e44fae2b17a2cdbc981e98beb8e6c85215a453c0e5ccc3672bdff"
     sha256 cellar: :any,                 arm64_sequoia: "97aeccf39592bcf03e7dd07b5339ec03b11345137a8e0872288bb8deff702c6b"
     sha256 cellar: :any,                 arm64_sonoma:  "367a1f5cdab325d50b7c6ef7b46782d578bb7c0f0dac9f233e2b1779c91feb4a"
     sha256 cellar: :any,                 arm64_ventura: "c69182f86bc7b5a3407cbee2b2fae2ed2a4959b766d1fb22408d3acf30e1400c"

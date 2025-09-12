@@ -20,6 +20,8 @@ class Ksh93 < Formula
 
   def install
     ENV.append "LDFLAGS", "-Wl,-rpath,#{lib}"
+    ENV.append "LDFLAGS", "-Wl,-headerpad_max_install_names" if OS.mac?
+
     system "bin/package", "verbose", "make"
     system "bin/package", "verbose", "install", prefix
     %w[ksh93 rksh rksh93].each do |alt|

@@ -10,6 +10,7 @@ class ThorsMongo < Formula
   no_autobump! because: :requires_manual_review
 
   bottle do
+    sha256 cellar: :any,                 arm64_tahoe:   "eb4b075302bd83e81f8035e2c7a581bc4bf48f0593364f68b1d703170b53d9f6"
     sha256 cellar: :any,                 arm64_sequoia: "df22574c3d8d42c2acd7545936aac68e10fb01a62d468e8a37737fdf29d0d61e"
     sha256 cellar: :any,                 arm64_sonoma:  "ba80135aa78d5bbd0bd423da47424b2f2ecf57321971e20574c91e92ea9bc299"
     sha256 cellar: :any,                 arm64_ventura: "45f3b9efe0946ceb9b65e733276324e0627dee6935c6de01a754db430fc74ef7"

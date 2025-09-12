@@ -3,8 +3,8 @@ class Vunnel < Formula
 
   desc "Tool for collecting vulnerability data from various sources"
   homepage "https://github.com/anchore/vunnel"
-  url "https://files.pythonhosted.org/packages/fd/fd/0c1f09f98d148c4421eba495d1afa58ed7c41847c5142c57df8a66fb816f/vunnel-0.39.2.tar.gz"
-  sha256 "4acd44bbabf62b40c893cb2db5e22bda9bbe0d6c5a2a9cd6c308348043931e1f"
+  url "https://files.pythonhosted.org/packages/fa/c7/7c7c5b58382495ce33d3a102dc6051cc94ec7dd3a4e83cba5445b39e5034/vunnel-0.40.0.tar.gz"
+  sha256 "4259c4a218f93140e05765a214a479a671a27b675d9790bab74b346ee1efeeec"
   license "Apache-2.0"
   head "https://github.com/anchore/vunnel.git", branch: "main"
 

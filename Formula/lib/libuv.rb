@@ -13,6 +13,7 @@ class Libuv < Formula
 
   bottle do
     rebuild 1
+    sha256 cellar: :any,                 arm64_tahoe:   "4baeae937cc36f3daf93336337b69357f9b666ec89ecb4937999f46cde964627"
     sha256 cellar: :any,                 arm64_sequoia: "47f6323a3b3ac0d2026ac75948e54b940bce1cc2ed3b809818bada0fca0b402b"
     sha256 cellar: :any,                 arm64_sonoma:  "594446ed876368a6ef6bf158fb6e1fdadd3973b1813846994423f417a7e5b965"
     sha256 cellar: :any,                 arm64_ventura: "db92705f40c7175fc957ad40ca096ab9577d20ea0d6782e7051bb1e0a1df21b1"

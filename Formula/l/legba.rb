@@ -1,8 +1,8 @@
 class Legba < Formula
   desc "Multiprotocol credentials bruteforcer/password sprayer and enumerator"
   homepage "https://github.com/evilsocket/legba"
-  url "https://github.com/evilsocket/legba/archive/refs/tags/1.1.1.tar.gz"
-  sha256 "a5c7254b19910e2b1816a9e4af3720b772e35d1b0491cb42f90564ca01699d6f"
+  url "https://github.com/evilsocket/legba/archive/refs/tags/1.2.0.tar.gz"
+  sha256 "d618c59060b76fcff26c066c1a2385c85f8c808bc07e2a1f30c777255de2a400"
   license "AGPL-3.0-only"
   head "https://github.com/evilsocket/legba.git", branch: "main"
 

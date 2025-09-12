@@ -7,6 +7,7 @@ class VulsioGost < Formula
 
   bottle do
     rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "c4a53e4b807b85cf00e833102650028ff9e0033dd04b61a28d4e23fdec98732f"
     sha256 cellar: :any_skip_relocation, arm64_sequoia: "c4a53e4b807b85cf00e833102650028ff9e0033dd04b61a28d4e23fdec98732f"
     sha256 cellar: :any_skip_relocation, arm64_sonoma:  "c4a53e4b807b85cf00e833102650028ff9e0033dd04b61a28d4e23fdec98732f"
     sha256 cellar: :any_skip_relocation, arm64_ventura: "c4a53e4b807b85cf00e833102650028ff9e0033dd04b61a28d4e23fdec98732f"

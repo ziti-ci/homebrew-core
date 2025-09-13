@@ -10,6 +10,7 @@ class Cidr < Formula
     sha256 cellar: :any_skip_relocation, arm64_sequoia: "dcbc8cd8981394e22863784293723d4f498d4e99e7bd887303f627fd8800bcd0"
     sha256 cellar: :any_skip_relocation, arm64_sonoma:  "dcbc8cd8981394e22863784293723d4f498d4e99e7bd887303f627fd8800bcd0"
     sha256 cellar: :any_skip_relocation, sonoma:        "69746c5df310b241ba471f7007baa62bd134d3b29e9ad6f84a0ae4b57a8a043b"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "bbc02e2c488fce47f5d8c777a0bb2691fc83f671bd8f3fa38fef07042e99ac7a"
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "88883882ac33253f400a15c6e38dccb0d502bef37985da5f0f3af8e0d3be53a5"
   end
 

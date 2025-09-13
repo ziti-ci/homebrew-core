@@ -6,6 +6,7 @@ class VueLanguageServer < Formula
   license "MIT"
 
   bottle do
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "b7ea70419d72b3aea7417f0c5fe67c84d801a1d651e6c639908c67858aec7192"
     sha256 cellar: :any_skip_relocation, arm64_sequoia: "6f749da3268eb9f737f23061eeee7c4460a7b5325221dee17addd58e5cbbfa76"
     sha256 cellar: :any_skip_relocation, arm64_sonoma:  "9b52acffc3963f5908f2175c5066b5019edd18e1efc2cd94f077c6e2470f8884"
     sha256 cellar: :any_skip_relocation, sonoma:        "37e2b7990c4ad644193c7214d3c147cd299dcf7a25f5ed3ee7f7636051f26637"

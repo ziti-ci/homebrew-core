@@ -18,6 +18,7 @@ class DockerDebug < Formula
   depends_on "go" => :build
 
   def install
+    ENV["CGO_ENABLED"] = OS.mac? ? "1" : "0"
     ldflags = %W[
       -s -w
       -X github.com/zeromake/docker-debug/version.Version=#{version}
@@ -34,8 +35,8 @@ class DockerDebug < Formula
     assert_match version.to_s, shell_output("#{bin}/docker-debug info")
 
     system bin/"docker-debug", "init"
-    assert_match "mount_dir = \"/mnt/container\"", (testpath/".docker-debug/config.toml").read
+    assert_match 'mount_dir = "/mnt/container"', (testpath/".docker-debug/config.toml").read
 
-    assert_match "\"TLS\": false", shell_output("#{bin}/docker-debug config")
+    assert_match '"TLS": false', shell_output("#{bin}/docker-debug config")
   end
 end

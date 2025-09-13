@@ -36,6 +36,10 @@ class Libchaos < Formula
       -DSKIP_CCACHE=ON
     ]
 
+    # Workaround to build with CMake 4
+    inreplace "CMakeLists.txt", "CMAKE_POLICY(SET CMP0050 OLD)", ""
+    args << "-DCMAKE_POLICY_VERSION_MINIMUM=3.5"
+
     system "cmake", "-S", ".", "-B", "build", "-DBUILD_SHARED_LIBS=ON", *args, *std_cmake_args
     system "cmake", "--build", "build"
     system "cmake", "--install", "build"

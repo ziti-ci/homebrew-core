@@ -19,6 +19,7 @@ class Kompose < Formula
   depends_on "go" => :build
 
   def install
+    ENV["CGO_ENABLED"] = OS.mac? ? "1" : "0"
     system "go", "build", *std_go_args(ldflags: "-s -w")
 
     generate_completions_from_executable(bin/"kompose", "completion")

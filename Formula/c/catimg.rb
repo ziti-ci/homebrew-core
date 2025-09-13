@@ -28,7 +28,12 @@ class Catimg < Formula
   depends_on "cmake" => :build
 
   def install
-    system "cmake", "-S", ".", "-B", "build", "-DMAN_OUTPUT_PATH=#{man1}", *std_cmake_args
+    args = %W[
+      -DMAN_OUTPUT_PATH=#{man1}
+    ]
+    # Workaround to build with CMake 4
+    args << "-DCMAKE_POLICY_VERSION_MINIMUM=3.5"
+    system "cmake", "-S", ".", "-B", "build", *args, *std_cmake_args
     system "cmake", "--build", "build"
     system "cmake", "--install", "build"
   end

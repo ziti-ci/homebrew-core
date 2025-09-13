@@ -17,6 +17,7 @@ class Checkov < Formula
   end
 
   bottle do
+    sha256 cellar: :any,                 arm64_tahoe:   "bd90f8fcc8d01c8c4c934a1f2394b19fb73c3a60784f1464e380d52ce2e2aaee"
     sha256 cellar: :any,                 arm64_sequoia: "f4d95e53b5e10f9bd6a60ea35f2df11d4179d070cfee3e2ba1e91ca79b898319"
     sha256 cellar: :any,                 arm64_sonoma:  "5cb2ae930ff912318bbd9797c579e0306e5a2c7552fe6c973ccb90bd52bf6cf8"
     sha256 cellar: :any,                 arm64_ventura: "aac4f8d01aba6e10c14e3c6eb8d5d85c3a82e0b727e2d90770371df5297e75ec"

@@ -56,7 +56,8 @@ class AssimpAT5 < Formula
         return 0;
       }
     CPP
-    system ENV.cc, "-std=c++11", "test.cpp", "-L#{lib}", "-lassimp", "-o", "test"
+    system ENV.cc, "-std=c++11", "test.cpp",
+                   "-I#{include}", "-L#{lib}", "-lassimp", "-o", "test"
     system "./test"
 
     # Application test.

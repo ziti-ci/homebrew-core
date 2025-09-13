@@ -6,13 +6,11 @@ class GdkPixbuf < Formula
   license "LGPL-2.1-or-later"
 
   bottle do
-    sha256 arm64_sequoia: "e3007c0afe1697c2cb6ac48ce5f4d2439f53f387f82506b25c606738df927e97"
-    sha256 arm64_sonoma:  "8d95c1f6aa8152beca83f01ecdf592370cb6e7f433a5990ffdb1baabe16a4813"
-    sha256 arm64_ventura: "8d01b8ef4955a1b229930f5ea3008f09349f4718e4c4e266011d8c2f9e43dc88"
-    sha256 sonoma:        "6ee2eb76ac836c56dd1f29e842335ea051ad9f933eb01963586abeddb16b01c9"
-    sha256 ventura:       "8e9f1278dbd730436dd96cf460b019b3cf4724c68b186c90092469f7926c9da3"
-    sha256 arm64_linux:   "402bf77795874a64afd7f1316e302123adba1af33fed4a4c027731fefab0ddc6"
-    sha256 x86_64_linux:  "41d122fd7b59cfc949d60ba6862b17b0b85e6b24fbeffbe350d2f238d162928e"
+    sha256 arm64_sequoia: "6f700fa5c81318b97435d8485cac491a2668781edd89fc5cea7d5054bf8d12b4"
+    sha256 arm64_sonoma:  "6d50c1f5c42407fcad71864a99eda0a0b324fdd46dc6eeea873ca605fd622413"
+    sha256 sonoma:        "2a3f4e3fd6760413f3ec64cea4f85dd183a2824325e0abd013df9a1043d1145c"
+    sha256 arm64_linux:   "80208f7c9389bcf485f128b68c66110fe38ea5ae0399869ce6408fe97e969391"
+    sha256 x86_64_linux:  "6b3efb51168fb8eb9ab801f353551b0b3bdc3cbb53d959ade97a82f16bf924b3"
   end
 
   depends_on "docutils" => :build # for rst2man

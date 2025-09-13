@@ -8,13 +8,11 @@ class Pgsync < Formula
   no_autobump! because: :requires_manual_review
 
   bottle do
-    sha256 cellar: :any,                 arm64_sequoia: "d569525a961f1543642f07928fe0ca9317ac819c670a7f6d6735d8752168bac6"
-    sha256 cellar: :any,                 arm64_sonoma:  "95f8e9b647da0ca010fe39d6f289e64e849b25f212f0e50fb7906e3a88e854fe"
-    sha256 cellar: :any,                 arm64_ventura: "c3fe3a0ab9336a9fd3343e1466ba5a137294d2ffbae99110adb2e2c152f1e206"
-    sha256 cellar: :any,                 sonoma:        "0b1082fa75fb757eea994e9d50be3116d701587c5880430fb20d3a018b875a3d"
-    sha256 cellar: :any,                 ventura:       "01e1f89f86a1cb51e8c4821a98611c5bad2f18d7145c82e39498d474af9af87c"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "d7c5c55097831aec49697673333f9806f2a989ae19f1cdaf2b37dad97007a657"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "ce4b49836360a1abe20cd60228f4e555765a5e41483709706584931abb6dd64d"
+    sha256 cellar: :any,                 arm64_sequoia: "4cdc2bb0bfcfc0f306696026ed00a5025c11d34a04e6787541782ca0b47dd543"
+    sha256 cellar: :any,                 arm64_sonoma:  "ce5c0f2b05b9f7380714773e17635bf35327defda51c519e751832eeff86cb76"
+    sha256 cellar: :any,                 sonoma:        "25aa2a324078445ed8e7089b0f990804b6f403a31a6e8f0be2608c777f9ea0cd"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "6d5d706c169092ca88d882c52ad3b86c572182e51a41a86b01fa7747ba9b131d"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "0ef4fcfe0b023ae63a909b42006fc3305f72695eec74256c47ef7729a8808057"
   end
 
   depends_on "libpq"

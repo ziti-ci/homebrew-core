@@ -1,8 +1,8 @@
 class Cidr < Formula
   desc "CLI to perform various actions on CIDR ranges"
   homepage "https://github.com/bschaatsbergen/cidr"
-  url "https://github.com/bschaatsbergen/cidr/archive/refs/tags/v2.2.0.tar.gz"
-  sha256 "caee614f119ec7383bc9a9dc04a688b4b058d15106f70f523d04c8773d2fa086"
+  url "https://github.com/bschaatsbergen/cidr/archive/refs/tags/v2.3.0.tar.gz"
+  sha256 "caa803f91b634bfa955c4898abf3085b83c5c3cbcd56f81cc64f29510a99f707"
   license "MIT"
   head "https://github.com/bschaatsbergen/cidr.git", branch: "main"
 
@@ -21,6 +21,7 @@ class Cidr < Formula
   depends_on "go" => :build
 
   def install
+    ENV["CGO_ENABLED"] = OS.mac? ? "1" : "0"
     ldflags = %W[
       -s -w
       -X github.com/bschaatsbergen/cidr/cmd.version=#{version}

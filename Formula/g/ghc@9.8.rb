@@ -113,6 +113,11 @@ class GhcAT98 < Formula
     ENV["LD"] = "ld"
     ENV["PYTHON"] = which("python3.13")
 
+    # Workaround for https://gitlab.haskell.org/ghc/ghc/-/issues/26166
+    if DevelopmentTools.ld64_version == "1221.4"
+      inreplace "rts/rts.cabal", /("-Wl,-undefined,dynamic_lookup)"/, "\\1,-ld_classic\""
+    end
+
     binary = buildpath/"binary"
     resource("binary").stage do
       binary_args = []

@@ -3,10 +3,9 @@ class Gexiv2 < Formula
   homepage "https://wiki.gnome.org/Projects/gexiv2"
   # release info on the website might lag behind, refer to gitlab tags for latest release info
   # see discussions in https://gitlab.gnome.org/GNOME/gexiv2/-/issues/77
-  url "https://download.gnome.org/sources/gexiv2/0.14/gexiv2-0.14.6.tar.xz"
-  sha256 "606c28aaae7b1f3ef5c8eabe5e7dffd7c5a1c866d25b7671fb847fe287a72b8b"
+  url "https://download.gnome.org/sources/gexiv2/0.16/gexiv2-0.16.0.tar.xz"
+  sha256 "d96f895f24539f966f577b2bb2489ae84f8232970a8d0c064e4a007474a77bbb"
   license "GPL-2.0-or-later"
-  revision 2
 
   bottle do
     sha256 cellar: :any, arm64_sequoia: "ae51c1b56109208f358e343b30e5c6231e91c67c7b959f271892167eade57c4c"
@@ -21,7 +20,7 @@ class Gexiv2 < Formula
   depends_on "gobject-introspection" => :build
   depends_on "meson" => :build
   depends_on "ninja" => :build
-  depends_on "pkgconf" => :build
+  depends_on "pkgconf" => [:build, :test]
   depends_on "pygobject3" => [:build, :test]
   depends_on "python@3.13" => [:build, :test]
   depends_on "vala" => :build
@@ -53,16 +52,13 @@ class Gexiv2 < Formula
       }
     C
 
-    system ENV.cc, "test.c", "-o", "test",
-                   "-I#{HOMEBREW_PREFIX}/include/glib-2.0",
-                   "-I#{HOMEBREW_PREFIX}/lib/glib-2.0/include",
-                   "-L#{lib}",
-                   "-lgexiv2"
+    flags = shell_output("pkg-config --cflags --libs gexiv2-#{version.major_minor}").chomp.split
+    system ENV.cc, "test.c", "-o", "test", *flags
     system "./test"
 
     (testpath/"test.py").write <<~PYTHON
       import gi
-      gi.require_version('GExiv2', '0.10')
+      gi.require_version('GExiv2', '#{version.major_minor}')
       from gi.repository import GExiv2
       exif = GExiv2.Metadata('#{test_fixtures("test.jpg")}')
       print(exif.try_get_gps_info())

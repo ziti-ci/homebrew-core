@@ -27,7 +27,13 @@ class Grt < Formula
   depends_on "cmake" => :build
 
   def install
-    system "cmake", "-S", "build", "-B", "_build", "-DBUILD_TESTS=OFF", "-DBUILD_EXAMPLES=OFF", *std_cmake_args
+    args = %w[
+      -DBUILD_TESTS=OFF
+      -DBUILD_EXAMPLES=OFF
+    ]
+    # Workaround to build with CMake 4
+    args << "-DCMAKE_POLICY_VERSION_MINIMUM=3.5"
+    system "cmake", "-S", "build", "-B", "_build", *args, *std_cmake_args
     system "cmake", "--build", "_build"
     system "cmake", "--install", "_build"
   end

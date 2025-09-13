@@ -10,6 +10,7 @@ class CodebookLsp < Formula
     sha256 cellar: :any_skip_relocation, arm64_sequoia: "0663523417434a93a1b3ef9adc13b6f8e2b8d0254f783c2d37398425824fc647"
     sha256 cellar: :any_skip_relocation, arm64_sonoma:  "1dfb5b3e08e772685bad7655356c53502c44f91f39c6c79dbbd559baaf7ba641"
     sha256 cellar: :any_skip_relocation, sonoma:        "27cc07ad1d1a0eb43ffb8a1602e55ac9851efefa1495df141624cc05a6342786"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "00c46b5bb7d739ae77b041912c24660de23d6e5ba056f49d569fe0e90fcaba92"
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "c53dca85434605f0b94807ebff36efd4f809faf6b1f0fc0908507084942cbe5f"
   end
 

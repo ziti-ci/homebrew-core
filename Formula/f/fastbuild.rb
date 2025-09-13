@@ -1,11 +1,9 @@
 class Fastbuild < Formula
   desc "High performance build system for Windows, OSX and Linux"
   homepage "https://fastbuild.org/"
-  url "https://github.com/fastbuild/fastbuild/archive/refs/tags/v1.15.tar.gz"
-  sha256 "c08d9233d575d6dbbc42363caa64e16cd9709e22f58b492dc1b65620fbdfc297"
+  url "https://github.com/fastbuild/fastbuild/archive/refs/tags/v1.16.tar.gz"
+  sha256 "acb1025eebc3967ad7e3bfd3e13fa4efe0a7d54aedcadd61ebeb9bff65c6cd5f"
   license "Zlib"
-
-  no_autobump! because: :requires_manual_review
 
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_sequoia: "d2ea9f422381c38c6496d7a89d82ddcf01c47f211454e87cffeb388cdd228e09"

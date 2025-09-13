@@ -9,6 +9,7 @@ class Airspy < Formula
   no_autobump! because: :requires_manual_review
 
   bottle do
+    sha256 cellar: :any,                 arm64_tahoe:    "43ab01541269d098b8b36f73e206cae61390ded5015dd8a795ee0d9917ba10bc"
     sha256 cellar: :any,                 arm64_sequoia:  "6e66f0c2d5fe94466e432a57c49fdcf7cfb6a01f9d71896f74b06e9a3c16777d"
     sha256 cellar: :any,                 arm64_sonoma:   "8c086845772a91ed241283aa4175e0ba598e9e80530b660fceb413857211901f"
     sha256 cellar: :any,                 arm64_ventura:  "e32975089469cf19d14495a2ebfc86815aa431efeefaf11d24afd42e0fe8780b"

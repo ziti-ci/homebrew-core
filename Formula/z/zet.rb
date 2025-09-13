@@ -22,6 +22,12 @@ class Zet < Formula
 
   depends_on "rust" => :build
 
+  # Backport fix for newer Rust
+  patch do
+    url "https://github.com/yarrow/zet/commit/7aba3b6016ede0b0a6b8aaff292bd7f6a0d7ac86.patch?full_index=1"
+    sha256 "9fca853d07ac5a81aafe8513b64ce1ef338f1ff106d7ad2eb16add777ba2e897"
+  end
+
   def install
     system "cargo", "install", *std_cargo_args
   end

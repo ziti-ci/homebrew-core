@@ -15,6 +15,7 @@ class Whalebrew < Formula
     sha256 cellar: :any_skip_relocation, sonoma:         "e73f77883a8b321bcebdf5829211ae1d62c89633d760ec77cdfee6010665b681"
     sha256 cellar: :any_skip_relocation, ventura:        "0cf1db6078f81c0139448aa53137190bb3396da6b1645632b04031e102d141e3"
     sha256 cellar: :any_skip_relocation, monterey:       "ed592d731941336ccb5c3200f54e4557af185839a883dbe38f3882eb8e7f34b3"
+    sha256 cellar: :any_skip_relocation, arm64_linux:    "4a3e3fd5d504cfcb096087e8bb99e955f02d5c971b26a984a0051f51deb52aa0"
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "afe4b4c69e9b76da440101b3fc26cf623bf391ba23d1e5d64394f770a7776b86"
   end
 

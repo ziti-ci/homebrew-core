@@ -25,13 +25,20 @@ class CucumberCpp < Formula
   depends_on "asio"
   depends_on "tclap"
 
+  # Backport support for Asio 1.33+
+  patch do
+    url "https://github.com/cucumber/cucumber-cpp/commit/da6345bd1d0b0ac4cf4bc71866c98d55c72522a8.patch?full_index=1"
+    sha256 "1ad7f6513ee2d41c5625933b05249704c14484a7029acd330c5f665a11e6a66f"
+  end
+
   def install
-    # TODO: Remove these on next release as they are the defaults
+    # TODO: Remove Cuke args on next release as they are the defaults
     args = %w[
       -DCUKE_ENABLE_BOOST_TEST=OFF
       -DCUKE_ENABLE_GTEST=OFF
       -DCUKE_ENABLE_QT=OFF
       -DCUKE_TESTS_UNIT=OFF
+      -DBUILD_SHARED_LIBS=ON
     ]
 
     system "cmake", "-S", ".", "-B", "build", *args, *std_cmake_args

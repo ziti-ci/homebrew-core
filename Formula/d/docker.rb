@@ -29,6 +29,7 @@ class Docker < Formula
   conflicts_with cask: "docker-desktop"
 
   def install
+    ENV["CGO_ENABLED"] = OS.mac? ? "1" : "0"
     # TODO: Drop GOPATH when merged/released: https://github.com/docker/cli/pull/4116
     ENV["GOPATH"] = buildpath
     ENV["GO111MODULE"] = "auto"
@@ -41,9 +42,6 @@ class Docker < Formula
       -X github.com/docker/cli/cli/version.Version=#{version}
       -X "github.com/docker/cli/cli/version.PlatformName=Docker Engine - Community"
     ]
-
-    # FIXME: we shouldn't need this, but patchelf.rb does not seem to work well with the layout of Aarch64 ELF files
-    ldflags += ["-extld", ENV.cc] if OS.linux? && Hardware::CPU.arm?
 
     system "go", "build", *std_go_args(ldflags:), "github.com/docker/cli/cmd/docker"
 

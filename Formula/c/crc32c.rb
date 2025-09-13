@@ -27,6 +27,10 @@ class Crc32c < Formula
   depends_on "cmake" => :build
 
   def install
+    # Backport support for CMake 4. Remove on the next release when inreplace fails
+    # https://github.com/google/crc32c/commit/2bbb3be42e20a0e6c0f7b39dc07dc863d9ffbc07
+    inreplace "CMakeLists.txt", /(cmake_minimum_required\(VERSION) 3\.1\)/, "\\1 3.16)" if build.stable?
+
     args = %w[
       -DCRC32C_BUILD_TESTS=0
       -DCRC32C_BUILD_BENCHMARKS=0

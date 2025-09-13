@@ -30,7 +30,9 @@ class CernNdiff < Formula
   conflicts_with "ndiff", "nmap", because: "both install `ndiff` binaries"
 
   def install
-    system "cmake", "-S", "tools/numdiff", "-B", "build", *std_cmake_args
+    # Workaround for CMake 4 compatibility
+    args = %w[-DCMAKE_POLICY_VERSION_MINIMUM=3.5]
+    system "cmake", "-S", "tools/numdiff", "-B", "build", *args, *std_cmake_args
     system "cmake", "--build", "build"
     system "cmake", "--install", "build"
 

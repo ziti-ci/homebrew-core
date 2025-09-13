@@ -1,7 +1,7 @@
 class Ccfits < Formula
   desc "Object oriented interface to the cfitsio library"
-  homepage "https://heasarc.gsfc.nasa.gov/fitsio/CCfits/"
-  url "https://heasarc.gsfc.nasa.gov/FTP/software/fitsio/ccfits/CCfits-2.7.tar.gz"
+  homepage "https://heasarc.gsfc.nasa.gov/docs/software/fitsio/CCfits/"
+  url "https://heasarc.gsfc.nasa.gov/FTP/software/fitsio/ccfits/v2.7/CCfits-2.7.tar.gz"
   sha256 "f63546d2feecbf732cc08aaaa80a2eb5334ada37fb2530181b7363a5dbdeb01a"
   license "CFITSIO"
 

@@ -9,6 +9,7 @@ class Wasm3 < Formula
 
   bottle do
     rebuild 1
+    sha256 cellar: :any,                 arm64_tahoe:   "67558c58d6f3470d32cc63b037032141ef9d5333b140266449b61ce990b0e5f0"
     sha256 cellar: :any,                 arm64_sequoia: "8cbba5eaf9cb8d51d1b3f736027239a2982316e1019fa3cc6f1fa2b368c2c0ca"
     sha256 cellar: :any,                 arm64_sonoma:  "1ce007a2ef41fb969587a79186545562851c847df980b9d9c5e240126dd7c680"
     sha256 cellar: :any,                 sonoma:        "b73049c21f9f23a48183a202350067d97499166bc56645b724f04a41549e37b8"

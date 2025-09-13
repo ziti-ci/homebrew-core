@@ -4,7 +4,7 @@ class Clog < Formula
   url "https://github.com/GothenburgBitFactory/clog/releases/download/v1.3.0/clog-1.3.0.tar.gz"
   sha256 "fed44a8d398790ab0cf426c1b006e7246e20f3fcd56c0ec4132d24b05d5d2018"
   license "MIT"
-  head "https://github.com/GothenburgBitFactory/clog.git", branch: "1.4.0"
+  head "https://github.com/GothenburgBitFactory/clog.git", branch: "master"
 
   livecheck do
     url "https://gothenburgbitfactory.org"
@@ -35,7 +35,9 @@ class Clog < Formula
   depends_on "cmake" => :build
 
   def install
-    system "cmake", "-S", ".", "-B", "build", *std_cmake_args
+    # Workaround for CMake 4 compatibility
+    args = %w[-DCMAKE_POLICY_VERSION_MINIMUM=3.5]
+    system "cmake", "-S", ".", "-B", "build", *args, *std_cmake_args
     system "cmake", "--build", "build"
     system "cmake", "--install", "build"
   end

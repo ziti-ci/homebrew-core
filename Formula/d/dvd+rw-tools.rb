@@ -10,6 +10,7 @@ class DvdxrwTools < Formula
   no_autobump! because: :requires_manual_review
 
   bottle do
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:    "8daeeb4d38982c4948e79c9ec20f0e600cbd0c6c55d56bb4f0b14c617e8600e8"
     sha256 cellar: :any_skip_relocation, arm64_sequoia:  "ef7c367570d1a514f8c5ee0c9a7b9e758dcd12a6ae8ece7fddc835f39ad9b319"
     sha256 cellar: :any_skip_relocation, arm64_sonoma:   "da895c2f501018863f2db497206573a37ef717337e9f5c2dba6a5863bc989d77"
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "031b8533eeb4ec71ab6f3e2b68826271b0c5ff3e97e0dddaebab9a721b43df53"

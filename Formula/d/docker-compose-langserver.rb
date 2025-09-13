@@ -5,6 +5,10 @@ class DockerComposeLangserver < Formula
   sha256 "09164b4226078de49324440411d224a89748f1b894d0989c7c11d9bd45d53215"
   license "MIT"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "814fa058293c0082d48d3e5e2da3ef5f89a0bbe87cb1ada2833d132c3267b202"
+  end
+
   depends_on "node"
 
   def install

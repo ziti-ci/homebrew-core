@@ -21,6 +21,7 @@ class Supermodel < Formula
 
   bottle do
     rebuild 1
+    sha256 arm64_tahoe:   "9ebc9708a1207cf92a01649204cd4f673b63f4df3574ffacda4c29df64b3b0cd"
     sha256 arm64_sequoia: "55806d70707f24311eac885aa6ec3963cc508dbd397b159a7a80611392bb9c9f"
     sha256 arm64_sonoma:  "7c5571842431f0b73847af493d4fe4d79ae4a834954a567f7c6732e3e83c387b"
     sha256 arm64_ventura: "60d857bc4b057fdb6950645b22eb04970bca9e21e5065f44486bbf5dfd4b4754"

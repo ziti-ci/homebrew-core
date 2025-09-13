@@ -1,8 +1,8 @@
 class JwtHack < Formula
   desc "JSON Web Token Hack Toolkit"
   homepage "https://github.com/hahwul/jwt-hack"
-  url "https://github.com/hahwul/jwt-hack/archive/refs/tags/v2.3.0.tar.gz"
-  sha256 "b5c0de9923d4ee20037873906223ac14c0c9b1e9623cc3a87e3ce5434d3ca0bf"
+  url "https://github.com/hahwul/jwt-hack/archive/refs/tags/v2.3.1.tar.gz"
+  sha256 "1b80213f0c8e8a2e8d50a8fe1f9175fd777cba1547a56f163ab6ccf9d29a1b20"
   license "MIT"
   head "https://github.com/hahwul/jwt-hack.git", branch: "main"
 
@@ -23,12 +23,6 @@ class JwtHack < Formula
 
   on_linux do
     depends_on "openssl@3" => :build
-  end
-
-  # add missing fields, upstream pr ref, https://github.com/hahwul/jwt-hack/pull/77
-  patch do
-    url "https://github.com/hahwul/jwt-hack/commit/7e607dd3d261a1a97e4bf1a056aecd9a3ba2f686.patch?full_index=1"
-    sha256 "52a71652d0621103994e175eb29ed26991e5fcfba459feeadf66ecc07688eb56"
   end
 
   def install

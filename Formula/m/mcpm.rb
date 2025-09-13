@@ -3,8 +3,8 @@ class Mcpm < Formula
 
   desc "Open source, community-driven MCP server and client manager"
   homepage "https://mcpm.sh/"
-  url "https://files.pythonhosted.org/packages/75/a0/392551cc01875438a436f6742b0d0527684fcf12f236b66c4eded537433d/mcpm-2.8.0.tar.gz"
-  sha256 "3e0a584f0bae4bc8b29ccb2d54d39b99e0c84f2bcf65baf1b27b414f8f35b663"
+  url "https://files.pythonhosted.org/packages/dc/18/51e5b95543f1da607b1b340501e30c790838d7c8cafe0fd5cc4a55e82972/mcpm-2.8.1.tar.gz"
+  sha256 "64a137c4d8ed84fcbef314e5357bfa1d3cec6c4ce60f9e2cb4c295030ab55186"
   license "MIT"
 
   bottle do
@@ -138,8 +138,8 @@ class Mcpm < Formula
   end
 
   resource "mcp" do
-    url "https://files.pythonhosted.org/packages/66/3c/82c400c2d50afdac4fbefb5b4031fd327e2ad1f23ccef8eee13c5909aa48/mcp-1.13.1.tar.gz"
-    sha256 "165306a8fd7991dc80334edd2de07798175a56461043b7ae907b279794a834c5"
+    url "https://files.pythonhosted.org/packages/95/fd/d6e941a52446198b73e5e4a953441f667f1469aeb06fb382d9f6729d6168/mcp-1.14.0.tar.gz"
+    sha256 "2e7d98b195e08b2abc1dc6191f6f3dc0059604ac13ee6a40f88676274787fac4"
   end
 
   resource "mdurl" do
@@ -178,8 +178,8 @@ class Mcpm < Formula
   end
 
   resource "pydantic" do
-    url "https://files.pythonhosted.org/packages/00/dd/4325abf92c39ba8623b5af936ddb36ffcfe0beae70405d456ab1fb2f5b8c/pydantic-2.11.7.tar.gz"
-    sha256 "d989c3c6cb79469287b1569f7447a17848c998458d49ebe294e975b9baf0f0db"
+    url "https://files.pythonhosted.org/packages/ac/c0/1ff9b59cf6f54494cf3ae2b95f4e9cf3a4b10ca352dade98a94d30e8a62e/pydantic-2.11.8.tar.gz"
+    sha256 "3d080f4a3ac6bde98e959ba552124d46be9f565b7be67769e49fcb286bae1bfb"
   end
 
   resource "pydantic-core" do

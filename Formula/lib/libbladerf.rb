@@ -40,7 +40,12 @@ class Libbladerf < Formula
 
   def install
     ENV.prepend "CFLAGS", "-I#{MacOS.sdk_path}/usr/include/malloc" if OS.mac?
-    system "cmake", "-S", "host", "-B", "build", "-DUDEV_RULES_PATH=#{lib}/udev/rules.d", *std_cmake_args
+    args = %W[
+      -DUDEV_RULES_PATH=#{lib}/udev/rules.d
+    ]
+    # Workaround to build with CMake 4
+    args << "-DCMAKE_POLICY_VERSION_MINIMUM=3.5"
+    system "cmake", "-S", "host", "-B", "build", *args, *std_cmake_args
     system "cmake", "--build", "build"
     system "cmake", "--install", "build"
   end

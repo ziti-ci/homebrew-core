@@ -1,9 +1,9 @@
 class Blast < Formula
   desc "Basic Local Alignment Search Tool"
   homepage "https://blast.ncbi.nlm.nih.gov/"
-  url "https://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/2.16.0/ncbi-blast-2.16.0+-src.tar.gz"
-  version "2.16.0"
-  sha256 "17c93cf009721023e5aecf5753f9c6a255d157561638b91b3ad7276fd6950c2b"
+  url "https://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/2.17.0/ncbi-blast-2.17.0+-src.tar.gz"
+  version "2.17.0"
+  sha256 "502057a88e9990e34e62758be21ea474cc0ad68d6a63a2e37b2372af1e5ea147"
   license :public_domain
 
   livecheck do
@@ -24,6 +24,8 @@ class Blast < Formula
   end
 
   depends_on "lmdb"
+  depends_on "mbedtls"
+  depends_on "pcre2"
 
   uses_from_macos "cpio" => :build
   uses_from_macos "bzip2"
@@ -38,20 +40,42 @@ class Blast < Formula
 
   def install
     cd "c++" do
+      # Remove bundled libraries to make sure the brew/system libraries are used
+      %w[compress/bzip2 compress/zlib lmdb regexp].each do |lib_subdir|
+        rm_r("include/util/#{lib_subdir}") if lib_subdir != "regexp"
+        rm_r("src/util/#{lib_subdir}")
+      end
+      rm_r(Dir["include/util/regexp/*"] - ["include/util/regexp/ctre"])
+
+      # Remove Cloudflare zlib on arm64 linux as it requires a minimum of armv8-a+crc
+      # TODO: re-enable if we increase our minimum march to require crc
+      if Hardware::CPU.arm? && OS.linux?
+        rm_r("include/util/compress/zlib_cloudflare")
+        rm_r("src/util/compress/zlib_cloudflare")
+        inreplace "src/build-system/Makefile.mk.in" do |s|
+          cmprs_lib = s.get_make_var("CMPRS_LIB").split
+          cmprs_lib.delete("zcf")
+          s.change_make_var! "CMPRS_LIB", cmprs_lib.join(" ")
+        end
+      end
+
       # Boost is only used for unit tests.
       args = %W[
         --prefix=#{prefix}
         --with-bin-release
+        --with-mbedtls=#{Formula["mbedtls"].opt_prefix}
         --with-mt
+        --with-pcre2=#{Formula["pcre2"].opt_prefix}
         --without-strip
         --with-experimental=Int8GI
         --without-debug
         --without-boost
+        --without-internal
       ]
 
       if OS.mac?
         # Allow SSE4.2 on some platforms. The --with-bin-release sets --without-sse42
-        args << "--with-sse42" if Hardware::CPU.intel? && OS.mac? && MacOS.version.requires_sse42?
+        args << "--with-sse42" if Hardware::CPU.intel? && MacOS.version.requires_sse42?
         args += ["OPENMP_FLAGS=-Xpreprocessor -fopenmp",
                  "LDFLAGS=-lomp"]
       end

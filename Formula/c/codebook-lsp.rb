@@ -1,5 +1,5 @@
 class CodebookLsp < Formula
-  desc "Spell Checker for Code"
+  desc "Code-aware spell checker language server"
   homepage "https://github.com/blopker/codebook"
   url "https://github.com/blopker/codebook/archive/refs/tags/v0.3.9.tar.gz"
   sha256 "7cdc63b681154db1412f01bd081e65418c1bda4e58e4eead0fde99159dbac8fa"

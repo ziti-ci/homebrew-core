@@ -1,6 +1,6 @@
 class Tasksh < Formula
   desc "Shell wrapper for Taskwarrior commands"
-  homepage "https://gothenburgbitfactory.org/projects/tasksh.html"
+  homepage "https://github.com/GothenburgBitFactory/taskshell"
   url "https://github.com/GothenburgBitFactory/taskshell/releases/download/v1.2.0/tasksh-1.2.0.tar.gz"
   sha256 "6e42f949bfd7fbdde4870af0e7b923114cc96c4344f82d9d924e984629e21ffd"
   license "MIT"
@@ -40,7 +40,9 @@ class Tasksh < Formula
   end
 
   def install
-    system "cmake", "-S", ".", "-B", "build", *std_cmake_args
+    # Workaround for CMake 4 compatibility
+    args = %w[-DCMAKE_POLICY_VERSION_MINIMUM=3.5]
+    system "cmake", "-S", ".", "-B", "build", *args, *std_cmake_args
     system "cmake", "--build", "build"
     system "cmake", "--install", "build"
   end

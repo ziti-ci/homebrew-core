@@ -10,6 +10,7 @@ class JwtHack < Formula
 
   bottle do
     rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "732bd0306efd2e99b6f64f578bb6ed1bb8e9aa7a0575e235b5b4597e7b7dc2ea"
     sha256 cellar: :any_skip_relocation, arm64_sequoia: "e5c28d9090be92f5ae472584d4c6b2dbb2c038bfa6e2f148023345fe40f468b8"
     sha256 cellar: :any_skip_relocation, arm64_sonoma:  "853bfed2699d13d7956f451870fe7adc10954917a16c80c0bdb812e7fc0b864e"
     sha256 cellar: :any_skip_relocation, sonoma:        "3d5c90a3426e9cc07efc5ebcb7050cdb82b63e1ac7e5ae0ac316b017e65c13fc"

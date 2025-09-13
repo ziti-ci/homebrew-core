@@ -13,6 +13,7 @@ class Bazelisk < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura: "793f2de5437dab04d53985229024b5ebd8f53c08932df8777da135c71356d745"
     sha256 cellar: :any_skip_relocation, sonoma:        "1c0aa4a5126a4ada7dc36f18f01ddad84e448c275cde3d75423586ced6c5343e"
     sha256 cellar: :any_skip_relocation, ventura:       "1c0aa4a5126a4ada7dc36f18f01ddad84e448c275cde3d75423586ced6c5343e"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "26fb1ee2c4bf8f45e51e3a53d8503c2c60c50139b9d9a333e11fa0ed4904ffb6"
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "b3030c623242031fd6262a4eaea9919f3f7941376b2cdc192f88c21fa48b11d5"
   end
 

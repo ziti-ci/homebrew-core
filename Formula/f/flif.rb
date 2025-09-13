@@ -10,6 +10,7 @@ class Flif < Formula
 
   bottle do
     rebuild 1
+    sha256 cellar: :any,                 arm64_tahoe:   "9f31d2fdf99e6e6a7bc79e1cb303d246a023edae4a4cbab9010c991a42b3f15d"
     sha256 cellar: :any,                 arm64_sequoia: "947265f79e930463ef0e44212cb95aef425b064a9d50abdee3b308c4dc03ab25"
     sha256 cellar: :any,                 arm64_sonoma:  "bdb1164b2c7592791b612169d1ccef5520183da9b9325e8eb9428ede90349f67"
     sha256 cellar: :any,                 sonoma:        "23d44bc668159febffba7d69a39050438097b9abdccd979e604f19463338dc07"

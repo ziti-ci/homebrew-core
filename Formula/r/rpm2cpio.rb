@@ -15,6 +15,7 @@ class Rpm2cpio < Formula
 
   bottle do
     rebuild 3
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:    "2b5ac7e3d1f3d9db020bcf348931d3cb37930be23799168ec15b84fce0a8b9ef"
     sha256 cellar: :any_skip_relocation, arm64_sequoia:  "57971030692fdb6757848c6febbfa2ee6b331287482019e45760328de8e03720"
     sha256 cellar: :any_skip_relocation, arm64_sonoma:   "cfb382b55ce5155b2313bade20f110e59d9617e0d3ecedacb8d32e587800595d"
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "25a31e16c6737137ab53e8c0768be89309f77d78e8ebb2a4ecf2a3bc9e1ee8fb"

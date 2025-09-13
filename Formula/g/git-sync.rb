@@ -1,8 +1,8 @@
 class GitSync < Formula
   desc "Clones a git repository and keeps it synchronized with the upstream"
   homepage "https://github.com/kubernetes/git-sync"
-  url "https://github.com/kubernetes/git-sync/archive/refs/tags/v4.4.3.tar.gz"
-  sha256 "38c7dfef256d5321e57e46ea94a245aadc963e50f0e3231b3ce710095b81d7ed"
+  url "https://github.com/kubernetes/git-sync/archive/refs/tags/v4.5.0.tar.gz"
+  sha256 "4f6ed2d3c4be008104f0fd8a05174b4a6652944d6ee050021b1ecab9b31d1c45"
   license "Apache-2.0"
   head "https://github.com/kubernetes/git-sync.git", branch: "master"
 

@@ -18,6 +18,7 @@ class DockerBuildx < Formula
   depends_on "go" => :build
 
   def install
+    ENV["CGO_ENABLED"] = OS.mac? ? "1" : "0"
     ldflags = %W[
       -s -w
       -X github.com/docker/buildx/version.Version=v#{version}
@@ -27,8 +28,7 @@ class DockerBuildx < Formula
     system "go", "build", *std_go_args(ldflags:), "./cmd/buildx"
 
     (lib/"docker/cli-plugins").install_symlink bin/"docker-buildx"
-
-    doc.install Dir["docs/reference/*.md"]
+    doc.install buildpath.glob("docs/reference/*.md")
 
     generate_completions_from_executable(bin/"docker-buildx", "completion")
   end

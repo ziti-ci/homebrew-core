@@ -26,6 +26,7 @@ class Bazelisk < Formula
   end
 
   def install
+    ENV["CGO_ENABLED"] = OS.mac? ? "1" : "0"
     system "go", "build", *std_go_args(ldflags: "-s -w -X github.com/bazelbuild/bazelisk/core.BazeliskVersion=#{version}")
 
     bin.install_symlink "bazelisk" => "bazel"
@@ -36,16 +37,13 @@ class Bazelisk < Formula
   end
 
   test do
-    ENV["USE_BAZEL_VERSION"] = Formula["bazel"].version
+    ENV["USE_BAZEL_VERSION"] = system_version = Formula["bazel"].version
     output = shell_output("#{bin}/bazelisk version")
     assert_match "Bazelisk version: #{version}", output
-    assert_match "Build label: #{Formula["bazel"].version}", output
+    assert_match "Build label: #{system_version}", output
 
-    # This is an older than current version, so that we can test that bazelisk
-    # will target an explicit version we specify. This version shouldn't need to
-    # be bumped.
-    bazel_version = Hardware::CPU.arm? ? "7.1.0" : "7.0.0"
-    ENV["USE_BAZEL_VERSION"] = bazel_version
-    assert_match "Build label: #{bazel_version}", shell_output("#{bin}/bazelisk version")
+    # Test an older version that bazelisk will fetch
+    ENV["USE_BAZEL_VERSION"] = fetched_version = "7.6.1"
+    assert_match "Build label: #{fetched_version}", shell_output("#{bin}/bazelisk version")
   end
 end

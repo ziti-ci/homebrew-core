@@ -6,8 +6,6 @@ class Whalebrew < Formula
   license "Apache-2.0"
   head "https://github.com/whalebrew/whalebrew.git", branch: "master"
 
-  no_autobump! because: :requires_manual_review
-
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_tahoe:    "cb728eba208967ac3e5cf1b32b986f117a2bc3e919e5e5a1544b6227e221f87a"
     sha256 cellar: :any_skip_relocation, arm64_sequoia:  "301d2f38ace71c39fa8acff98d09b240b469a64c71e0a2105f0632ca2795b950"
@@ -30,6 +28,7 @@ class Whalebrew < Formula
   end
 
   def install
+    ENV["CGO_ENABLED"] = OS.mac? ? "1" : "0"
     ldflags = %W[
       -s -w
       -X github.com/whalebrew/whalebrew/version.Version=#{version}+homebrew

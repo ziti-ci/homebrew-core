@@ -12,6 +12,7 @@ class Flang < Formula
   end
 
   bottle do
+    sha256 cellar: :any,                 arm64_tahoe:   "08e8197408664496e675405793f5b712ebb94fecb78dd16b8a117a119805feed"
     sha256 cellar: :any,                 arm64_sequoia: "ee54275e955b9735b4c798409433fea44ff03a97b54c007bc8569208d65e6b23"
     sha256 cellar: :any,                 arm64_sonoma:  "72ae33f3d4bbf31b624f6ae2a0e0ac36f45d7e0875ca611500caa915db500580"
     sha256 cellar: :any,                 arm64_ventura: "b9fcb1d60297c94eaf9134c95264eaf8e38d23c84bbb550a1a8acd4eb05c341c"

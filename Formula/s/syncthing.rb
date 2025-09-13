@@ -12,6 +12,7 @@ class Syncthing < Formula
   end
 
   bottle do
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "5d7ea7b445d31c951313ea9961925f101ce7f5df98c3f89225d13ea8ba06b9f7"
     sha256 cellar: :any_skip_relocation, arm64_sequoia: "6736362d2dd26535dc903ed39cccbc8ace59f43df35d03d8dc5e5338af098f10"
     sha256 cellar: :any_skip_relocation, arm64_sonoma:  "6ac040a82ff1f3dedac5d71360bfdd68c5d0b22cb8df2a90ac705715187455ba"
     sha256 cellar: :any_skip_relocation, arm64_ventura: "3711ca19b55e14fb3e9e0657ef3c6bc06a75cc31dfdb59267556df5b29e09cf9"

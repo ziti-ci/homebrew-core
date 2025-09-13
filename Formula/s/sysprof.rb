@@ -1,8 +1,8 @@
 class Sysprof < Formula
   desc "Statistical, system-wide profiler"
   homepage "https://gitlab.gnome.org/GNOME/sysprof"
-  url "https://download.gnome.org/sources/sysprof/48/sysprof-48.1.tar.xz"
-  sha256 "54f157fdfef1edf1e2f22e542c462d90e1c21fca8c30eba4127cee739039bbe2"
+  url "https://download.gnome.org/sources/sysprof/49/sysprof-49.0.tar.xz"
+  sha256 "ff04139637785c841948862087a4323b981680d942296409321b574fcb282878"
   # See Debian's Copyright File. https://metadata.ftp-master.debian.org/changelogs//main/s/sysprof/sysprof_47.0-2_copyright
   license all_of: [
     "GPL-2.0-or-later",

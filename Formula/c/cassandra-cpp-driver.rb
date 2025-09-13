@@ -34,9 +34,15 @@ class CassandraCppDriver < Formula
   end
 
   def install
-    system "cmake", "-S", ".", "-B", "build",
-                    "-DLIBUV_ROOT_DIR=#{Formula["libuv"].opt_prefix}",
-                    *std_cmake_args
+    # Fix to error: Unsupported compiler: AppleClang
+    inreplace "CMakeLists.txt", 'STREQUAL "Clang"', 'STREQUAL "AppleClang"' if OS.mac?
+
+    # Workaround for CMake 4 compatibility
+    args = %W[
+      -DCMAKE_POLICY_VERSION_MINIMUM=3.5
+      -DLIBUV_ROOT_DIR=#{Formula["libuv"].opt_prefix}
+    ]
+    system "cmake", "-S", ".", "-B", "build", *args, *std_cmake_args
     system "cmake", "--build", "build"
     system "cmake", "--install", "build"
   end

@@ -9,6 +9,7 @@ class JwtHack < Formula
   no_autobump! because: :requires_manual_review
 
   bottle do
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "58ac1d62e95f5bfddd19b7b1273e937b63bef9f6b2fab69194503520a2b31bdd"
     sha256 cellar: :any_skip_relocation, arm64_sequoia: "7fb99a1bfe03e19a8088f0f3f0e4aba346e664a9cf4276da966ac0d794c2d9e3"
     sha256 cellar: :any_skip_relocation, arm64_sonoma:  "c3ff8df05fb3ffd10e4c5c0dc79b47b3fad162cc86797004fd03b76f4434e65a"
     sha256 cellar: :any_skip_relocation, sonoma:        "02e8f0d957a03cc263bdd2d09d218b8b35dafc4447bd0efe492bc5af4e9c583c"

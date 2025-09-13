@@ -30,6 +30,9 @@ class Arss < Formula
   depends_on "fftw"
 
   def install
+    # CMake Error in CMakeLists.txt: No cmake_minimum_required command is present.
+    inreplace "src/CMakeLists.txt", /\A/, "cmake_minimum_required(VERSION 3.10)\n"
+
     # Work around failure from GCC 10+ using default of `-fno-common`
     # multiple definition of `LOGBASE'; CMakeFiles/arss.dir/arss.o:(.bss+0x18): first defined here
     # multiple definition of `pi'; CMakeFiles/arss.dir/arss.o:(.bss+0x20): first defined here

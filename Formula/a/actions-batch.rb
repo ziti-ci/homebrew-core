@@ -36,6 +36,6 @@ class ActionsBatch < Formula
           "--org=false --file #{pkgshare}/examples/curl.sh"
 
     output = shell_output("#{cmd} 2>&1", 2)
-    assert_match "POST https://api.github.com/user/repos: 401 Bad credentials", output
+    assert_match "failed to create repo", output
   end
 end

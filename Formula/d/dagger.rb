@@ -24,6 +24,7 @@ class Dagger < Formula
   depends_on "docker" => :test
 
   def install
+    ENV["CGO_ENABLED"] = OS.mac? ? "1" : "0"
     ldflags = %W[
       -s -w
       -X github.com/dagger/dagger/engine.Version=v#{version}

@@ -17,30 +17,9 @@ class Polyml < Formula
   end
 
   def install
-    # Use ld_classic to work around 'ld: LINKEDIT overlap of start of LINKEDIT and symbol table'
-    # Issue ref: https://github.com/polyml/polyml/issues/194
-    ENV.append "LDFLAGS", "-Wl,-ld_classic" if DevelopmentTools.clang_build_version >= 1500
-
-    args = ["--disable-silent-rules"]
-    # Disable native code generation on CI ARM macOS to work around:
-    # Bus error: 10 ./polyimport ./bootstrap/bootstrap64.txt -I . < ./bootstrap/Stage1.sml
-    # Issue ref: https://github.com/polyml/polyml/issues/199
-    args << "--disable-native-codegeneration" if ENV["HOMEBREW_GITHUB_ACTIONS"] && OS.mac? && Hardware::CPU.arm?
-
-    system "./configure", *args, *std_configure_args
+    system "./configure", "--disable-silent-rules", *std_configure_args
     system "make"
     system "make", "install"
-  end
-
-  def caveats
-    on_macos do
-      on_arm do
-        <<~EOS
-          The `polyml` bottle was built with native code generator disabled due to
-          the build failure seen in https://github.com/polyml/polyml/issues/199.
-        EOS
-      end
-    end
   end
 
   test do

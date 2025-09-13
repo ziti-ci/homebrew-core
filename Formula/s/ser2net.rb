@@ -4,6 +4,7 @@ class Ser2net < Formula
   url "https://downloads.sourceforge.net/project/ser2net/ser2net/ser2net-4.6.5.tar.gz"
   sha256 "96dfc3fd06b1bf4d7c1f46d7e8cc1eff555de64f419d76f57bd0346e000f9781"
   license "GPL-2.0-only"
+  revision 1
 
   livecheck do
     url :stable

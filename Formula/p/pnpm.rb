@@ -1,8 +1,8 @@
 class Pnpm < Formula
   desc "Fast, disk space efficient package manager"
   homepage "https://pnpm.io/"
-  url "https://registry.npmjs.org/pnpm/-/pnpm-10.16.0.tgz"
-  sha256 "dd62d38df1a6702c930fba14b92bc3ca3d5c24a6c7005b2e5355a98b898fa5d4"
+  url "https://registry.npmjs.org/pnpm/-/pnpm-10.16.1.tgz"
+  sha256 "b77e92ba0d59a6372b6c5041bbb3f866fb85e927df333827f0c7f577c5e1a713"
   license "MIT"
 
   livecheck do

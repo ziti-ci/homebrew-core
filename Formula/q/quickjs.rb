@@ -11,6 +11,7 @@ class Quickjs < Formula
   end
 
   bottle do
+    sha256 arm64_tahoe:   "e828a899d98c6f7e8a1b355f9b48982f328862fd61b4b0635413da7f6aff585d"
     sha256 arm64_sequoia: "0ae282e76a2e7c3c4e0ebabb4835a436870cb9d8951dcc54c919d1eb8b7c75e7"
     sha256 arm64_sonoma:  "dff370175b666cfa4b524c491c55d2608ffa72b1503cf95bb341717d5ff0091c"
     sha256 sonoma:        "c88ad1eb2a750556ef61d161033e24bb17232283670e22c4cc2b272b7f03d451"

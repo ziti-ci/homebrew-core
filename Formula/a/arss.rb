@@ -8,6 +8,7 @@ class Arss < Formula
   no_autobump! because: :requires_manual_review
 
   bottle do
+    sha256 cellar: :any,                 arm64_tahoe:    "bfe57aa3bd356a8a7d3b616e96f854b484a92be45620cbf9ce3729a7ded493bb"
     sha256 cellar: :any,                 arm64_sequoia:  "02051c251dcf51557823a6ae6effb432c9c892a42a3ab19e80c9b8f0e61327ad"
     sha256 cellar: :any,                 arm64_sonoma:   "b0bf1ad20a051b16f65fbbe1ee4780b674ae2a12953291e51de2ca4fd1d478d8"
     sha256 cellar: :any,                 arm64_ventura:  "8daf9486dc32c8698fa1fb731ceb12b04d00019043a803803a71e7472a0781ee"

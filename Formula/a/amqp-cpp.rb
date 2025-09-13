@@ -25,11 +25,14 @@ class AmqpCpp < Formula
   depends_on "openssl@3"
 
   def install
-    system "cmake", "-S", ".", "-B", "build",
-                    "-DAMQP-CPP_BUILD_SHARED=ON",
-                    "-DAMQP-CPP_LINUX_TCP=ON",
-                    "-DCMAKE_MACOSX_RPATH=1",
-                    *std_cmake_args
+    args = %w[
+      -DAMQP-CPP_BUILD_SHARED=ON
+      -DAMQP-CPP_LINUX_TCP=ON
+      -DCMAKE_MACOSX_RPATH=1
+    ]
+    # Workaround to build with CMake 4
+    args << "-DCMAKE_POLICY_VERSION_MINIMUM=3.5"
+    system "cmake", "-S", ".", "-B", "build", *args, *std_cmake_args
     system "cmake", "--build", "build"
     system "cmake", "--install", "build"
   end

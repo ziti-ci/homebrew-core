@@ -3,8 +3,8 @@ class Flexget < Formula
 
   desc "Multipurpose automation tool for content"
   homepage "https://www.flexget.com"
-  url "https://files.pythonhosted.org/packages/cb/c8/a01013bc164c1862de210febe9afeae1f1a0e6aa73d2d0e5e86cfe79b47c/flexget-3.18.6.tar.gz"
-  sha256 "8a5cc71355e5ed6bd2f76ece867ad95c903718ca3103d4f991079ecf2a1ba5df"
+  url "https://files.pythonhosted.org/packages/e7/1b/5adf2147ceb31505d2c0b51bf1cb9e3d4ad5b09f7de95df1e0f0687f8fbf/flexget-3.18.7.tar.gz"
+  sha256 "68aa58b01ed15cec0c2720bbbb01b5e1163181f8c3fe1b32846d16a6296bd431"
   license "MIT"
 
   bottle do
@@ -85,8 +85,8 @@ class Flexget < Formula
   end
 
   resource "feedparser" do
-    url "https://files.pythonhosted.org/packages/ff/aa/7af346ebeb42a76bf108027fe7f3328bb4e57a3a96e53e21fd9ef9dd6dd0/feedparser-6.0.11.tar.gz"
-    sha256 "c9d0407b64c6f2a065d0ebb292c2b35c01050cc0dc33757461aaabdc4c4184d5"
+    url "https://files.pythonhosted.org/packages/dc/79/db7edb5e77d6dfbc54d7d9df72828be4318275b2e580549ff45a962f6461/feedparser-6.0.12.tar.gz"
+    sha256 "64f76ce90ae3e8ef5d1ede0f8d3b50ce26bcce71dd8ae5e82b1cd2d4a5f94228"
   end
 
   resource "flask" do
@@ -240,8 +240,8 @@ class Flexget < Formula
   end
 
   resource "pyparsing" do
-    url "https://files.pythonhosted.org/packages/bb/22/f1129e69d94ffff626bdb5c835506b3a5b4f3d070f17ea295e12c2c6f60f/pyparsing-3.2.3.tar.gz"
-    sha256 "b9c13f1ab8b3b542f72e28f634bad4de758ab3ce4546e4301970ad6fa77c38be"
+    url "https://files.pythonhosted.org/packages/98/c9/b4594e6a81371dfa9eb7a2c110ad682acf985d96115ae8b25a1d63b4bf3b/pyparsing-3.2.4.tar.gz"
+    sha256 "fff89494f45559d0f2ce46613b419f632bbb6afbdaed49696d322bcf98a58e99"
   end
 
   resource "pyrss2gen" do

@@ -13,6 +13,7 @@ class Ice < Formula
   no_autobump! because: :requires_manual_review
 
   bottle do
+    sha256 cellar: :any,                 arm64_tahoe:    "163b12ea66fc9210f121ee9c2f0fc18404d8f660a963d3bf492af0b807eb19d8"
     sha256 cellar: :any,                 arm64_sequoia:  "7c514dfb78c4739a0e3a89fef4c6cb238fa944b43efab26bda3aea20ec4ae47e"
     sha256 cellar: :any,                 arm64_sonoma:   "9e16e4dc54af25f1f87ada450ac1179be3f2ddbdfaf53d75fc242f20dd093721"
     sha256 cellar: :any,                 arm64_ventura:  "c13e1bd19804740b88a1a91acb548a66a4407bb234c74423bf0fa5a4c529b59c"

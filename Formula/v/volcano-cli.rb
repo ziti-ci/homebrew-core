@@ -7,6 +7,7 @@ class VolcanoCli < Formula
   head "https://github.com/volcano-sh/volcano.git", branch: "master"
 
   bottle do
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "c53f37770607b291e27208ac6f198b2dae8992844f0cb6600536433ca14c0b31"
     sha256 cellar: :any_skip_relocation, arm64_sequoia: "c53f37770607b291e27208ac6f198b2dae8992844f0cb6600536433ca14c0b31"
     sha256 cellar: :any_skip_relocation, arm64_sonoma:  "c53f37770607b291e27208ac6f198b2dae8992844f0cb6600536433ca14c0b31"
     sha256 cellar: :any_skip_relocation, sonoma:        "ebc76d8f9950fb6a058938a16ba38933a68128e5876fb3c02b75da4a9c92271b"

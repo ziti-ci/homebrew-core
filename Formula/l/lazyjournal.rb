@@ -7,12 +7,10 @@ class Lazyjournal < Formula
   head "https://github.com/Lifailon/lazyjournal.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "f28456a15494ee9fc38e5334a1bc0d45a70d38e6590bee25aabea7d1149e1f3d"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "f28456a15494ee9fc38e5334a1bc0d45a70d38e6590bee25aabea7d1149e1f3d"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "f28456a15494ee9fc38e5334a1bc0d45a70d38e6590bee25aabea7d1149e1f3d"
-    sha256 cellar: :any_skip_relocation, sonoma:        "7d041d52711de7240ba194acd34231808905865f0d7ef5209a4e282be8478683"
-    sha256 cellar: :any_skip_relocation, ventura:       "7d041d52711de7240ba194acd34231808905865f0d7ef5209a4e282be8478683"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "55bc927387eab58d957c6f775833d948eaed76c75518bbe61d0b9305e8688aaa"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "c2ac0322c208270caa261050d3d4e42cf7e0d1d786a7cbd73230de592b1f7673"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "c2ac0322c208270caa261050d3d4e42cf7e0d1d786a7cbd73230de592b1f7673"
+    sha256 cellar: :any_skip_relocation, sonoma:        "cf3c899f71268f7a9160ddaf27e23e23dd53bfd6ee11510029143e41f3f0bd9d"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "8c97f77d9110aae245ccc1778e20bfd9c59f573af6eb76426ede694b4136766f"
   end
 
   depends_on "go" => :build

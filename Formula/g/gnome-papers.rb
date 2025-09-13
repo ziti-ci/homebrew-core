@@ -1,8 +1,8 @@
 class GnomePapers < Formula
   desc "Document viewer for PDF and other document formats aimed at the GNOME desktop"
   homepage "https://apps.gnome.org/Papers/"
-  url "https://download.gnome.org/sources/papers/48/papers-48.5.tar.xz"
-  sha256 "0cc8d72c71d3d8aab1be10ae1941a4cd92cd1e2a7e830ab7680e2c82dfb19c0b"
+  url "https://download.gnome.org/sources/papers/49/papers-49.0.tar.xz"
+  sha256 "7a2b4dc405dc1cffdb865e2d9433cb5b74a94c6d141ae51f4146be21a7749a9a"
   license "GPL-2.0-or-later"
 
   bottle do
@@ -16,6 +16,7 @@ class GnomePapers < Formula
     sha256 x86_64_linux:  "719b56150089db56278c1493c45dcfdfc75d25f0cc921a59e6e557e601ea6ea0"
   end
 
+  depends_on "blueprint-compiler" => :build
   depends_on "desktop-file-utils" => :build
   depends_on "gettext" => :build # for msgfmt
   depends_on "gobject-introspection" => :build
@@ -23,6 +24,7 @@ class GnomePapers < Formula
   depends_on "meson" => :build
   depends_on "ninja" => :build
   depends_on "pkgconf" => [:build, :test]
+  depends_on "python@3.13" => :build # For blueprint-compiler
   depends_on "rust" => :build
 
   depends_on "adwaita-icon-theme"
@@ -47,6 +49,11 @@ class GnomePapers < Formula
     depends_on "harfbuzz"
   end
 
+  patch do
+    url "https://gitlab.gnome.org/nibon7/papers/-/commit/2ce41a255f5a75d4ec0c75b3a95a0bb198e1f06e.diff"
+    sha256 "84a3fd9fd4249edf82583f8a45e57f8c6ea8091dfff44377a21501133047eb43"
+  end
+
   def install
     ENV["DESTDIR"] = "/"
 
@@ -57,11 +64,8 @@ class GnomePapers < Formula
       ENV.append_to_rustflags "--codegen link-args=-Wl,-rpath,#{rpath}"
     end
 
-    # Export pps_job_run for testing. Remove this workaround in 49.x.
-    inreplace "libview/pps-job.h", /^(gboolean pps_job_run)/, "PPS_PUBLIC \\1"
-
     args = %w[
-      -Dviewer=true
+      -Dshell=true
       -Dpreviewer=true
       -Dthumbnailer=true
       -Dnautilus=false
@@ -77,6 +81,7 @@ class GnomePapers < Formula
       -Dkeyring=enabled
       -Dgtk_unix_print=enabled
       -Dspell_check=enabled
+      -Dfile_tests=false
     ]
 
     system "meson", "setup", "build", *args, *std_meson_args

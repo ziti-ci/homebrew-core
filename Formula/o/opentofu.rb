@@ -21,13 +21,13 @@ class Opentofu < Formula
   conflicts_with "tenv", "tofuenv", because: "both install tofu binary"
 
   def install
+    ENV["CGO_ENABLED"] = OS.mac? ? "1" : "0"
     ldflags = "-s -w -X github.com/opentofu/opentofu/version.dev=no"
     system "go", "build", *std_go_args(output: bin/"tofu", ldflags:), "./cmd/tofu"
   end
 
   test do
-    minimal = testpath/"minimal.tf"
-    minimal.write <<~HCL
+    (testpath/"minimal.tf").write <<~HCL
       variable "aws_region" {
         default = "us-west-2"
       }

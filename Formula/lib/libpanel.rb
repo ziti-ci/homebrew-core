@@ -6,13 +6,11 @@ class Libpanel < Formula
   license "LGPL-3.0-or-later"
 
   bottle do
-    sha256 arm64_sequoia: "53d48954d182ec2151e80942213a0b822f9d5521452862b0e264af807dff5e23"
-    sha256 arm64_sonoma:  "0bb84dd4e71049fdfddbbde247eb786348cf202863fb166c3b6ade105abdf1cc"
-    sha256 arm64_ventura: "2bf71b61f12b423faaa2f9ebac2fc05f78512bb3a7471e2d4c58f9f40146bab1"
-    sha256 sonoma:        "ee5e56ee91e80ebbf9487d3d3a24a7d26473825e24dc68ba4311e7b1348ff88c"
-    sha256 ventura:       "2d14fb2f8bd8b0d30aedfe2624ef59386aa900271077e72ef0ac427eed2e2a5c"
-    sha256 arm64_linux:   "a5f53b2ab540343b1c316e3aac5f4961664dc7cc237bf300ae70c96911e14d34"
-    sha256 x86_64_linux:  "355a72cc7c5d47f710ce581cbf83f618f3579767927c2a2cf0f6894370cd3b74"
+    sha256 arm64_sequoia: "2518268a98407e1225dfe3ee8714f5c61d3accd01c510529ad8c3c7e4c958091"
+    sha256 arm64_sonoma:  "43b94427b0b52907d86e881d2fe4f1ac6f091fdb2494c5afd4393432e25bebd0"
+    sha256 sonoma:        "e31cbff58e1137cf1a3baf77667f7f714fb48b5d2d6484c17ad9484a448e5fd1"
+    sha256 arm64_linux:   "953102c6e8e419ed88e5b7e28c3f6edb1015eb2162a6476b6e7fdad910cc854f"
+    sha256 x86_64_linux:  "58efad9d44a5179096fbde3c3f493ea455550b060a12d250a6d671d32f292621"
   end
 
   depends_on "gettext" => :build

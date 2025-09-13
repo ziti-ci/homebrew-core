@@ -25,12 +25,14 @@ class Enkits < Formula
   depends_on "cmake" => :build
 
   def install
-    args = std_cmake_args + %w[
+    args = %w[
       -DENKITS_BUILD_EXAMPLES=OFF
       -DENKITS_INSTALL=ON
       -DENKITS_BUILD_SHARED=ON
     ]
-    system "cmake", "-S", ".", "-B", "build", *args
+    # Workaround to build with CMake 4
+    args << "-DCMAKE_POLICY_VERSION_MINIMUM=3.5"
+    system "cmake", "-S", ".", "-B", "build", *args, *std_cmake_args
     system "cmake", "--build", "build"
     system "cmake", "--install", "build"
     lib.install_symlink "#{lib}/enkiTS/#{shared_library("libenkiTS")}"

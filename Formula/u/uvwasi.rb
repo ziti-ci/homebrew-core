@@ -8,6 +8,7 @@ class Uvwasi < Formula
 
   bottle do
     rebuild 1
+    sha256 cellar: :any,                 arm64_tahoe:   "c2742f168c40ecdcf97566b4bbca3419dc010995edbd25fd2805c45cccbe11fd"
     sha256 cellar: :any,                 arm64_sequoia: "3bbe2380eb184f540f5b23a9cd2f92ef21a4779b04ff6068b6c3a0b4e7865c7e"
     sha256 cellar: :any,                 arm64_sonoma:  "923e457efe87a95fd53031ca80440ce09ab3862a9ac7df374b3fe634c7001c23"
     sha256 cellar: :any,                 sonoma:        "74534d557b0603f0fac5d6b4e98257bee2f372c55e0eabf97b0ac5ccbd10415d"

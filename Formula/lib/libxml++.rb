@@ -14,6 +14,7 @@ class Libxmlxx < Formula
 
   bottle do
     rebuild 1
+    sha256 cellar: :any, arm64_tahoe:   "96eda1d9b060aa8e57f747b313e6f3a549841dcd89e94b77a4a65aecb8f1b975"
     sha256 cellar: :any, arm64_sequoia: "ea4bb7ccf2905b3c6d0bcb737a0df4c68c6f1d74aa0a40a7e85358fb8babecfa"
     sha256 cellar: :any, arm64_sonoma:  "8ed9c8aeafaa5c37a6c883ebc7d91c1a419bb2181bb98e6e6930061967362069"
     sha256 cellar: :any, arm64_ventura: "7ee27c6995a0afb593127e45a431c1a2ac2a2e9c45897c3ce9a960e7f574e41b"

@@ -41,8 +41,13 @@ class Csmith < Formula
   end
 
   def install
-    system "./configure", "--disable-dependency-tracking",
-                          "--prefix=#{prefix}"
+    # Workaround for newer Clang until upstream fix
+    # https://github.com/csmith-project/csmith/issues/163
+    # https://github.com/csmith-project/csmith/issues/177
+    # https://github.com/csmith-project/csmith/pull/165
+    ENV.append_to_cflags "-Wno-enum-constexpr-conversion" if DevelopmentTools.clang_build_version >= 1700
+
+    system "./configure", *std_configure_args
     system "make"
     system "make", "install"
     mv "#{bin}/compiler_test.in", share

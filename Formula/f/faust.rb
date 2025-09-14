@@ -28,7 +28,11 @@ class Faust < Formula
   depends_on "pkgconf" => :build
   depends_on "libmicrohttpd"
   depends_on "libsndfile"
-  depends_on "llvm@20"
+  depends_on "llvm"
+
+  # Backport support for LLVM 21. Skipping wasm whitespace changes in:
+  # https://github.com/grame-cncm/faust/commit/0b773c503ce77a753579c52ecf2531845ae7532a
+  patch :DATA
 
   def install
     # `brew linkage` doesn't like the pre-built Android libsndfile.so for faust2android.
@@ -82,3 +86,88 @@ class Faust < Formula
     system bin/"faust", "noise.dsp"
   end
 end
+
+__END__
+diff --git a/compiler/generator/llvm/llvm_code_container.cpp b/compiler/generator/llvm/llvm_code_container.cpp
+index 827360940b..c1abacb3fa 100644
+--- a/compiler/generator/llvm/llvm_code_container.cpp
++++ b/compiler/generator/llvm/llvm_code_container.cpp
+@@ -90,7 +90,12 @@ void LLVMCodeContainer::init(const string& name, int numInputs, int numOutputs,
+         fBuilder->setFastMathFlags(FMF);
+     }
+ 
++#if LLVM_VERSION_MAJOR >= 21
++    llvm::Triple TT(llvm::sys::getDefaultTargetTriple());
++    fModule->setTargetTriple(TT);
++#else
+     fModule->setTargetTriple(sys::getDefaultTargetTriple());
++#endif
+ }
+ 
+ LLVMCodeContainer::~LLVMCodeContainer()
+diff --git a/compiler/generator/llvm/llvm_code_container.hh b/compiler/generator/llvm/llvm_code_container.hh
+index e97230a1f8..c0e5c503aa 100644
+--- a/compiler/generator/llvm/llvm_code_container.hh
++++ b/compiler/generator/llvm/llvm_code_container.hh
+@@ -55,7 +55,11 @@ class LLVMCodeContainer : public virtual CodeContainer {
+     template <typename REAL>
+     void generateGetJSON()
+     {
+-        LLVMPtrType         string_ptr = llvm::PointerType::get(fBuilder->getInt8Ty(), 0);
++#if LLVM_VERSION_MAJOR >= 21
++        LLVMPtrType string_ptr = llvm::PointerType::get(fModule->getContext(), 0);
++#else
++        LLVMPtrType string_ptr = llvm::PointerType::get(fBuilder->getInt8Ty(), 0);
++#endif
+         LLVMVecTypes        getJSON_args;
+         llvm::FunctionType* getJSON_type =
+             llvm::FunctionType::get(string_ptr, makeArrayRef(getJSON_args), false);
+diff --git a/compiler/generator/llvm/llvm_dynamic_dsp_aux.cpp b/compiler/generator/llvm/llvm_dynamic_dsp_aux.cpp
+index d7bca74eea..a6a71e20cf 100644
+--- a/compiler/generator/llvm/llvm_dynamic_dsp_aux.cpp
++++ b/compiler/generator/llvm/llvm_dynamic_dsp_aux.cpp
+@@ -296,7 +296,12 @@ bool llvm_dynamic_dsp_factory_aux::initJIT(string& error_msg)
+ 
+     string triple, cpu;
+     splitTarget(fTarget, triple, cpu);
++#if LLVM_VERSION_MAJOR >= 21
++    llvm::Triple TT(triple);
++    fModule->setTargetTriple(TT);
++#else
+     fModule->setTargetTriple(triple);
++#endif
+ 
+     builder.setMCPU((cpu == "") ? sys::getHostCPUName() : StringRef(cpu));
+     TargetOptions targetOptions;
+@@ -485,7 +490,13 @@ bool llvm_dynamic_dsp_factory_aux::writeDSPFactoryToObjectcodeFileAux(
+     const string& object_code_path)
+ {
+     auto TargetTriple = sys::getDefaultTargetTriple();
++#if LLVM_VERSION_MAJOR >= 21
++    llvm::Triple TT(TargetTriple);
++    fModule->setTargetTriple(TT);
++#else
+     fModule->setTargetTriple(TargetTriple);
++#endif
++
+     string Error;
+     auto   Target = TargetRegistry::lookupTarget(TargetTriple, Error);
+ 
+diff --git a/compiler/generator/llvm/llvm_instructions.hh b/compiler/generator/llvm/llvm_instructions.hh
+index 9e5b001d41..80dadcef22 100644
+--- a/compiler/generator/llvm/llvm_instructions.hh
++++ b/compiler/generator/llvm/llvm_instructions.hh
+@@ -216,8 +216,13 @@ struct LLVMTypeHelper {
+     LLVMType getInt64Ty() { return llvm::Type::getInt64Ty(fModule->getContext()); }
+     LLVMType getInt1Ty() { return llvm::Type::getInt1Ty(fModule->getContext()); }
+     LLVMType getInt8Ty() { return llvm::Type::getInt8Ty(fModule->getContext()); }
++#if LLVM_VERSION_MAJOR >= 21
++    LLVMType getInt8TyPtr() { return llvm::PointerType::get(fModule->getContext(), 0); }
++    LLVMType getTyPtr(LLVMType type) { return llvm::PointerType::get(fModule->getContext(), 0); }
++#else
+     LLVMType getInt8TyPtr() { return llvm::PointerType::get(getInt8Ty(), 0); }
+     LLVMType getTyPtr(LLVMType type) { return llvm::PointerType::get(type, 0); }
++#endif
+ 
+     /*
+         Return the pointee type:

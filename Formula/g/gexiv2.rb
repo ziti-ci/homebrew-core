@@ -8,13 +8,11 @@ class Gexiv2 < Formula
   license "GPL-2.0-or-later"
 
   bottle do
-    sha256 cellar: :any, arm64_sequoia: "ae51c1b56109208f358e343b30e5c6231e91c67c7b959f271892167eade57c4c"
-    sha256 cellar: :any, arm64_sonoma:  "75dfdacca4ec507937e922bd122f72a18241afe1a9fbbbf79008397426beab1a"
-    sha256 cellar: :any, arm64_ventura: "d69586756a37baad669f6f5997a63240480cb0e9605974110a8e18516b9c44c9"
-    sha256 cellar: :any, sonoma:        "40cb42460feab01cfe2fe71eecb4acdcf13bf2392b954db3fac68f6f2cb0bc57"
-    sha256 cellar: :any, ventura:       "efe79561c6cf589730b5e172bee34b4be91dba61f639c7ecb2c44d155d8ec7d8"
-    sha256               arm64_linux:   "f977d9a3fb4262fe81153ed467be05b5f31f84cfcf80f2cab6a447ce25ede135"
-    sha256               x86_64_linux:  "bbff72e50cf37058862c9292a4b660da7f2846421c00d20665460afe26b6bf3a"
+    sha256 cellar: :any, arm64_sequoia: "6566b30dffe1e55d2dd899cb609d06567ab05122b320a4135d00485aa5fd23a9"
+    sha256 cellar: :any, arm64_sonoma:  "df3ffe2eaf8be10632c018f21857988aed01f71e43d72362870f09306e28a3d5"
+    sha256 cellar: :any, sonoma:        "1295da3e261bc8240e05d696103954b4cbefb0b2e14d292d475c9195cd32f565"
+    sha256               arm64_linux:   "94cc5f0acb7cae5223e9bca62fcd96166065faa9c7300335fcb0b7ea0d9a5db7"
+    sha256               x86_64_linux:  "6fa18288dad24d85cabc1725bdd570a9452cd59497606e698c2730e543e0c960"
   end
 
   depends_on "gobject-introspection" => :build

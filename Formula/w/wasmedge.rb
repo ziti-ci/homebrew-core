@@ -1,11 +1,20 @@
 class Wasmedge < Formula
   desc "Lightweight, high-performance, and extensible WebAssembly runtime"
   homepage "https://WasmEdge.org/"
-  url "https://github.com/WasmEdge/WasmEdge/releases/download/0.15.0/WasmEdge-0.15.0-src.tar.gz"
-  sha256 "17915c4d047bc7a02aca862f4852101ec8d35baab7b659593687ab8c84b00938"
   license "Apache-2.0"
   revision 1
   head "https://github.com/WasmEdge/WasmEdge.git", branch: "master"
+
+  stable do
+    url "https://github.com/WasmEdge/WasmEdge/releases/download/0.15.0/WasmEdge-0.15.0-src.tar.gz"
+    sha256 "17915c4d047bc7a02aca862f4852101ec8d35baab7b659593687ab8c84b00938"
+
+    # Backport support for LLVM 21
+    patch do
+      url "https://github.com/WasmEdge/WasmEdge/commit/b11791e4312445e3fd2d6c56acc9c2e36e12ef34.patch?full_index=1"
+      sha256 "f9d3b39ca9871ca3d2c87f7e107651d36e9eedeccc79925879671ff552aec99b"
+    end
+  end
 
   bottle do
     sha256 cellar: :any,                 arm64_sequoia: "7a1adf8fddc71616ff4769e436fbba83303e7fbd616f87a2048af006e5609559"
@@ -19,8 +28,8 @@ class Wasmedge < Formula
 
   depends_on "cmake" => :build
   depends_on "fmt"
-  depends_on "lld@20"
-  depends_on "llvm@20"
+  depends_on "lld"
+  depends_on "llvm"
   depends_on "spdlog"
 
   def install

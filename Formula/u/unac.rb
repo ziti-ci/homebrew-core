@@ -53,11 +53,12 @@ class Unac < Formula
   end
 
   def install
+    ENV["ACLOCAL_PATH"] = Formula["gettext"].pkgshare/"m4"
+
     touch "config.rpath"
     inreplace "autogen.sh", "libtool", "glibtool"
     system "./autogen.sh"
-    system "./configure", "--disable-dependency-tracking",
-                          "--prefix=#{prefix}"
+    system "./configure", *std_configure_args
 
     # Separate steps to prevent race condition in folder creation
     system "make"

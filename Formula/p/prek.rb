@@ -7,6 +7,7 @@ class Prek < Formula
   head "https://github.com/j178/prek.git", branch: "master"
 
   bottle do
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "62fd168db527734dcf969b2c237aee748e4e8c0f84a1045ca41c31b1ef54c09f"
     sha256 cellar: :any_skip_relocation, arm64_sequoia: "d8ddfc13c19af043807b8147def040cc82c04f88b7e16ba73707be611fa138c7"
     sha256 cellar: :any_skip_relocation, arm64_sonoma:  "f8c683b24472e13230ed4d259541b57b6f5a73cafeed963e245fa0b6421f3b5b"
     sha256 cellar: :any_skip_relocation, arm64_ventura: "0b3c2b488d22f85de9d4feb1eb995677addca76e73618d38d67b69c6bd7dc357"

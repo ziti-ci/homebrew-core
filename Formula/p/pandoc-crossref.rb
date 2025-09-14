@@ -7,6 +7,7 @@ class PandocCrossref < Formula
   revision 1
 
   bottle do
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "e549935b1eba5948c0d64d5fcdc80da9bb3f4e8184a3e9256b29db8443119889"
     sha256 cellar: :any_skip_relocation, arm64_sequoia: "2909ee4d5c2caf2ecd8a59a64c3b5f7fa3a12ad3e9b151a8522cd25c0d148efd"
     sha256 cellar: :any_skip_relocation, arm64_sonoma:  "e933b05db7c40bcf41f11ec072ecbd416794b327db2e426e15a42a9d4df11c95"
     sha256 cellar: :any_skip_relocation, sonoma:        "00b382f9ff91238910ecd56ee752111497dfd6986ae640d640316c3e20e9fbbc"

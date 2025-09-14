@@ -2,7 +2,7 @@ class Qd < Formula
   desc "C++/Fortran-90 double-double and quad-double package"
   homepage "https://www.davidhbailey.com/dhbsoftware/"
   url "https://www.davidhbailey.com/dhbsoftware/qd-2.3.24.tar.gz"
-  sha256 "ad6738e8330928308e10346ff7fd357ed17386408f8fb7a23704cd6f5d52a6c8"
+  sha256 "a47b6c73f86e6421e86a883568dd08e299b20e36c11a99bdfbe50e01bde60e38"
   license "BSD-3-Clause-LBNL"
 
   # The homepage no longer links to a QD tarball and instead directs users to

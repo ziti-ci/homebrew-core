@@ -21,6 +21,7 @@ class Minikube < Formula
   depends_on "kubernetes-cli"
 
   def install
+    ENV["CGO_ENABLED"] = OS.mac? ? "1" : "0"
     system "make"
     bin.install "out/minikube"
 

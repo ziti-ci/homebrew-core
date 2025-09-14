@@ -23,6 +23,10 @@ class Pdfrip < Formula
   depends_on "cmake" => :build
   depends_on "rust" => :build
 
+  # Fix to build error with `indicatif`
+  # PR ref: https://github.com/mufeedvh/pdfrip/pull/64
+  patch :DATA
+
   def install
     ENV["SDKROOT"] = MacOS.sdk_path if OS.mac?
 
@@ -37,3 +41,34 @@ class Pdfrip < Formula
     assert_match "Failed to crack file", output
   end
 end
+
+__END__
+diff --git a/Cargo.toml b/Cargo.toml
+index e0db059..8063d89 100644
+--- a/Cargo.toml
++++ b/Cargo.toml
+@@ -5,7 +5,7 @@ edition = "2021"
+ authors = ["Mufeed VH <mufeed@lyminal.space>", "Pommaq"]
+ 
+ [dependencies]
+-indicatif = "0.16.2"
++indicatif = "0.18.0"
+ log = "0.4.19"
+ anyhow = "1.0.72"
+ crossbeam = "0.8.2"
+diff --git a/src/core/engine.rs b/src/core/engine.rs
+index 29980ee..093362a 100644
+--- a/src/core/engine.rs
++++ b/src/core/engine.rs
+@@ -49,8 +49,8 @@ pub fn crack_file(
+ 
+     let progress_bar = ProgressBar::new(producer.size() as u64);
+-    progress_bar.set_draw_delta(1000);
+-    progress_bar.set_style(ProgressStyle::default_bar()
+-        .template("{spinner:.green} [{elapsed_precise}] [{bar:40.cyan/blue}] {pos:>7}/{len:7} {percent}% {per_sec} ETA: {eta}"));
++    let style = ProgressStyle::default_bar()
++            .template("{spinner:.green} [{elapsed_precise}] [{bar:40.cyan/blue}] {pos:>7}/{len:7} {percent}% {per_sec} ETA: {eta}")?;
++    progress_bar.set_style(style);
+ 
+     loop {
+         match success_reader.try_recv() {

@@ -7,6 +7,7 @@ class CodebookLsp < Formula
   head "https://github.com/blopker/codebook.git", branch: "main"
 
   bottle do
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "3be7738225ebec003bf0231a2c2116731318e3f1137b84bcb2c8709c46511963"
     sha256 cellar: :any_skip_relocation, arm64_sequoia: "0663523417434a93a1b3ef9adc13b6f8e2b8d0254f783c2d37398425824fc647"
     sha256 cellar: :any_skip_relocation, arm64_sonoma:  "1dfb5b3e08e772685bad7655356c53502c44f91f39c6c79dbbd559baaf7ba641"
     sha256 cellar: :any_skip_relocation, sonoma:        "27cc07ad1d1a0eb43ffb8a1602e55ac9851efefa1495df141624cc05a6342786"

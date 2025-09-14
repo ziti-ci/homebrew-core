@@ -19,6 +19,7 @@ class Lazydocker < Formula
   depends_on "go" => :build
 
   def install
+    ENV["CGO_ENABLED"] = OS.mac? ? "1" : "0"
     ldflags = "-s -w -X main.version=#{version} -X main.date=#{time.iso8601} -X main.buildSource=#{tap.user}"
     system "go", "build", "-mod=vendor", *std_go_args(ldflags:)
   end

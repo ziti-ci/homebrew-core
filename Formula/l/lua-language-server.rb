@@ -3,8 +3,8 @@ class LuaLanguageServer < Formula
   homepage "https://github.com/LuaLS/lua-language-server"
   # pull from git tag to get submodules
   url "https://github.com/LuaLS/lua-language-server.git",
-      tag:      "3.14.0",
-      revision: "485835e2a89004e1ffc5feb4484dc798a12af69e"
+      tag:      "3.15.0",
+      revision: "32fec3cc99af8b9a1e45c2455a8c3bd0d3e38f66"
   license "MIT"
   head "https://github.com/LuaLS/lua-language-server.git", branch: "master"
 
@@ -23,7 +23,9 @@ class LuaLanguageServer < Formula
   depends_on "ninja" => :build
 
   def install
-    ENV.cxx11
+    # Workaround until upstream can update bee.lua submodule
+    color_h = ["3rd/bee.lua/3rd/fmt/fmt/color.h", "3rd/luamake/bee.lua/3rd/fmt/fmt/color.h"]
+    inreplace color_h, '#include "format.h"', "\\0\n#include <algorithm>"
 
     # disable all tests by build script (fail in build environment)
     inreplace buildpath.glob("**/3rd/bee.lua/test/test.lua"),

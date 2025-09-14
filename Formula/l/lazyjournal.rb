@@ -10,6 +10,7 @@ class Lazyjournal < Formula
     sha256 cellar: :any_skip_relocation, arm64_sequoia: "c2ac0322c208270caa261050d3d4e42cf7e0d1d786a7cbd73230de592b1f7673"
     sha256 cellar: :any_skip_relocation, arm64_sonoma:  "c2ac0322c208270caa261050d3d4e42cf7e0d1d786a7cbd73230de592b1f7673"
     sha256 cellar: :any_skip_relocation, sonoma:        "cf3c899f71268f7a9160ddaf27e23e23dd53bfd6ee11510029143e41f3f0bd9d"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "274a93db942d3cda7d10c346ccb6a74353329a6ea07ad6ebb12cd5d06b6704ef"
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "8c97f77d9110aae245ccc1778e20bfd9c59f573af6eb76426ede694b4136766f"
   end
 

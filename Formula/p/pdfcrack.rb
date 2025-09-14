@@ -1,11 +1,9 @@
 class Pdfcrack < Formula
   desc "PDF files password cracker"
   homepage "https://pdfcrack.sourceforge.net/"
-  url "https://downloads.sourceforge.net/project/pdfcrack/pdfcrack/pdfcrack-0.20/pdfcrack-0.20.tar.gz"
-  sha256 "7b8b29b18fcd5cb984aeb640ee06edf09fede4709b59c32fee4f2d86860de5b4"
+  url "https://downloads.sourceforge.net/project/pdfcrack/pdfcrack/pdfcrack-0.21/pdfcrack-0.21.tar.gz"
+  sha256 "26f00d4afcb70b5839047bc6f62e4253073ac437bdb526f01e8c04b220e97762"
   license "GPL-2.0-or-later"
-
-  no_autobump! because: :requires_manual_review
 
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_tahoe:    "f8113a280defcb1e4851634066767a544febc31c201348c3ec35473199b1a9bd"

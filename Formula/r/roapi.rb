@@ -7,6 +7,7 @@ class Roapi < Formula
 
   bottle do
     rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "6116ecb02c112d2f990024d034ba242894e9e4a023f6756f883e0ec58b3408e2"
     sha256 cellar: :any_skip_relocation, arm64_sequoia: "f3bf66401f133a7d2e9234280571eed8cf06b9f1b98802762b5995b456414077"
     sha256 cellar: :any_skip_relocation, arm64_sonoma:  "d1d1d6423d420c65fe3f2b414fdd0c33a67226d5afae78c5ddebf6e4dea35931"
     sha256 cellar: :any_skip_relocation, sonoma:        "1f2e0e0df5b406870033b3284ad136e6566c4f1fefb32c8d7c36f75c42f3e931"

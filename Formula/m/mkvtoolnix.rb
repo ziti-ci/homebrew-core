@@ -1,11 +1,19 @@
 class Mkvtoolnix < Formula
   desc "Matroska media files manipulation tools"
   homepage "https://mkvtoolnix.download/"
-  url "https://mkvtoolnix.download/sources/mkvtoolnix-94.0.tar.xz"
-  mirror "https://fossies.org/linux/misc/mkvtoolnix-94.0.tar.xz"
-  sha256 "babbcff2362c9dd00b2e79336eff83fad177603a51a458ef1fa421b27fbc4703"
   license "GPL-2.0-or-later"
-  revision 1
+
+  stable do
+    url "https://mkvtoolnix.download/sources/mkvtoolnix-95.0.tar.xz"
+    mirror "https://fossies.org/linux/misc/mkvtoolnix-95.0.tar.xz"
+    sha256 "4e5481dee444f9995c176a42b6da2d2da1ba701cabec754b29dc79ea483a194f"
+
+    # Backport fix for older Xcode
+    patch do
+      url "https://codeberg.org/mbunkus/mkvtoolnix/commit/a821117045d0328b1448ca225d0d5b9507aa00af.diff"
+      sha256 "4d537e37b1351ff23590199685dfc61c99844421629a9c572bb895edced1ac67"
+    end
+  end
 
   livecheck do
     url "https://mkvtoolnix.download/sources/"
@@ -54,13 +62,6 @@ class Mkvtoolnix < Formula
   conflicts_with cask: "mkvtoolnix-app"
 
   def install
-    # Workaround for Boost 1.89.0. Upstream fix requires regenerating configure.
-    # Issue ref: https://codeberg.org/mbunkus/mkvtoolnix/issues/6143
-    boost_workaround_args = if build.stable?
-      odie "Try removing workaround for Boost 1.89.0" if version > "94.0"
-      %w[ax_cv_boost_system=yes --without-boost-system]
-    end
-
     # Remove bundled libraries
     rm_r(buildpath.glob("lib/*") - buildpath.glob("lib/{avilib,librmff}*"))
 
@@ -79,8 +80,7 @@ class Mkvtoolnix < Formula
     extra_libs.chop!
 
     system "./autogen.sh" if build.head?
-    system "./configure", *boost_workaround_args,
-                          "--with-boost=#{Formula["boost"].opt_prefix}",
+    system "./configure", "--with-boost=#{Formula["boost"].opt_prefix}",
                           "--with-docbook-xsl-root=#{Formula["docbook-xsl"].opt_prefix}/docbook-xsl",
                           "--with-extra-includes=#{extra_includes}",
                           "--with-extra-libs=#{extra_libs}",

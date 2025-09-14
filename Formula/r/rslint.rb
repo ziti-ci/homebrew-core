@@ -10,6 +10,7 @@ class Rslint < Formula
 
   bottle do
     rebuild 2
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "a889ed0f08b3102adb969159e71ba2d28aa7c40b1809c5fa10d7d57350e9731f"
     sha256 cellar: :any_skip_relocation, arm64_sequoia: "063ceea1423e7a6c428f7d9c517c64a773eb5a0ffac97c55a45558081aa93d9b"
     sha256 cellar: :any_skip_relocation, arm64_sonoma:  "f5bba58ac05e2c259b3d2e135e5ec12afbea7d67b0b48a892d48554883c65e66"
     sha256 cellar: :any_skip_relocation, sonoma:        "a5c91e6d84fd85d4d8914caea6d4d261a514ce5c4bfa722d423f2bb78615c402"

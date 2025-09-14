@@ -1,14 +1,14 @@
 class VulkanUtilityLibraries < Formula
   desc "Utility Libraries for Vulkan"
   homepage "https://github.com/KhronosGroup/Vulkan-Utility-Libraries"
-  url "https://github.com/KhronosGroup/Vulkan-Utility-Libraries/archive/refs/tags/v1.4.326.tar.gz"
-  sha256 "74bc0be35045bc4f3e7dd2b52fbf8141cda7329ab9d4f14c988442bd74f201c8"
+  url "https://github.com/KhronosGroup/Vulkan-Utility-Libraries/archive/refs/tags/vulkan-sdk-1.4.321.0.tar.gz"
+  sha256 "0cb3c19bc1ce3877a69fe00955597684fa7bde569eea633ac735e36dd959768e"
   license "Apache-2.0"
   head "https://github.com/KhronosGroup/Vulkan-Utility-Libraries.git", branch: "main"
 
   livecheck do
     url :stable
-    regex(/^v?(\d+(?:\.\d+)+)$/i)
+    regex(/^vulkan-sdk[._-]v?(\d+(?:\.\d+)+)$/i)
   end
 
   bottle do

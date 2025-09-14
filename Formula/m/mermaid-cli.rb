@@ -1,8 +1,8 @@
 class MermaidCli < Formula
   desc "CLI for Mermaid library"
   homepage "https://github.com/mermaid-js/mermaid-cli"
-  url "https://registry.npmjs.org/@mermaid-js/mermaid-cli/-/mermaid-cli-11.9.0.tgz"
-  sha256 "a0c68fe6db99308c360a5d2be3d87cfc15f9c967c7bc838a691804e479f39d0a"
+  url "https://registry.npmjs.org/@mermaid-js/mermaid-cli/-/mermaid-cli-11.10.1.tgz"
+  sha256 "478135ef9eec7dd495683e679cddcc00ba52ca8b78286d9f0da253f9c4d83d00"
   license "MIT"
 
   bottle do
@@ -23,10 +23,10 @@ class MermaidCli < Formula
 
     node_modules = libexec/"lib/node_modules/@mermaid-js/mermaid-cli/node_modules"
 
-    # Remove incompatible pre-built `bare-fs`/`bare-os` binaries
+    # Remove incompatible pre-built `bare-fs`/`bare-os`/`bare-url` binaries
     os = OS.kernel_name.downcase
     arch = Hardware::CPU.intel? ? "x64" : Hardware::CPU.arch.to_s
-    node_modules.glob("{bare-fs,bare-os}/prebuilds/*")
+    node_modules.glob("{bare-fs,bare-os,bare-url}/prebuilds/*")
                 .each { |dir| rm_r(dir) if dir.basename.to_s != "#{os}-#{arch}" }
   end
 

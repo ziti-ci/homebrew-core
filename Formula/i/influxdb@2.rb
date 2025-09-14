@@ -53,6 +53,10 @@ class InfluxdbAT2 < Formula
   end
 
   def install
+    # Workaround for `error: hiding a lifetime that's elided elsewhere is confusing` with `rust` 1.89+
+    # Issue ref: https://github.com/influxdata/flux/issues/5559
+    ENV.append_to_rustflags "--allow dead_code --allow mismatched_lifetime_syntaxes"
+
     # Set up the influxdata pkg-config wrapper to enable just-in-time compilation & linking
     # of the Rust components in the server.
     resource("pkg-config-wrapper").stage do

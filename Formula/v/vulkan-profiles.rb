@@ -1,14 +1,14 @@
 class VulkanProfiles < Formula
   desc "Tools for Vulkan profiles"
   homepage "https://github.com/KhronosGroup/Vulkan-Profiles"
-  url "https://github.com/KhronosGroup/Vulkan-Profiles/archive/refs/tags/v1.4.326.tar.gz"
-  sha256 "f7de5da64478c4b26f586302198d714508bfb84b23d0a4fb78fff8ad3bcaa5f6"
+  url "https://github.com/KhronosGroup/Vulkan-Profiles/archive/refs/tags/vulkan-sdk-1.4.321.0.tar.gz"
+  sha256 "83f081e864e3356c193b4b8b12ab431894a4fa2435f94b07fac7d0724587a4e1"
   license "Apache-2.0"
   head "https://github.com/KhronosGroup/Vulkan-Profiles.git", branch: "main"
 
   livecheck do
     url :stable
-    regex(/^v?(\d+(?:\.\d+)+)$/i)
+    regex(/^vulkan-sdk[._-]v?(\d+(?:\.\d+)+)$/i)
   end
 
   bottle do

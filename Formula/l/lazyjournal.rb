@@ -16,6 +16,7 @@ class Lazyjournal < Formula
   depends_on "go" => :build
 
   def install
+    ENV["CGO_ENABLED"] = OS.mac? ? "1" : "0"
     ldflags = %W[
       -s -w
       -X main.version=#{version}

@@ -3,8 +3,8 @@ class Gamdl < Formula
 
   desc "Python CLI app for downloading Apple Music songs, music videos and post videos"
   homepage "https://github.com/glomatico/gamdl"
-  url "https://files.pythonhosted.org/packages/35/76/994c2e9a1a96c7d1022d7a390f08e8e7a92ca7aa371bb64dafa9effa54d2/gamdl-2.6.2.tar.gz"
-  sha256 "6531592f9f7d19f0836abfa95cfc02b80312065fec951f0a107a2390f9a9d099"
+  url "https://files.pythonhosted.org/packages/1d/1d/c4e76c9f3492a77077aeb87fc33fa94ce43e44facf7d2de2972b1c4957ee/gamdl-2.6.3.tar.gz"
+  sha256 "534da0f7fc7e537c9ac3ce198aa778d76a547f6366ac44392c4fca0ebb11cb0a"
   license "MIT"
 
   bottle do
@@ -118,8 +118,8 @@ class Gamdl < Formula
   end
 
   resource "yt-dlp" do
-    url "https://files.pythonhosted.org/packages/f4/d4/d9dd231b03f09fdfb5f0fe70f30de0b5f59454aa54fa6b2b2aea49404988/yt_dlp-2025.8.27.tar.gz"
-    sha256 "ed74768d2a93b29933ab14099da19497ef571637f7aa375140dd3d882b9c1854"
+    url "https://files.pythonhosted.org/packages/50/b2/fb255d991857a6a8b2539487ed6063e7bf318f19310d81f039dedb3c2ad6/yt_dlp-2025.9.5.tar.gz"
+    sha256 "9ce080f80b2258e872fe8a75f4707ea2c644e697477186e20b9a04d9a9ea37cf"
   end
 
   def install

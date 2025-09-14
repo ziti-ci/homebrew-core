@@ -40,10 +40,13 @@ class Dosfstools < Formula
   depends_on "pkgconf" => :build
 
   def install
+    # Workaround for https://github.com/dosfstools/dosfstools/pull/218
+    ENV["ACLOCAL_PATH"] = Formula["gettext"].pkgshare/"m4"
+
     system "autoreconf", "--force", "--install", "--verbose"
-    system "./configure", "--prefix=#{prefix}",
+    system "./configure", "--enable-compat-symlinks",
                           "--without-udev",
-                          "--enable-compat-symlinks"
+                          *std_configure_args
     system "make", "install"
   end
 

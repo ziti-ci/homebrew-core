@@ -34,6 +34,12 @@ class Libetonyek < Formula
     sha256 "5ed6bcd4ae3f3c05c912e62f216cd1a44123846147f729a49fb5668da51e030e"
   end
 
+  # Apply Fedora patch to fix build with mdds >= 3
+  patch :p0 do
+    url "https://src.fedoraproject.org/rpms/libetonyek/raw/65a93fb7f21fb0e668d78644ec6aa7843e5372f5/f/mdds3.patch"
+    sha256 "cd390fa4280b78fd0d1a7f587ab576d8ef0c4848036c8b0c821b576c6745db17"
+  end
+
   def install
     resource("liblangtag").stage do
       system "./configure", "--disable-modules", "--disable-silent-rules", *std_configure_args(prefix: libexec)

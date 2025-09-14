@@ -1,14 +1,14 @@
 class VulkanExtensionlayer < Formula
   desc "Layer providing Vulkan features when native support is unavailable"
   homepage "https://github.com/KhronosGroup/Vulkan-ExtensionLayer"
-  url "https://github.com/KhronosGroup/Vulkan-ExtensionLayer/archive/refs/tags/v1.4.321.tar.gz"
-  sha256 "177a356162cfcf47c50cc0f0dcd51630196f171f21d6cefe3fb8b5d514f60d49"
+  url "https://github.com/KhronosGroup/Vulkan-ExtensionLayer/archive/refs/tags/vulkan-sdk-1.4.321.0.tar.gz"
+  sha256 "6104bcd3c81b10e5ad90749d895bd681ff411c0c5de914e53a9aa9f727c43cc8"
   license "Apache-2.0"
   head "https://github.com/KhronosGroup/Vulkan-ExtensionLayer.git", branch: "main"
 
   livecheck do
     url :stable
-    regex(/^v?(\d+(?:\.\d+)+)$/i)
+    regex(/^vulkan-sdk[._-]v?(\d+(?:\.\d+)+)$/i)
   end
 
   bottle do

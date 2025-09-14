@@ -24,6 +24,10 @@ class GitSeries < Formula
   depends_on "libssh2"
   depends_on "openssl@3"
 
+  # Bump `munkres` version to fix error[E0658]: use of unstable library feature `test`
+  # Commit ref: https://github.com/git-series/git-series/commit/daf949d8b5b1c9299c49a5cfd30b6da9534ccb87
+  patch :DATA
+
   def install
     # Ensure that the `openssl` crate picks up the intended library.
     # https://crates.io/crates/openssl#manual-configuration
@@ -72,3 +76,49 @@ class GitSeries < Formula
     end
   end
 end
+
+__END__
+diff --git a/Cargo.toml b/Cargo.toml
+index a8fb891..2aaacd9 100644
+--- a/Cargo.toml
++++ b/Cargo.toml
+@@ -14,6 +14,6 @@ clap = "2.7.0"
+ colorparse = "2.0"
+ git2 = "0.6"
+ isatty = "0.1.1"
+-munkres = "0.3.0"
++munkres = "0.5"
+ quick-error = "1.0"
+ tempdir = "0.3.4"
+diff --git a/src/main.rs b/src/main.rs
+index 623c1f8..48bd2a5 100644
+--- a/src/main.rs
++++ b/src/main.rs
+@@ -37,6 +37,10 @@ quick_error! {
+             cause(err)
+             display("{}", err)
+         }
++        Munkres(err: munkres::Error) {
++            from()
++            display("{:?}", err)
++        }
+         Msg(msg: String) {
+             from()
+             from(s: &'static str) -> (s.to_string())
+@@ -1286,14 +1290,14 @@ fn write_commit_range_diff<W: IoWrite>(out: &mut W, repo: &Repository, colors: &
+         }
+     }
+     let mut weight_matrix = munkres::WeightMatrix::from_row_vec(n, weights);
+-    let result = munkres::solve_assignment(&mut weight_matrix);
++    let result = try!(munkres::solve_assignment(&mut weight_matrix));
+ 
+     #[derive(Copy, Clone, Debug, PartialEq, Eq)]
+     enum CommitState { Unhandled, Handled, Deleted };
+     let mut commits2_from1: Vec<_> = std::iter::repeat(None).take(ncommits2).collect();
+     let mut commits1_state: Vec<_> = std::iter::repeat(CommitState::Unhandled).take(ncommits1).collect();
+     let mut commit_pairs = Vec::with_capacity(n);
+-    for (i1, i2) in result {
++    for munkres::Position { row: i1, column: i2 } in result {
+         if i1 < ncommits1 {
+             if i2 < ncommits2 {
+                 commits2_from1[i2] = Some(i1);

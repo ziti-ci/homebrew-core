@@ -8,6 +8,7 @@ class Gamdl < Formula
   license "MIT"
 
   bottle do
+    sha256 cellar: :any,                 arm64_tahoe:   "dc60742cbf2157978f824ccee512528932f58318489c0e39f8819d2e0b570226"
     sha256 cellar: :any,                 arm64_sequoia: "586c03f2aa669adc7d5528bc4e1a43ec253c43ad6c13a054ee17ba6b19832321"
     sha256 cellar: :any,                 arm64_sonoma:  "3a3c81ea1ff0363354ec99fc518b385237e72769e5798014b6377394677d9f8e"
     sha256 cellar: :any,                 sonoma:        "e0b1154721927b2292047a6a302345d7bd003402eba8bd9e95276c0acb1f038d"

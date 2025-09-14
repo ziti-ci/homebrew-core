@@ -7,6 +7,7 @@ class Tombi < Formula
   head "https://github.com/tombi-toml/tombi.git", branch: "main"
 
   bottle do
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "527dec7c252e98ed6cf3981a2b37493221e581e6cf59fee1594eaeb93a0b52d7"
     sha256 cellar: :any_skip_relocation, arm64_sequoia: "8489b90b10836f0497865b271cbb1f71cd07bed464a7a32af7ec6d76d7bd0fef"
     sha256 cellar: :any_skip_relocation, arm64_sonoma:  "f22a26b9e4dc9e514bbd708bf9f86ce71d9b1bc546fa56ee6f8a9a8b443beb0e"
     sha256 cellar: :any_skip_relocation, sonoma:        "4b20d222e97d47e4a3764bb7b0afb935558b319d4b194fa69265bffcd029cd38"

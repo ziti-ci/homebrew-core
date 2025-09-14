@@ -1,9 +1,14 @@
 class Dhall < Formula
   desc "Interpreter for the Dhall language"
   homepage "https://dhall-lang.org/"
-  url "https://hackage.haskell.org/package/dhall-1.42.2/dhall-1.42.2.tar.gz"
-  sha256 "9a907dd95f4eefee9110f8090d83021371b6b301da315b5b2911c766e0c67b3b"
+  url "https://hackage.haskell.org/package/dhall-1.42.3/dhall-1.42.3.tar.gz"
+  sha256 "cbb5612d9c55b9b3fa07ab73b72e6445875a6f53283f29979f164a9b3b067a00"
   license "BSD-3-Clause"
+
+  livecheck do
+    url "https://hackage-content.haskell.org/package/dhall/docs/"
+    strategy :header_match
+  end
 
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_sequoia: "6904e323b779154ef9aa1563882e8e3cac9d22416d1ff28c3a5701248a2ffbf4"
@@ -16,8 +21,10 @@ class Dhall < Formula
   end
 
   depends_on "cabal-install" => :build
-  depends_on "ghc@9.10" => :build
+  depends_on "ghc" => :build
+  depends_on "gmp"
 
+  uses_from_macos "libffi"
   uses_from_macos "ncurses"
   uses_from_macos "zlib"
 

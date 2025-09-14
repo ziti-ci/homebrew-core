@@ -11,6 +11,7 @@ class Libetonyek < Formula
   end
 
   bottle do
+    sha256               arm64_tahoe:   "cefcff9827b7b0fba71260dfe038835db5bed70cd29d2a8950ec8461993c4bf9"
     sha256               arm64_sequoia: "0eb492997db6e7df366f6be4b4c30778aed163f97279c114325d3c1caf551032"
     sha256               arm64_sonoma:  "5b0326bceb378ae5864f2be1b20d835e8f033cef7e0a12fc08e21a9bc1010161"
     sha256               arm64_ventura: "18b9e602c028f0c0c77b366ac2509f74bc2243f557b20c510952b389b512ca95"

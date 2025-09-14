@@ -17,13 +17,13 @@ class Wasmedge < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_sequoia: "7a1adf8fddc71616ff4769e436fbba83303e7fbd616f87a2048af006e5609559"
-    sha256 cellar: :any,                 arm64_sonoma:  "0ed9ab436f2107500dc61545740c1fb59f8d2b3d2e5dee2eabedc001cd2dde68"
-    sha256 cellar: :any,                 arm64_ventura: "6bbda71c4eb30758c214028ec07ebed60bdd2bc1aa5c3c53f7d5313b76cbea4f"
-    sha256 cellar: :any,                 sonoma:        "1c92c5c84fb502803bcd179d08d0c2e9a0502f7314ab3c70900168f65b7a299b"
-    sha256 cellar: :any,                 ventura:       "2112ee22399008eaa276cc3b9ebd7085b9b63e4fa9b4340e2947789940fe2e9f"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "0de9e43ce676147d4711eee4c94a71895ba8317bcb3a1c89be47425b00977ed1"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "e0068658546d94d727b83bb0c9cd7cd6c67f3cd6bde0b259cc6fdaad6b71e9a6"
+    rebuild 1
+    sha256 cellar: :any,                 arm64_tahoe:   "cae2cd202250f8a1284cc3c7f4e6991f0b6ac3c138210a0ec9dd1fb0f0f5afb4"
+    sha256 cellar: :any,                 arm64_sequoia: "d42fe39e5a2f3b8453ea3ff350fdbe0f9805d525f6f2efa6272d3fe65bdb3800"
+    sha256 cellar: :any,                 arm64_sonoma:  "5b40a4f9669a493b8d16475cf0157141d39379ed2fc2c7366223fd1efe072ba1"
+    sha256 cellar: :any,                 sonoma:        "2f335b6c00bea0f23795a48d5f0bcd3163bf93dc232d9ad9181932cbe10b2aaf"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "0e1d0a80bf156603ed138c859d3d7f7725fc49c293ac6f7c7bd460dcdff1d7ff"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "07e7399f0cca85682d66383298f69843f12b3adb3fa0518eb5d6f9bc7b884eaa"
   end
 
   depends_on "cmake" => :build

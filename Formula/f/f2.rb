@@ -14,6 +14,7 @@ class F2 < Formula
   end
 
   bottle do
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "20b9ac62100ec247caee037f1bef031b4b9794cedf6776807c0cb603a41dc105"
     sha256 cellar: :any_skip_relocation, arm64_sequoia: "20b9ac62100ec247caee037f1bef031b4b9794cedf6776807c0cb603a41dc105"
     sha256 cellar: :any_skip_relocation, arm64_sonoma:  "20b9ac62100ec247caee037f1bef031b4b9794cedf6776807c0cb603a41dc105"
     sha256 cellar: :any_skip_relocation, sonoma:        "4cf1ad63cbd2dbec21a018c24c1e1a911db504187ec70214214b55cf73c59f2f"

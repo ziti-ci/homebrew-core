@@ -10,6 +10,7 @@ class GitSeries < Formula
 
   bottle do
     rebuild 1
+    sha256 cellar: :any,                 arm64_tahoe:   "6c0d251705744036205ea82afac6a4851e9a4cd1cc02023283a87c69aa776d6a"
     sha256 cellar: :any,                 arm64_sequoia: "cd487be11dce61dae6298686b051d08ed7ac9310ba31d7d4e746d0dbadc619a6"
     sha256 cellar: :any,                 arm64_sonoma:  "445b7335a3682c6f1cf57bdf7ba4af3ff4868d7035d2e1fa7aa379071af19afc"
     sha256 cellar: :any,                 sonoma:        "7e34b5d7fb0ab1cca8fb1f265875fc44ab125b3af7f7db7d1f47e815bffd3843"

@@ -28,12 +28,15 @@ class Libvncserver < Formula
   depends_on "openssl@3"
 
   def install
-    system "cmake", "-S", ".", "-B", "build",
-                    "-DJPEG_INCLUDE_DIR=#{Formula["jpeg-turbo"].opt_include}",
-                    "-DJPEG_LIBRARY=#{Formula["jpeg-turbo"].opt_lib/shared_library("libjpeg")}",
-                    "-DOPENSSL_ROOT_DIR=#{Formula["openssl@3"].opt_prefix}",
-                    "-DWITH_EXAMPLES=OFF",
-                    *std_cmake_args
+    args = %W[
+      -DJPEG_INCLUDE_DIR=#{Formula["jpeg-turbo"].opt_include}
+      -DJPEG_LIBRARY=#{Formula["jpeg-turbo"].opt_lib/shared_library("libjpeg")}
+      -DOPENSSL_ROOT_DIR=#{Formula["openssl@3"].opt_prefix}
+      -DWITH_EXAMPLES=OFF
+    ]
+    # Workaround for CMake 4 compatibility
+    args << "-DCMAKE_POLICY_VERSION_MINIMUM=3.5"
+    system "cmake", "-S", ".", "-B", "build", *args, *std_cmake_args
     system "cmake", "--build", "build"
     system "ctest", "--test-dir", "build", "--verbose"
     system "cmake", "--install", "build"

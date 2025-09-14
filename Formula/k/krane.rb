@@ -18,6 +18,8 @@ class Krane < Formula
   depends_on "kubernetes-cli"
   depends_on "ruby"
 
+  uses_from_macos "libffi"
+
   resource "activesupport" do
     url "https://rubygems.org/downloads/activesupport-8.0.2.1.gem"
     sha256 "0405a76fd1ca989975d9ae00d46a4d3979bdf3817482d846b63affa84bd561c6"
@@ -153,9 +155,14 @@ class Krane < Formula
     sha256 "8610b90f8c767303a633b0aafa53d9f61af03f5d9fca96fc0f21380843c309bd"
   end
 
+  # TODO: Uploaded gem has aarch64-darwin prebuilt binaries. To make sure these
+  # are correctly rebuilt from source, we temporarily use the GitHub tarball
+  # which corresponds to 0.5.1. Check on new release if gem can be restored.
   resource "llhttp-ffi" do
-    url "https://rubygems.org/downloads/llhttp-ffi-0.5.1.gem"
-    sha256 "9a25a7fc19311f691a78c9c0ac0fbf4675adbd0cca74310228fdf841018fa7bc"
+    # url "https://rubygems.org/downloads/llhttp-ffi-0.5.1.gem"
+    url "https://github.com/bryanp/llhttp/archive/refs/tags/2025-03-11.tar.gz"
+    version "0.5.1"
+    sha256 "ac334092160db470655dfbab6c9462a4a7ce189f75afe36fe3884cbc42c5550c"
   end
 
   resource "logger" do
@@ -262,18 +269,31 @@ class Krane < Formula
     ENV["GEM_HOME"] = libexec
 
     resources.each do |r|
-      r.verify_download_integrity(r.fetch)
+      next if r.name == "llhttp-ffi"
+
+      r.fetch
       system "gem", "install", r.cached_download,
              "--no-document", "--install-dir", libexec, "--ignore-dependencies"
+    end
+
+    resource("llhttp-ffi").stage do |r|
+      cd "ffi" do
+        system "gem", "build", "llhttp-ffi.gemspec"
+        system "gem", "install", "llhttp-ffi-#{r.version}.gem",
+               "--no-document", "--install-dir", libexec, "--ignore-dependencies"
+      end
     end
 
     system "gem", "install", cached_download,
       "--no-document", "--install-dir", libexec, "--ignore-dependencies"
 
     # Remove vendored prebuilt binaries (Homebrew policy: no vendored binaries)
-    (libexec/"gems").glob("ejson-*/build").each(&:rmtree)
+    rm_r(libexec.glob("gems/ejson-*/build"))
 
     (bin/"krane").write_env_script libexec/"bin/krane", GEM_HOME: ENV["GEM_HOME"]
+
+    # Remove mkmf.log files to avoid shims references
+    rm Dir["#{libexec}/extensions/*/*/*/mkmf.log"]
   end
 
   test do

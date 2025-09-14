@@ -9,13 +9,12 @@ class GitSeries < Formula
   no_autobump! because: :requires_manual_review
 
   bottle do
-    sha256 cellar: :any,                 arm64_sequoia: "bbf088fcb4b5ef9f6a32dec074b9aa98b3e53dc0b990361b6497a504aad42787"
-    sha256 cellar: :any,                 arm64_sonoma:  "4d0310b6b5dce374dbc590d9c16e65b2a7b20b70ed2c568213a940799bcb623d"
-    sha256 cellar: :any,                 arm64_ventura: "56c214679e80ce1a0ef58072f3970717c8a0007ec1acd56edd386b1a99c13cc4"
-    sha256 cellar: :any,                 sonoma:        "b6945d9ad85eb435c21e90c3197fe88e200797c1fb4da7e72ec8a15a33df91b1"
-    sha256 cellar: :any,                 ventura:       "3fb478881046f6409ac052ea2eca2ca32596c00872581d247fff65c220fa365e"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "0d2ab0f405903c2fbc6d3b4c6b8d59d25253b508a09fb37e7aa2f72ffd9905f0"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "a4b86f524114ae9404d558a105686e25fef4859460a73cd4042f43b89b67e896"
+    rebuild 1
+    sha256 cellar: :any,                 arm64_sequoia: "cd487be11dce61dae6298686b051d08ed7ac9310ba31d7d4e746d0dbadc619a6"
+    sha256 cellar: :any,                 arm64_sonoma:  "445b7335a3682c6f1cf57bdf7ba4af3ff4868d7035d2e1fa7aa379071af19afc"
+    sha256 cellar: :any,                 sonoma:        "7e34b5d7fb0ab1cca8fb1f265875fc44ab125b3af7f7db7d1f47e815bffd3843"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "84c7c8c0594606fafb7f6818644da387855e9a9d3a6ae7a4052a36febfac808f"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "bd078426fe35d91cfa5c3d7b7e0dfd1f44746dcf33fb58d82bc1a670ab533fce"
   end
 
   depends_on "pkgconf" => :build

@@ -1,8 +1,8 @@
 class ChiselTunnel < Formula
   desc "Fast TCP/UDP tunnel over HTTP"
   homepage "https://github.com/jpillora/chisel"
-  url "https://github.com/jpillora/chisel/archive/refs/tags/v1.11.2.tar.gz"
-  sha256 "0ec189888eda10ec606dd948965910df9e5374ca8378f772bc2f56fccbbc7dee"
+  url "https://github.com/jpillora/chisel/archive/refs/tags/v1.11.3.tar.gz"
+  sha256 "818e1a3470597119e687a6657edb373a449455757ca4351dc5f3a1a89bba1513"
   license "MIT"
   head "https://github.com/jpillora/chisel.git", branch: "master"
 

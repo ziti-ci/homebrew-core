@@ -28,6 +28,7 @@ class Libdivsufsort < Formula
     args = %w[
       -DBUILD_EXAMPLES=OFF
       -DBUILD_DIVSUFSORT64=ON
+      -DCMAKE_POLICY_VERSION_MINIMUM=3.5
     ]
 
     system "cmake", "-S", ".", "-B", "build", *args, *std_cmake_args

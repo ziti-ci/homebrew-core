@@ -1,14 +1,23 @@
 class VulkanTools < Formula
   desc "Vulkan utilities and tools"
   homepage "https://github.com/KhronosGroup/Vulkan-Tools"
-  url "https://github.com/KhronosGroup/Vulkan-Tools/archive/refs/tags/v1.4.326.tar.gz"
-  sha256 "f5a6a26704a0ff61d40d608b21b1bec11db385442e6d983b60eb2ca461532ae5"
   license "Apache-2.0"
   head "https://github.com/KhronosGroup/Vulkan-Tools.git", branch: "main"
 
+  stable do
+    url "https://github.com/KhronosGroup/Vulkan-Tools/archive/refs/tags/vulkan-sdk-1.4.321.0.tar.gz"
+    sha256 "f897f76b1fae6b85b567ee86d7bc1ba6f5b1a13d3bfa5fe0f07fdb81609f7b75"
+
+    # Backport fix to build on Linux
+    patch do
+      url "https://github.com/KhronosGroup/Vulkan-Tools/commit/105d6c1fede00c3a9055e5a531ebf3d99bac406e.patch?full_index=1"
+      sha256 "d3dac23d470b81b4de346c8bac377e0bf8fbf67b862be5f020cb2a11f31a6950"
+    end
+  end
+
   livecheck do
     url :stable
-    regex(/^v?(\d+(?:\.\d+)+)$/i)
+    regex(/^vulkan-sdk[._-]v?(\d+(?:\.\d+)+)$/i)
   end
 
   bottle do

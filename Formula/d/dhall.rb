@@ -11,13 +11,12 @@ class Dhall < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "6904e323b779154ef9aa1563882e8e3cac9d22416d1ff28c3a5701248a2ffbf4"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "d8a0875538c1eb6776b4a68e35228ac8012593d08df5e9b158b139345f52a8f6"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "f9c27c1448e7ea747a4e43dea0691cfeb1f4b607ce711765a791991ba5213e0c"
-    sha256 cellar: :any_skip_relocation, sonoma:        "9a9eacd1dfa079788283348ba238c3afbc66cae36d4af2eb48019d4b945261a1"
-    sha256 cellar: :any_skip_relocation, ventura:       "55434b1c01bf6bf9b264fced924a31aa852523884f2c23826e1a69af74c3b83f"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "043f28389aef608dafa4085596e02da1c41a671928bf2a32aab9d05307f2f759"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "07be1250410bbcaba21dc5084057529554497b52d942793f4165893a85cabd27"
+    sha256 cellar: :any,                 arm64_tahoe:   "a0c88f6d849e606972f088b676e385fb3b866aec93107728074e63579442ce15"
+    sha256 cellar: :any,                 arm64_sequoia: "5c4e5006b8fbe7f851df1f5715b6132e0bf0f2e9d175f8c6869a43cf82832f8b"
+    sha256 cellar: :any,                 arm64_sonoma:  "0fe7073e00a30ea6e6344188bffaa2b361919ea319b6fb9fab59b21de4842afe"
+    sha256 cellar: :any,                 sonoma:        "27ca6fd8b3d000043651b6e32fc038774afa3bd77be1ce99d410c9c641cc45d7"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "65ae741e47d6ecbfa5f775056e10a2247b79f0543bacf0d1621898e3a1dadd17"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "8cf559101a33d814532fa5dce8daaabc235e1fcebf71bff4313a57d3f96cb0dc"
   end
 
   depends_on "cabal-install" => :build

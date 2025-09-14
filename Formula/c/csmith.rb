@@ -14,6 +14,7 @@ class Csmith < Formula
   no_autobump! because: :requires_manual_review
 
   bottle do
+    sha256 cellar: :any,                 arm64_tahoe:    "5dd099418eb9b36019dfabac7bad13d6d2c0eb6d01700c57fbb6323b6c8331d2"
     sha256 cellar: :any,                 arm64_sequoia:  "8da68f418cb134b12223efaea3b1a32c75d51a975458ec0b95ea5cfb90b2810a"
     sha256 cellar: :any,                 arm64_sonoma:   "52a3fef01ef8a1161d9695787c592c17d405fba995615a6420d5723b8fd49e09"
     sha256 cellar: :any,                 arm64_ventura:  "289f49509657abe2bebc5f5b18f95df1c27860bb9cb9cfb6c5b740bb7ee77010"

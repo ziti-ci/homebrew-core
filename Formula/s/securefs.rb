@@ -13,8 +13,8 @@ class Securefs < Formula
   end
 
   bottle do
-    sha256 arm64_linux:  "253a93eb2271348a1c392d2a67d57a75d5df6fe0cd1683d2654ccdb86e22bfb6"
-    sha256 x86_64_linux: "b2d1bfd6abd6e4df60822a6a62e8ceee4051ee3c0c5f86b573fe4e4255b67971"
+    sha256 arm64_linux:  "9858bb030f35caffa0e1d2bc4e47a17299407726b2fe103e94109e7b563cfbcd"
+    sha256 x86_64_linux: "ac836eba2edf511f5070306aa3e70a81c3f7fca475e1e88ef014ff0d811d89d9"
   end
 
   depends_on "cmake" => :build

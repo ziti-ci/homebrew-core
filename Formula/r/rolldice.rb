@@ -8,6 +8,7 @@ class Rolldice < Formula
   no_autobump! because: :requires_manual_review
 
   bottle do
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:    "5f9da4c5edfa67e45b7e2b77f52e20ce2cb11e66abe7edaebff7bb43ec20711f"
     sha256 cellar: :any_skip_relocation, arm64_sequoia:  "f0b8ac560f934b0d4559fc18471a9fabba189ee9d41e050c03b88c6e56490054"
     sha256 cellar: :any_skip_relocation, arm64_sonoma:   "4d805d84d6f2e3083c040c4e3c650009d34516e949c351e1d85a5906faa2c017"
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "adeb468985368ac97a5e5e16a8276ca39a7c87f9615dbab892298e74d3d0f018"

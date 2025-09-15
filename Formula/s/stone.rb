@@ -13,6 +13,7 @@ class Stone < Formula
   no_autobump! because: :requires_manual_review
 
   bottle do
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:    "6fb8cbc29b5fe932beb7b3af3f5d6c2d19bb2498bbbbba15ea02c75c16a8a684"
     sha256 cellar: :any_skip_relocation, arm64_sequoia:  "ea5e1f4e87879d1281b96a0ee7950c74e639429d622fe4e4ecfa2c2155ddc051"
     sha256 cellar: :any_skip_relocation, arm64_sonoma:   "8db3b91a892716e56362887cdc17006d43abdb00f9897be80c1a06953cbed0ed"
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "fd7a8b20854a50d343960a965e340d0178fd82728e7c74025146b2ac053b24a0"

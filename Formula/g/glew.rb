@@ -100,6 +100,9 @@ class Glew < Formula
     system ENV.cc, testpath/"test.c", "-o", "test", *flags
     # Fails in Linux CI with: freeglut (./test): failed to open display ''
     return if OS.linux? && ENV["HOMEBREW_GITHUB_ACTIONS"]
+    # Tahoe running is headless for now, maybe remove this later
+    # ("GLUT Fatal Error: redisplay needed for window 1, but no display callback")
+    return if OS.mac? && MacOS.version == :tahoe && ENV["HOMEBREW_GITHUB_ACTIONS"]
 
     system "./test"
   end

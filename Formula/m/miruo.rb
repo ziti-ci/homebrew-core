@@ -9,6 +9,7 @@ class Miruo < Formula
   no_autobump! because: :requires_manual_review
 
   bottle do
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:    "d2bbd65942dc88b12e85715f157eaf8f2f76976616a11d5177bb118a02515d5f"
     sha256 cellar: :any_skip_relocation, arm64_sequoia:  "07c790261ecabfbdd53bd0bec573d4e93148f906229f8e3e2fba8a6da213794e"
     sha256 cellar: :any_skip_relocation, arm64_sonoma:   "55dcd6ea73bec9f341df715534d5bd504d048a8bee3f8d5627302cb734840f0b"
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "b9bb44cd7fe123593bf3e89da14aa5b2987bf1b616ae671bfa5d7e1d9adb992b"

@@ -14,6 +14,7 @@ class Rtf2latex2e < Formula
   no_autobump! because: :requires_manual_review
 
   bottle do
+    sha256 arm64_tahoe:    "7b023787b6ca5b67c6aed5da197e586269857f3d0ca369d7bcb1f8104876def6"
     sha256 arm64_sequoia:  "831e4f4beb242fc95b2fa79b14e9cd22cedf31675de00c15e39a63445a2f59cc"
     sha256 arm64_sonoma:   "20d8b8da32f9ff8602f0cbe64dec244a89825507fdfd805bb1d2d6cfc75a85d2"
     sha256 arm64_ventura:  "12f88e9bf99968693672ded4a3784e42558e15895be581c13df04a7c99e978d4"

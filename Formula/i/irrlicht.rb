@@ -61,6 +61,10 @@ class Irrlicht < Formula
     %w[bzip2 jpeglib libpng zlib].each { |l| rm_r(buildpath/"source/Irrlicht"/l) }
 
     if OS.mac?
+      # Work around error with clang 17
+      inreplace "source/Irrlicht/MacOSX/CIrrDeviceMacOSX.mm",
+                "(NSOpenGLPixelFormatAttribute)nil", "(NSOpenGLPixelFormatAttribute)0"
+
       inreplace "source/Irrlicht/MacOSX/MacOSX.xcodeproj/project.pbxproj" do |s|
         s.gsub! "@LIBPNG_PREFIX@", Formula["libpng"].opt_prefix
         s.gsub! "@JPEG_PREFIX@", Formula["jpeg-turbo"].opt_prefix

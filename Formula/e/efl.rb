@@ -61,6 +61,16 @@ class Efl < Formula
     depends_on "mesa"
   end
 
+  # Fix conflicting bool definition.
+  patch do
+    url "https://git.enlightenment.org/enlightenment/efl/commit/0fcaf460c4a33eb54a51b9d8cb38321603019529.patch"
+    sha256 "45492dcea5141814763ed17ac22b068aa74bb165e40afa0fc6cef72af5632335"
+  end
+  patch do
+    url "https://git.enlightenment.org/enlightenment/efl/commit/628c40cce2de0a18818b40615d3351b0c9e9b889.patch"
+    sha256 "13823eb598c2dd81c0a3f143a5b043d0163e8d3b843e397ec4666302943b56d9"
+  end
+
   # Remove LuaJIT 2.0 linker args -pagezero_size and -image_base
   # to fix ARM build using LuaJIT 2.1+
   patch :DATA

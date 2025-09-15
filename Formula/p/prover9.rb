@@ -14,6 +14,7 @@ class Prover9 < Formula
   no_autobump! because: :requires_manual_review
 
   bottle do
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:    "f50efa708e0a002db67d676da0207bed5d12c71b5ca5c3da1db857e21864c294"
     sha256 cellar: :any_skip_relocation, arm64_sequoia:  "dc3e744b9971aabf272db720d2fb90a8b99dca8cb8799ef9d9d89beb306eb291"
     sha256 cellar: :any_skip_relocation, arm64_sonoma:   "92508ef60be4768b9567c677c4aae881f04ef84de98d2bbff299739f906198ba"
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "e4ab7e6152098318be4a839b1fa2c6e50dc6868ef6b08c8d34d2175aac1736fe"

@@ -1,7 +1,7 @@
 class Skktools < Formula
   desc "SKK dictionary maintenance tools"
   homepage "https://github.com/skk-dev/skktools"
-  url "https://deb.debian.org/debian/pool/main/s/skktools/skktools_1.3.4.orig.tar.gz"
+  url "https://github.com/skk-dev/skktools/archive/refs/tags/skktools-1_3_4.tar.gz"
   sha256 "84cc5d3344362372e0dfe93a84790a193d93730178401a96248961ef161f2168"
   license "GPL-2.0-or-later"
   revision 2

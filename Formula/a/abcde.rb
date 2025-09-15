@@ -26,8 +26,6 @@ class Abcde < Formula
     sha256 cellar: :any,                 monterey:       "1108a67a9a2046cf987daa49ef63a8ce8b1dd8b011463cd7594fb13e0aee190b"
     sha256 cellar: :any,                 big_sur:        "c9668232e677e92b51210a0563c2156f030837b1fb221de60d16c83c466620b2"
     sha256 cellar: :any,                 catalina:       "fa00c7fc4b6b4ab794439f619ba00961358a4e5684a0ae2412fbd78ba2497df1"
-    sha256 cellar: :any,                 mojave:         "c2ef29d1b906767727d858047ddab9516f14c70073b30174a6222b1300446432"
-    sha256 cellar: :any,                 high_sierra:    "2a81af2921befb14f0a96e66ebc3884bd33f8bab156f7dc27e2816a956d033cb"
     sha256 cellar: :any_skip_relocation, arm64_linux:    "16b246ffcc1d24acb0aba75e1ba6995535470fc90b0992746bd38e3f2aa10243"
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "93e3d734fe73f1ca3edeab8e4f25794a28acbdde6df9f3ffd7d01b2e16ce31a2"
   end

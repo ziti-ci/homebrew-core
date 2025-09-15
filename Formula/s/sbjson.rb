@@ -19,8 +19,6 @@ class Sbjson < Formula
     sha256 cellar: :any_skip_relocation, monterey:       "b75a6403eff1226c4e348d9766c20694d43388c9ee9afa00fe4f637ab3dd7a9c"
     sha256 cellar: :any_skip_relocation, big_sur:        "695ced76533bfe9a4e893ffe22ea58402dbd93bd180e2ca4b4a96004d5c60581"
     sha256 cellar: :any_skip_relocation, catalina:       "e703b87ff205bfec1cfc09e9c200ebca6be643df15ec99b85c590110a4885fb2"
-    sha256 cellar: :any_skip_relocation, mojave:         "8b145bcfef84733c00d94e57cbe0eac56a7981654cda6068ff219264353b25bd"
-    sha256 cellar: :any_skip_relocation, high_sierra:    "649463e051c03596a72400a04b95f993222f5ba6d42a879241291660fef8605c"
   end
 
   depends_on xcode: :build

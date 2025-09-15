@@ -19,10 +19,6 @@ class Miruo < Formula
     sha256 cellar: :any_skip_relocation, monterey:       "cd83d74247835df4ef5036c68c8d93539ef3b2eac56ffc839334d1f95c557e61"
     sha256 cellar: :any_skip_relocation, big_sur:        "61fbf984ade171a70ae80af4695a78ed35331a143cdc12ddf4440fee74889807"
     sha256 cellar: :any_skip_relocation, catalina:       "044456429802d6f6d8ba2a8d00547e0e0695e99edd1cceb1af29e70eb004d13f"
-    sha256 cellar: :any_skip_relocation, mojave:         "a71716a29094f72b62cc6a84284abb509916907c5559b25a2b85196148b86c84"
-    sha256 cellar: :any_skip_relocation, high_sierra:    "36df62e0454d4b7e5743a002a2ff3293e087a9fb607c369f3d23732d87330e4e"
-    sha256 cellar: :any_skip_relocation, sierra:         "dbe92dd3ab515528597eb76aa986f4e9d8dd512504d76ca60b86b5dc5dc70449"
-    sha256 cellar: :any_skip_relocation, el_capitan:     "8a5402f68bcb73e22f13fb0b049caea5d186520e81bf77889c91a558d9988c59"
     sha256 cellar: :any_skip_relocation, arm64_linux:    "981815843bbf557cc108baa34c2dc61b101df2fc14b23451c732102468527f81"
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "f079697d80cff4b00726c8c149727a4a19c3db789e417692f470175ad9f24f25"
   end

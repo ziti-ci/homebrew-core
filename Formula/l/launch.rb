@@ -26,7 +26,6 @@ class Launch < Formula
     sha256 cellar: :any_skip_relocation, monterey:       "4813f636dd057ce7e61e02019d3886e2519ca4189c2ee1a98a2f9fa111412225"
     sha256 cellar: :any_skip_relocation, big_sur:        "0190475edf924787849170f68ab44589bbb41e8eb8e72dc86fefb4f15954ce00"
     sha256 cellar: :any_skip_relocation, catalina:       "1d48da3f7c9c226fe622e83b1ff37bca0b960ab6979b01f2bf2e4b8010febacc"
-    sha256 cellar: :any_skip_relocation, mojave:         "d9eddaed19bcf6f70a4d6039028cc95693a616006541bd07e3ccea619f462ad8"
   end
 
   depends_on xcode: :build

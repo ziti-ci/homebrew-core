@@ -1,6 +1,6 @@
 class Openjdk < Formula
   desc "Development kit for the Java programming language"
-  homepage "https://openjdk.java.net/"
+  homepage "https://openjdk.org/"
   url "https://github.com/openjdk/jdk24u/archive/refs/tags/jdk-24.0.2-ga.tar.gz"
   sha256 "d5a1b364de4335d86590d2e91eb8fce0560ade28759734c531915b8293e502e8"
   license "GPL-2.0-only" => { with: "Classpath-exception-2.0" }

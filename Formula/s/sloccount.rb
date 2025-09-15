@@ -14,6 +14,7 @@ class Sloccount < Formula
 
   bottle do
     rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:    "b637cc4c664a6f49d295336432a25513999484bb63893a9cc027c34cc7905935"
     sha256 cellar: :any_skip_relocation, arm64_sequoia:  "3243d86a2a6a558e56911fe743461644ff484b699d962c7afcb17ffed89b7706"
     sha256 cellar: :any_skip_relocation, arm64_sonoma:   "771db84b98f13ab52ae1a7e8aecef3d193b317b916923562d6a44e36a460dffc"
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "b0a3aa39555a21889bb78e1826ba3842915234a4728497877ecf83a7520bd7c1"

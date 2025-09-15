@@ -1,8 +1,8 @@
 class Dpic < Formula
   desc "Implementation of the GNU pic \"little language\""
   homepage "https://ece.uwaterloo.ca/~aplevich/dpic/"
-  url "https://ece.uwaterloo.ca/~aplevich/dpic/dpic-2024.01.01.tar.gz"
-  sha256 "a69d8f5937bb400f53dd8188bc91c6f90c5fdb94287715fa2d8222b482288243"
+  url "https://ece.uwaterloo.ca/~aplevich/dpic/dpic-2025.08.01.tar.gz"
+  sha256 "0f38f5c1e91518826cb2c6e95624b390d1808efadc0402f83911512f0ce726c3"
   license "BSD-2-Clause"
 
   no_autobump! because: :requires_manual_review

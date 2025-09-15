@@ -8,6 +8,7 @@ class Syntaxerl < Formula
   no_autobump! because: :requires_manual_review
 
   bottle do
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:    "2b89005e55db2bd8c5e4f17cb921180b4795622abf46dfc4b1dd11997ceac389"
     sha256 cellar: :any_skip_relocation, arm64_sequoia:  "33837e94cbdb2721705f5fe69069caabf858455790d9bc7d47c2d73d8f035120"
     sha256 cellar: :any_skip_relocation, arm64_sonoma:   "cee18e0e209e6dba8a575cf868e38cbaf37fb17d5d6d1c4bf893b73a26e8c14e"
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "b8b0d346a0d701c3146aa9c6beedf9122be2efd84112b78b05d07e45d343cb00"

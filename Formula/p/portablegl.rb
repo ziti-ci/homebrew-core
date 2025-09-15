@@ -2,8 +2,8 @@ class Portablegl < Formula
   desc "Implementation of OpenGL 3.x-ish in clean C"
   homepage "https://github.com/rswinkle/PortableGL"
   url "https://github.com/rswinkle/PortableGL.git",
-      tag:      "0.98.0",
-      revision: "79fe2816009bca0f8f5f06c21930531e854edb89"
+      tag:      "0.99.0",
+      revision: "4af8053b31c71eb074b1f944efe8152351dfbec9"
   license "MIT"
   head "https://github.com/rswinkle/PortableGL.git", branch: "master"
 
@@ -15,7 +15,6 @@ class Portablegl < Formula
 
   def install
     include.install "portablegl.h"
-    include.install "portablegl_unsafe.h"
     (pkgshare/"tests").install %w[glcommon media testing]
   end
 

@@ -21,8 +21,6 @@ class StressNg < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "06d2d805d44da3a4387efebc7182697e7ff372c4fa722b60d7ce3082f065d033"
   end
 
-  depends_on macos: :sierra
-
   uses_from_macos "libxcrypt"
   uses_from_macos "zlib"
 

@@ -11,6 +11,7 @@ class Lasi < Formula
 
   bottle do
     rebuild 2
+    sha256 cellar: :any,                 arm64_tahoe:    "b912d8b980908ab389f63632dd5f37dd43689714732f64eb5d581c40bb7d2b59"
     sha256 cellar: :any,                 arm64_sequoia:  "cacfb48c1b73960804bf1471d86942b79e306cbf737242f31456fd41588798c0"
     sha256 cellar: :any,                 arm64_sonoma:   "784a47e3a5a0eba53a4a1ffcc00b0aecddf0b04a588ef2ad10b0ee8d90803c61"
     sha256 cellar: :any,                 arm64_ventura:  "b13ac894940a19c92183c5fad1f5058232af01fb4d6a7c8c1a490d5f289c3fc2"

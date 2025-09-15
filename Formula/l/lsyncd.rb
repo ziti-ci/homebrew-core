@@ -27,13 +27,17 @@ class Lsyncd < Formula
 
   resource "xnu" do
     # From https://opensource.apple.com/releases/
-    on_sonoma :or_newer do
-      url "https://github.com/apple-oss-distributions/xnu/archive/refs/tags/xnu-10002.41.9.tar.gz"
-      sha256 "f158a10e01702aa59a90af60ab097c3253123ab3f05d9953530730d241a9cba4"
+    on_sequoia :or_newer do
+      url "https://github.com/apple-oss-distributions/xnu/archive/refs/tags/xnu-11417.140.69.tar.gz"
+      sha256 "6ec42735d647976a429331cdc73a35e8f3889b56c251397c05989a59063dc251"
+    end
+    on_sonoma do
+      url "https://github.com/apple-oss-distributions/xnu/archive/refs/tags/xnu-10063.141.1.tar.gz"
+      sha256 "ffdc143cbf4c57dac48e7ad6367ab492c6c4180e5698cb2d68e87eaf1781bc48"
     end
     on_ventura do
-      url "https://github.com/apple-oss-distributions/xnu/archive/refs/tags/xnu-8792.61.2.tar.gz"
-      sha256 "61c5758d4423ede45e3cbe70b4316d982af59dc91fc482cd9afc145b2ad2226a"
+      url "https://github.com/apple-oss-distributions/xnu/archive/refs/tags/xnu-8796.141.3.tar.gz"
+      sha256 "f08bfe045a1fb552a6cbf7450feae6a35dd003e9979edf71ea77d1a836c8dc99"
     end
     on_monterey do
       url "https://github.com/apple-oss-distributions/xnu/archive/refs/tags/xnu-8020.140.41.tar.gz"
@@ -46,22 +50,6 @@ class Lsyncd < Formula
     on_catalina do
       url "https://github.com/apple-oss-distributions/xnu/archive/refs/tags/xnu-6153.141.1.tar.gz"
       sha256 "886388632a7cc1e482a4ca4921db3c80344792e7255258461118652e8c632d34"
-    end
-    on_mojave do
-      url "https://github.com/apple-oss-distributions/xnu/archive/refs/tags/xnu-4903.270.47.tar.gz"
-      sha256 "099c1c50c4cef4db5fcf4df6a6314498693ad52ed5e813201e2cf442e22985fe"
-    end
-    on_high_sierra do
-      url "https://github.com/apple-oss-distributions/xnu/archive/refs/tags/xnu-4570.71.2.tar.gz"
-      sha256 "b9e2c84c3ee62819917d3bc845e10c2f4bde1194e731c192b6cf0239da5a5a14"
-    end
-    on_sierra do
-      url "https://github.com/apple-oss-distributions/xnu/archive/refs/tags/xnu-3789.70.16.tar.gz"
-      sha256 "0bc4cf425513dd16f3032f189d93cdb6bef48696951bd2e5bf4878dacdcd10d2"
-    end
-    on_el_capitan :or_older do
-      url "https://github.com/apple-oss-distributions/xnu/archive/refs/tags/xnu-3248.60.10.tar.gz"
-      sha256 "a4f646c6d34814df5a729a2c0b380c541dd5282b5d82e35e31bf66c034c2b761"
     end
   end
 

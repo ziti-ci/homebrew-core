@@ -14,6 +14,7 @@ class Wmctrl < Formula
   no_autobump! because: :requires_manual_review
 
   bottle do
+    sha256 cellar: :any,                 arm64_tahoe:    "39edb4ef55820d995ac4b636c4215cee31e25c958f59f1d843cc85ee38e690e8"
     sha256 cellar: :any,                 arm64_sequoia:  "76d0afbd8d8a925bf3d2137457f49f03f9550733358079820150adc2976010c3"
     sha256 cellar: :any,                 arm64_sonoma:   "6a1a692f4cb4c2246cb4e1f3e53dfe9e6c56486dd706a7910704e9a09def7cb9"
     sha256 cellar: :any,                 arm64_ventura:  "388c8eb49eeca6f9ced7eb9d3c7418e7b2f6a5f4cc4a77263e4ddb92ae135b8b"

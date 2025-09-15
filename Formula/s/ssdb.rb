@@ -10,6 +10,7 @@ class Ssdb < Formula
 
   bottle do
     rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:    "3fe78871af08371b8d2f7fecbea63b1ff415f7071febdbd4a5ec06d7b08c2c47"
     sha256 cellar: :any_skip_relocation, arm64_sequoia:  "b781dfcd8a19c986f0595815cb3e9bcc8c6a98fc818e90b6d3c4b505b6379e45"
     sha256 cellar: :any_skip_relocation, arm64_sonoma:   "dc7bc37501d29396dd766ca625925eef5175823250c3dac87f1b36d814ed783f"
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "79bb5aad0a9002af14f96810f62717cd0249479368fecaa7e9481a7ab2b7a05e"

@@ -1,8 +1,8 @@
 class Hexo < Formula
   desc "Fast, simple & powerful blog framework"
   homepage "https://hexo.io/"
-  url "https://registry.npmjs.org/hexo/-/hexo-7.3.0.tgz"
-  sha256 "807b356fef2aa9623788b0e2b997fc6955c4c0a2a70fc1a8776c281194e4277e"
+  url "https://registry.npmjs.org/hexo/-/hexo-8.0.0.tgz"
+  sha256 "7a750d4ff5577e09aa81a8379b2ec86e785eb03772cd98ce499f1b233b6e3190"
   license "MIT"
   head "https://github.com/hexojs/hexo.git", branch: "master"
 

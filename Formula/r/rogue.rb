@@ -15,6 +15,7 @@ class Rogue < Formula
 
   bottle do
     rebuild 2
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:    "b327fe2a04af7f0560f1bbfc71cb580398b772fa3078151e7e11aacc629a15c4"
     sha256 cellar: :any_skip_relocation, arm64_sequoia:  "78ece502084d54a61267fe5b312cc9a85161bc428fc6f8785f7e5e738bcaa237"
     sha256 cellar: :any_skip_relocation, arm64_sonoma:   "596bea046705fe93367152155bd753a89a490728692838f3d281e66af803d23a"
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "eb41a1bc17c2894736afe57978b32b796793b405a238685b04c5bb4b0e8ff466"

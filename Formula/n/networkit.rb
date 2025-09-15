@@ -37,6 +37,10 @@ class Networkit < Formula
   end
 
   def install
+    # Fix to networkit/graphtools.pyx:408:17: Can only parameterize template functions.
+    # Issue ref: https://github.com/networkit/networkit/issues/1350
+    inreplace "networkit/graphtools.pyx", "return volume[vector[node].iterator]", "return volume"
+
     site_packages = Language::Python.site_packages(python3)
 
     ENV.prepend_create_path "PYTHONPATH", prefix/site_packages

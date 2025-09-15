@@ -11,6 +11,7 @@ class Dfc < Formula
 
   bottle do
     rebuild 1
+    sha256 arm64_tahoe:    "7a89f0d391fc36d847a8385ade4caee48ac0ee3edac6fd460dfd05f89bd5996f"
     sha256 arm64_sequoia:  "2d84a8c3886281129fbe28c532fd87e12ab4b03d49d69490183122851b57cb2b"
     sha256 arm64_sonoma:   "7096f36097e668255f157e287ef43387c5ca35d2e80bb0677e0f63eb647c4f55"
     sha256 arm64_ventura:  "3a7c3a4bb6e644fb06bc3b28dcce2f2a61a2be235cb65e4a188bf55a63657c43"

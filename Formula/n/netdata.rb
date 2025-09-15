@@ -51,6 +51,14 @@ class Netdata < Formula
   end
 
   def install
+    # Fix to error: no member named 'tcps_sc_zonefail' in 'struct tcpstat'
+    # Issue ref: https://github.com/netdata/netdata/issues/20985
+    if OS.mac? && MacOS.version >= :tahoe
+      inreplace "src/collectors/macos.plugin/macos_sysctl.c",
+                'rrddim_set(st, "SyncookiesFailed", tcpstat.tcps_sc_zonefail);',
+                ""
+    end
+
     # Install files using Homebrew's directory layout rather than relative to root.
     inreplace "packaging/cmake/Modules/NetdataEBPFLegacy.cmake", "DESTINATION usr/", "DESTINATION "
     inreplace "CMakeLists.txt" do |s|

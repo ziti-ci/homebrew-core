@@ -6,6 +6,7 @@ class RevealMd < Formula
   license "MIT"
 
   bottle do
+    sha256 cellar: :any,                 arm64_tahoe:   "dc9effab791d9a047feab7dd5dbb0a788b4353f649863623e550f12778af400e"
     sha256 cellar: :any,                 arm64_sequoia: "e45cc89fa82e2c457d6882e2a8c960c23733207a6af5cf19cd5dd9adb22f3f70"
     sha256 cellar: :any,                 arm64_sonoma:  "e45cc89fa82e2c457d6882e2a8c960c23733207a6af5cf19cd5dd9adb22f3f70"
     sha256 cellar: :any,                 arm64_ventura: "e45cc89fa82e2c457d6882e2a8c960c23733207a6af5cf19cd5dd9adb22f3f70"

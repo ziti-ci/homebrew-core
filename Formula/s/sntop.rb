@@ -14,6 +14,7 @@ class Sntop < Formula
 
   bottle do
     rebuild 1
+    sha256 arm64_tahoe:    "e40298eeb9619591443c8ba0e977cc63a5d61a2508e4d3695dd0dc8292eb9f34"
     sha256 arm64_sequoia:  "f815f00571ebdc127b745bd5e895cc486b35b3a38380c3be316ec453c47c0e62"
     sha256 arm64_sonoma:   "40fa74f055bb892c9e7b31a1269ab2d0cda8f13fd214132a79fc2c04944e29dc"
     sha256 arm64_ventura:  "b482ea74af9def4d942033c23ddacc43c16935bcd7e9094506e0008e8c69eed0"

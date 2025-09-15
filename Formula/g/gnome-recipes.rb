@@ -10,6 +10,7 @@ class GnomeRecipes < Formula
 
   bottle do
     rebuild 1
+    sha256 arm64_tahoe:   "aa4f377580d2f261bf6997d22203eab2ab4a41dd25ac493c31c156712ffeebb8"
     sha256 arm64_sequoia: "3bdeeed9601b21231a0681c228ad2c69aeec741c8a03e254927a6563691b8ec3"
     sha256 arm64_sonoma:  "6747e4b6466b029d7752f666b49efd402420d1f849ba297d1826ead4c3afd357"
     sha256 arm64_ventura: "f6034dd729fdcb7445b1e41d873d4bf19fad4e8ecd756bef137981ae3337e15c"

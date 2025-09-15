@@ -204,9 +204,6 @@ class Gstreamer < Formula
       -Dgst-plugins-rs:sodium-source=system
     ]
 
-    # The apple media plug-in uses API that was added in Mojave
-    args << "-Dgst-plugins-bad:applemedia=disabled" if OS.mac? && MacOS.version <= :high_sierra
-
     # Ban trying to chown to root.
     # https://bugzilla.gnome.org/show_bug.cgi?id=750367
     args << "-Dgstreamer:ptp-helper-permissions=none"

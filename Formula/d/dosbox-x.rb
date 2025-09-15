@@ -38,7 +38,6 @@ class DosboxX < Formula
   depends_on "freetype"
   depends_on "libpng"
   depends_on "libslirp"
-  depends_on macos: :high_sierra # needs futimens
   depends_on "sdl2"
 
   uses_from_macos "ncurses"

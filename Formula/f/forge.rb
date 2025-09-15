@@ -13,6 +13,7 @@ class Forge < Formula
   no_autobump! because: :requires_manual_review
 
   bottle do
+    sha256 cellar: :any,                 arm64_tahoe:    "72878d542a4a9d382908040d231ad6a17b2d6d3c2d30e2d4f31f58f0555e9c0e"
     sha256 cellar: :any,                 arm64_sequoia:  "2e4b5e1f940c3a2bc469fd2206eb113ba24e2add15245d202cf296bda59b269d"
     sha256 cellar: :any,                 arm64_sonoma:   "653482d31c8e2546a15569be8c3f7756382a49f2e5a66dea83b61aa6a5effad8"
     sha256 cellar: :any,                 arm64_ventura:  "f25eab15726f80780cce2a23f2df9b320a2d62bc6662db8c407318bdc78a7075"

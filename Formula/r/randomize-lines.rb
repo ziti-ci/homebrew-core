@@ -13,6 +13,7 @@ class RandomizeLines < Formula
   no_autobump! because: :requires_manual_review
 
   bottle do
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:    "54390ca4a64d2cc044e4a562f868476d9821274a86758db0fd035079fe9e5db2"
     sha256 cellar: :any_skip_relocation, arm64_sequoia:  "8ec08636ac3e5aa68060b1f43a1bd6a5cad418f489a4bbc9b9554053aa06188e"
     sha256 cellar: :any_skip_relocation, arm64_sonoma:   "194a2a869a8ecdeab95baf1f6b5f9d5d13c12eba7b6acd1378817da3e01a9740"
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "9c351e68f794607d01893bca67180a80b721b597260304eb258f3108227950f8"

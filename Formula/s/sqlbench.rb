@@ -9,6 +9,7 @@ class Sqlbench < Formula
   no_autobump! because: :requires_manual_review
 
   bottle do
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:    "8c496486c81f8ef1e302ef65bdb290f2d6374e1b1840a7e970991a2ea76bd219"
     sha256 cellar: :any_skip_relocation, arm64_sequoia:  "bb5fc33b6e66c2132a7369001b56bced611e9f7b7f7d2488cf11c57f7f7c77ab"
     sha256 cellar: :any_skip_relocation, arm64_sonoma:   "ede04ad826d75e794b7fe73102638e05fa6d800fd9621d9060817afe5b1c398f"
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "0598ce5d9b3c1aed37b1690a3e8357300b3ef8906ea2275fe1ee997375c09e98"

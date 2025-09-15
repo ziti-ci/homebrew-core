@@ -9,6 +9,7 @@ class Ddate < Formula
 
   bottle do
     rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:    "faa847a8ef33784d6e5337a6357a890437b7965ce6e8353940535165af5e050e"
     sha256 cellar: :any_skip_relocation, arm64_sequoia:  "12ef0c2a08ae6e73c6cf73a94e662c513cd9d8cb46ed1567653236d5ca5e7b4a"
     sha256 cellar: :any_skip_relocation, arm64_sonoma:   "124fa6334391f5ba314292ba2e47b535cebe68a79272ee5a9d3ad9d457ef4558"
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "fe29278ae4f80f7c8db1de60b5aebf6d80b309b8b3d7cf866f1d092f7a4c518f"

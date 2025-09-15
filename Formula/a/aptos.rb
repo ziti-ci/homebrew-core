@@ -1,8 +1,8 @@
 class Aptos < Formula
   desc "Layer 1 blockchain built to support fair access to decentralized assets for all"
   homepage "https://aptosfoundation.org/"
-  url "https://github.com/aptos-labs/aptos-core/archive/refs/tags/aptos-cli-v7.7.0.tar.gz"
-  sha256 "f5e20b438f32ea825caab4c773845117a9e2a829371ac37da5513672f429c173"
+  url "https://github.com/aptos-labs/aptos-core/archive/refs/tags/aptos-cli-v7.8.1.tar.gz"
+  sha256 "42d94e3e40654a1bb43399f75ea5c9a5f99d4b920b5fae20a46d085b548c4916"
   license "Apache-2.0"
   head "https://github.com/aptos-labs/aptos-core.git", branch: "main"
 
@@ -11,7 +11,7 @@ class Aptos < Formula
     regex(/^aptos-cli[._-]v?(\d+(?:\.\d+)+)$/i)
   end
 
-  no_autobump! because: :requires_manual_review
+  no_autobump! because: :bumped_by_upstream
 
   bottle do
     rebuild 2
@@ -37,13 +37,6 @@ class Aptos < Formula
     depends_on "elfutils"
     depends_on "openssl@3"
     depends_on "systemd"
-  end
-
-  # Fixes build with newer versions of blst
-  # PR ref: https://github.com/aptos-labs/aptos-core/pull/17349
-  patch do
-    url "https://github.com/aptos-labs/aptos-core/commit/87862b1bf0aaeb73f6f967957ec38354e74d5d31.patch?full_index=1"
-    sha256 "f4893ea7b41f0a9402dd630f7c184352603ee121aae86cfc8cfb4e86ede7c827"
   end
 
   def install

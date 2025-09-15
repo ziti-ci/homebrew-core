@@ -9,6 +9,7 @@ class Diction < Formula
   no_autobump! because: :requires_manual_review
 
   bottle do
+    sha256 arm64_tahoe:    "abe65914558d009a92abe38d0c86b41936e724e53ec3d3045ff5b2f37be7cf4c"
     sha256 arm64_sequoia:  "6516cc7161c82d0f8db43cc8feb42dfac2f946e632c76432cb7ed00fde3fe078"
     sha256 arm64_sonoma:   "4589af49e9b3cd23f77eae06ba86dadb9b364ca88e1714b3aa4b2f169df49321"
     sha256 arm64_ventura:  "9a0b3b7dd6f41245ff193e2bb23cb351d0378fe4aab1bf5bc2be56e123c39f14"

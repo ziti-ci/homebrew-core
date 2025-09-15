@@ -8,6 +8,7 @@ class Shmux < Formula
   no_autobump! because: :requires_manual_review
 
   bottle do
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:    "41cc598c5c1b6b397128af5342ad323ee355c48d782af7f574d0f9f73a5caf14"
     sha256 cellar: :any_skip_relocation, arm64_sequoia:  "1c6c5f0ff3534ed4ad1c56180b80e0c1963b25c803789492c130ab0620eccb64"
     sha256 cellar: :any_skip_relocation, arm64_sonoma:   "2b5156cf3563aa2cca9be5a0de4e8bdd23fbd78854910a8fd25e0cf83b0d0172"
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "b4629c31e6233a8e7d7c4caf6491c3e585f8b7eaa5964f426ceab66562cb4fb7"

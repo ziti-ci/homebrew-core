@@ -9,6 +9,7 @@ class Nedit < Formula
   no_autobump! because: :requires_manual_review
 
   bottle do
+    sha256 cellar: :any,                 arm64_tahoe:    "63e38eb761dcd2a048f2cb5dcb614fcfb7c5e89b66883316628c95eeec52e35d"
     sha256 cellar: :any,                 arm64_sequoia:  "a4e7775080f68b28a71f10c696a4a57c347d4f6620dde7e033bb3c5083db4250"
     sha256 cellar: :any,                 arm64_sonoma:   "8f6e94981bc35788dba9284a2313b48003f8a6bb10b26f15ee4dc2f20c4ecba5"
     sha256 cellar: :any,                 arm64_ventura:  "2ce67e319d75468e209d20d306cb6c3dcacea83feafd8114902273b1cb4b3344"

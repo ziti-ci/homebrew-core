@@ -8,6 +8,7 @@ class Rkhunter < Formula
   no_autobump! because: :requires_manual_review
 
   bottle do
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:    "6b58dd966408841d1c6bb19fa135f3eec96744806fba465a04b294c28c906839"
     sha256 cellar: :any_skip_relocation, arm64_sequoia:  "5635d3ac60704bc062b8336a912daa80d97cf9fd8d847572c55d82b8e87bbd60"
     sha256 cellar: :any_skip_relocation, arm64_sonoma:   "3b2a4538360218a1f44f63eb61a24e6b9ecc36dfc613dfb2c404f10f8cb75a7f"
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "0352661692f5a34e6febf6822eb3e1eb212e5aefd2189ee403def6acf247a38a"

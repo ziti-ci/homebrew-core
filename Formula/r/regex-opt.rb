@@ -14,6 +14,7 @@ class RegexOpt < Formula
 
   bottle do
     rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:    "fb8c9167137fd3a65707f40904f20a3e137082af231aeffffb3b2c85da9faa6f"
     sha256 cellar: :any_skip_relocation, arm64_sequoia:  "e8f6966781bb65e96887151f04d99914b4a4401e4888c2d88d5e82a15aa41937"
     sha256 cellar: :any_skip_relocation, arm64_sonoma:   "13e3835588ba832622b5955f506b695016e1812c0fcaa903becb714442cf3a21"
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "3d4874247088ba62cdcf1304c0dfd6910812b0a6e6a915a3d160dd43f0e3202e"

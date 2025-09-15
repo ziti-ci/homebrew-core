@@ -6,6 +6,14 @@ class Terratag < Formula
   license "MPL-2.0"
   head "https://github.com/env0/terratag.git", branch: "master"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "0eaf6a4bfb673e20ce191c14ca054364cb8808830360c21666d1a09e8845d94d"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "0eaf6a4bfb673e20ce191c14ca054364cb8808830360c21666d1a09e8845d94d"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "0eaf6a4bfb673e20ce191c14ca054364cb8808830360c21666d1a09e8845d94d"
+    sha256 cellar: :any_skip_relocation, sonoma:        "5408650be83085a17f5a9eba64c9dfea56ece0bc7d0380c68ace19e690c5dfac"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "b7458454f1f48018fc049b9a3ace224d76b6f264924fab5ba8759e7eb0be31d2"
+  end
+
   depends_on "go" => :build
 
   def install

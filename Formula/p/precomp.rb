@@ -33,7 +33,9 @@ class Precomp < Formula
     inreplace "contrib/liblzma/rangecoder/range_encoder.h", "#include \"price.h\"",
               "#include \"price.h\"\n#include <assert.h>"
 
-    system "cmake", "-S", ".", "-B", "build", *std_cmake_args
+    # Workaround for CMake 4 compatibility
+    args = %w[-DCMAKE_POLICY_VERSION_MINIMUM=3.5]
+    system "cmake", "-S", ".", "-B", "build", *args, *std_cmake_args
     system "cmake", "--build", "build"
     bin.install "build/precomp"
   end

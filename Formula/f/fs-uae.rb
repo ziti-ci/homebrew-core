@@ -28,7 +28,7 @@ class FsUae < Formula
   end
 
   head do
-    url "https://github.com/FrodeSolheim/fs-uae.git", branch: "master"
+    url "https://github.com/FrodeSolheim/fs-uae.git", branch: "main"
     depends_on "autoconf" => :build
     depends_on "automake" => :build
     depends_on "libtool" => :build
@@ -58,6 +58,10 @@ class FsUae < Formula
 
   def install
     system "./bootstrap" if build.head?
+
+    # Workaround for newer Clang
+    ENV.append_to_cflags "-Wno-c++11-narrowing" if DevelopmentTools.clang_build_version >= 1400
+
     system "./configure", "--disable-silent-rules", *std_configure_args
     mkdir "gen"
     system "make"

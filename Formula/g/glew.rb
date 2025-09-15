@@ -11,6 +11,7 @@ class Glew < Formula
 
   bottle do
     rebuild 2
+    sha256 cellar: :any,                 arm64_tahoe:    "af7df563c00e50d3ab300d1daba874e67c997b9f18a57581ee69d9d2216d4745"
     sha256 cellar: :any,                 arm64_sequoia:  "4ac8264612c4af3b6864eed07564e14ddf81c25a050aa2bc91953966d12e73e4"
     sha256 cellar: :any,                 arm64_sonoma:   "05aa1fad57b8dd0d68045a54b66ad9d61c494584560a55512a2123d22849e467"
     sha256 cellar: :any,                 arm64_ventura:  "33b1499e0219c3980310dee9e6b115af3ef0324723af7c3a0ff9a68ac7b3e841"

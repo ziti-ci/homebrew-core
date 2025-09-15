@@ -5,6 +5,7 @@ class Freetype < Formula
   mirror "https://download.savannah.gnu.org/releases/freetype/freetype-2.14.1.tar.xz"
   sha256 "32427e8c471ac095853212a37aef816c60b42052d4d9e48230bab3bdf2936ccc"
   license "FTL"
+  revision 1
 
   livecheck do
     url :stable
@@ -22,6 +23,7 @@ class Freetype < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "7cf8c29c64099d537903e4c1eae1ddcd361bac5c9d28440806506d0e94728f57"
   end
 
+  depends_on "gnu-sed" => :build
   depends_on "pkgconf" => :build
   depends_on "libpng"
 
@@ -29,6 +31,9 @@ class Freetype < Formula
   uses_from_macos "zlib"
 
   def install
+    # https://gitlab.freedesktop.org/freetype/freetype/-/issues/1358
+    ENV.prepend_path "PATH", Formula["gnu-sed"].opt_libexec/"gnubin"
+
     # This file will be installed to bindir, so we want to avoid embedding the
     # absolute path to the pkg-config shim.
     inreplace "builds/unix/freetype-config.in", "%PKG_CONFIG%", "pkg-config"

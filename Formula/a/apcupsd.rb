@@ -90,8 +90,7 @@ class Apcupsd < Formula
           sudo chown -R root:wheel /System/Library/Extensions/ApcupsdDummy.kext
           sudo touch /System/Library/Extensions/
 
-          Note: On OS X El Capitan and above, the kernel extension currently
-          does not work as expected.
+          Note: The kernel extension currently does not work as expected.
 
           You will have to unplug and plug the USB cable back in after each
           reboot in order for #{name} to be able to connect to the UPS.

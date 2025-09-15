@@ -3,8 +3,8 @@ class Copyparty < Formula
 
   desc "Portable file server"
   homepage "https://github.com/9001/copyparty"
-  url "https://files.pythonhosted.org/packages/cb/54/85ed7b7d53c4c8dd72143f6e047d654e7ec0b8bfb58def35ce57acac8d38/copyparty-1.19.8.tar.gz"
-  sha256 "40211fcea9e932dee2c173b74121902d54243712579aa6cd2c6b3230b662ed97"
+  url "https://files.pythonhosted.org/packages/0d/d0/9cab0d17bbe6206a4f1cac2907a90b3ce19e11fc9d8bd4c44f75f810f317/copyparty-1.19.9.tar.gz"
+  sha256 "ab47be7d14a0b645dd1aa5fba7a5fc6ab7907717128dc64f1fd40ce21584dd7d"
   license "MIT"
 
   bottle do
@@ -76,8 +76,8 @@ class Copyparty < Formula
   end
 
   resource "pyopenssl" do
-    url "https://files.pythonhosted.org/packages/04/8c/cd89ad05804f8e3c17dea8f178c3f40eeab5694c30e0c9f5bcd49f576fc3/pyopenssl-25.1.0.tar.gz"
-    sha256 "8d031884482e0c67ee92bf9a4d8cceb08d92aba7136432ffb0703c5280fc205b"
+    url "https://files.pythonhosted.org/packages/fc/d7/5b1410932bfaf0bbf96426a8e08472ed26f2052c353f2dea6e6636850545/pyopenssl-25.2.0.tar.gz"
+    sha256 "71db4c6a4badb88b9804ade80886dc19b7eec3678a4a23c9029f97024c65191a"
   end
 
   resource "pyvips" do
@@ -86,8 +86,8 @@ class Copyparty < Formula
   end
 
   resource "pyzmq" do
-    url "https://files.pythonhosted.org/packages/f8/66/159f38d184f08b5f971b467f87b1ab142ab1320d5200825c824b32b84b66/pyzmq-27.0.2.tar.gz"
-    sha256 "b398dd713b18de89730447347e96a0240225e154db56e35b6bb8447ffdb07798"
+    url "https://files.pythonhosted.org/packages/04/0b/3c9baedbdf613ecaa7aa07027780b8867f57b6293b6ee50de316c9f3222b/pyzmq-27.1.0.tar.gz"
+    sha256 "ac0765e3d44455adb6ddbf4417dcce460fc40a05978c08efdf2948072f6db540"
   end
 
   def install

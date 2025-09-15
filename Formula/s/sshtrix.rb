@@ -13,6 +13,7 @@ class Sshtrix < Formula
   no_autobump! because: :requires_manual_review
 
   bottle do
+    sha256 cellar: :any,                 arm64_tahoe:    "2bbdb14a7d6048a400de9bdc3a39ca12d50c462cc524158305ad93fc9bcd2192"
     sha256 cellar: :any,                 arm64_sequoia:  "a605f08172c039a927c317f64789c3168e610ed42ba321974e587db76906d546"
     sha256 cellar: :any,                 arm64_sonoma:   "6a48bc01574c09df7ade28b2cd6da48ab5df9966e670cdce99061a5231a832a8"
     sha256 cellar: :any,                 arm64_ventura:  "edd4114cab1117d380eb8614882bfd85fb00dd2c6a7b9ae2106a69774070147d"

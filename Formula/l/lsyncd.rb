@@ -43,25 +43,9 @@ class Lsyncd < Formula
       url "https://github.com/apple-oss-distributions/xnu/archive/refs/tags/xnu-7195.141.2.tar.gz"
       sha256 "ec5aa94ebbe09afa6a62d8beb8d15e4e9dd8eb0a7e7e82c8b8cf9ca427004b6d"
     end
-    on_catalina do
+    on_catalina :or_older do
       url "https://github.com/apple-oss-distributions/xnu/archive/refs/tags/xnu-6153.141.1.tar.gz"
       sha256 "886388632a7cc1e482a4ca4921db3c80344792e7255258461118652e8c632d34"
-    end
-    on_mojave do
-      url "https://github.com/apple-oss-distributions/xnu/archive/refs/tags/xnu-4903.270.47.tar.gz"
-      sha256 "099c1c50c4cef4db5fcf4df6a6314498693ad52ed5e813201e2cf442e22985fe"
-    end
-    on_high_sierra do
-      url "https://github.com/apple-oss-distributions/xnu/archive/refs/tags/xnu-4570.71.2.tar.gz"
-      sha256 "b9e2c84c3ee62819917d3bc845e10c2f4bde1194e731c192b6cf0239da5a5a14"
-    end
-    on_sierra do
-      url "https://github.com/apple-oss-distributions/xnu/archive/refs/tags/xnu-3789.70.16.tar.gz"
-      sha256 "0bc4cf425513dd16f3032f189d93cdb6bef48696951bd2e5bf4878dacdcd10d2"
-    end
-    on_el_capitan :or_older do
-      url "https://github.com/apple-oss-distributions/xnu/archive/refs/tags/xnu-3248.60.10.tar.gz"
-      sha256 "a4f646c6d34814df5a729a2c0b380c541dd5282b5d82e35e31bf66c034c2b761"
     end
   end
 

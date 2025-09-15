@@ -48,7 +48,7 @@ class Micromamba < Formula
   uses_from_macos "zlib"
 
   on_macos do
-    depends_on "llvm" if DevelopmentTools.clang_build_version <= 1600
+    depends_on "llvm" => :build if DevelopmentTools.clang_build_version <= 1600
   end
 
   fails_with :clang do
@@ -57,14 +57,7 @@ class Micromamba < Formula
   end
 
   def install
-    if OS.mac? && DevelopmentTools.clang_build_version <= 1600
-      ENV.llvm_clang
-
-      # Needed in order to find the C++ standard library
-      # See: https://github.com/Homebrew/homebrew-core/issues/178435
-      ENV.prepend "LDFLAGS", "-L#{Formula["llvm"].opt_lib}/unwind -lunwind"
-      ENV.prepend_path "HOMEBREW_LIBRARY_PATHS", Formula["llvm"].opt_lib/"c++"
-    end
+    ENV.llvm_clang if OS.mac? && DevelopmentTools.clang_build_version <= 1600
 
     args = %W[
       -DBUILD_LIBMAMBA=ON

@@ -13,6 +13,7 @@ class ZeldaRothSe < Formula
 
   bottle do
     rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:    "3bf751b6f5b6313d54d4c4356a07dbad2134d30574d18706a761272ad4fef7c7"
     sha256 cellar: :any_skip_relocation, arm64_sequoia:  "7b160b73bd9daf53b08f48c16e6642a054c2823114f7651d83270ab468694064"
     sha256 cellar: :any_skip_relocation, arm64_sonoma:   "ac1a274fde9642cae0d2b67f7d4589a57f91d5229c83293be45f612fc75b2553"
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "3f6f18d2ea37dd7ddd63d5a050a9944e184d0db94f89fe54c6ad376a0464b65b"

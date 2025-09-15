@@ -9,6 +9,7 @@ class Rnv < Formula
   no_autobump! because: :requires_manual_review
 
   bottle do
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:    "294d562f37f9fcbdfebca1f0ac3a304e5c749022dd1287a35b847b2223ad9a07"
     sha256 cellar: :any,                 arm64_sequoia:  "c2d6586422e5ac938d5f27b00ba89881fb64e07b84250b44ac5905bd7189bd92"
     sha256 cellar: :any,                 arm64_sonoma:   "150d0eecdd925b7dd54064578d8e204e0cfbb1575ea100ba13168e2b4e22f4eb"
     sha256 cellar: :any,                 arm64_ventura:  "86e6bfd85e0678347eaace39bb3ad203e08f8006c84939fa9a41e693ee6c1326"

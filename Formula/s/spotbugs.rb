@@ -1,8 +1,8 @@
 class Spotbugs < Formula
   desc "Tool for Java static analysis (FindBugs's successor)"
   homepage "https://spotbugs.github.io/"
-  url "https://repo.maven.apache.org/maven2/com/github/spotbugs/spotbugs/4.9.4/spotbugs-4.9.4.tgz"
-  sha256 "d18010adead75959c1e2cc6ee244ee9b1aa10a6e9aa218837ad1db699778cc9a"
+  url "https://repo.maven.apache.org/maven2/com/github/spotbugs/spotbugs/4.9.5/spotbugs-4.9.5.tgz"
+  sha256 "6c55c38f28a76dd11946117c175a520fbbc0abdfe6e62fdc3291fe449e8e3202"
   license "LGPL-2.1-or-later"
 
   livecheck do
@@ -32,9 +32,6 @@ class Spotbugs < Formula
       libexec.install Dir["spotbugs/build/install/spotbugs/*"]
     else
       libexec.install Dir["*"]
-      # Remove carriage return characters
-      # Issue ref: https://github.com/spotbugs/spotbugs/issues/3619
-      inreplace "#{libexec}/bin/spotbugs", "\r\n", "\n"
       chmod 0755, "#{libexec}/bin/spotbugs"
     end
     (bin/"spotbugs").write_env_script "#{libexec}/bin/spotbugs", Language::Java.overridable_java_home_env

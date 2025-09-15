@@ -3,10 +3,9 @@ class Chapel < Formula
 
   desc "Programming language for productive parallel computing at scale"
   homepage "https://chapel-lang.org/"
-  url "https://github.com/chapel-lang/chapel/releases/download/2.5.0/chapel-2.5.0.tar.gz"
-  sha256 "020220ca9bf52b9f416e9a029bdc465bb1f635c1e274c6ca3c18d1f83e41fce1"
+  url "https://github.com/chapel-lang/chapel/releases/download/2.6.0/chapel-2.6.0.tar.gz"
+  sha256 "e469c35be601cf1f59af542ab885e8a14aa2b087b79af0d5372a4421976c74b6"
   license "Apache-2.0"
-  revision 1
   head "https://github.com/chapel-lang/chapel.git", branch: "main"
 
   no_autobump! because: :bumped_by_upstream

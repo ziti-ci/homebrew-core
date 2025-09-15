@@ -1,8 +1,8 @@
 class Proj < Formula
   desc "Cartographic Projections Library"
   homepage "https://proj.org/"
-  url "https://github.com/OSGeo/PROJ/releases/download/9.6.2/proj-9.6.2.tar.gz"
-  sha256 "53d0cafaee3bb2390264a38668ed31d90787de05e71378ad7a8f35bb34c575d1"
+  url "https://github.com/OSGeo/PROJ/releases/download/9.7.0/proj-9.7.0.tar.gz"
+  sha256 "65705ecd987b50bf63e15820ce6bd17c042feaabda981249831bd230f6689709"
   license "MIT"
   head "https://github.com/OSGeo/proj.git", branch: "master"
 
@@ -31,8 +31,9 @@ class Proj < Formula
 
   # The datum grid files are required to support datum shifting
   resource "proj-data" do
-    url "https://download.osgeo.org/proj/proj-data-1.22.zip"
-    sha256 "ebca54b7f9118beafd30a5abeaeacfee6be9f59a0bb52419c9282cf34ee2510a"
+    url "https://github.com/OSGeo/PROJ-data/releases/download/1.23.0/proj-data-1.23.zip"
+    mirror "https://download.osgeo.org/proj/proj-data-1.23.zip"
+    sha256 "f5cac6342566cfa7481ed6f2be24e1cb2f6d7e17544edb9fc829fca25ddcc4a8"
 
     livecheck do
       url "https://download.osgeo.org/proj/"

@@ -16,6 +16,7 @@ class Slashem < Formula
   no_autobump! because: :requires_manual_review
 
   bottle do
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:    "1f262c46f0f04c67c9996b01e8d89ea837d34c1086279ad1d480b63a11f74dd8"
     sha256 cellar: :any_skip_relocation, arm64_sequoia:  "f3489647fb5f38f4016ef73e262df24407525bb01f076463c21f5b8340e47c27"
     sha256 cellar: :any_skip_relocation, arm64_sonoma:   "3cc225b937c53aa8a9121eb03ffcfd067a338a050df4b348cac6e8ea36c1cf19"
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "fbc49014eb4afffa42419df08cb98337389fb1d87b76c2c900553e0c3739f069"

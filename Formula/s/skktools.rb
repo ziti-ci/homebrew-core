@@ -9,6 +9,7 @@ class Skktools < Formula
   no_autobump! because: :requires_manual_review
 
   bottle do
+    sha256 cellar: :any,                 arm64_tahoe:    "20ab94e9dabb1954777337c8abb6d98e39fc9da6963e7ec852cf96b65bae7f5a"
     sha256 cellar: :any,                 arm64_sequoia:  "84de631d3930f335f030cfa8a3c8669d76c0052c26213b5321496087c4a156ec"
     sha256 cellar: :any,                 arm64_sonoma:   "e29e36abbb09213d335f3610286be258c8ee4f0f692cc30d66fa6553656c8e49"
     sha256 cellar: :any,                 arm64_ventura:  "00331db039291620e97f2dbd6b56062d00ffe4337a0fd6b041f1fb8952255be9"

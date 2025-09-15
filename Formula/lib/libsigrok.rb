@@ -52,14 +52,13 @@ class Libsigrok < Formula
   no_autobump! because: :requires_manual_review
 
   bottle do
-    rebuild 1
-    sha256                               arm64_sequoia: "22e5e2db64f98452def0ed20f6896caa15fda7c38c71454adbd6c4261591eb43"
-    sha256                               arm64_sonoma:  "39c5f43f820298f30bb3ff75ea971257f1ce9a4df35be4f2ccd218355f2b7a62"
-    sha256                               arm64_ventura: "7f3024bf6ef54007c043d9be38515c29522cd9952280142d330009da93fd9fcc"
-    sha256                               sonoma:        "d0606b7df886ae65ba3fbf01968682ed5928ad17bbf293e6b905ed2fa097adc2"
-    sha256                               ventura:       "772490f83137bbd47c046691c5dd9af3ac245cc9e49d4e86d9c5db7355ed87f0"
-    sha256                               arm64_linux:   "748684586a8ca71f8957e8929a8ed28220ca62ff56e7c1c0aec30209728fd588"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "d91357303c1b4ff68746181b66eba6944140ff6bf365c1e88cfafd29f9c64076"
+    rebuild 2
+    sha256                               arm64_tahoe:   "03697dd6796dbddcb4602fda39063dece9e3bf49f78b34ae7eafad696074434e"
+    sha256                               arm64_sequoia: "f87ecb91e13c521fcdbb1a3fb7bcccdaf0e1756b08108181dc31bf41fc78c00c"
+    sha256                               arm64_sonoma:  "9653da1e1ac058c2f4e2a4d0eaa2219aeab0518e517873a92a0bffb8ae7de274"
+    sha256                               sonoma:        "55774dcb178d0e94dbc0724393dfcc32fd72fb18f4aa8716b1570becd3371287"
+    sha256                               arm64_linux:   "2217949eee6fb0bbdb020a98b6df00bfdf6e9f486f738f62332a39f681be1d2b"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "2e3c6925a66722db026365cc0a8ee44e92f658384f12b3ec66bf4b4976eebacc"
   end
 
   head do

@@ -8,6 +8,7 @@ class DfuUtil < Formula
   no_autobump! because: :requires_manual_review
 
   bottle do
+    sha256 cellar: :any,                 arm64_tahoe:    "53e343420fcab5133dd295cf75d8a74b5933fabfbb53c90c3ef798735b5f9445"
     sha256 cellar: :any,                 arm64_sequoia:  "5cfdae94eea7b66aae31b16dd689bd8078d7aa685786dcf45f9f9324db12727d"
     sha256 cellar: :any,                 arm64_sonoma:   "948497e1bb1a0f035517671d50e3d64c8843417210acb3cdc16232884399c783"
     sha256 cellar: :any,                 arm64_ventura:  "03e81fc129ada62759e3cd8d892131ca326851ab6631730e9d101405c0e2594d"

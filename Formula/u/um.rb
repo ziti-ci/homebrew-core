@@ -25,7 +25,7 @@ class Um < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "c71496a39f88373f2f233b19384bb1ef43e631b280ca0ba51ffcd2838012904f"
   end
 
-  uses_from_macos "ruby", since: :high_sierra
+  uses_from_macos "ruby"
 
   resource "kramdown" do
     url "https://rubygems.org/gems/kramdown-1.17.0.gem"

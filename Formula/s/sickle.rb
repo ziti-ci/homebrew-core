@@ -8,6 +8,7 @@ class Sickle < Formula
   no_autobump! because: :requires_manual_review
 
   bottle do
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:    "96bd829e276dd51380027f17fac43fb49a54250e098079b9fc7f8e78b9f1bb27"
     sha256 cellar: :any_skip_relocation, arm64_sequoia:  "14f29f9f78cfd733320efeca1a531d5a22db8908185bf5340f1d806c554fe7d9"
     sha256 cellar: :any_skip_relocation, arm64_sonoma:   "9c820fd16930b4e385a72a92abd1f57386b87ac03fee2ec19fb02996e22fc3ae"
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "e777fe310603467d2feaa5702bca61f2444c2b2e1e82cd2ba0bc21dfb7a2ccd7"

@@ -21,8 +21,6 @@ class Freedink < Formula
     sha256 monterey:       "da402e74ba8344d49ec9a0a2c93ab37aa1d3430cb33baf3d995ee3c55489710b"
     sha256 big_sur:        "fd45feffffd96dc600cda4e725619b326ec6a84e96c5844c156aca90fb2390b1"
     sha256 catalina:       "b971d9badc94cb0075963c341ed11c1872e3157b279def6d91fd088743b5e5e4"
-    sha256 mojave:         "d44bcab516f79beec47a1ebdc8ec68b66071a34e17abb8556407a3656946d454"
-    sha256 high_sierra:    "d022642338ba2979982088f1b65d6230ab71478fdaadfe4966372aa15b909182"
     sha256 arm64_linux:    "987d1d124d48dd9ae81001a02a9cd62d37d16758b791d6ea9decb3164dde198d"
     sha256 x86_64_linux:   "a29b66f12f589cea7e091849b73fb86530086692fd94a627ab4fe86490a8c121"
   end

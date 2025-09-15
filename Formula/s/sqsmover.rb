@@ -9,6 +9,7 @@ class Sqsmover < Formula
   no_autobump! because: :requires_manual_review
 
   bottle do
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:    "faceaa44808fd35b7d1131f1bda53f0390a814864185b8a16cb76d0531fd54af"
     sha256 cellar: :any_skip_relocation, arm64_sequoia:  "71138465799d2eef41934e3c9af64946ba7568d99b33c26b4f139bcba0957342"
     sha256 cellar: :any_skip_relocation, arm64_sonoma:   "fc16a425c148319663c2ed049384633fb3402c86cb919f7274eeb01850416056"
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "ed7f54467803a8b532f6980792beda2deed1943b905377386086b99b4343951a"

@@ -9,6 +9,7 @@ class Screenresolution < Formula
   no_autobump! because: :requires_manual_review
 
   bottle do
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:    "9d432fd66f354ab0bd134e8062d7777d0b2cee92b84cf8331b140e307b6c65e0"
     sha256 cellar: :any_skip_relocation, arm64_sequoia:  "b35c70febc8d234c5a664507d682eeb80ff1541bde35128f42836559088e9290"
     sha256 cellar: :any_skip_relocation, arm64_sonoma:   "e80216f98204a4f06ad9cfdcfd8fbab00c6ddfbc26773aa0920dcaf4fd86d686"
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "115831028fe4da37486b48aabc70fc13fde8a297aa2e3d5eee9ea822a2727053"

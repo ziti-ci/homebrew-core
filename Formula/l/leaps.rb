@@ -9,6 +9,7 @@ class Leaps < Formula
   no_autobump! because: :requires_manual_review
 
   bottle do
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:    "103b30a47094dfd56795de6c70cf5baa989711429147f6db55328529aa2e8823"
     sha256 cellar: :any_skip_relocation, arm64_sequoia:  "43d3cbf4a3539d7309b2d12ddab84541f1360921b6d67d7b727096998329d952"
     sha256 cellar: :any_skip_relocation, arm64_sonoma:   "3bfac2abd2f5b64411fce7e91201e7680047747405ba719836d78fb74d8004c5"
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "cadf303cd8afe3342acaa332833315822118c46e5a7bd0e2ac7f03d839c9b529"

@@ -9,6 +9,7 @@ class Rkflashtool < Formula
   no_autobump! because: :requires_manual_review
 
   bottle do
+    sha256 cellar: :any,                 arm64_tahoe:    "f28fa9f142735da8b1dd19222e6ac5c696072e792a8e71fe9aeab969148fb5fd"
     sha256 cellar: :any,                 arm64_sequoia:  "5b977024f0938d2c9cf116821d05dfa00585f65d06b2158daadd6fdd99db991d"
     sha256 cellar: :any,                 arm64_sonoma:   "5ce2c505c683a80dc90ee03c57e100121f0cbec5e2805e0e85c74f916f1a5fbf"
     sha256 cellar: :any,                 arm64_ventura:  "5743c6c5935567e3988de6d16bc6f8cd80591ab5e0982f8594d97d48e63d8475"

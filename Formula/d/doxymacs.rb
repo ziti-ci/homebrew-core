@@ -19,10 +19,6 @@ class Doxymacs < Formula
     sha256 cellar: :any_skip_relocation, monterey:       "dba8d6a64b38ed2b2912d6ecc9fa0e895bfbeffb06255a183676f6be56c55c63"
     sha256 cellar: :any_skip_relocation, big_sur:        "761f34a12276f673ad5914b0b9caa8891eaab8fb213292a897e1000375a0370a"
     sha256 cellar: :any_skip_relocation, catalina:       "060a755f85149143e0aea876b488f98e685e320c7ced43d3ae87dfcbd4931f14"
-    sha256 cellar: :any_skip_relocation, mojave:         "48298f0f0b797c18f3af78a77a0f09f9db3880dc9d85771794894da348aedf1c"
-    sha256 cellar: :any_skip_relocation, high_sierra:    "29a4865170b12a2194c238c35ec5e0902b8e637e378f9013b7aef64fa21eb0fc"
-    sha256 cellar: :any_skip_relocation, sierra:         "2fd3dc59a8c0c8fdccf8195265d320aaa7b5d67e9a81b5a085f27cc287e7370e"
-    sha256 cellar: :any_skip_relocation, el_capitan:     "fb892db831aed57dbdcb2d3a81d78bd05c5b689376d4b7f14bffc56826205ce9"
     sha256 cellar: :any_skip_relocation, arm64_linux:    "fe41948e3c5a21e01c2db606c4001bc17a9f3a5e610da7adefad289bc521420a"
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "00c2ebbdf243dded3a23783b3a22ee3705a53dd0ba50c292dcb190bb5bcebc9a"
   end

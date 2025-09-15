@@ -13,6 +13,7 @@ class Gl2ps < Formula
   no_autobump! because: :requires_manual_review
 
   bottle do
+    sha256 cellar: :any,                 arm64_tahoe:    "185694678410f242d9a5749bd946b1b624fa5326b247ddb554abb073c46727e0"
     sha256 cellar: :any,                 arm64_sequoia:  "37edb5bfe08b0943cc9edf1418be8ab73c680074942be25048b3e72af2980f90"
     sha256 cellar: :any,                 arm64_sonoma:   "7c29529c685fb40aa712dc427ff463ac2823b0a2d93a062be9382bdf3ef449e1"
     sha256 cellar: :any,                 arm64_ventura:  "63a6c39737be3e9507fb5113de445ad7db930409e5bd74ee117b0ac447022e66"

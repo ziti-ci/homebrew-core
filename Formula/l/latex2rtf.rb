@@ -11,6 +11,7 @@ class Latex2rtf < Formula
   end
 
   bottle do
+    sha256 arm64_tahoe:    "81a32c4137fb0b7b1f23fce3a76a90fd1c8a3196e5aafab8c9172796bd90d636"
     sha256 arm64_sequoia:  "1401d5794081fccd0385a9a5fbbb53428c2e5a6e0ea52faf745d3b08223f5ae1"
     sha256 arm64_sonoma:   "0b89a54487cfef6b584b706ed87e270fcbf3a36a840a7f349b2352e82ee0588c"
     sha256 arm64_ventura:  "b4199f9894249b485a39086d881a86500f17a61bd54c268ca8a06bba188551ca"

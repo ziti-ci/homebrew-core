@@ -13,6 +13,7 @@ class Wxwidgets < Formula
 
   bottle do
     rebuild 1
+    sha256 cellar: :any,                 arm64_tahoe:   "2e0e49d77a50fae093ba05fbb33dd7e7f85904e41d19d183a0d1d0536259a781"
     sha256 cellar: :any,                 arm64_sequoia: "68e7b48517034aee17f6dd2a01e0bc187eb8bb3134eef1a8e21d1aa1588dccc7"
     sha256 cellar: :any,                 arm64_sonoma:  "5c0ef73e591ab78fd499d70c1c3d2c9c7075235e1d0b58cbdebdce1d9d9e07a3"
     sha256 cellar: :any,                 arm64_ventura: "cbe903ce43449aab311c9bf986bcffb088ce140b92e9d48aaa27029e25710089"

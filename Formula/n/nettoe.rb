@@ -8,6 +8,7 @@ class Nettoe < Formula
   no_autobump! because: :requires_manual_review
 
   bottle do
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:    "f6d3b32a4b364e84aab80cfa135679ec141419e601724888c54a31310cd85d1d"
     sha256 cellar: :any_skip_relocation, arm64_sequoia:  "3ffd852b505b8793e11f4c16e537613fa07573361b0d6762145ba59727756298"
     sha256 cellar: :any_skip_relocation, arm64_sonoma:   "b3808e963136d5f0330b4a779f8872cf3ba3a9cbeae5c555cc37bfbefd226173"
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "af2f3dde5a365c56fb7e055b1a4dba60b1af8dfa0bdb02150965d407e1d69f3d"

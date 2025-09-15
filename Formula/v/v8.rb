@@ -41,10 +41,6 @@ class V8 < Formula
 
   uses_from_macos "python" => :build
 
-  on_macos do
-    depends_on "llvm" if DevelopmentTools.clang_build_version <= 1400
-  end
-
   on_linux do
     depends_on "lld" => :build
     depends_on "pkgconf" => :build
@@ -236,12 +232,23 @@ class V8 < Formula
       treat_warnings_as_errors:     false, # ignore not yet supported clang argument warnings
     }
 
+    # workaround to use shim to compile v8
+    ENV.llvm_clang
+    llvm = Formula["llvm"]
+    clang_base_path = buildpath/"clang"
+    clang_base_path.install_symlink (llvm.opt_prefix.children - [llvm.opt_bin])
+    (clang_base_path/"bin").install_symlink llvm.opt_bin.children
+    %w[clang clang++].each do |compiler|
+      rm(clang_base_path/"bin"/compiler)
+      (clang_base_path/"bin"/compiler).write_env_script Superenv.shims_path/"llvm_#{compiler}", _skip: ""
+      chmod "+x", clang_base_path/"bin"/compiler
+    end
+
     # uses Homebrew clang instead of Google clang
-    gn_args[:clang_base_path] = "\"#{Formula["llvm"].opt_prefix}\""
-    gn_args[:clang_version] = "\"#{Formula["llvm"].version.major}\""
+    gn_args[:clang_base_path] = "\"#{clang_base_path}\""
+    gn_args[:clang_version] = "\"#{llvm.version.major}\""
 
     if OS.linux?
-      ENV.llvm_clang
       ENV["AR"] = DevelopmentTools.locate("ar")
       ENV["NM"] = DevelopmentTools.locate("nm")
       gn_args[:use_sysroot] = false # don't use sysroot
@@ -251,15 +258,6 @@ class V8 < Formula
     else
       ENV["DEVELOPER_DIR"] = ENV["HOMEBREW_DEVELOPER_DIR"] # help run xcodebuild when xcode-select is set to CLT
       gn_args[:use_lld] = false # upstream use LLD but this leads to build failure on ARM
-      # Work around failure mixing newer `llvm` headers with older Xcode's libc++:
-      # Undefined symbols for architecture x86_64:
-      #   "std::__1::__libcpp_verbose_abort(char const*, ...)", referenced from:
-      #       std::__1::__throw_length_error[abi:nn180100](char const*) in stack_trace.o
-      if DevelopmentTools.clang_build_version <= 1400
-        gn_args[:fatal_linker_warnings] = false
-        inreplace "build/config/mac/BUILD.gn", "[ \"-Wl,-ObjC\" ]",
-                                               "[ \"-Wl,-ObjC\", \"-L#{Formula["llvm"].opt_lib}/c++\" ]"
-      end
     end
 
     # Make sure private libraries can be found from lib

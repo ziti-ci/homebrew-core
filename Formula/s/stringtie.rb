@@ -2,7 +2,7 @@ class Stringtie < Formula
   desc "Transcript assembly and quantification for RNA-Seq"
   homepage "https://github.com/gpertea/stringtie"
   url "https://github.com/gpertea/stringtie/archive/refs/tags/v3.0.1.tar.gz"
-  sha256 "aa831451ae08f1ea524db2709d135208695bf66fc2dbcdfb3d1d8461430e2ba9"
+  sha256 "1e5cdc7a739d2cffa6dbbb4c28c1029476cc5002531a1438a1274ac381487a4f"
   license "MIT"
   head "https://github.com/gpertea/stringtie.git", branch: "master"
 

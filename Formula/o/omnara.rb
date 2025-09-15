@@ -3,17 +3,17 @@ class Omnara < Formula
 
   desc "Talk to Your AI Agents from Anywhere"
   homepage "https://omnara.com/"
-  url "https://files.pythonhosted.org/packages/d6/a7/174dd66fdd5817c70b367e9e1cd56861e45169e7f9ac9961ef7ed04c5224/omnara-1.6.15.tar.gz"
-  sha256 "fac2e6c5f6acccbb9d05b2acf0cf459e864b7f9b470b7499ba18cd1a2a27005b"
+  url "https://files.pythonhosted.org/packages/37/62/eec67a694ede32b4de6ef8753778b64c11443db08862f121f688ef636208/omnara-1.6.16.tar.gz"
+  sha256 "b6b4035267a3f01eb4daf48d60630957e7f146ad5d96655f0ff6b6332ae35b8e"
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any,                 arm64_tahoe:   "cb772e11690f7c8c798ffbdcd6b2322bdc6b0c3f45bc0b9ca0ef2fcf5095eada"
-    sha256 cellar: :any,                 arm64_sequoia: "8dc972180e466e77c865277dba0a5ed0f6596e4b83c92f9d2a04959b5ec456d8"
-    sha256 cellar: :any,                 arm64_sonoma:  "9645475f5a254c7bd452c988a3936f4e204bfa289578cd2a2adea50a7551d77f"
-    sha256 cellar: :any,                 sonoma:        "cb0c37bcb4337c377c1448a8e8ddc131e5930b33b4f2b7408239b59030afa7f6"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "ad6211584a1a8d04214e051d697de5fb33b2b9f351d225c14c40f16875ce9d3c"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "965df1df57513dc3065c7dbd4a9e420c4bde11452a259f7a220a276c0d7a3cc1"
+    sha256 cellar: :any,                 arm64_tahoe:   "0fbd63aafe7cd9c1702d2749bab0a7cb3fa3bab3d20faae63b23214155c51da6"
+    sha256 cellar: :any,                 arm64_sequoia: "284cf05a08e39ff965b5c37f8f332dd5b18c7a0a6da4135f0b259914e167fa98"
+    sha256 cellar: :any,                 arm64_sonoma:  "5ab34ea520ff8bccc91a8b889f24b44ba0b1af3e433ebfa5d4482b495e210344"
+    sha256 cellar: :any,                 sonoma:        "cf8b82cdce0892f4c3435bf8d12b75b2068da267dc6476528ab2ef0e5c23a61d"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "3fbdf53fcfc149af655fcb0e446e952d30838f24c463217cc13574b78af2a8b2"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "e51afc5a5b199fc37b924b30f984c1664c4ef9b160fbe9132a53f5f1fde1651d"
   end
 
   depends_on "rust" => :build # for pydantic-core

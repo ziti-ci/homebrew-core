@@ -6,6 +6,7 @@ class Shellinabox < Formula
   license "GPL-2.0-only"
 
   bottle do
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "9af5148d556c49c10cd2d8202f4172237928ce9c225a459eba11d4e2a6ab5945"
     sha256 cellar: :any_skip_relocation, arm64_sequoia: "cc3dcfc6ccd491c7a24fca6e89f3ee3c5547a379bc257904e323413dbe21619f"
     sha256 cellar: :any_skip_relocation, arm64_sonoma:  "1e5286ea7ca63bbada9f3f775f2f2d8c1006fb1f51c9640925ccceba4e0e37c6"
     sha256 cellar: :any_skip_relocation, arm64_ventura: "99818243818b0086763a7ceef6b417e5dd13b381cb9fd48e956566a26f74b3e4"

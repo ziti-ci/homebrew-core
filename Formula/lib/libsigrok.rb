@@ -28,15 +28,15 @@ class Libsigrok < Formula
       # Backport fixes to build with sdcc>=4.2.3. Remove in the next release of fw-fx2lafw.
       patch do
         url "https://sigrok.org/gitweb/?p=sigrok-firmware-fx2lafw.git;a=commitdiff_plain;h=5aab87d358a4585a10ad89277bb88ad139077abd"
-        sha256 "ddf21e9e655c78d93cb58742e1a4dcbe769dfa2d88cfc963f97b6e5794c2fdcf"
+        sha256 "9615c2f25eb03faeca73c8233353698236dc9f16c38e250f3cec4a7bb5d9f15d"
       end
       patch do
         url "https://sigrok.org/gitweb/?p=sigrok-firmware-fx2lafw.git;a=commitdiff_plain;h=3e08500d22f87f69941b65cf8b8c1b85f9b41173"
-        sha256 "dd74b58ae0e255bca4558dc6604e32c34c49ddb05281d7edc35495f0c506373a"
+        sha256 "f9c93c9ac88802173cb37528766d95c231288f343ee5842a1d8bc9f617794c33"
       end
       patch do
         url "https://sigrok.org/gitweb/?p=sigrok-firmware-fx2lafw.git;a=commitdiff_plain;h=96b0b476522c3f93a47ff8f479ec08105ba6a2a5"
-        sha256 "b75c7b6a1705e2f8d97d5bdaac01d1ae2476c0b0f1b624d766d722dd12b402db"
+        sha256 "1d5d9a7d2e8e7e1b99c57f15093bbffed87d5750caa13b797cd3199438d4c990"
       end
     end
   end

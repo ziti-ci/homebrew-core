@@ -946,7 +946,7 @@
     "exclude_packages": ["certifi"]
   },
   "streamrip": {
-    "exclude_packages": ["certifi", "pillow"]
+    "exclude_packages": ["certifi", "pillow", "pytest", "pytest-asyncio", "pytest-mock"]
   },
   "subliminal": {
     "exclude_packages": ["certifi"]

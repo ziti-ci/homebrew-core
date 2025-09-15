@@ -35,9 +35,14 @@ class Nest < Formula
     depends_on "libomp"
   end
 
+  # Fix to error undeclared name not builtin: long
+  patch do
+    url "https://github.com/nest/nest-simulator/commit/cb7e1dadf8a8566b7340ad3a7ed13c173d35e6d0.patch?full_index=1"
+    sha256 "056fa912d7570bd98e2114355a5d0a6ca2bc0bc8cfd362bf39625dfc9df93c47"
+  end
+
   def install
     # Help FindReadline find macOS system ncurses library
-
     args = if OS.mac? && (sdk = MacOS.sdk_path_if_needed)
       ["-DNCURSES_LIBRARY=#{sdk}/usr/lib/libncurses.tbd"]
     else

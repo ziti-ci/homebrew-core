@@ -21,6 +21,12 @@ class Cjdns < Formula
   depends_on "node" => :build
   depends_on "rust" => :build
 
+  # rust 1.89 build patch, upstream pr ref, https://github.com/cjdelisle/cjdns/pull/1271
+  patch do
+    url "https://github.com/cjdelisle/cjdns/commit/53007ebb2e18e8052054675f979fcaeea5de0437.patch?full_index=1"
+    sha256 "04b9a820806a5f5318fcedae3335a5c91daeb6a52555d42b9d6120ad41ed177e"
+  end
+
   def install
     system "./do"
     bin.install "cjdroute"

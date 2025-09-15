@@ -6,6 +6,7 @@ class Shellz < Formula
   license "GPL-3.0-only"
 
   bottle do
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:    "253878a341fdac25066ac6e51bbd4dc9c265a4fbaa51b796750582de0f9910a5"
     sha256 cellar: :any_skip_relocation, arm64_sequoia:  "e7da7409e05430d93aa136b8dbd83e40aa4ee2c8abb708606b27f5d42867096e"
     sha256 cellar: :any_skip_relocation, arm64_sonoma:   "0c129b18cdafdaa6f3cff5fef8bf0f4f76ef7d7b07a491e6cf7e3053a3169f06"
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "f988ca6178c77343dfea20c9b4adf2eb0742605f4e0402dac2e2ad963ab5881c"

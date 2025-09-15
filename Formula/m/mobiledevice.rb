@@ -9,6 +9,7 @@ class Mobiledevice < Formula
 
   bottle do
     rebuild 2
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:    "391242e35998f146f7b0051104f106b49f9ba4f2ec2817b2cb086fa23aa48831"
     sha256 cellar: :any_skip_relocation, arm64_sequoia:  "7e9e7bded8a827c41f1fc47bcb6d25ab25dff835e0d7ec486c15ff1e49043de1"
     sha256 cellar: :any_skip_relocation, arm64_sonoma:   "5c41bbb7022712c16b68af49b5b3b170592870c0cf82a6ab3ad778c6731d3adb"
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "9840294891d057da453f01b2f91601f9a167c3954e1953f0d48f6d096de0e692"

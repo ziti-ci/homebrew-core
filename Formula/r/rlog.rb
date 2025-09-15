@@ -8,6 +8,7 @@ class Rlog < Formula
   no_autobump! because: :requires_manual_review
 
   bottle do
+    sha256 cellar: :any,                 arm64_tahoe:    "abe2bf8a021e632b0e828b667b5e2e09be2cb2bf5356b40adc7787248c16b12e"
     sha256 cellar: :any,                 arm64_sequoia:  "17aeadbbb0c7138389b80f0cecf0c59b6a329176eda02d38a9566502110f72f4"
     sha256 cellar: :any,                 arm64_sonoma:   "408100778814811a72a063dd53302248c2d291baa55534a3a58daf16a14a1ffe"
     sha256 cellar: :any,                 arm64_ventura:  "d33c09168d248f72b7c81e8a61f3d8f69a1d13127f8f75d7526a28220e5d7f4c"

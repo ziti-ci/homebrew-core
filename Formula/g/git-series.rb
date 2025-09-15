@@ -18,6 +18,9 @@ class GitSeries < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "bd078426fe35d91cfa5c3d7b7e0dfd1f44746dcf33fb58d82bc1a670ab533fce"
   end
 
+  # https://github.com/git-series/git-series/issues/74#issuecomment-2394973654
+  deprecate! date: "2025-09-14", because: :unmaintained
+
   depends_on "pkgconf" => :build
   depends_on "rust" => :build
   depends_on "libgit2"

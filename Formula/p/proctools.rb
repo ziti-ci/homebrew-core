@@ -13,6 +13,7 @@ class Proctools < Formula
   no_autobump! because: :requires_manual_review
 
   bottle do
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:    "a04c37c6e995cbce8ff70386029b5b3a00c61cbd1e9c7399cbb177670035df8d"
     sha256 cellar: :any_skip_relocation, arm64_sequoia:  "f9cc18c0b6d9837cad062ce69de2544bf534d4bcc7380230b81ac126dc2ca4be"
     sha256 cellar: :any_skip_relocation, arm64_sonoma:   "5be8d4a80309fe84a132613a2338daa436e041b98569d0846648fc6e35e3d452"
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "954a65be7f21a18e1defc733342a049bef559402c5b14b8fb8879cff05cb7af5"

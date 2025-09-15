@@ -15,6 +15,7 @@ class Shntool < Formula
 
   bottle do
     rebuild 2
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:    "dac7c49e9256da92adfb0d881f723ad8869043632b6e81b03b0dfb1efa184822"
     sha256 cellar: :any_skip_relocation, arm64_sequoia:  "c5d116fc457d0cb26ccaea1e50b59a4edae2af2e89064c473aa420717dc0a9c6"
     sha256 cellar: :any_skip_relocation, arm64_sonoma:   "9147bd0667159d62ea4493ae1524f8779f4fb19eb34ac4fc109695e09cdcd7ef"
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "ec3c0feb069099563b7359c7e3f926ac1840aaf0364bf40be1a2cf1462865764"

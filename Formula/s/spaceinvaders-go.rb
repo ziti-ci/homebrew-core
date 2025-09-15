@@ -8,6 +8,7 @@ class SpaceinvadersGo < Formula
   no_autobump! because: :requires_manual_review
 
   bottle do
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:    "b15177ecf88a2b31fa74e3abd9a792f2762cc58b50d201f2f6423d3c53a45dc7"
     sha256 cellar: :any_skip_relocation, arm64_sequoia:  "3be01a0f665ce0362b3fa26c19548b9952b107d427f4c381e809ccc4a0760cba"
     sha256 cellar: :any_skip_relocation, arm64_sonoma:   "4aa933312ef52bc92b44dcc77e5da754fe2a702832e33d2839f587eb9b3261f8"
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "f7965be321dbd3d56b85a22bb178ce8723fe65b20391ae215ecf594ee3f45ffa"

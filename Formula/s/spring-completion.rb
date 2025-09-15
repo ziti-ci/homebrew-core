@@ -9,6 +9,7 @@ class SpringCompletion < Formula
   no_autobump! because: :requires_manual_review
 
   bottle do
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:    "eac8da3385353b9251490a72d56cc074fac00bcbb3537a6b8545c78699cbfda8"
     sha256 cellar: :any_skip_relocation, arm64_sequoia:  "4b3ae7469be600ebd63ca8f9bb7f59677dc2d766c05b75becf477923dade4cca"
     sha256 cellar: :any_skip_relocation, arm64_sonoma:   "b31b990436b19546a9fe8d392496e6d8b14c1bd0f1e622d1ad01baee4fd4383e"
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "cff62b143ba4126ebde03eca3822b4e1b3af6977a3a26b798d94286fd423cf47"

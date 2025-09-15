@@ -1,8 +1,8 @@
 class Shimmy < Formula
   desc "Small local inference server with OpenAI-compatible GGUF endpoints"
   homepage "https://github.com/Michael-A-Kuykendall/shimmy"
-  url "https://github.com/Michael-A-Kuykendall/shimmy/archive/refs/tags/v1.3.1.tar.gz"
-  sha256 "850a862a1a9f3f09eca8e654a540672dea1f74ae48374945f31cf7f6297556d5"
+  url "https://github.com/Michael-A-Kuykendall/shimmy/archive/refs/tags/v1.3.3.tar.gz"
+  sha256 "f0a697670cb37e346f1d61eb1c6e4fb9dd7d3e4b3e1ec37fe5525f50031cfdbf"
   license "MIT"
   head "https://github.com/Michael-A-Kuykendall/shimmy.git", branch: "main"
 
@@ -12,11 +12,12 @@ class Shimmy < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "440f5b6e4521e51800afa6907ac7c973b65fac8ff78eb99ab76bcfafc95c383d"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "6d2d0ec16e79c40bd617ba2152cd93ad177626fc69222f822a333392b3ea0084"
-    sha256 cellar: :any_skip_relocation, sonoma:        "2cd0bdb5c7e22ba812f8bacbfaafed32035ff650ca82606e77f55e7d5f679252"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "cf61d1b9352b078d9cbf741b4ef7d61c4bd3ff743c5cb53b5fc18331135d8ff0"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "5d292a9b0b415b213339dbea67ff60c5dc9ba7c3a7cf2fda93928a2f12ef18bf"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "b23bd801f6e898debb6c5230c448080ed3df12877c93adc87e46cb5f72d6aa00"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "cc4a833ecb7614b0bb67158a22e2569114789622ccf2ae2427c9e97ae544ac06"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "b1e17482a3874790cd3d3933b1cb8eec186acec2363844344ae4fadce2a52982"
+    sha256 cellar: :any_skip_relocation, sonoma:        "126bff3b1ce1cf914e9e3062693f473fff812905bb8c7021a6bad415b3c40010"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "f69dd03680fd62bce588e112ab168625acec79c3a9feb2134562269eff02d1ec"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "6a46a7edd1c09deb9e340bdccdbbbfd6e1fb34aff468574eacefac9602919d64"
   end
 
   depends_on "cmake" => :build # for llama-cpp-sys-2

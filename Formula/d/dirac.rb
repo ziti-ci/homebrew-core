@@ -11,6 +11,7 @@ class Dirac < Formula
 
   bottle do
     rebuild 1
+    sha256 cellar: :any,                 arm64_tahoe:    "67319e9ad9710a1d9bb80f78716b453430f164ed95a0b45ad62bad1bccbd879b"
     sha256 cellar: :any,                 arm64_sequoia:  "53157665a3a8ba4676115ebedef7b7428ea51424674d1af294383cc94c9572ff"
     sha256 cellar: :any,                 arm64_sonoma:   "f2cb5520feb1c9b6ee2803f926c5e5499042ee0813d366a4dd67d425f30f365e"
     sha256 cellar: :any,                 arm64_ventura:  "7bc947bb9a57486227216595ad5e62ece0deba0a467b1e62e0f1e549f3dbea64"
@@ -51,6 +52,9 @@ class Dirac < Formula
   def install
     # BSD cp doesn't have '-d'
     inreplace "doc/Makefile.in", "cp -dR", "cp -R"
+
+    # Workaround for newer Clang
+    ENV.append_to_cflags "-Wno-c++11-narrowing" if DevelopmentTools.clang_build_version >= 1700
 
     args = []
     # Help old config scripts identify arm64 linux

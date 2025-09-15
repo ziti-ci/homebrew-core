@@ -3,13 +3,13 @@ class Checkdmarc < Formula
 
   desc "Command-line parser for SPF and DMARC DNS records"
   homepage "https://domainaware.github.io/checkdmarc/"
-  url "https://files.pythonhosted.org/packages/3c/a2/a09799cd213f362483b9d76523d4a501c7f9c958b6232696a5c55c566690/checkdmarc-5.10.10.tar.gz"
-  sha256 "cf002510b397fe2d2f2c382b458b75595e43e7ded2839a10f630e9450c27e22e"
+  url "https://files.pythonhosted.org/packages/14/a7/e7afe144812a10481edb3c16138f93c391b06f8489e82e22efe0013f21db/checkdmarc-5.10.11.tar.gz"
+  sha256 "c9025187391a765b9e2ecc3bd1cf4b0f8e07f932ee283d2c827438caa2257255"
   license "Apache-2.0"
   head "https://github.com/domainaware/checkdmarc.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "e49fa227ae1606eaa7ba3d44b36e962bc6ffb137c2f3ce0539b610062704c987"
+    sha256 cellar: :any_skip_relocation, all: "08a62b4a2f32f4cde5ab80a7f465c02533e0f73023e87d4fc86d73833ac619d0"
   end
 
   depends_on "certifi"
@@ -57,8 +57,8 @@ class Checkdmarc < Formula
   end
 
   resource "pyopenssl" do
-    url "https://files.pythonhosted.org/packages/04/8c/cd89ad05804f8e3c17dea8f178c3f40eeab5694c30e0c9f5bcd49f576fc3/pyopenssl-25.1.0.tar.gz"
-    sha256 "8d031884482e0c67ee92bf9a4d8cceb08d92aba7136432ffb0703c5280fc205b"
+    url "https://files.pythonhosted.org/packages/fc/d7/5b1410932bfaf0bbf96426a8e08472ed26f2052c353f2dea6e6636850545/pyopenssl-25.2.0.tar.gz"
+    sha256 "71db4c6a4badb88b9804ade80886dc19b7eec3678a4a23c9029f97024c65191a"
   end
 
   resource "requests" do

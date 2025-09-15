@@ -8,6 +8,7 @@ class Defaultbrowser < Formula
   no_autobump! because: :requires_manual_review
 
   bottle do
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:    "543a41c1fafa5da62bd86dd329b951a9a7d23b5aa2187b805f454c813308ddbc"
     sha256 cellar: :any_skip_relocation, arm64_sequoia:  "d7921f729c6afa9a924ffc175918d74e9767059e645491af9cae1df09fa80bfa"
     sha256 cellar: :any_skip_relocation, arm64_sonoma:   "babed0d9771439d08249d6ca58d8c468a2f646074a44ba3f8f1b90505054ad7f"
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "75b63c5b51b3304105737dbbc18f4acca44aa2355dc06a06160220e5c07f42ef"

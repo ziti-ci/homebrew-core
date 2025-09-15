@@ -14,6 +14,7 @@ class Fifechan < Formula
 
   bottle do
     rebuild 1
+    sha256 cellar: :any,                 arm64_tahoe:    "934e7bd5f0e22e02e2349161bb9a45c8114ade89b3920188c16d35caa16895a0"
     sha256 cellar: :any,                 arm64_sequoia:  "71f641735c72610a5de0482f15c41098d817fed78afcebc8c4c41a686505cb7b"
     sha256 cellar: :any,                 arm64_sonoma:   "277fbd536c176f738c60124aea4321ec581e32491ee82fc13dceec867574705b"
     sha256 cellar: :any,                 arm64_ventura:  "a8deaa164106ac1b37cc156fc4707b8517b07194cf87adc348094600dfbd40b6"

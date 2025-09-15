@@ -34,6 +34,12 @@ class Nemu < Formula
     depends_on "libusb"
   end
 
+  # Workaround for CMake 4 compatibility
+  patch do
+    url "https://github.com/nemuTUI/nemu/commit/df667081352f85791e64eb9a3a4e693805d50d66.patch?full_index=1"
+    sha256 "d6844c5d1b4afe032abbf1def917cff780ba3e400f6df4284726e20d51fdc22c"
+  end
+
   def install
     system "cmake", "-S", ".", "-B", "build", *std_cmake_args
     system "cmake", "--build", "build"

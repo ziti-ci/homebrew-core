@@ -13,6 +13,7 @@ class Shmcat < Formula
   no_autobump! because: :requires_manual_review
 
   bottle do
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:    "3d2215296ac7593c43a7ae9fb164cff3b11804dc7c0ec1b20af35397701a3b2d"
     sha256 cellar: :any_skip_relocation, arm64_sequoia:  "103cda477b51d8e4ef25053b80346b9c7e433ef5db2c3f9efc21e815faf1556b"
     sha256 cellar: :any_skip_relocation, arm64_sonoma:   "b9249f70d6b9d337e959051cc23417d12fda97e704d53ae4cd1be561f9541fb4"
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "2f501e817599e1da0c0d0edb51931113b58c43b98fca00fb207a8213fc1418d6"

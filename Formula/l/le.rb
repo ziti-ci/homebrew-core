@@ -13,6 +13,7 @@ class Le < Formula
   no_autobump! because: :requires_manual_review
 
   bottle do
+    sha256 arm64_tahoe:    "536dab79fee1b51a836e94ae60923a4db7860c58512052249875a8012e816802"
     sha256 arm64_sequoia:  "4c5be48a3e8a62904eae2419ba95fa1146897cdc9946c8d388b7d610fa888f0b"
     sha256 arm64_sonoma:   "edfcd9c9eb3db9ca955cf89fdc062ea3fcbc146468fcfbc41dc5903ad50ce4a5"
     sha256 arm64_ventura:  "95468ba644bd4a29069f7f58a73b43565ce4b1938d6f8abfe71f867375c26844"

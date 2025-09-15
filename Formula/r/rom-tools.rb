@@ -14,6 +14,7 @@ class RomTools < Formula
   no_autobump! because: :incompatible_version_format
 
   bottle do
+    sha256 cellar: :any,                 arm64_tahoe:   "f2344a59ffde0d3e5746e18e5c5e6a5151cd392b6229de969d280db7ba7765fb"
     sha256 cellar: :any,                 arm64_sequoia: "b61953aeb127c7350ca3b9e028e1fd71b42b9933ac6f5ab9af4e621ecd0144bf"
     sha256 cellar: :any,                 arm64_sonoma:  "e6eb9ce165030d61dff20c9cd62c7b475a43510d66eac59071276e5a54321d1e"
     sha256 cellar: :any,                 arm64_ventura: "819eef671c0e0b32f39fad723e801da340b22a443e6e9b94c50cee9fc05c0ed1"

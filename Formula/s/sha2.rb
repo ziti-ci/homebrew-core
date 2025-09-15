@@ -14,6 +14,7 @@ class Sha2 < Formula
 
   bottle do
     rebuild 4
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:    "55b0e8d020c0e19723dac33bf78a7766ad2a9bc1fbf0ae532909fed61f9c5685"
     sha256 cellar: :any_skip_relocation, arm64_sequoia:  "1f07e3e5d745947e51cedb4f9f9b76c8b23ad190f19f938845fecc2374e80a9d"
     sha256 cellar: :any_skip_relocation, arm64_sonoma:   "4e46a846584099eb7a7db235edacf0d2c5527f19bf61f31ff21da8d76d32b79f"
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "4c81bda3e2841de58a9765ce09d13e28674da2ad2fbb746d89a5d17d08cbfa60"

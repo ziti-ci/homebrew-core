@@ -14,6 +14,7 @@ class Recoverjpeg < Formula
 
   bottle do
     rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:    "0cf49dc7323f9987a3d847fed81edc56edd45ff8e14846c7bf9de6cc4cb360cc"
     sha256 cellar: :any_skip_relocation, arm64_sequoia:  "d5246787a0e2678f90c0df0da8f43a4eb2de1ec4ab3fcc6398f66854db6571ac"
     sha256 cellar: :any_skip_relocation, arm64_sonoma:   "8acee12074e5c4e6990042383385e5c4056e35ec43f1ee39a779768f5720a0c3"
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "2f34e1452d02fd2e51fb1235a43821519c7811eaf0dea534429901ef2f948921"

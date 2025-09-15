@@ -19,6 +19,13 @@ class Diamond < Formula
   uses_from_macos "zlib"
 
   def install
+    # Fix to error: no member named 'uncaught_exception' in namespace 'std'; did you mean 'uncaught_exceptions'?
+    if DevelopmentTools.clang_build_version >= 1700
+      inreplace "src/util/log_stream.h",
+                "!std::uncaught_exception()",
+                "std::uncaught_exceptions() == 0"
+    end
+
     system "cmake", "-S", ".", "-B", "build", "-DCMAKE_POLICY_VERSION_MINIMUM=3.5", *std_cmake_args
     system "cmake", "--build", "build"
     system "cmake", "--install", "build"

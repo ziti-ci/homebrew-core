@@ -8,6 +8,7 @@ class Doxymacs < Formula
   no_autobump! because: :requires_manual_review
 
   bottle do
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:    "c8cd54abb531fe75440204a59834ef7807442cd7d8543f1335fb4c6428977421"
     sha256 cellar: :any_skip_relocation, arm64_sequoia:  "d6f35d29f2d9bf0ab3a13916922b7fb4506e133d83fe26c10b00fe0c6c27be17"
     sha256 cellar: :any_skip_relocation, arm64_sonoma:   "2aa03231378a72916d1f1bdb3c63d47751fd1891d9d92daa680b44cbf80e3ce2"
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "699c57cf8869c5eda84db1f8d58a160c6c821015c1c7bc4892d5ad2f1447c73e"

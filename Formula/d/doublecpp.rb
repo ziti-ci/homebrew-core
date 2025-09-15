@@ -8,6 +8,7 @@ class Doublecpp < Formula
   no_autobump! because: :requires_manual_review
 
   bottle do
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:    "d1c9462ef87c13b4a5c4affd18d0bc2ebf1f532bcde2a9eb44cf45ca2959f6ec"
     sha256 cellar: :any_skip_relocation, arm64_sequoia:  "2e15c4d309ffb4ce79625a484249eabbcee9f337a7e79c7c36a332cd0e25ca06"
     sha256 cellar: :any_skip_relocation, arm64_sonoma:   "71fdee9f989fbd4a54e2432721dfea361956dd521c386b6f5c5c3cc635b9e9f8"
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "fea45f833654d2f799d9fc1cb535238749b42a818d9718a7d73ecc94cfed74cc"

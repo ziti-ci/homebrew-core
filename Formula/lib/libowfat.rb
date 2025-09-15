@@ -14,6 +14,7 @@ class Libowfat < Formula
   no_autobump! because: :requires_manual_review
 
   bottle do
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "bc30d254df3bcd360e4f3171d2afc99997cadfec8fd46a90f2c56991677ee87b"
     sha256 cellar: :any_skip_relocation, arm64_sequoia: "c3846b7776a5350100cf8a734e0a45fcbe822f53128ab88bce24cfb259b3d27c"
     sha256 cellar: :any_skip_relocation, arm64_sonoma:  "60f9182c837f2b6ff6a79e76e7c4965c717055448b3c2928baf297fd944c3035"
     sha256 cellar: :any_skip_relocation, arm64_ventura: "b9f9d4615bb4f889dad22f8b880d2e197a7fb0caa7f48d20acb459ad868635d2"

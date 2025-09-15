@@ -1,17 +1,17 @@
 class PandocCrossref < Formula
   desc "Pandoc filter for numbering and cross-referencing"
   homepage "https://github.com/lierdakil/pandoc-crossref"
-  url "https://github.com/lierdakil/pandoc-crossref/archive/refs/tags/v0.3.20.tar.gz"
-  sha256 "935d66e4b52323aba625b2bfa90abfea774816ccf4feb959e8271beac6d9b453"
+  url "https://github.com/lierdakil/pandoc-crossref/archive/refs/tags/v0.3.21.tar.gz"
+  sha256 "48f21b868901ccb23654079fc2929500658d3a76252d3d9b86ee11d4c180815b"
   license "GPL-2.0-or-later"
-  revision 1
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "2909ee4d5c2caf2ecd8a59a64c3b5f7fa3a12ad3e9b151a8522cd25c0d148efd"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "e933b05db7c40bcf41f11ec072ecbd416794b327db2e426e15a42a9d4df11c95"
-    sha256 cellar: :any_skip_relocation, sonoma:        "00b382f9ff91238910ecd56ee752111497dfd6986ae640d640316c3e20e9fbbc"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "f9071efba0e21f03c80e973c8195272bca8ef325ece425a2ac2d6ee514f35d5d"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "fedb91686b8faa9945e9d0ab6515a521f73739919a0d45fdf0a55b3cc3b3336d"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "027bbf82de25395da72b288506c4c989143aab4ae4f5b782d1d58629eec3ee52"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "eee485648dc70db43cbc8e63e3165f085060037fd80a75006a575df843e91117"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "4c178d9540b2e21e777bab90aa6a9970acf26eca906e53e09806396f15add2c1"
+    sha256 cellar: :any_skip_relocation, sonoma:        "df89506df832bf4240d0f563f28ec2fbb5eaa77da1d2e41e610f779f07b8bd67"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "a582aab615d05bf844dd5462ed8d8b945c5742c75d41eb19489960316409ac6d"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "a0a53e52b087683fe6a5428b945603d23ff1d5370964822e2fa63e6ceeb1d67f"
   end
 
   depends_on "cabal-install" => :build
@@ -20,10 +20,6 @@ class PandocCrossref < Formula
 
   uses_from_macos "unzip" => :build
   uses_from_macos "zlib"
-
-  # upstream bug report, https://github.com/lierdakil/pandoc-crossref/issues/482
-  # support new writerHighlightMethod, upstream pr ref, https://github.com/lierdakil/pandoc-crossref/pull/484
-  patch :DATA
 
   def install
     rm("cabal.project.freeze")
@@ -45,105 +41,3 @@ class PandocCrossref < Formula
     refute_match "WARNING: pandoc-crossref was compiled", output
   end
 end
-
-__END__
-diff --git a/package.yaml b/package.yaml
-index eae4b5a..c7455c0 100644
---- a/package.yaml
-+++ b/package.yaml
-@@ -30,7 +30,7 @@ data-files:
- dependencies:
-   base: ">=4.16 && <5"
-   text: ">=1.2.2 && <2.2"
--  pandoc: ">=3.7.0.2 && < 3.8"
-+  pandoc: ">=3.7.0.2 && < 3.9"
-   pandoc-types: ">= 1.23 && < 1.24"
- _deps:
-   containers: &containers { containers: ">=0.1 && <0.7" }
-diff --git a/pandoc-crossref.cabal b/pandoc-crossref.cabal
-index 5270aa1..48a796f 100644
---- a/pandoc-crossref.cabal
-+++ b/pandoc-crossref.cabal
-@@ -169,7 +169,7 @@ library
-     , microlens >=0.4.12.0 && <0.5.0.0
-     , microlens-mtl >=0.2.0.1 && <0.3.0.0
-     , mtl >=1.1 && <2.4
--    , pandoc >=3.7.0.2 && <3.8
-+    , pandoc >=3.7.0.2 && <3.9
-     , pandoc-crossref-internal
-     , pandoc-types ==1.23.*
-     , text >=1.2.2 && <2.2
-@@ -223,7 +223,7 @@ library pandoc-crossref-internal
-     , microlens-mtl >=0.2.0.1 && <0.3.0.0
-     , microlens-th >=0.4.3.10 && <0.5.0.0
-     , mtl >=1.1 && <2.4
--    , pandoc >=3.7.0.2 && <3.8
-+    , pandoc >=3.7.0.2 && <3.9
-     , pandoc-types ==1.23.*
-     , syb >=0.4 && <0.8
-     , template-haskell >=2.7.0.0 && <3.0.0.0
-@@ -253,7 +253,7 @@ executable pandoc-crossref
-     , gitrev >=1.3.1 && <1.4
-     , open-browser ==0.2.*
-     , optparse-applicative >=0.13 && <0.19
--    , pandoc >=3.7.0.2 && <3.8
-+    , pandoc >=3.7.0.2 && <3.9
-     , pandoc-crossref
-     , pandoc-types ==1.23.*
-     , template-haskell >=2.7.0.0 && <3.0.0.0
-@@ -283,7 +283,7 @@ test-suite test-integrative
-     , directory >=1 && <1.4
-     , filepath >=1.1 && <1.6
-     , hspec >=2.4.4 && <3
--    , pandoc >=3.7.0.2 && <3.8
-+    , pandoc >=3.7.0.2 && <3.9
-     , pandoc-crossref
-     , pandoc-types ==1.23.*
-     , text >=1.2.2 && <2.2
-@@ -319,7 +319,7 @@ test-suite test-pandoc-crossref
-     , microlens >=0.4.12.0 && <0.5.0.0
-     , microlens-mtl >=0.2.0.1 && <0.3.0.0
-     , mtl >=1.1 && <2.4
--    , pandoc >=3.7.0.2 && <3.8
-+    , pandoc >=3.7.0.2 && <3.9
-     , pandoc-crossref
-     , pandoc-crossref-internal
-     , pandoc-types ==1.23.*
-@@ -348,7 +348,7 @@ benchmark simple
-   build-depends:
-       base >=4.16 && <5
-     , criterion >=1.5.9.0 && <1.7
--    , pandoc >=3.7.0.2 && <3.8
-+    , pandoc >=3.7.0.2 && <3.9
-     , pandoc-crossref
-     , pandoc-types ==1.23.*
-     , text >=1.2.2 && <2.2
-diff --git a/src/ManData.hs b/src/ManData.hs
-index 5e6b6cc06f67a014c753cc149e93acd338573446..21b21cb7a1f51c048f5892af3eef8dbb093db32f 100644
---- a/src/ManData.hs
-+++ b/src/ManData.hs
-@@ -62,7 +62,7 @@ embedManualHtml = do
-           $   P.compileDefaultTemplate "html5"
-   embedManual $ P.writeHtml5String P.def{
-     P.writerTemplate = Just tt
--  , P.writerHighlightStyle = Just pygments
-+  , P.writerHighlightMethod = P.Skylighting pygments
-   , P.writerTOCDepth = 6
-   , P.writerTableOfContents = True
-   }
-diff --git a/test/test-integrative.hs b/test/test-integrative.hs
-index f367265..3218dcc 100644
---- a/test/test-integrative.hs
-+++ b/test/test-integrative.hs
-@@ -42,8 +42,9 @@ m2m dir
-     expect_md <- runIO $ readFile ("test" </> "m2m" </> dir </> "expect.md")
-     let ro = def { readerExtensions = pandocExtensions }
-         wo = def { writerExtensions = disableExtension Ext_raw_html $ disableExtension Ext_raw_attribute pandocExtensions
--                 , writerHighlightStyle=Just pygments
--                 , writerListings = dir `elem` listingsDirs }
-+                , writerHighlightMethod = if dir `elem` listingsDirs
-+                      then IdiomaticHighlighting
-+                      else Skylighting pygments }
-     p@(Pandoc meta _) <- runIO $ either (error . show) id <$> P.runIO (readMarkdown ro $ T.pack input)
-     let actual_md = either (fail . show) T.unpack $ runPure $ writeMarkdown wo $ runCrossRef meta (Just $ Format "markdown") defaultCrossRefAction p
-     it "Markdown" $ do

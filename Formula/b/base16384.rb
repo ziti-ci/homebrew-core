@@ -8,6 +8,7 @@ class Base16384 < Formula
 
   bottle do
     rebuild 1
+    sha256 cellar: :any,                 arm64_tahoe:   "1f5f8def255ca57e635603ef572bb652a7920bae85be2e2c84a13c446d6d4615"
     sha256 cellar: :any,                 arm64_sequoia: "deeb2188d7479f513249484059fd1de2adbeeecc433b5017bd352ca29328d9c4"
     sha256 cellar: :any,                 arm64_sonoma:  "7908aa72a066df28976ac2c33318b3bc14dcdcdb14e03f075aaef4e49f927b0d"
     sha256 cellar: :any,                 sonoma:        "b9c40a9eeae7fb639505085bf436817583a4bef68ab415966a232facbb1634b8"

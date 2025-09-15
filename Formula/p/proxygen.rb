@@ -7,6 +7,7 @@ class Proxygen < Formula
   head "https://github.com/facebook/proxygen.git", branch: "main"
 
   bottle do
+    sha256                               arm64_tahoe:   "006ef4114d56769d38b5a76ec213a02ebdf1ecb0c9be314844cab8a9beb938d4"
     sha256                               arm64_sequoia: "3458d9e13272238afa331944ce9cc085f0136e2e0ad1658af0db7bff5cc9d6a8"
     sha256                               arm64_sonoma:  "cb85f3d071e0a925c99c9bde55f1d96c331820f71c7c8a90aa7641f60f548908"
     sha256                               arm64_ventura: "ffa65985008dbf930ea485e731e6bb63580587b88a01aa6fb15415e905eac2bf"

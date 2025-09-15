@@ -5,6 +5,14 @@ class McpServerKubernetes < Formula
   sha256 "83dc88067745fe32791706babdaab7fd84d6a0a6a582dcb3a2904a20d8c35821"
   license "MIT"
 
+  bottle do
+    sha256 cellar: :any,                 arm64_tahoe:   "f342dc47cd5cf5d0352cd5ae08724084e46ef5cf66853c19e0a4347b5c3886be"
+    sha256 cellar: :any,                 arm64_sequoia: "01c1b8d088ab1f81a70a32430b73de370ade73a1b6334c67442dee809d7b81b3"
+    sha256 cellar: :any,                 arm64_sonoma:  "01c1b8d088ab1f81a70a32430b73de370ade73a1b6334c67442dee809d7b81b3"
+    sha256 cellar: :any,                 sonoma:        "ee42e958a37aac57e9f05d20ebfad1d4458ff9d89d2dfa804897c78300a84295"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "3827c8edb47573f4aba5aa72ad18b88bc42e6af7b79e8470b15d9c3f438dd6af"
+  end
+
   depends_on "node"
 
   def install

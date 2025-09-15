@@ -27,6 +27,9 @@ class Rmcast < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "ecbaa8a68d7cb766021fb1f1bff97c911a5e16720508cf71648c6e96a2b93c4f"
   end
 
+  # 503 error for https://www.land.ufrj.br
+  deprecate! date: "2025-09-15", because: :repo_removed
+
   depends_on "autoconf" => :build
   depends_on "automake" => :build
   depends_on "libtool" => :build

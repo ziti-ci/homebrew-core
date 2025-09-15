@@ -9,6 +9,7 @@ class Cjdns < Formula
   no_autobump! because: :requires_manual_review
 
   bottle do
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "d18396bceef1747e59f66a52cccbaf6b6220c4f75af427b2c165d4140cb4b537"
     sha256 cellar: :any_skip_relocation, arm64_sequoia: "dad7a92383088d864b11ebfbef03b9ea181c3e89d0c38c804d895035de1a9b74"
     sha256 cellar: :any_skip_relocation, arm64_sonoma:  "b7c7ed9f1030ae11d154c8b56ecbf1960fe592c0b40ea624bd27ac593ffeead3"
     sha256 cellar: :any_skip_relocation, arm64_ventura: "87f5189b5d62e3cd6ab280ac7b4a36c9010fbe609b430de711f4b3bdc91ff0ab"

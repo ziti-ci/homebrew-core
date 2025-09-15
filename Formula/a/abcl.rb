@@ -1,7 +1,9 @@
 class Abcl < Formula
   desc "Armed Bear Common Lisp: a full implementation of Common Lisp"
-  homepage "https://abcl.org/"
-  url "https://abcl.org/releases/1.9.2/abcl-src-1.9.2.tar.gz"
+  # upstream bug report about site issue, https://github.com/armedbear/abcl/issues/711
+  homepage "https://github.com/armedbear/abcl"
+  url "https://deb.debian.org/debian/pool/main/a/abcl/abcl_1.9.2.orig.tar.gz"
+  mirror "https://abcl.org/releases/1.9.2/abcl-src-1.9.2.tar.gz"
   sha256 "4e2f4b8f85e2d95d95e5bdbcd9fa17ad6131a17e2fcf12bc19ffb97b48bc1d38"
   license "GPL-2.0-or-later" => {
     with: "Classpath-exception-2.0",
@@ -9,8 +11,8 @@ class Abcl < Formula
   head "https://abcl.org/svn/trunk/abcl/", using: :svn
 
   livecheck do
-    url :homepage
-    regex(/href=.*?abcl-src[._-]v?(\d+(?:\.\d+)+)\.t/i)
+    url "https://deb.debian.org/debian/pool/main/a/abcl/"
+    regex(/href=.*?abcl[._-]v?(\d+(?:\.\d+)+)\.orig\.t/i)
   end
 
   no_autobump! because: :requires_manual_review

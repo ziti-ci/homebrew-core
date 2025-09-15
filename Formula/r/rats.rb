@@ -8,6 +8,7 @@ class Rats < Formula
   no_autobump! because: :requires_manual_review
 
   bottle do
+    sha256 arm64_tahoe:    "b310ca257b3697a46004e64f9c06bce6ae79bb75c86d832bc74c28cbd1f99a7d"
     sha256 arm64_sequoia:  "0957ff0fe765a50f6ec8a12edc3119741fe39133b438ee114ace6d05288fb06c"
     sha256 arm64_sonoma:   "67a98f4d5385f43dadf88b69c4ea04a4b42a318f9be2820d5c52cb859b69c6e4"
     sha256 arm64_ventura:  "9a47934dabb7a37c3d8a2a0a68a2e25961bfd8fa56be202d4bc604c4850d1cbf"

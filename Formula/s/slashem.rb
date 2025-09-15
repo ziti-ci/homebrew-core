@@ -27,10 +27,6 @@ class Slashem < Formula
     sha256 cellar: :any_skip_relocation, monterey:       "b7f005ad0ee38c512e4ec7f89c50ff88b86439b66d8c0fae05db62f933290ea8"
     sha256 cellar: :any_skip_relocation, big_sur:        "580468c6703c09d86a0904bb838e3bf8f98a1a21d7a694147b8bb61ea3428f88"
     sha256 cellar: :any_skip_relocation, catalina:       "96fc5b1abd0e8deff9573c43656e7f3caa25b51d28eb8f426cec7c28131ab4b0"
-    sha256 cellar: :any_skip_relocation, mojave:         "7a764f6117556d92fad752ec06dc28626c0e250632eac85cfa8d841f7c770819"
-    sha256 cellar: :any_skip_relocation, high_sierra:    "5bac56b4e76ea1db5b5e211ac88c4f10c2fa8b179ada29512f41868af1669b3d"
-    sha256 cellar: :any_skip_relocation, sierra:         "80a4df38057ec2bef889b92b4edfc80158add542a1bd9f1ca50ed8d39eb21e2c"
-    sha256 cellar: :any_skip_relocation, el_capitan:     "3b0ec09db5b1e2abccc22d2cc9282de211d9a15e4d2d66c404f898af2768d1b3"
     sha256 cellar: :any_skip_relocation, arm64_linux:    "5e539a21570dc7e8141bdf68fcaf8dbce515fc6839e55e24a62a82b0362a8caa"
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "03e6ce8d29f4ebd5eba336525f8d314b1f26c032d935389c704698f5881396f0"
   end

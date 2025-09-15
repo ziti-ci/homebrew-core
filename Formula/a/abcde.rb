@@ -15,6 +15,7 @@ class Abcde < Formula
   no_autobump! because: :requires_manual_review
 
   bottle do
+    sha256 cellar: :any,                 arm64_tahoe:    "580cb0f7c45b342dbdfac94e4fe3a2dc6db572409e212d963b22fba20a002423"
     sha256 cellar: :any,                 arm64_sequoia:  "48c8a99c5cf28e44096fe46c62f5dc826a90282769b895fb50807cca0f5383b0"
     sha256 cellar: :any,                 arm64_sonoma:   "5e728aa1561686b5cfb5fe14f2fec3f4a106a7403a9ccaee4c9fd3c1eca530e1"
     sha256 cellar: :any,                 arm64_ventura:  "dedb7cfd40ab62f591ee97a8da975fe570cc2af675e4a488e3895976bfbf4f96"

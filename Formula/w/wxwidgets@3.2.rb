@@ -52,6 +52,9 @@ class WxwidgetsAT32 < Formula
     %w[catch pcre].each { |l| rm_r(buildpath/"3rdparty"/l) }
     %w[expat jpeg png tiff zlib].each { |l| rm_r(buildpath/"src"/l) }
 
+    # Work around removal of AGL in Tahoe
+    inreplace "configure", "-framework AGL", ""
+
     args = [
       "--enable-clipboard",
       "--enable-controls",

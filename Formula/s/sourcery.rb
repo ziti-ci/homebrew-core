@@ -27,6 +27,18 @@ class Sourcery < Formula
   uses_from_macos "sqlite"
   uses_from_macos "swift"
 
+  # Fix compiling with Xcode 26
+  # PR ref: https://github.com/krzysztofzablocki/Sourcery/pull/1428
+  patch do
+    url "https://github.com/krzysztofzablocki/Sourcery/commit/b0754d08c5ed5bf37cbda7892b42675f993c2251.patch?full_index=1"
+    sha256 "daf3c9365870548e9cf0a209ba57643c37fb23c5853e8057db269cf0fd92bbfc"
+  end
+  # PR ref: https://github.com/krzysztofzablocki/Sourcery/pull/1434
+  patch do
+    url "https://github.com/krzysztofzablocki/Sourcery/commit/4d2ce5976af07b43a56a64a1ddbce7137b65f9f9.patch?full_index=1"
+    sha256 "1a82f39d469278a16cca34292d6424bb3506ad2b76b621980b9dea9e49106d02"
+  end
+
   def install
     # Build script is unfortunately not customisable.
     # We want static stdlib on Linux as the stdlib is not ABI stable there.

@@ -7,6 +7,7 @@ class CloudformationGuard < Formula
 
   bottle do
     rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "0b4d01e76e66cb01e01240a44c4379aa90fca024975e54b2e5ea383c22ffc37b"
     sha256 cellar: :any_skip_relocation, arm64_sequoia: "8c6b065811bdf93dbb06dca229b3567045a25420cecf828554efc9ee49eddb48"
     sha256 cellar: :any_skip_relocation, arm64_sonoma:  "8ab0907195c7ae28169278e5274755b2affe21fc43ec24fb15bc90fb722e7d3e"
     sha256 cellar: :any_skip_relocation, arm64_ventura: "5e3a03945d1830b0118ce9a305347d0287b06e0d664552f6cc16ffb9a289d609"

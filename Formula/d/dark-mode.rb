@@ -25,7 +25,6 @@ class DarkMode < Formula
 
   depends_on xcode: :build
   depends_on :macos
-  depends_on macos: :mojave
 
   def install
     # https://github.com/sindresorhus/dark-mode/blob/main/build

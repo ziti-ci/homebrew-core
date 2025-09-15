@@ -5,6 +5,10 @@ class ClaudeHooks < Formula
   sha256 "b55f6dbdec8ec51f26f459bf2888ae9cd6deae1a1e3ac992904080e118b6e80b"
   license "MIT"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "a8961c6143bc341ef7586a528fa3d52f32c72463e9ef14b8bf73f3aaeaee273e"
+  end
+
   depends_on "node"
 
   def install

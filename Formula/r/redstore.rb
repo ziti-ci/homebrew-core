@@ -13,6 +13,7 @@ class Redstore < Formula
   no_autobump! because: :requires_manual_review
 
   bottle do
+    sha256 cellar: :any,                 arm64_tahoe:    "b4f7cfae26c26edf74952a959d8e56b8058ee755bd4384a18089257af330623a"
     sha256 cellar: :any,                 arm64_sequoia:  "722eb9bb530ade0f251ce260bc4f0dc3b519b164e86d2c3792d6559edfd1f01e"
     sha256 cellar: :any,                 arm64_sonoma:   "17d341618995c10bb92327af09bc2af0fb295fc798fb229b5813db72e912f639"
     sha256 cellar: :any,                 arm64_ventura:  "55306289261abde9b677d1906bb58420dc0bd3a52b775c3257ccb80c5ba04cdb"

@@ -13,6 +13,7 @@ class Midicsv < Formula
   no_autobump! because: :requires_manual_review
 
   bottle do
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:    "8d6c6d8de364a07a54ad4edb30cbd5393cb887e3f4e2a9ea0c072f70646148ec"
     sha256 cellar: :any_skip_relocation, arm64_sequoia:  "d9f2a974d6a9eb331de0e371bcf96589dd6fdfec7a2f862ec5f0a591d3721825"
     sha256 cellar: :any_skip_relocation, arm64_sonoma:   "f4733fc9797f3a20fc40b127895631d0beca4f15e1dd289ff24e9010821b4731"
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "bfc81631f34a7b6c244c9c0381b46f24da59332e10770501232a2cdcc564601c"

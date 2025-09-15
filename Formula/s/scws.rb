@@ -8,6 +8,7 @@ class Scws < Formula
   no_autobump! because: :requires_manual_review
 
   bottle do
+    sha256 cellar: :any,                 arm64_tahoe:    "bb7b68fb9fcbf51ad8170b10e1e25c4674c99bc1e99870446659c5dcc2f0b5ba"
     sha256 cellar: :any,                 arm64_sequoia:  "294a02ffae27e71589019a49e8031b89e2af74a54603e3caa1a60ffd5fa91e17"
     sha256 cellar: :any,                 arm64_sonoma:   "97322bf31231434433412e95b1561a5aa7ed1bc0887f5178a46533063295ff51"
     sha256 cellar: :any,                 arm64_ventura:  "6cdacaab4cd3ed03a55566db445ac6dc331bb653a15fa5c1927e829e91a3a8c4"

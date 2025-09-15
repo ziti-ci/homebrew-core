@@ -14,6 +14,7 @@ class Dhcping < Formula
   no_autobump! because: :requires_manual_review
 
   bottle do
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:    "508383a636e12497a54b8c5ee9732aaa9e3128e988fead007b84a79e871ff040"
     sha256 cellar: :any_skip_relocation, arm64_sequoia:  "57a8c433ed1c7da1d25968b298425ee8c4eb654cc2c3db24ef634eb98fe2c2f6"
     sha256 cellar: :any_skip_relocation, arm64_sonoma:   "b2f1f36436e5638b5410267578913125a9244b2ab37573e77f53d1be3bb46bcb"
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "cf672145e91afa1ade387f8f7b25b78e4669c93c50ee4950d702bdb6c2eb2dea"

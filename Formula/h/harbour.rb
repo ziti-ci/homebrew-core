@@ -54,9 +54,15 @@ class Harbour < Formula
     rm "contrib/hbmzip/3rd/minizip/minizip.hbp"
     rm "contrib/hbexpat/3rd/expat/expat.hbp"
 
-    # Fix flat namespace usage.
-    # Upstreamed here: https://github.com/harbour/core/pull/263.
-    inreplace "config/darwin/clang.mk", "-flat_namespace -undefined warning", "-undefined dynamic_lookup"
+    # 1. Fix flat namespace usage.
+    #    Upstreamed here: https://github.com/harbour/core/pull/263.
+    # 2. Avoid using libtool due to `ld: unknown options: -force_cpusubtype_ALL`
+    #    https://github.com/Homebrew/homebrew-core/pull/242642#issuecomment-3292186403
+    inreplace "config/darwin/clang.mk" do |s|
+      s.gsub! "DY := $(AR)", "DY := cc"
+      s.gsub!(/^DFLAGS \+= .* \$\(LIBPATHS\)$/,
+              "DFLAGS += -shared -Wl,-undefined,dynamic_lookup $(LIBPATHS)")
+    end
 
     # The following optional dependencies are not being used at this time:
     # allegro, cairo, cups, freeimage, gd, ghostscript, libmagic, mysql, postgresql, qt@5, unixodbc
@@ -80,7 +86,6 @@ class Harbour < Formula
     if OS.mac?
       ENV["HB_COMPILER"] = ENV.cc
       ENV["HB_USER_DFLAGS"] = "-L#{MacOS.sdk_path}/usr/lib"
-      ENV.append "HB_USER_DFLAGS", "-ld_classic" if DevelopmentTools.clang_build_version >= 1500
       ENV.append "HB_USER_DFLAGS", "-macosx_version_min #{MacOS.version}.0" if Hardware::CPU.arm?
       ENV["HB_WITH_BZIP2"] = MacOS.sdk_path/"usr/include"
       ENV["HB_WITH_CURL"] = MacOS.sdk_path/"usr/include"

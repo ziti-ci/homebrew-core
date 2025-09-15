@@ -8,6 +8,7 @@ class Rig < Formula
   no_autobump! because: :requires_manual_review
 
   bottle do
+    sha256                               arm64_tahoe:    "5ac9d502e26fd90e8e7c695fd294e68e40feed89d8c3cf887ea0435c8f1fdb71"
     sha256                               arm64_sequoia:  "794a9e6df14ced7ebcdfdd890a1a51145882325ff6f196b0775f4503289ef38a"
     sha256                               arm64_sonoma:   "c49772908fab4d132435015e225760d30f00d742f5e09123c71cdf90a453d3ea"
     sha256                               arm64_ventura:  "1ffffb584e30f49d7b8c4b5dcc99141fff24697dc0512a6cfd8deba04720ef54"

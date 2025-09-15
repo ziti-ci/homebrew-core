@@ -54,7 +54,6 @@ class QtAT5 < Formula
   depends_on "jpeg-turbo"
   depends_on "libpng"
   depends_on "libtiff"
-  depends_on macos: :sierra
   depends_on "md4c"
   depends_on "pcre2"
   depends_on "sqlite"
@@ -138,8 +137,8 @@ class QtAT5 < Formula
 
     # Use Debian patches for ICU 75+, brew Ninja and Python 3.13
     patch do
-      url "https://deb.debian.org/debian/pool/main/q/qtwebengine-opensource-src/qtwebengine-opensource-src_5.15.19+dfsg-1.debian.tar.xz"
-      sha256 "99d651dc5d9ea7af66888babdabc0435607938f1ecbd9b98e6cf4db363ed4e35"
+      url "https://deb.debian.org/debian/pool/main/q/qtwebengine-opensource-src/qtwebengine-opensource-src_5.15.19+dfsg-3.debian.tar.xz"
+      sha256 "38ef54e497ad0464950776b1055807d9e6b1a42aa0f8f76aa3b1323f7d59fa55"
       apply "patches/build-with-c++17.patch",
             "patches/ninja-1.12.patch",
             "patches/python3.13-pipes.patch"
@@ -191,6 +190,10 @@ class QtAT5 < Formula
     sha256 "4f433bb009087d3fe51e3eec3eee6e33a51fde5c37712935b9ab96a7d7571e7d"
     directory "qtlocation/src/3rdparty/mapbox-gl-native"
   end
+
+  # Fix build with Xcode 26 with backport from Qt6
+  # https://github.com/qt/qtbase/commit/cdb33c3d5621ce035ad6950c8e2268fe94b73de5
+  patch :DATA
 
   # Apply patch from Gentoo bug tracker (https://bugs.gentoo.org/936486) to fix build
   # on macOS. Not possible to upstream as the final Qt5 commercial release is done.
@@ -446,3 +449,26 @@ class QtAT5 < Formula
     system "./hello"
   end
 end
+
+__END__
+--- a/qtbase/mkspecs/common/mac.conf
++++ b/qtbase/mkspecs/common/mac.conf
+@@ -18,8 +18,7 @@ QMAKE_LIBDIR            =
+ 
+ # sdk.prf will prefix the proper SDK sysroot
+ QMAKE_INCDIR_OPENGL     = \
+-    /System/Library/Frameworks/OpenGL.framework/Headers \
+-    /System/Library/Frameworks/AGL.framework/Headers/
++    /System/Library/Frameworks/OpenGL.framework/Headers
+ 
+ QMAKE_FIX_RPATH         = install_name_tool -id
+ 
+@@ -30,7 +29,7 @@ QMAKE_LFLAGS_REL_RPATH  =
+ QMAKE_REL_RPATH_BASE    = @loader_path
+ 
+ QMAKE_LIBS_DYNLOAD      =
+-QMAKE_LIBS_OPENGL       = -framework OpenGL -framework AGL
++QMAKE_LIBS_OPENGL       = -framework OpenGL
+ QMAKE_LIBS_THREAD       =
+ 
+ QMAKE_INCDIR_WAYLAND    =

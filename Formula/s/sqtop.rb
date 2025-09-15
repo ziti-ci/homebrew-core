@@ -8,6 +8,7 @@ class Sqtop < Formula
   no_autobump! because: :requires_manual_review
 
   bottle do
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:    "8850e7822e47d6a8371e31210542a776644252960fe3cfdbc3a348563d047d4d"
     sha256 cellar: :any_skip_relocation, arm64_sequoia:  "86fa975d403a9957261b33b293324908d327eff19831b705463866a7a4ccad2a"
     sha256 cellar: :any_skip_relocation, arm64_sonoma:   "beff07169db5be764d18cb3bee9a18371d130c6cb3d2e8890e41b460c6e0f55e"
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "31df54161ef5a2bca073d0aa08c9954763fb41721ece41ded2c7c630788c67c2"

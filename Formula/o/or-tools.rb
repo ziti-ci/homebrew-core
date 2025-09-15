@@ -47,22 +47,10 @@ class OrTools < Formula
   uses_from_macos "bzip2"
   uses_from_macos "zlib"
 
-  on_linux do
-    # LLVM Clang helps avoid building with indirect GCC dependency which uses newer libstdc++
-    depends_on "llvm" => :build if DevelopmentTools.gcc_version("/usr/bin/gcc") < 12
-  end
-
-  fails_with :gcc do
-    version "11"
-    cause "absl/log/internal/check_op.h error: ambiguous overload for 'operator<<'"
-  end
-
   # Workaround until upstream updates Abseil. Likely will be handled by sync with internal copy
   patch :DATA
 
   def install
-    ENV.llvm_clang if OS.linux? && DevelopmentTools.gcc_version("/usr/bin/gcc") < 12
-
     # FIXME: Upstream enabled Highs support in their binary distribution, but our build fails with it.
     args = %w[
       -DUSE_HIGHS=OFF

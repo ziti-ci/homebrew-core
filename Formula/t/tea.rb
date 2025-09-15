@@ -1,8 +1,8 @@
 class Tea < Formula
   desc "Command-line tool to interact with Gitea servers"
   homepage "https://gitea.com/gitea/tea"
-  url "https://gitea.com/gitea/tea/archive/v0.10.1.tar.gz"
-  sha256 "791b7f90eff9ade0d5ee5e3f0dfba128e35eaf83b5f8b8d5f5d6cc9a94ae9b03"
+  url "https://gitea.com/gitea/tea/archive/v0.11.0.tar.gz"
+  sha256 "278bbdf2e197f6f80a838e09574e8a950de535f0ba0f53154d26930a3adfaaa6"
   license "MIT"
   head "https://gitea.com/gitea/tea.git", branch: "main"
 
@@ -20,16 +20,7 @@ class Tea < Formula
 
   def install
     system "go", "build", *std_go_args(ldflags: "-s -w -X main.Version=#{version}")
-    bash_completion.install "contrib/autocomplete.sh" => "tea"
-    zsh_completion.install "contrib/autocomplete.zsh" => "_tea"
-
-    system bin/"tea", "shellcompletion", "fish"
-
-    if OS.mac?
-      fish_completion.install "#{Dir.home}/Library/Application Support/fish/conf.d/tea_completion.fish" => "tea.fish"
-    else
-      fish_completion.install "#{Dir.home}/.config/fish/conf.d/tea_completion.fish" => "tea.fish"
-    end
+    generate_completions_from_executable(bin/"tea", "completion")
   end
 
   test do

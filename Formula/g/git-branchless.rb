@@ -27,13 +27,13 @@ class GitBranchless < Formula
   no_autobump! because: :requires_manual_review
 
   bottle do
-    sha256 cellar: :any,                 arm64_sequoia: "3efab33fd1452f9b179eb701f2f0b3ad59b836245d6466172a5ce5bacd54bb78"
-    sha256 cellar: :any,                 arm64_sonoma:  "f3713da56ed61e4ba98216df90e57bde5dba088d9d54cc48b396e42bda4e87b7"
-    sha256 cellar: :any,                 arm64_ventura: "916640be323bdacc4fd0ad5ed2803cb1a4584d52ada450ae97b26b400c9abde6"
-    sha256 cellar: :any,                 sonoma:        "17d8fa92649b7b75f85551251c4bdea543489247b14292b31f02696aea408222"
-    sha256 cellar: :any,                 ventura:       "ae5923a733959106c2f4de98cf3c069d736af1f644991abb4355ab2bb72d12df"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "1910e0339bf1ef3e04848b49becde5b03556c1e2c6c511f47c998f8ba7efa9b5"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "246ff33a6a9007356ee52818e9ac3697cec0d8b8a173987870a9a0b7577b1b4a"
+    rebuild 1
+    sha256 cellar: :any,                 arm64_tahoe:   "f80d2b33570eb37e0d36b7e6d8008b867367c866a4811776040e494d7aafce7b"
+    sha256 cellar: :any,                 arm64_sequoia: "c437b66e24387f64d6f01db4a5a9b10abb6c2f50eabc9676431c6155fbb115f0"
+    sha256 cellar: :any,                 arm64_sonoma:  "82979920aabde9e15b626facd21ccace5d30c61a9f72a334567fbcbce5788cd8"
+    sha256 cellar: :any,                 sonoma:        "14d54ce7c0637768fa4acb4adaa7c834fb48bcb53dc99a6008a9ebd799745f35"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "11c168af51844af0bbc325a0d7f3d56952eb386084e2ded11c4b64354a656b86"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "e33664c6b9a58a86309ab4a9ec2799597a606d2592c9977e550e1057169f66cc"
   end
 
   depends_on "pkgconf" => :build

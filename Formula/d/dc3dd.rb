@@ -40,6 +40,13 @@ class Dc3dd < Formula
       system "make", "install"
     end
 
+    # Fix to error: call to undeclared function 'strtod_l';
+    if OS.mac? && DevelopmentTools.clang_build_version >= 1700
+      inreplace "lib/c-strtod.c",
+                "#include <stdlib.h>",
+                "#include <stdlib.h>\n#include <xlocale.h>"
+    end
+
     # Fixes error: 'Illegal instruction: 4'; '%n used in a non-immutable format string' on 10.13
     # Patch comes from gnulib upstream (see https://sourceforge.net/p/dc3dd/bugs/17/)
     inreplace "lib/vasnprintf.c",

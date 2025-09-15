@@ -9,6 +9,7 @@ class ReattachToUserNamespace < Formula
   no_autobump! because: :requires_manual_review
 
   bottle do
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:    "33e476a85796e31103b568becc52eacb83185bc9cd763cde17d4cf1cc8ef7198"
     sha256 cellar: :any_skip_relocation, arm64_sequoia:  "cd39282391ec191e5421c47cf7dbc9c7c4a58ac1cf271d09b453d49e0068b3fb"
     sha256 cellar: :any_skip_relocation, arm64_sonoma:   "1c946e781c18777b2156251b59a44f1db80cd39d59c18dce460011a0176566b7"
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "ff12e77b3cfc11ea931010a16a2c1a1ffb4bd893b6644f29966507fcdbe02b8c"

@@ -3,8 +3,8 @@ class Omnara < Formula
 
   desc "Talk to Your AI Agents from Anywhere"
   homepage "https://omnara.com/"
-  url "https://files.pythonhosted.org/packages/d1/a5/a96baf161ea346b6742645da3c685cdbedd7d45c039fb2db7473936fdc7e/omnara-1.6.14.tar.gz"
-  sha256 "43ee625e56ce15395de896eb51562618f08943b7eef0afc6d1fab3b72f6c30d4"
+  url "https://files.pythonhosted.org/packages/d6/a7/174dd66fdd5817c70b367e9e1cd56861e45169e7f9ac9961ef7ed04c5224/omnara-1.6.15.tar.gz"
+  sha256 "fac2e6c5f6acccbb9d05b2acf0cf459e864b7f9b470b7499ba18cd1a2a27005b"
   license "Apache-2.0"
 
   bottle do
@@ -64,8 +64,8 @@ class Omnara < Formula
   end
 
   resource "claude-code-sdk" do
-    url "https://files.pythonhosted.org/packages/5b/51/ed3bdf0e316c6df2938fae41b914d45f7f5e486053aca99e59d452b0c2d7/claude_code_sdk-0.0.21.tar.gz"
-    sha256 "780759353fddb547df1db5df30ea8e5a891f6a8a7b78bd8b52bea9c5f45038ad"
+    url "https://files.pythonhosted.org/packages/17/f4/18af88204c4090be0a852a73e528177482f4b9c88e6c58708eb3aa09fd22/claude_code_sdk-0.0.22.tar.gz"
+    sha256 "67dc234fcd3454fd0e229621df6ae1265e5efdeac8f94c840f55b9ffa6699853"
   end
 
   resource "click" do
@@ -109,8 +109,8 @@ class Omnara < Formula
   end
 
   resource "fastmcp" do
-    url "https://files.pythonhosted.org/packages/35/8a/c46759bb41a53187191e5b3d963c0bde54783ecc89186a93c4947607b8e4/fastmcp-2.12.2.tar.gz"
-    sha256 "6d13e2f9be57b99763fc22485f9f603daa23bfbca35a8172baa43b283d6fc1ff"
+    url "https://files.pythonhosted.org/packages/99/5e/035fdfa23646de8811776cd62d93440e334e8a4557b35c63c1bff125c08c/fastmcp-2.12.3.tar.gz"
+    sha256 "541dd569d5b6c083140b04d997ba3dc47f7c10695cee700d0a733ce63b20bb65"
   end
 
   resource "frozenlist" do
@@ -234,8 +234,8 @@ class Omnara < Formula
   end
 
   resource "pydantic" do
-    url "https://files.pythonhosted.org/packages/00/dd/4325abf92c39ba8623b5af936ddb36ffcfe0beae70405d456ab1fb2f5b8c/pydantic-2.11.7.tar.gz"
-    sha256 "d989c3c6cb79469287b1569f7447a17848c998458d49ebe294e975b9baf0f0db"
+    url "https://files.pythonhosted.org/packages/ff/5d/09a551ba512d7ca404d785072700d3f6727a02f6f3c24ecfd081c7cf0aa8/pydantic-2.11.9.tar.gz"
+    sha256 "6b8ffda597a14812a7975c90b82a8a2e777d9257aba3453f973acd3c032a18e2"
   end
 
   resource "pydantic-core" do

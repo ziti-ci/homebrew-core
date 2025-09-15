@@ -14,6 +14,7 @@ class Minimodem < Formula
   no_autobump! because: :requires_manual_review
 
   bottle do
+    sha256 cellar: :any,                 arm64_tahoe:    "733a179f707e522c3b44c603a5fddfc616d22a4c94dc0a721f76f000c3499a66"
     sha256 cellar: :any,                 arm64_sequoia:  "4bf7e151ffff1de41f8ce86bab303b7afb6e40b0f5417fdfada6a73fe633b6d6"
     sha256 cellar: :any,                 arm64_sonoma:   "8e4dc030caca81ca64460297f68f5f4d03d51a9836b4e9b7da4b30c63a9f3d89"
     sha256 cellar: :any,                 arm64_ventura:  "c3b2dedf19a1253a4e9b5eef4ae278875eda2759f82c8ec9d503ead44ce0fcd2"

@@ -1,17 +1,17 @@
 class Juliaup < Formula
   desc "Julia installer and version multiplexer"
   homepage "https://github.com/JuliaLang/juliaup"
-  url "https://github.com/JuliaLang/juliaup/archive/refs/tags/v1.17.19.tar.gz"
-  sha256 "5bcc9d9145e0d60d47aace5104805f6a21cab75ba19d8cfda88e1b7573291c7e"
+  url "https://github.com/JuliaLang/juliaup/archive/refs/tags/v1.18.0.tar.gz"
+  sha256 "11bb74282b93f5b335b72127e3c3bae74b0e2e026d153f12edd197e973be2b99"
   license "MIT"
-  head "https://github.com/JuliaLang/juliaup.git", branch: "master"
+  head "https://github.com/JuliaLang/juliaup.git", branch: "main"
 
   livecheck do
     url :stable
     strategy :github_latest
   end
 
-  no_autobump! because: :requires_manual_review
+  no_autobump! because: :bumped_by_upstream
 
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_tahoe:   "f8afa800195e627070cda37d8f2832784e6c6e2e712b445ee317baad1a668831"

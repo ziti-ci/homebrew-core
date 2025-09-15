@@ -31,6 +31,13 @@ class Premake < Formula
     # upstream issue, https://github.com/premake/premake-core/issues/2092
     ENV.append_to_cflags "-Wno-implicit-function-declaration" if DevelopmentTools.clang_build_version >= 1403
 
+    # Fix to avoid fdopen() redefinition for vendored `zlib`
+    if OS.mac? && DevelopmentTools.clang_build_version >= 1700
+      inreplace "contrib/zlib/zutil.h",
+                "#        define fdopen(fd,mode) NULL /* No fdopen() */",
+                "#if !defined(__APPLE__)\n#  define fdopen(fd,mode) NULL /* No fdopen() */\n#endif"
+    end
+
     platform = OS.mac? ? "osx" : "linux"
     system "make", "-f", "Bootstrap.mak", platform
     system "./bin/release/premake5", "gmake2"

@@ -8,6 +8,7 @@ class Sampler < Formula
   no_autobump! because: :requires_manual_review
 
   bottle do
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:    "aca2f9375a5efc43bcd98549ac7d7ba6becd88a86ba41b5791b9d751260d0616"
     sha256 cellar: :any_skip_relocation, arm64_sequoia:  "2e9165271f6debe06db6e23f46c13a13b603924e65597f85bb428a1b27780ee1"
     sha256 cellar: :any_skip_relocation, arm64_sonoma:   "0122ac71d3af643458faa2633740d3fd8256bd943ae7d212a6397ce9ff6f39a6"
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "ae4392df3f779677167dde63083627a60da11e80c1afac173f5ae67bd4e1f495"

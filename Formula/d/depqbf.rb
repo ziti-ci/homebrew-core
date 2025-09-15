@@ -9,6 +9,7 @@ class Depqbf < Formula
   no_autobump! because: :requires_manual_review
 
   bottle do
+    sha256 cellar: :any,                 arm64_tahoe:    "5494cf1ffc209c33da83751528490bb7b8324e9cfde890d66231916ffa9c9eb9"
     sha256 cellar: :any,                 arm64_sequoia:  "77fb774ec31c1de16c6136751d66b3cb04d9a7bf0e2fb8c4e51a56db412310c4"
     sha256 cellar: :any,                 arm64_sonoma:   "dce4afe9355597c29c7656a5fcdda35983fe58b95ae72e966a6967a0360dd9d1"
     sha256 cellar: :any,                 arm64_ventura:  "221268b1bc924d55e1f8f3554b85f4ae91475792834f699217b03cce46ea63a3"

@@ -52,6 +52,9 @@ class Dirac < Formula
     # BSD cp doesn't have '-d'
     inreplace "doc/Makefile.in", "cp -dR", "cp -R"
 
+    # Workaround for newer Clang
+    ENV.append_to_cflags "-Wno-c++11-narrowing" if DevelopmentTools.clang_build_version >= 1700
+
     args = []
     # Help old config scripts identify arm64 linux
     args << "--build=aarch64-unknown-linux-gnu" if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?

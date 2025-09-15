@@ -21,14 +21,12 @@ class VulkanTools < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_tahoe:   "5a89af679c9a0904b620d61747954b016ef64533f7caf51b08d6938c59b67b9a"
-    sha256 cellar: :any,                 arm64_sequoia: "d5c179bdcd11cb77ef5f3506c504587ed2bd69bae4acac1983dbf1f90587708d"
-    sha256 cellar: :any,                 arm64_sonoma:  "0474cb9353bef73ea16ff4939edc8eff6acb7ff300be4f2c56b7aaea79b236b3"
-    sha256 cellar: :any,                 arm64_ventura: "78760f112086969f24d23ee185129e1ede37eaa4c491749edcd90b53641a1a7c"
-    sha256 cellar: :any,                 sonoma:        "75286ff95c2427d13fe8ba0bcd49afb92164cd97a3d4f1c9e7fa7b1ae71efab7"
-    sha256 cellar: :any,                 ventura:       "5b53f8c0b0355f95e5d813ef4e78770d3d51833bc1c06b35638424324bf77668"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "4c24978d757039ead39e491d22462a175a2650d7a10d458e4eec6bc464ad093e"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "f9ba847f234d4f2201c0e2fea929c9e49f3b070f1da1201f602e3a7cc1e5aa80"
+    sha256                               arm64_tahoe:   "e9da1e5a385d850e7ae896ccf7f7962444b6e1656300811c8b3ff37d4ea93f52"
+    sha256                               arm64_sequoia: "f8feeeba6366b86abf824fffda14ae21eb7c816505c59183df9e51c61d08e90d"
+    sha256                               arm64_sonoma:  "ee770f9a8f1c75ae812e4bab51923112fb2120a62e9e454ee0d08a5bf6b39484"
+    sha256 cellar: :any,                 sonoma:        "ec203cd8674170349b6aa10e48a954105c50167d6223a7a3f9c44a098df67524"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "4f313e99bf76d1562156644ec78047163a4dd264efb4c1fd359effb1c87449dd"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "e745a8b95d4ff0b2e8bc0981fcfae77bad7c39aae256cc9ebe009f33d2e8fdc0"
   end
 
   depends_on "cmake" => :build

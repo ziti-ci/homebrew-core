@@ -14,6 +14,7 @@ class Writerperfect < Formula
 
   bottle do
     rebuild 1
+    sha256 cellar: :any,                 arm64_tahoe:    "019f7df6196f57ac72fef8f42879191724bbd71243f5d55df485b5aa7b583eec"
     sha256 cellar: :any,                 arm64_sequoia:  "1bcef69c7269aac0ca31db30c82ca222f1ae0a9a9d4e19cb55d3bd7f28974327"
     sha256 cellar: :any,                 arm64_sonoma:   "ed3b788e7dfc919303efa063cf9a46553e132339c36016af524e4b5e021f6ec8"
     sha256 cellar: :any,                 arm64_ventura:  "27bbb6aa97e00bc78675eebde04a4b08754fca44b466df2f1c8dda4180293c6c"

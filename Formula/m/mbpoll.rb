@@ -22,6 +22,13 @@ class Mbpoll < Formula
   depends_on "pkgconf" => :build
   depends_on "libmodbus"
 
+  # Workaround for CMake 4 compatibility
+  # PR ref: https://github.com/epsilonrt/mbpoll/pull/95
+  patch do
+    url "https://github.com/epsilonrt/mbpoll/commit/baad0efca89f0d8fe370591283d87a6e8e7dee4c.patch?full_index=1"
+    sha256 "75cb9265a30218159d11e6dbda81aa17484d96721f71e22072639d490a7f95d2"
+  end
+
   def install
     system "cmake", "-S", ".", "-B", "build", *std_cmake_args
     system "cmake", "--build", "build"

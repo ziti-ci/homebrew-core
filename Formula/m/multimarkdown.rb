@@ -9,6 +9,7 @@ class Multimarkdown < Formula
   no_autobump! because: :requires_manual_review
 
   bottle do
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:    "bb4f39ee0e9e4ab40f4ce5c8e5aa5d57ef8739035769400d0c5b8ea17d0f0661"
     sha256 cellar: :any_skip_relocation, arm64_sequoia:  "eea3968401cd2eca776486368efbf1572da6dee6bb9cf5c5396448f0da811578"
     sha256 cellar: :any_skip_relocation, arm64_sonoma:   "f04dd2552dc7725620fc3e64e6b803652c0510e20e33242f4bd00bbde327ea74"
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "d889681d3fd0ed644c4a80e951aed473b5ad9d26256e7e8f2f1922d0f2673b15"

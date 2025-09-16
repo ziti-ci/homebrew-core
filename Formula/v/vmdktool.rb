@@ -13,6 +13,7 @@ class Vmdktool < Formula
   no_autobump! because: :requires_manual_review
 
   bottle do
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:    "3db3ea9bea6a9a99403953ee3d75c7d9d8a35662c6a4d75ea972cc0400b0c440"
     sha256 cellar: :any_skip_relocation, arm64_sequoia:  "d87c022cf0446ab70cc9a23de9548969cf6cab3d276a11990456db9e2ba69e31"
     sha256 cellar: :any_skip_relocation, arm64_sonoma:   "f33e91edf4a6492ba75404b0b6ef39e7cc3075eb170f135724aa8db9db1476d3"
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "1a9371495c777605438ae7e124289e79bc22fc0c546b230046cd9e7010ca5d52"

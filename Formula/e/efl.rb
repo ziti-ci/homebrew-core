@@ -11,6 +11,7 @@ class Efl < Formula
   end
 
   bottle do
+    sha256 arm64_tahoe:   "acf90be6429afc82b654e0ae3a9ce93fb59ccfaa1defff2818ee8bf7d4ec8c4b"
     sha256 arm64_sequoia: "08c3174445bc5f78a9c46cfdf4d73b59a1c75978f6a6a203076a418b77241f77"
     sha256 arm64_sonoma:  "e49c3a736f6e9ecda80831e0939fe3f9249f3f99299ac5533e13e9cd871163a5"
     sha256 arm64_ventura: "1ba80183f196e5a7270c7aeb0278eded8f11e0a06c3c1379f10bb2b78e7aa05b"

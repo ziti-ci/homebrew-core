@@ -1,15 +1,14 @@
 class Ppl < Formula
   desc "Parma Polyhedra Library: numerical abstractions for analysis, verification"
   homepage "https://www.bugseng.com/ppl"
-  url "https://www.bugseng.com/products/ppl/download/ftp/releases/1.2/ppl-1.2.tar.xz"
-  mirror "https://deb.debian.org/debian/pool/main/p/ppl/ppl_1.2.orig.tar.xz"
+  url "https://deb.debian.org/debian/pool/main/p/ppl/ppl_1.2.orig.tar.xz"
   sha256 "691f0d5a4fb0e206f4e132fc9132c71d6e33cdda168470d40ac3cf62340e9a60"
   license "GPL-3.0-or-later"
   revision 1
 
   livecheck do
-    url "https://www.bugseng.com/content/ppl-download"
-    regex(/href=.*?ppl[._-]v?(\d+(?:\.\d+)+)\.t/i)
+    url "https://deb.debian.org/debian/pool/main/p/ppl/"
+    regex(/href=.*?ppl[._-]v?(\d+(?:\.\d+)+)\.orig\.t/i)
   end
 
   no_autobump! because: :requires_manual_review

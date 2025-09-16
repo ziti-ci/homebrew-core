@@ -22,7 +22,8 @@ class PdftkJava < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "87b00258f2f947e48b44b821179d569babbe5d0ad5ffa2728f7e56085cfccc4f"
   end
 
-  depends_on "gradle" => :build
+  # Issue ref: https://gitlab.com/pdftk-java/pdftk/-/issues/182
+  depends_on "gradle@8" => :build
   depends_on "openjdk"
 
   def install

@@ -30,13 +30,11 @@ class Julia < Formula
   end
 
   bottle do
-    sha256                               arm64_tahoe:   "32e63aa0601dbf04d95979398c5de3f4dc7336b3900e7d6ccd972924dc223b4f"
-    sha256 cellar: :any,                 arm64_sequoia: "0b0383a975eb655862d9ce049595e3e0862f0def36f985f219f72256c72d9d11"
-    sha256 cellar: :any,                 arm64_sonoma:  "b254d61d5a1cb1ee5388c8efe2f98c29cc2baafa19fc9d3e5c9d1286e269a88c"
-    sha256                               arm64_ventura: "1e1ff07e37ff59d0a35201bf34302a7276839f149004fea472f9c63739c20f81"
-    sha256 cellar: :any,                 sonoma:        "df8d978b084838485e24e5fd0894ee8968f3ab04dc964c39f7d81722758ab425"
-    sha256 cellar: :any,                 ventura:       "ba39de3ea6e7eb95ccccf3d3148e09f2f8af9f299f8321bc933e2e0151f98e88"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "afaf2efaa803943c6fc2fe79a419f69a91310d6b38a4367688784ac72ac27884"
+    sha256 cellar: :any,                 arm64_tahoe:   "fb582d9c142ccf0da3df893ef1e016c625824d437679c304aa7fe1a2000be55f"
+    sha256 cellar: :any,                 arm64_sequoia: "45156adbcc7c656297d0851375f6a25f6febf0e78b326fdc1d8d3f16fbb6b805"
+    sha256 cellar: :any,                 arm64_sonoma:  "f164a321b89bc16fac716690a038f3996fffbcfb77b4414e154adcde45014eb0"
+    sha256 cellar: :any,                 sonoma:        "415636e439a802095bb9c3e985a6a76782cdbbca55b7afeebfa58d012a2c62c0"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "6def84d8655c4bdd4d26cd77ca5269bfea6814700cda6b52ac24ea1a77170333"
   end
 
   head do

@@ -1,8 +1,8 @@
 class TofuLs < Formula
   desc "OpenTofu Language Server"
   homepage "https://github.com/opentofu/tofu-ls"
-  url "https://github.com/opentofu/tofu-ls/archive/refs/tags/v0.1.0.tar.gz"
-  sha256 "aac34c4a0c3b6e096f5255060bd07cf3c7b0e2f70f0d648fb8409102d279c04c"
+  url "https://github.com/opentofu/tofu-ls/archive/refs/tags/v0.1.1.tar.gz"
+  sha256 "d0bc52c62ff64d69180f34d3afd3af2c1662fb2abfd7b2501c20aacd9ec0ba36"
   license "MPL-2.0"
   head "https://github.com/opentofu/tofu-ls.git", branch: "main"
 

@@ -28,6 +28,13 @@ class Mp3blaster < Formula
   uses_from_macos "ncurses"
 
   def install
+    if DevelopmentTools.clang_build_version >= 1700
+      # Fix to error: constant expression evaluates to -1 which cannot be narrowed to type 'unsigned int'
+      ENV.append_to_cflags "-Wno-c++11-narrowing"
+      # Fix to error: :invalid suffix on literal; C++11 requires a space between literal and identifier
+      ENV.append_to_cflags "-Wno-reserved-user-defined-literal"
+    end
+
     system "./configure", "--disable-debug",
                           "--disable-dependency-tracking",
                           "--disable-silent-rules",

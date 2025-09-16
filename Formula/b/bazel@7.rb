@@ -39,6 +39,13 @@ class BazelAT7 < Formula
     end
   end
 
+  # Fix to avoid fdopen() redefinition for vendored `zlib`
+  # PR ref: https://github.com/bazelbuild/bazel/pull/26956
+  patch do
+    url "https://github.com/bazelbuild/bazel/commit/0d4c2130e356923849033c85d1d31c17372ce8f2.patch?full_index=1"
+    sha256 "6196b60c916e0152eefbc79249758675a860b51c84a6dfd258e83b1698664067"
+  end
+
   def bazel_real
     libexec/"bin/bazel-real"
   end

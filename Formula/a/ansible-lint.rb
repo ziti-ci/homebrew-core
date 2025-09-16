@@ -3,10 +3,9 @@ class AnsibleLint < Formula
 
   desc "Checks ansible playbooks for practices and behaviour"
   homepage "https://ansible-lint.readthedocs.io/"
-  url "https://files.pythonhosted.org/packages/60/93/2c344f3eeaf15fee5ee99a30ebe77f316a65f09d290034e4290fdb114cb4/ansible_lint-25.8.2.tar.gz"
-  sha256 "35dd3ddd12d8063876915bf2f06b9a1b80fd27a7cb1ca4ce51c8cebb84690922"
+  url "https://files.pythonhosted.org/packages/06/9e/8a86c0b05a05c3a2c8690eb5fcd4b3c248c821a45f595fa0e7565ac1e048/ansible_lint-25.9.0.tar.gz"
+  sha256 "b8fe138a1257c6e58a755febd726b3186820f6dcb23a5bb062538c939a7277bb"
   license all_of: ["MIT", "GPL-3.0-or-later"]
-  revision 1
 
   bottle do
     sha256 cellar: :any,                 arm64_tahoe:   "8070ccf4cf7660b191e9d35bb49c5aaf3134a3cbdba2b808c994b99ae642ba05"
@@ -54,6 +53,11 @@ class AnsibleLint < Formula
   resource "click" do
     url "https://files.pythonhosted.org/packages/60/6c/8ca2efa64cf75a977a0d7fac081354553ebe483345c734fb6b6515d96bbc/click-8.2.1.tar.gz"
     sha256 "27c491cc05d968d271d5a1db13e3b5a184636d9d930f148c50b038f0d0646202"
+  end
+
+  resource "distro" do
+    url "https://files.pythonhosted.org/packages/fc/f8/98eea607f65de6527f8a2e8885fc8015d3e6f5775df186e443e0964a11c3/distro-1.9.0.tar.gz"
+    sha256 "2fa77c6fd8940f116ee1d6b94a2f90b13b5ea8d019b98bc8bafdcabcdd9bdbed"
   end
 
   resource "filelock" do

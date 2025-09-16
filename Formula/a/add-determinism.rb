@@ -1,8 +1,8 @@
 class AddDeterminism < Formula
   desc "Build postprocessor to reset metadata fields for build reproducibility"
   homepage "https://github.com/keszybz/add-determinism"
-  url "https://github.com/keszybz/add-determinism/archive/refs/tags/v0.7.1.tar.gz"
-  sha256 "20995b79d8bef3238e480f23e7a9b248ef3526a67b1b28b89e57954ed2999560"
+  url "https://github.com/keszybz/add-determinism/archive/refs/tags/v0.7.2.tar.gz"
+  sha256 "232c4f9fdc482dee5e6d38ef45a2c983b88283fe23d6ff4bcb26164b4c9a2dcb"
   license "GPL-3.0-or-later"
 
   bottle do

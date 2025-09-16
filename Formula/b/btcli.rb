@@ -3,8 +3,8 @@ class Btcli < Formula
 
   desc "Bittensor command-line tool"
   homepage "https://docs.bittensor.com/btcli"
-  url "https://files.pythonhosted.org/packages/aa/64/cf95f11a3acd840b1ef37604476bc77f159bd3eb516aedf8227bfa2cd59a/bittensor_cli-9.11.0.tar.gz"
-  sha256 "0664a8e1982bd507cac80d1da210176ee066ad048b4c191878afa62bf1b63013"
+  url "https://files.pythonhosted.org/packages/9e/d1/c1e5ef51ff2655ad2cffb2d4bb27286aca1b91366fcd31ddc0df0297970c/bittensor_cli-9.11.1.tar.gz"
+  sha256 "41c7c25e5a344e08bdd638bbaf8285349fa90df39d2614271f7cc97f504e8ea9"
   license "MIT"
   head "https://github.com/opentensor/btcli.git", branch: "main"
 
@@ -50,8 +50,8 @@ class Btcli < Formula
   end
 
   resource "async-substrate-interface" do
-    url "https://files.pythonhosted.org/packages/93/f9/29a26c144b5c2f02b9e27899980e7370602e4f7820c71c2d9418fd17cfd9/async_substrate_interface-1.5.2.tar.gz"
-    sha256 "8d763550f691eed99f351daebba25001201171965a358f47efb3ea122228bf68"
+    url "https://files.pythonhosted.org/packages/aa/22/df5fbdae7bc865bc219aa40a0ad80f554dbf771a2ce19b0334a34c00e9ee/async_substrate_interface-1.5.3.tar.gz"
+    sha256 "6c677bb2599532385afc2f8471bc7d8f7e23d5436b2f32111a01b2df10d25dff"
   end
 
   resource "attrs" do
@@ -140,8 +140,8 @@ class Btcli < Formula
   end
 
   resource "narwhals" do
-    url "https://files.pythonhosted.org/packages/ec/8f/b0a99455f6e5fe2d4e77deeee8b133cfa06e1f5441c77a70defdbbfbf639/narwhals-2.4.0.tar.gz"
-    sha256 "a71931f7fb3c8e082cbe18ef0740644d87d60eba841ddfa9ba9394de1d43062f"
+    url "https://files.pythonhosted.org/packages/7b/b8/3cb005704866f1cc19e8d6b15d0467255821ba12d82f20ea15912672e54c/narwhals-2.5.0.tar.gz"
+    sha256 "8ae0b6f39597f14c0dc52afc98949d6f8be89b5af402d2d98101d2f7d3561418"
   end
 
   resource "netaddr" do

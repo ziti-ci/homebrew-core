@@ -9,6 +9,7 @@ class Samurai < Formula
   no_autobump! because: :requires_manual_review
 
   bottle do
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:    "3cbfa0ba7e77472c117829bb5cd8dba6022f219beb688070730e10958908c85a"
     sha256 cellar: :any_skip_relocation, arm64_sequoia:  "5dbf52962ed4a4191d77edd3b9970621f5f543ed42eb64d85673f7bc572f0a01"
     sha256 cellar: :any_skip_relocation, arm64_sonoma:   "e254250616b85e30cde7a66f55af5bde58657622a82fab525e92ed2a6f8220cc"
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "ef30fe2e4abb74c2d10c8465629b2f53238bad713d5f9f11a29edbeef4a3906f"

@@ -1,16 +1,10 @@
 class Rtmidi < Formula
   desc "API for realtime MIDI input/output"
-  homepage "https://www.music.mcgill.ca/~gary/rtmidi/"
-  url "https://www.music.mcgill.ca/~gary/rtmidi/release/rtmidi-6.0.0.tar.gz"
-  sha256 "5960ccf64b42c23400720ccc880e2f205677ce9457f747ef758b598acd64db5b"
+  homepage "https://github.com/thestk/rtmidi"
+  url "https://github.com/thestk/rtmidi/archive/refs/tags/6.0.0.tar.gz"
+  sha256 "ef7bcda27fee6936b651c29ebe9544c74959d0b1583b716ce80a1c6fea7617f0"
   license "MIT"
-
-  livecheck do
-    url :homepage
-    regex(/href=.*?rtmidi[._-]v?(\d+(?:\.\d+)+)\.t/i)
-  end
-
-  no_autobump! because: :requires_manual_review
+  head "https://github.com/thestk/rtmidi.git", branch: "master"
 
   bottle do
     rebuild 1
@@ -25,13 +19,9 @@ class Rtmidi < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "0fff0e784b8a8779f1b8096e51b4d812d0190f7248c1fdf9ec75c5fe13c11b29"
   end
 
-  head do
-    url "https://github.com/thestk/rtmidi.git", branch: "master"
-
-    depends_on "autoconf" => :build
-    depends_on "automake" => :build
-    depends_on "libtool" => :build
-  end
+  depends_on "autoconf" => :build
+  depends_on "automake" => :build
+  depends_on "libtool" => :build
 
   on_linux do
     depends_on "alsa-lib"
@@ -40,10 +30,9 @@ class Rtmidi < Formula
 
   def install
     ENV.cxx11
-    system "./autogen.sh", "--no-configure" if build.head?
+    system "./autogen.sh", "--no-configure"
     system "./configure", *std_configure_args
     system "make", "install"
-    doc.install %w[doc/release.txt doc/html doc/images] if build.stable?
   end
 
   test do

@@ -9,6 +9,7 @@ class Mp3blaster < Formula
   no_autobump! because: :requires_manual_review
 
   bottle do
+    sha256 arm64_tahoe:    "2cbfef0efe3e24570f47c861959ab0cd66697709e878f9fc29525b8b25ce703e"
     sha256 arm64_sequoia:  "63db46a60c041370f9850800c5db80e4aae38d3bf3f2320cbbfcc03e5bffa2d5"
     sha256 arm64_sonoma:   "8ead649ae9cf1daec1f1c2d15c527c9beb9b51039668fed085857a33e83f7cae"
     sha256 arm64_ventura:  "301c45f8598765fdfacdbd773046f77406714c334946c6778cf7334b18004dbb"

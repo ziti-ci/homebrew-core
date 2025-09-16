@@ -6,6 +6,7 @@ class MarpCli < Formula
   license "MIT"
 
   bottle do
+    sha256 cellar: :any,                 arm64_tahoe:   "7af2e65036c931e145ac5239ceb623be4c743d0304fb30845d4299bdcce010af"
     sha256 cellar: :any,                 arm64_sequoia: "afe20fa2d2bc1e72cab303a06aa1764a261b3f277af69754c2fbb364e8c0f682"
     sha256 cellar: :any,                 arm64_sonoma:  "afe20fa2d2bc1e72cab303a06aa1764a261b3f277af69754c2fbb364e8c0f682"
     sha256 cellar: :any,                 arm64_ventura: "afe20fa2d2bc1e72cab303a06aa1764a261b3f277af69754c2fbb364e8c0f682"

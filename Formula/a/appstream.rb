@@ -1,8 +1,8 @@
 class Appstream < Formula
   desc "Tools and libraries to work with AppStream metadata"
   homepage "https://www.freedesktop.org/wiki/Distributions/AppStream/"
-  url "https://github.com/ximion/appstream/archive/refs/tags/v1.0.6.tar.gz"
-  sha256 "3289568eeaaa84365dcfc8a6be2b547a9abe05cec6d3f08b62f39e832a6e7cb9"
+  url "https://github.com/ximion/appstream/archive/refs/tags/v1.1.0.tar.gz"
+  sha256 "4dd509614470b7e82695f46c8072bee603fbe6a260c2b74794af03204e4dfb8f"
   license "LGPL-2.1-or-later"
 
   bottle do
@@ -25,8 +25,8 @@ class Appstream < Formula
   depends_on "vala" => :build
 
   depends_on "glib"
+  depends_on "libfyaml"
   depends_on "libxmlb"
-  depends_on "libyaml"
   depends_on "zstd"
 
   uses_from_macos "libxslt" => :build # for xsltproc

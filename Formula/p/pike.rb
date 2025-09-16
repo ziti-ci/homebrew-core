@@ -52,6 +52,9 @@ class Pike < Formula
     # Reported upstream here: https://git.lysator.liu.se/pikelang/pike/-/issues/10082.
     ENV.prepend_path "PATH", Formula["gnu-sed"].libexec/"gnubin" if OS.mac?
 
+    # clang: error: unsupported option '-mrdrnd' for target 'arm64-apple-darwin25.0.0'
+    ENV["pike_cv_option_opt_rdrnd"] = "no" if Hardware::CPU.arm?
+
     configure_args = %W[
       --prefix=#{libexec}
       --with-abi=64

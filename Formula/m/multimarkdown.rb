@@ -28,6 +28,12 @@ class Multimarkdown < Formula
   conflicts_with "markdown", because: "both install `markdown` binaries"
   conflicts_with "discount", because: "both install `markdown` binaries"
 
+  # Workaround for CMake 4 compatibility
+  patch do
+    url "https://github.com/fletcher/MultiMarkdown-6/commit/655c0908155758e7c94858af2fb99dc992709075.patch?full_index=1"
+    sha256 "1ca4b7ea07c19981685786f8f469aad9c9d0d6af8394bc9d3b92608de929495c"
+  end
+
   def install
     system "cmake", "-S", ".", "-B", "build", *std_cmake_args
     system "cmake", "--build", "build"

@@ -1,8 +1,8 @@
 class InotifyTools < Formula
   desc "C library and command-line programs providing a simple interface to inotify"
   homepage "https://github.com/inotify-tools/inotify-tools"
-  url "https://github.com/inotify-tools/inotify-tools/archive/refs/tags/4.23.9.0.tar.gz"
-  sha256 "1dfa33f80b6797ce2f6c01f454fd486d30be4dca1b0c5c2ea9ba3c30a5c39855"
+  url "https://github.com/inotify-tools/inotify-tools/archive/refs/tags/4.25.9.0.tar.gz"
+  sha256 "d33a4fd24c72c2d08893f129d724adf725b93dae96c359e4f4e9f32573cc853b"
   license "GPL-2.0-or-later"
 
   no_autobump! because: :requires_manual_review

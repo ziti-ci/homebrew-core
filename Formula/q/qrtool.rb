@@ -28,8 +28,8 @@ class Qrtool < Formula
 
     generate_completions_from_executable(bin/"qrtool", "completion", shells: [:bash, :zsh, :fish, :pwsh])
 
-    outdir = Dir["target/release/build/qrtool-*/out"].first
-    man1.install Dir["#{outdir}/*.1"]
+    system "asciidoctor", "-b", "manpage", "docs/man/man1/*.1.adoc"
+    man1.install Dir["docs/man/man1/*.1"]
   end
 
   test do

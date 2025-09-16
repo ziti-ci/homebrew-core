@@ -28,11 +28,14 @@ class Libtins < Formula
   uses_from_macos "libpcap"
 
   def install
-    system "cmake", "-S", ".", "-B", "build",
-                    "-DLIBTINS_BUILD_EXAMPLES=OFF",
-                    "-DLIBTINS_BUILD_TESTS=OFF",
-                    "-DLIBTINS_ENABLE_CXX11=ON",
-                    *std_cmake_args
+    args = %w[
+      -DLIBTINS_BUILD_EXAMPLES=OFF
+      -DLIBTINS_BUILD_TESTS=OFF
+      -DLIBTINS_ENABLE_CXX11=ON
+    ]
+    # Workaround to build with CMake 4
+    args << "-DCMAKE_POLICY_VERSION_MINIMUM=3.5"
+    system "cmake", "-S", ".", "-B", "build", *args, *std_cmake_args
     system "cmake", "--build", "build"
     system "cmake", "--install", "build"
   end

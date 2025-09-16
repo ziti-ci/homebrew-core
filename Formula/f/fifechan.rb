@@ -25,8 +25,6 @@ class Fifechan < Formula
     sha256 cellar: :any,                 monterey:       "d1bbc100bb520395b6298b89ac2b71b48cdfc7df30e526177340b0fec4b58500"
     sha256 cellar: :any,                 big_sur:        "9803b9f51bc0c0d368baaf0dfcf1bd1694426b1ed0fee2e247835b49fa62f3ec"
     sha256 cellar: :any,                 catalina:       "c0594d877411b0a33f2a37d0d3e2ca38a3d3dfd47797bf89aef9579bd2095dda"
-    sha256 cellar: :any,                 mojave:         "93491cce22fd712b86ec6f7af129107a596f2e736181354417c4d48c0c40b919"
-    sha256 cellar: :any,                 high_sierra:    "725c25c62dd609dd58d19c25b484398e9e68f19a9cb7aa3c1d1877b53ed9615a"
     sha256 cellar: :any_skip_relocation, arm64_linux:    "7150b47d24b6dbfa2fb82f3c0be8c976f029e98980d03d6826134ae22fe41d0a"
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "74a7a968d5242dfdcf05c0c35bd360770f87afe32adc6dbacb2850ff117f6d5a"
   end

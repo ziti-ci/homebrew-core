@@ -24,8 +24,6 @@ class Le < Formula
     sha256 monterey:       "3a776a4b3b24e8a3bac7d1669aecde9790e5bea72c116422af0c5795997c94d5"
     sha256 big_sur:        "5e783b96b482837243218a8c69f0bf5be7a7afa3ed19cb9950fc88342dd65e5a"
     sha256 catalina:       "704e7762fb13634aa7b2fe4cc271747894d8ffcf5028abd0d27497bceb6bc378"
-    sha256 mojave:         "aa1144661f13ab5fbe4eb132415da66785ab1b903c8d517df03f40826d08632f"
-    sha256 high_sierra:    "b6fad9458d040f9a47a0d3ff003ab5f77cdb9508a5b653c3cddc201cfb5310e2"
     sha256 arm64_linux:    "1141446f014f63ea9dc676cdc5a5244a6a4a9161f521ad8a8bae9e5d76b5d9f4"
     sha256 x86_64_linux:   "e51d99aa9b68a5ba6ec8fb1679f2dd79efd171d01a0921f268ad4247e41a50d4"
   end

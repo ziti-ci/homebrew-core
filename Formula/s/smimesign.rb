@@ -17,7 +17,6 @@ class Smimesign < Formula
     sha256 cellar: :any_skip_relocation, monterey:       "b94e7e56d2920ae7038bc1ad9a33adf1ad6cced39c896e9a15515abbc63a423f"
     sha256 cellar: :any_skip_relocation, big_sur:        "9781b5ecad25be5a9ef95fb714caedae7512af4d6a31be300b30c57fd17d1fb9"
     sha256 cellar: :any_skip_relocation, catalina:       "4a8f0b0a87417c22175a7cfa7c25583a3c71170b220d3cbc56b05786baa3227d"
-    sha256 cellar: :any_skip_relocation, mojave:         "146db9c5113009eb23612bdf240d47a8f539619be6e7d87025c43c5cde8eca82"
   end
 
   depends_on "go" => :build

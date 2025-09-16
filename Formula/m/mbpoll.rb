@@ -9,6 +9,7 @@ class Mbpoll < Formula
   no_autobump! because: :requires_manual_review
 
   bottle do
+    sha256 cellar: :any,                 arm64_tahoe:   "e9a8e9a61b04c4c4b18a0af7c86006612b40949b381fba4cd0342cb0cf073245"
     sha256 cellar: :any,                 arm64_sequoia: "f2e1b7cc1e13adec4be27c0786d6d58d8452981695981111b9fb5a27b4209672"
     sha256 cellar: :any,                 arm64_sonoma:  "38fed0cebc17a0f5b56f57c877ba9aedb7740f88ad49ec8b7ab20b75d46d451a"
     sha256 cellar: :any,                 arm64_ventura: "11ad727f1304188c6973eeb682de71cf60275cda1cc2055564454dcfa03eb264"

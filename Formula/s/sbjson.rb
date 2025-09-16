@@ -9,6 +9,7 @@ class Sbjson < Formula
   no_autobump! because: :requires_manual_review
 
   bottle do
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:    "454bec6b83f7734cc9b882e1270baedd9f23d798dde872de9ac6ec7c938bafb5"
     sha256 cellar: :any_skip_relocation, arm64_sequoia:  "217c356def1ddd0b9d9bc1d6bc12966315a41e7a10a029b39460b5becfd1521b"
     sha256 cellar: :any_skip_relocation, arm64_sonoma:   "2a4df626840987db1cc6e63599b28909887644147ecb2c76cff994a9cc2d26cd"
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "a9198287e6912393936ae4881bc483e6afcce1f9ae9665b561ae4edcbf7ef72e"

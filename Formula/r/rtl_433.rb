@@ -17,6 +17,7 @@ class Rtl433 < Formula
   end
 
   bottle do
+    sha256 cellar: :any,                 arm64_tahoe:   "9393179910f0f9f4fef924aadd7862b5ed72850d44dff3c4867b6da289fdd333"
     sha256 cellar: :any,                 arm64_sequoia: "cadc9ac43692b5342a8d9fd305bf36598ce8e8f9cbcf088f3b87e7117f569f4c"
     sha256 cellar: :any,                 arm64_sonoma:  "6e8b6406520ac6b02a6d5292ed085c377edc6214dd817e27850a91d1216883b0"
     sha256 cellar: :any,                 arm64_ventura: "ed54be9e72784603e4e6b1b7b1ae679f15ab03cf1ee92efa7c36151b40b81274"

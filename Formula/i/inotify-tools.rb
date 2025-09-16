@@ -8,9 +8,8 @@ class InotifyTools < Formula
   no_autobump! because: :requires_manual_review
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_linux:  "801e47d3b577a62bc15e16656cb20cfd09be683592513df4446b01ea875b82b1"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "c9a50d94145be77d8493bb7e2a8ee259784c209113e84b9ce5b1df586868f052"
+    sha256 cellar: :any_skip_relocation, arm64_linux:  "398790457297fce591badb0fc5315513fb73eab4757f4ff6430eff016e30124c"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "12f260b16fa1d829c38b346113f590a45260f3f75fb4d701a0c4fb35e11b054c"
   end
 
   depends_on "autoconf" => :build

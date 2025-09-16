@@ -6,6 +6,7 @@ class Nessie < Formula
   license "Apache-2.0"
 
   bottle do
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "43f89800354d7fb9ffe7eaa44fa807233ff2dfb57da811d64d0d12afda0f714d"
     sha256 cellar: :any_skip_relocation, arm64_sequoia: "387dadc061722271b0b03ac9a6bca67fd3d463cfbe0311c36429ba85d4755580"
     sha256 cellar: :any_skip_relocation, arm64_sonoma:  "b5c177b494c2ce982ccc4f40a2012d9683ee7c65edcd5516c5e4930c33603eb7"
     sha256 cellar: :any_skip_relocation, arm64_ventura: "db0a84e5e933afc9001e0f98a6bfc743b90d142637cbebf6e2fe2055d8446d92"

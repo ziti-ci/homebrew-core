@@ -7,15 +7,15 @@ class Ruby < Formula
   stable do
     # Consider changing the default of `Gem.default_user_install` to true with Ruby 3.5.
     # This may depend on https://github.com/rubygems/rubygems/issues/5682.
-    url "https://cache.ruby-lang.org/pub/ruby/3.4/ruby-3.4.5.tar.gz"
-    sha256 "1d88d8a27b442fdde4aa06dc99e86b0bbf0b288963d8433112dd5fac798fd5ee"
+    url "https://cache.ruby-lang.org/pub/ruby/3.4/ruby-3.4.6.tar.gz"
+    sha256 "e3c19ab9e8f41b3723124fbc0114cde7cbf55e65aa9c58c12acd89ec9c0dd1b9"
 
     # Should be updated only when Ruby is updated (if an update is available).
     # The exception is Rubygem security fixes, which mandate updating this
     # formula & the versioned equivalents and bumping the revisions.
     resource "rubygems" do
-      url "https://rubygems.org/rubygems/rubygems-3.6.9.tgz"
-      sha256 "ffdd46c6adbecb9dac561cc003666406efd2ed93ca21b5fcc47062025007209d"
+      url "https://rubygems.org/rubygems/rubygems-3.7.2.tgz"
+      sha256 "efece01225a532f4b52cf8764d20a00e0d29ed6f85b33d9302df4896a90fa5ab"
 
       livecheck do
         url "https://rubygems.org/pages/download"

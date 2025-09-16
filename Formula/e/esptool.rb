@@ -8,14 +8,12 @@ class Esptool < Formula
   license "GPL-2.0-or-later"
 
   bottle do
-    sha256 cellar: :any,                 arm64_tahoe:   "3a718647244b162936eec610fd8e46f7fd82fb850281f15163d7ef88937aaf7a"
-    sha256 cellar: :any,                 arm64_sequoia: "c4c0b829cb6a40b00ed709a16f672900ea0c78028c5fffaf4362d3c93cb656bc"
-    sha256 cellar: :any,                 arm64_sonoma:  "0620d85ed8f210deb1d517d97a8d5347f34254e5631fd1e9e496051217b0eb9e"
-    sha256 cellar: :any,                 arm64_ventura: "11db7398183d5ee30c8a51a7dec42bbee02d99625c81f7459cdc25ec54eb0da7"
-    sha256 cellar: :any,                 sonoma:        "03eafa96d26f68d1cd86e470a11aaaea025583a419e877a9ccaf2bf95f65f468"
-    sha256 cellar: :any,                 ventura:       "762db54cfd2ae29954ca7c1cbce31c5fdb97c27f881146d641b781059e971b40"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "668dfc6f2393bb32a7eb37e2d1bd53e2375adf81971854a87f2a861939eb99d9"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "a96f7744bdd8e4cc7ec11deee625ecd61aac1fa0cfc762fdecced831bf59ff6e"
+    sha256 cellar: :any,                 arm64_tahoe:   "1ed91101fdc989e3b120dcd313edcd9936116ccb52738e44586bfb71f3158988"
+    sha256 cellar: :any,                 arm64_sequoia: "6b024d24abf571c41416bba001d5c190d3f029767be7346644818ab357a96b31"
+    sha256 cellar: :any,                 arm64_sonoma:  "9db0e322136c6ac1838a8cdea9938f150d1e310697303ac97d992dcbae0f22ac"
+    sha256 cellar: :any,                 sonoma:        "613448540af4bb08dae73fbd2c37d7cb8ba6356faa86381925276252e3179d41"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "9ec01d1a79f1b93b166455d5e80f7457d9bd63d4221ef9023bc8436355666b2e"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "116297fd7fc2618bcafa938cfc8c116ccbc4328f8f27f52703fe59e2b3faff8e"
   end
 
   depends_on "cryptography"

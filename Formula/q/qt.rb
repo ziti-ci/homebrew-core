@@ -32,7 +32,6 @@ class Qt < Formula
   end
 
   depends_on "cmake" => [:build, :test]
-  depends_on maximum_macos: [:sonoma, :build] # https://bugreports.qt.io/browse/QTBUG-128900
   depends_on "ninja" => :build
   depends_on "node" => :build
   depends_on "pkgconf" => [:build, :test]
@@ -167,6 +166,11 @@ class Qt < Formula
     # https://bugreports.qt.io/browse/QTBUG-113391
     ENV.runtime_cpu_detection
 
+    # Fix build with Xcode 26, metal and metallib have moved
+    # https://bugreports.qt.io/browse/QTBUG-140206
+    inreplace "qtwebengine/src/3rdparty/chromium/third_party/angle/src/libANGLE/renderer/metal/BUILD.gn",
+              "mac_bin_path +", '"xcrun",'
+
     # FIXME: GN requires clang in clangBasePath/bin
     inreplace "qtwebengine/src/3rdparty/chromium/build/toolchain/apple/toolchain.gni",
               'rebase_path("$clang_base_path/bin/", root_build_dir)', '""'
@@ -237,8 +241,16 @@ class Qt < Formula
 
       cmake_args << "-DQT_FORCE_WARN_APPLE_SDK_AND_XCODE_CHECK=ON" if MacOS.version <= :monterey
 
+      # Cannoy deploy to version later than 14, due to functions obsoleted in macOS 15.0
+      # https://bugreports.qt.io/browse/QTBUG-128900
+      deploy = if MacOS.version >= :sequoia
+        "14.0"
+      else
+        "#{MacOS.version}.0"
+      end
+
       %W[
-        -DCMAKE_OSX_DEPLOYMENT_TARGET=#{MacOS.version}.0
+        -DCMAKE_OSX_DEPLOYMENT_TARGET=#{deploy}
         -DQT_FEATURE_ffmpeg=OFF
       ]
     else

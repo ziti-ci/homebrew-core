@@ -1,16 +1,10 @@
 class Rtaudio < Formula
   desc "API for realtime audio input/output"
-  homepage "https://www.music.mcgill.ca/~gary/rtaudio/"
-  url "https://www.music.mcgill.ca/~gary/rtaudio/release/rtaudio-6.0.1.tar.gz"
-  sha256 "42d29cc2b5fa378ba3a978faeb1885a0075acf0fecb5ee50f0d76f6c7d8ab28c"
+  homepage "https://github.com/thestk/rtaudio"
+  url "https://github.com/thestk/rtaudio/archive/refs/tags/6.0.1.tar.gz"
+  sha256 "7206c8b6cee43b474f43d64988fefaadfdcfc4264ed38d8de5f5d0e6ddb0a123"
   license "MIT"
-
-  livecheck do
-    url :homepage
-    regex(/href=.*?rtaudio[._-]v?(\d+(?:\.\d+)+)\.t/i)
-  end
-
-  no_autobump! because: :requires_manual_review
+  head "https://github.com/thestk/rtaudio.git", branch: "master"
 
   bottle do
     rebuild 1
@@ -25,13 +19,9 @@ class Rtaudio < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "5115ee3bbfff48c47089c8051a0826ce35277e2d75397cb8e1b0fe39e8933588"
   end
 
-  head do
-    url "https://github.com/thestk/rtaudio.git", branch: "master"
-
-    depends_on "autoconf" => :build
-    depends_on "automake" => :build
-    depends_on "libtool" => :build
-  end
+  depends_on "autoconf" => :build
+  depends_on "automake" => :build
+  depends_on "libtool" => :build
 
   on_linux do
     depends_on "alsa-lib"
@@ -39,10 +29,9 @@ class Rtaudio < Formula
 
   def install
     ENV.cxx11
-    system "./autogen.sh", "--no-configure" if build.head?
+    system "./autogen.sh", "--no-configure"
     system "./configure", *std_configure_args
     system "make", "install"
-    doc.install %w[doc/release.txt doc/html doc/images] if build.stable?
     (pkgshare/"tests").install "tests/testall.cpp"
   end
 

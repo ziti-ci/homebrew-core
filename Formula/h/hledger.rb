@@ -1,8 +1,8 @@
 class Hledger < Formula
   desc "Easy plain text accounting with command-line, terminal and web UIs"
   homepage "https://hledger.org/"
-  url "https://github.com/simonmichael/hledger/archive/refs/tags/1.50.tar.gz"
-  sha256 "2a4c4f13c5f46ff9dd3e5465103fe032891387e914b49608fbf45d1dc74f4cfb"
+  url "https://github.com/simonmichael/hledger/archive/refs/tags/1.50.1.tar.gz"
+  sha256 "6e94e12f5cf58886af476f9f3a813ddd407049d1f6aefe98810b798a17562177"
   license "GPL-3.0-or-later"
   head "https://github.com/simonmichael/hledger.git", branch: "master"
 
@@ -21,7 +21,6 @@ class Hledger < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura: "347d8316c18449aa8561c39163ee9721de574d777fe0e8cab2cd456a7b510b88"
     sha256 cellar: :any_skip_relocation, sonoma:        "85721acd3f1e13d40d96c477efd4ad9920a604c3504f50155dd9644afd513a1e"
     sha256 cellar: :any_skip_relocation, ventura:       "29f6d4cbb3c7410c949f1f7c0a2ca489cb4f95a4555cb524faf197b5f00a3c8b"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "e85ef2e89653e777bf03c18c8c5c96b3f9a625e1b0b59a08a668dd19c08dd7fc"
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "35e546a33c87fac2357033d687e079542b3b4766dcf1531312474e83934256e9"
   end
 

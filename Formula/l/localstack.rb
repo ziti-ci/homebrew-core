@@ -3,8 +3,8 @@ class Localstack < Formula
 
   desc "Fully functional local AWS cloud stack"
   homepage "https://localstack.cloud/"
-  url "https://files.pythonhosted.org/packages/9d/50/6674e7647e9149ac58a33bc8b26ef00249af4ba93a5062888b0b7551c487/localstack-4.8.0.tar.gz"
-  sha256 "9d742f9bd72814d1b7a699aa3099af1e6197b918a43bff7d60ffaaa0a010e35e"
+  url "https://files.pythonhosted.org/packages/e9/32/de715f0f55dd368e707136c36faba305f7b374b4bc4443cbda749b155cfa/localstack-4.8.1.tar.gz"
+  sha256 "754ebfcf0c55cbbceee057b68b8b45092876e69125e2ab5d26d934c10a36ff6a"
   license "Apache-2.0"
 
   bottle do
@@ -64,24 +64,29 @@ class Localstack < Formula
     sha256 "181d3c6996452cb1189c4046c61599b84a5a86e099562ffde77d26984ff26d0f"
   end
 
+  resource "fastavro" do
+    url "https://files.pythonhosted.org/packages/cc/ec/762dcf213e5b97ea1733b27d5a2798599a1fa51565b70a93690246029f84/fastavro-1.12.0.tar.gz"
+    sha256 "a67a87be149825d74006b57e52be068dfa24f3bfc6382543ec92cd72327fe152"
+  end
+
   resource "idna" do
     url "https://files.pythonhosted.org/packages/f1/70/7703c29685631f5a7590aa73f1f1d3fa9a380e654b86af429e0934a32f7d/idna-3.10.tar.gz"
     sha256 "12f65c9b470abda6dc35cf8e63cc574b1c52b11df2c86030af0ac09b01b13ea9"
   end
 
   resource "localstack-core" do
-    url "https://files.pythonhosted.org/packages/2e/b8/8398e28d3d973de3ce9935b5c3523400743015d0bdf1d294691bada0e01e/localstack_core-4.8.0.tar.gz"
-    sha256 "63425630b88d84eeab001c53bdecd54113b9caceea43c1212b1994212893428f"
+    url "https://files.pythonhosted.org/packages/12/0a/fef6905030f74dae6ad238e78c3e46fb2cc2ef68a10e70870d66055df436/localstack_core-4.8.1.tar.gz"
+    sha256 "7ade82edffa2632879d5ecf3ca857323f1254c9bce46de9f07bc3ce4d483acff"
   end
 
   resource "localstack-ext" do
-    url "https://files.pythonhosted.org/packages/ec/ee/ada2b4cb44d30a7884d41fede3672c839886bfb47357628ac0c3062ce623/localstack_ext-4.8.0.tar.gz"
-    sha256 "5d6ed98d9d58ff2218712c4511ce577840f9418b04fa4fc038b132998a65eca6"
+    url "https://files.pythonhosted.org/packages/2d/db/66768c1b5dadd551c3cd89ba9d4c3be43e9370ef259fc8af5749c9138865/localstack_ext-4.8.1.tar.gz"
+    sha256 "eb3443b4b21c019b8b3331ea3cc62d7a05bba411889c60c4255faa7fd6e0068c"
   end
 
   resource "localstack-py-avro-schema" do
-    url "https://files.pythonhosted.org/packages/59/84/20c403d19012bd0224515c12c0f45d6dbce8ddcac04fe04b9be28bca977c/localstack_py_avro_schema-3.9.1.tar.gz"
-    sha256 "02f215cbc28c592fd95619f762f2d0ff89d830577aef80fa42acc235541b7abc"
+    url "https://files.pythonhosted.org/packages/f6/87/875c82590fc76605397a0c80c965c9567a01037a75e1552a71562d25b76e/localstack_py_avro_schema-3.9.2.tar.gz"
+    sha256 "5800a14420ab2402c46c849c523c131cfdf08cd5a038e74d8b98b9af7e4d69a6"
   end
 
   resource "markdown-it-py" do

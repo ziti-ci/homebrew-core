@@ -34,6 +34,9 @@ class OrocosKdl < Formula
   end
 
   def install
+    # Bump min CMake version. Remove with next release.
+    inreplace "orocos_kdl/CMakeLists.txt", "CMAKE_MINIMUM_REQUIRED(VERSION 2.6)",
+                                           "CMAKE_MINIMUM_REQUIRED(VERSION 3.10)"
     system "cmake", "-S", "orocos_kdl", "-B", "build",
                     "-DEIGEN3_INCLUDE_DIR=#{Formula["eigen"].opt_include}/eigen3",
                     *std_cmake_args

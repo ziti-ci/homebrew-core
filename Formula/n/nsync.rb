@@ -7,6 +7,7 @@ class Nsync < Formula
   revision 1
 
   bottle do
+    sha256 cellar: :any,                 arm64_tahoe:   "2fdf47744fa4557e3c6caafb8688671775c4947ff5748365952b8b66ef817e49"
     sha256 cellar: :any,                 arm64_sequoia: "5646e78dfc90e6ea7a9575f5b51ccb91e142838e61170087a5ea89dd7076d1fd"
     sha256 cellar: :any,                 arm64_sonoma:  "fdcf50215956176ee21750ef95dea641a5464aa2c474e024d63c8032ddc99da1"
     sha256 cellar: :any,                 arm64_ventura: "163b4942545d21ed0042db6343b07b7ceb810010cd513a77d2f2d8060ace3b9a"

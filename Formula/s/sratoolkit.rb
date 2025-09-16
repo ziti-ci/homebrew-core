@@ -43,7 +43,6 @@ class Sratoolkit < Formula
 
   depends_on "cmake" => :build
   depends_on "hdf5"
-  depends_on macos: :catalina
 
   uses_from_macos "libxml2"
 

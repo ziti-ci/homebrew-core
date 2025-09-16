@@ -11,6 +11,7 @@ class Gravitino < Formula
   end
 
   bottle do
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "7c948147618da262c7b6cd75528fa407268a8a54c392f4ba2707ef91d228b6fe"
     sha256 cellar: :any_skip_relocation, arm64_sequoia: "f74f55cad208bb19e1aca2c86477a5bf2d9e6f26befaabbadc05435fef4d1523"
     sha256 cellar: :any_skip_relocation, arm64_sonoma:  "df67562b97e3b4137c67416ff781a9846b57c65f2cfc250477ec3b2cb9891fc9"
     sha256 cellar: :any_skip_relocation, arm64_ventura: "d873054da69be3d3a9595d737708f7282fd9b0df6f59b7c2e4b6b6979f66a2a2"

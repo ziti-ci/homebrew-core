@@ -13,6 +13,7 @@ class PdftkJava < Formula
 
   bottle do
     rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "626014736051e1e9c87441f86117b4b0edd3b5ae4ad8be645085b91447873085"
     sha256 cellar: :any_skip_relocation, arm64_sequoia: "ed2ffccfc3600cd148a6795445902000b1131ab4aca7a2e8d6a989d8b00aeb64"
     sha256 cellar: :any_skip_relocation, arm64_sonoma:  "1b97d535fab834a2bacf655d15869af91b05d1a88c6dc63039b29669e45cc63a"
     sha256 cellar: :any_skip_relocation, arm64_ventura: "086851972845bf87aec1535dc4d9a1f6addd1311f468c926cbe7c6ab79e3f015"

@@ -40,6 +40,10 @@ class Libswiftnav < Formula
   def install
     (buildpath/"cmake/common").install resource("swift-nav/cmake")
 
+    # Work around CMake compatibility issue. Remove with next release.
+    inreplace "CMakeLists.txt", "cmake_minimum_required(VERSION 3.0)",
+                                "cmake_minimum_required(VERSION 3.13)"
+
     system "cmake", "-S", ".", "-B", "build", *std_cmake_args
     system "cmake", "--build", "build"
     system "cmake", "--install", "build"

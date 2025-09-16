@@ -16,6 +16,7 @@ class MoonBuggy < Formula
   no_autobump! because: :requires_manual_review
 
   bottle do
+    sha256 arm64_tahoe:    "992d1d21838d81ddfe48f7140aff6c7050892d7250adca9f87ae1d3a39a360c7"
     sha256 arm64_sequoia:  "381b64031018e20366728e5b6cb559bb042e076f238a41aa0fd32a25d6094121"
     sha256 arm64_sonoma:   "5e84d8a0372bf17fda7d55ea77d6d3cc0bf4ab2a00f938657eb30fe3b7c119bf"
     sha256 arm64_ventura:  "b7dd2c4414457a17a2f548554fb1f2c97d2eab161732ec769b893c7c5f6183d5"

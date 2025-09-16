@@ -68,6 +68,7 @@ class Neovide < Formula
     # https://github.com/burtonageo/cargo-bundle/issues/118
     with_env(TERM: "xterm") { system "cargo", "bundle", "--release" }
     prefix.install "target/release/bundle/osx/Neovide.app"
+    rm bin/"neovide" # Remove the original binary first
     bin.write_exec_script prefix/"Neovide.app/Contents/MacOS/neovide"
   end
 

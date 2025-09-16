@@ -7,12 +7,12 @@ class Ldcli < Formula
   head "https://github.com/launchdarkly/ldcli.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "cea470f79477f02aac2cf6e632144e566a7739e256e5d1dd0e9e4ce868ed6835"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "ab670ad57c4f9744260e405808c7a91eda302f4932cd363f6a026c17f51df5e1"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "bb7fa92e6388b9f6da6c30c187827782f79fe2b50fc997b549b91c01f195cc49"
-    sha256 cellar: :any_skip_relocation, sonoma:        "41c97fe1fbcc928d6a7cfb01296d85fd23611315d98c0d4d858bf20cc517170f"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "16fa1e267ae2aa2bc0894ad2ac8e0a5f2d4e06ff24f7e2a39f27cea9fc26ce4c"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "22b460c3d725dcbcb75a5608c8b59f67faa88c61fa21dc99de6f90d315ae0b5a"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "ec1b1867320ba9032ca9c32aa8394b0baea12301ec70d8c6d5184641fd91196a"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "4c732db99cf58e37b5cda28b4917d1ec6a7b6dd8b7869e15f626d0fd9122b6bc"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "00bafd0f811459c2403fa6d152ddbba2c4800859bcc0695b8158b92850531e16"
+    sha256 cellar: :any_skip_relocation, sonoma:        "58b82fe075d19e85212f8126e539304fe02974f9b4677251efb7e537e5ff6c6e"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "807f4ff4a5ce637d226b604acf5e77df1d4c7a9caf72ca58f3c971001bf8a3ee"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "8181615a977912bf099cf8fb7e9b9d961366b457c94450ea89b332ed6424bde9"
   end
 
   depends_on "go" => :build

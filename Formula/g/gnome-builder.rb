@@ -4,6 +4,7 @@ class GnomeBuilder < Formula
   url "https://download.gnome.org/sources/gnome-builder/49/gnome-builder-49.0.tar.xz"
   sha256 "d45990db681f95ee2277be4fa9f2964982707dbdf30130a0bde70234b379f562"
   license "GPL-3.0-or-later"
+  revision 1
   head "https://gitlab.gnome.org/GNOME/gnome-builder.git", branch: "main"
 
   bottle do
@@ -36,6 +37,7 @@ class GnomeBuilder < Formula
   depends_on "libpanel"
   depends_on "libpeas"
   depends_on "libspelling"
+  depends_on "libyaml"
   depends_on "llvm"
   depends_on "pango"
   depends_on "template-glib"

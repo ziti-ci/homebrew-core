@@ -1,16 +1,14 @@
 class Lft < Formula
   desc "Layer Four Traceroute (LFT), an advanced traceroute tool"
   homepage "https://pwhois.org/lft/"
-  url "https://pwhois.org/dl/index.who?file=lft-3.91.tar.gz"
-  sha256 "aad13e671adcfc471ab99417161964882d147893a54664f3f465ec5c8398e6af"
+  url "https://pwhois.org/dl/index.who?file=lft-3.93.tar.gz"
+  sha256 "132d74c1a8cf56023a16ddd39d10c89b4dfa0acdbd7c472e45ccc8521d8aaddd"
   license "VOSTROM"
 
   livecheck do
     url :homepage
     regex(/value=.*?lft[._-]v?(\d+(?:\.\d+)+)\.t/i)
   end
-
-  no_autobump! because: :requires_manual_review
 
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_sequoia:  "a4af876936c86efc3ca9b7be19fb9092f3b948548fd0692cc5bc305254ccfb19"

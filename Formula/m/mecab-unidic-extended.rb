@@ -1,9 +1,10 @@
 class MecabUnidicExtended < Formula
   desc "Extended morphological analyzer for MeCab"
-  homepage "https://osdn.net/projects/unidic/"
+  homepage "https://clrd.ninjal.ac.jp/unidic/en/back_number_en.html"
   # Canonical: https://osdn.net/dl/unidic/unidic-mecab_kana-accent-2.1.2_src.zip
-  url "https://dotsrc.dl.osdn.net/osdn/unidic/58338/unidic-mecab_kana-accent-2.1.2_src.zip"
-  sha256 "70793cacda81b403eda71736cc180f3144303623755a612b13e1dffeb6554591"
+  url "https://mirrors.dotsrc.org/osdn/unidic/58338/unidic-mecab_kana-accent-2.1.2_src.zip"
+  mirror "https://clrd.ninjal.ac.jp/unidic_archive/cwj/2.1.2/unidic-mecab_kana-accent-2.1.2_src.zip"
+  sha256 "6cce98269214ce7de6159f61a25ffc5b436375c098cc86d6aa98c0605cbf90d4"
   license any_of: ["BSD-3-Clause", "GPL-2.0-only", "LGPL-2.1-only"]
 
   # The OSDN releases page asynchronously fetches separate HTML for each

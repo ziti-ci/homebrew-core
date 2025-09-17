@@ -6,6 +6,7 @@ class NodeAT18 < Formula
   license "MIT"
 
   bottle do
+    sha256 arm64_tahoe:   "99e7e2eb7d40cae9e51afac2f7c67921c7a4a72100ffd3c2a45d90db142d5020"
     sha256 arm64_sequoia: "85339a0121bfd4eade3f70a49197c59fd1d0dee18511edf924d4acf4d81cc012"
     sha256 arm64_sonoma:  "cce72f3a40cb31861f419e0ea364cf0581e6f59b28f3e5c00196ccdea6a9f295"
     sha256 arm64_ventura: "abf275d5c731c19cc83cac346960ee3d53e845c35e1cb04278d31e26a9aad9ec"

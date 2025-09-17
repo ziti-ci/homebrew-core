@@ -1,8 +1,8 @@
 class Rhai < Formula
   desc "Embedded scripting language for Rust"
   homepage "https://rhai.rs/"
-  url "https://github.com/rhaiscript/rhai/archive/refs/tags/v1.22.0.tar.gz"
-  sha256 "16c60ab5428e4ef1e4df55edb43914dd7f4fcee5615b3399b1a96aa2e9d9fe79"
+  url "https://github.com/rhaiscript/rhai/archive/refs/tags/v1.23.0.tar.gz"
+  sha256 "11220505d2cd1882da22a40496f2d0f92d7a1842495b20e2750f2a4cfec1d9a5"
   license any_of: ["Apache-2.0", "MIT"]
   head "https://github.com/rhaiscript/rhai.git", branch: "main"
 

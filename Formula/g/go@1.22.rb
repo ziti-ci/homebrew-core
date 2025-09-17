@@ -24,16 +24,14 @@ class GoAT122 < Formula
   depends_on "go" => :build
 
   def install
-    cd "src" do
-      ENV["GOROOT_FINAL"] = libexec
+    libexec.install Dir["*"]
+
+    cd libexec/"src" do
       # Set portable defaults for CC/CXX to be used by cgo
       with_env(CC: "cc", CXX: "c++") { system "./make.bash" }
     end
 
-    libexec.install Dir["*"]
     bin.install_symlink Dir[libexec/"bin/go*"]
-
-    system bin/"go", "install", "std", "cmd"
 
     # Remove useless files.
     # Breaks patchelf because folder contains weird debug/test files

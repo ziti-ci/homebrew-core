@@ -54,6 +54,14 @@ class NodeAT18 < Formula
   def install
     ENV.llvm_clang if OS.mac? && (DevelopmentTools.clang_build_version <= 1100)
 
+    # Fix to avoid fdopen() redefinition for vendored `zlib`
+    # Too many commits to backport, so apply a workaround
+    if OS.mac? && DevelopmentTools.clang_build_version >= 1700
+      inreplace "deps/v8/third_party/zlib/zutil.h",
+                "#        define fdopen(fd,mode) NULL /* No fdopen() */",
+                ""
+    end
+
     # make sure subprocesses spawned by make are using our Python 3
     ENV["PYTHON"] = which("python3.13")
 

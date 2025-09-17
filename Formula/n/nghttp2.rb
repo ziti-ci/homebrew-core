@@ -38,10 +38,6 @@ class Nghttp2 < Formula
     depends_on "llvm" => :build if DevelopmentTools.clang_build_version <= 1500
   end
 
-  on_linux do
-    depends_on "gcc"
-  end
-
   fails_with :clang do
     build 1500
     cause "Requires C++20 support"
@@ -53,8 +49,6 @@ class Nghttp2 < Formula
   end
 
   def install
-    ENV.llvm_clang if OS.mac? && DevelopmentTools.clang_build_version <= 1500
-
     # fix for clang not following C++14 behaviour
     # https://github.com/macports/macports-ports/commit/54d83cca9fc0f2ed6d3f873282b6dd3198635891
     inreplace "src/shrpx_client_handler.cc", "return dconn;", "return std::move(dconn);"

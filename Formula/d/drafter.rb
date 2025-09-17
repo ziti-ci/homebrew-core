@@ -31,6 +31,13 @@ class Drafter < Formula
   end
 
   def install
+    # Fix to error: no member named 'swap' in namespace 'std'
+    if OS.mac? && DevelopmentTools.clang_build_version >= 1700
+      inreplace "packages/boost/boost/move/adl_move_swap.hpp",
+                "#define BOOST_MOVE_ADL_MOVE_SWAP_HPP",
+                "#define BOOST_MOVE_ADL_MOVE_SWAP_HPP\n#include <utility>"
+    end
+
     system "cmake", "-S", ".", "-B", "build", "-DCMAKE_POLICY_VERSION_MINIMUM=3.5", *std_cmake_args
     system "cmake", "--build", "build"
     system "cmake", "--install", "build"

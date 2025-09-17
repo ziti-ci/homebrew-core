@@ -54,7 +54,7 @@ class Nethack < Formula
     ENV.O0
 
     cd "sys/unix" do
-      hintfile = if OS.mac? && MacOS.version >= :mojave
+      hintfile = if OS.mac?
         build.head? ? "macOS.370" : "macosx10.14"
       else
         build.head? ? "macosx.sh" : "macosx10.10"

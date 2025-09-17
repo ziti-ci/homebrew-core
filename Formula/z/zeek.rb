@@ -28,7 +28,6 @@ class Zeek < Formula
   depends_on "swig" => :build
   depends_on "c-ares"
   depends_on "libmaxminddb"
-  depends_on macos: :mojave
   depends_on "openssl@3"
   depends_on "python@3.13"
   depends_on "zeromq"

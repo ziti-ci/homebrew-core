@@ -65,6 +65,9 @@ class Moreutils < Formula
       s.gsub! "/usr/share/xml/docbook/stylesheet/docbook-xsl",
               "#{Formula["docbook-xsl"].opt_prefix}/docbook-xsl"
     end
+    # Find our docbook catalog
+    ENV["XML_CATALOG_FILES"] = "#{etc}/xml/catalog"
+
     system "make", "all"
     system "make", "install", "PREFIX=#{prefix}"
     bin.env_script_all_files(libexec/"bin", PERL5LIB: ENV["PERL5LIB"])

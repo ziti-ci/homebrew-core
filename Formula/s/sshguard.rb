@@ -35,7 +35,7 @@ class Sshguard < Formula
     cp "examples/sshguard.conf.sample", "examples/sshguard.conf"
     inreplace "examples/sshguard.conf" do |s|
       s.gsub!(/^#BACKEND=.*$/, "BACKEND=\"#{opt_libexec}/sshg-fw-pf\"")
-      if OS.mac? && MacOS.version >= :sierra
+      if OS.mac?
         s.gsub! %r{^#LOGREADER="/usr/bin/log}, "LOGREADER=\"/usr/bin/log"
       else
         s.gsub!(/^#FILES.*$/, "FILES=/var/log/system.log")

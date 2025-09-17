@@ -35,6 +35,12 @@ class Ncmpc < Formula
   on_macos do
     depends_on "gettext"
     depends_on "llvm" if DevelopmentTools.clang_build_version <= 1500
+
+    # Fixes: error: use of undeclared identifier 'strcoll_l'
+    patch do
+      url "https://github.com/MusicPlayerDaemon/ncmpc/commit/af478b5ba2447592c640c5b7f86c47d9a412c639.patch?full_index=1"
+      sha256 "193f6c3192ba39974a2f1ef4935c623d58e0614f9978b2e6545c6231fd5ffdb5"
+    end
   end
 
   fails_with :clang do

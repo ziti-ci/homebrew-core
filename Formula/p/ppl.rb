@@ -1,15 +1,14 @@
 class Ppl < Formula
   desc "Parma Polyhedra Library: numerical abstractions for analysis, verification"
   homepage "https://www.bugseng.com/ppl"
-  url "https://www.bugseng.com/products/ppl/download/ftp/releases/1.2/ppl-1.2.tar.xz"
-  mirror "https://deb.debian.org/debian/pool/main/p/ppl/ppl_1.2.orig.tar.xz"
+  url "https://deb.debian.org/debian/pool/main/p/ppl/ppl_1.2.orig.tar.xz"
   sha256 "691f0d5a4fb0e206f4e132fc9132c71d6e33cdda168470d40ac3cf62340e9a60"
   license "GPL-3.0-or-later"
   revision 1
 
   livecheck do
-    url "https://www.bugseng.com/content/ppl-download"
-    regex(/href=.*?ppl[._-]v?(\d+(?:\.\d+)+)\.t/i)
+    url "https://deb.debian.org/debian/pool/main/p/ppl/"
+    regex(/href=.*?ppl[._-]v?(\d+(?:\.\d+)+)\.orig\.t/i)
   end
 
   no_autobump! because: :requires_manual_review
@@ -25,8 +24,6 @@ class Ppl < Formula
     sha256 monterey:       "f75956df3abc16149ff87a0df7347973863331d8cadad40fef8dc3b760bfd6cf"
     sha256 big_sur:        "ceae5dd7024558587efdf935a870154a38e0cbf7e4882ba507cb3cebf574bed3"
     sha256 catalina:       "65aa31c0201a860d32e874ab34cbdea7132101fc6461510e06641a11ca762e82"
-    sha256 mojave:         "253714635b8718e7822853e1385c546b665450b7059e8067e4008ed865eae261"
-    sha256 high_sierra:    "7a9b9ceabcf71bf31ed8185caaa6e78c065511ba3e6cf805be13402983c2a7e1"
     sha256 arm64_linux:    "cae59d336bc919b7924cf6507ed0fef355e1a9ecc9770f06cc34cd05741d96df"
     sha256 x86_64_linux:   "09999d2760a2d719f28918c3040eadeceffd32112eee8e5f28f5b93db80d4d9d"
   end

@@ -25,10 +25,6 @@ class Sntop < Formula
     sha256 monterey:       "339487a2777504f99d3a3d9b9ae4f9d10de35d4e694a1708784e55ca2c586e09"
     sha256 big_sur:        "ea8df8c0dbf95ed5686009df6bd7742d6f4a4a2e4c6132a02e6273ccfd21cc67"
     sha256 catalina:       "886a981f2c95a8a17d4bfb44c27d99cde66faeb4f2942d1c43757e8d702509c6"
-    sha256 mojave:         "d010bc2fa761320d0d0f4948d5f95392d892e7bd7815418e9881ec90049d4036"
-    sha256 high_sierra:    "c22d769ddb8599acf3f03db2ef85eef5ee28e41f9ec3011e9b23f6168ceb0a76"
-    sha256 sierra:         "f15c15a4e2251e86e55c3bd2c75f660448e38efe9b0b57edd6d3e9301377929c"
-    sha256 el_capitan:     "c3f19036cf2d42ce9fa07ed6db6264b3e52ba475827903972877a8131eae60e9"
     sha256 arm64_linux:    "11c8dd26262b37cddb345a83ffa42e900d813158ed2bbca49586ad042f2bcb29"
     sha256 x86_64_linux:   "15e6f3f42a8d6afa68d48744f2673142104a0cfb84daff23c6706db8adbe6536"
   end

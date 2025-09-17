@@ -1,8 +1,8 @@
 class AwsVault < Formula
   desc "Securely store and access AWS credentials in development environments"
   homepage "https://github.com/ByteNess/aws-vault"
-  url "https://github.com/ByteNess/aws-vault/archive/refs/tags/v7.6.2.tar.gz"
-  sha256 "115680cfb9d11b5e08b3375722aa3819a947866f4a83ccf7b5ff7cbb647f9412"
+  url "https://github.com/ByteNess/aws-vault/archive/refs/tags/v7.6.4.tar.gz"
+  sha256 "dd2b46d06890f77cfd7e9dc64f58d227290af05b0415a14bf637f47bf04aaecd"
   license "MIT"
   head "https://github.com/ByteNess/aws-vault.git", branch: "main"
 
@@ -12,13 +12,11 @@ class AwsVault < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "428bc71cecbea373262da0e73f807c5e0953b9df77f0cfda7fc6a0beeae01fe5"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "f832bb025e0f21f0037ad8f67d1e5b8602d54e846606db105263df2e0b8a1910"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "d28a85b7e27415ef3293a341c03de2307c5a46c071a4fa937b77ccb6b5df09db"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "36c51b5afe52b6203a81dfcf2e842a19485622f9aa14ca30fa92c5b10719a3b9"
-    sha256 cellar: :any_skip_relocation, sonoma:        "337ee43f623d217f3a7b0d47b2fc43f68df46864daa4b9f92cf5eb31cf237de8"
-    sha256 cellar: :any_skip_relocation, ventura:       "3f98a01beff368b7e48444bdf9d7c30c5194db861fb4335656aeffadadd74c19"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "2cc3a52b5edccfd245c5ad69769d28cb85e19781bff947a250477c83a561fd32"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "2637b3348e0e398f4bc961996e9fc82063174f82ffb20bbac76a3fdda1c15761"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "c247ccd44a21c917b73dd0b2ca09a39cae058bed7283fc52fd1beac0c9e1c177"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "a9c4d7b312125da2530eba267a71504b15ea661c3ed741408cb94cdf369e318a"
+    sha256 cellar: :any_skip_relocation, sonoma:        "de8a03c21c9e979ec97f1ade9f9688e75833f75c8b17c7cb72a8c691a5c91991"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "eff338d150e24408e5b03c9db8da3a139c5d79a3ff2fcef74933a4eb8207ee8e"
   end
 
   depends_on "go" => :build

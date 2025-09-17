@@ -32,10 +32,11 @@ class Nuvie < Formula
   depends_on "sdl12-compat"
 
   def install
-    # Work around GCC 11 failure due to default C++17 standard.
+    # Work around GCC 11 / Clang 17 failure due to higher default C++ standard.
     # We use C++03 standard as C++11 standard needs upstream fix.
+    # We append to CXX because CXXFLAGS is also used for C code somehow.
     # Ref: https://github.com/nuvie/nuvie/commit/69fb52d35d5eaffcf3bca56929ab58a99defec3d
-    ENV.append "CXXFLAGS", "-std=c++03" if OS.linux?
+    ENV.append "CXX", "-std=c++03" if OS.linux? || DevelopmentTools.clang_build_version >= 1700
 
     inreplace "./nuvie.cpp" do |s|
       s.gsub! 'datadir", "./data"',

@@ -49,6 +49,12 @@ class Widelands < Formula
     depends_on "mesa"
   end
 
+  # Backport fix for newer asio
+  patch do
+    url "https://github.com/widelands/widelands/commit/c0b44ccc04df35a9a23ca9be3e05f5d3a5428f6f.patch?full_index=1"
+    sha256 "8db8447ab83e10031e0903cc0accec962f30f5b9fa31a8ce68db788efa7756b4"
+  end
+
   def install
     system "cmake", "-S", ".", "-B", "build",
                     "-DWL_INSTALL_BASEDIR=#{pkgshare}",
@@ -57,7 +63,7 @@ class Widelands < Formula
                     "-DOPTION_BUILD_CODECHECK=OFF",
                     "-DOPTION_BUILD_TESTS=OFF",
                     "-DOPTION_BUILD_WEBSITE_TOOLS=OFF",
-                    "-DPYTHON_EXECUTABLE=#{which("python3") || which("python")}",
+                    "-DPYTHON_EXECUTABLE=#{which("python3")}",
                     *std_cmake_args
     system "cmake", "--build", "build"
     system "cmake", "--install", "build"

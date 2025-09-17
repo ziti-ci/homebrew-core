@@ -20,10 +20,6 @@ class Rnv < Formula
     sha256 cellar: :any,                 monterey:       "6e53766114e84c2d465873f78f4d8e9989186297140dae5966927b966d821d8e"
     sha256 cellar: :any,                 big_sur:        "c262efcf45b880c131f5e466d1b672ce5120dff6302b9b7504f6c1e1ee87cb22"
     sha256 cellar: :any,                 catalina:       "9a780a7b9ed3b264a7d0471aba7aac503b60640af76156028ecf118a0c35665e"
-    sha256 cellar: :any,                 mojave:         "06a2cb705d679da7de638434f45e28764dcd448863d31f6b39ab090dfde4c04f"
-    sha256 cellar: :any,                 high_sierra:    "9bf4571824c6d8e837cfcad7ac5e16c6bfc120d4638f0428cdfb8f14203b8c41"
-    sha256 cellar: :any,                 sierra:         "8dd3263bb656dcca22605b12faf4c6f54d65e5040e58a7a464c85b69ca19dc99"
-    sha256 cellar: :any,                 el_capitan:     "1c1aa519b786f842b39720e33900e92a2f2f8deef403755e79e2d3b518897ff1"
     sha256 cellar: :any_skip_relocation, arm64_linux:    "607237d06383c7a8da2bfa731d52f960d9a9a35ccd465dfee6fcddc485e42d92"
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "3368e22e32650a6594df96320a449717d447a25d69a8485c907f1e0d10a1c49d"
   end

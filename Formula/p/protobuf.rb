@@ -24,16 +24,6 @@ class Protobuf < Formula
   depends_on "abseil"
   uses_from_macos "zlib"
 
-  on_linux do
-    # Avoid newer GCC which creates binary with higher GLIBCXX requiring runtime dependency
-    depends_on "gcc@12" => :build if DevelopmentTools.gcc_version("/usr/bin/gcc") < 12
-  end
-
-  fails_with :gcc do
-    version "11"
-    cause "absl/log/internal/check_op.h error: ambiguous overload for 'operator<<'"
-  end
-
   # Apply open PR to fix CRC32 usage on arm64 linux
   # https://github.com/protocolbuffers/protobuf/pull/23164
   patch do

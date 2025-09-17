@@ -6,6 +6,7 @@ class SignalCli < Formula
   license "GPL-3.0-or-later"
 
   bottle do
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "e77b45a6112104d5f8b5bdd36cd8ad887df4cba5d109ef8617032f9acec5fb9a"
     sha256 cellar: :any_skip_relocation, arm64_sequoia: "3c8d1a1ab3801c8fd6b9835ed168b0c2f71a2114511da37aa67c12dcaf97844e"
     sha256 cellar: :any_skip_relocation, arm64_sonoma:  "8a3574c6192b67fcbc4a9784457b74284f253f6ee35eb44556eb01b9bcb6a582"
     sha256 cellar: :any_skip_relocation, sonoma:        "5980d93a643fec9c462fe6b459fc500167561671d6990975ea89ceaa79d7f793"

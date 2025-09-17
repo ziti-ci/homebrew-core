@@ -20,11 +20,10 @@ class Sngrep < Formula
 
   depends_on "autoconf" => :build
   depends_on "automake" => :build
-  depends_on "ncurses" if DevelopmentTools.clang_build_version >= 1000
+  depends_on "ncurses"
   depends_on "openssl@3"
 
   uses_from_macos "libpcap"
-  uses_from_macos "ncurses"
 
   def install
     ENV.append_to_cflags "-I#{Formula["ncurses"].opt_include}/ncursesw" if OS.linux?

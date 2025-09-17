@@ -7,6 +7,7 @@ class ProtocGenGrpcJava < Formula
   revision 1
 
   bottle do
+    sha256 cellar: :any,                 arm64_tahoe:   "30d408b338073afb2b5b4226e4f9792e1ea10ea41c8f7b760d2b0e4e6f04c8ba"
     sha256 cellar: :any,                 arm64_sequoia: "0b99d86b7a7f123d02e2454ec5df9e4606784a26ebb0814ec94db1236093d5fb"
     sha256 cellar: :any,                 arm64_sonoma:  "c8c5486c214d2bec4dd317c7027010446e6c08fac55a1b8e6b8b88e73bbc4c71"
     sha256 cellar: :any,                 sonoma:        "6b8b56e42c4499744ccf9d5e479238b3450197364dcae46b0b9ca87a245359f4"

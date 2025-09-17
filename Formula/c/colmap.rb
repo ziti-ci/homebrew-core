@@ -1,8 +1,8 @@
 class Colmap < Formula
   desc "Structure-from-Motion and Multi-View Stereo"
   homepage "https://colmap.github.io/"
-  url "https://github.com/colmap/colmap/archive/refs/tags/3.12.5.tar.gz"
-  sha256 "93dfb220cce24d988506bbb1d27d4278eacfd4e372df61d380559d414c1bd9e4"
+  url "https://github.com/colmap/colmap/archive/refs/tags/3.12.6.tar.gz"
+  sha256 "f66d34be7a738fa753d1b71aec4fb7411d8c117beb58d1f2ba84ee2696c96410"
   license "BSD-3-Clause"
 
   bottle do
@@ -42,12 +42,6 @@ class Colmap < Formula
 
   on_linux do
     depends_on "mesa"
-  end
-
-  # Backport support for Qt6
-  patch do
-    url "https://github.com/colmap/colmap/commit/1625d9e8c97aa8beef0df0c00430c1c3d79190ab.patch?full_index=1"
-    sha256 "146e444bfe7209b046a8a5a9f14acb84bd381295ba7f2cc70a38f768e9137136"
   end
 
   def install

@@ -37,10 +37,6 @@ class Cabin < Formula
     depends_on "llvm" => :build
   end
 
-  on_linux do
-    depends_on "gcc" # C++20
-  end
-
   fails_with :clang do
     build 1499
     cause "Requires C++20"
@@ -52,7 +48,6 @@ class Cabin < Formula
   end
 
   def install
-    ENV.llvm_clang if OS.mac? && (DevelopmentTools.clang_build_version <= 1499 || MacOS.version == :ventura)
     # Avoid cloning `toml11` at build-time.
     (buildpath/"build/DEPS/toml11").install_symlink Formula["toml11"].opt_include
     system "make", "BUILD=release", "PREFIX=#{prefix}", "install"

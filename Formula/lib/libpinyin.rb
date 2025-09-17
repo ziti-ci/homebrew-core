@@ -46,12 +46,19 @@ class Libpinyin < Formula
     sha256 "59c68e89d43ff85f5a309489499cbcde282d2b04bd91888734884b7defcb1155"
   end
 
-  # Apply open PR to fix build with Apple ld
+  # Fix build with Apple ld
   # PR ref: https://github.com/libpinyin/libpinyin/pull/168
   # Issue ref: https://github.com/libpinyin/libpinyin/issues/158
   patch do
     url "https://github.com/libpinyin/libpinyin/commit/5f5b34410ef43acef28208021fb5e38f0ca33076.patch?full_index=1"
     sha256 "e8f19214941f58345886d5a512bea8108651892f6e647ea2e3117385a33c941d"
+  end
+
+  # Fix export of `_zhuyin_get_zhuyin_string` in libzhuyin
+  # PR ref: https://github.com/libpinyin/libpinyin/pull/169
+  patch do
+    url "https://github.com/libpinyin/libpinyin/commit/ad198143aa446478918484d1a49be3a60f50d453.patch?full_index=1"
+    sha256 "99f5824b8b285566555a309bfa5fcc06a50a07977250954587472ea62d83b361"
   end
 
   def install

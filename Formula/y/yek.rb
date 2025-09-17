@@ -1,8 +1,8 @@
 class Yek < Formula
   desc "Fast Rust based tool to serialize text-based files for LLM consumption"
   homepage "https://github.com/bodo-run/yek"
-  url "https://github.com/bodo-run/yek/archive/refs/tags/v0.22.1.tar.gz"
-  sha256 "a161b1cc194aa48ca4da82da2791b4cbd600d6757047c8dca93db21deaaadc02"
+  url "https://github.com/bodo-run/yek/archive/refs/tags/v0.23.0.tar.gz"
+  sha256 "6930ec4ca31a32e946b66e0b9db8afc46c8257b8b5b66fca2227b999a2262215"
   license "MIT"
   head "https://github.com/bodo-run/yek.git", branch: "main"
 
@@ -12,12 +12,12 @@ class Yek < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_tahoe:   "b529fb72f1886f0cb8d3389e83c106928a4610882bea0a9ed9cf314250188788"
-    sha256 cellar: :any,                 arm64_sequoia: "32cffe04f3e36b2ec7c24c5360e24b19f6b0d6943a186bea3635d8c68e8aa1c5"
-    sha256 cellar: :any,                 arm64_sonoma:  "5f5dfb7d1e600e30631216274b98f5865da26cb0eee80f2a94da92ecbb368ca7"
-    sha256 cellar: :any,                 sonoma:        "047afc0314ea274fff68411585f5a4f30fcdb2296082f1437b1330f7512c3968"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "0070924547d72b33370622f2f29a2a5ba21f73dbb97f9c5a710a28a8a880c18f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "2130f371af1611af9990c5eb6ba27647ace236883509c3b42d4a49714e656d40"
+    sha256 cellar: :any,                 arm64_tahoe:   "e006c917c04a407a68291897e3bd171be3e5e2bb6f35439982b2378fe69fbe4e"
+    sha256 cellar: :any,                 arm64_sequoia: "0211d67697e9d905c88447d7795d2ebb0d4b0b5ad7ce558ef163f9b3ba7e02b2"
+    sha256 cellar: :any,                 arm64_sonoma:  "2d4ce747874f7e5640a80644e9c2ff2e2eccb04e6153f7424a531091d57bae29"
+    sha256 cellar: :any,                 sonoma:        "6a7f18faa8c9cc230c9c533da988ade923282b80ada2e0ed5e9908add8b48af2"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "f9ea348b33d0839ae195e56100bfb9b3d8fe78688d06ba163b8cda7b23e0f88b"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "b45925f801663c82780e13876bfeaa81474053f5d4570d3abcac24171c1d19d4"
   end
 
   depends_on "pkgconf" => :build

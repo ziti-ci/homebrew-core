@@ -9,6 +9,7 @@ class Mjpegtools < Formula
   no_autobump! because: :requires_manual_review
 
   bottle do
+    sha256 cellar: :any,                 arm64_tahoe:    "3b9ddb01e9c28192d76d02795aeec7c686663dca28d67b7997901c12ba0a3368"
     sha256 cellar: :any,                 arm64_sequoia:  "ceffd1cacfbd70df4bc8763a63379aef688299d0d454243034964ae4d990fc87"
     sha256 cellar: :any,                 arm64_sonoma:   "819ed433976e0822f4357ab0b24f2de38f32500e169add9671ebd0fda5d1a818"
     sha256 cellar: :any,                 arm64_ventura:  "6617edf8918a64e1850a6b94627617a460dc85234bf56c2c4f0af9bd77608d3f"

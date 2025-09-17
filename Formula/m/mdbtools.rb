@@ -15,12 +15,8 @@ class Mdbtools < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "0e2ca3b97c784e7ce3e9d42e0bf58e15816b94944f2686c41d6ec698fc50ca0f"
   end
 
-  depends_on "autoconf" => :build
-  depends_on "automake" => :build
   depends_on "bison" => :build
   depends_on "gawk" => :build
-  depends_on "gettext" => :build
-  depends_on "libtool" => :build
   depends_on "pkgconf" => :build
 
   depends_on "glib"
@@ -31,7 +27,6 @@ class Mdbtools < Formula
   end
 
   def install
-    system "autoreconf", "--force", "--install", "--verbose"
     system "./configure", "--enable-man", *std_configure_args
     system "make", "install"
   end

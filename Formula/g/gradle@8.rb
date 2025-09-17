@@ -12,7 +12,7 @@ class GradleAT8 < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "f1eae3a15f69a395246d590a2affefb1c30b1bca61f00996490ca76ce8965eb1"
+    sha256 cellar: :any_skip_relocation, all: "2626c2bf646f7ad9f6b9c192968e30b25e1226e7ff40659b695ab6b10513191f"
   end
 
   keg_only :versioned_formula

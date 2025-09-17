@@ -1,9 +1,11 @@
 class Nextflow < Formula
   desc "Reproducible scientific workflows"
   homepage "https://nextflow.io"
+  # TODO: Check if we can use `openjdk` 25+ when bumping the version.
   url "https://github.com/nextflow-io/nextflow/archive/refs/tags/v25.04.7.tar.gz"
   sha256 "561d55a29bbebd5c9135f82750331262bf034e0bbf56d014fa5115427fa5ed30"
   license "Apache-2.0"
+  revision 1
 
   livecheck do
     url :stable
@@ -22,7 +24,8 @@ class Nextflow < Formula
   end
 
   depends_on "gradle" => :build
-  depends_on "openjdk"
+  # https://github.com/nextflow-io/nextflow/blob/master/docs/install.md#requirements
+  depends_on "openjdk@21"
 
   def install
     # update Foojay plugin for gradle 9 compatibility, upstream pr ref, https://github.com/nextflow-io/nextflow/pull/6388
@@ -33,7 +36,7 @@ class Nextflow < Formula
     system "gradle", "pack", "--no-daemon", "-x", "test"
     libexec.install "build/releases/nextflow-#{version}-dist" => "nextflow"
 
-    (bin/"nextflow").write_env_script libexec/"nextflow", Language::Java.overridable_java_home_env
+    (bin/"nextflow").write_env_script libexec/"nextflow", Language::Java.overridable_java_home_env("21")
   end
 
   test do

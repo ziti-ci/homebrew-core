@@ -32,6 +32,9 @@ class Dnstracer < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "f5a8f70b7d7d09e10e995f908c4b581a9d3f2ea201719e768e7e65c022f8eb7d"
   end
 
+  # Fix to error: conflicting types for 'res_9_getlong', 'res_9_getshort'
+  patch :DATA if DevelopmentTools.clang_build_version >= 1700
+
   def install
     ENV.append "LDFLAGS", "-lresolv"
 
@@ -46,3 +49,24 @@ class Dnstracer < Formula
     system bin/"dnstracer", "-4", "brew.sh"
   end
 end
+
+__END__
+diff --git a/dnstracer.c b/dnstracer.c
+index 167342a..2a30d53 100644
+--- a/dnstracer.c
++++ b/dnstracer.c
+@@ -48,6 +48,13 @@
+     #include <arpa/nameser.h>
+     #include <netdb.h>
+     #include <resolv.h>
++
++    #ifdef getlong
++    #  undef getlong
++    #endif
++    #ifdef getshort
++    #  undef getshort
++    #endif
+ #endif
+ 
+ #include <sys/types.h>
+

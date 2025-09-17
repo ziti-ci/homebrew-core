@@ -11,6 +11,7 @@ class AttemptCli < Formula
     sha256 cellar: :any_skip_relocation, arm64_sequoia: "f6affd2438d988a8bf47fa4991d1df98c07b0e7e92940de0b69f8d5816269432"
     sha256 cellar: :any_skip_relocation, arm64_sonoma:  "b946258b9c500cb93ed7609477acf244e29c94dc90e6454e250407e912588f49"
     sha256 cellar: :any_skip_relocation, sonoma:        "e2830afa1aae71e0dd566895e9ee24a87831d1cb175e60a157493392c9348cc6"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "5b19f8b44ec04231ef3b8bca972cf63df75b6ab4525c9657a350d81dc5b00751"
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "405051516520cdea32998076289c1331800da5dbd81e7d16fb8d067cb6f97a56"
   end
 

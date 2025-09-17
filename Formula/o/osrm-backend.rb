@@ -39,19 +39,15 @@ class OsrmBackend < Formula
   uses_from_macos "expat"
   uses_from_macos "zlib"
 
-  on_linux do
-    depends_on "gcc@12" if DevelopmentTools.gcc_version("gcc") < 12
-
-    fails_with :gcc do
-      version "11"
-      cause <<~CAUSE
-        /usr/include/c++/11/type_traits:987:52: error: static assertion failed: template argument must be a complete class or an unbounded array
-          static_assert(std::__is_complete_or_unbounded(__type_identity<_Tp>{}),
-      CAUSE
-    end
-  end
-
   conflicts_with "flatbuffers", because: "both install flatbuffers headers"
+
+  fails_with :gcc do
+    version "11"
+    cause <<~CAUSE
+      /usr/include/c++/11/type_traits:987:52: error: static assertion failed: template argument must be a complete class or an unbounded array
+        static_assert(std::__is_complete_or_unbounded(__type_identity<_Tp>{}),
+    CAUSE
+  end
 
   # Fix build with Boost 1.89.0, pr ref: https://github.com/Project-OSRM/osrm-backend/pull/7220
   patch do
@@ -60,15 +56,6 @@ class OsrmBackend < Formula
   end
 
   def install
-    # Work around build failure: duplicate symbol 'boost::phoenix::placeholders::uarg9'
-    # Issue ref: https://github.com/boostorg/phoenix/issues/111
-    ENV.append_to_cflags "-DBOOST_PHOENIX_STL_TUPLE_H_"
-    # Work around build failure on Linux:
-    # /tmp/osrm-backend-20221105-7617-1itecwd/osrm-backend-5.27.1/src/osrm/osrm.cpp:83:1:
-    # /usr/include/c++/11/ext/new_allocator.h:145:26: error: 'void operator delete(void*, std::size_t)'
-    # called on unallocated object 'result' [-Werror=free-nonheap-object]
-    ENV.append_to_cflags "-Wno-free-nonheap-object" if OS.linux?
-
     lua = Formula["lua"]
     luaversion = lua.version.major_minor
 

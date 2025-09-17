@@ -3,10 +3,9 @@ class Harlequin < Formula
 
   desc "Easy, fast, and beautiful database client for the terminal"
   homepage "https://harlequin.sh"
-  url "https://files.pythonhosted.org/packages/b2/e2/e9176c2102b0f9fa4384dcf6e20aa11aedd50f446180cca32e44e06f7fe1/harlequin-2.1.2.tar.gz"
-  sha256 "751f71384a40443810f192f48f1c9bbd6f24be053231368971c2271fb56956fa"
+  url "https://files.pythonhosted.org/packages/1d/35/316b78cad0f35e9829952116ad13447ebbf28fc3ec1a0b525e2ce201f239/harlequin-2.1.3.tar.gz"
+  sha256 "701cc9e544d5e884deced48230d7ccd4b6fca6f8dbfcdd144b420c0a2b12afce"
   license "MIT"
-  revision 2
 
   no_autobump! because: "has non-PyPI resources"
 

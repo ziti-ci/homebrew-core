@@ -9,6 +9,7 @@ class Fibjs < Formula
   no_autobump! because: :requires_manual_review
 
   bottle do
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:    "fd81ea326f8dd8bd3ed2c7fbcf7856d00b13d699d26f88d0baf34e07d9367207"
     sha256 cellar: :any_skip_relocation, arm64_sequoia:  "f940f6107a3dd1035e68d8be72bd46d99d90a23cf254084572c5d005323babfe"
     sha256 cellar: :any_skip_relocation, arm64_sonoma:   "4bf3d1703cf3e662ebf874d2cf05ccc2deb41ef2502d30344d20f80744441cb4"
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "e1f5e64e73171ae6d553bd8552e17d3df8af6c69d6098c9c36819e463a20c70e"

@@ -8,14 +8,12 @@ class Locust < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any,                 arm64_tahoe:   "ce75f803491fe559b2d18a8b95964b24d9ef5d0a7e7044449df2f54699e9cfe2"
-    sha256 cellar: :any,                 arm64_sequoia: "6b96048cf62ae38cf1b8e61aecba1b9d06e4e38f3585baea51a5c024db64ed98"
-    sha256 cellar: :any,                 arm64_sonoma:  "21c13fff92b692a073b03912bab3156dd59b3a621a6e2440273949d258c7f720"
-    sha256 cellar: :any,                 arm64_ventura: "73ca44d156831e64bf8a8fc181f39f69b12ba2c686738fc0ed1a96a99021a23c"
-    sha256 cellar: :any,                 sonoma:        "3404d7be47650763fbb9725e00d1b0c0a25fb6db3f0e69c6e0697d0a6c073792"
-    sha256 cellar: :any,                 ventura:       "528b16914a51e94d9717dc1ed227b9f17629a74b39f9ab7b6a247ff83595dcbf"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "7ec7e3de3b6ecb2d3153e18357a68c7c365a07867832035d78ff309b08bd446a"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "40e3d5c6a8984b1537a78814e99221cb6153c4ec43619518ee9b443cb05a1ad0"
+    sha256 cellar: :any,                 arm64_tahoe:   "73592abca0d4c44cae84d672701557bde62768de01e07a7f9cad55085db64197"
+    sha256 cellar: :any,                 arm64_sequoia: "dab5747c0a47c70ab6b0385c2185e28beb73ca14d092530eff61d514d5a79fab"
+    sha256 cellar: :any,                 arm64_sonoma:  "502ce69a209abc1b42c1c50f64026169e55279f63558004e9fd5604f5d16e40d"
+    sha256 cellar: :any,                 sonoma:        "90b99742b883d2573d5d4506f4798b62ad509ab5e55af476271afd91727d002a"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "cbd9696597f1e1d26666e9634c983ddf607633d9fa40ee8225999fb3863e8085"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "d763954d4d189c734bcbd7b9677656ba41d52146aed69861dd7d008cb6c328f8"
   end
 
   depends_on "cmake" => :build # for pyzmq

@@ -18,6 +18,7 @@ class Openj9 < Formula
 
   bottle do
     rebuild 1
+    sha256 cellar: :any, arm64_tahoe:   "cb5163911364e7dd848768a634f55c99187f51abb9e2d7ece4c1b3f2822b7d71"
     sha256 cellar: :any, arm64_sequoia: "29f9ddebb6f36fd0b5bca683d6abee61bc77741f93c6c6e61ec8e990d4e667df"
     sha256 cellar: :any, arm64_sonoma:  "438e8bcee5e83f44283299e7c303fa83f104d110fb366f4781cc36ba78eaa60f"
     sha256 cellar: :any, arm64_ventura: "2ce146ac5d3dd24c2128a3a415ccd7cbde196fba5886a9cfe9b17456f23acef4"

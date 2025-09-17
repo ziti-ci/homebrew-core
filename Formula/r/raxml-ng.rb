@@ -29,8 +29,11 @@ class RaxmlNg < Formula
   end
 
   def install
-    args = std_cmake_args + ["-DUSE_GMP=ON"]
-    system "cmake", "-S", ".", "-B", "build", *args
+    args = %w[-DUSE_GMP=ON]
+    # Workaround to build with CMake 4
+    args << "-DCMAKE_POLICY_VERSION_MINIMUM=3.5"
+
+    system "cmake", "-S", ".", "-B", "build", *args, *std_cmake_args
     system "cmake", "--build", "build"
     system "cmake", "--install", "build"
 
@@ -39,7 +42,8 @@ class RaxmlNg < Formula
     # This causes necessary flags like -D_RAXML_MPI to not get set.
     return if OS.mac?
 
-    system "cmake", "-S", ".", "-B", "build_mpi", *args, "-DUSE_MPI=ON"
+    args << "-DUSE_MPI=ON"
+    system "cmake", "-S", ".", "-B", "build_mpi", *args, *std_cmake_args
     system "cmake", "--build", "build_mpi"
     system "cmake", "--install", "build_mpi"
   end

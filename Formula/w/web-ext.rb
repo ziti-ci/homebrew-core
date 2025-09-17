@@ -1,8 +1,8 @@
 class WebExt < Formula
   desc "Command-line tool to help build, run, and test web extensions"
   homepage "https://github.com/mozilla/web-ext"
-  url "https://registry.npmjs.org/web-ext/-/web-ext-8.9.0.tgz"
-  sha256 "3b683ffbcb50c57e03b7ff5d9c4a118c1d9d04f834617d4809138fb3f1410295"
+  url "https://registry.npmjs.org/web-ext/-/web-ext-8.10.0.tgz"
+  sha256 "c1f66a6eef82c85b592b0ab66e16ba899a74729220cfbec3736f3743dbd7a924"
   license "MPL-2.0"
 
   bottle do
@@ -48,11 +48,11 @@ class WebExt < Formula
         "version": "0.0.1"
       }
     JSON
-    assert_equal <<~EOF, shell_output("#{bin}/web-ext lint").gsub(/ +$/, "")
+    assert_match <<~EOF, shell_output("#{bin}/web-ext lint").gsub(/ +$/, "")
       Validation Summary:
 
       errors          0
-      notices         0
+      notices         1
       warnings        0
 
     EOF

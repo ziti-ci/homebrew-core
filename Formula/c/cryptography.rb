@@ -1,8 +1,8 @@
 class Cryptography < Formula
   desc "Cryptographic recipes and primitives for Python"
   homepage "https://cryptography.io/en/latest/"
-  url "https://files.pythonhosted.org/packages/a7/35/c495bffc2056f2dadb32434f1feedd79abde2a7f8363e1974afa9c33c7e2/cryptography-45.0.7.tar.gz"
-  sha256 "4b1654dfc64ea479c242508eb8c724044f1e964a47d1d1cacc5132292d851971"
+  url "https://files.pythonhosted.org/packages/a9/62/e3664e6ffd7743e1694b244dde70b43a394f6f7fbcacf7014a8ff5197c73/cryptography-46.0.1.tar.gz"
+  sha256 "ed570874e88f213437f5cf758f9ef26cbfc3f336d889b1e592ee11283bb8d1c7"
   license any_of: ["Apache-2.0", "BSD-3-Clause"]
   head "https://github.com/pyca/cryptography.git", branch: "main"
 

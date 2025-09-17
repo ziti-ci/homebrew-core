@@ -13,13 +13,13 @@ class Libpinyin < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_sequoia: "aaed14d5715f8e7729bc8d9cd92e3e8e4dd2dd9441e9ced1e0b96580bf00b54a"
-    sha256 cellar: :any,                 arm64_sonoma:  "e04db469902c1b7e903fdb9175516108c839938f43f4a0e88ba6815c3aec9d5a"
-    sha256 cellar: :any,                 arm64_ventura: "ce5ff005c6062a0fe25f847360e108005fe501781001a00639d293b998f6994c"
-    sha256 cellar: :any,                 sonoma:        "ee86347d03773114f21f384cad57fb4bcb2b43cf0dedabab4ff351dbd5d95627"
-    sha256 cellar: :any,                 ventura:       "b14da0e3d354815d87d73b7d23b80e04be3054dc4bc84851ded699141a79cf2d"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "cde0e982926df86e7021cdadfabaf61170ba028ecc02c96c4d36d0e160b6259b"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "8559ecb72bf0427461e62a367105bc470aff731f506e61e3816fffd8da9c6a06"
+    rebuild 1
+    sha256 cellar: :any,                 arm64_tahoe:   "c3eff6787b4bc6cbf0e273a6ba581d8f3e084d446b2c80c6c67e4d6604461a05"
+    sha256 cellar: :any,                 arm64_sequoia: "699b9d73d9a1b5d16bddc316b6bc1318438ebfa7c690a55d0a62d1eaea44e723"
+    sha256 cellar: :any,                 arm64_sonoma:  "873af165cb45fd26a2c2530c25d0b9a2e069735d91c259552a3e15bd7b56f952"
+    sha256 cellar: :any,                 sonoma:        "55db6b57140725c04486323779e41975236593d7d0653cdbe8fed500a5f9e0f1"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "ad69490dffe944746572abc03f9fac9a07729271e7f00be47083d7afc6dd78d7"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "7e96c07a3b59e86a4f372d0fc46d534571901e89d713f6218ac8baa00eae3f13"
   end
 
   depends_on "autoconf" => :build

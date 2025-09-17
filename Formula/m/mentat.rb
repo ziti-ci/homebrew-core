@@ -9,6 +9,7 @@ class Mentat < Formula
   revision 4
 
   bottle do
+    sha256 cellar: :any,                 arm64_tahoe:   "20023e1f45d57239eb03636c60a6d4bed7e8261b3f49822b32cf881bd41d50bb"
     sha256 cellar: :any,                 arm64_sequoia: "e50b7be43330309d729ea40eea1e7172222bd6fd9282226e7612a0ba0f55901c"
     sha256 cellar: :any,                 arm64_sonoma:  "b0f2721975cfb85bfdbdf0e14864fde5813204bfe71cc4665285a3f300b986ed"
     sha256 cellar: :any,                 arm64_ventura: "fbd9c362f348f654fb3dc2bd87cbf137bfe164e30016f6b0a27f3a4f88d2a3be"

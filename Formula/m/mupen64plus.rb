@@ -13,6 +13,7 @@ class Mupen64plus < Formula
   no_autobump! because: :requires_manual_review
 
   bottle do
+    sha256 arm64_tahoe:   "bcdd3173e040bf26c85fb1ede2377ebffaa0ce143720c5f2d200159cb52d3708"
     sha256 arm64_sequoia: "fa76319a48aa3bc5d5997f8c5108156a8501c110bc7e02a3a69d86065cd28264"
     sha256 arm64_sonoma:  "5005db0835711d42c5d6c457795e4b6374e974568f380fb381d440266dbdd5b1"
     sha256 arm64_ventura: "5a9308e8d1a6356bbef3f5f6009fb06c1d190d59fd3e85565c4f9e1123cf3ff1"

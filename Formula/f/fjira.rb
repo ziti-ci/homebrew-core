@@ -6,6 +6,14 @@ class Fjira < Formula
   license "AGPL-3.0-only"
   head "https://github.com/mk-5/fjira.git", branch: "master"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "cdc12e7e6100b6580bb38e988957365bd4360c733f8a6c0a71e50fb2b6765e24"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "cdc12e7e6100b6580bb38e988957365bd4360c733f8a6c0a71e50fb2b6765e24"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "cdc12e7e6100b6580bb38e988957365bd4360c733f8a6c0a71e50fb2b6765e24"
+    sha256 cellar: :any_skip_relocation, sonoma:        "1d54a95f16491e412a39a91c9355f85206bff0e73b465dfae6dca01651f55574"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "a60c5711ea7823d73b8f4eec2858e509909dfa084f2e64816816de08a5bb4a77"
+  end
+
   depends_on "go" => :build
 
   def install

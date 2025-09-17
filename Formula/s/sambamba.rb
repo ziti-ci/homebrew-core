@@ -30,6 +30,12 @@ class Sambamba < Formula
   # remove `-flto=full` flag
   patch :DATA
 
+  # Fix to add missing break for case statement, should remove in next release
+  patch do
+    url "https://github.com/biod/sambamba/commit/5fdcf6f3015cb17b805514397223f7513bc92613.patch?full_index=1"
+    sha256 "f51a32a00102478aa8c9a0c36975a33438fd474992127a757d9a4732b10e6695"
+  end
+
   def install
     system "make", "release"
     bin.install "bin/sambamba-#{version}" => "sambamba"

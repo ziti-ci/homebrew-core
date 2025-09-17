@@ -3,8 +3,8 @@ class Cycode < Formula
 
   desc "Boost security in your dev lifecycle via SAST, SCA, Secrets & IaC scanning"
   homepage "https://github.com/cycodehq/cycode-cli"
-  url "https://files.pythonhosted.org/packages/3c/1e/a57e5e9274f513b42d2fa85395824c1d1a27125e6f8d2a0676cbcd58dcfd/cycode-3.4.2.tar.gz"
-  sha256 "6c605a12f508ced161ada136f18c45338785d78ea7b7e406b59499ef57bd63a5"
+  url "https://files.pythonhosted.org/packages/85/87/402fb9625d6e5401d32a8587164fc0bd7a802e94d13dd248c2e74313570a/cycode-3.4.3.tar.gz"
+  sha256 "575b5f451cfd6c038d624ff2666b8cb8991332d4056298e7f63b592ca499bc18"
   license "MIT"
   head "https://github.com/cycodehq/cycode-cli.git", branch: "main"
 
@@ -126,8 +126,8 @@ class Cycode < Formula
   end
 
   resource "mcp" do
-    url "https://files.pythonhosted.org/packages/66/3c/82c400c2d50afdac4fbefb5b4031fd327e2ad1f23ccef8eee13c5909aa48/mcp-1.13.1.tar.gz"
-    sha256 "165306a8fd7991dc80334edd2de07798175a56461043b7ae907b279794a834c5"
+    url "https://files.pythonhosted.org/packages/95/fd/d6e941a52446198b73e5e4a953441f667f1469aeb06fb382d9f6729d6168/mcp-1.14.0.tar.gz"
+    sha256 "2e7d98b195e08b2abc1dc6191f6f3dc0059604ac13ee6a40f88676274787fac4"
   end
 
   resource "mdurl" do
@@ -151,8 +151,8 @@ class Cycode < Formula
   end
 
   resource "pydantic" do
-    url "https://files.pythonhosted.org/packages/00/dd/4325abf92c39ba8623b5af936ddb36ffcfe0beae70405d456ab1fb2f5b8c/pydantic-2.11.7.tar.gz"
-    sha256 "d989c3c6cb79469287b1569f7447a17848c998458d49ebe294e975b9baf0f0db"
+    url "https://files.pythonhosted.org/packages/ff/5d/09a551ba512d7ca404d785072700d3f6727a02f6f3c24ecfd081c7cf0aa8/pydantic-2.11.9.tar.gz"
+    sha256 "6b8ffda597a14812a7975c90b82a8a2e777d9257aba3453f973acd3c032a18e2"
   end
 
   resource "pydantic-core" do
@@ -216,8 +216,8 @@ class Cycode < Formula
   end
 
   resource "sentry-sdk" do
-    url "https://files.pythonhosted.org/packages/78/be/ffc232c32d0be18f8e4eff7a22dffc1f1fef2894703d64cc281a80e75da6/sentry_sdk-2.37.1.tar.gz"
-    sha256 "531751da91aa62a909b42a7be155b41f6bb0de9df6ae98441d23b95de2f98475"
+    url "https://files.pythonhosted.org/packages/b2/22/60fd703b34d94d216b2387e048ac82de3e86b63bc28869fb076f8bb0204a/sentry_sdk-2.38.0.tar.gz"
+    sha256 "792d2af45e167e2f8a3347143f525b9b6bac6f058fb2014720b40b84ccbeb985"
   end
 
   resource "shellingham" do
@@ -246,8 +246,8 @@ class Cycode < Formula
   end
 
   resource "starlette" do
-    url "https://files.pythonhosted.org/packages/15/b9/cc3017f9a9c9b6e27c5106cc10cc7904653c3eec0729793aec10479dd669/starlette-0.47.3.tar.gz"
-    sha256 "6bc94f839cc176c4858894f1f8908f0ab79dfec1a6b8402f6da9be26ebea52e9"
+    url "https://files.pythonhosted.org/packages/a7/a5/d6f429d43394057b67a6b5bbe6eae2f77a6bf7459d961fdb224bf206eee6/starlette-0.48.0.tar.gz"
+    sha256 "7e8cee469a8ab2352911528110ce9088fdc6a37d9876926e73da7ce4aa4c7a46"
   end
 
   resource "tenacity" do

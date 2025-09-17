@@ -9,6 +9,7 @@ class Inspectrum < Formula
   no_autobump! because: :requires_manual_review
 
   bottle do
+    sha256 cellar: :any,                 arm64_tahoe:    "01c5abe179e48ef0e3c9b8b4023c809b8a562edc17dc6b62acc4404f9fdf2bc4"
     sha256 cellar: :any,                 arm64_sequoia:  "7060c870cf3c1fb749f7fbca5fa9479ff9f3794f932804f211728c6238355025"
     sha256 cellar: :any,                 arm64_sonoma:   "b8fed8bc9e251d6f90e191b260fba14a907183b966ce9058eca5e45832fd096b"
     sha256 cellar: :any,                 arm64_ventura:  "85676ab09338e0dc82b50ef359f7ac49e8f1ae09eaa673ad23da5edb55dcbe07"

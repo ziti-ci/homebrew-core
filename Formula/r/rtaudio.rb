@@ -7,16 +7,13 @@ class Rtaudio < Formula
   head "https://github.com/thestk/rtaudio.git", branch: "master"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any,                 arm64_sequoia:  "91a97a9e4ed02b0fef4016d7ee2916edce3c41251bf9942f4aef4a9148c382f3"
-    sha256 cellar: :any,                 arm64_sonoma:   "1d56ffbaacd143c4ce5215d42f5424d42dfd947bc26eaf57830eb51e7546068b"
-    sha256 cellar: :any,                 arm64_ventura:  "483296d1cc1b969448614c1a22d004a1222270832842dce62be151465fd21753"
-    sha256 cellar: :any,                 arm64_monterey: "87c6a5b3c3eeb5b176786c650f5606de4cf7936ddf152fb669456eca491512cb"
-    sha256 cellar: :any,                 sonoma:         "0a25a53c7f0cf7dc23dc4e4e9ecaa7df13051b16b3c8513ece3609064a74bab1"
-    sha256 cellar: :any,                 ventura:        "a3feed53dc08f1210bd32431b16fc0bf0264dc66144ea64716b95b9a34e80902"
-    sha256 cellar: :any,                 monterey:       "fb3184319287e1a9d056b35033806116fd44390f406cc3a19f2d9fc107148318"
-    sha256 cellar: :any_skip_relocation, arm64_linux:    "5fd5758c63b71ddcc39884b1eabc5408bb4e25c812bf94a7021df35aba3f9881"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "5115ee3bbfff48c47089c8051a0826ce35277e2d75397cb8e1b0fe39e8933588"
+    rebuild 2
+    sha256 cellar: :any,                 arm64_tahoe:   "636ce2d8b737d54f783dc197c20333d6476aa1c3f6a4999c43667d8b34caf7d3"
+    sha256 cellar: :any,                 arm64_sequoia: "b68191b6cb2a95518f1287e8edc1a0a8891797be09d9bded1505e867e42c5864"
+    sha256 cellar: :any,                 arm64_sonoma:  "09c7f13747d8cea17f268baf52de92bf1663a177dd891f86ea9641100903fef2"
+    sha256 cellar: :any,                 sonoma:        "86d1af2e2535c239c7f101e9e6f9b7eb6e0843fca2564a37a63c3165800da785"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "490c370e0ad9885447cc173c281ddc593c0d3be86536fcc293fd874758f61382"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "04dbca1518d5695c5c3f0123b05362787ab22f090c2a5fde271f52906fec5c4e"
   end
 
   depends_on "autoconf" => :build

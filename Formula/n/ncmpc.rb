@@ -11,6 +11,7 @@ class Ncmpc < Formula
   end
 
   bottle do
+    sha256 arm64_tahoe:   "0701c7e13e2814b15fd2334a7d21bd3c00e9cfeaf8349ba7d54b844a5297514e"
     sha256 arm64_sequoia: "3e4c3f1696738bc7953a5e066430fabe411a08ac18637c0055237f7fbec8461b"
     sha256 arm64_sonoma:  "e6c82a7bfc8790701e5ae101608cd015c84f18f0a31e007b80ec5b3078555e62"
     sha256 arm64_ventura: "f7c1bf501994b1028ab1fbd9ac4dd4d83c96bb3ab83b25b4ce8cf8f0e8f692fe"

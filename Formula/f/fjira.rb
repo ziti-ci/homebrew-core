@@ -1,17 +1,17 @@
 class Fjira < Formula
   desc "Fuzzy-find cli jira interface"
   homepage "https://github.com/mk-5/fjira"
-  url "https://github.com/mk-5/fjira/archive/refs/tags/1.4.8.tar.gz"
-  sha256 "8ae74e699824bf657a183f0e4a4d553f73604c214201e4928b1bb46518c9f3d2"
+  url "https://github.com/mk-5/fjira/archive/refs/tags/1.4.9.tar.gz"
+  sha256 "b0754c8e3e5126918f063d285cc6fa9fd34c4e1136c1377fc4de9a4e2bbfd6a5"
   license "AGPL-3.0-only"
   head "https://github.com/mk-5/fjira.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "cdc12e7e6100b6580bb38e988957365bd4360c733f8a6c0a71e50fb2b6765e24"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "cdc12e7e6100b6580bb38e988957365bd4360c733f8a6c0a71e50fb2b6765e24"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "cdc12e7e6100b6580bb38e988957365bd4360c733f8a6c0a71e50fb2b6765e24"
-    sha256 cellar: :any_skip_relocation, sonoma:        "1d54a95f16491e412a39a91c9355f85206bff0e73b465dfae6dca01651f55574"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "a60c5711ea7823d73b8f4eec2858e509909dfa084f2e64816816de08a5bb4a77"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "5242e1acfbf6e1549c28d1159270b65ab33fedb5aebc19ab8dec448378bb505b"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "5242e1acfbf6e1549c28d1159270b65ab33fedb5aebc19ab8dec448378bb505b"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "5242e1acfbf6e1549c28d1159270b65ab33fedb5aebc19ab8dec448378bb505b"
+    sha256 cellar: :any_skip_relocation, sonoma:        "d16abff2ed1dfba9df90a348b1eba3613c3cd61fe3f661782af358b8ae73a222"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "51f87ef9441e760c1ebb2c8f60a136be0b3238355d8ba8e4d8a984ab3b101576"
   end
 
   depends_on "go" => :build

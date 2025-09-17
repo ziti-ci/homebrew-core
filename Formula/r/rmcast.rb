@@ -6,6 +6,7 @@ class Rmcast < Formula
   license "QPL-1.0"
 
   bottle do
+    sha256 cellar: :any,                 arm64_tahoe:    "de8e1fc85f602d20604c3e0a44e08c3dfc3e424f6faee2e65a0fed714646da3e"
     sha256 cellar: :any,                 arm64_sequoia:  "2550872c1731058ae467f82b6258659ace4cc86e091fa54f827daa61cd5677fc"
     sha256 cellar: :any,                 arm64_sonoma:   "d82904f97cda3eb5874bfca8ac452568a04efeadd88524fc2b1e03cb594ecca9"
     sha256 cellar: :any,                 arm64_ventura:  "07939c86d1018aeb45c483ea2e96514f24cc92fcca30f5ffe3ebdaa8f1a53b9d"

@@ -16,6 +16,7 @@ class Newsboat < Formula
   end
 
   bottle do
+    sha256 arm64_tahoe:   "08e61ae78bb180d94bacfd18718e0ff22ec506c1fe3ddc66140ddf43342434fe"
     sha256 arm64_sequoia: "62beb795654ad0e034cae9415b3d9762037dd5b7a6b084195338d66dfe12e5d4"
     sha256 arm64_sonoma:  "eaab1099251d9341a040788309e8de0cd3a2210eb45b8feaa15dd96303c3ad94"
     sha256 arm64_ventura: "00456fdf96b6cf458a1ef3e68343ded5c41f4c41dea5af060c477c782b74e535"

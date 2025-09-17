@@ -1,8 +1,8 @@
 class LanguagetoolRust < Formula
   desc "LanguageTool API in Rust"
   homepage "https://docs.rs/languagetool-rust"
-  url "https://github.com/jeertmans/languagetool-rust/archive/refs/tags/v2.1.5.tar.gz"
-  sha256 "db1da3e821976c2e5e85c26037301dd43fe8baff6bff243c498f74f7c5e57d37"
+  url "https://github.com/jeertmans/languagetool-rust/archive/refs/tags/v3.0.0.tar.gz"
+  sha256 "d3ed057524712b9efc79fedee2b9e32d3abe2974778fe5e85ac164b17303d5b5"
   license "MIT"
   head "https://github.com/jeertmans/languagetool-rust.git", branch: "main"
 

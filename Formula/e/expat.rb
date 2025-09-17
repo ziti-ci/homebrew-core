@@ -1,8 +1,8 @@
 class Expat < Formula
   desc "XML 1.0 parser"
   homepage "https://libexpat.github.io/"
-  url "https://github.com/libexpat/libexpat/releases/download/R_2_7_1/expat-2.7.1.tar.lz"
-  sha256 "baacdd8d98d5d3b753f2a2780d84b0bc7731be11cacdc1b98cb8ad73f0504e68"
+  url "https://github.com/libexpat/libexpat/releases/download/R_2_7_2/expat-2.7.2.tar.lz"
+  sha256 "23aaa1c5c56dc10178630331f9adbb465e8c066b105c233f4198359e3ba30716"
   license "MIT"
 
   livecheck do
@@ -13,7 +13,7 @@ class Expat < Formula
     end
   end
 
-  no_autobump! because: :requires_manual_review
+  no_autobump! because: :incompatible_version_format
 
   bottle do
     sha256 cellar: :any,                 arm64_tahoe:   "d5680348fcadd338aa6a041c4c2072066b7bb616f52bf20a6b84c36622176e2b"

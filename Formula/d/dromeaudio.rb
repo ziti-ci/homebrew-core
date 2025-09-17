@@ -30,7 +30,10 @@ class Dromeaudio < Formula
     # install FindDromeAudio.cmake under share/cmake/Modules/
     inreplace "share/CMakeLists.txt", "${CMAKE_ROOT}", "#{share}/cmake"
 
-    system "cmake", "-S", ".", "-B", "build", *std_cmake_args
+    # Workaround for CMake 4 compatibility
+    inreplace "CMakeLists.txt", "cmake_policy(SET CMP0005 OLD)", ""
+    args = %w[-DCMAKE_POLICY_VERSION_MINIMUM=3.5]
+    system "cmake", "-S", ".", "-B", "build", *args, *std_cmake_args
     system "cmake", "--build", "build"
     system "cmake", "--install", "build"
   end

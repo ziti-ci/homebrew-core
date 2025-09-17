@@ -6,6 +6,14 @@ class AttemptCli < Formula
   license "Unlicense"
   head "https://github.com/MaxBondABE/attempt.git", branch: "main"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "f3d246f8da65165d17c588dc3bf1231532e0c8c666fc2f5bac8493c9a6911f6b"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "f6affd2438d988a8bf47fa4991d1df98c07b0e7e92940de0b69f8d5816269432"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "b946258b9c500cb93ed7609477acf244e29c94dc90e6454e250407e912588f49"
+    sha256 cellar: :any_skip_relocation, sonoma:        "e2830afa1aae71e0dd566895e9ee24a87831d1cb175e60a157493392c9348cc6"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "405051516520cdea32998076289c1331800da5dbd81e7d16fb8d067cb6f97a56"
+  end
+
   depends_on "rust" => :build
 
   def install

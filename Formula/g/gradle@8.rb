@@ -4,6 +4,7 @@ class GradleAT8 < Formula
   url "https://services.gradle.org/distributions/gradle-8.14.3-all.zip"
   sha256 "ed1a8d686605fd7c23bdf62c7fc7add1c5b23b2bbc3721e661934ef4a4911d7c"
   license "Apache-2.0"
+  revision 1
 
   livecheck do
     url "https://gradle.org/releases/"
@@ -17,17 +18,13 @@ class GradleAT8 < Formula
   keg_only :versioned_formula
 
   # https://github.com/gradle/gradle/blob/master/platforms/documentation/docs/src/docs/userguide/releases/compatibility.adoc
-  depends_on "openjdk"
+  depends_on "openjdk@21"
 
   def install
     rm(Dir["bin/*.bat"])
     libexec.install %w[bin docs lib src]
-    env = Language::Java.overridable_java_home_env
+    env = Language::Java.overridable_java_home_env("21")
     (bin/"gradle").write_env_script libexec/"bin/gradle", env
-
-    # Ensure we have uniform bottles.
-    inreplace libexec/"src/jvm-services/org/gradle/jvm/toolchain/internal/LinuxInstallationSupplier.java",
-              "/usr/local", HOMEBREW_PREFIX
   end
 
   test do

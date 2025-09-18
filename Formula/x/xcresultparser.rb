@@ -1,8 +1,8 @@
 class Xcresultparser < Formula
   desc "Parse binary .xcresult bundles from Xcode builds and test runs"
   homepage "https://github.com/a7ex/xcresultparser"
-  url "https://github.com/a7ex/xcresultparser/archive/refs/tags/1.9.0.tar.gz"
-  sha256 "45ebdb55b5b161ac5a01042239fcf789eac62eac291042dc73c6ed6e4a1d7249"
+  url "https://github.com/a7ex/xcresultparser/archive/refs/tags/1.9.1.tar.gz"
+  sha256 "22f897ffe9bd55eadc85c3d4328514caaeea1e0de49f35cbf07aaea9ad9d900d"
   license "MIT"
   head "https://github.com/a7ex/xcresultparser.git", branch: "main"
 

@@ -23,6 +23,7 @@ class Inko < Formula
 
   bottle do
     rebuild 1
+    sha256 cellar: :any,                 arm64_tahoe:   "61eb97a6c71d33389ac906a5d69f143172f61d78a91b91c667e50e71a0604f19"
     sha256 cellar: :any,                 arm64_sequoia: "ee26a0c11c1c527151fde51739a7f4fe5ac5f721805deb98e1a5f2bd3024d038"
     sha256 cellar: :any,                 arm64_sonoma:  "44fc95eba234a04e7cfe132a17874892a86fdcf0b198a07de3ca5807fdead3be"
     sha256 cellar: :any,                 arm64_ventura: "e61d4dd6bacfdb7d01a885493de960998271cf10f6bf4931a2deecef27a59eec"

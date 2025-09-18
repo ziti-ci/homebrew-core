@@ -5,6 +5,14 @@ class WalG < Formula
   sha256 "69368316b90fae7c040e489ad540f6018d0f00963c5bc94d262d530e83bdd4ce"
   license "Apache-2.0"
 
+  bottle do
+    sha256 cellar: :any,                 arm64_tahoe:   "8aa6dcd7b9a17e0d53a37d54c020c88602e7e4e64712c6aeec5acd30047c4fa7"
+    sha256 cellar: :any,                 arm64_sequoia: "c64d5ad15282efaf311ca082f96e4b190b0dd3f26df838c430f343ec00236356"
+    sha256 cellar: :any,                 arm64_sonoma:  "aee2c57633ed2939227c23d119a6f398345da14bd3f894ececdfb12218dd8853"
+    sha256 cellar: :any,                 sonoma:        "8c1cccbeff937880545db272acf046cc328ef1021e73d1d6694a9dbf06ccad3b"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "d6f9f6d8dae5a52ba674f4bf21190df5e62dbc75222419da9e67b3c62213c781"
+  end
+
   depends_on "go" => :build
   depends_on "brotli"
   depends_on "libsodium"

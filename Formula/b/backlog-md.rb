@@ -1,8 +1,8 @@
 class BacklogMd < Formula
   desc "Markdown‑native Task Manager & Kanban visualizer for any Git repository"
   homepage "https://github.com/MrLesk/Backlog.md"
-  url "https://registry.npmjs.org/backlog.md/-/backlog.md-1.12.1.tgz"
-  sha256 "6e80da3c240aeba2d2b29b66222bb5df967609fe280c908128810f2a9e99e11c"
+  url "https://registry.npmjs.org/backlog.md/-/backlog.md-1.12.2.tgz"
+  sha256 "feab1ea4989f9663dad5422704d71dd9ce19a3e10272281c2791d2afee60025e"
   license "MIT"
 
   bottle do

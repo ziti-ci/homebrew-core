@@ -3,8 +3,8 @@ class Ldeep < Formula
 
   desc "LDAP enumeration utility"
   homepage "https://github.com/franc-pentest/ldeep"
-  url "https://files.pythonhosted.org/packages/28/4d/54d97255db812fc2a4ba2f166a1468ae6e8c17e2c29ee9ec70d6611fca6c/ldeep-1.0.87.tar.gz"
-  sha256 "b9349b8883fa6257c70ae75af9851340cad2ef40216231c02bd0ea7f88921eff"
+  url "https://files.pythonhosted.org/packages/73/de/1d8610a96f05fa2ec207f60c84fb8c2cd74f7ee582f65b718cfd4607cf0a/ldeep-1.0.88.tar.gz"
+  sha256 "624d49ed8109eed4e06371b11e58e33d2a876aefa9c5f1b2260a7a1e9023cfb4"
   license "MIT"
   head "https://github.com/franc-pentest/ldeep.git", branch: "master"
 
@@ -40,13 +40,13 @@ class Ldeep < Formula
   end
 
   resource "dnspython" do
-    url "https://files.pythonhosted.org/packages/b5/4a/263763cb2ba3816dd94b08ad3a33d5fdae34ecb856678773cc40a3605829/dnspython-2.7.0.tar.gz"
-    sha256 "ce9c432eda0dc91cf618a5cedf1a4e142651196bbcd2c80e89ed5a907e5cfaf1"
+    url "https://files.pythonhosted.org/packages/8c/8b/57666417c0f90f08bcafa776861060426765fdb422eb10212086fb811d26/dnspython-2.8.0.tar.gz"
+    sha256 "181d3c6996452cb1189c4046c61599b84a5a86e099562ffde77d26984ff26d0f"
   end
 
   resource "gssapi" do
-    url "https://files.pythonhosted.org/packages/04/2f/fcffb772a00e658f608e657791484e3111a19a722b464e893fef35f35097/gssapi-1.9.0.tar.gz"
-    sha256 "f468fac8f3f5fca8f4d1ca19e3cd4d2e10bd91074e7285464b22715d13548afe"
+    url "https://files.pythonhosted.org/packages/72/c8/90912e90208bd20ed9384f299384cc9ee8f354758bd8650155eba33d4655/gssapi-1.10.0.tar.gz"
+    sha256 "f1495e0dc20bee3ad2839724d98ae723c7dae78c1ddea37a7c861c3c4bd77763"
   end
 
   resource "ldap3-bleeding-edge" do

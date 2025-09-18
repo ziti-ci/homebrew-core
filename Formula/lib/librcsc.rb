@@ -22,6 +22,8 @@ class Librcsc < Formula
   depends_on "automake" => :build
   depends_on "boost" => :build
   depends_on "libtool" => :build
+  depends_on "nlohmann-json" => :build
+  depends_on "simdjson"
 
   uses_from_macos "zlib"
 
@@ -32,11 +34,13 @@ class Librcsc < Formula
     sha256 "cd9df87f8f8dd0c7e3dd0a0bf325b9dd66f8ba9e42cb0e6fab230872dc5ce243"
   end
 
-  # Backport simdjson fix for LLVM 19+ (Xcode 16.3+) to bundled copy
-  # https://github.com/simdjson/simdjson/commit/5d35e7ca1f1727ca57d31d4ae5f3954fe96337e3
+  # Unbundle simdjson
   patch :DATA
 
   def install
+    # Remove bundled nlohmann-json and simdjson
+    rm_r(["rcsc/rcg/nlohmann", "rcsc/rcg/simdjson"])
+
     # Workaround until upstream removes unnecessary Boost.System link
     boost_workaround = ["--without-boost-system"]
 
@@ -65,24 +69,51 @@ class Librcsc < Formula
 end
 
 __END__
---- a/rcsc/rcg/simdjson/simdjson.h
-+++ b/rcsc/rcg/simdjson/simdjson.h
-@@ -57,15 +57,15 @@ class base_formatter {
-   simdjson_inline void one_char(char c);
+diff --git a/rcsc/rcg/Makefile.am b/rcsc/rcg/Makefile.am
+index 819c63a..4bac46f 100644
+--- a/rcsc/rcg/Makefile.am
++++ b/rcsc/rcg/Makefile.am
+@@ -6,7 +6,6 @@ noinst_LTLIBRARIES = librcsc_rcg.la
+ #lib_LTLIBRARIES = librcsc_rcg.la
  
-   simdjson_inline void call_print_newline() {
--      this->print_newline();
-+      static_cast<formatter*>(this)->print_newline();
-   }
+ librcsc_rcg_la_SOURCES = \
+-	simdjson/simdjson.cpp \
+ 	handler.cpp \
+ 	parser.cpp \
+ 	parser_v1.cpp \
+@@ -47,9 +46,10 @@ librcsc_rcginclude_HEADERS = \
+ 	types.h \
+ 	util.h
  
-   simdjson_inline void call_print_indents(size_t depth) {
--      this->print_indents(depth);
-+      static_cast<formatter*>(this)->print_indents(depth);
-   }
+-noinst_HEADERS = \
+-	simdjson/simdjson.h
++noinst_HEADERS =
  
-   simdjson_inline void call_print_space() {
--      this->print_space();
-+      static_cast<formatter*>(this)->print_space();
-   }
++librcsc_rcg_la_CXXFLAGS = -DSIMDJSON_THREADS_ENABLED=1
++librcsc_rcg_la_LIBADD = -lsimdjson
+ librcsc_rcg_la_LDFLAGS = -version-info 6:0:0
+ #libXXXX_la_LDFLAGS = -version-info $(LT_CURRENT):$(LT_REVISION):$(LT_AGE)
+ #		 1. Start with version information of `0:0:0' for each libtool library.
+@@ -76,8 +76,7 @@ AM_CFLAGS = -Wall -W
+ AM_CXXFLAGS = -Wall -W
+ AM_LDFLAGS =
  
- protected:
+-EXTRA_DIST = \
+-	simdjson/LICENSE
++EXTRA_DIST =
+ 
+ CLEANFILES = *~
+ 
+diff --git a/rcsc/rcg/parser_simdjson.cpp b/rcsc/rcg/parser_simdjson.cpp
+index 019d482..a5eca8c 100644
+--- a/rcsc/rcg/parser_simdjson.cpp
++++ b/rcsc/rcg/parser_simdjson.cpp
+@@ -39,7 +39,7 @@
+ #include "types.h"
+ #include "util.h"
+ 
+-#include "simdjson/simdjson.h"
++#include "simdjson.h"
+ 
+ #include <unordered_map>
+ #include <string_view>

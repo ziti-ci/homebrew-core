@@ -85,7 +85,7 @@ class Moc < Formula
   def install
     # macOS iconv implementation is slightly broken since Sonoma.
     # upstream bug report: https://savannah.gnu.org/bugs/index.php?66541
-    ENV["am_cv_func_iconv_works"] = "yes" if OS.mac? && MacOS.version == :sequoia
+    ENV["am_cv_func_iconv_works"] = "yes" if OS.mac? && MacOS.version >= :sequoia
 
     ENV.append_path "ACLOCAL_PATH", Formula["gettext"].pkgshare/"m4"
 

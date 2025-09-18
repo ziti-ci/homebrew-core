@@ -28,9 +28,8 @@ class CenterIm < Formula
   depends_on "pkgconf" => :build
   depends_on "glib"
   depends_on "libsigc++@2"
+  depends_on "ncurses"
   depends_on "pidgin" # for libpurple
-
-  uses_from_macos "ncurses", since: :sonoma
 
   on_macos do
     depends_on "gettext"
@@ -42,7 +41,7 @@ class CenterIm < Formula
     # Issue ref: https://github.com/petrpavlu/centerim5/issues/1
     mv "version", ".tarball-version"
 
-    system "cmake", "-S", ".", "-B", "build", *std_cmake_args
+    system "cmake", "-S", ".", "-B", "build", "-DCMAKE_POLICY_VERSION_MINIMUM=3.5", *std_cmake_args
     system "cmake", "--build", "build"
     system "cmake", "--install", "build"
   end

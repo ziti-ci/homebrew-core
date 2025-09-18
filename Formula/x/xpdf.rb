@@ -34,7 +34,10 @@ class Xpdf < Formula
     because: "poppler, pdftohtml, pdf2image, and xpdf install conflicting executables"
 
   def install
-    system "cmake", "-S", ".", "-B", "build", "-DSYSTEM_XPDFRC=#{etc}/xpdfrc", *std_cmake_args
+    args = %W[-DSYSTEM_XPDFRC=#{etc}/xpdfrc]
+    # Workaround for CMake 4 compatibility
+    args << "-DCMAKE_POLICY_VERSION_MINIMUM=3.5"
+    system "cmake", "-S", ".", "-B", "build", *args, *std_cmake_args
     system "cmake", "--build", "build"
     system "cmake", "--install", "build"
   end

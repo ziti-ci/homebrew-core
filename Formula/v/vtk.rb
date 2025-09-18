@@ -7,9 +7,11 @@ class Vtk < Formula
   head "https://gitlab.kitware.com/vtk/vtk.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any, arm64_sonoma: "176813f5270cceaf19cff422d931e8551b0585e7fed3391d004e048cc77ce1e4"
-    sha256 cellar: :any, sonoma:       "de9a19a0dc55d7bd49a326e9e31ac7651152fbc0d5e6cd5bdb592e988a285d1c"
-    sha256               x86_64_linux: "07914299d58803d0efedb65d0c95ba66321eb2e34fb53e395adc696125d9f081"
+    sha256 cellar: :any, arm64_tahoe:   "bc41804094f5aef67dca3afed9132876daf20bc3905ff6003f020dcfb68e3528"
+    sha256 cellar: :any, arm64_sequoia: "b9bf7a139d2204f47cf25cd79cf08d11bb056039cef398b057650741c4800feb"
+    sha256 cellar: :any, arm64_sonoma:  "176813f5270cceaf19cff422d931e8551b0585e7fed3391d004e048cc77ce1e4"
+    sha256 cellar: :any, sonoma:        "de9a19a0dc55d7bd49a326e9e31ac7651152fbc0d5e6cd5bdb592e988a285d1c"
+    sha256               x86_64_linux:  "07914299d58803d0efedb65d0c95ba66321eb2e34fb53e395adc696125d9f081"
   end
 
   depends_on "cmake" => [:build, :test]

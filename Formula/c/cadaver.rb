@@ -1,8 +1,8 @@
 class Cadaver < Formula
   desc "Command-line client for DAV"
   homepage "https://notroj.github.io/cadaver/"
-  url "https://notroj.github.io/cadaver/cadaver-0.27.tar.gz"
-  sha256 "12afc62b23e1291270e95e821dcab0d5746ba4461cbfc84d08c2aebabb2ab54f"
+  url "https://notroj.github.io/cadaver/cadaver-0.28.tar.gz"
+  sha256 "33e3a54bd54b1eb325b48316a7cacc24047c533ef88e6ef98b88dfbb60e12734"
   license "GPL-2.0-only"
 
   livecheck do

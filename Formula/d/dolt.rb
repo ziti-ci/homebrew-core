@@ -1,8 +1,8 @@
 class Dolt < Formula
   desc "Git for Data"
   homepage "https://github.com/dolthub/dolt"
-  url "https://github.com/dolthub/dolt/archive/refs/tags/v1.59.10.tar.gz"
-  sha256 "1b07a4e088af7f988af249856cea9847634013ce6d897e7dbca667a16ece18be"
+  url "https://github.com/dolthub/dolt/archive/refs/tags/v1.59.11.tar.gz"
+  sha256 "3ef83395597d26cb4816bfd5943e65a9d4e924663de5bb4f502d2842bbbb1811"
   license "Apache-2.0"
   version_scheme 1
   head "https://github.com/dolthub/dolt.git", branch: "main"
@@ -22,6 +22,7 @@ class Dolt < Formula
   end
 
   depends_on "go" => :build
+  depends_on "icu4c@77"
 
   def install
     chdir "go" do

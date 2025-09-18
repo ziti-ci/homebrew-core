@@ -52,6 +52,10 @@ class BazelAT7 < Formula
   end
 
   def install
+    # Workaround for "missing LC_UUID load command in .../xcode-locator"
+    # https://github.com/bazelbuild/bazel/pull/27014
+    inreplace "tools/osx/BUILD", " -Wl,-no_uuid ", " "
+
     java_home_env = Language::Java.java_home_env("21")
 
     ENV["EMBED_LABEL"] = "#{version}-homebrew"

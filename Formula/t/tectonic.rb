@@ -58,6 +58,10 @@ class Tectonic < Formula
   def install
     ENV["MACOSX_DEPLOYMENT_TARGET"] = MacOS.version.to_s if OS.mac? # needed for CLT-only builds
 
+    # Fix to error: implicit autoref creates a reference to the dereference of a raw pointer
+    # for rust 1.89+, remove with next release
+    inreplace "crates/engine_bibtex/src/xbuf.rs", "(*old).len()", "(&(*old)).len()" if build.stable?
+
     # Ensure that the `openssl` crate picks up the intended library.
     # https://crates.io/crates/openssl#manual-configuration
     ENV["OPENSSL_DIR"] = Formula["openssl@3"].opt_prefix

@@ -1,10 +1,10 @@
 class JfrogCli < Formula
   desc "Command-line interface for JFrog products"
   homepage "https://www.jfrog.com/confluence/display/CLI/JFrog+CLI"
-  url "https://github.com/jfrog/jfrog-cli/archive/refs/tags/v2.78.9.tar.gz"
-  sha256 "15225169645a7e4e5fed016b306daad73e3ed1109828ff95db5d3ba0221dfa81"
+  url "https://github.com/jfrog/jfrog-cli/archive/refs/tags/v2.79.0.tar.gz"
+  sha256 "78c56f951152d7ff2c3584d897e1b380aeb16def71e9f29c75b8150d717d85d7"
   license "Apache-2.0"
-  head "https://github.com/jfrog/jfrog-cli.git", branch: "v2"
+  head "https://github.com/jfrog/jfrog-cli.git", branch: "master"
 
   # There can be a notable gap between when a version is tagged and a
   # corresponding release is created, so we check the "latest" release instead

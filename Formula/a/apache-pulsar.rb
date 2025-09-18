@@ -1,9 +1,9 @@
 class ApachePulsar < Formula
   desc "Cloud-native distributed messaging and streaming platform"
   homepage "https://pulsar.apache.org/"
-  url "https://www.apache.org/dyn/closer.lua?path=pulsar/pulsar-4.0.5/apache-pulsar-4.0.5-src.tar.gz"
-  mirror "https://archive.apache.org/dist/pulsar/pulsar-4.0.5/apache-pulsar-4.0.5-src.tar.gz"
-  sha256 "1b4b1c955c30e6402e779d09848fd7efba48336ba7dc0bf9776ef755eec1cfd0"
+  url "https://www.apache.org/dyn/closer.lua?path=pulsar/pulsar-4.1.0/apache-pulsar-4.1.0-src.tar.gz"
+  mirror "https://archive.apache.org/dist/pulsar/pulsar-4.1.0/apache-pulsar-4.1.0-src.tar.gz"
+  sha256 "6edb381a41adafcc6117c029caadcf606fd88e427796bef7b188f233aee7362a"
   license "Apache-2.0"
   head "https://github.com/apache/pulsar.git", branch: "master"
 
@@ -22,6 +22,11 @@ class ApachePulsar < Formula
   depends_on "openjdk@21"
 
   def install
+    # Pin gRPC Java version to that of protoc-gen-grpc-java
+    inreplace "pom.xml",
+              %r{<grpc.version>\d+(?:\.\d+)+</grpc.version>},
+              "<grpc.version>#{Formula["protoc-gen-grpc-java"].version}</grpc.version>"
+
     # Avoid using pre-built `protoc-gen-grpc-java`
     grpc_java_files = ["pulsar-client/pom.xml", "pulsar-functions/proto/pom.xml"]
     plugin_artifact = "io.grpc:protoc-gen-grpc-java:${protoc-gen-grpc-java.version}:exe:${os.detected.classifier}"

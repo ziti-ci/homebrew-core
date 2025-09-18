@@ -27,7 +27,7 @@ class Nebula < Formula
   end
 
   service do
-    run [opt_bin/"nebula", "-config", etc/"nebula/config.yml"]
+    run [opt_bin/"nebula", "-config", etc/"nebula/"]
     keep_alive true
     require_root true
     log_path var/"log/nebula.log"

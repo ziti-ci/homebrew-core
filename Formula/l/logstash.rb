@@ -1,8 +1,8 @@
 class Logstash < Formula
   desc "Tool for managing events and logs"
   homepage "https://www.elastic.co/products/logstash"
-  url "https://github.com/elastic/logstash/archive/refs/tags/v9.1.3.tar.gz"
-  sha256 "57aa3cef37811b401b24e49799b4bf69b26574229474e148d74573574b16e89e"
+  url "https://github.com/elastic/logstash/archive/refs/tags/v9.1.4.tar.gz"
+  sha256 "c5edd62c9cd82b5eb07b011ccbdb4e9320202ee6324c9cb8826fa5b9af5bf287"
   license "Apache-2.0"
   version_scheme 1
   head "https://github.com/elastic/logstash.git", branch: "main"

@@ -6,8 +6,7 @@ class Mjml < Formula
   license "MIT"
 
   bottle do
-    rebuild 2
-    sha256 cellar: :any_skip_relocation, all: "fc01447be6e0fd81d673d37952632cbf146f101ab9a117aaf31527c795550ad8"
+    sha256 cellar: :any_skip_relocation, all: "8a401bf0ba014957bb4aa712b5dd56a2db96ddea81bf3d852446735114e95bbb"
   end
 
   depends_on "node"

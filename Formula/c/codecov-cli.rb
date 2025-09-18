@@ -3,8 +3,8 @@ class CodecovCli < Formula
 
   desc "Codecov's command-line interface"
   homepage "https://cli.codecov.io/"
-  url "https://files.pythonhosted.org/packages/9d/e8/0bff3837f880d9812ad1342efbce001364d9db901cedb491d9f26a2c4973/codecov_cli-11.2.0.tar.gz"
-  sha256 "38d5ee3d3178526cddaaac12587fee3b61a9923a700797cee33de82bc3e90e12"
+  url "https://files.pythonhosted.org/packages/ea/f1/79cbb1c28c6fcf637155c780bd4e68172c7ba0d43b104f0b08923f4d80b7/codecov_cli-11.2.2.tar.gz"
+  sha256 "d77f82d4c5f05ab0336071a14a95f643e8b6abf78ba101b3af58f4856ff7c428"
   license "Apache-2.0"
 
   bottle do
@@ -33,8 +33,8 @@ class CodecovCli < Formula
   end
 
   resource "click" do
-    url "https://files.pythonhosted.org/packages/60/6c/8ca2efa64cf75a977a0d7fac081354553ebe483345c734fb6b6515d96bbc/click-8.2.1.tar.gz"
-    sha256 "27c491cc05d968d271d5a1db13e3b5a184636d9d930f148c50b038f0d0646202"
+    url "https://files.pythonhosted.org/packages/46/61/de6cd827efad202d7057d93e0fed9294b96952e188f7384832791c7b2254/click-8.3.0.tar.gz"
+    sha256 "e7b8232224eba16f4ebe410c25ced9f7875cb5f3263ffc93cc3e8da705e229c4"
   end
 
   resource "idna" do
@@ -63,8 +63,8 @@ class CodecovCli < Formula
   end
 
   resource "sentry-sdk" do
-    url "https://files.pythonhosted.org/packages/31/83/055dc157b719651ef13db569bb8cf2103df11174478649735c1b2bf3f6bc/sentry_sdk-2.35.0.tar.gz"
-    sha256 "5ea58d352779ce45d17bc2fa71ec7185205295b83a9dbb5707273deb64720092"
+    url "https://files.pythonhosted.org/packages/b2/22/60fd703b34d94d216b2387e048ac82de3e86b63bc28869fb076f8bb0204a/sentry_sdk-2.38.0.tar.gz"
+    sha256 "792d2af45e167e2f8a3347143f525b9b6bac6f058fb2014720b40b84ccbeb985"
   end
 
   resource "test-results-parser" do

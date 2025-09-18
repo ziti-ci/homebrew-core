@@ -13,12 +13,12 @@ class Fish < Formula
   pour_bottle? only_if: :default_prefix
 
   bottle do
-    sha256                               arm64_tahoe:   "0578ba2bf7118c9dc8c61c72f9f5d2aca1ee3151d297244b6cde6faee576680d"
-    sha256                               arm64_sequoia: "b3d13561b06761af6ebdcfc744b22d27b69dfa0a3b7910f08a63541af4717b0d"
-    sha256                               arm64_sonoma:  "cf3564c7d104066440fa8f9f6365c14d6252ad057393005d81457bd1a2767d2a"
-    sha256                               sonoma:        "f9740b35d347d72e94237851bf88b028ae821bc444dc3796fadac379b2d9becb"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "bf8ec7a8d81a6014979a11b4ab6d47329b1ae413764c34dae7489ba4883a9784"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "84a4f715ce1cdce1948ed64bc4d878a80a67d2f8903965ec5418848e0b6424b2"
+    sha256                               arm64_tahoe:   "1bb0510acca591dcdf4c28b5ee3e3adf8ca6edff2c68631e29a045bc1dfa484f"
+    sha256                               arm64_sequoia: "2efe4da65c4b83b119cc4ff5e93e9dd6967cc5d2b39fa55bf614412c3b15cff7"
+    sha256                               arm64_sonoma:  "5093269dfc262c2eecb45ab756bc80f39287f2482fe00202c26a80559bb9fc39"
+    sha256                               sonoma:        "dcaeb02459e18a2632c2bd9af26f111ee384f8a2938f03f6090c902b224ffe79"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "536115dc6c47b7b96a74e347cf86f2dabe5f9010fc2d72b820baa6e9965481f5"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "09aed332aa2f535d7a98c98d3bda5705e960444affb138e8337830bf6d0233a0"
   end
 
   head do

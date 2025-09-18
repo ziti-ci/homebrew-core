@@ -1,8 +1,8 @@
 class Spot < Formula
   desc "Platform for LTL and ω-automata manipulation"
   homepage "https://spot.lre.epita.fr"
-  url "https://www.lrde.epita.fr/dload/spot/spot-2.14.1.tar.gz"
-  sha256 "25df8a6af4e4bb3ae67515ac98e3d37c4303a682e33aaa66e72d74b39459a530"
+  url "https://www.lrde.epita.fr/dload/spot/spot-2.14.2.tar.gz"
+  sha256 "a5142aa9b13b3623cd9c1f09b485542f8cdea3e0a2fc6116eea36eb0fc19af19"
   license "GPL-3.0-or-later"
 
   livecheck do

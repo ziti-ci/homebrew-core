@@ -18,6 +18,8 @@ class Carla < Formula
   end
 
   bottle do
+    sha256 cellar: :any,                 arm64_tahoe:   "493fbcb8c43cedb7fbe4157bec19026f746b3d8ad7210a5de6641fc37dafb746"
+    sha256 cellar: :any,                 arm64_sequoia: "f7579dbd7722c9c891562025a5087c85a09925b3a02921df731412f6d340de14"
     sha256 cellar: :any,                 arm64_sonoma:  "e68c44affb1640960ee3a5523a637b149d5426ca0e40cc8434c1c93c81fbed9b"
     sha256 cellar: :any,                 arm64_ventura: "ecbea509ddf5ef1074d5838e01669a49d48c24baf4ec10d816d894cb39830b7c"
     sha256 cellar: :any,                 sonoma:        "768c0fccfd67bafa8c1e23bbf0531ae88e3f756d4d074079fbad4c7c2b0fe202"

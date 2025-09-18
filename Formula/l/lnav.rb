@@ -1,8 +1,8 @@
 class Lnav < Formula
   desc "Curses-based tool for viewing and analyzing log files"
   homepage "https://lnav.org/"
-  url "https://github.com/tstack/lnav/releases/download/v0.13.1/lnav-0.13.1.tar.gz"
-  sha256 "b6443702d56c35b3b8598f9b1bbd1cbf4548e5c213caf01680af7207bb25610b"
+  url "https://github.com/tstack/lnav/releases/download/v0.13.2/lnav-0.13.2.tar.gz"
+  sha256 "2b40158e36aafce780075e05419924faf8dd99d1c0d4ae25a15b00bc944f4d60"
   license "BSD-2-Clause"
 
   livecheck do
@@ -34,29 +34,16 @@ class Lnav < Formula
   depends_on "rust" => :build
   depends_on "libarchive"
   depends_on "libunistring"
-  depends_on "ncurses"
   depends_on "pcre2"
-  depends_on "readline"
   depends_on "sqlite"
 
   uses_from_macos "bzip2"
   uses_from_macos "curl"
   uses_from_macos "zlib"
 
-  # Fix to error: windows.h: No such file or directory, should be removed in next release
-  # Issue ref: https://github.com/tstack/lnav/issues/1538
-  patch do
-    url "https://github.com/tstack/lnav/commit/5df522e53fea7f07f113c2d83093cd789f8496ef.patch?full_index=1"
-    sha256 "cf2c00335fb56dbb0bfeee958ad4c14687aeb7e8c9ef097f4f5fad9c75f0c4d7"
-  end
-
   def install
-    # TODO: Run autogen.sh on head only upon next release
-    system "autoreconf", "--force", "--install", "--verbose"
     system "./configure", "--with-sqlite3=#{Formula["sqlite"].opt_prefix}",
-                          "--with-readline=#{Formula["readline"].opt_prefix}",
                           "--with-libarchive=#{Formula["libarchive"].opt_prefix}",
-                          "--with-ncurses=#{Formula["ncurses"].opt_prefix}",
                           *std_configure_args
     system "make", "install", "V=1"
   end

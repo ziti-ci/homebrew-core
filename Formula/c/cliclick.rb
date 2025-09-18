@@ -18,10 +18,13 @@ class Cliclick < Formula
     sha256 cellar: :any_skip_relocation, catalina:       "65b6fcb0620720f8cc572bd3cc7ab260664e39629b9ff4fdf26e5fa24f81e6ea"
   end
 
-  depends_on maximum_macos: [:sonoma, :build] # https://github.com/BlueM/cliclick/issues/178
   depends_on :macos
 
   def install
+    # Uses obsolete CGWindowListCreateImage and open PR doesn't work
+    # Issue ref: https://github.com/BlueM/cliclick/issues/178
+    ENV["MACOSX_DEPLOYMENT_TARGET"] = "14.0" if MacOS.version >= :sequoia
+
     system "make"
     bin.install "cliclick"
   end

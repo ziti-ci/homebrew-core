@@ -1,16 +1,14 @@
 class Fish < Formula
   desc "User-friendly command-line shell for UNIX-like operating systems"
   homepage "https://fishshell.com"
-  url "https://github.com/fish-shell/fish-shell/releases/download/4.0.6/fish-4.0.6.tar.xz"
-  sha256 "125d9ce0dd8a3704dc0782925df34f0208bffc42af5f34914449d14c34b5dae1"
+  url "https://github.com/fish-shell/fish-shell/releases/download/4.0.8/fish-4.0.8.tar.xz"
+  sha256 "7f779d13aa55d2fa3afc17364c61ab9edc16faa1eac5851badeffb4e73692240"
   license "GPL-2.0-only"
 
   livecheck do
     url :stable
     regex(/^v?(\d+(?:\.\d+)+)$/i)
   end
-
-  no_autobump! because: :requires_manual_review
 
   pour_bottle? only_if: :default_prefix
 

@@ -27,6 +27,12 @@ class Bazel < Formula
   uses_from_macos "zip"
 
   on_linux do
+    # Workaround for "/usr/bin/ld.gold: internal error in try_fix_erratum_843419_optimized"
+    # Issue ref: https://sourceware.org/bugzilla/show_bug.cgi?id=31182
+    on_arm do
+      depends_on "lld" => :build
+    end
+
     on_intel do
       # We use a workaround to prevent modification of the `bazel-real` binary
       # but this means brew cannot rewrite paths for non-default prefix
@@ -41,6 +47,20 @@ class Bazel < Formula
   end
 
   def install
+    # Backport newer apple_support to build LC_UUID needed by Tahoe
+    # https://github.com/bazelbuild/bazel/commit/ccd3f68dc8c0bf7fc7be8c03dd070a7672e4f2b2
+    inreplace "MODULE.bazel", '"apple_support", version = "1.18.1"', '"apple_support", version = "1.21.0"'
+    inreplace "MODULE.bazel.lock" do |s|
+      s.gsub! '/1.18.1/MODULE.bazel": "019f8538997d93ac84661ab7a55b5343d2758ddbff3a0501a78b573708de90b4"',
+              '/1.21.0/MODULE.bazel": "ac1824ed5edf17dee2fdd4927ada30c9f8c3b520be1b5fd02a5da15bc10bff3e"'
+      s.gsub! '/1.18.1/source.json": "fcfd4548abb27da98f69213a04a51cf7dab7c634f80795397f646056dab5f09f"',
+              '/1.21.0/source.json": "028d7c853f0195e21b1323ffa2792e8fc5600da3fdaaff394fe932e0e04a4322"'
+    end
+
+    # Workaround for "missing LC_UUID load command in .../xcode-locator"
+    # https://github.com/bazelbuild/bazel/pull/27014
+    inreplace "tools/osx/BUILD", " -Wl,-no_uuid ", " "
+
     java_home_env = Language::Java.java_home_env("21")
 
     ENV["EMBED_LABEL"] = "#{version}-homebrew"
@@ -63,6 +83,12 @@ class Bazel < Formula
     if OS.linux? && build.bottle? && ENV["HOMEBREW_DYNAMIC_LINKER"]
       extra_bazel_args << "--linkopt=-Wl,--dynamic-linker=#{ENV["HOMEBREW_DYNAMIC_LINKER"]}"
     end
+
+    if OS.linux? && Hardware::CPU.arch == :arm64
+      extra_bazel_args << "--linkopt=-fuse-ld=lld"
+      extra_bazel_args << "--host_linkopt=-fuse-ld=lld"
+    end
+
     ENV["EXTRA_BAZEL_ARGS"] = extra_bazel_args.join(" ")
 
     (buildpath/"sources").install buildpath.children

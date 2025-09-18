@@ -3,8 +3,8 @@ class Snakemake < Formula
 
   desc "Pythonic workflow system"
   homepage "https://snakemake.readthedocs.io/"
-  url "https://files.pythonhosted.org/packages/c9/67/88cbc1c18f0c97f07b7e2a0d722f4297a2398f7e6c095a30ec80d75b2126/snakemake-9.11.2.tar.gz"
-  sha256 "d0905992f6db8f887bb40234336a7979d9088886a7cabfb4334557c400d66ec9"
+  url "https://files.pythonhosted.org/packages/f4/4b/5854d3ac3695a39a74d513cd8760df00a9de9ec5a5edd96e621905655a17/snakemake-9.11.3.tar.gz"
+  sha256 "db4e3405fbb104e561e4e466520df071ef77bf3e4faa205a1964dcb9c8519d25"
   license "MIT"
   head "https://github.com/snakemake/snakemake.git", branch: "main"
 
@@ -60,6 +60,7 @@ class Snakemake < Formula
     sha256 "bf429e7aef65921c69b4ed48f3d48d3eac1383b05d2df91884705842d974d0dc"
   end
 
+  # Workaround for docutils-0.22.1/docutils/__init__.py: Failed to restore metadata: File exists
   resource "docutils" do
     url "https://files.pythonhosted.org/packages/e9/86/5b41c32ecedcfdb4c77b28b6cb14234f252075f8cdb254531727a35547dd/docutils-0.22.tar.gz"
     sha256 "ba9d57750e92331ebe7c08a1bbf7a7f8143b86c476acd51528b042216a6aad0f"
@@ -141,8 +142,8 @@ class Snakemake < Formula
   end
 
   resource "psutil" do
-    url "https://files.pythonhosted.org/packages/2a/80/336820c1ad9286a4ded7e845b2eccfcb27851ab8ac6abece774a6ff4d3de/psutil-7.0.0.tar.gz"
-    sha256 "7be9c3eba38beccb6495ea33afd982a44074b78f28c434a1f51cc07fd315c456"
+    url "https://files.pythonhosted.org/packages/b3/31/4723d756b59344b643542936e37a31d1d3204bcdc42a7daa8ee9eb06fb50/psutil-7.1.0.tar.gz"
+    sha256 "655708b3c069387c8b77b072fc429a57d0e214221d01c0a772df7dfedcb3bcd2"
   end
 
   resource "pulp" do
@@ -211,8 +212,8 @@ class Snakemake < Formula
   end
 
   resource "snakemake-interface-storage-plugins" do
-    url "https://files.pythonhosted.org/packages/7e/2d/ecd72f48e1ed49b5cc6651f1ed71ce1fdf9c86de8c241b62c0c6cd33ac51/snakemake_interface_storage_plugins-4.2.2.tar.gz"
-    sha256 "a9da228c21252e60b72ddcec68cdf581f695a9db177053b5bd565e002dc729eb"
+    url "https://files.pythonhosted.org/packages/dd/b3/cd5256e56cfe6fc51319a7d9df1a3a2a7584499fadd3c3fc5619ff39f74f/snakemake_interface_storage_plugins-4.2.3.tar.gz"
+    sha256 "95be93d1aa1c56c189d9ff661930a6475e847a79a74013822c9570c0ef691755"
   end
 
   resource "tabulate" do

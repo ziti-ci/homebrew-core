@@ -10,6 +10,7 @@ class WalG < Formula
     sha256 cellar: :any,                 arm64_sequoia: "c64d5ad15282efaf311ca082f96e4b190b0dd3f26df838c430f343ec00236356"
     sha256 cellar: :any,                 arm64_sonoma:  "aee2c57633ed2939227c23d119a6f398345da14bd3f894ececdfb12218dd8853"
     sha256 cellar: :any,                 sonoma:        "8c1cccbeff937880545db272acf046cc328ef1021e73d1d6694a9dbf06ccad3b"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "38f2f7a5933676604e10dd476adc3ba2d4770ea081c973dd79a5e15971a8fd81"
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "d6f9f6d8dae5a52ba674f4bf21190df5e62dbc75222419da9e67b3c62213c781"
   end
 

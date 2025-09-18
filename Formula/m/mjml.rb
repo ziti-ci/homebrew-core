@@ -1,15 +1,12 @@
 class Mjml < Formula
   desc "JavaScript framework that makes responsive-email easy"
   homepage "https://mjml.io"
-  url "https://registry.npmjs.org/mjml/-/mjml-4.15.3.tgz"
-  sha256 "1918171314f07c1283a84f24bbf6e9cd1325906d48722b26a4b901f0eea00176"
+  url "https://registry.npmjs.org/mjml/-/mjml-4.16.0.tgz"
+  sha256 "fa0cf10c39b2435442bf85338f15454735ea0abfda894175fc84ca8b869cbb43"
   license "MIT"
 
-  no_autobump! because: :requires_manual_review
-
   bottle do
-    rebuild 2
-    sha256 cellar: :any_skip_relocation, all: "fc01447be6e0fd81d673d37952632cbf146f101ab9a117aaf31527c795550ad8"
+    sha256 cellar: :any_skip_relocation, all: "8a401bf0ba014957bb4aa712b5dd56a2db96ddea81bf3d852446735114e95bbb"
   end
 
   depends_on "node"

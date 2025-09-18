@@ -7,9 +7,6 @@ class Carla < Formula
     url "https://github.com/falkTX/Carla/archive/refs/tags/v2.5.10.tar.gz"
     sha256 "ae2835b12081f7271a6b0b25d34b87d36b022c40370028ca4a10f90fcedfa661"
 
-    # TODO: Remove in 2.6.0
-    depends_on maximum_macos: [:sonoma, :build]
-
     # TODO: Use `pyqt` and `qt` from HEAD in 2.6.0
     depends_on "pyqt@5"
     depends_on "qt@5"
@@ -53,6 +50,12 @@ class Carla < Formula
   end
 
   def install
+    # Workaround for https://github.com/falkTX/Carla/issues/1926
+    if build.stable? && OS.mac? && MacOS.version >= :sequoia
+      odie "Remove deployment target!" if version >= "2.6"
+      ENV["MACOSX_DEPLOYMENT_TARGET"] = "14.0"
+    end
+
     system "make"
     system "make", "install", "PREFIX=#{prefix}"
 

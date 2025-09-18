@@ -10,6 +10,7 @@ class Bedtk < Formula
     sha256 cellar: :any_skip_relocation, arm64_sequoia: "7353b0431b57bfc23ffcdf490681771bab0f608a1c590ae24ca0e8f437613809"
     sha256 cellar: :any_skip_relocation, arm64_sonoma:  "7a58dd66680c40dbd672a148a9640784c434f6d520bb88f6696c04cc31683a15"
     sha256 cellar: :any_skip_relocation, sonoma:        "ebad975371a395fab0ef08706244c491def00e494e657b15463da7cbe288893f"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "d359cee1ad085e9a9fc2e36e63fde511e47fb12103526b843efccc8dfb19821f"
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "9dec9cdbe36442a536160a54b14e5d07eaa1a7f6e59dcd73d0cb154854211562"
   end
 

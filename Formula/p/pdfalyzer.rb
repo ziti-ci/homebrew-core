@@ -3,8 +3,8 @@ class Pdfalyzer < Formula
 
   desc "PDF analysis toolkit"
   homepage "https://github.com/michelcrypt4d4mus/pdfalyzer"
-  url "https://files.pythonhosted.org/packages/04/e1/0c345c69a02bd4be18ae30c60d5f29861faedf833b9c51e55d91c457e9ab/pdfalyzer-1.16.14.tar.gz"
-  sha256 "0abae20d4d01cc80a49a566732045a3b8e37cb2aa2ac46ef5286b4ce2f335f92"
+  url "https://files.pythonhosted.org/packages/71/35/03a2fc1a6204b7fefa264fe8e3128a25cd873825a30c393c517291e66b50/pdfalyzer-1.17.0.tar.gz"
+  sha256 "ee3eacb0309db749ac8559abe73e9b7cee1ea3fd46d00ff0947bd2e544e3d56a"
   license "GPL-3.0-or-later"
   head "https://github.com/michelcrypt4d4mus/pdfalyzer.git", branch: "master"
 
@@ -20,6 +20,7 @@ class Pdfalyzer < Formula
   end
 
   depends_on "openssl@3"
+  depends_on "pillow"
   depends_on "python@3.13"
 
   resource "anytree" do

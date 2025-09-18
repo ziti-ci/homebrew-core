@@ -8,14 +8,12 @@ class Eralchemy < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any,                 arm64_tahoe:   "92b8479641ef4c6ac261b9a86f2de35ca4e9abb6fa56f2b36d2c8e4be27e0606"
-    sha256 cellar: :any,                 arm64_sequoia: "08649146de0cdf02e659ede3d8a0abcf22ceef117c63df9f556414137f04d692"
-    sha256 cellar: :any,                 arm64_sonoma:  "f18d6b415538d24a6777d5589f0a1c36386a541765baef679e9152f36c9d2f47"
-    sha256 cellar: :any,                 arm64_ventura: "bcbea307eb470ce0f6a1ed9ec24536e421be304087f58b4669f970a514f33fc6"
-    sha256 cellar: :any,                 sonoma:        "285c6bda5678f036aa4315660073df0bd86e68f9a761fe66a5ea4f4a8be3f4bf"
-    sha256 cellar: :any,                 ventura:       "90a5befab4b548f14b9a203fd1c802910b9ff3511653d62666f338a814d489b2"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "4eab42a4e1af97949850753589b99b101b5e66c6d2b3fcdc6f6caabec7d388ea"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "3be4ace8ed5abe63973efc16f9c8a88b99a267743d05ae0045ff8d58c841d02e"
+    sha256 cellar: :any,                 arm64_tahoe:   "b73a054d94feeb9cfb690124d22a98362f92ab00d5eeede5e8e21026a721f262"
+    sha256 cellar: :any,                 arm64_sequoia: "7c9320fb74e503c7351b505248ecb958ae6513a7e2e6f9d4373655340d5e69b6"
+    sha256 cellar: :any,                 arm64_sonoma:  "ad76090e5129b0242da09b1803f72eab996be0e3d85517d4d5c81161046075c0"
+    sha256 cellar: :any,                 sonoma:        "1f28d88544a49dc6762d9b244c870c8c8a318a95ceee14d45fcb7adecccb2d4c"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "08895664489bd7834de2789ff18e71e8125b56d84c282bb65a004b5a9adb812d"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "ad6928bf661621669f18a119165f256aa57dec4f50ae66eb18544dda58640fa8"
   end
 
   depends_on "pkgconf" => :build

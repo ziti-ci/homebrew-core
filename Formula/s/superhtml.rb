@@ -15,7 +15,8 @@ class Superhtml < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "4ffcd873d33cbb738fda0172a485473d7d2f5bf7c0b642b7c7ae93e840daa98f"
   end
 
-  depends_on "zig" => :build
+  # https://github.com/kristoff-it/superhtml/commit/b29ff905140962dc6ba0199e49c433533d6f57d1
+  depends_on "zig@0.14" => :build
 
   # Backport dependency updates to cleanly apply Zig 0.14 commits
   patch do

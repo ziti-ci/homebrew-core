@@ -3,8 +3,8 @@ class Nuitka < Formula
 
   desc "Python compiler written in Python"
   homepage "https://nuitka.net"
-  url "https://files.pythonhosted.org/packages/24/11/005da9e0826ff333096763597699f5ac9ede8e57e31d94d52300e4bc8f1f/Nuitka-2.7.14.tar.gz"
-  sha256 "88233ed175d6d2abb2e1d5fa3c2e28b2fac604764ddc319c614325ff87c77117"
+  url "https://files.pythonhosted.org/packages/e5/87/36bae02fb19e98cdfa5778faf14f90acff396b9b17586355fbefbe971631/Nuitka-2.7.16.tar.gz"
+  sha256 "768909faf365b21ae4777727fc4ae88efc29239c664bd177061fc907e263e0fa"
   license "Apache-2.0"
 
   bottle do
@@ -31,8 +31,8 @@ class Nuitka < Formula
   end
 
   resource "zstandard" do
-    url "https://files.pythonhosted.org/packages/09/1b/c20b2ef1d987627765dcd5bf1dadb8ef6564f00a87972635099bb76b7a05/zstandard-0.24.0.tar.gz"
-    sha256 "fe3198b81c00032326342d973e526803f183f97aa9e9a98e3f897ebafe21178f"
+    url "https://files.pythonhosted.org/packages/fd/aa/3e0508d5a5dd96529cdc5a97011299056e14c6505b678fd58938792794b1/zstandard-0.25.0.tar.gz"
+    sha256 "7713e1179d162cf5c7906da876ec2ccb9c3a9dcbdffef0cc7f70c3667a205f0b"
   end
 
   def install

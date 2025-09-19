@@ -15,14 +15,12 @@ class Semgrep < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_tahoe:   "d97f50ef5037358f2f92733faa4b6429a974f15f571f16d50b83a64d8e1531b1"
-    sha256 cellar: :any, arm64_sequoia: "946d137f56d7a01f8b363d77be00d146a6edfa0f07ce0052f543647e8c4cea69"
-    sha256 cellar: :any, arm64_sonoma:  "31308e82d23be8cbe31b3830c3216edfc107b8a912a1da9e31bac28e551b0601"
-    sha256 cellar: :any, arm64_ventura: "8428e18fbd1b1db17772335f313fc0f013c8e2c87f66ec4d6f67d67d64d4f622"
-    sha256 cellar: :any, sonoma:        "eb6c217b9988c3fc5a8ba01e31ec9e43154a3ee88ec8008d3ed31d7341c9addb"
-    sha256 cellar: :any, ventura:       "12875b6e1cd4c5b5f3d27cccc2ac7dc9365fa31c7ec7d1936f642fc3559a8e38"
-    sha256               arm64_linux:   "c00011a240e2b280e1f7c634a8b3e5c5c8352a74c1931faad1e4a4bf36100794"
-    sha256               x86_64_linux:  "c2cebd99475d7e353dc57a781c1d91b94dc5c8f92b39c8346c8caa676d4aa4cc"
+    sha256 cellar: :any, arm64_tahoe:   "840d321d56ec13cef33ee54ee919424983407d0db29fb7a9318402fd6b52d70a"
+    sha256 cellar: :any, arm64_sequoia: "07a01b05208869182dd3005f61f3a0147addc2a68b486c2b3ade77d054ebb288"
+    sha256 cellar: :any, arm64_sonoma:  "cfc46b2e46933697b57d79888b466f84a36beaf366160b0b323226a699a4d4f3"
+    sha256 cellar: :any, sonoma:        "340dd1a636e14fb60a7b1184c77925cb9b11eaa5bfd8d896e5c3bfdba2d5b5f3"
+    sha256               arm64_linux:   "ee5a7e1b4d14035b7e497b783b36ab39692bd44e854f8a47996989eed067d977"
+    sha256               x86_64_linux:  "a2c04e7443cbf8c1aa62de86da834389a1ad4907ae962edeb1b416e4b440f907"
   end
 
   depends_on "autoconf" => :build

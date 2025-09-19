@@ -3,7 +3,7 @@ class Picat < Formula
   homepage "https://picat-lang.org/"
   url "https://picat-lang.org/download/picat39_src.tar.gz"
   version "3.9"
-  sha256 "1d5c8bad46da6017b6fa72238fe38968f6c53d66ab744202eb9c07114b0a19a9"
+  sha256 "02e7ae7d7efa9e7fd58b5fb4c1218afb331710f0c6301e46ebc5f670af347331"
   license "MPL-2.0"
 
   livecheck do

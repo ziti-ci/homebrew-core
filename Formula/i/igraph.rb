@@ -1,8 +1,8 @@
 class Igraph < Formula
   desc "Network analysis package"
   homepage "https://igraph.org/"
-  url "https://github.com/igraph/igraph/releases/download/0.10.17/igraph-0.10.17.tar.gz"
-  sha256 "21016ecf309a235f2bd9e208606d5a24c14a1f701dd7b2497e2e5f6bf2c5f848"
+  url "https://github.com/igraph/igraph/releases/download/1.0.0/igraph-1.0.0.tar.gz"
+  sha256 "91e23e080634393dec4dfb02c2ae53ac4e3837172bb9047d32e39380b16c0bb0"
   license "GPL-2.0-or-later"
 
   bottle do
@@ -32,20 +32,21 @@ class Igraph < Formula
     # * BLAS and LAPACK should come from OpenBLAS
     # * prevent the usage of ccache even if it is installed to ensure that we
     #    have a clean build
-    system "cmake", "-S", ".", "-B", "build",
-                    "-DBUILD_SHARED_LIBS=ON",
-                    "-DIGRAPH_ENABLE_LTO=AUTO",
-                    "-DIGRAPH_ENABLE_TLS=ON",
-                    "-DIGRAPH_GLPK_SUPPORT=ON",
-                    "-DIGRAPH_GRAPHML_SUPPORT=ON",
-                    "-DIGRAPH_USE_INTERNAL_ARPACK=OFF",
-                    "-DIGRAPH_USE_INTERNAL_BLAS=OFF",
-                    "-DIGRAPH_USE_INTERNAL_GLPK=OFF",
-                    "-DIGRAPH_USE_INTERNAL_GMP=OFF",
-                    "-DIGRAPH_USE_INTERNAL_LAPACK=OFF",
-                    "-DBLA_VENDOR=OpenBLAS",
-                    "-DUSE_CCACHE=OFF",
-                    *std_cmake_args
+    args = %w[
+      -DBUILD_SHARED_LIBS=ON
+      -DIGRAPH_ENABLE_LTO=AUTO
+      -DIGRAPH_ENABLE_TLS=ON
+      -DIGRAPH_GLPK_SUPPORT=ON
+      -DIGRAPH_GRAPHML_SUPPORT=ON
+      -DIGRAPH_USE_INTERNAL_ARPACK=OFF
+      -DIGRAPH_USE_INTERNAL_BLAS=OFF
+      -DIGRAPH_USE_INTERNAL_GLPK=OFF
+      -DIGRAPH_USE_INTERNAL_GMP=OFF
+      -DIGRAPH_USE_INTERNAL_LAPACK=OFF
+      -DBLA_VENDOR=OpenBLAS
+      -DUSE_CCACHE=OFF
+    ]
+    system "cmake", "-S", ".", "-B", "build", *args, *std_cmake_args
     system "cmake", "--build", "build"
     system "cmake", "--install", "build"
   end
@@ -54,13 +55,15 @@ class Igraph < Formula
     (testpath/"test.c").write <<~C
       #include <igraph.h>
       int main(void) {
-        igraph_real_t diameter;
-        igraph_t graph;
-        igraph_rng_seed(igraph_rng_default(), 42);
-        igraph_erdos_renyi_game(&graph, IGRAPH_ERDOS_RENYI_GNP, 1000, 5.0/1000, IGRAPH_UNDIRECTED, IGRAPH_NO_LOOPS);
-        igraph_diameter(&graph, &diameter, 0, 0, 0, 0, IGRAPH_UNDIRECTED, 1);
-        printf("Diameter = %f\\n", (double) diameter);
-        igraph_destroy(&graph);
+          igraph_real_t diameter;
+          igraph_t graph;
+          igraph_setup();
+          igraph_rng_seed(igraph_rng_default(), 42);
+          igraph_erdos_renyi_game_gnp(&graph, 1000, 5.0/1000, IGRAPH_UNDIRECTED, IGRAPH_SIMPLE_SW, IGRAPH_EDGE_UNLABELED);
+          igraph_diameter(&graph, NULL, &diameter, NULL, NULL, NULL, NULL, IGRAPH_UNDIRECTED, /*unconn=*/ true);
+          printf("Diameter = %g\\n", (double) diameter);
+          igraph_destroy(&graph);
+          return 0;
       }
     C
     system ENV.cc, "test.c", "-I#{include}/igraph", "-L#{lib}",

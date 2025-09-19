@@ -3,23 +3,10 @@ class Black < Formula
 
   desc "Python code formatter"
   homepage "https://black.readthedocs.io/en/stable/"
+  url "https://files.pythonhosted.org/packages/4b/43/20b5c90612d7bdb2bdbcceeb53d588acca3bb8f0e4c5d5c751a2c8fdd55a/black-25.9.0.tar.gz"
+  sha256 "0474bca9a0dd1b51791fcc507a4e02078a1c63f6d4e4ae5544b9848c7adfb619"
   license "MIT"
-  revision 1
   head "https://github.com/psf/black.git", branch: "main"
-
-  stable do
-    url "https://files.pythonhosted.org/packages/94/49/26a7b0f3f35da4b5a65f081943b7bcd22d7002f5f0fb8098ec1ff21cb6ef/black-25.1.0.tar.gz"
-    sha256 "33496d5cd1222ad73391352b4ae8da15253c5de89b93a80b3e2c8d9a19ec2666"
-
-    # build patch for mypy 1.16
-    patch do
-      url "https://github.com/psf/black/commit/e7bf7b4619928da69d486f36fcb456fb201ff53e.patch?full_index=1"
-      sha256 "7cf2ae3e16f59580d1d2804e6696070546888bf136c615ababeb661cdee274ed"
-    end
-    # Fix mypy type issue
-    # https://github.com/psf/black/commit/57a461258f324e33bca189b2eb49d7f7a944ffe7
-    patch :DATA
-  end
 
   bottle do
     rebuild 1
@@ -41,8 +28,8 @@ class Black < Formula
   end
 
   resource "aiohttp" do
-    url "https://files.pythonhosted.org/packages/e6/0b/e39ad954107ebf213a2325038a3e7a506be3d98e1435e1f82086eec4cde2/aiohttp-3.12.14.tar.gz"
-    sha256 "6e06e120e34d93100de448fd941522e11dafa78ef1a893c179901b7d66aa29f2"
+    url "https://files.pythonhosted.org/packages/9b/e7/d92a237d8802ca88483906c388f7c201bbe96cd80a165ffd0ac2f6a8d59f/aiohttp-3.12.15.tar.gz"
+    sha256 "4fc61385e9c98d72fcdf47e6dd81833f47b2f77c114c29cd64a361be57a763a2"
   end
 
   resource "aiosignal" do
@@ -56,8 +43,8 @@ class Black < Formula
   end
 
   resource "click" do
-    url "https://files.pythonhosted.org/packages/60/6c/8ca2efa64cf75a977a0d7fac081354553ebe483345c734fb6b6515d96bbc/click-8.2.1.tar.gz"
-    sha256 "27c491cc05d968d271d5a1db13e3b5a184636d9d930f148c50b038f0d0646202"
+    url "https://files.pythonhosted.org/packages/46/61/de6cd827efad202d7057d93e0fed9294b96952e188f7384832791c7b2254/click-8.3.0.tar.gz"
+    sha256 "e7b8232224eba16f4ebe410c25ced9f7875cb5f3263ffc93cc3e8da705e229c4"
   end
 
   resource "frozenlist" do
@@ -71,8 +58,8 @@ class Black < Formula
   end
 
   resource "multidict" do
-    url "https://files.pythonhosted.org/packages/3d/2c/5dad12e82fbdf7470f29bff2171484bf07cb3b16ada60a6589af8f376440/multidict-6.6.3.tar.gz"
-    sha256 "798a9eb12dab0a6c2e29c1de6f3468af5cb2da6053a20dfa3344907eed0937cc"
+    url "https://files.pythonhosted.org/packages/69/7f/0652e6ed47ab288e3756ea9c0df8b14950781184d4bd7883f4d87dd41245/multidict-6.6.4.tar.gz"
+    sha256 "d2d4e4787672911b48350df02ed3fa3fffdc2f2e8ca06dd6afdf34189b76a9dd"
   end
 
   resource "mypy-extensions" do
@@ -91,13 +78,18 @@ class Black < Formula
   end
 
   resource "platformdirs" do
-    url "https://files.pythonhosted.org/packages/fe/8b/3c73abc9c759ecd3f1f7ceff6685840859e8070c4d947c93fae71f6a0bf2/platformdirs-4.3.8.tar.gz"
-    sha256 "3d512d96e16bcb959a814c9f348431070822a6496326a4be0911c40b5a74c2bc"
+    url "https://files.pythonhosted.org/packages/23/e8/21db9c9987b0e728855bd57bff6984f67952bea55d6f75e055c46b5383e8/platformdirs-4.4.0.tar.gz"
+    sha256 "ca753cf4d81dc309bc67b0ea38fd15dc97bc30ce419a7f58d13eb3bf14c4febf"
   end
 
   resource "propcache" do
     url "https://files.pythonhosted.org/packages/a6/16/43264e4a779dd8588c21a70f0709665ee8f611211bdd2c87d952cfa7c776/propcache-0.3.2.tar.gz"
     sha256 "20d7d62e4e7ef05f221e0db2856b979540686342e7dd9973b815599c7057e168"
+  end
+
+  resource "pytokens" do
+    url "https://files.pythonhosted.org/packages/30/5f/e959a442435e24f6fb5a01aec6c657079ceaca1b3baf18561c3728d681da/pytokens-0.1.10.tar.gz"
+    sha256 "c9a4bfa0be1d26aebce03e6884ba454e842f186a59ea43a6d3b25af58223c044"
   end
 
   resource "yarl" do
@@ -139,49 +131,3 @@ class Black < Formula
     assert_match 'print("valid")', output
   end
 end
-
-__END__
-diff --git a/pyproject.toml b/pyproject.toml
-index be6c8f9b9d543221abee109734f038fd3480c8c7..b3e7f2414fa316f06da59fa4a7a00e4a2433c1e8 100644
---- a/pyproject.toml
-+++ b/pyproject.toml
-@@ -126,7 +126,7 @@ macos-max-compat = true
- enable-by-default = false
- dependencies = [
-   "hatch-mypyc>=0.16.0",
--  "mypy>=1.12",
-+  "mypy==1.17.1",
-   "click>=8.1.7",
- ]
- require-runtime-dependencies = true
-diff --git a/src/black/trans.py b/src/black/trans.py
-index 0b5956304502991721ea4c2f0838c4c2a285590b..de24d723e1e56a5aca71535f9d572a49a5ad9b8b 100644
---- a/src/black/trans.py
-+++ b/src/black/trans.py
-@@ -334,6 +334,9 @@ class CustomSplit:
-     break_idx: int
-
-
-+CustomSplitMapKey = tuple[StringID, str]
-+
-+
- @trait
- class CustomSplitMapMixin:
-     """
-@@ -342,13 +345,12 @@ class CustomSplitMapMixin:
-     the resultant substrings go over the configured max line length.
-     """
-
--    _Key: ClassVar = tuple[StringID, str]
--    _CUSTOM_SPLIT_MAP: ClassVar[dict[_Key, tuple[CustomSplit, ...]]] = defaultdict(
--        tuple
-+    _CUSTOM_SPLIT_MAP: ClassVar[dict[CustomSplitMapKey, tuple[CustomSplit, ...]]] = (
-+        defaultdict(tuple)
-     )
-
-     @staticmethod
--    def _get_key(string: str) -> "CustomSplitMapMixin._Key":
-+    def _get_key(string: str) -> CustomSplitMapKey:
-         """
-         Returns:
-             A unique identifier that is used internally to map @string to a

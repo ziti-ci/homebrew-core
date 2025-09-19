@@ -1,8 +1,8 @@
 class Mise < Formula
   desc "Polyglot runtime manager (asdf rust clone)"
   homepage "https://mise.jdx.dev/"
-  url "https://github.com/jdx/mise/archive/refs/tags/v2025.9.12.tar.gz"
-  sha256 "83fbd80c12f42a6080755557406067b557d2ce2716fd160e3eecff337e440c1e"
+  url "https://github.com/jdx/mise/archive/refs/tags/v2025.9.13.tar.gz"
+  sha256 "e90a0e25c389cb8c772e6e223cb54b5a107016d12e5bbaf2ff3a9174c15f41e0"
   license "MIT"
   head "https://github.com/jdx/mise.git", branch: "main"
 
@@ -20,6 +20,8 @@ class Mise < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "ac64d9c3d01f081b068e1e2e216adf34b1ffbb90506d991e814eac07c44f18aa"
   end
 
+  depends_on "cmake" => :build
+  depends_on "llvm" => :build
   depends_on "pkgconf" => :build
   depends_on "rust" => :build
 

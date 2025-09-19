@@ -6,6 +6,12 @@ class DashMpdCli < Formula
   license "MIT"
   head "https://github.com/emarsden/dash-mpd-cli.git", branch: "main"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_sonoma: "7114a3a27fb5dac5d261bd2093ab61ba5a3f6616e248cbe4bd84cbbe40b901f0"
+    sha256 cellar: :any_skip_relocation, sonoma:       "f96174fd46c1142421281112246e56f809a785e9aecf5f7cf89e20d4d961b055"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "9ad451329d0d7739fa06ae39c29c1e4e37eec28aa7c344665b5d55ec8d76122c"
+  end
+
   depends_on "protobuf" => :build
   depends_on "rust" => :build
   depends_on "bento4"

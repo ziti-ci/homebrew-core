@@ -1,8 +1,8 @@
 class Hk < Formula
   desc "Git hook and pre-commit lint manager"
   homepage "https://hk.jdx.dev"
-  url "https://github.com/jdx/hk/archive/refs/tags/v1.14.0.tar.gz"
-  sha256 "dce350423b5faa4086f8f1931e728081187831b376a51ced019ecaa29769c6dc"
+  url "https://github.com/jdx/hk/archive/refs/tags/v1.15.1.tar.gz"
+  sha256 "a055a9ee70c2ac48bdb9b01c597e1c2bdd997b1acf5bf023a341a4ed98e08e8e"
   license "MIT"
   head "https://github.com/jdx/hk.git", branch: "main"
 

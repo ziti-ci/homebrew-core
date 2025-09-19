@@ -7,7 +7,7 @@ class TomeeWebprofile < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "baaadeaa647681e619064bddba2b30fc14d741426466fd9054a37a3f73eeaaef"
+    sha256 cellar: :any_skip_relocation, all: "fc6f5b70557f903cdf24bbc42e58863ec432123865c7096e3e917dda49c21aac"
   end
 
   depends_on "openjdk"

@@ -6,6 +6,7 @@ class Superhtml < Formula
   license "MIT"
 
   bottle do
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "6b81fca9fda9d025d1f057be7780b5e5a0905597dfe1963a9e9abd151bd4dc82"
     sha256 cellar: :any_skip_relocation, arm64_sequoia: "fee37c33e1945e1b65754df3584ac9f9460e612c1465cb7a8c99a7fd4320545d"
     sha256 cellar: :any_skip_relocation, arm64_sonoma:  "03ab9a454ac7aaca7371a477f80d49f0fe0f7029747e4041332b13a3d00cf534"
     sha256 cellar: :any_skip_relocation, arm64_ventura: "0d23e940a93d67b167a7f581c1558eb2c8576c94c3d9e0acfa0772fde7f36a01"

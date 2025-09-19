@@ -20,6 +20,7 @@ class Zf < Formula
   end
 
   bottle do
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "c1b7c05de35a1d57833aff7309fbe7f05d98ad80686ab6233906a5c5e458c9f3"
     sha256 cellar: :any_skip_relocation, arm64_sequoia: "ca18e30ed084337c77376f0af8b97d3f10bc3ccb20660f7d74c15644fbcae1e7"
     sha256 cellar: :any_skip_relocation, arm64_sonoma:  "7b45f360b6662b147c5adc50425ef87afac800c9aa2bdeab1f2f395614ab34b9"
     sha256 cellar: :any_skip_relocation, arm64_ventura: "63025c662d67807c0f75b4df08c26b5af01c2e602d5438e2a08289b7ce8bb350"

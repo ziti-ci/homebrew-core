@@ -8,6 +8,7 @@ class Mmtabbarview < Formula
   no_autobump! because: :requires_manual_review
 
   bottle do
+    sha256 cellar: :any, arm64_tahoe:    "a502f7deb3e18188669316c46c503980256b4286d0c52d1e211a772d45919844"
     sha256 cellar: :any, arm64_sequoia:  "9ae9758b04f5cbc6068b0e41266db2fbad7065d90134060c27bc73d36d780c2d"
     sha256 cellar: :any, arm64_sonoma:   "4b4fbe5492b90614b36b8a99101acbd15b0b9ebc4b415683c273114e47d3e1cb"
     sha256 cellar: :any, arm64_ventura:  "ec634de2a8f60f6d6d09c88cc8ce9293fd94ee07ba2181a7b07a3ee2f29d99ac"

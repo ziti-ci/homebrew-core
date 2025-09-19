@@ -6,13 +6,11 @@ class McpToolbox < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "e6ea523ab9852ddd43cdf2a7d22cd0d8ed040dc52f5ffe37fa465917af92ca6a"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "e6ea523ab9852ddd43cdf2a7d22cd0d8ed040dc52f5ffe37fa465917af92ca6a"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "e6ea523ab9852ddd43cdf2a7d22cd0d8ed040dc52f5ffe37fa465917af92ca6a"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "e6ea523ab9852ddd43cdf2a7d22cd0d8ed040dc52f5ffe37fa465917af92ca6a"
-    sha256 cellar: :any_skip_relocation, sonoma:        "f0cf893d782197b74d69f904b7b3ad8a2cc1e5221997789579e567960fd8c7d9"
-    sha256 cellar: :any_skip_relocation, ventura:       "f0cf893d782197b74d69f904b7b3ad8a2cc1e5221997789579e567960fd8c7d9"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "cdabc47cc57e13c1009984553f898a69fd651ebedbc18f181202ec0d7823760c"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "95cbf2f34e645c2ea69445282f2c9303819bbf2dd38cbf6585d38f01682d32ba"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "95cbf2f34e645c2ea69445282f2c9303819bbf2dd38cbf6585d38f01682d32ba"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "95cbf2f34e645c2ea69445282f2c9303819bbf2dd38cbf6585d38f01682d32ba"
+    sha256 cellar: :any_skip_relocation, sonoma:        "47cf0dd0fab438b2594c617778f9f211c0c7761528226acb6c2f5f4206659fdb"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "d4ae638691a7fa06fb8051dee8ea5f2a6cca669453895db97dedf66ca7539e46"
   end
 
   depends_on "go" => :build

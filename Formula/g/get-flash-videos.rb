@@ -178,7 +178,7 @@ class GetFlashVideos < Formula
   end
 
   test do
-    assert_match "Filename: BBC_-__Do_whatever_it_takes_to_get_him_to_talk.flv",
-      shell_output("#{bin}/get_flash_videos --info http://news.bbc.co.uk/2/hi/programmes/hardtalk/9560793.stm")
+    expected = "Filename: BBC_-_Antarctic_ice_bridge_shatters.flv"
+    assert_match expected, shell_output("#{bin}/get_flash_videos --info http://news.bbc.co.uk/1/hi/sci/tech/7983975.stm")
   end
 end

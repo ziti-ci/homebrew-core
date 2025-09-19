@@ -9,15 +9,12 @@ class Black < Formula
   head "https://github.com/psf/black.git", branch: "main"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "4c4ad364a6a98d8499106a758c664ffbaf1e818af2349256b5ee286854f9a33e"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "49b07cf531d62e77ff6f69f9da81a18766f2d8d5769fdaebb3d3cff6045f9607"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "3b60423982fc49c9d793571d1315671537ebc934a8b02c2bb57b06853a2ec257"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "871521b20363443bdd2397066751ef2c33fd7fc08a6a2d88056971b3499a852e"
-    sha256 cellar: :any_skip_relocation, sonoma:        "2da651914131fea67046b653880bea5fc05ded7776ee34d7a68085b41833a565"
-    sha256 cellar: :any_skip_relocation, ventura:       "3af971c0d93c88d60066694aa2b0d8cf239fa5ce5612693e3e06833d17ce1970"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "2fbd30e2186c2594a87f244b82a4fb57e5d9de7979d7aaeaeaffcc5a59c85474"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "6fd483bdc26c389f02ef3baf59b2cb596239bd5513f03c402994962e1a2fd9f2"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "9fdbf3ef403a8060e7dd6631b5e8ecb699963db05d80851f08769158f3b6a791"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "c60452829d74dc31967e2b1f8e79c8d42f2407c413d2d427ac6cab87daa96a89"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "5215ad604bfc30f4d3ffd5ba6cb9841bf3dce6c13cfbacd3c110256ede6bd08a"
+    sha256 cellar: :any_skip_relocation, sonoma:        "e3b8ff746d5f064f9aaeb942f126ad8b5cb187f6e461988c86cf5d1279221ee4"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "5df6a219debb5c82c4e163177c6d9a75e5e71dcc6c6cc321e9225269f56b3e48"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "14f7a87ba7446be0e200b9425c92eae791c04e0f5e7a66afd1ac052477b2f421"
   end
 
   depends_on "python@3.13"

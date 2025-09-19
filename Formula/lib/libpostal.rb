@@ -1,8 +1,8 @@
 class Libpostal < Formula
   desc "Library for parsing/normalizing street addresses around the world"
   homepage "https://github.com/openvenues/libpostal"
-  url "https://github.com/openvenues/libpostal/archive/refs/tags/v1.1.tar.gz"
-  sha256 "8cc473a05126895f183f2578ca234428d8b58ab6fadf550deaacd3bd0ae46032"
+  url "https://github.com/openvenues/libpostal/archive/refs/tags/v1.1.3.tar.gz"
+  sha256 "02883c2f62658a09f9e49819f7983c7b19a574f9422424ecd5e4ff43cf7830a8"
   license "MIT"
   head "https://github.com/openvenues/libpostal.git", branch: "master"
 

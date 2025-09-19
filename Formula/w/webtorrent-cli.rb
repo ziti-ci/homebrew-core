@@ -31,18 +31,17 @@ class WebtorrentCli < Formula
 
     nm = libexec/"lib/node_modules/webtorrent-cli/node_modules"
 
-    # Delete files that references to the Homebrew shims directory
-    sb = nm/"node-datachannel/build"
-    rm [
-      sb/"CMakeFiles/CMakeConfigureLog.yaml",
-      sb/"CMakeFiles/rules.ninja",
-      sb/"CMakeFiles/#{Formula["cmake"].version}/CMakeCXXCompiler.cmake",
-      sb/"CMakeFiles/#{Formula["cmake"].version}/CMakeCCompiler.cmake",
-      sb/"_deps/libdatachannel-subbuild/CMakeLists.txt",
-      sb/"_deps/libdatachannel-subbuild/libdatachannel-populate-prefix/tmp/libdatachannel-populate-gitclone.cmake",
-      sb/"_deps/libdatachannel-subbuild/libdatachannel-populate-prefix/tmp/libdatachannel-populate-gitupdate.cmake",
-      sb/"CMakeCache.txt",
-    ]
+    # Remove node-datachannel dev dependencies which were installed via
+    # `npm install --ignore-scripts --production=false` to build node-datachannel.node
+    # Also remove prebuild-install which was needed at install time due to install script
+    node_domexception = nm/"node-datachannel/node_modules/node-domexception"
+    rm_r(nm.glob("node-datachannel/node_modules/*") - [node_domexception])
+    odie "node-domexception not found! Check if it is still a dependency." unless node_domexception.exist?
+
+    # Remove node-datachannel CMake build directory other than the final binary
+    node_datachannel_release_dir = nm/"node-datachannel/build/Release"
+    rm_r(nm.glob("node-datachannel/build/*") - [node_datachannel_release_dir])
+    odie "node-datachannel.node not found!" if node_datachannel_release_dir.glob("*.node").empty?
 
     # Remove incompatible pre-built binaries
     os = OS.kernel_name.downcase

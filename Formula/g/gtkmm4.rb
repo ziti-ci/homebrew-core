@@ -1,19 +1,9 @@
 class Gtkmm4 < Formula
   desc "C++ interfaces for GTK+ and GNOME"
   homepage "https://www.gtkmm.org/"
+  url "https://download.gnome.org/sources/gtkmm/4.20/gtkmm-4.20.0.tar.xz"
+  sha256 "daad9bf9b70f90975f91781fc7a656c923a91374261f576c883cd3aebd59c833"
   license "LGPL-2.1-or-later"
-  revision 1
-
-  stable do
-    url "https://download.gnome.org/sources/gtkmm/4.18/gtkmm-4.18.0.tar.xz"
-    sha256 "2ee31c15479fc4d8e958b03c8b5fbbc8e17bc122c2a2f544497b4e05619e33ec"
-
-    # Fix build failure with Gtk4 >=4.20.0
-    # https://gitlab.gnome.org/GNOME/gtkmm/-/commit/94959145f8b9248e7f6384fb293f1429599f614d
-    # We can't use the upstream commit because it requires re-generating pre-generated files in the tarball.
-    # This requires many extra dependencies (see the `head` spec) and fails on Linux for some reason.
-    patch :DATA
-  end
 
   livecheck do
     url :stable
@@ -80,22 +70,3 @@ class Gtkmm4 < Formula
     system "./test"
   end
 end
-
-__END__
-diff --git i/untracked/gtk/gtkmm/iconpaintable.h w/untracked/gtk/gtkmm/iconpaintable.h
-index dfdedf3..432ab1b 100644
---- i/untracked/gtk/gtkmm/iconpaintable.h
-+++ w/untracked/gtk/gtkmm/iconpaintable.h
-@@ -29,11 +29,10 @@
- #include <glibmm/object.h>
- #include <gdkmm/paintable.h>
- #include <giomm/file.h>
-+#include <gtk/gtk.h>
- 
- 
- #ifndef DOXYGEN_SHOULD_SKIP_THIS
--using GtkIconPaintable = struct _GtkIconPaintable;
--using GtkIconPaintableClass = struct _GtkIconPaintableClass;
- #endif /* DOXYGEN_SHOULD_SKIP_THIS */
- 
- 

@@ -8,14 +8,8 @@ class Kettle < Formula
   no_autobump! because: :requires_manual_review
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "6844f00620d72aea96200ed1d2abae15a9ade480b7cdbe2fe30e023a18efb4b1"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "6844f00620d72aea96200ed1d2abae15a9ade480b7cdbe2fe30e023a18efb4b1"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "6844f00620d72aea96200ed1d2abae15a9ade480b7cdbe2fe30e023a18efb4b1"
-    sha256 cellar: :any_skip_relocation, sonoma:        "47eb4cc6af16734644e1fb4d184deec13348f16e432194842d084309169e202a"
-    sha256 cellar: :any_skip_relocation, ventura:       "47eb4cc6af16734644e1fb4d184deec13348f16e432194842d084309169e202a"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "6844f00620d72aea96200ed1d2abae15a9ade480b7cdbe2fe30e023a18efb4b1"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "6844f00620d72aea96200ed1d2abae15a9ade480b7cdbe2fe30e023a18efb4b1"
+    rebuild 2
+    sha256 cellar: :any_skip_relocation, all: "2e06b9a8ce68da482615fb8566137223350e711a6d7a48e8e19f27bb3307b0f7"
   end
 
   # https://www.linkedin.com/pulse/license-changes-pentaho-community-edition-from-version-philipp-heck-3kzwe

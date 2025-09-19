@@ -3,8 +3,8 @@ class Specify < Formula
 
   desc "Toolkit to help you get started with Spec-Driven Development"
   homepage "https://github.com/github/spec-kit"
-  url "https://github.com/github/spec-kit/archive/refs/tags/v0.0.39.tar.gz"
-  sha256 "ea5a7efe96d7713cad10ffe3f9a264776056bb4e4c6434d4b0058fd17e66c3e5"
+  url "https://github.com/github/spec-kit/archive/refs/tags/v0.0.41.tar.gz"
+  sha256 "c639636959ffe35d760dba62603f53d316553a9c803b9675396130a7db74d2bb"
   license "MIT"
 
   bottle do
@@ -20,8 +20,8 @@ class Specify < Formula
   end
 
   resource "click" do
-    url "https://files.pythonhosted.org/packages/60/6c/8ca2efa64cf75a977a0d7fac081354553ebe483345c734fb6b6515d96bbc/click-8.2.1.tar.gz"
-    sha256 "27c491cc05d968d271d5a1db13e3b5a184636d9d930f148c50b038f0d0646202"
+    url "https://files.pythonhosted.org/packages/46/61/de6cd827efad202d7057d93e0fed9294b96952e188f7384832791c7b2254/click-8.3.0.tar.gz"
+    sha256 "e7b8232224eba16f4ebe410c25ced9f7875cb5f3263ffc93cc3e8da705e229c4"
   end
 
   resource "h11" do

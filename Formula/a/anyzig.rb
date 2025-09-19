@@ -17,7 +17,7 @@ class Anyzig < Formula
 
   keg_only "it conflicts with zig"
 
-  depends_on "zig" => :build
+  depends_on "zig@0.14" => :build
 
   def install
     args = %W[-Dforce-version=v#{version.to_s.tr(".", "_")}]

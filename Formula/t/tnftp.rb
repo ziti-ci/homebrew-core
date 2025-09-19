@@ -4,7 +4,11 @@ class Tnftp < Formula
   url "https://cdn.netbsd.org/pub/NetBSD/misc/tnftp/tnftp-20230507.tar.gz"
   mirror "https://www.mirrorservice.org/sites/ftp.netbsd.org/pub/NetBSD/misc/tnftp/tnftp-20230507.tar.gz"
   sha256 "be0134394bd7d418a3b34892b0709eeb848557e86474e1786f0d1a887d3a6580"
-  license "BSD-4-Clause"
+  license all_of: [
+    "BSD-2-Clause",
+    "BSD-3-Clause", # src/domacro.c
+    "ISC", # libnetbsd/{strlcat.c,strlcpy.c} (Linux)
+  ]
 
   livecheck do
     url :homepage
@@ -28,29 +32,25 @@ class Tnftp < Formula
   end
 
   uses_from_macos "bison" => :build
+  uses_from_macos "libedit"
   uses_from_macos "ncurses"
 
   conflicts_with "inetutils", because: "both install `ftp' binaries"
 
   def install
-    system "./configure", "--prefix=#{prefix}"
-    system "make", "all"
+    # Remove bundled libedit. Still need Makefile.in to configure
+    rm_r(Dir["libedit/*"] - ["libedit/Makefile.in"])
 
-    bin.install "src/tnftp" => "ftp"
-    man1.install "src/ftp.1"
+    system "./configure", "--without-local-libedit", *std_configure_args
+    system "make", "install"
+
+    # Add compatibility symlinks as we used to manually install as `ftp`
+    bin.install_symlink "tnftp" => "ftp"
+    man1.install_symlink "tnftp.1" => "ftp.1"
   end
 
   test do
-    # Errno::EIO: Input/output error @ io_fillbuf - fd:5 /dev/pts/0
-    return if OS.linux? && ENV["HOMEBREW_GITHUB_ACTIONS"]
-
-    require "pty"
-    require "expect"
-
-    PTY.spawn "#{bin}/ftp ftp://anonymous:none@speedtest.tele2.net" do |input, output, _pid|
-      str = input.expect(/Connected to speedtest.tele2.net./)
-      output.puts "exit"
-      assert_match "Connected to speedtest.tele2.net.", str[0]
-    end
+    system bin/"tnftp", "ftp://ftp.netbsd.org/pub/NetBSD/README"
+    assert_match "This directory contains files related to NetBSD", File.read("README")
   end
 end

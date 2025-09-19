@@ -5,6 +5,14 @@ class Oatpp < Formula
   sha256 "9dd31f005ab0b3e8895a478d750d7dbce99e42750a147a3c42a9daecbddedd64"
   license "Apache-2.0"
 
+  bottle do
+    sha256 cellar: :any,                 arm64_tahoe:   "1d123435c094ef3f8505f2a0123b98f5bee8686723b01e87b7eac1124319146a"
+    sha256 cellar: :any,                 arm64_sequoia: "9660efd36d9aaa939d7d03d4473cdacb0255c289105c055aa3c66e64b972790a"
+    sha256 cellar: :any,                 arm64_sonoma:  "8d8f998c2c07ed45f917b85a40cc614b6820b263b8e97254d20d1149d6a91104"
+    sha256 cellar: :any,                 sonoma:        "b1a74b30588c204615b87752817736ba6886e0c429228bd2c14164c6dc86bc6a"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "12218676b146b645b2d7bebafa30e08fdc2a769bba634a161d4473a80384183b"
+  end
+
   depends_on "cmake" => :build
 
   def install

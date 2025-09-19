@@ -3,8 +3,8 @@ class Btcli < Formula
 
   desc "Bittensor command-line tool"
   homepage "https://docs.bittensor.com/btcli"
-  url "https://files.pythonhosted.org/packages/9e/d1/c1e5ef51ff2655ad2cffb2d4bb27286aca1b91366fcd31ddc0df0297970c/bittensor_cli-9.11.1.tar.gz"
-  sha256 "41c7c25e5a344e08bdd638bbaf8285349fa90df39d2614271f7cc97f504e8ea9"
+  url "https://files.pythonhosted.org/packages/78/76/04ca9938fca72465ef129b783f3d960edf98ecb455ab03ffb43547068fac/bittensor_cli-9.11.2.tar.gz"
+  sha256 "11da18f7682e66f75cf5fc2f846ebe47b4b963c850f7a9394bf63609ed4fc09a"
   license "MIT"
   head "https://github.com/opentensor/btcli.git", branch: "main"
 
@@ -83,8 +83,8 @@ class Btcli < Formula
   end
 
   resource "click" do
-    url "https://files.pythonhosted.org/packages/60/6c/8ca2efa64cf75a977a0d7fac081354553ebe483345c734fb6b6515d96bbc/click-8.2.1.tar.gz"
-    sha256 "27c491cc05d968d271d5a1db13e3b5a184636d9d930f148c50b038f0d0646202"
+    url "https://files.pythonhosted.org/packages/46/61/de6cd827efad202d7057d93e0fed9294b96952e188f7384832791c7b2254/click-8.3.0.tar.gz"
+    sha256 "e7b8232224eba16f4ebe410c25ced9f7875cb5f3263ffc93cc3e8da705e229c4"
   end
 
   resource "frozenlist" do

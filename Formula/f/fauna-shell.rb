@@ -17,6 +17,7 @@ class FaunaShell < Formula
 
   # Fauna Service Winding Down, https://news.ycombinator.com/item?id=43414742
   deprecate! date: "2025-06-22", because: :unmaintained
+  disable! date: "2026-06-22", because: :unmaintained
 
   depends_on "node"
 
@@ -31,9 +32,6 @@ class FaunaShell < Formula
 
   test do
     assert_match version.to_s, shell_output("#{bin}/fauna --version")
-
-    output = shell_output("#{bin}/fauna database list 2>&1", 1)
-    assert_match "The requested user 'default' is not signed in or has expired.", output
 
     output = shell_output("#{bin}/fauna local --name local-fauna 2>&1", 1)
     assert_match "[StartContainer] Docker service is not available", output

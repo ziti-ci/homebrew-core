@@ -3,8 +3,8 @@ class Specify < Formula
 
   desc "Toolkit to help you get started with Spec-Driven Development"
   homepage "https://github.com/github/spec-kit"
-  url "https://github.com/github/spec-kit/archive/refs/tags/v0.0.41.tar.gz"
-  sha256 "c639636959ffe35d760dba62603f53d316553a9c803b9675396130a7db74d2bb"
+  url "https://github.com/github/spec-kit/archive/refs/tags/v0.0.44.tar.gz"
+  sha256 "941445c394b408491346c44baeba2293aec9b4bd605c54f5b7f56fe574f24c46"
   license "MIT"
 
   bottle do

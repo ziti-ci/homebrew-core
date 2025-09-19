@@ -2,7 +2,7 @@ class Bigloo < Formula
   desc "Scheme implementation with object system, C, and Java interfaces"
   homepage "https://www-sop.inria.fr/indes/fp/Bigloo/"
   url "https://www-sop.inria.fr/indes/fp/Bigloo/download/bigloo-4.6a.tar.gz"
-  sha256 "9705ec3de00cc1c51ee7699894841a3770c06a874215b45635b8844ae6daf0a6"
+  sha256 "6772f6a17b7f002171d433f1270344a6bbbefb17e2718b0456656aa8c0b0d9c1"
   license "GPL-2.0-or-later"
   head "https://github.com/manuel-serrano/bigloo.git", branch: "master"
 

@@ -23,6 +23,9 @@ class Wiki < Formula
 
   depends_on "go" => :build
 
+  # Add a User-Agent header to requests to avoid an error
+  patch :DATA
+
   def install
     system "go", "build", *std_go_args(ldflags: "-s -w"), "./cmd/wiki"
   end
@@ -33,3 +36,24 @@ class Wiki < Formula
     assert_match "Read more: https://en.wikipedia.org/wiki/Go", shell_output("#{bin}/wiki golang")
   end
 end
+
+__END__
+diff --git a/request.go b/request.go
+index a365760..be8e9cb 100644
+--- a/request.go
++++ b/request.go
+@@ -54,7 +54,13 @@ func (r *Request) Execute(noCheckCert bool) (*Response, error) {
+ 		client = &http.Client{Transport: tr}
+ 	}
+ 
+-	response, err := client.Get(r.String())
++	req, err := http.NewRequest("GET", r.String(), nil)
++	if err != nil {
++		return nil, err
++	}
++	req.Header.Set("User-Agent", "wiki-cli/1.4.1")
++
++	response, err := client.Do(req)
+ 	if err != nil {
+ 		return nil, err
+ 	}

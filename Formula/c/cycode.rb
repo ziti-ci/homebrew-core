@@ -3,8 +3,8 @@ class Cycode < Formula
 
   desc "Boost security in your dev lifecycle via SAST, SCA, Secrets & IaC scanning"
   homepage "https://github.com/cycodehq/cycode-cli"
-  url "https://files.pythonhosted.org/packages/85/87/402fb9625d6e5401d32a8587164fc0bd7a802e94d13dd248c2e74313570a/cycode-3.4.3.tar.gz"
-  sha256 "575b5f451cfd6c038d624ff2666b8cb8991332d4056298e7f63b592ca499bc18"
+  url "https://files.pythonhosted.org/packages/75/4c/ffdaae086166f56f0b72f82ce8c538ed1c40e26fba61797e6969a0d36270/cycode-3.5.0.tar.gz"
+  sha256 "2687d19d00af0a25a1775b1b4690b9c526fd567101dbfb1c814a38c479829a66"
   license "MIT"
   head "https://github.com/cycodehq/cycode-cli.git", branch: "main"
 
@@ -124,8 +124,8 @@ class Cycode < Formula
   end
 
   resource "mcp" do
-    url "https://files.pythonhosted.org/packages/95/fd/d6e941a52446198b73e5e4a953441f667f1469aeb06fb382d9f6729d6168/mcp-1.14.0.tar.gz"
-    sha256 "2e7d98b195e08b2abc1dc6191f6f3dc0059604ac13ee6a40f88676274787fac4"
+    url "https://files.pythonhosted.org/packages/48/e9/242096400d702924b49f8d202c6ded7efb8841cacba826b5d2e6183aef7b/mcp-1.14.1.tar.gz"
+    sha256 "31c4406182ba15e8f30a513042719c3f0a38c615e76188ee5a736aaa89e20134"
   end
 
   resource "mdurl" do

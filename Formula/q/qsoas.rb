@@ -36,6 +36,11 @@ class Qsoas < Formula
   uses_from_macos "ruby"
 
   def install
+    # Workaround for MRuby 3.4.0 and to avoid C standard passed to C++ compiler
+    # Issue ref: https://github.com/fourmond/QSoas/issues/5
+    inreplace "src/mruby.cc", "(OP_LOADI,", "(OP_LOADI8,"
+    inreplace "QSoas.pro", "mruby-config --cflags)", "mruby-config --cxxflags)"
+
     gsl = Formula["gsl"].opt_prefix
     qt5 = Formula["qt@5"].opt_prefix
 

@@ -1,8 +1,8 @@
 class Gbox < Formula
   desc "Provides environments for AI Agents to operate computer and mobile devices"
   homepage "https://gbox.ai"
-  url "https://github.com/babelcloud/gbox/releases/download/v0.1.13/gbox-v0.1.13.tar.gz"
-  sha256 "552005eee1351fc57ab4b2244736c4cabe3315b8053d8012b19f4c56aeafdacd"
+  url "https://github.com/babelcloud/gbox/releases/download/v0.1.14/gbox-v0.1.14.tar.gz"
+  sha256 "8848ac113b6f53a1efb5a961fb7e2d7de8909317ed319c77508ad3e1e4f40dcc"
   license "Apache-2.0"
 
   bottle do

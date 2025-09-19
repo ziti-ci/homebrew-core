@@ -8,12 +8,12 @@ class GnomeBuilder < Formula
   head "https://gitlab.gnome.org/GNOME/gnome-builder.git", branch: "main"
 
   bottle do
-    sha256 arm64_tahoe:   "24bc2ddbe487965f508680cf94cf71158d41f57501c7da3f53d7980c4026c6f3"
-    sha256 arm64_sequoia: "2b8473b3e31ef49328a4ab54214fdbf6d3ff0aac579051d927846cee65384d9c"
-    sha256 arm64_sonoma:  "ac63ed22fd95faf59ffdfdbb83e4f3a2de7d9ec486affd6fab7de4a962441cba"
-    sha256 sonoma:        "1f1dd57073b9060a940cbac16c08121cb4708d9e257fcd49351fab47678c4d7f"
-    sha256 arm64_linux:   "42b21cf6283672afa61837b1dc261d0829c91c15d2055502158d38ad9c206695"
-    sha256 x86_64_linux:  "22dca75fc5181bf35a9bb8d20effc505c92541296ace32425beba79f346e11c4"
+    sha256 arm64_tahoe:   "760b005bf5f4c83a86467b2934a3ab0829725d90ce116fc5f9938ab905dde48e"
+    sha256 arm64_sequoia: "5e02c752c2cf210990b41fc2b696db65bbdb997914b85e0f85fa9b87810b7919"
+    sha256 arm64_sonoma:  "9cc9503449a389f7221b87d01ca9152107cc08a5b511ee873bb3d67d873ae8da"
+    sha256 sonoma:        "e1fc77710d3e285c8763a5cd57783d4c7e3d3dd12fac715847fc05498d651cdb"
+    sha256 arm64_linux:   "116e946ab21aa764a1e11dbbe9424cf1393dd24c2e2db3c929a65488815bc801"
+    sha256 x86_64_linux:  "3f17b64a3ec7f93f455dc4a974e26b666592e53021f5618e1a9913b657d5d5d0"
   end
 
   depends_on "desktop-file-utils" => :build

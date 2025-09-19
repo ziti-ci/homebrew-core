@@ -6,6 +6,7 @@ class Hevi < Formula
   license "GPL-3.0-or-later"
 
   bottle do
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "76e18798c302421d681fdb0d0cada44b315b40f8e1a931122bc89ca4f658b5ed"
     sha256 cellar: :any_skip_relocation, arm64_sequoia: "af71a0d595ed48d139c93e8f4ef5a59edea2309afeddf280c5408ba532d470f7"
     sha256 cellar: :any_skip_relocation, arm64_sonoma:  "135aef044ae02eb3898d410284c9ca8e75289effcef3dd15bc56f7a4df50f1e5"
     sha256 cellar: :any_skip_relocation, arm64_ventura: "6e9597a6ff6d8eeac1df5ad0bd524a8b2a1998af819df0dc5d2b2ff8f6037a23"

@@ -3,8 +3,8 @@ class CodecovCli < Formula
 
   desc "Codecov's command-line interface"
   homepage "https://cli.codecov.io/"
-  url "https://files.pythonhosted.org/packages/ea/f1/79cbb1c28c6fcf637155c780bd4e68172c7ba0d43b104f0b08923f4d80b7/codecov_cli-11.2.2.tar.gz"
-  sha256 "d77f82d4c5f05ab0336071a14a95f643e8b6abf78ba101b3af58f4856ff7c428"
+  url "https://files.pythonhosted.org/packages/cf/93/57e484d41082818a91badfd64f31618431a0c55eeadbc1dde41f2ee4f6b7/codecov_cli-11.2.3.tar.gz"
+  sha256 "89cd48341b3fd7941760336d0fa03d99ee1a4cb262ac85d5e04089e5a25688e7"
   license "Apache-2.0"
 
   bottle do
@@ -31,8 +31,8 @@ class CodecovCli < Formula
   end
 
   resource "click" do
-    url "https://files.pythonhosted.org/packages/46/61/de6cd827efad202d7057d93e0fed9294b96952e188f7384832791c7b2254/click-8.3.0.tar.gz"
-    sha256 "e7b8232224eba16f4ebe410c25ced9f7875cb5f3263ffc93cc3e8da705e229c4"
+    url "https://files.pythonhosted.org/packages/60/6c/8ca2efa64cf75a977a0d7fac081354553ebe483345c734fb6b6515d96bbc/click-8.2.1.tar.gz"
+    sha256 "27c491cc05d968d271d5a1db13e3b5a184636d9d930f148c50b038f0d0646202"
   end
 
   resource "idna" do

@@ -23,8 +23,25 @@ class Plzip < Formula
 
   depends_on "lzlib"
 
+  # `make check` fails with "(stdin): Not enough memory" since Apple Clang 1700 / LLVM Clang 18
+  on_macos do
+    depends_on "llvm@17" => :build if DevelopmentTools.clang_build_version >= 1700
+  end
+
   def install
-    system "./configure", "--prefix=#{prefix}"
+    args = ["--prefix=#{prefix}"]
+
+    # `make check` fails with "(stdin): Not enough memory" since Apple Clang 1700 / LLVM Clang 18
+    if ENV.compiler == :clang && DevelopmentTools.clang_build_version >= 1700
+      ENV.append_to_cflags "-I#{Formula["lzlib"].opt_include}"
+      args += %W[
+        CC=#{Formula["llvm@17"].opt_bin}/clang
+        CXX=#{Formula["llvm@17"].opt_bin}/clang++
+        CXXFLAGS=#{ENV.cxxflags}
+      ]
+    end
+
+    system "./configure", *args
     system "make"
     system "make", "check"
     ENV.deparallelize

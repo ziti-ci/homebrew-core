@@ -3,12 +3,12 @@ class Specify < Formula
 
   desc "Toolkit to help you get started with Spec-Driven Development"
   homepage "https://github.com/github/spec-kit"
-  url "https://github.com/github/spec-kit/archive/refs/tags/v0.0.44.tar.gz"
-  sha256 "941445c394b408491346c44baeba2293aec9b4bd605c54f5b7f56fe574f24c46"
+  url "https://github.com/github/spec-kit/archive/refs/tags/v0.0.45.tar.gz"
+  sha256 "eba25957d932969b7a70e04f27622f0feb4f7f26ae4a417be2ecbd2a483943a5"
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "1f8799c45aaf0b87dd360be5f911347f0b050a933f4ca0bc657b6f25f15da638"
+    sha256 cellar: :any_skip_relocation, all: "3509bb561fbacab683cc0ba7d4219574e114613b987f46bbcd276fa21443d7d2"
   end
 
   depends_on "certifi"
@@ -95,8 +95,8 @@ class Specify < Formula
   end
 
   resource "typer" do
-    url "https://files.pythonhosted.org/packages/92/e8/2a73ccf9874ec4c7638f172efc8972ceab13a0e3480b389d6ed822f7a822/typer-0.17.4.tar.gz"
-    sha256 "b77dc07d849312fd2bb5e7f20a7af8985c7ec360c45b051ed5412f64d8dc1580"
+    url "https://files.pythonhosted.org/packages/73/f2/8214025e8fd1ada825d1b2183bd5895148b42b88ffe3ea3eed1224568ed0/typer-0.18.0.tar.gz"
+    sha256 "342049be1a608c972b0f77dd2b2573e74366b83465cfd5ebd3fede187e1f885e"
   end
 
   resource "typing-extensions" do

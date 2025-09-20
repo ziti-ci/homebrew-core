@@ -6,11 +6,11 @@ class QwenCode < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256                               arm64_tahoe:   "4108026e9bb486f365b7c49eabe675244eb57885edb04fffbd2f477b59760f4c"
-    sha256                               arm64_sequoia: "f9e61f622226e24d21a14bee214242f2b4ee1ee53a7eaca69fdc4634d33146fa"
-    sha256                               arm64_sonoma:  "f9ef28fb73c5f2e1bde79db194e65b3f920f74dff6b50bbf46f9a81866633476"
-    sha256                               sonoma:        "71c17bc8a6739aeaadfd9d214ba081a5e147dec6c90a1353563ef21c9572ff77"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "771772e5f506d42fde72e9c5b6ffcb4393615cd8061a6c39ca98231022bf8d21"
+    sha256                               arm64_tahoe:   "4c827adbfc083d21913ceb10a9b7f9d44237b23f13735ae45154314351e13c90"
+    sha256                               arm64_sequoia: "49fa8f07358e078c46cf37236a403d5b1b757a2e7af4b89bec2bd2abea7365b4"
+    sha256                               arm64_sonoma:  "abccf359d85fb4498c00de345a527e3a5410bb3aeada866b24a0d0fc852777b0"
+    sha256                               sonoma:        "d9b95a41053c07890ee1b04779d4e8f5e28447194ce97be3ad873336f06fa552"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "01a6f5aedab8c0c4c5528911185b21d1f08b92b607af12ced0c0acc938434107"
   end
 
   depends_on "node"

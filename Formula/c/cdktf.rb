@@ -12,6 +12,7 @@ class Cdktf < Formula
     sha256                               arm64_ventura: "07de2f8ab86258e1413e355a5ace5ce1bed2f637031861b013b1ccb04ba044b6"
     sha256                               sonoma:        "4307f3bd75cc1b46b281df158e32c299bfa0051bbe57fe4139a427e229524c45"
     sha256                               ventura:       "eda9a5cd48c776d1a99ed9afbca4706178f793166dd1aa062233eb728d2d0fd0"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "aaf4af2bc665157307d3a5e79a74e744c385fae9ffa9c31e0047346f6d767e75"
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "361f8a42a54fda4f627e1b9fa593f68a68f557e963a8bb6f82bd0a6998fae7cc"
   end
 

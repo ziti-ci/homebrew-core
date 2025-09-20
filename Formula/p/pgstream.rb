@@ -5,6 +5,14 @@ class Pgstream < Formula
   sha256 "77386d68b090cbb607eb35b30628beea96d6175d7ea1136eb554039cda49fa9e"
   license "Apache-2.0"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "ce62fafc24b64e34bfc24e6e578e435a2eae310ae0e9fcc3dfa6eae09de99273"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "ce62fafc24b64e34bfc24e6e578e435a2eae310ae0e9fcc3dfa6eae09de99273"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "ce62fafc24b64e34bfc24e6e578e435a2eae310ae0e9fcc3dfa6eae09de99273"
+    sha256 cellar: :any_skip_relocation, sonoma:        "b03631b74839b818db1efdda3c94a384c94712e2c717382f197e5e3bcb43d761"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "698e695bb0b6f04749820833b797d96a85c5cf3f7b21df764ba8eb49bf904557"
+  end
+
   depends_on "go" => :build
   depends_on "postgresql@17" => :test
   depends_on "wal2json" => :test

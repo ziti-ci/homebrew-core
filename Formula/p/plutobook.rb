@@ -6,14 +6,12 @@ class Plutobook < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any, arm64_tahoe:   "b7b31876138b4c305719a9516ea3931ab6d1c97f7a6b85c9d31616abae55c435"
-    sha256 cellar: :any, arm64_sequoia: "97bec7b8391ef9df32f955c2360c932fb602842086c23c2a985dd8cb48ea021c"
-    sha256 cellar: :any, arm64_sonoma:  "c9857958665f5c1e39f6c2a3bfa24c0e3f1836fa42415dd78a490d8fd58bbd67"
-    sha256 cellar: :any, arm64_ventura: "00a280132ef37a3393bcd50b8406329bba28862cb400d6e0a48c3709d1d1deac"
-    sha256 cellar: :any, sonoma:        "1e6fa58302781f99633a65e3f2ffd8aef519be3c894be1cae27228fbf30ac915"
-    sha256 cellar: :any, ventura:       "1478dfe0f53f682ccdcada3be0f62e35c84afd48317639cb9fa359e2f910d545"
-    sha256               arm64_linux:   "47ce45c4de5ff118a1c7c63bdc9adc7a3256d376cc6d2d4db2b67ebd464f1056"
-    sha256               x86_64_linux:  "3b14e4ad09e9248353912705542ade446a9e3b0b9738d555c753798794959b79"
+    sha256 cellar: :any, arm64_tahoe:   "a4482691e3f6b59fcf4e9d5507c8c6d177acf9eecb95c45a0c079732acaed3bb"
+    sha256 cellar: :any, arm64_sequoia: "d4e65432d81493336bda07e46da99a79e8ecbc7bdff9350a38d573c573f0baab"
+    sha256 cellar: :any, arm64_sonoma:  "c1425a05752d86510956477b44be9dc27c2fec08df43b816a6018e631f8b7f6e"
+    sha256 cellar: :any, sonoma:        "b4be3b1010ed84a21db5cf097d4cfc36ce0f53f5f36f0e766f4893cb09ddd195"
+    sha256               arm64_linux:   "ab5733918ace4a581834bbfbd9ecbd19483d7fd8226defff0bec566a2c67994e"
+    sha256               x86_64_linux:  "a543c1385fd882727580c45d23e1e70c566a3a13eab9483d8aa30a402fdebd66"
   end
 
   depends_on "meson" => :build

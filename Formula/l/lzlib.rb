@@ -13,14 +13,12 @@ class Lzlib < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "e0de833c618fd656ff351fcd981f3aa30d214301bc300497f5d6f573f5421203"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "87bcb4061bb953be6a3a89673b3671923af705d5cb38856b5859fb71f6dc1128"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "e7d49c0b61af344aec1da7f037ec59ce9c36f79a9b7606794e15697c7b04f0ca"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "f957b6e8a1170b0fe93bfca8004cb9467d8496688f56999c6088aecd90ad59e6"
-    sha256 cellar: :any_skip_relocation, sonoma:        "9e294db70263a4a544a032cb1574a8493d0a0e1830ccaccd5181b8b793fd87ba"
-    sha256 cellar: :any_skip_relocation, ventura:       "37d32f4cd2440fa0f6a73492c7e585f037fc6cb189f57dfeb6023e9cd3d7403e"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "a91ac1ac39e250d4245285e4db6581ab1c801b329537933661e418eda81ab976"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "4e55a6c95515ea3ffc18c2486dfbb3819cdfddc6fc7b0a86b11c0c62f81f2cc0"
+    sha256 cellar: :any,                 arm64_tahoe:   "fffdea895f5b64466a14d6642d73fece994c792b7bf8ee75be9cc5c178eb177a"
+    sha256 cellar: :any,                 arm64_sequoia: "d37d282c89b456e608a8870d3cbba0dd210230d39929b0834fee066a925f9603"
+    sha256 cellar: :any,                 arm64_sonoma:  "e4d1233198674a8dc0f135a26b3d3b2104b44c024b2f8a87f7a62f5f67685a03"
+    sha256 cellar: :any,                 sonoma:        "e25b6fcd40cd2a97d0b36e0cd5557c4b30c66dd1a95685d20f7497252bcd9d70"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "1b370fbc07e1840563b7e65c23aabc942918ce7c98242a79d1ff37497731eafc"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "e1fd813a8c33dd6a678184271f8eecc2075d522611827e0c9cb5b2190950cb3c"
   end
 
   on_macos do

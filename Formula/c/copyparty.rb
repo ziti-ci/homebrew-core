@@ -8,12 +8,12 @@ class Copyparty < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any,                 arm64_tahoe:   "a72cd8dfbc37e9a3ab16e10adcdec1346ff3036eda128564ca1aaa8c26839af1"
-    sha256 cellar: :any,                 arm64_sequoia: "5e33cdc3151fd44b0f23aca17e50e5e2edfc9cfaa57a97f41210670f056edd67"
-    sha256 cellar: :any,                 arm64_sonoma:  "5b3fe6be46fa5d3ef76fcd97523a22adb9edabdf1c95778b1d0175dfc3233b83"
-    sha256 cellar: :any,                 sonoma:        "97234c52cb0fc498b4c1dc4796066e35a10dcb44f75ff1cd0b79492febdf9afe"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "96b739872c1c654e628f63b8eaf7eaa1cdc6086da0841d4be098c543043a6f62"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "123b06a073a292e9b3c88377b85efc61b7b269cc21a5d62f2c48f5a4235f57f2"
+    sha256 cellar: :any,                 arm64_tahoe:   "f27169cad4498b1a677e681c865043c6f9f4576384d51e63951a805696d40b52"
+    sha256 cellar: :any,                 arm64_sequoia: "23aa7403f97a02c21fbabdc2595f52b90d529ce9d0371ce40e78120c8de298f6"
+    sha256 cellar: :any,                 arm64_sonoma:  "143107038282ba8b67482afd7347fecb0abb6fbde734b5805815ee5318e3074d"
+    sha256 cellar: :any,                 sonoma:        "9ea8efaf6b3271d280836bb5033fb04ae638b2a8e617974ad37c96b5dabfa738"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "6eb75a20fce490ca668d05c19dd61fa1412c55db771d771b2611eef426bd5540"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "2839c944a60aa7782b6c8bad6934196549f4a59aaf4b2def2cd25d18e0507ad0"
   end
 
   depends_on "cmake" => :build

@@ -1,8 +1,8 @@
 class Plutobook < Formula
   desc "Paged HTML Rendering Library"
   homepage "https://github.com/plutoprint/plutobook"
-  url "https://github.com/plutoprint/plutobook/archive/refs/tags/v0.8.0.tar.gz"
-  sha256 "832376e16c9604d8dce68425eacf06b6e475bc6eab75251464e26ac674807e2f"
+  url "https://github.com/plutoprint/plutobook/archive/refs/tags/v0.9.0.tar.gz"
+  sha256 "877435ab906e7bbf105fc468929d810530de5670cd7ac9835813dacc8186b1cf"
   license "MIT"
 
   bottle do
@@ -30,11 +30,11 @@ class Plutobook < Formula
   uses_from_macos "expat"
 
   on_macos do
-    depends_on "llvm" if DevelopmentTools.clang_build_version <= 1499
+    depends_on "llvm" => :build if DevelopmentTools.clang_build_version <= 1499
   end
 
   on_ventura do
-    depends_on "llvm"
+    depends_on "llvm" => :build
   end
 
   fails_with :clang do
@@ -48,19 +48,13 @@ class Plutobook < Formula
   end
 
   def install
-    if OS.mac? && (MacOS.version == :ventura || DevelopmentTools.clang_build_version <= 1499)
-      ENV.llvm_clang
-      llvm = Formula["llvm"]
-      ENV.append "LDFLAGS", "-L#{llvm.opt_lib}/c++ -L#{llvm.opt_lib}/unwind -lunwind"
-    end
-
     system "meson", "setup", "build", *std_meson_args
     system "meson", "compile", "-C", "build", "--verbose"
     system "meson", "install", "-C", "build"
   end
 
   test do
-    (testpath/"test.cpp").write <<~EOS
+    (testpath/"test.cpp").write <<~CPP
       #include <plutobook/plutobook.hpp>
 
       static const char kHTMLContent[] = R"HTML(
@@ -76,7 +70,7 @@ class Plutobook < Formula
         book.writeToPdf("test.pdf");
         return 0;
       }
-    EOS
+    CPP
     system ENV.cxx, "test.cpp", "-std=c++20", "-I#{include}", "-L#{lib}", "-lplutobook", "-o", "test"
     system "./test"
     assert_path_exists testpath/"test.pdf"

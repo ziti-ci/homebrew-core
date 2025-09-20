@@ -5,6 +5,10 @@ class Ni < Formula
   sha256 "bc65d795986d4d86ad5486814c661c509275f42e6b8aba879157ec082f0dfa1b"
   license "MIT"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "ca32fff8d3760df311a4a15a86ef1d706bc445c9c656d2427662264c556b72c8"
+  end
+
   depends_on "node"
 
   def install

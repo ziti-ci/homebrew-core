@@ -1,8 +1,8 @@
 class Zx < Formula
   desc "Tool for writing better scripts"
   homepage "https://google.github.io/zx/"
-  url "https://registry.npmjs.org/zx/-/zx-8.8.1.tgz"
-  sha256 "50025fb3748232b1facea458c4b07a671e0b9893880c7b573e33dbc7ccf8b102"
+  url "https://registry.npmjs.org/zx/-/zx-8.8.2.tgz"
+  sha256 "e20ac3cab7727310974791120d9cafd8c7664b717a003344320bb6b2b22f1df6"
   license "Apache-2.0"
 
   bottle do

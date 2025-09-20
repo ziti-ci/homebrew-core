@@ -3,8 +3,8 @@ class Plutoprint < Formula
 
   desc "Generate PDFs and Images from HTML"
   homepage "https://github.com/plutoprint/plutoprint"
-  url "https://files.pythonhosted.org/packages/46/2d/7467cfaa2206eb3acf69adec70f1b51da6f406ac7ac0d5703dd34bcb1374/plutoprint-0.10.0.tar.gz"
-  sha256 "802671eb74521ae97690f25cfb5038ed25db67cfafa12b0b9725f117df651dc9"
+  url "https://files.pythonhosted.org/packages/24/9d/c611a24fb16258437f2b2908e10011f8cb975a992ef20a3cb0d98a250dc8/plutoprint-0.11.0.tar.gz"
+  sha256 "f6290e0c473bdc810cb5457503157f90a7c0f9399b8fa3147cea7fed93455395"
   license "MIT"
 
   bottle do
@@ -25,11 +25,11 @@ class Plutoprint < Formula
   depends_on "python@3.13"
 
   on_macos do
-    depends_on "llvm" if DevelopmentTools.clang_build_version <= 1499
+    depends_on "llvm" => :build if DevelopmentTools.clang_build_version <= 1499
   end
 
   on_ventura do
-    depends_on "llvm"
+    depends_on "llvm" => :build
   end
 
   on_linux do
@@ -51,12 +51,6 @@ class Plutoprint < Formula
   end
 
   def install
-    if OS.mac? && (MacOS.version == :ventura || DevelopmentTools.clang_build_version <= 1499)
-      ENV.llvm_clang
-      llvm = Formula["llvm"]
-      ENV.append "LDFLAGS", "-L#{llvm.opt_lib}/c++ -L#{llvm.opt_lib}/unwind -lunwind"
-    end
-
     virtualenv_install_with_resources
   end
 

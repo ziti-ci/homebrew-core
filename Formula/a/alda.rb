@@ -1,8 +1,8 @@
 class Alda < Formula
   desc "Music programming language for musicians"
   homepage "https://alda.io"
-  url "https://github.com/alda-lang/alda/archive/refs/tags/release-2.3.2.tar.gz"
-  sha256 "1dc4ad595a14a6c5a2f93dc30f2c340f68a9353bf2f8eaa5ec285b622a33260d"
+  url "https://github.com/alda-lang/alda/archive/refs/tags/release-2.3.3.tar.gz"
+  sha256 "eacb1f6fc649d0e3e159377c1084f1530469d2953b97ccb10720222aadcc8a04"
   license "EPL-2.0"
 
   bottle do

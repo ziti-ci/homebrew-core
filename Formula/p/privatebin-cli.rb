@@ -5,6 +5,14 @@ class PrivatebinCli < Formula
   sha256 "eb143ed6d2ab88d66e615c5a98fb2c3f8b0ee5a8394590b68ddbf59bfb2c39d3"
   license "ISC"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "bb4c13c2f9ea53f51675c8647c55767c74939837c097578ba38d3039e4c2d7c4"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "bb4c13c2f9ea53f51675c8647c55767c74939837c097578ba38d3039e4c2d7c4"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "bb4c13c2f9ea53f51675c8647c55767c74939837c097578ba38d3039e4c2d7c4"
+    sha256 cellar: :any_skip_relocation, sonoma:        "e91653fc6b2105a834846e498a97865246f173e20a1cc48e30fb2fa2f7b8d192"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "0bbee2ff0b938abdcb16eeeeafb7b33a77123df28a3615574488104c186cf847"
+  end
+
   depends_on "go" => :build
 
   def install

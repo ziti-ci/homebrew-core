@@ -6,6 +6,14 @@ class Komac < Formula
   license "GPL-3.0-or-later"
   head "https://github.com/russellbanks/Komac.git", branch: "main"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "2a74787073a0936171542b60c3a99955eac8303892a1d081b47462cc8eb2434c"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "726323246c1a7ef794898113078323a0a62911f19a2f1bbc8e6ef1c3a7d2f7d2"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "59f4d6783d2b96ad26d7a377f87e6a712a7ed8442f61d1d27daf5c3a100d5391"
+    sha256 cellar: :any_skip_relocation, sonoma:        "8ee73eb9019608ef7c5666546db312651aec21d4b611fa0ffe60dcad7f0fae79"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "f8559a3b61ba29529b37ee44fa5889cd5fb5ad7fbb4bfc921f8b4c9d29f18fe1"
+  end
+
   depends_on "pkgconf" => :build
   depends_on "rust" => :build
 

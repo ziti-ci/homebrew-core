@@ -7,12 +7,13 @@ class Tombi < Formula
   head "https://github.com/tombi-toml/tombi.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "1c068453731d9a70bd37fa879f9b189bca37b3a84587865ae8ea2eb95686fe54"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "817b36e526db546de7f91b72f4a64659c60dd4c4b1eb06bc30fb1271df824e61"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "d28555714281eb25ea282d4db41cd8a2f4cbedab6998d4cdaa06fdc294edda93"
-    sha256 cellar: :any_skip_relocation, sonoma:        "ff6f33a4dd0a753a6ea889a72080778cbfb0fdbc9b4920feecdf94b02aaf1627"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "abfde34420e5243942e294127384cddff610c8ad92e28ce160343cf328e46fd8"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "8c3a2965125adb7e35873b45174ed9dfc1aff8a5a4ccad8f86ac801da499d229"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "e0354047e59bf01ab6d1a1ad42bacc59166c5eb26b61049787d6e64f97c78d61"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "47d100084a389e9c99e2f1ef06b91c669dc6822df4eaf11cb681c11136c5cbe0"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "78a36539416337fa44f981e0630aa5bf156b0ae18f5cec520f418536ee028091"
+    sha256 cellar: :any_skip_relocation, sonoma:        "71761fe00064cf72ddcbb4df39f3a6d9e318847c83df5428eef648ec075bb05d"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "fef829c36c460ddc212f69c32c801aec43ee9e73ec0dc62a5af6f1cdfed8300b"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "2affa2f2d914bfc65bf2dab137b1f138b940cd1c3f2a948d6c4b3bdd22fa8169"
   end
 
   depends_on "rust" => :build

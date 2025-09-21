@@ -3,19 +3,18 @@ class Snakemake < Formula
 
   desc "Pythonic workflow system"
   homepage "https://snakemake.readthedocs.io/"
-  url "https://files.pythonhosted.org/packages/f4/4b/5854d3ac3695a39a74d513cd8760df00a9de9ec5a5edd96e621905655a17/snakemake-9.11.3.tar.gz"
-  sha256 "db4e3405fbb104e561e4e466520df071ef77bf3e4faa205a1964dcb9c8519d25"
+  url "https://files.pythonhosted.org/packages/f8/33/ddabd917709da07ace24ce85fe4bec88ab40d4a682501aea33f136bf1d51/snakemake-9.11.4.tar.gz"
+  sha256 "37b13337c87124d3cbd345f7a6ec976d4c485ac5b60d3d3379dcfe41b426dbb2"
   license "MIT"
   head "https://github.com/snakemake/snakemake.git", branch: "main"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any,                 arm64_tahoe:   "5f80e2b16c81be8ff70fe45cc42e6f5992faeedfc95448649e6204a6e2be8c25"
-    sha256 cellar: :any,                 arm64_sequoia: "06038f089f7b8e2de17fa9dcddb3a3a0f090313242b5ce3a83c0a6bc3a096712"
-    sha256 cellar: :any,                 arm64_sonoma:  "98877c21b901dbbde35cea4b27f2018824b52049a1c9b156d484d37f0ade7e57"
-    sha256 cellar: :any,                 sonoma:        "d5b640a17162f9af444204ea16ea26080150120a488319c1b258a211a3d5d666"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "9cd1b8488ca781c7629948527b67d0829e3c297fb25a5aeccee214f47e750977"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "1d2408611a3ba107ec348eeb2075d7ebd672319a515285332546da725c9c8fae"
+    sha256 cellar: :any,                 arm64_tahoe:   "fabac15c28955e13cec6430b9bb3a3228b4de6e7397ff9cc1cb95c3df93c4bde"
+    sha256 cellar: :any,                 arm64_sequoia: "313007a1e0e6b062ebab39e84b50781d430b9d9390d1361990870954bad22349"
+    sha256 cellar: :any,                 arm64_sonoma:  "f640b884aaf5d64423dcbb637e6041fdcc27e0156e38fac8e47f4340d5ff32d3"
+    sha256 cellar: :any,                 sonoma:        "9d2a880175eeb5394411aa0fd2580dd28ccd3ac9feba7766f5d2d0b28877fbaa"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "e4406f954fe6b51732f011152847c8914c60b40c8cc33aa11b4140477b1079ab"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "b120bf7482299e68cc0da411a4737dc51254ec16855de51cd8286562866e80be"
   end
 
   depends_on "rust" => :build

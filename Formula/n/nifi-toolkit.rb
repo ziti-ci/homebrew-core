@@ -1,8 +1,8 @@
 class NifiToolkit < Formula
   desc "Command-line utilities to setup and support NiFi"
   homepage "https://nifi.apache.org"
-  url "https://dlcdn.apache.org/nifi/2.5.0/nifi-toolkit-2.5.0-bin.zip"
-  sha256 "d61e8b1cfc5a42df7b7a8a4ae25d22694cc6cdee381198c81d0a815165ab8343"
+  url "https://dlcdn.apache.org/nifi/2.6.0/nifi-toolkit-2.6.0-bin.zip"
+  sha256 "903498a399d68a5bc6ac0d42419b66453b1e54b5e7e0f0aaaab8c00332093e2a"
   license "Apache-2.0"
 
   bottle do

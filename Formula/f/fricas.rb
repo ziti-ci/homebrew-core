@@ -30,6 +30,16 @@ class Fricas < Formula
   depends_on "sbcl"
   depends_on "zstd"
 
+  on_linux do
+    # Patchelf will corrupt the SBCL core which is appended to binary.
+    on_arm do
+      pour_bottle? only_if: :default_prefix
+    end
+    on_intel do
+      pour_bottle? only_if: :default_prefix
+    end
+  end
+
   def install
     args = [
       "--with-lisp=sbcl",
@@ -41,12 +51,27 @@ class Fricas < Formula
       system "make"
       system "make", "install"
     end
+
+    # Work around patchelf corrupting the SBCL core which is appended to binary
+    # TODO: Find a better way to handle this in brew, either automatically or via DSL
+    if OS.linux? && build.bottle?
+      cd lib/"fricas" do
+        system "tar", "-czf", "target.tar.gz", "target"
+        rm_r("target")
+      end
+    end
+  end
+
+  def post_install
+    if (lib/"fricas/target.tar.gz").exist?
+      cd lib/"fricas" do
+        system "tar", "-xzf", "target.tar.gz"
+        rm("target.tar.gz")
+      end
+    end
   end
 
   test do
-    # Fails in Linux CI with "Can't find sbcl.core"
-    return if OS.linux? && ENV["HOMEBREW_GITHUB_ACTIONS"]
-
     assert_match %r{ \(/ \(pi\) 2\)\n},
       pipe_output("#{bin}/fricas -nosman", "integrate(sqrt(1-x^2),x=-1..1)::InputForm")
   end

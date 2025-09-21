@@ -3,8 +3,8 @@ class Specify < Formula
 
   desc "Toolkit to help you get started with Spec-Driven Development"
   homepage "https://github.com/github/spec-kit"
-  url "https://github.com/github/spec-kit/archive/refs/tags/v0.0.47.tar.gz"
-  sha256 "c9038a28824c9110e266c88bed631feacaa22aa22edfe382447faa3b2f27b1d2"
+  url "https://github.com/github/spec-kit/archive/refs/tags/v0.0.48.tar.gz"
+  sha256 "e91d4d75d0c2f6ca97f8d0508ce83f3ecac1cfe77fc8983286d77cb938664bba"
   license "MIT"
 
   bottle do
@@ -95,8 +95,8 @@ class Specify < Formula
   end
 
   resource "typer" do
-    url "https://files.pythonhosted.org/packages/73/f2/8214025e8fd1ada825d1b2183bd5895148b42b88ffe3ea3eed1224568ed0/typer-0.18.0.tar.gz"
-    sha256 "342049be1a608c972b0f77dd2b2573e74366b83465cfd5ebd3fede187e1f885e"
+    url "https://files.pythonhosted.org/packages/03/ea/9cc57c3c627fd7a6a0907ea371019fe74c3ec00e3cf209a6864140a602ad/typer-0.19.1.tar.gz"
+    sha256 "cb881433a4b15dacc875bb0583d1a61e78497806741f9aba792abcab390c03e6"
   end
 
   resource "typing-extensions" do

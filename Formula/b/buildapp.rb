@@ -29,14 +29,28 @@ class Buildapp < Formula
   def install
     bin.mkpath
     system "make", "install", "DESTDIR=#{prefix}"
+
+    # Work around patchelf corrupting the SBCL core which is appended to binary
+    # TODO: Find a better way to handle this in brew, either automatically or via DSL
+    if OS.linux? && build.bottle?
+      cp bin/"buildapp", prefix
+      Utils::Gzip.compress(prefix/"buildapp")
+    end
+  end
+
+  def post_install
+    if (prefix/"buildapp.gz").exist?
+      system "gunzip", prefix/"buildapp.gz"
+      bin.install prefix/"buildapp"
+      (bin/"buildapp").chmod 0755
+    end
   end
 
   test do
-    # Fails in Linux CI with "Can't find sbcl.core"
-    return if OS.linux? && ENV["HOMEBREW_GITHUB_ACTIONS"]
-
-    code = "(defun f (a) (declare (ignore a)) (write-line \"Hello, homebrew\"))"
+    code = <<~LISP
+      (defun f (a) (declare (ignore a)) (write-line "Hello, homebrew"))
+    LISP
     system bin/"buildapp", "--eval", code, "--entry", "f", "--output", "t"
-    assert_equal `./t`, "Hello, homebrew\n"
+    assert_equal "Hello, homebrew\n", shell_output("./t")
   end
 end

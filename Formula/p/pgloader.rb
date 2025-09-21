@@ -36,15 +36,37 @@ class Pgloader < Formula
   depends_on "sbcl"
   depends_on "zstd"
 
+  on_linux do
+    # Patchelf will corrupt the SBCL core which is appended to binary.
+    on_arm do
+      pour_bottle? only_if: :default_prefix
+    end
+    on_intel do
+      pour_bottle? only_if: :default_prefix
+    end
+  end
+
   def install
     system "make"
     bin.install "bin/pgloader"
+
+    # Work around patchelf corrupting the SBCL core which is appended to binary
+    # TODO: Find a better way to handle this in brew, either automatically or via DSL
+    if OS.linux? && build.bottle?
+      cp bin/"pgloader", prefix
+      Utils::Gzip.compress(prefix/"pgloader")
+    end
+  end
+
+  def post_install
+    if (prefix/"pgloader.gz").exist?
+      system "gunzip", prefix/"pgloader.gz"
+      bin.install prefix/"pgloader"
+      (bin/"pgloader").chmod 0755
+    end
   end
 
   test do
-    # Fails in Linux CI with "Can't find sbcl.core"
-    return if OS.linux? && ENV["HOMEBREW_GITHUB_ACTIONS"]
-
     output = shell_output("#{bin}/pgloader --summary 2>&1", 2)
     assert_match "pgloader [ option ... ] SOURCE TARGET", output
 

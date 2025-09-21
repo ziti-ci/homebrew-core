@@ -12,6 +12,7 @@ class Retdec < Formula
 
   bottle do
     rebuild 2
+    sha256 cellar: :any,                 arm64_tahoe:   "abd1c53dcf15cfa96c614e40e46e5287d9c2c4d8e225de4c171eb2bd91d9c7fd"
     sha256 cellar: :any,                 arm64_sequoia: "216414b394e83210cce369da37d371ac44b4e3b6f6008fa16191efacc4ea9eaa"
     sha256 cellar: :any,                 arm64_sonoma:  "8b9441e8c153d05e91cbeef5688f58584b709eec12b38a9c5f0fcf7dd80b258f"
     sha256 cellar: :any,                 arm64_ventura: "666d104c2c81ebf92f83b239aa716bf7e798362558b3855f83de08df4120b260"

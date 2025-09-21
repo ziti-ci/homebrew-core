@@ -1,8 +1,8 @@
 class MistCli < Formula
   desc "Mac command-line tool that automatically downloads macOS Firmwares / Installers"
   homepage "https://github.com/ninxsoft/mist-cli"
-  url "https://github.com/ninxsoft/mist-cli/archive/refs/tags/v2.1.1.tar.gz"
-  sha256 "aec30c9ff043e17ce0e6dd563480bd8015910ea1f110d4b767522e41e92bc00e"
+  url "https://github.com/ninxsoft/mist-cli/archive/refs/tags/v2.2.tar.gz"
+  sha256 "556b0680ea8aec5be5b111a0858c3434765efe6efe3526432ba13d33232d7706"
   license "MIT"
   head "https://github.com/ninxsoft/mist-cli.git", branch: "main"
 

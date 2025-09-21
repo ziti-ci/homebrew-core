@@ -1,8 +1,8 @@
 class TerragruntAtlantisConfig < Formula
   desc "Generate Atlantis config for Terragrunt projects"
   homepage "https://github.com/transcend-io/terragrunt-atlantis-config"
-  url "https://github.com/transcend-io/terragrunt-atlantis-config/archive/refs/tags/v1.20.0.tar.gz"
-  sha256 "b21ee84341cd94ba369c6f0b3124f6d260ed9141129e345c6c64d76b2f54ce91"
+  url "https://github.com/transcend-io/terragrunt-atlantis-config/archive/refs/tags/v1.21.0.tar.gz"
+  sha256 "e6f02e9493466e70d1b65f3c1db36da9e9789a5dd89935f1a5c307739e8c3610"
   license "MIT"
 
   bottle do
@@ -16,6 +16,12 @@ class TerragruntAtlantisConfig < Formula
   end
 
   depends_on "go" => :build
+
+  # version patch, upstream pr ref, https://github.com/transcend-io/terragrunt-atlantis-config/pull/404
+  patch do
+    url "https://github.com/transcend-io/terragrunt-atlantis-config/commit/b4538b1c86bf1de054338e5d6c69dbc975c378b7.patch?full_index=1"
+    sha256 "be88fd82f3816cd6dcec9c590936cf9865400a333c8f035bc033991fce789b41"
+  end
 
   def install
     system "go", "build", *std_go_args(ldflags: "-s -w")

@@ -1,9 +1,10 @@
 class ClickhouseCpp < Formula
   desc "C++ client library for ClickHouse"
   homepage "https://github.com/ClickHouse/clickhouse-cpp"
-  url "https://github.com/ClickHouse/clickhouse-cpp/archive/refs/tags/v2.5.1.tar.gz"
-  sha256 "8942fc702eca1f656e59c680c7e464205bffea038b62c1a0ad1f794ee01e7266"
+  url "https://github.com/ClickHouse/clickhouse-cpp/archive/refs/tags/v2.6.0.tar.gz"
+  sha256 "f694395ab49e7c2380297710761a40718278cefd86f4f692d3f8ce4293e1335f"
   license "Apache-2.0"
+  head "https://github.com/ClickHouse/clickhouse-cpp.git", branch: "master"
 
   bottle do
     rebuild 1
@@ -17,15 +18,11 @@ class ClickhouseCpp < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "632c681d02c3b5261da20562567ec7e0bfcce88e6abde92d13b24fad35662498"
   end
 
-  head do
-    url "https://github.com/ClickHouse/clickhouse-cpp.git", branch: "master"
-    depends_on "zstd"
-  end
-
   depends_on "cmake" => :build
   depends_on "abseil"
   depends_on "lz4"
   depends_on "openssl@3"
+  depends_on "zstd"
 
   def install
     # We use the vendored version (1.0.2) of `cityhash` because newer versions
@@ -37,20 +34,12 @@ class ClickhouseCpp < Formula
       -DOPENSSL_ROOT_DIR=#{Formula["openssl@3"].opt_prefix}
       -DWITH_SYSTEM_ABSEIL=ON
       -DWITH_SYSTEM_CITYHASH=OFF
-      -DWITH_SYSTEM_LZ4=ON
+      -DWITH_SYSTEM_LZ4=O
+      -DWITH_SYSTEM_ZSTD=ON
     ]
     # Upstream only allows building static libs on macOS
     # See: https://github.com/ClickHouse/clickhouse-cpp/pull/219#issuecomment-1362928064
     args << "-DBUILD_SHARED_LIBS=ON" unless OS.mac?
-
-    if build.stable?
-      # Workaround for CMake 4 until next release with:
-      # https://github.com/ClickHouse/clickhouse-cpp/commit/56155829273bf428aebd9c501c2ff898058fafea
-      odie "Remove CMake 4 workaround!" if version > "2.5.1"
-      ENV["CMAKE_POLICY_VERSION_MINIMUM"] = "3.5.2"
-    else
-      args << "-DWITH_SYSTEM_ZSTD=ON"
-    end
 
     system "cmake", "-S", ".", "-B", "build", *args, *std_cmake_args
     system "cmake", "--build", "build"
@@ -101,14 +90,10 @@ class ClickhouseCpp < Formula
     CPP
 
     args = %W[
-      -std=c++17
-      -I#{include}
-      -L#{lib}
-      -lclickhouse-cpp-lib
-      -L#{Formula["openssl@3"].opt_lib}
-      -lcrypto -lssl
-      -L#{Formula["lz4"].opt_lib}
-      -llz4
+      -std=c++17 -I#{include} -L#{lib} -lclickhouse-cpp-lib
+      -L#{Formula["openssl@3"].opt_lib} -lcrypto -lssl
+      -L#{Formula["lz4"].opt_lib} -llz4
+      -L#{Formula["zstd"].opt_lib} -lzstd
     ]
     args += %W[-L#{libexec}/lib -lcityhash] if OS.mac?
     system ENV.cxx, "main.cpp", *args, "-o", "test-client"

@@ -8,7 +8,7 @@ class Cogapp < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "a904c26976e9e55216ce6316e12727825dd8fdda8b4a762be8a6632efe60d172"
+    sha256 cellar: :any_skip_relocation, all: "70a17354f67368a9dd17c748eec19fd8f25b58840aa71d79e7b1d0f65eabf701"
   end
 
   depends_on "python@3.13"

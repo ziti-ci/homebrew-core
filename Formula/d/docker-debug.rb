@@ -1,8 +1,8 @@
 class DockerDebug < Formula
   desc "Use new container attach on already container go on debug"
   homepage "https://github.com/zeromake/docker-debug"
-  url "https://github.com/zeromake/docker-debug/archive/refs/tags/v0.7.10.tar.gz"
-  sha256 "5b7682acc6dcf93d9d260de88c269657348c4ef6db1ef184d794786509ba0af3"
+  url "https://github.com/zeromake/docker-debug/archive/refs/tags/v0.7.11.tar.gz"
+  sha256 "f872f649db05f3670650dd7aa3507b0658eb29557d0d2685658ab581b2919101"
   license "MIT"
   head "https://github.com/zeromake/docker-debug.git", branch: "master"
 

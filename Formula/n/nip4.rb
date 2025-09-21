@@ -7,12 +7,12 @@ class Nip4 < Formula
   head "https://github.com/jcupitt/nip4.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any, arm64_tahoe:   "c7b3f10eb45f3f7d83fad9c66505c3102fb15d9fd8943dae64799d4cd1b83e65"
-    sha256 cellar: :any, arm64_sequoia: "8294ceb186f4a5ee6bb0b14a28a71aca5dcc5ca7bca487b6fe27de3f3caf6891"
-    sha256 cellar: :any, arm64_sonoma:  "103fbdd0f4ccb8eb0e5bf2e2085fd453e42450fa5a396708250ff197ffdfef04"
-    sha256 cellar: :any, sonoma:        "54298372de231cbf4076185f910c17bd89a5167827d91246813b7b4e7fdce665"
-    sha256               arm64_linux:   "a4af1494e26c6eaec1b4c44239355dea7657797d6d54e7cd387d532cfa206f69"
-    sha256               x86_64_linux:  "859c409f1c0f527a8d9a5f8b58c13d33786accd9d424269eb5ca78d81f4f2b55"
+    sha256 cellar: :any, arm64_tahoe:   "7f12dc7ac73e81bdae035ab1cbd8b299b870c419a626a695c955890e18c19176"
+    sha256 cellar: :any, arm64_sequoia: "9bcd462222196e81f2dea6a0a35ba7624f27dc02c1fb878cfce9dcea0e713902"
+    sha256 cellar: :any, arm64_sonoma:  "794eb9cd73584956939380cfe338fb8793a0fc298deab405793aa22a149a72b5"
+    sha256 cellar: :any, sonoma:        "d4d0b55419abfb5b00c853249fdbdc8ae17dbb0ec69e0df5188550103bc11280"
+    sha256               arm64_linux:   "208965f1f47bfd67cfcb24297096a66b3a4c31129d2646d4a49096781b45a59d"
+    sha256               x86_64_linux:  "037054fd39b519ff9032abc5b62e874cd49519f5a5b14b45f109578c4b7f821d"
   end
 
   depends_on "bison" => :build

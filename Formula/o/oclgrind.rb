@@ -24,7 +24,7 @@ class Oclgrind < Formula
   end
 
   depends_on "cmake" => :build
-  depends_on "llvm@18" # Issue for LLVM 19: https://github.com/jrprice/Oclgrind/issues/215
+  depends_on "llvm@19" # Issue for LLVM 20: https://github.com/jrprice/Oclgrind/issues/216
   depends_on "readline"
 
   on_linux do
@@ -93,6 +93,12 @@ class Oclgrind < Formula
   patch do
     url "https://github.com/jrprice/Oclgrind/commit/6f9bd9aee73d796d18af1f77689b4c1eb05ead02.patch?full_index=1"
     sha256 "adf85b1adcd951eb82c263619b999a860166a35cbf8a68cc7d7e1b35eb217894"
+  end
+
+  # Backport support for LLVM 19
+  patch do
+    url "https://github.com/jrprice/Oclgrind/commit/7cc48c424a65dfb870b1e7614b59362dff44b348.patch?full_index=1"
+    sha256 "3727836bbc42691bbb34fdd16a266586e01de8ee68b948e9a43fbea10977d864"
   end
 
   def install

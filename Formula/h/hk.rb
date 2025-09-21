@@ -1,18 +1,18 @@
 class Hk < Formula
   desc "Git hook and pre-commit lint manager"
   homepage "https://hk.jdx.dev"
-  url "https://github.com/jdx/hk/archive/refs/tags/v1.15.2.tar.gz"
-  sha256 "cb76844be5462bd756aca677907921a74a6b5fa34f81118160b7060d0b637b49"
+  url "https://github.com/jdx/hk/archive/refs/tags/v1.15.3.tar.gz"
+  sha256 "15397d45eb93e9a5d5f4a4ba06b06c7d10ec2eba37c44b7a7ba47c3d4e164b0f"
   license "MIT"
   head "https://github.com/jdx/hk.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any,                 arm64_tahoe:   "93d03d9af11fc77f61b62d967a5c69f416976a7c612d23bf5be158800e4653fb"
-    sha256 cellar: :any,                 arm64_sequoia: "4d25d9df2ce0a16a458ee5138cb9ff1b7f4b16554ef0097972d043fa771aa094"
-    sha256 cellar: :any,                 arm64_sonoma:  "04def4feff8e2ba54dc655951641d32ecf7feda85e9fcc82a2747d22863b47e4"
-    sha256 cellar: :any,                 sonoma:        "8aa2e0c23a680ae48a38d211577036fc992643b92646282e2f99f55f2fd6a9c7"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "a5f6665a9da44617a0f478fd26cda37c810f9e7bc29605b0847a8cb0d5216ed9"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "aaa81e24b732a2a144263f493958f13048caee0b86a068e5746f9731fca6ea75"
+    sha256 cellar: :any,                 arm64_tahoe:   "fae115a2f04d5a4d8406e54c766759d4ff952250cbbe722b4d09db697f4efbae"
+    sha256 cellar: :any,                 arm64_sequoia: "01b84c42d13743dfc85b34d96cf62be026e6e2445aceeef7687de4911f7ca945"
+    sha256 cellar: :any,                 arm64_sonoma:  "1a8184aeac67a7209a873f4ed7a41fb474f43cd661c477514db92ed569e894f1"
+    sha256 cellar: :any,                 sonoma:        "2b196489b64c570bd5fc3a0968f0b37124a65d0c5527a9aaf9a975740b0ad418"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "3d8440236d44ce174d064b7ff1a39c33f30ae9c9fd121e17ec6cc0adacff633c"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "76d3c794fc23a45e50cc8a0ee82d89d902855446cc5d7856af7f9c52a353e03d"
   end
 
   depends_on "rust" => [:build, :test]

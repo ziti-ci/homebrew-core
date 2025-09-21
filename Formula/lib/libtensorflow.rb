@@ -1,8 +1,8 @@
 class Libtensorflow < Formula
   desc "C interface for Google's OS library for Machine Intelligence"
   homepage "https://www.tensorflow.org/"
-  url "https://github.com/tensorflow/tensorflow/archive/refs/tags/v2.19.0.tar.gz"
-  sha256 "4691b18e8c914cdf6759b80f1b3b7f3e17be41099607ed0143134f38836d058e"
+  url "https://github.com/tensorflow/tensorflow/archive/refs/tags/v2.20.0.tar.gz"
+  sha256 "a640d1f97be316a09301dfc9347e3d929ad4d9a2336e3ca23c32c93b0ff7e5d0"
   license "Apache-2.0"
 
   bottle do
@@ -16,18 +16,26 @@ class Libtensorflow < Formula
 
   depends_on "bazelisk" => :build
   depends_on "numpy" => :build
-  depends_on "python@3.12" => :build # Python 3.13: https://github.com/tensorflow/tensorflow/issues/78774
+  depends_on "python@3.13" => :build
 
   on_macos do
     depends_on "gnu-getopt" => :build
   end
 
   def install
-    python3 = "python3.12"
-    optflag = if Hardware::CPU.arm? && OS.mac?
+    # Workaround to build on Tahoe by using newer apple_support with following commit:
+    # https://github.com/bazelbuild/apple_support/commit/44c43c715aa58d16dc713ec0daa0a4373c39245a
+    # Issue ref: https://github.com/tensorflow/tensorflow/issues/100434
+    inreplace "tensorflow/workspace2.bzl" do |s|
+      s.gsub! "/1.18.1/apple_support.1.18.1.tar.gz", "/1.19.0/apple_support.1.19.0.tar.gz"
+      s.gsub! '"d71b02d6df0500f43279e22400db6680024c1c439115c57a9a82e9effe199d7b"',
+              '"dca96682317cc7112e6fae87332e13a8fefbc232354c2939b11b3e06c09e5949"'
+    end
+
+    python3 = "python3.13"
+    optflag = ENV["HOMEBREW_OPTFLAGS"].presence
+    optflag ||= if Hardware::CPU.arm? && OS.mac?
       "-mcpu=apple-m1"
-    elsif build.bottle?
-      "-march=#{Hardware.oldest_cpu}"
     else
       "-march=native"
     end
@@ -55,27 +63,34 @@ class Libtensorflow < Formula
     ENV["TF_CONFIGURE_IOS"] = "0"
     system "./configure"
 
+    # Bazel clears environment variables which breaks superenv shims.
+    # Bazel already dodges our superenv on macOS by using its own shim.
+    ENV.remove "PATH", Superenv.shims_path if OS.linux?
+
     bazel_args = %W[
       --jobs=#{ENV.make_jobs}
       --compilation_mode=opt
       --copt=#{optflag}
       --linkopt=-Wl,-rpath,#{rpath}
       --verbose_failures
+      --config=monolithic
+      --repo_env=USE_PYWRAP_RULES=
+      --repo_env=ML_WHEEL_TYPE=release
     ]
-    if OS.linux?
-      pyver = Language::Python.major_minor_version python3
-      env_path = "#{Formula["python@#{pyver}"].opt_libexec}/bin:#{HOMEBREW_PREFIX}/bin:/usr/bin:/bin"
-      bazel_args += %W[
-        --action_env=PATH=#{env_path}
-        --host_action_env=PATH=#{env_path}
-      ]
-    end
+    # //tensorflow/tools/lib_package:libtensorflow target was removed in 2.20.0.
+    # For now, the deps used by original target still exist so use those to build.
+    # https://github.com/tensorflow/tensorflow/commit/724f36e00941ad3abf3c32209adc2ee186602b70
+    libtensorflow_deps = %w[
+      cheaders
+      clib
+      clicenses
+      eager_cheaders
+    ]
     targets = %w[
-      //tensorflow/tools/lib_package:libtensorflow
       //tensorflow/tools/benchmark:benchmark_model
       //tensorflow/tools/graph_transforms:summarize_graph
       //tensorflow/tools/graph_transforms:transform_graph
-    ]
+    ] + libtensorflow_deps.map { |dep| "//tensorflow/tools/lib_package:#{dep}" }
     system Formula["bazelisk"].opt_bin/"bazelisk", "build", *bazel_args, *targets
 
     bin.install %w[
@@ -83,10 +98,12 @@ class Libtensorflow < Formula
       bazel-bin/tensorflow/tools/graph_transforms/summarize_graph
       bazel-bin/tensorflow/tools/graph_transforms/transform_graph
     ]
-    system "tar", "-C", prefix, "-xzf", "bazel-bin/tensorflow/tools/lib_package/libtensorflow.tar.gz"
+    libtensorflow_deps.each do |dep|
+      system "tar", "-C", prefix, "-xf", "bazel-bin/tensorflow/tools/lib_package/#{dep}.tar"
+    end
 
     ENV.prepend_path "PATH", Formula["gnu-getopt"].opt_prefix/"bin" if OS.mac?
-    system "tensorflow/c/generate-pc.sh", "--prefix", prefix, "--version", version.to_s
+    system "tensorflow/c/generate-pc.sh", "--prefix", opt_prefix, "--version", version.to_s
     (lib/"pkgconfig").install "tensorflow.pc"
   end
 

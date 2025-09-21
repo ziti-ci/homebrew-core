@@ -19,6 +19,8 @@ class Tombi < Formula
 
   def install
     system "cargo", "install", *std_cargo_args(path: "rust/tombi-cli")
+
+    generate_completions_from_executable(bin/"tombi", "completion", shells: [:bash, :zsh, :fish, :pwsh])
   end
 
   test do

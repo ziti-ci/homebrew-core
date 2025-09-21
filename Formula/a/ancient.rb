@@ -1,8 +1,8 @@
 class Ancient < Formula
   desc "Decompression routines for ancient formats"
   homepage "https://github.com/temisu/ancient"
-  url "https://github.com/temisu/ancient/archive/refs/tags/v2.2.0.tar.gz"
-  sha256 "d814b0a1f2c08cb7e8dc94506c096f21471719a6f9d3d2f93ab9416f1ea98712"
+  url "https://github.com/temisu/ancient/archive/refs/tags/v2.3.0.tar.gz"
+  sha256 "5d1d71f0fb8c69955bb4ec01ed9ffd2b5bf546b10463030dda85d949ea422bc9"
   license "BSD-2-Clause"
 
   bottle do

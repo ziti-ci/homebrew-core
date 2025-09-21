@@ -40,6 +40,7 @@ class OrTools < Formula
   depends_on "clp"
   depends_on "coinutils"
   depends_on "eigen"
+  depends_on "highs"
   depends_on "openblas"
   depends_on "osi"
   depends_on "protobuf"
@@ -52,9 +53,8 @@ class OrTools < Formula
   patch :DATA
 
   def install
-    # FIXME: Upstream enabled Highs support in their binary distribution, but our build fails with it.
     args = %w[
-      -DUSE_HIGHS=OFF
+      -DUSE_HIGHS=ON
       -DBUILD_DEPS=OFF
       -DBUILD_SAMPLES=OFF
       -DBUILD_EXAMPLES=OFF
@@ -112,6 +112,28 @@ class OrTools < Formula
                     *shell_output("pkg-config --cflags --libs #{absl_libs.join(" ")}").chomp.split,
                     "-o", "simple_sat_program"
     system "./simple_sat_program"
+
+    # Highs backend
+    (testpath/"highs_test.cc").write <<~EOS
+      #include "ortools/linear_solver/linear_solver.h"
+      using operations_research::MPSolver;
+      int main() {
+        if (!MPSolver::SupportsProblemType(MPSolver::HIGHS_LINEAR_PROGRAMMING)) return 1;
+        MPSolver solver("t", MPSolver::HIGHS_LINEAR_PROGRAMMING);
+        auto* x = solver.MakeNumVar(0.0, 1.0, "x");
+        auto* obj = solver.MutableObjective();
+        obj->SetCoefficient(x, 1.0);
+        obj->SetMaximization();
+        if (solver.Solve() != MPSolver::OPTIMAL) return 2;
+        return x->solution_value() > 0.99 ? 0 : 3;
+      }
+    EOS
+    system ENV.cxx, "-std=c++17", "highs_test.cc",
+                    "-I#{include}", "-L#{lib}", "-lortools",
+                    "-DOR_PROTO_DLL=", "-DPROTOBUF_USE_DLLS",
+                    *shell_output("pkg-config --cflags --libs #{absl_libs.join(" ")}").chomp.split,
+                    "-o", "highs_test"
+    system "./highs_test"
   end
 end
 

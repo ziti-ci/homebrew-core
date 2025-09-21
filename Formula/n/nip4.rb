@@ -1,8 +1,8 @@
 class Nip4 < Formula
   desc "Image processing spreadsheet"
   homepage "https://github.com/jcupitt/nip4"
-  url "https://github.com/jcupitt/nip4/releases/download/v9.0.13/nip4-9.0.13.tar.xz"
-  sha256 "10330eb7f470b8774326d8a05698829e858af9c5f70d4392433abd7f2abfd56e"
+  url "https://github.com/jcupitt/nip4/releases/download/v9.0.13-2/nip4-9.0.13-2.tar.xz"
+  sha256 "ab144b3702eb2376b58df9c39c9a53161e6960fea4c7c71eb5e5fd9cab9af1e1"
   license "GPL-2.0-or-later"
   head "https://github.com/jcupitt/nip4.git", branch: "main"
 
@@ -48,7 +48,7 @@ class Nip4 < Formula
   end
 
   test do
-    assert_match version.to_s, shell_output("#{bin}/nip4 --version")
+    assert_match version.major_minor_patch.to_s, shell_output("#{bin}/nip4 --version")
 
     # nip4 is a GUI application
     spawn bin/"nip4" do |_r, _w, pid|

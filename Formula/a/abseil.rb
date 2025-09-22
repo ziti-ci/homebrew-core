@@ -1,20 +1,10 @@
 class Abseil < Formula
   desc "C++ Common Libraries"
   homepage "https://abseil.io"
+  url "https://github.com/abseil/abseil-cpp/archive/refs/tags/20250814.1.tar.gz"
+  sha256 "1692f77d1739bacf3f94337188b78583cf09bab7e420d2dc6c5605a4f86785a1"
   license "Apache-2.0"
-  revision 1
   head "https://github.com/abseil/abseil-cpp.git", branch: "master"
-
-  stable do
-    url "https://github.com/abseil/abseil-cpp/archive/refs/tags/20250814.0.tar.gz"
-    sha256 "9b2b72d4e8367c0b843fa2bcfa2b08debbe3cee34f7aaa27de55a6cbb3e843db"
-
-    # Backport fix for older GCC
-    patch do
-      url "https://github.com/abseil/abseil-cpp/commit/ba9a180d22e62edcd5f6c56b50287b286f96fc33.patch?full_index=1"
-      sha256 "f0403bf23edf3ac67365c645d81602d5bd965890a1db5a797794aca5b4b6ebb3"
-    end
-  end
 
   bottle do
     sha256                               arm64_tahoe:   "e7671a6aa73bde7610deaa7e8576e1fbb84a491c763842cfd375ee8f2d0d6dcd"

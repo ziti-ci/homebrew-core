@@ -29,6 +29,15 @@ class Treefrog < Formula
     rm_r("3rdparty")
     # Skip unneeded CMake check
     inreplace "configure", "if ! which cmake ", "if false "
+    # Fix to error: no member named 'mode' in 'TSqlJoin<T>';
+    inreplace "src/tsqljoin.h", "_mode(other.mode)", "_mode(other._mode)"
+    # Fix to error: call to deleted constructor of 'formatter<QByteArray, char>'
+    # Force to use fallback implementation
+    if DevelopmentTools.clang_build_version >= 1700
+      inreplace ["src/tglobal.h", "src/tsystemglobal.h"],
+                "#ifdef TF_HAVE_STD_FORMAT",
+                "#ifndef TF_HAVE_STD_FORMAT"
+    end
 
     system "./configure", "--prefix=#{prefix}",
                           "--enable-shared-glog",

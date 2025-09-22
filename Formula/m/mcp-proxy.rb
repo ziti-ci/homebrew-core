@@ -8,14 +8,12 @@ class McpProxy < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any,                 arm64_tahoe:   "be13e418b093c3d16b371bfc95ab1348f2196830458df8172c75af16da4bacfc"
-    sha256 cellar: :any,                 arm64_sequoia: "877e627a035e20034023858fb2133a68834dc3b460327d8a155a733e49c89e37"
-    sha256 cellar: :any,                 arm64_sonoma:  "84138641f3341965e3cba000cc5acfe97d3e059e279becb8a8ff1f5dff62dd74"
-    sha256 cellar: :any,                 arm64_ventura: "db0e337fa40f65d37fd59e3fe33888a58466dbe1a4f78b680ba2940c09bd6403"
-    sha256 cellar: :any,                 sonoma:        "dbb71ce521de7c061f5fcd44d018ac16c3ee399363d7cb7e642025142770dba2"
-    sha256 cellar: :any,                 ventura:       "ef046bb060452efd633db513c28bf8365e23ac1ecff6c7a04c613353322222f1"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "a2c4f86bde2837fa7a0e46496de3c7c9180f902b57f27658e881d91f24d113cc"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "a03c95e85c68b35ef84b9b237bc9e1411dcbdf8c6b9d56bf27a74dc8bdf6cd97"
+    sha256 cellar: :any,                 arm64_tahoe:   "0b87e6a81b5046d5c89c6513e5aaa14bbbbcea6822ac650b8130ec28f7000b6d"
+    sha256 cellar: :any,                 arm64_sequoia: "e69beb4180d1462f16ea894c112b710a57a727d9295944ab2d6593465a840ee4"
+    sha256 cellar: :any,                 arm64_sonoma:  "174daddfdebe094574d3028b4e3a73255c2df970e83ae45d9d5881d19a366084"
+    sha256 cellar: :any,                 sonoma:        "b4165a7f9472f8031c3c0f29bc8b7291c202bb0edfee8cbce9602c6a7e593765"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "b15466c349243803049921f15aabab07221655e61cfc30d55f2ba3c9384d6fc0"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "6895dce0299a3e1a1dd2135a679cb31ddfa4e89422714dbfb5da5469ed5b59df"
   end
 
   depends_on "pkgconf" => :build

@@ -13,11 +13,11 @@ class AliyunCli < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "64656be8f66b957d98cfe2689d89d02a85d734a786912796106b82cd7968d481"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "64656be8f66b957d98cfe2689d89d02a85d734a786912796106b82cd7968d481"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "64656be8f66b957d98cfe2689d89d02a85d734a786912796106b82cd7968d481"
-    sha256 cellar: :any_skip_relocation, sonoma:        "2e50b5f7b9e0ddb6fe6274bfb1ba96750f9fdedf9b9ddb92a52417d4e85efb71"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "ae690c91d8ed38bd99abae0c35d1b446f4e2853da112aa8bff4181b1fc11db89"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "d8763ef8e9ff2e6d0da376fa154509795a775587254962b6a43ba1452c20f215"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "d8763ef8e9ff2e6d0da376fa154509795a775587254962b6a43ba1452c20f215"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "d8763ef8e9ff2e6d0da376fa154509795a775587254962b6a43ba1452c20f215"
+    sha256 cellar: :any_skip_relocation, sonoma:        "ea5ba755fa60a3b17b66d6d9296722f2efcdfc9e154fae05731d19b5ddd9c606"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "1ee7f42bbb10562e6a53c54d4798b5738ecdc5fa44d38a4f90f273d3cfaa9cde"
   end
 
   depends_on "go" => :build

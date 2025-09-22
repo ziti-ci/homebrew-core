@@ -1,8 +1,8 @@
 class Cdxgen < Formula
   desc "Creates CycloneDX Software Bill-of-Materials (SBOM) for projects"
   homepage "https://github.com/CycloneDX/cdxgen"
-  url "https://registry.npmjs.org/@cyclonedx/cdxgen/-/cdxgen-11.7.0.tgz"
-  sha256 "875653ff9da5fb55781d4828368f1c7181698bc1fe3c9180207a5a161a6deea0"
+  url "https://registry.npmjs.org/@cyclonedx/cdxgen/-/cdxgen-11.8.0.tgz"
+  sha256 "565fa3c563d66a457597fcdca886b5147b56100abf376c5afa30ad522b2846e7"
   license "Apache-2.0"
 
   bottle do
@@ -23,8 +23,8 @@ class Cdxgen < Formula
   depends_on "trivy"
 
   resource "dosai" do
-    url "https://github.com/owasp-dep-scan/dosai/archive/refs/tags/v1.0.5.tar.gz"
-    sha256 "7fa46508d4ac27203aa4d28da2f24aaca0e1ef7f2ce98a59df8296995c4bd1d7"
+    url "https://github.com/owasp-dep-scan/dosai/archive/refs/tags/v2.0.1.tar.gz"
+    sha256 "2aa3451739de4c77ad820154d8413fbcc478a09279a54a5feb945582dd9e0cd8"
   end
 
   def install

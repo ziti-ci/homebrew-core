@@ -17,6 +17,13 @@ class Gcc < Formula
         sha256 "360fba75cd3ab840c2cd3b04207f745c418df44502298ab156db81d41edf3594"
       end
     end
+
+    # Silence a warning about macOS numbering change
+    # https://gcc.gnu.org/bugzilla/show_bug.cgi?id=120645
+    patch do
+      url "https://gcc.gnu.org/cgit/gcc/patch/?id=c677121d3843e383906a4d7679dc647808ddab3a"
+      sha256 "10df1163f3c900d8455bdd8e4c3b29f0e0b7a7ef3d262da4b4736ad601473325"
+    end
   end
 
   livecheck do

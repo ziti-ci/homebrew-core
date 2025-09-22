@@ -1,8 +1,8 @@
 class Tiledb < Formula
   desc "Universal storage engine"
   homepage "https://tiledb.com/"
-  url "https://github.com/TileDB-Inc/TileDB/archive/refs/tags/2.28.1.tar.gz"
-  sha256 "f011240a2ab7863b037a2e5531a0cba537dd65f603fa2508878541514a472e90"
+  url "https://github.com/TileDB-Inc/TileDB/archive/refs/tags/2.29.0.tar.gz"
+  sha256 "5340e820323cdd48eac3cbd28ad55c1724f3f0b20dd2b88d196f336cffd92cdf"
   license "MIT"
 
   livecheck do
@@ -24,7 +24,6 @@ class Tiledb < Formula
   depends_on "cmake" => :build
 
   depends_on "fmt"
-  depends_on "libmagic"
   depends_on "lz4"
   depends_on "openssl@3"
   depends_on "spdlog"

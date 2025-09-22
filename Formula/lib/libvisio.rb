@@ -1,10 +1,9 @@
 class Libvisio < Formula
   desc "Interpret and import Visio diagrams"
   homepage "https://wiki.documentfoundation.org/DLP/Libraries/libvisio"
-  url "https://dev-www.libreoffice.org/src/libvisio/libvisio-0.1.8.tar.xz"
-  sha256 "b4098ffbf4dcb9e71213fa0acddbd928f27bed30db2d80234813b15d53d0405b"
+  url "https://dev-www.libreoffice.org/src/libvisio/libvisio-0.1.9.tar.xz"
+  sha256 "4a61d086daa3f5c9db8a3fd1b6dbfc29ba756057aa6b3cc23878fd4854362af9"
   license "MPL-2.0"
-  revision 2
 
   livecheck do
     url "https://dev-www.libreoffice.org/src/"

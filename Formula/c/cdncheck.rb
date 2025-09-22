@@ -1,8 +1,8 @@
 class Cdncheck < Formula
   desc "Utility to detect various technology for a given IP address"
   homepage "https://projectdiscovery.io"
-  url "https://github.com/projectdiscovery/cdncheck/archive/refs/tags/v1.2.0.tar.gz"
-  sha256 "e0a69951f445b023f52709e477d6560bb1d0b57f2425ff1c894c617231b1fe2f"
+  url "https://github.com/projectdiscovery/cdncheck/archive/refs/tags/v1.2.2.tar.gz"
+  sha256 "19702364291050bd4be214ea2d42394aa971cbc2441cad15a8391f96cfe4907e"
   license "MIT"
   head "https://github.com/projectdiscovery/cdncheck.git", branch: "main"
 
@@ -20,12 +20,6 @@ class Cdncheck < Formula
   end
 
   depends_on "go" => :build
-
-  # version patch, upstream pr ref, https://github.com/projectdiscovery/cdncheck/pull/454
-  patch do
-    url "https://github.com/projectdiscovery/cdncheck/commit/6d76970cdf0ac414fc1d5266957cd52600bc4418.patch?full_index=1"
-    sha256 "b267893ca336e42f0c744e2a8066608a4830671189422182a74c9270d1c83cb3"
-  end
 
   def install
     system "go", "build", *std_go_args(ldflags: "-s -w"), "./cmd/cdncheck"

@@ -1,8 +1,8 @@
 class Superhtml < Formula
   desc "HTML Language Server & Templating Language Library"
   homepage "https://github.com/kristoff-it/superhtml"
-  url "https://github.com/kristoff-it/superhtml/archive/refs/tags/v0.5.3.tar.gz"
-  sha256 "e1e514995b7a834880fe777f0ede4bd158a2b4a9e41f3a6fd8ede852f327fe8f"
+  url "https://github.com/kristoff-it/superhtml/archive/refs/tags/v0.6.0.tar.gz"
+  sha256 "6b6938446b86478608df954755ba0d212e6d2defb4b12d64395c79a091d9c087"
   license "MIT"
 
   bottle do
@@ -16,32 +16,7 @@ class Superhtml < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "4ffcd873d33cbb738fda0172a485473d7d2f5bf7c0b642b7c7ae93e840daa98f"
   end
 
-  # https://github.com/kristoff-it/superhtml/commit/b29ff905140962dc6ba0199e49c433533d6f57d1
-  depends_on "zig@0.14" => :build
-
-  # Backport dependency updates to cleanly apply Zig 0.14 commits
-  patch do
-    url "https://github.com/kristoff-it/superhtml/commit/0c65d59dad108eaa7869e70b67a1783d4c7f5ba4.patch?full_index=1"
-    sha256 "9312c6bae69ebbef9b2430fb36a3623d907ed3ea59649c93b592e1f6969e0e35"
-  end
-  patch do
-    url "https://github.com/kristoff-it/superhtml/commit/1d4fbe06aa056a5858d3fdcf33e5ec001f44f6ea.patch?full_index=1"
-    sha256 "78531ca8fc22e1f9936e6f0017073c4f143591d70fefffcdb335cbcb346ff5b9"
-  end
-  patch do
-    url "https://github.com/kristoff-it/superhtml/commit/9266b3131bbcc0705b3b752bcb7478871a143740.patch?full_index=1"
-    sha256 "efec7fa00e2094fdd69e6ec7d49ec6e26a355ad45f9f8079f16aae1a9eb84ca3"
-  end
-
-  # Backport commits to build with Zig 0.14
-  patch do
-    url "https://github.com/kristoff-it/superhtml/commit/44abb10a4b28b8b66710e8d4a56aa897b52c11a5.patch?full_index=1"
-    sha256 "8e98cd7d14a281e9269517d710e02cd2a0c074c56b7d64469148b49b686f1a92"
-  end
-  patch do
-    url "https://github.com/kristoff-it/superhtml/commit/848947947a3312dfe9b88a1976f8a6bc4804d316.patch?full_index=1"
-    sha256 "1ec6acde9d78d58ca36d61a5fb5ff8490f2ed56db8008755860aaab128e182ac"
-  end
+  depends_on "zig" => :build
 
   def install
     # Fix illegal instruction errors when using bottles on older CPUs.
@@ -52,11 +27,10 @@ class Superhtml < Formula
     else ENV.effective_arch
     end
 
-    args = %W[
-      -Dforce-version=#{version}
-    ]
+    # upstream issue: https://github.com/kristoff-it/superhtml/issues/108
+    inreplace "build.zig", '"unknown"', "\"#{version}\"" # patch fallback version
+    args = ["-Dcpu=#{cpu}"] if build.bottle?
 
-    args << "-Dcpu=#{cpu}" if build.bottle?
     system "zig", "build", *args, *std_zig_args
   end
 

@@ -12,14 +12,12 @@ class Apigeecli < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "57c2556b00eb777937d415ea3811dc4513d9720aa802ade9bd3f334242fe1d12"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "aac81227cb1e280fbf97595c00f672bfd90c1af49d32b3fe150efcda09a91462"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "aac81227cb1e280fbf97595c00f672bfd90c1af49d32b3fe150efcda09a91462"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "aac81227cb1e280fbf97595c00f672bfd90c1af49d32b3fe150efcda09a91462"
-    sha256 cellar: :any_skip_relocation, sonoma:        "01542d3192a28da0937452330807e67b6dfcaac30fff8d95c53183e3fff9c2cf"
-    sha256 cellar: :any_skip_relocation, ventura:       "01542d3192a28da0937452330807e67b6dfcaac30fff8d95c53183e3fff9c2cf"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "ef51c264c77ede341ef164a5831e554d14c3c229c0e1957546857ef2894f62f6"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "2f21d02d20c44c42497d9fda9bd01db92b20c4adeb65f182e7eaae00dcbfb7f7"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "4258ee6b313df32d1a1f89fa22e966a28dc62cae6ccbf607ed870cc85afa73a4"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "4258ee6b313df32d1a1f89fa22e966a28dc62cae6ccbf607ed870cc85afa73a4"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "4258ee6b313df32d1a1f89fa22e966a28dc62cae6ccbf607ed870cc85afa73a4"
+    sha256 cellar: :any_skip_relocation, sonoma:        "3cb1d14ec106a4d6b4da8addee32e69064b9faa21eb5f3caa300d23a0237bfb7"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "bae233defe3cc1a64eb3824123d8551eb2b4840859b5527e0df04b6d3c4ac608"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "190e83a7bbe8b18c495d04d2a45a5f9e741b62a3120216e72bbc631bbfc3031e"
   end
 
   depends_on "go" => :build

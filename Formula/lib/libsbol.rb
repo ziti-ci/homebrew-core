@@ -9,6 +9,7 @@ class Libsbol < Formula
   no_autobump! because: :requires_manual_review
 
   bottle do
+    sha256 cellar: :any,                 arm64_tahoe:   "e1691af94f34be58995e9226038f9c446fc50a2f8222825df323085c1a7200a9"
     sha256 cellar: :any,                 arm64_sequoia: "b09a89a225eb9340d711c26788bc531b1ca5e3f37fc7be1dcc1419124210fd7f"
     sha256 cellar: :any,                 arm64_sonoma:  "751b7e6d933a55e321f83d57b1bd7a9035530bba45ff8e30e497ff52a539d359"
     sha256 cellar: :any,                 arm64_ventura: "82dca670a8ca74e4f974727a4b895a2664dbf74601a79e59c657fa1fbfd8f546"

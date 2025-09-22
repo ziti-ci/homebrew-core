@@ -7,12 +7,12 @@ class AwsNuke < Formula
   head "https://github.com/ekristen/aws-nuke.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "d2f34fa4d357e5c0064861707e714fb8d50f45b8354133408b2c6b8fc674b700"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "d2f34fa4d357e5c0064861707e714fb8d50f45b8354133408b2c6b8fc674b700"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "d2f34fa4d357e5c0064861707e714fb8d50f45b8354133408b2c6b8fc674b700"
-    sha256 cellar: :any_skip_relocation, sonoma:        "55da1f97224f4426eb5b8985c35f3bc982acbeba45241fad6e478c668f1005c3"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "8faad0879631274408119cd87646548f74a4a41995b0992da97c3eb41b0df1ed"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "52186e3ccbc53c446673a4614f70f4888484816a6b0bdca52eab9336ca280034"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "b55e6f55704b525895c4a6dbd9743708c777c56a43e9a48bbfb51138aef61b8a"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "b55e6f55704b525895c4a6dbd9743708c777c56a43e9a48bbfb51138aef61b8a"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "b55e6f55704b525895c4a6dbd9743708c777c56a43e9a48bbfb51138aef61b8a"
+    sha256 cellar: :any_skip_relocation, sonoma:        "a0f855f5fe5b31de270e3a2d5217163a0ad8469a8fcd923808965246d5c09702"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "12d502165f0003b4139e5704a94304d6473a9f595af640418850474720612aa0"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "90119dddeabf9023a67dd53f1ef490cb1381f35a858e38e7d95df687c280096c"
   end
 
   depends_on "go" => :build

@@ -1,8 +1,8 @@
 class Sui < Formula
   desc "Next-generation smart contract platform powered by the Move programming language"
   homepage "https://sui.io"
-  url "https://github.com/MystenLabs/sui/archive/refs/tags/testnet-v1.56.2.tar.gz"
-  sha256 "3e61ec6a53879660927c30e5e2dbdfff0fb607ab8adf19de7f174053ca9c0cb0"
+  url "https://github.com/MystenLabs/sui/archive/refs/tags/testnet-v1.57.0.tar.gz"
+  sha256 "697b0e78d1c77f898896d58c6c78ff88d90215fc9cb974bbbf0c768151fb4d53"
   license "Apache-2.0"
 
   livecheck do
@@ -25,12 +25,6 @@ class Sui < Formula
 
   on_linux do
     depends_on "llvm" => :build
-  end
-
-  # patch blst to fix x86 macos build, upstream pr ref, https://github.com/MystenLabs/sui/pull/20921
-  patch do
-    url "https://github.com/MystenLabs/sui/commit/85fe7ddbe01067637d2e771360d26675dd5fd2aa.patch?full_index=1"
-    sha256 "ea19ec19ff5cb969f218363618a23afa1d3b36e8ddb04670a5fcbaa886321559"
   end
 
   def install

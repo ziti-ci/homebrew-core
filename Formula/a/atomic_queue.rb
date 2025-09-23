@@ -10,6 +10,7 @@ class AtomicQueue < Formula
     sha256 cellar: :any_skip_relocation, arm64_sequoia: "b1149a3911cea1bd45fb204530cedb7f6ff684dc73aff53fac24fbbcfab88861"
     sha256 cellar: :any_skip_relocation, arm64_sonoma:  "b1149a3911cea1bd45fb204530cedb7f6ff684dc73aff53fac24fbbcfab88861"
     sha256 cellar: :any_skip_relocation, sonoma:        "b1149a3911cea1bd45fb204530cedb7f6ff684dc73aff53fac24fbbcfab88861"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "1bc3490122a06d18acb763f3bd9a76d098380aaf2d4e753a75771d714e5a228b"
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "1bc3490122a06d18acb763f3bd9a76d098380aaf2d4e753a75771d714e5a228b"
   end
 

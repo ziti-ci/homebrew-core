@@ -1,15 +1,9 @@
 class Oxlint < Formula
   desc "Suite of high-performance tools for JavaScript and TypeScript written in Rust"
   homepage "https://oxc.rs/"
-  url "https://github.com/oxc-project/oxc/archive/refs/tags/oxlint_v1.16.0.tar.gz"
-  sha256 "53fda71250a6fd37e7928510f6ec97de894e3dfdb0c959e3320eb9bd445b7654"
+  url "https://registry.npmjs.org/oxlint/-/oxlint-1.17.0.tgz"
+  sha256 "bf531ea49243f496c7d5499c224ad6ac5e24572ab8ee9f7e99a12d0b118fad06"
   license "MIT"
-  head "https://github.com/oxc-project/oxc.git", branch: "main"
-
-  livecheck do
-    url :stable
-    regex(/^oxlint[._-]v?(\d+(?:\.\d+)+)$/i)
-  end
 
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_tahoe:   "f0d726454b63a287931adb025a9e208acc6f499375acd5b4e57d8bfdd58fac36"
@@ -20,11 +14,11 @@ class Oxlint < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "897dec137037fef304cdc0ebc976dceb6e9a212128438103603857fb4d713a15"
   end
 
-  depends_on "rust" => :build
+  depends_on "node"
 
   def install
-    ENV["OXC_VERSION"] = version.to_s
-    system "cargo", "install", *std_cargo_args(path: "apps/oxlint")
+    system "npm", "install", *std_npm_args
+    bin.install_symlink Dir["#{libexec}/bin/*"]
   end
 
   test do

@@ -1,12 +1,10 @@
 class CargoAllFeatures < Formula
   desc "Cargo subcommands to build and test all feature flag combinations"
   homepage "https://github.com/frewsxcv/cargo-all-features"
-  url "https://github.com/frewsxcv/cargo-all-features/archive/refs/tags/1.10.0.tar.gz"
-  sha256 "07ea7112bf358e124ecaae45a7eed4de64beeacfb18e4bc8aec1a8d2a5db428c"
+  url "https://github.com/frewsxcv/cargo-all-features/archive/refs/tags/1.11.0.tar.gz"
+  sha256 "feddbd6a0d517e1813f51080a828a17841a2606c97c61be69b693c2fd1f5c30f"
   license any_of: ["Apache-2.0", "MIT"]
   head "https://github.com/frewsxcv/cargo-all-features.git", branch: "master"
-
-  no_autobump! because: :requires_manual_review
 
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_tahoe:    "26b2427a7cfce5edf64fae69e10fc1089993f5e53044fdd1fd9c30acac7ac2c8"
@@ -52,7 +50,7 @@ class CargoAllFeatures < Formula
       TOML
 
       output = shell_output("cargo build-all-features")
-      assert_match "Building crate=demo-crate features=[]", output
+      assert_match "Running build crate=demo-crate features=[]", output
 
       output = shell_output("#{bin}/cargo-build-all-features --version")
       assert_match "cargo-all-features #{version}", output

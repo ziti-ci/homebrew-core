@@ -2,8 +2,8 @@ class Wasmtime < Formula
   desc "Standalone JIT-style runtime for WebAssembly, using Cranelift"
   homepage "https://wasmtime.dev/"
   url "https://github.com/bytecodealliance/wasmtime.git",
-      tag:      "v37.0.0",
-      revision: "7b3d6ae79e9153a2477668062f5622c10333925f"
+      tag:      "v37.0.1",
+      revision: "10c784c33f0dde1b997d6a93d1b7b0554633d039"
   license "Apache-2.0" => { with: "LLVM-exception" }
   head "https://github.com/bytecodealliance/wasmtime.git", branch: "main"
 

@@ -6,14 +6,12 @@ class Superhtml < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "6b81fca9fda9d025d1f057be7780b5e5a0905597dfe1963a9e9abd151bd4dc82"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "fee37c33e1945e1b65754df3584ac9f9460e612c1465cb7a8c99a7fd4320545d"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "03ab9a454ac7aaca7371a477f80d49f0fe0f7029747e4041332b13a3d00cf534"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "0d23e940a93d67b167a7f581c1558eb2c8576c94c3d9e0acfa0772fde7f36a01"
-    sha256 cellar: :any_skip_relocation, sonoma:        "2eff6f7d3a54c0286b29a347c69d4aedf8d685eb28e48eb8dbf1c4aa82db437b"
-    sha256 cellar: :any_skip_relocation, ventura:       "59b688fbedae2f2e86cad38aff7ced5f84757c8986151abb42c7bbfd86fe78b1"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "56e298e19fd4b396615ccfd7939ab11dba25d2668533b4e9a3324f0207b027ec"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "4ffcd873d33cbb738fda0172a485473d7d2f5bf7c0b642b7c7ae93e840daa98f"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "d5a88ab418b32a50ca3389a0adbf6d655aebd8dc6b4680a2e9eefa47411e28ff"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "16805618a92e9cb64d33ddf5e556ed38b5bedd0c76d930f9b80d67fc2d0871cd"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "f4b555ecd2f36c8e2514b9f81cc97c3e3e1771fbd64af0dcd82cfb6059208ce1"
+    sha256 cellar: :any_skip_relocation, sonoma:        "a762440b5e8dd1a9827d9f40a64f640ab4ab2a458013e2257f7bf92e9b189c25"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "d67bc6aaab0d15a7892915ed6dbf533162f0906be46b432f17d2a42f585b22f5"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "1c6b03aae0c1bbd1b9f29ea0061b8a0f25981c5b7afc8ff9708c96e6f98a461e"
   end
 
   depends_on "zig" => :build

@@ -63,6 +63,7 @@ class Sqlite < Formula
       "--with-readline-cflags=-I#{Formula["readline"].opt_include}",
       "--with-readline-ldflags=-L#{Formula["readline"].opt_lib} -lreadline",
     ]
+    args << "--soname=legacy" if OS.linux?
 
     system "./configure", *args, *std_configure_args
     system "make", "install"

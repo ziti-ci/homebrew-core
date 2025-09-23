@@ -7,10 +7,10 @@ class AdaUrl < Formula
   head "https://github.com/ada-url/ada.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any, arm64_tahoe:   "57433824579ffe724cb750e5b32f3ef93033d9dbe1c6e29ec81e21c322c120da"
-    sha256 cellar: :any, arm64_sequoia: "4d420cf8e062813e8afd362ccc93cd12fe73ceaf0c082ac58bc81495d832b9d5"
-    sha256 cellar: :any, arm64_sonoma:  "1a6b9fc2494e2897e6415a3c4667e709bfd66f502878714030f49f8f8ecd5bb9"
-    sha256 cellar: :any, sonoma:        "69b53bb04351903a30fb4da3b20485e69aa4aff06d29a00453b96915117401c5"
+    sha256 cellar: :any, arm64_tahoe:   "cf88104b7960250750e0a3513130c8df22987a9b4a450cce0f39496e4f851f54"
+    sha256 cellar: :any, arm64_sequoia: "51eaccf2935bb46e41f2b081106330ba357b7786ceb75b9ff5e7fe4b69802157"
+    sha256 cellar: :any, arm64_sonoma:  "c52fc920dd88d761c8143b6f6ca9d638de23de98f04815525ba19f01b22f0877"
+    sha256 cellar: :any, sonoma:        "5114c8623eb5b23b4ff006aa921a0ced40ba302d9d72311fd4cd1790d97a5830"
   end
 
   depends_on "cmake" => :build

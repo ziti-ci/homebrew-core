@@ -1,19 +1,10 @@
 class Grafana < Formula
   desc "Gorgeous metric visualizations and dashboards for timeseries databases"
   homepage "https://grafana.com"
+  url "https://github.com/grafana/grafana/archive/refs/tags/v12.2.0.tar.gz"
+  sha256 "0d55795b21cf5494e5e3ff33627f7bbb940de9298d0a0aa86831c2f2f15fef1e"
   license "AGPL-3.0-only"
   head "https://github.com/grafana/grafana.git", branch: "main"
-
-  stable do
-    url "https://github.com/grafana/grafana/archive/refs/tags/v12.1.0.tar.gz"
-    sha256 "9e2f3f11eff01f8b86c2c232c6a3c3a32fa303589ea9829538ffc867684a4436"
-
-    # Backport fix for node 22.18.0
-    patch do
-      url "https://github.com/grafana/grafana/commit/20c14c48f4c7f13610b105d17f54b66d0062b212.patch?full_index=1"
-      sha256 "180ecb3eadb594211479875f9340055b6ccd250ca27eaf00b31e8ff08b15ec1b"
-    end
-  end
 
   livecheck do
     url :stable

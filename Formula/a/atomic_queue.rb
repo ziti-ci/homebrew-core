@@ -5,6 +5,14 @@ class AtomicQueue < Formula
   sha256 "6eeff578f8b0499717bf890d90e2c58106ac2b8076084b73f2183a631742b4ab"
   license "MIT"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "b1149a3911cea1bd45fb204530cedb7f6ff684dc73aff53fac24fbbcfab88861"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "b1149a3911cea1bd45fb204530cedb7f6ff684dc73aff53fac24fbbcfab88861"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "b1149a3911cea1bd45fb204530cedb7f6ff684dc73aff53fac24fbbcfab88861"
+    sha256 cellar: :any_skip_relocation, sonoma:        "b1149a3911cea1bd45fb204530cedb7f6ff684dc73aff53fac24fbbcfab88861"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "1bc3490122a06d18acb763f3bd9a76d098380aaf2d4e753a75771d714e5a228b"
+  end
+
   depends_on "meson" => :build
   depends_on "ninja" => :build
   depends_on "pkgconf" => :test

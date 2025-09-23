@@ -3,8 +3,8 @@ class West < Formula
 
   desc "Zephyr meta-tool"
   homepage "https://github.com/zephyrproject-rtos/west"
-  url "https://files.pythonhosted.org/packages/ac/d0/4fc4d6ded3cca8736a982a33a39d2fad7a6170624323e8f7afdabd27e329/west-1.4.0.tar.gz"
-  sha256 "908a07ae7cc334a88cb2f069b430484dfdfdda0c3422d14b9e23a43030cf9cc6"
+  url "https://files.pythonhosted.org/packages/54/8e/ddb81e2635e58d156092556934a2cffe245978c91e4a08e11d72591f46e4/west-1.5.0.tar.gz"
+  sha256 "7088fe0e9afe0719ebee95c51c529149f7bcfc919d83a8206d35fa9c683ed0a5"
   license "Apache-2.0"
   head "https://github.com/zephyrproject-rtos/west.git", branch: "main"
 
@@ -53,8 +53,13 @@ class West < Formula
   end
 
   resource "ruamel-yaml" do
-    url "https://files.pythonhosted.org/packages/ea/46/f44d8be06b85bc7c4d8c95d658be2b68f27711f279bf9dd0612a5e4794f5/ruamel.yaml-0.18.10.tar.gz"
-    sha256 "20c86ab29ac2153f80a428e1254a8adf686d3383df04490514ca3b79a362db58"
+    url "https://files.pythonhosted.org/packages/3e/db/f3950f5e5031b618aae9f423a39bf81a55c148aecd15a34527898e752cf4/ruamel.yaml-0.18.15.tar.gz"
+    sha256 "dbfca74b018c4c3fba0b9cc9ee33e53c371194a9000e694995e620490fd40700"
+  end
+
+  resource "ruamel-yaml-clib" do
+    url "https://files.pythonhosted.org/packages/d8/e9/39ec4d4b3f91188fad1842748f67d4e749c77c37e353c4e545052ee8e893/ruamel.yaml.clib-0.2.14.tar.gz"
+    sha256 "803f5044b13602d58ea378576dd75aa759f52116a0232608e8fdada4da33752e"
   end
 
   resource "six" do

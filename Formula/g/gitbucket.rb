@@ -1,8 +1,8 @@
 class Gitbucket < Formula
   desc "Git platform powered by Scala offering"
   homepage "https://gitbucket.github.io/"
-  url "https://github.com/gitbucket/gitbucket/releases/download/4.43.0/gitbucket.war"
-  sha256 "c613573af7fa6ecc9a4ee5b98c8aef4bcdde08f78131d704d0ed9048abab2245"
+  url "https://github.com/gitbucket/gitbucket/releases/download/4.44.0/gitbucket.war"
+  sha256 "3471666352cf754eac62dcfeac54054687ede41d3357bfa1c183d55301a26b5a"
   license "Apache-2.0"
 
   bottle do

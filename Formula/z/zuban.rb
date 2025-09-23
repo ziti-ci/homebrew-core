@@ -1,18 +1,18 @@
 class Zuban < Formula
   desc "Python language server and type checker, written in Rust"
   homepage "https://zubanls.com/"
-  url "https://github.com/zubanls/zuban/archive/refs/tags/v0.0.23.tar.gz"
-  sha256 "bb42cb54b5bb50fab38fb28163e5b4397e22255a7a65e838e2961f79a17ab1e9"
+  url "https://github.com/zubanls/zuban/archive/refs/tags/v0.0.24.tar.gz"
+  sha256 "b9982938f63f1569eb88ce0ec623a7b89e020d011b55894a7590693d0eee644c"
   license "AGPL-3.0-only"
   head "https://github.com/zubanls/zuban.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "145058ff0f6d0eabd6ac398eb1e51552c14005ac8dbc2fe43dbc850cf6d23fa0"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "ffa9d85c76986368b4a88d6f29cadc26f90e543926b2d7a540796a8af023be93"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "9dcc918ea36140dd741ff5a0847ca4d6e6dabcafb2e4a296159962c41ba599f8"
-    sha256 cellar: :any_skip_relocation, sonoma:        "bb70c749b44932e8a2b72ed0c9c2bc35ce42a42595739c09362d7ca47a5a9429"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "09aea8d889ad3d9004f388b4f825e42754cd6f2ddecf88f8d25bd9773cf28b48"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "a15fe420170c6d0636b7adea3bb889908980cb07d3bb0078e0fba1010f966325"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "9be116467c99bb220805a08675e2ca369445950a99aaf8e11bf454ce98a267bd"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "0642961c33798ef05b2f66082463e1107d1e58ce3e71eb07802d0c2877e36c89"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "2b7e29c882e2c1f742bb49f6141c1d7138984cacf455db2d426d9cafb523aac6"
+    sha256 cellar: :any_skip_relocation, sonoma:        "b30176fc37fea3dc96efdaebe9f70c04e8ddb839a27e1e9673b43ea66669bd85"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "09fb22085b56d63f3041d91a5de4b4187206d23eeb905b45f2a5ed26fd62a5fa"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "7b301d092b3439afa2af2e02a4313f0fd25b55f08bf3989744767032e1646f99"
   end
 
   depends_on "mypy" => :build

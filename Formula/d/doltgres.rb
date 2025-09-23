@@ -1,8 +1,8 @@
 class Doltgres < Formula
   desc "Dolt for Postgres"
   homepage "https://github.com/dolthub/doltgresql"
-  url "https://github.com/dolthub/doltgresql/archive/refs/tags/v0.51.2.tar.gz"
-  sha256 "d3532e9b3b08e2a79ade3c1d18e50aac7a5dc81c64989d97f8378a2594e5270c"
+  url "https://github.com/dolthub/doltgresql/archive/refs/tags/v0.52.0.tar.gz"
+  sha256 "ee8c09c7d32ce3bba2d62f073616e199e7e909cb133f679a68aaa8fff717c6f5"
   license "Apache-2.0"
   head "https://github.com/dolthub/doltgresql.git", branch: "main"
 
@@ -27,6 +27,7 @@ class Doltgres < Formula
 
   depends_on "go" => :build
   depends_on "libpq" => :test
+  depends_on "icu4c@77"
 
   def install
     system "./postgres/parser/build.sh"

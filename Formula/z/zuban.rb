@@ -11,6 +11,7 @@ class Zuban < Formula
     sha256 cellar: :any_skip_relocation, arm64_sequoia: "ffa9d85c76986368b4a88d6f29cadc26f90e543926b2d7a540796a8af023be93"
     sha256 cellar: :any_skip_relocation, arm64_sonoma:  "9dcc918ea36140dd741ff5a0847ca4d6e6dabcafb2e4a296159962c41ba599f8"
     sha256 cellar: :any_skip_relocation, sonoma:        "bb70c749b44932e8a2b72ed0c9c2bc35ce42a42595739c09362d7ca47a5a9429"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "09aea8d889ad3d9004f388b4f825e42754cd6f2ddecf88f8d25bd9773cf28b48"
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "a15fe420170c6d0636b7adea3bb889908980cb07d3bb0078e0fba1010f966325"
   end
 

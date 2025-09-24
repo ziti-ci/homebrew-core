@@ -1,8 +1,8 @@
 class TwoMs < Formula
   desc "Detect secrets in files and communication platforms"
   homepage "https://github.com/Checkmarx/2ms"
-  url "https://github.com/Checkmarx/2ms/archive/refs/tags/v4.4.0.tar.gz"
-  sha256 "edadf136b6d183b9555064de9d4ed2ea1ed229feabd1be04de17a9dac58d2d57"
+  url "https://github.com/Checkmarx/2ms/archive/refs/tags/v4.4.1.tar.gz"
+  sha256 "7653e61105082564f4f382aaf8871bfdbdae05f445620a49fdb3100f88177109"
   license "Apache-2.0"
   head "https://github.com/Checkmarx/2ms.git", branch: "master"
 
@@ -22,8 +22,7 @@ class TwoMs < Formula
   end
 
   test do
-    version_output = shell_output("#{bin}/2ms --version 2>&1", 1)
-    assert_match version.to_s, version_output
+    assert_match version.to_s, shell_output("#{bin}/2ms --version")
 
     (testpath/"secret_test.txt").write <<~EOS
       "client_secret" : "6da89121079f83b2eb6acccf8219ea982c3d79bccc3e9c6a85856480661f8fde",

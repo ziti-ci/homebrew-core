@@ -1,15 +1,10 @@
 class Infisical < Formula
   desc "CLI for Infisical"
   homepage "https://infisical.com/docs/cli/overview"
-  url "https://github.com/Infisical/infisical/archive/refs/tags/infisical-cli/v0.41.90.tar.gz"
-  sha256 "c246439c7a60e57f332d0ffd478110441498e6f266ba21865f78dde328244350"
+  url "https://github.com/Infisical/cli/archive/refs/tags/v0.42.4.tar.gz"
+  sha256 "cfc03e7cf93e1d0eb0a8d24ce38e7feb16107e523f7fddc14d8a0eedab8276ec"
   license "MIT"
-  head "https://github.com/Infisical/infisical.git", branch: "main"
-
-  livecheck do
-    url :stable
-    regex(%r{^infisical-cli/v?(\d+(?:\.\d+)+)$}i)
-  end
+  head "https://github.com/Infisical/cli.git", branch: "main"
 
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_tahoe:   "391fba831818f9ef3af511809edbff6f3271fcbbbec1b6ccf2f38d5ebac72885"
@@ -24,13 +19,11 @@ class Infisical < Formula
   depends_on "go" => :build
 
   def install
-    cd "cli" do
-      ldflags = %W[
-        -s -w
-        -X github.com/Infisical/infisical-merge/packages/util.CLI_VERSION=#{version}
-      ]
-      system "go", "build", *std_go_args(ldflags:)
-    end
+    ldflags = %W[
+      -s -w
+      -X github.com/Infisical/infisical-merge/packages/util.CLI_VERSION=#{version}
+    ]
+    system "go", "build", *std_go_args(ldflags:)
   end
 
   test do

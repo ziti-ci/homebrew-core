@@ -11,7 +11,7 @@ class UsbIds < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "9bd182c5aab66c08f62b53f953642c8db833ad33e49f2a2767c6253f8d36fc30"
+    sha256 cellar: :any_skip_relocation, all: "0c9c1c85df427517e19a02318f372036dbaac13b93ab998627ce5189493ab05c"
   end
 
   def install

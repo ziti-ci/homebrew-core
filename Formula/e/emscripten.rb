@@ -61,9 +61,9 @@ class Emscripten < Formula
   # https://chromium.googlesource.com/emscripten-releases/+/<commit>/DEPS
   # Then use the listed binaryen_revision for the revision below.
   resource "binaryen" do
-    url "https://github.com/WebAssembly/binaryen/archive/fc1a391b9320602b624cefe5e760eda40cbb05a3.tar.gz"
-    version "fc1a391b9320602b624cefe5e760eda40cbb05a3"
-    sha256 "48e4d73d7a7f3f78c1cb7e25ecaaa892e3b9abbb03a5920198a88c74ecc93c19"
+    url "https://github.com/WebAssembly/binaryen/archive/cf756c92997182276122c2f0a9ac567d2d39ef42.tar.gz"
+    version "cf756c92997182276122c2f0a9ac567d2d39ef42"
+    sha256 "ae68318b0a6127a0684a534c5563397ab04f18d9e8b9db84e6b830f3a0ccffff"
 
     livecheck do
       url "https://raw.githubusercontent.com/emscripten-core/emsdk/refs/tags/#{LATEST_VERSION}/emscripten-releases-tags.json"
@@ -87,9 +87,9 @@ class Emscripten < Formula
   # See binaryen resource above for instructions on how to update this.
   # Then use the listed llvm_project_revision for the tarball below.
   resource "llvm" do
-    url "https://github.com/llvm/llvm-project/archive/1cc84bcc08f723a6ba9d845c3fed1777547f45f9.tar.gz"
-    version "1cc84bcc08f723a6ba9d845c3fed1777547f45f9"
-    sha256 "ef47b1de67e897fc838d9610dc803da5d123edb14ffe5dbb691154f2ba9ac40a"
+    url "https://github.com/llvm/llvm-project/archive/20d4e5cb8c51dc191e06554dd0d0def84a9edd0a.tar.gz"
+    version "20d4e5cb8c51dc191e06554dd0d0def84a9edd0a"
+    sha256 "c78e43c3308613238a3926628b5a0ed243cfa065a36f97ce6fda4b3318c90a40"
 
     livecheck do
       url "https://raw.githubusercontent.com/emscripten-core/emsdk/refs/tags/#{LATEST_VERSION}/emscripten-releases-tags.json"
@@ -276,7 +276,7 @@ class Emscripten < Formula
       }
     C
 
-    system bin/"emcc", "test.c", "-o", "test.js", "-s", "NO_EXIT_RUNTIME=0"
+    system bin/"emcc", "test.c", "-o", "test.js", "-s", "NO_EXIT_RUNTIME=0", "-O2", "-Werror=version-check"
     assert_equal "Hello World!", shell_output("node test.js").chomp
   end
 end

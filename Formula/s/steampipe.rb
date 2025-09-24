@@ -1,10 +1,10 @@
 class Steampipe < Formula
   desc "Use SQL to instantly query your cloud services"
   homepage "https://steampipe.io/"
-  url "https://github.com/turbot/steampipe/archive/refs/tags/v2.1.0.tar.gz"
-  sha256 "e6c364e3fa5d537fd274e6c87bd249413ad77f3e97fda51eef13e160c5416af4"
+  url "https://github.com/turbot/steampipe/archive/refs/tags/v2.2.0.tar.gz"
+  sha256 "3ec49ac9387debf779613ca8843792dbd10a88bfeb3c0af17eab88ebcc5774ab"
   license "AGPL-3.0-only"
-  head "https://github.com/turbot/steampipe.git", branch: "main"
+  head "https://github.com/turbot/steampipe.git", branch: "develop"
 
   livecheck do
     url :stable
@@ -33,14 +33,9 @@ class Steampipe < Formula
   test do
     ENV["STEAMPIPE_INSTALL_DIR"] = testpath
 
-    if OS.mac?
-      output = shell_output("#{bin}/steampipe service status 2>&1", 255)
-      # upstream bug report about creating `.pipes` folder, https://github.com/turbot/steampipe/issues/4402
-      assert_match "Error: could not create pipes installation directory", output
-    else # Linux
-      output = shell_output("#{bin}/steampipe service status 2>&1")
-      assert_match "Steampipe service is not installed", output
-    end
+    output = shell_output("#{bin}/steampipe service status")
+    assert_match "Steampipe service is not installed", output
+
     assert_match "Steampipe v#{version}", shell_output("#{bin}/steampipe --version")
   end
 end

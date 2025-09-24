@@ -7,11 +7,11 @@ class TwoMs < Formula
   head "https://github.com/Checkmarx/2ms.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "b2a7a32fe3261e9f866a644c1b71e4c192ddd0a139e283758f2592a6b760d481"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "42f4a852635bfc1f444603db4ec29e8b27d09b26e70b0a6ca16f68f74d44b566"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "b337bc3d410adda24ba84bba162989ee58df91549dac191014c46b464616aa71"
-    sha256 cellar: :any_skip_relocation, sonoma:        "be44091f3118a2fe945d67376c7e0b27d81f40f4d9e71fe179fcde45ce127333"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "37eced64354abb47ef017074ed871696b22eb54d0acf757d62246f067e71eb88"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "68374543892a2508b21c7dbafdce5aa47a597b2d00b42449d8afbd5337967d2a"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "2701c94b867d58ebd6f088e5dddbad7e9334d4465438569eeac6e971df9713ca"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "08ce2d5bd99ea52593ba5f4152c55bfadf3db9336a4656c5833343c409a22ad8"
+    sha256 cellar: :any_skip_relocation, sonoma:        "14f1716838cf52e1e9ee1a554c4ae8b2f161d5693b3855a35b95f6cf44582104"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "241994248f67013d69ec89aff3700746d18883b124951f68fab3fbacc08482e0"
   end
 
   depends_on "go" => :build

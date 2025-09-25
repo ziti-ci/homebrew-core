@@ -1,8 +1,8 @@
 class CBlosc2 < Formula
   desc "Fast, compressed, persistent binary data store library for C"
   homepage "https://www.blosc.org"
-  url "https://github.com/Blosc/c-blosc2/archive/refs/tags/v2.21.2.tar.gz"
-  sha256 "0cd42f4750e7e79614123b8de4f4b5ca8a0754ccb4aaa9e1eed8d7ec81a6719c"
+  url "https://github.com/Blosc/c-blosc2/archive/refs/tags/v2.21.3.tar.gz"
+  sha256 "4ac2e8b7413624662767b4348626f54ad621d6fbd315d0ba8be32a6ebaa21d41"
   license "BSD-3-Clause"
   head "https://github.com/Blosc/c-blosc2.git", branch: "main"
 

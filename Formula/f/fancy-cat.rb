@@ -1,10 +1,9 @@
 class FancyCat < Formula
   desc "PDF reader for terminal emulators using the Kitty image protocol"
   homepage "https://github.com/freref/fancy-cat"
-  url "https://github.com/freref/fancy-cat/archive/refs/tags/v0.4.1.tar.gz"
-  sha256 "d264dbaf05f8713a4c52ce0c74a8d5e900989ec815fac1bbfec7d7b385bc1dd5"
+  url "https://github.com/freref/fancy-cat/archive/refs/tags/v0.5.0.tar.gz"
+  sha256 "7191c8b6259f8124d2bef4c38ab0bcb7f13923dd84a6ec5cb5512f729765f5b5"
   license "AGPL-3.0-or-later"
-  revision 5
 
   bottle do
     sha256 cellar: :any,                 arm64_tahoe:   "2916710816a7c6f26820f96b5197afe396803c59a4ed40f9e1c98c2d9650627f"
@@ -15,10 +14,7 @@ class FancyCat < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "8eb50aacc13177038cc20a489d91ea27794f2124f48860e1cdf887dce363f60f"
   end
 
-  # Aligned to `zig@0.14` formula. Can be removed if upstream updates to newer Zig.
-  deprecate! date: "2026-02-19", because: "does not build with Zig >= 0.15"
-
-  depends_on "zig@0.14" => :build # https://github.com/freref/fancy-cat/issues/95
+  depends_on "zig" => :build
   depends_on "mupdf"
 
   def install

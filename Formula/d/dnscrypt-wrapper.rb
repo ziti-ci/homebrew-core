@@ -21,11 +21,10 @@ class DnscryptWrapper < Formula
   depends_on "libevent"
   depends_on "libsodium"
 
-  on_macos do
-    depends_on arch: :x86_64 # https://github.com/cofyc/dnscrypt-wrapper/issues/177
-  end
-
   def install
+    # Workaround for arm64 macOS, https://github.com/cofyc/dnscrypt-wrapper/issues/177
+    inreplace "compat.h", "#define HAVE_BACKTRACE 1", "" if OS.mac? && Hardware::CPU.arm?
+
     system "make", "configure"
     system "./configure", "--prefix=#{prefix}"
     system "make"

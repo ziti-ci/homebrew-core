@@ -1,8 +1,8 @@
 class Ffmate < Formula
   desc "FFmpeg automation layer"
   homepage "https://docs.ffmate.io"
-  url "https://github.com/welovemedia/ffmate/archive/refs/tags/1.2.0.tar.gz"
-  sha256 "a4c01430041863cd5d7a6ff6935bece7c82f0d7bca94f79a77366c2e784d30b7"
+  url "https://github.com/welovemedia/ffmate/archive/refs/tags/2.0.0.tar.gz"
+  sha256 "23006fd83b1db7e79874755eecfdfaeca411f6343182ed5cab0138d3ff21430a"
   license "AGPL-3.0-only"
 
   bottle do
@@ -20,28 +20,41 @@ class Ffmate < Formula
 
   def install
     system "go", "build", *std_go_args(ldflags: "-s -w")
+
+    generate_completions_from_executable(bin/"ffmate", "completion", shells: [:bash, :zsh, :fish, :pwsh])
   end
 
   test do
     require "json"
 
     port = free_port
+
+    database = testpath/".ffmate/data.sqlite"
+    (testpath/".ffmate").mkpath
+
     args = %W[
       server
-      -p #{port}
+      --port #{port}
+      --database #{database}
+      --no-ui
     ]
+
     preset = JSON.generate({
       name:        "Test Preset",
-      command:     "blah",
-      description: "fake it",
+      command:     "-i ${INPUT_FILE} -c:v libx264 ${OUTPUT_FILE}",
+      description: "Test preset for Homebrew",
       outputFile:  "test.mp4",
     })
+
     api = "http://localhost:#{port}/api/v1"
-    pid = spawn(bin/"ffmate", *args)
+    pid = spawn bin/"ffmate", *args
+
     begin
       sleep 2
+
       assert_match version.to_s, shell_output("curl -s #{api}/version")
-      assert_match "uuid", shell_output("curl -s -X POST #{api}/presets -d '#{preset}'")
+      output = shell_output("curl -s -X POST #{api}/presets -H 'Content-Type: application/json' -d '#{preset}'")
+      assert_match "uuid", output
       assert_match "Test Preset", shell_output("curl -s #{api}/presets")
     ensure
       Process.kill "TERM", pid

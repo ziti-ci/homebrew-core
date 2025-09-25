@@ -25,20 +25,25 @@ class TemporalTables < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "3fc466f8f161e0a625d123f989a6aeb91b8ef1bb29dd489c4ae55a967a46582f"
   end
 
-  depends_on "postgresql@14" => [:build, :test]
   depends_on "postgresql@17" => [:build, :test]
+  depends_on "postgresql@18" => [:build, :test]
 
   def postgresqls
     deps.map(&:to_formula).sort_by(&:version).filter { |f| f.name.start_with?("postgresql@") }
   end
 
   def install
+    odie "Too many postgresql dependencies!" if postgresqls.count > 2
+
     postgresqls.each do |postgresql|
-      system "make", "install", "PG_CONFIG=#{postgresql.opt_bin}/pg_config",
-                                "pkglibdir=#{lib/postgresql.name}",
-                                "datadir=#{share/postgresql.name}",
-                                "docdir=#{doc}"
-      system "make", "clean"
+      args = %W[
+        PG_CONFIG=#{postgresql.opt_bin}/pg_config
+        pkglibdir=#{lib/postgresql.name}
+        datadir=#{share/postgresql.name}
+        docdir=#{doc}
+      ]
+      system "make", "install", *args
+      system "make", "clean", *args
     end
   end
 

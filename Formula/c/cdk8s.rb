@@ -1,8 +1,8 @@
 class Cdk8s < Formula
   desc "Define k8s native apps and abstractions using object-oriented programming"
   homepage "https://cdk8s.io/"
-  url "https://registry.npmjs.org/cdk8s-cli/-/cdk8s-cli-2.201.34.tgz"
-  sha256 "7d25028f3a8232558da760d9502648a3396cf83be467274c741927f41ec3af5d"
+  url "https://registry.npmjs.org/cdk8s-cli/-/cdk8s-cli-2.201.35.tgz"
+  sha256 "733fb43a7fb318d4f4450c754976f7107fee0a7a391e5c6b296bc731c2136e51"
   license "Apache-2.0"
 
   bottle do

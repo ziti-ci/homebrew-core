@@ -3,8 +3,8 @@ class Btcli < Formula
 
   desc "Bittensor command-line tool"
   homepage "https://docs.bittensor.com/btcli"
-  url "https://files.pythonhosted.org/packages/78/76/04ca9938fca72465ef129b783f3d960edf98ecb455ab03ffb43547068fac/bittensor_cli-9.11.2.tar.gz"
-  sha256 "11da18f7682e66f75cf5fc2f846ebe47b4b963c850f7a9394bf63609ed4fc09a"
+  url "https://files.pythonhosted.org/packages/bf/67/bb115485bfcf45f555ae20f046928847de7b67280af022a52c49f3994a90/bittensor_cli-9.12.0.tar.gz"
+  sha256 "970cc0788a14046df3f8e34c0f03dc1a9a67328ec385ea75ab62d95164bb1113"
   license "MIT"
   head "https://github.com/opentensor/btcli.git", branch: "main"
 
@@ -48,8 +48,8 @@ class Btcli < Formula
   end
 
   resource "async-substrate-interface" do
-    url "https://files.pythonhosted.org/packages/aa/22/df5fbdae7bc865bc219aa40a0ad80f554dbf771a2ce19b0334a34c00e9ee/async_substrate_interface-1.5.3.tar.gz"
-    sha256 "6c677bb2599532385afc2f8471bc7d8f7e23d5436b2f32111a01b2df10d25dff"
+    url "https://files.pythonhosted.org/packages/70/bf/58af5b1c58f88ad55a1203cb01193c52bb2fbac77b32ef91d0dbc2492161/async_substrate_interface-1.5.4.tar.gz"
+    sha256 "cbe54a98b8e80f051a5af6a069f581b7d1cbe4e8636b45ac58efe254d85cea56"
   end
 
   resource "attrs" do
@@ -178,8 +178,8 @@ class Btcli < Formula
   end
 
   resource "pyyaml" do
-    url "https://files.pythonhosted.org/packages/54/ed/79a089b6be93607fa5cdaedf301d7dfb23af5f25c398d5ead2525b063e17/pyyaml-6.0.2.tar.gz"
-    sha256 "d584d9ec91ad65861cc08d42e834324ef890a082e591037abe114850ff7bbc3e"
+    url "https://files.pythonhosted.org/packages/05/8e/961c0007c59b8dd7729d542c61a4d537767a59645b82a0b521206e1e25c2/pyyaml-6.0.3.tar.gz"
+    sha256 "d76623373421df22fb4cf8817020cbb7ef15c725b9d5e45f17e189bfc384190f"
   end
 
   resource "requests" do
@@ -213,8 +213,8 @@ class Btcli < Formula
   end
 
   resource "typer" do
-    url "https://files.pythonhosted.org/packages/92/e8/2a73ccf9874ec4c7638f172efc8972ceab13a0e3480b389d6ed822f7a822/typer-0.17.4.tar.gz"
-    sha256 "b77dc07d849312fd2bb5e7f20a7af8985c7ec360c45b051ed5412f64d8dc1580"
+    url "https://files.pythonhosted.org/packages/21/ca/950278884e2ca20547ff3eb109478c6baf6b8cf219318e6bc4f666fad8e8/typer-0.19.2.tar.gz"
+    sha256 "9ad824308ded0ad06cc716434705f691d4ee0bfd0fb081839d2e426860e7fdca"
   end
 
   resource "typing-extensions" do

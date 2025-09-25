@@ -34,20 +34,18 @@ class AdaUrl < Formula
   end
 
   def install
+    # ld: unknown options: --gc-sections
     if OS.mac? && DevelopmentTools.clang_build_version <= 1500
-      ENV.llvm_clang
-
-      # ld: unknown options: --gc-sections
-      inreplace "tools/cli/CMakeLists.txt",
-                "target_link_options(adaparse PRIVATE \"-Wl,--gc-sections\")",
-                ""
+      inreplace "tools/cli/CMakeLists.txt", 'target_link_options(adaparse PRIVATE "-Wl,--gc-sections")', ""
     end
+    # Do not statically link to libstdc++
+    inreplace "tools/cli/CMakeLists.txt", 'target_link_options(adaparse PRIVATE "-static-libstdc++")', "" if OS.linux?
 
     args = %W[
       -DCMAKE_INSTALL_RPATH=#{rpath}
       -DBUILD_SHARED_LIBS=ON
       -DADA_TOOLS=ON
-      -DCPM_USE_LOCAL_PACKAGES=ON
+      -DCPM_LOCAL_PACKAGES_ONLY=ON
       -DFETCHCONTENT_FULLY_DISCONNECTED=ON
     ]
 
@@ -57,11 +55,6 @@ class AdaUrl < Formula
   end
 
   test do
-    ENV["CXX"] = Formula["llvm"].opt_bin/"clang++" if OS.mac? && DevelopmentTools.clang_build_version <= 1500
-    ENV.prepend_path "PATH", Formula["binutils"].opt_bin if OS.linux?
-    # Do not upload a Linux bottle that bypasses audit and needs Linux-only GCC dependency
-    ENV.method(DevelopmentTools.default_compiler).call if OS.linux? && ENV["HOMEBREW_GITHUB_ACTIONS"]
-
     (testpath/"test.cpp").write <<~CPP
       #include "ada.h"
       #include <iostream>
@@ -74,10 +67,18 @@ class AdaUrl < Formula
       }
     CPP
 
-    system ENV.cxx, "test.cpp", "-std=c++20",
-           "-I#{include}", "-L#{lib}", "-lada", "-o", "test"
+    system ENV.cxx, "test.cpp", "-std=c++20", "-I#{include}", "-L#{lib}", "-lada", "-o", "test"
     assert_equal "http:", shell_output("./test").chomp
 
-    assert_match "search_start 25", shell_output("#{bin}/adaparse -d http://www.google.com/bal?a==11#fddfds")
+    if OS.mac?
+      output = shell_output("#{bin}/adaparse -d http://www.google.com/bal?a==11#fddfds")
+    else
+      require "pty"
+      PTY.spawn(bin/"adaparse", "-d", "http://www.google.com/bal?a==11#fddfds") do |r, _w, pid|
+        Process.wait(pid)
+        output = r.read_nonblock(1024)
+      end
+    end
+    assert_match "search_start 25", output
   end
 end

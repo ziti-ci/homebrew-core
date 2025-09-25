@@ -1,17 +1,14 @@
 class GitCrypt < Formula
   desc "Enable transparent encryption/decryption of files in a git repo"
   homepage "https://www.agwa.name/projects/git-crypt/"
-  url "https://www.agwa.name/projects/git-crypt/downloads/git-crypt-0.7.0.tar.gz"
-  sha256 "50f100816a636a682404703b6c23a459e4d30248b2886a5cf571b0d52527c7d8"
+  url "https://www.agwa.name/projects/git-crypt/downloads/git-crypt-0.8.0.tar.gz"
+  sha256 "540d424f87bed7994a4551a8c24b16e50d3248a5b7c3fd8ceffe94bfd4af0ad9"
   license "GPL-3.0-or-later"
-  revision 1
 
   livecheck do
     url :homepage
     regex(/href=.*?git-crypt[._-]v?(\d+(?:\.\d+)+)\.t/i)
   end
-
-  no_autobump! because: :requires_manual_review
 
   bottle do
     sha256 cellar: :any,                 arm64_tahoe:    "d2043dcab1b31eb1a886ebb3d060faa2db97eb311ea0a72ad1dac57c7ba1d8c9"

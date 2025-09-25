@@ -8,14 +8,12 @@ class Texttest < Formula
   license "LGPL-2.1-or-later"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "6bb9b37df685485270c05bfcdb017e2ecd1f6dcf3f004b5995042733624f53ce"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "19e7191ed85dc361be7f5bf9e347c478a7ec548c78740f729d13861b6e801fce"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "bf3020337061ac37ea1f694c72e75b0fdcb19ddd1eff922956629870091a3185"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "7e327e89d05204683bda5e8bd799f7b40eb20ec89294d34e84ef04d5c2cfe515"
-    sha256 cellar: :any_skip_relocation, sonoma:        "c012cf7f8ed85c00945604a78b93f3e3ecf3786e56c5dbebf5ea326bbb5ece5f"
-    sha256 cellar: :any_skip_relocation, ventura:       "74d479d24fc3d719de60ac1fc179a840fadd1600097c50074ab4ad94b5676880"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "405d9322bcaad19db7074eaa3adf66f67e2f82a520d771809f4fa53652bb106c"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "d71f95fe11e952b8ddbe339879354761f70c673898be9af66cf189ad00776f58"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "66f16f943aa8fe6b1ad79a04085956d16233c41a504bbb5028292cbeb9070800"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "8dd820c229e7f64032d0649fd26d43e55c81dbee638e299e701f59a0c032c168"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "35373fbc2123caf15748dee0554392b4b99fb4e2fdf9bdb7f8831b03118b8b44"
+    sha256 cellar: :any_skip_relocation, sonoma:        "95ca959231bd724c3413be77f68c0fde51b17b542d38e1a0f4546a309c850d5d"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "334a14d5dc1e681139b9040f7726c64bdab6d688705775858f457ff78f8ed20c"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "716562ae9bd735808749541e51b31f457669be0b69911b284627444a41678461"
   end
 
   depends_on "adwaita-icon-theme"

@@ -1,18 +1,15 @@
 class Mdk < Formula
   desc "GNU MIX development kit"
   homepage "https://www.gnu.org/software/mdk/mdk.html"
-  url "https://ftpmirror.gnu.org/gnu/mdk/v1.3.0/mdk-1.3.0.tar.gz"
-  mirror "https://ftp.gnu.org/gnu/mdk/v1.3.0/mdk-1.3.0.tar.gz"
-  sha256 "8b1e5dd7f47b738cb966ef717be92a501494d9ba6d87038f09e8fa29101b132e"
+  url "https://ftpmirror.gnu.org/gnu/mdk/v1.3.1/mdk-1.3.1.tar.gz"
+  mirror "https://ftp.gnu.org/gnu/mdk/v1.3.1/mdk-1.3.1.tar.gz"
+  sha256 "ebb963938c688c150ff6aaedc29f30d09020a1e31d55b30c2101f08773516d19"
   license "GPL-3.0-or-later"
-  revision 1
 
   livecheck do
     url :stable
     regex(%r{href=["']?v?(\d+(?:\.\d+)+)/?["' >]}i)
   end
-
-  no_autobump! because: :requires_manual_review
 
   bottle do
     sha256 arm64_tahoe:    "1c925079e22bb29ea6e505fa7705eb3ca6c1d6586184109a4fd54b7057f2f030"
@@ -32,24 +29,42 @@ class Mdk < Formula
   depends_on "pkgconf" => :build
 
   depends_on "adwaita-icon-theme"
+  depends_on "at-spi2-core"
+  depends_on "bdw-gc"
+  depends_on "cairo"
   depends_on "flex"
+  depends_on "gdk-pixbuf"
   depends_on "glib"
   depends_on "gtk+3"
   depends_on "guile"
+  depends_on "harfbuzz"
   depends_on "pango"
   depends_on "readline"
 
   on_macos do
-    depends_on "at-spi2-core"
-    depends_on "bdw-gc"
-    depends_on "cairo"
-    depends_on "gdk-pixbuf"
+    depends_on "llvm" => :build if DevelopmentTools.clang_build_version <= 1599
+
     depends_on "gettext"
-    depends_on "harfbuzz"
+  end
+
+  on_linux do
+    depends_on "ncurses"
+  end
+
+  fails_with :clang do
+    build 1599
+    cause "Requires relaxed variadic args"
+  end
+
+  fails_with :gcc do
+    version "11"
+    cause "Requires relaxed variadic args"
   end
 
   def install
+    ENV.llvm_clang if DevelopmentTools.clang_build_version <= 1599
     system "./configure", "--disable-silent-rules", *std_configure_args
+    system "make", "CFLAGS=-std=gnu2x"
     system "make", "install"
   end
 

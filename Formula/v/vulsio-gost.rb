@@ -1,8 +1,8 @@
 class VulsioGost < Formula
   desc "Local CVE tracker & notification system"
   homepage "https://github.com/vulsio/gost"
-  url "https://github.com/vulsio/gost/archive/refs/tags/v0.6.1.tar.gz"
-  sha256 "8812f4874acb1ccb565def5732bedf6dbf43e46ed1de3324b8ecdd908d5943dd"
+  url "https://github.com/vulsio/gost/archive/refs/tags/v0.7.0.tar.gz"
+  sha256 "e20b39dff98c82a791ae9e5ac40ce78f6e25a5beac3ce7b4d53a3c0b45794f04"
   license "MIT"
 
   bottle do
@@ -20,19 +20,13 @@ class VulsioGost < Formula
 
   conflicts_with "gost", because: "both install `gost` binaries"
 
-  # Backport fix for fetching Debian CVE DB
-  patch do
-    url "https://github.com/vulsio/gost/commit/e609fd898e22ce4e75f09e90e0a2c4fef7671111.patch?full_index=1"
-    sha256 "9eeed9c0a0e1b4ca38176851207556d6f51d0e9f0b53819e846fef3d1acaf84d"
-  end
-
   def install
     ldflags = %W[
       -s -w
       -X github.com/vulsio/gost/config.Version=#{version}
       -X github.com/vulsio/gost/config.Revision=#{tap.user}
     ]
-    system "go", "build", *std_go_args(output: bin/"gost", ldflags:)
+    system "go", "build", *std_go_args(ldflags:, output: bin/"gost")
 
     generate_completions_from_executable(bin/"gost", "completion")
   end

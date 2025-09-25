@@ -15,6 +15,7 @@ class PostgresqlAT18 < Formula
     sha256 arm64_sequoia: "52f962d6392d9b0b151b3e0ea77235877cef627c8aa7743d5bc84459f29eff85"
     sha256 arm64_sonoma:  "9f035575a3e3df570292b7ea1574e412af5688091c67e1b676302a31f5b3bcf1"
     sha256 sonoma:        "0c179784cc6494120d0c63ff1224b61265fe8e2682cea47decfa9a9bd3c0c4fc"
+    sha256 arm64_linux:   "98a2c35d9cbfc4cfe539c53d19b417e8a1eb186f515bc1d98481b1fee67e7470"
     sha256 x86_64_linux:  "5d2389399f70022f6173e00f5b37c5db8d788d42ae874f9fe135e87c70811dcc"
   end
 

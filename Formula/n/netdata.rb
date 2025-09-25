@@ -1,10 +1,9 @@
 class Netdata < Formula
   desc "Diagnose infrastructure problems with metrics, visualizations & alarms"
   homepage "https://www.netdata.cloud/"
-  url "https://github.com/netdata/netdata/releases/download/v2.6.3/netdata-v2.6.3.tar.gz"
-  sha256 "ae99834889c04b5d49b1b03cf1db8812a9b3c6498dd097414bee01a3844c9001"
+  url "https://github.com/netdata/netdata/releases/download/v2.7.0/netdata-v2.7.0.tar.gz"
+  sha256 "4bf4d16ad70fd37101f5306afcc1811f368cd14681cbe563d6180b157b132f58"
   license "GPL-3.0-or-later"
-  revision 1
 
   livecheck do
     url :stable
@@ -21,8 +20,10 @@ class Netdata < Formula
   end
 
   depends_on "cmake" => :build
+  depends_on "corrosion" => :build
   depends_on "go" => :build
   depends_on "pkgconf" => :build
+  depends_on "rust" => :build
   depends_on "abseil"
   depends_on "dlib"
   depends_on "json-c"
@@ -72,11 +73,18 @@ class Netdata < Formula
       s.gsub! "netdata_add_dlib_to_target(netdata)", ""
     end
 
-    system "cmake", "-S", ".", "-B", "build",
-                    "-DBUILD_FOR_PACKAGING=ON",
-                    "-DENABLE_PLUGIN_NFACCT=OFF",
-                    "-DENABLE_PLUGIN_XENSTAT=OFF",
-                    *std_cmake_args
+    args = %w[
+      -DBUILD_FOR_PACKAGING=ON
+      -DENABLE_PLUGIN_NFACCT=OFF
+      -DENABLE_PLUGIN_XENSTAT=OFF
+    ]
+    # Avoid to use FetchContent for `corrosion`
+    args += %w[
+      -DHOMEBREW_ALLOW_FETCHCONTENT=ON
+      -DFETCHCONTENT_FULLY_DISCONNECTED=ON
+      -DFETCHCONTENT_TRY_FIND_PACKAGE_MODE=ALWAYS
+    ]
+    system "cmake", "-S", ".", "-B", "build", *args, *std_cmake_args
     system "cmake", "--build", "build"
     system "cmake", "--install", "build"
   end

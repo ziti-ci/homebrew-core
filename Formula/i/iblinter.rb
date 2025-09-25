@@ -4,6 +4,7 @@ class Iblinter < Formula
   url "https://github.com/IBDecodable/IBLinter/archive/refs/tags/0.5.0.tar.gz"
   sha256 "d1aafdca18bc81205ef30a2ee59f33513061b20184f0f51436531cec4a6f7170"
   license "MIT"
+  revision 1
   head "https://github.com/IBDecodable/IBLinter.git", branch: "master"
 
   no_autobump! because: :requires_manual_review

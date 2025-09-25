@@ -1,8 +1,8 @@
 class Bom < Formula
   desc "Utility to generate SPDX-compliant Bill of Materials manifests"
   homepage "https://kubernetes-sigs.github.io/bom/"
-  url "https://github.com/kubernetes-sigs/bom/archive/refs/tags/v0.6.0.tar.gz"
-  sha256 "c0f08f765ec93d0b61bead2776b118cc2d18d8a200be6b53520856f751861c35"
+  url "https://github.com/kubernetes-sigs/bom/archive/refs/tags/v0.7.0.tar.gz"
+  sha256 "ebef4f8c86cf614acb27be4696c1f5d2394c68bb9312e5b26736721f035689fe"
   license "Apache-2.0"
   head "https://github.com/kubernetes-sigs/bom.git", branch: "main"
 

@@ -1,8 +1,8 @@
 class Nest < Formula
   desc "Neural Simulation Tool (NEST) with Python3 bindings (PyNEST)"
   homepage "https://www.nest-simulator.org/"
-  url "https://github.com/nest/nest-simulator/archive/refs/tags/v3.8.tar.gz"
-  sha256 "eb255f8828be001abea0cddad2f14d78b70857fc82bece724551f27c698318c8"
+  url "https://github.com/nest/nest-simulator/archive/refs/tags/v3.9.tar.gz"
+  sha256 "8e67b9dcb72b029f24f3d70ff6d3dd64776dc21bf3e458c822c862677d67d076"
   license "GPL-2.0-or-later"
 
   livecheck do
@@ -32,12 +32,6 @@ class Nest < Formula
 
   on_macos do
     depends_on "libomp"
-  end
-
-  # Fix to error undeclared name not builtin: long
-  patch do
-    url "https://github.com/nest/nest-simulator/commit/cb7e1dadf8a8566b7340ad3a7ed13c173d35e6d0.patch?full_index=1"
-    sha256 "056fa912d7570bd98e2114355a5d0a6ca2bc0bc8cfd362bf39625dfc9df93c47"
   end
 
   def install

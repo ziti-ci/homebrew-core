@@ -24,9 +24,12 @@ class ZlibNg < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "d5149e77944f616115e8a9b7653925c4665397e0024d0c3ec3b9e3158d772847"
   end
 
+  depends_on "cmake" => :build
+
   def install
-    system "./configure", "--prefix=#{prefix}"
-    system "make", "install"
+    system "cmake", "-S", ".", "-B", "build", *std_cmake_args
+    system "cmake", "--build", "build"
+    system "cmake", "--install", "build"
   end
 
   test do

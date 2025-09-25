@@ -2,13 +2,12 @@ class Php < Formula
   desc "General-purpose scripting language"
   homepage "https://www.php.net/"
   license "PHP-3.01"
-  revision 1
 
   stable do
     # Should only be updated if the new version is announced on the homepage, https://www.php.net/
-    url "https://www.php.net/distributions/php-8.4.12.tar.xz"
-    mirror "https://fossies.org/linux/www/php-8.4.12.tar.xz"
-    sha256 "c1b7978cbb5054eed6c749bde4444afc16a3f2268101fb70a7d5d9b1083b12ad"
+    url "https://www.php.net/distributions/php-8.4.13.tar.xz"
+    mirror "https://fossies.org/linux/www/php-8.4.13.tar.xz"
+    sha256 "b4f27adf30bcf262eacf93c78250dd811980f20f3b90d79a3dc11248681842df"
 
     # Fix naming clash with libxml macro
     # https://github.com/php/php-src/pull/19832
@@ -52,9 +51,7 @@ class Php < Formula
   depends_on "curl"
   depends_on "freetds"
   depends_on "gd"
-  depends_on "gettext"
   depends_on "gmp"
-  depends_on "krb5"
   depends_on "libpq"
   depends_on "libsodium"
   depends_on "libzip"
@@ -77,6 +74,7 @@ class Php < Formula
 
   on_macos do
     depends_on "gcc" => :build # must never be a runtime dependency
+    depends_on "gettext"
   end
 
   # https://github.com/Homebrew/homebrew-core/issues/235820
@@ -310,10 +308,10 @@ class Php < Formula
         inreplace ext_config_path,
           /#{extension_type}=.*$/, "#{extension_type}=#{php_ext_dir}/#{e}.so"
       else
-        ext_config_path.write <<~EOS
+        ext_config_path.write <<~INI
           [#{e}]
           #{extension_type}="#{php_ext_dir}/#{e}.so"
-        EOS
+        INI
       end
     end
   end
@@ -391,7 +389,7 @@ class Php < Formula
         </FilesMatch>
       EOS
 
-      (testpath/"fpm.conf").write <<~EOS
+      (testpath/"fpm.conf").write <<~INI
         [global]
         daemonize=no
         [www]
@@ -401,7 +399,7 @@ class Php < Formula
         pm.start_servers = 2
         pm.min_spare_servers = 1
         pm.max_spare_servers = 3
-      EOS
+      INI
 
       (testpath/"httpd-fpm.conf").write <<~EOS
         #{main_config}
@@ -413,24 +411,16 @@ class Php < Formula
         </FilesMatch>
       EOS
 
-      pid = fork do
-        exec Formula["httpd"].opt_bin/"httpd", "-X", "-f", "#{testpath}/httpd.conf"
-      end
+      pid = spawn Formula["httpd"].opt_bin/"httpd", "-X", "-f", "#{testpath}/httpd.conf"
       sleep 10
-
       assert_match expected_output, shell_output("curl -s 127.0.0.1:#{port}")
 
       Process.kill("TERM", pid)
       Process.wait(pid)
 
-      fpm_pid = fork do
-        exec sbin/"php-fpm", "-y", "fpm.conf"
-      end
-      pid = fork do
-        exec Formula["httpd"].opt_bin/"httpd", "-X", "-f", "#{testpath}/httpd-fpm.conf"
-      end
+      fpm_pid = spawn sbin/"php-fpm", "-y", "fpm.conf"
+      pid = spawn Formula["httpd"].opt_bin/"httpd", "-X", "-f", "#{testpath}/httpd-fpm.conf"
       sleep 10
-
       assert_match expected_output, shell_output("curl -s 127.0.0.1:#{port}")
     ensure
       if pid

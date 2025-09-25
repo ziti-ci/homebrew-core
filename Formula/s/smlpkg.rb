@@ -18,10 +18,11 @@ class Smlpkg < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux: "c34eb8d99928a9143212f3273c3a51ec4d2eab32f11f70f626aec59855f1a6a9"
   end
 
-  depends_on "mlkit" => :build
-  depends_on arch: :x86_64 # https://github.com/melsman/mlkit/issues/115
+  depends_on "mlton" => :build
+  depends_on "gmp"
 
   def install
+    ENV["MLCOMP"] = "mlton"
     system "make", "-C", "src", "smlpkg"
     system "make", "install", "prefix=#{prefix}"
   end

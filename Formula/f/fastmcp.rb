@@ -7,6 +7,14 @@ class Fastmcp < Formula
   sha256 "541dd569d5b6c083140b04d997ba3dc47f7c10695cee700d0a733ce63b20bb65"
   license "Apache-2.0"
 
+  bottle do
+    sha256 cellar: :any,                 arm64_tahoe:   "d4ba87ecf41280e9f7014bd94ba62b10be0e806aeaaa67fd911476508210dc77"
+    sha256 cellar: :any,                 arm64_sequoia: "e1c1b89fa7c4ab24a2a84522250992613f9ae089c85869c20bd9923703bd4c33"
+    sha256 cellar: :any,                 arm64_sonoma:  "7c9d3a608aeab33a19b418078fa271cf7548c07a4b034e24e7b0fdd7ca766506"
+    sha256 cellar: :any,                 sonoma:        "a86f83295b4044416dae0940cc66159b64ae4dd7b94e0489256571e0a494a942"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "18d0f296383f60d05657a4e78bc9e72cb36c90b6fe0628c4ef123204f921e7c8"
+  end
+
   depends_on "rust" => :build
   depends_on "certifi"
   depends_on "cryptography"

@@ -333,11 +333,14 @@
     "extra_packages": ["decorator"],
     "exclude_packages": ["cryptography"]
   },
-  "fava": {
-    "exclude_packages": ["certifi"]
-  },
   "fastapi": {
     "package_name": "fastapi[standard]",
+    "exclude_packages": ["certifi"]
+  },
+  "fastmcp": {
+    "exclude_packages": ["certifi", "cryptography"]
+  },
+  "fava": {
     "exclude_packages": ["certifi"]
   },
   "fb-client": {

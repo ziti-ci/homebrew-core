@@ -1,8 +1,8 @@
 class Ffmate < Formula
   desc "FFmpeg automation layer"
   homepage "https://docs.ffmate.io"
-  url "https://github.com/welovemedia/ffmate/archive/refs/tags/2.0.1.tar.gz"
-  sha256 "bab3582bda85f53e66cfb4e878e44ac90cebb4b267b9bce04911748640bf323a"
+  url "https://github.com/welovemedia/ffmate/archive/refs/tags/2.0.2.tar.gz"
+  sha256 "b9293ae653e99f0ba5a727b52541797bfb8cbafe5cac13187b5f92d2a9a4cba6"
   license "AGPL-3.0-only"
 
   bottle do

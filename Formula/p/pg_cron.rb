@@ -16,8 +16,8 @@ class PgCron < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "c7206a1fa1242bbed6b486da83c12b373da497bf3ccaa72d81ba0d0dd6db55b5"
   end
 
-  depends_on "postgresql@14" => [:build, :test]
   depends_on "postgresql@17" => [:build, :test]
+  depends_on "postgresql@18" => [:build, :test]
   depends_on "libpq"
 
   on_macos do
@@ -30,6 +30,8 @@ class PgCron < Formula
   end
 
   def install
+    odie "Too many postgresql dependencies!" if postgresqls.count > 2
+
     # Work around for ld: Undefined symbols: _libintl_ngettext
     # Issue ref: https://github.com/citusdata/pg_cron/issues/269
     ENV["PG_LDFLAGS"] = "-lintl" if OS.mac?

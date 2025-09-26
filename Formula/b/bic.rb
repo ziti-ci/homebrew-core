@@ -46,13 +46,16 @@ class Bic < Formula
   no_autobump! because: :requires_manual_review
 
   bottle do
-    sha256 cellar: :any,                 sonoma:       "4f122a009440f01cdaa97ac0fdf69e7aa8a0b31082e7fc8fb7d08b5c8ecf2307"
-    sha256 cellar: :any,                 ventura:      "b2949645cf730b7d5b1a9286c5134775190c8353a9e8dbc28af7414b97f63253"
-    sha256 cellar: :any,                 monterey:     "cfa83a9ccd1d192b77af48d3198acf0f082d9f929a6256bb978f293543210940"
-    sha256 cellar: :any,                 big_sur:      "36f71fa3f987da036e8bf8cefd3e640479868f2eb033f307848679b41d7ee393"
-    sha256 cellar: :any,                 catalina:     "41d1871d125642f8437b5bb7b74f205b0eee956be0ad46b7677680b76764c0cb"
-    sha256 cellar: :any_skip_relocation, arm64_linux:  "e1eed9e3fd17cead07b28471dc8cfd46754b81e0db2ff0ecf631223e1e08dfb8"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "2744bafd1615ee75b148b2b4ef18a3acdb0cf7a33c71014b541cb3f820c1b38f"
+    sha256 cellar: :any,                 arm64_tahoe:   "7c0da289a9629c8fb1d74ebfef9c8159ac00103096a72d39bff315f3f41a3c14"
+    sha256 cellar: :any,                 arm64_sequoia: "841382877c009debae638924434b00e76b275e7c77f43f1c11f1b55f9dec44f7"
+    sha256 cellar: :any,                 arm64_sonoma:  "901a803c50e0438b0132876f3ecc970087894ace6608113234848cec89a3d059"
+    sha256 cellar: :any,                 sonoma:        "4f122a009440f01cdaa97ac0fdf69e7aa8a0b31082e7fc8fb7d08b5c8ecf2307"
+    sha256 cellar: :any,                 ventura:       "b2949645cf730b7d5b1a9286c5134775190c8353a9e8dbc28af7414b97f63253"
+    sha256 cellar: :any,                 monterey:      "cfa83a9ccd1d192b77af48d3198acf0f082d9f929a6256bb978f293543210940"
+    sha256 cellar: :any,                 big_sur:       "36f71fa3f987da036e8bf8cefd3e640479868f2eb033f307848679b41d7ee393"
+    sha256 cellar: :any,                 catalina:      "41d1871d125642f8437b5bb7b74f205b0eee956be0ad46b7677680b76764c0cb"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "e1eed9e3fd17cead07b28471dc8cfd46754b81e0db2ff0ecf631223e1e08dfb8"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "2744bafd1615ee75b148b2b4ef18a3acdb0cf7a33c71014b541cb3f820c1b38f"
   end
 
   head do

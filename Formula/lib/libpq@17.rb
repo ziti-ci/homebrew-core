@@ -1,25 +1,25 @@
-class Libpq < Formula
+class LibpqAT17 < Formula
   desc "Postgres C API library"
-  homepage "https://www.postgresql.org/docs/current/libpq.html"
-  url "https://ftp.postgresql.org/pub/source/v18.0/postgresql-18.0.tar.bz2"
-  sha256 "0d5b903b1e5fe361bca7aa9507519933773eb34266b1357c4e7780fdee6d6078"
+  homepage "https://www.postgresql.org/docs/17/libpq.html"
+  url "https://ftp.postgresql.org/pub/source/v17.6/postgresql-17.6.tar.bz2"
+  sha256 "e0630a3600aea27511715563259ec2111cd5f4353a4b040e0be827f94cd7a8b0"
   license "PostgreSQL"
 
   livecheck do
     url "https://ftp.postgresql.org/pub/source/"
-    regex(%r{href=["']?v?(\d+(?:\.\d+)+)/?["' >]}i)
+    regex(%r{href=["']?v?(17(?:\.\d+)+)/?["' >]}i)
   end
 
   bottle do
-    sha256 arm64_tahoe:   "c18bfa80a4e1d0dc070110db4d049c2c8ade1e6e99d63137f75f6a71c588eacf"
-    sha256 arm64_sequoia: "3d598f9d52ab87201a766bb9e2f2994936a648715835fd117ebdcd4053657a51"
-    sha256 arm64_sonoma:  "c461783362ef84350fefa58ba6125b75def2be4fe3d280e6352c47d5d3853c3c"
-    sha256 sonoma:        "7a11639f02dace4fc119a01cb6289e8135a274acb3eb50aedc038056a54bc578"
-    sha256 arm64_linux:   "04f59478f4bb3fe1f2c0e3645915cd5871ecf8e9293bb8e7776c0dac7f2061b7"
-    sha256 x86_64_linux:  "f40cc688f06fb820de47f84243a51d654227dc82d154a2f43b5905eb114b7f73"
+    sha256 arm64_tahoe:   "42f88922214766df09f1d6191397769f5ee99917dc64defeadf905ff504d3b6e"
+    sha256 arm64_sequoia: "2084aa0f177278ec5b6b2b1a7468f6819c11161e11e51ed76a082d7c01660289"
+    sha256 arm64_sonoma:  "b562f5f7b277bc1d3561e61aba701c00a1b0e401a6df3887a4d11e1da6fbb03d"
+    sha256 sonoma:        "915da447672fa0f24d2db973b79f67fef0a3372c9a15c29e389ba18b0b1aa378"
+    sha256 arm64_linux:   "a351c8aeafb972cc79af1d99e576343679c59f5ae186097553ff7710fc9f692f"
+    sha256 x86_64_linux:  "0bfc9b18ddb7d511134e70bd1fd6d7d9f3dc172f740f87b8801d9d8e0db68ae4"
   end
 
-  keg_only "it conflicts with PostgreSQL"
+  keg_only :versioned_formula
 
   depends_on "docbook" => :build
   depends_on "docbook-xsl" => :build

@@ -15,6 +15,7 @@
   "handbrake",
   "highway",
   "libpq",
+  "libpq@17",
   "libvpx",
   "mariadb",
   "mariadb@10.11",

@@ -25,14 +25,16 @@ class Wal2json < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "44d6b43deefc69fbd0cb1df19957d8f827d74f49693d43ddd2df058ebb3bfb1f"
   end
 
-  depends_on "postgresql@14" => [:build, :test]
   depends_on "postgresql@17" => [:build, :test]
+  depends_on "postgresql@18" => [:build, :test]
 
   def postgresqls
     deps.map(&:to_formula).sort_by(&:version).filter { |f| f.name.start_with?("postgresql@") }
   end
 
   def install
+    odie "Too many postgresql dependencies!" if postgresqls.count > 2
+
     postgresqls.each do |postgresql|
       system "make", "install", "USE_PGXS=1",
                                 "PG_CONFIG=#{postgresql.opt_bin}/pg_config",

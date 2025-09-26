@@ -1,16 +1,14 @@
 class Jdupes < Formula
   desc "Duplicate file finder and an enhanced fork of 'fdupes'"
   homepage "https://codeberg.org/jbruchon/jdupes"
-  url "https://codeberg.org/jbruchon/jdupes/archive/v1.30.0.tar.gz"
-  sha256 "9cf4727526d988cee62705f29f53c21765838302713ed6e6c0b29ac117c66af5"
+  url "https://codeberg.org/jbruchon/jdupes/archive/v1.31.1.tar.gz"
+  sha256 "c80d4c1deb03cc891a7e938f886952cfc480b8a0bc48baf21b312d350b62d8e3"
   license "MIT"
 
   livecheck do
     url :stable
     regex(/^v?(\d+(?:\.\d+)+)$/i)
   end
-
-  no_autobump! because: :requires_manual_review
 
   bottle do
     sha256 cellar: :any,                 arm64_tahoe:   "992652f273eba2749ac9d3bc898cb9b56d60585adb209a1f835bcded32e2cf6d"

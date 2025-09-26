@@ -1,8 +1,8 @@
 class Ethereum < Formula
   desc "Official Go implementation of the Ethereum protocol"
   homepage "https://geth.ethereum.org/"
-  url "https://github.com/ethereum/go-ethereum/archive/refs/tags/v1.16.3.tar.gz"
-  sha256 "b8b5f5e373f072a6203d9bcadf1f8bce2cbab3d948e056314838642b7c3e9b81"
+  url "https://github.com/ethereum/go-ethereum/archive/refs/tags/v1.16.4.tar.gz"
+  sha256 "f4cbfa29765b520e87d2e46452cdc04d418c143a703e51c05e5b852b33844bbc"
   license "LGPL-3.0-or-later"
   head "https://github.com/ethereum/go-ethereum.git", branch: "master"
 
@@ -37,7 +37,7 @@ class Ethereum < Formula
       -X github.com/ethereum/go-ethereum/internal/build/env.BuildnumFlag=#{tap.user}
     ]
     (buildpath/"cmd").each_child(false) do |cmd|
-      next if cmd.basename.to_s == "utils"
+      next if %w[keeper utils].include? cmd.basename.to_s
 
       system "go", "build", *std_go_args(ldflags:, output: bin/cmd), "./cmd/#{cmd}"
     end

@@ -4,7 +4,7 @@ class Mfem < Formula
   url "https://github.com/mfem/mfem/archive/refs/tags/v4.8.tar.gz"
   sha256 "65472f732d273832c64b2c39460649dd862df674222c71bfa82cf2da76705052"
   license "BSD-3-Clause"
-  revision 1
+  revision 2
   head "https://github.com/mfem/mfem.git", branch: "master"
 
   bottle do
@@ -24,6 +24,13 @@ class Mfem < Formula
   depends_on "open-mpi"
   depends_on "openblas"
   depends_on "suite-sparse"
+
+  # build patch to support Hypre 3.0, bug report, https://github.com/mfem/mfem/issues/5042
+  # upstream pr ref, https://github.com/mfem/mfem/pull/4975
+  patch do
+    url "https://raw.githubusercontent.com/Homebrew/formula-patches/d8ff1b86ed42532d8f3f2e088a435e00bad46c95/mfem/4.8-support-hypre-3.0.patch"
+    sha256 "e490973f6b74f71c54f6449a8832575eb96c1562468210c444847109470d114f"
+  end
 
   def install
     # fix `lib/cmake/mfem/MFEMConfig.cmake` file audit failure

@@ -3,17 +3,17 @@ class Fastmcp < Formula
 
   desc "Fast, Pythonic way to build MCP servers and clients"
   homepage "https://gofastmcp.com/getting-started/welcome"
-  url "https://files.pythonhosted.org/packages/99/5e/035fdfa23646de8811776cd62d93440e334e8a4557b35c63c1bff125c08c/fastmcp-2.12.3.tar.gz"
-  sha256 "541dd569d5b6c083140b04d997ba3dc47f7c10695cee700d0a733ce63b20bb65"
+  url "https://files.pythonhosted.org/packages/a8/b2/57845353a9bc63002995a982e66f3d0be4ec761e7bcb89e7d0638518d42a/fastmcp-2.12.4.tar.gz"
+  sha256 "b55fe89537038f19d0f4476544f9ca5ac171033f61811cc8f12bdeadcbea5016"
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any,                 arm64_tahoe:   "d4ba87ecf41280e9f7014bd94ba62b10be0e806aeaaa67fd911476508210dc77"
-    sha256 cellar: :any,                 arm64_sequoia: "e1c1b89fa7c4ab24a2a84522250992613f9ae089c85869c20bd9923703bd4c33"
-    sha256 cellar: :any,                 arm64_sonoma:  "7c9d3a608aeab33a19b418078fa271cf7548c07a4b034e24e7b0fdd7ca766506"
-    sha256 cellar: :any,                 sonoma:        "a86f83295b4044416dae0940cc66159b64ae4dd7b94e0489256571e0a494a942"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "206d2e8cdc01808fa6e379949dbe16298aaa68edff9d5ffee7f03a43650d879e"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "18d0f296383f60d05657a4e78bc9e72cb36c90b6fe0628c4ef123204f921e7c8"
+    sha256 cellar: :any,                 arm64_tahoe:   "64f809cf075651ae2d0e848b94292e4891bd2cdb9ecc1228e5a33a36bcefbd93"
+    sha256 cellar: :any,                 arm64_sequoia: "aa147b1265b2cf11b70d1c75897fcde6e198432a096526a594784dc83017ba69"
+    sha256 cellar: :any,                 arm64_sonoma:  "78ca3ea7b00095a2b0121e9bd7e00f1775723896c20db143d7f46164d8e99339"
+    sha256 cellar: :any,                 sonoma:        "35772113cd10825cb0a5eb8cca9d1693d6126390b62dc0c12f84f5c8524a8992"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "b8ee12fd266b1f519d4ae14e7a9dedc0e67857622fce7eb4fbe6a58556b23f09"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "97371e9271738893069ab31d82f4ece287e0a4ec86e93e9e5fa44cde366469dd"
   end
 
   depends_on "rust" => :build
@@ -144,8 +144,8 @@ class Fastmcp < Formula
   end
 
   resource "mcp" do
-    url "https://files.pythonhosted.org/packages/48/e9/242096400d702924b49f8d202c6ded7efb8841cacba826b5d2e6183aef7b/mcp-1.14.1.tar.gz"
-    sha256 "31c4406182ba15e8f30a513042719c3f0a38c615e76188ee5a736aaa89e20134"
+    url "https://files.pythonhosted.org/packages/0c/9e/e65114795f359f314d7061f4fcb50dfe60026b01b52ad0b986b4631bf8bb/mcp-1.15.0.tar.gz"
+    sha256 "5bda1f4d383cf539d3c035b3505a3de94b20dbd7e4e8b4bd071e14634eeb2d72"
   end
 
   resource "mdurl" do
@@ -209,8 +209,8 @@ class Fastmcp < Formula
   end
 
   resource "pyperclip" do
-    url "https://files.pythonhosted.org/packages/15/99/25f4898cf420efb6f45f519de018f4faea5391114a8618b16736ef3029f1/pyperclip-1.10.0.tar.gz"
-    sha256 "180c8346b1186921c75dfd14d9048a6b5d46bfc499778811952c6dd6eb1ca6be"
+    url "https://files.pythonhosted.org/packages/e8/52/d87eba7cb129b81563019d1679026e7a112ef76855d6159d24754dbd2a51/pyperclip-1.11.0.tar.gz"
+    sha256 "244035963e4428530d9e3a6101a1ef97209c6825edab1567beac148ccc1db1b6"
   end
 
   resource "python-dotenv" do
@@ -224,8 +224,8 @@ class Fastmcp < Formula
   end
 
   resource "pyyaml" do
-    url "https://files.pythonhosted.org/packages/54/ed/79a089b6be93607fa5cdaedf301d7dfb23af5f25c398d5ead2525b063e17/pyyaml-6.0.2.tar.gz"
-    sha256 "d584d9ec91ad65861cc08d42e834324ef890a082e591037abe114850ff7bbc3e"
+    url "https://files.pythonhosted.org/packages/05/8e/961c0007c59b8dd7729d542c61a4d537767a59645b82a0b521206e1e25c2/pyyaml-6.0.3.tar.gz"
+    sha256 "d76623373421df22fb4cf8817020cbb7ef15c725b9d5e45f17e189bfc384190f"
   end
 
   resource "referencing" do

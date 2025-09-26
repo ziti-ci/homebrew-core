@@ -23,6 +23,9 @@ class Flye < Formula
   uses_from_macos "zlib"
 
   def install
+    # Workaround for arm64 Linux: https://github.com/mikolmogorov/Flye/pull/691
+    ENV["arm_neon"] = ENV["aarch64"] = "1" if OS.linux? && Hardware::CPU.arch == :arm64
+
     ENV.deparallelize
     virtualenv_install_with_resources
     pkgshare.install "flye/tests/data"

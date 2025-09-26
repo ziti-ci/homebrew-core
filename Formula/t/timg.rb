@@ -1,20 +1,10 @@
 class Timg < Formula
   desc "Terminal image and video viewer"
   homepage "https://timg.sh/"
+  url "https://github.com/hzeller/timg/archive/refs/tags/v1.6.3.tar.gz"
+  sha256 "59c908867f18c81106385a43065c232e63236e120d5b2596b179ce56340d7b01"
   license "GPL-2.0-only"
-  revision 1
   head "https://github.com/hzeller/timg.git", branch: "main"
-
-  stable do
-    url "https://github.com/hzeller/timg/archive/refs/tags/v1.6.2.tar.gz"
-    sha256 "a5fb4443f55552d15a8b22b9ca4cb5874eb1a988d3b98fe31d61d19b2c7b9e56"
-
-    # Backport support for FFmpeg 8.0
-    patch do
-      url "https://github.com/hzeller/timg/commit/158e465da4a5ab1aa5af855dae3f1aa78b731a23.patch?full_index=1"
-      sha256 "6204606c02178d4afff6c22cbe7d38784602c49c66e73f1980f5cdfa375723a7"
-    end
-  end
 
   bottle do
     rebuild 1

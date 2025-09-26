@@ -1,8 +1,8 @@
 class Terramate < Formula
   desc "Managing Terraform stacks with change detections and code generations"
   homepage "https://terramate.io/docs/"
-  url "https://github.com/terramate-io/terramate/archive/refs/tags/v0.14.5.tar.gz"
-  sha256 "3bf030af7821ba762ac1321ffdf8e401928e1f7a9dff15be42abba62410006a6"
+  url "https://github.com/terramate-io/terramate/archive/refs/tags/v0.14.6.tar.gz"
+  sha256 "a63b312a0b6788b596119358bf0b18ff58f3145ff2bde5164077cfcacfe9b8d9"
   license "MPL-2.0"
   head "https://github.com/terramate-io/terramate.git", branch: "main"
 

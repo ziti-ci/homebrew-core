@@ -4,8 +4,8 @@ class Samba < Formula
   # option. The shared folder appears in the guest as "\\10.0.2.4\qemu".
   desc "SMB/CIFS file, print, and login server for UNIX"
   homepage "https://www.samba.org/"
-  url "https://download.samba.org/pub/samba/stable/samba-4.22.4.tar.gz"
-  sha256 "a41a828848abdf5e942c900ca178597e18aab7b61d3c06a9b5ba43661988010b"
+  url "https://download.samba.org/pub/samba/stable/samba-4.23.1.tar.gz"
+  sha256 "a4fe464652c136600525dcd2665737c72248c6a49d9d5323661a683800c39f75"
   license "GPL-3.0-or-later"
 
   livecheck do
@@ -88,8 +88,16 @@ class Samba < Formula
       end
     end
     ENV.append "LDFLAGS", "-Wl,-rpath,#{lib}/private" if OS.linux?
+
+    bundled_libs_list = []
+    # Upstream (https://github.com/lxin/quic) has no tagged releases, so we would have to add an arbitrary
+    # commit as a resource. That's not really better than just using the vendored copy. Consider breaking
+    # it out into a resource or formula once tagged releases become available.
+    bundled_libs_list << "libquic" if OS.linux?
+    bundled_libs = bundled_libs_list.empty? ? "NONE" : bundled_libs_list.join(",")
+
     system "./configure",
-           "--bundled-libraries=NONE",
+           "--bundled-libraries=#{bundled_libs}",
            "--private-libraries=!ldb",
            "--disable-cephfs",
            "--disable-cups",

@@ -18,14 +18,16 @@ class PostgresqlHll < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "87c9b558987de3f251c0339c3427bf6e0c8172b887a697048b13b7cb0710e4de"
   end
 
-  depends_on "postgresql@14" => [:build, :test]
   depends_on "postgresql@17" => [:build, :test]
+  depends_on "postgresql@18" => [:build, :test]
 
   def postgresqls
     deps.map(&:to_formula).sort_by(&:version).filter { |f| f.name.start_with?("postgresql@") }
   end
 
   def install
+    odie "Too many postgresql dependencies!" if postgresqls.count > 2
+
     postgresqls.each do |postgresql|
       ENV["PG_CONFIG"] = postgresql.opt_bin/"pg_config"
       system "make"

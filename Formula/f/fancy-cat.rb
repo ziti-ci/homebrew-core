@@ -1,24 +1,20 @@
 class FancyCat < Formula
   desc "PDF reader for terminal emulators using the Kitty image protocol"
   homepage "https://github.com/freref/fancy-cat"
-  url "https://github.com/freref/fancy-cat/archive/refs/tags/v0.4.1.tar.gz"
-  sha256 "d264dbaf05f8713a4c52ce0c74a8d5e900989ec815fac1bbfec7d7b385bc1dd5"
+  url "https://github.com/freref/fancy-cat/archive/refs/tags/v0.5.0.tar.gz"
+  sha256 "7191c8b6259f8124d2bef4c38ab0bcb7f13923dd84a6ec5cb5512f729765f5b5"
   license "AGPL-3.0-or-later"
-  revision 5
 
   bottle do
-    sha256 cellar: :any,                 arm64_tahoe:   "2916710816a7c6f26820f96b5197afe396803c59a4ed40f9e1c98c2d9650627f"
-    sha256 cellar: :any,                 arm64_sequoia: "d7a14bcd27acbee4918e3b7c81079d4370ae86cbeed1cb5ff598e69fc52c6d68"
-    sha256 cellar: :any,                 arm64_sonoma:  "7e9ca4ded1da91a6517e5d5b2dab7a8b323ccdb775302a756f3a76c22a99c7ae"
-    sha256 cellar: :any,                 sonoma:        "11b2a4f1cf3190165cbce922fd750ca939e3fe265bf55c7a097d47e4c93fad12"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "779a835c2b4e0e97ac50b4a111e8b7ee46e3c3f995410926cb758d8e089feebd"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "8eb50aacc13177038cc20a489d91ea27794f2124f48860e1cdf887dce363f60f"
+    sha256 cellar: :any,                 arm64_tahoe:   "d975177d0f0fde37f9b79f62349384c5d6e3347160a94461297a8a763b99279a"
+    sha256 cellar: :any,                 arm64_sequoia: "b299732956e601ea7d2a54f4f3f14824682b1a11b076af39fa3585c26c796248"
+    sha256 cellar: :any,                 arm64_sonoma:  "b5a002414567b467d9b26f045094be7b083d2732ed0b14e94d854d4cc5aff241"
+    sha256 cellar: :any,                 sonoma:        "dc6a0f9393de79b9f2ef197c091bb36bec3bb9d5130c787f9bb6567f31ec3e0b"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "9fbdd2f88a238a1c58ee9e7658974fcddd28a1c8cb86657ecfbd2453099f1d74"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "6e79a56f2d66ae9ec3890331fb96ac285d53617fe5c6a6a39988e9c8f6b7a9a6"
   end
 
-  # Aligned to `zig@0.14` formula. Can be removed if upstream updates to newer Zig.
-  deprecate! date: "2026-02-19", because: "does not build with Zig >= 0.15"
-
-  depends_on "zig@0.14" => :build # https://github.com/freref/fancy-cat/issues/95
+  depends_on "zig" => :build
   depends_on "mupdf"
 
   def install

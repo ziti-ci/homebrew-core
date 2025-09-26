@@ -21,9 +21,10 @@ class Zuban < Formula
   def install
     system "cargo", "install", *std_cargo_args(path: "crates/zuban")
 
-    (lib/"typeshed").mkpath
-    cp_r Formula["mypy"].opt_libexec.glob("lib/python*/site-packages/mypy/typeshed")[0].children, lib/"typeshed"
-    bin.env_script_all_files(libexec/"bin", ZUBAN_TYPESHED: lib/"typeshed")
+    # Work around zubanls not reading ZUBAN_TYPESHED (https://github.com/zubanls/zuban/issues/53)
+    (typeshed = libexec/"lib/python3/site-packages/zuban/typeshed").mkpath
+    cp_r Formula["mypy"].opt_libexec.glob("lib/python*/site-packages/mypy/typeshed").first.children, typeshed
+    bin.env_script_all_files libexec/"bin", ZUBAN_TYPESHED: typeshed
   end
 
   test do
@@ -36,6 +37,6 @@ class Zuban < Formula
         return "nope"
     PY
     out = shell_output("#{bin}/zuban check #{testpath}/t.py 2>&1", 1)
-    assert_match(/(not assignable|incompatible|error)/i, out)
+    assert_match "Incompatible return value type", out
   end
 end

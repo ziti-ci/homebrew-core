@@ -53,7 +53,6 @@ jobs:
         with:
           core: true
           cask: false
-          test-bot: true
           stable: ${{ matrix.stable }}
 
       - name: Cache style cache
@@ -81,7 +80,6 @@ jobs:
         with:
           core: true
           cask: false
-          test-bot: true
 
       - run: brew test-bot --only-formulae-detect
         id: formulae-detect
@@ -199,7 +197,6 @@ jobs:
         with:
           core: true
           cask: false
-          test-bot: false
 
       - name: Determine runners to use for tests job
         id: determine-runners
@@ -326,7 +323,6 @@ jobs:
         with:
           core: true
           cask: false
-          test-bot: false
 
       - name: Determine runners to use for test_deps job
         id: determine-dependent-runners

@@ -10,6 +10,15 @@ class LibpqAT17 < Formula
     regex(%r{href=["']?v?(17(?:\.\d+)+)/?["' >]}i)
   end
 
+  bottle do
+    sha256 arm64_tahoe:   "42f88922214766df09f1d6191397769f5ee99917dc64defeadf905ff504d3b6e"
+    sha256 arm64_sequoia: "2084aa0f177278ec5b6b2b1a7468f6819c11161e11e51ed76a082d7c01660289"
+    sha256 arm64_sonoma:  "b562f5f7b277bc1d3561e61aba701c00a1b0e401a6df3887a4d11e1da6fbb03d"
+    sha256 sonoma:        "915da447672fa0f24d2db973b79f67fef0a3372c9a15c29e389ba18b0b1aa378"
+    sha256 arm64_linux:   "a351c8aeafb972cc79af1d99e576343679c59f5ae186097553ff7710fc9f692f"
+    sha256 x86_64_linux:  "0bfc9b18ddb7d511134e70bd1fd6d7d9f3dc172f740f87b8801d9d8e0db68ae4"
+  end
+
   keg_only :versioned_formula
 
   depends_on "docbook" => :build

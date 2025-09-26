@@ -15,12 +15,12 @@ class AwscliAT1 < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_tahoe:   "2fd4940310494dbaf31fc89c52008166f8a1df9e3d0828e58c06448738b52ba5"
-    sha256 cellar: :any,                 arm64_sequoia: "ca1a348a0e57ebd963146c44210f0126dab84ce6caec61c16efd2c19e8c6da88"
-    sha256 cellar: :any,                 arm64_sonoma:  "7d781a54225045c1891a22cc811eb685b17d6d07912bef74dc3adb4816e28dd5"
-    sha256 cellar: :any,                 sonoma:        "383db1462e7f159ba8df0c74b47ef3927802fab39952da742492654e7ef2dec5"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "371cddb6e9a3bc978ac82425e34ca9c48f9ec4de1b63921a0b78cafad18a6cc9"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "47b2a64705ea5b09efda35f3285987f0c61fd9b037c54f8a29c47e648e75ba0b"
+    sha256 cellar: :any,                 arm64_tahoe:   "dda859dd2871117974b0af85ece00a971aae033abfd6cbf1c73dbe61be91b6e3"
+    sha256 cellar: :any,                 arm64_sequoia: "8aec8256a60a0e0fe5a88a92356389b68a44ca1806eaebaf126b444ba1396a41"
+    sha256 cellar: :any,                 arm64_sonoma:  "29bec078a91379492a68c0e926d01d152f17820e6a52a3b153cc6dcf34f2070e"
+    sha256 cellar: :any,                 sonoma:        "412dda2712a3460ff8a44469b3627f659d4b6384970a590073269c71f496b5f0"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "5b4107f06ab642997c500e00306291da100328158ed7059e7bd2851736ce12e3"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "7f0ebdfcba263e668ad71568a94d0aedbc4cded098f8f107af31db4bacf4b1e9"
   end
 
   keg_only :versioned_formula

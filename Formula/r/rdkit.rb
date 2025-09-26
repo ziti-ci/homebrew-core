@@ -29,8 +29,8 @@ class Rdkit < Formula
   depends_on "catch2" => :build
   depends_on "cmake" => :build
   depends_on "pkgconf" => :build
-  depends_on "postgresql@14" => [:build, :test]
   depends_on "postgresql@17" => [:build, :test]
+  depends_on "postgresql@18" => [:build, :test]
   depends_on "boost"
   depends_on "boost-python3"
   depends_on "cairo"
@@ -58,6 +58,7 @@ class Rdkit < Formula
   end
 
   def install
+    odie "Too many postgresql dependencies!" if postgresqls.count > 2
     (buildpath/"better_enums").install resource("better_enums")
 
     python_rpath = rpath(source: lib/Language::Python.site_packages(python3))

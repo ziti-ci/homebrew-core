@@ -1,9 +1,10 @@
 class Infat < Formula
-  desc "Tool to set default openers for file formats and url schemes on MacOS"
+  desc "Tool to set default openers for file formats and url schemes on macOS"
   homepage "https://github.com/philocalyst/infat"
-  url "https://github.com/philocalyst/infat/archive/refs/tags/v2.5.2.tar.gz"
-  sha256 "145d37b264113f4826fcf2c7e2be3f58ffd0ebcb25031163daef8ee38589219e"
+  url "https://github.com/philocalyst/infat/archive/refs/tags/v3.0.1.tar.gz"
+  sha256 "c931cc909c98cabe24e6ee92f10e9fc45941499f4e07e4f201bcc6c9aa910a7d"
   license "MIT"
+  head "https://github.com/philocalyst/infat.git", branch: "main"
 
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_tahoe:   "fcef3e55402d5c8e016cea110df4d04aaa304dec6f4d359d4983c677cd6b51cb"
@@ -12,19 +13,20 @@ class Infat < Formula
     sha256 cellar: :any_skip_relocation, sonoma:        "e684dc96c078f68dd52cc15e1145789168bd7c4ee3fb4f245a56f3d664d41c6a"
   end
 
-  depends_on xcode: ["15.2", :build]
+  depends_on "rust" => :build
   depends_on :macos
   depends_on macos: :sonoma
 
   def install
-    system "swift", "build", "--disable-sandbox", "-c", "release", "--static-swift-stdlib"
-    bin.install ".build/release/infat"
+    system "cargo", "install", *std_cargo_args(path: "infat-cli")
 
-    generate_completions_from_executable(bin/"infat", "--generate-completion-script")
+    bash_completion.install "target/release/infat.bash"
+    fish_completion.install "target/release/infat.fish"
+    zsh_completion.install "target/release/_infat"
   end
 
   test do
     output = shell_output("#{bin}/infat set TextEdit --ext txt")
-    assert_match "Successfully bound TextEdit to txt", output
+    assert_match "Set .txt", output
   end
 end

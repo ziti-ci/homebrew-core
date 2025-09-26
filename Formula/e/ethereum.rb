@@ -12,14 +12,12 @@ class Ethereum < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "dd087f751d24ca88bfae835f668ec39471f6b7b4cef0dce090817bc7544e4f94"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "cf597a0cbf26b39d8a12755754649bcab8b372ad647e604ab98ecbd38711b240"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "61aeaa10a46f640656b89d2ecd709240292186a7d6861c188dc2b4fccdcd325f"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "c310dddcdaa02dbab4a3315cb10fba174e3abf284e6b6fa0492c77a2b2c1f9b2"
-    sha256 cellar: :any_skip_relocation, sonoma:        "8d3c5d26b47204a45db9e71890cb417fb8f05a97e87fb5f554c667b572d4577c"
-    sha256 cellar: :any_skip_relocation, ventura:       "19522c93d7b2519b490b8c7a8aaabbbd62b29c9f1efbcfdaf8cfe06e86a26c24"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "6fafa9aa1c29bd1bdb4f4dcc750ebd3893c9d306cca8c5decbae60b62b176f95"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "c962d474a442519ca950204e03678956d0923d632fcca6bd27b867e98feefa1c"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "bf13355e34db16f52c65f147351ae5107d6afd0c9b884e2fb94c90bb9700e7b4"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "ec04b2033842665db6831f5fb656ec62919b10643229a645c53111d330db78c8"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "924b78a2712c762faf44b7f1e940735f58cafbe16569a26c6c4a49fba5068712"
+    sha256 cellar: :any_skip_relocation, sonoma:        "c21ede5742b3387822c435a0a8872cb148e5e8b7eca998d9b2fef8f3fc2ad926"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "b54449f2ff5573eba97aeac7a382ebd5a0c04c131f767b91beba3d314e4fead0"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "36ac08f87f81b33e7d30116ac9d6ac45f56f0803618bbed1c76327e68d2183d2"
   end
 
   depends_on "go" => :build

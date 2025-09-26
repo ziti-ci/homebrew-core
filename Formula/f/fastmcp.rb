@@ -8,12 +8,12 @@ class Fastmcp < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any,                 arm64_tahoe:   "d4ba87ecf41280e9f7014bd94ba62b10be0e806aeaaa67fd911476508210dc77"
-    sha256 cellar: :any,                 arm64_sequoia: "e1c1b89fa7c4ab24a2a84522250992613f9ae089c85869c20bd9923703bd4c33"
-    sha256 cellar: :any,                 arm64_sonoma:  "7c9d3a608aeab33a19b418078fa271cf7548c07a4b034e24e7b0fdd7ca766506"
-    sha256 cellar: :any,                 sonoma:        "a86f83295b4044416dae0940cc66159b64ae4dd7b94e0489256571e0a494a942"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "206d2e8cdc01808fa6e379949dbe16298aaa68edff9d5ffee7f03a43650d879e"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "18d0f296383f60d05657a4e78bc9e72cb36c90b6fe0628c4ef123204f921e7c8"
+    sha256 cellar: :any,                 arm64_tahoe:   "64f809cf075651ae2d0e848b94292e4891bd2cdb9ecc1228e5a33a36bcefbd93"
+    sha256 cellar: :any,                 arm64_sequoia: "aa147b1265b2cf11b70d1c75897fcde6e198432a096526a594784dc83017ba69"
+    sha256 cellar: :any,                 arm64_sonoma:  "78ca3ea7b00095a2b0121e9bd7e00f1775723896c20db143d7f46164d8e99339"
+    sha256 cellar: :any,                 sonoma:        "35772113cd10825cb0a5eb8cca9d1693d6126390b62dc0c12f84f5c8524a8992"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "b8ee12fd266b1f519d4ae14e7a9dedc0e67857622fce7eb4fbe6a58556b23f09"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "97371e9271738893069ab31d82f4ece287e0a4ec86e93e9e5fa44cde366469dd"
   end
 
   depends_on "rust" => :build

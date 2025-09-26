@@ -10,6 +10,7 @@ class Wuppiefuzz < Formula
     sha256 cellar: :any_skip_relocation, arm64_sequoia: "c6fa5391cc83fb00c73315e855bf90da244702f32b9edba1b8f9b74c81df56b9"
     sha256 cellar: :any_skip_relocation, arm64_sonoma:  "c4a1279ae32e5a36b8cf01a567cebda90642bdd7ee946507a545aa77807629a6"
     sha256 cellar: :any_skip_relocation, sonoma:        "c5b744520db48662e2e061c6934462fd4e4f509bba4d5b7612ed23c0e0bb3b11"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "b26c23bcd612a6265c81b03255a309f9507ce938e36892c33a06432dc812d85d"
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "cbb8158f0378edfb4a61860668181e720fd4366640ec44305929a0b5018e7f87"
   end
 

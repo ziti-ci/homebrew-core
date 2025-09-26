@@ -20,8 +20,8 @@ class Pgroonga < Formula
   end
 
   depends_on "pkgconf" => :build
-  depends_on "postgresql@14" => [:build, :test]
   depends_on "postgresql@17" => [:build, :test]
+  depends_on "postgresql@18" => [:build, :test]
   depends_on "groonga"
 
   def postgresqls
@@ -29,6 +29,8 @@ class Pgroonga < Formula
   end
 
   def install
+    odie "Too many postgresql dependencies!" if postgresqls.count > 2
+
     postgresqls.each do |postgresql|
       with_env(PATH: "#{postgresql.opt_bin}:#{ENV["PATH"]}") do
         system "make"

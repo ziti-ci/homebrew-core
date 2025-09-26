@@ -4,6 +4,7 @@ class Pgrouting < Formula
   url "https://github.com/pgRouting/pgrouting/releases/download/v3.8.0/pgrouting-3.8.0.tar.gz"
   sha256 "b8a5f0472934fdf7cda3fb4754d01945378d920cdaddc01f378617ddbb9c447f"
   license "GPL-2.0-or-later"
+  revision 1
   head "https://github.com/pgRouting/pgrouting.git", branch: "main"
 
   livecheck do
@@ -23,8 +24,8 @@ class Pgrouting < Formula
 
   depends_on "boost" => :build
   depends_on "cmake" => :build
-  depends_on "postgresql@14" => [:build, :test]
   depends_on "postgresql@17" => [:build, :test]
+  depends_on "postgresql@18" => [:build, :test]
   depends_on "postgis"
 
   def postgresqls
@@ -32,6 +33,8 @@ class Pgrouting < Formula
   end
 
   def install
+    odie "Too many postgresql dependencies!" if postgresqls.count > 2
+
     ENV["DESTDIR"] = buildpath/"stage"
 
     postgresqls.each do |postgresql|

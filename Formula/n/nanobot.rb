@@ -1,17 +1,17 @@
 class Nanobot < Formula
   desc "Build MCP Agents"
   homepage "https://www.nanobot.ai/"
-  url "https://github.com/nanobot-ai/nanobot/archive/refs/tags/v0.0.28.tar.gz"
-  sha256 "cfa778c2b2d82b728799d85c6d5478cdb718c00b37021ab4127dcd7e2e06a92b"
+  url "https://github.com/nanobot-ai/nanobot/archive/refs/tags/v0.0.30.tar.gz"
+  sha256 "fe471aa9fd8a45db2ae2b619b9ef4f7bd8ee9a3193f2f52b11808c1374cc71f8"
   license "Apache-2.0"
   head "https://github.com/nanobot-ai/nanobot.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "67a52e0cb2d805d7f453f5ab3d7c248e2d4dc8a679627268a53b0933b65f06c2"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "61ab3a93107d249a29b15ba81df5f641b69e64f209e39fcd479b5ed1d5fda01e"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "7a09c7802bf7dcc75f176e89c16027f09ad6f309f8cca5c8c486c8fca0a9766d"
-    sha256 cellar: :any_skip_relocation, sonoma:        "8a55baf941aab2abe82bf8679cc139146b0e32007bae612362da1d1596e540ce"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "d327ea1cee5b082ee9f45b4b0d681ed144e5cfab5b0a7cb201b10999761e007f"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "b36fb68a250b410cc154203e8a0771798d62d80bef0080ec226c5e10565fc5d9"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "62b5c71536c37d0a1c89cce44ec4d0df186dd72f9870cb5d3296f745a28776fd"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "d4e569db987d09adb8c7ebce9c7d23ee69ffeb10669952558567044e191b02f8"
+    sha256 cellar: :any_skip_relocation, sonoma:        "558f38ddf73e6f60dc6c623390c24c56b565c6a1038ee499a1bd77976eb9fc21"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "e98e055cf0d0ed95355bb0c3b15c0a7809aad5dc729cc9c18aae387e0d5be53a"
   end
 
   depends_on "go" => :build

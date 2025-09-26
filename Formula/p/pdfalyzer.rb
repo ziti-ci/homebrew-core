@@ -3,8 +3,8 @@ class Pdfalyzer < Formula
 
   desc "PDF analysis toolkit"
   homepage "https://github.com/michelcrypt4d4mus/pdfalyzer"
-  url "https://files.pythonhosted.org/packages/64/72/6dee64af8726e26693330a771207d969dab974a92511a5767518a0e5f4cf/pdfalyzer-1.17.3.tar.gz"
-  sha256 "a8bccda071434f7e5c2c475b5c5a42769991df2993586bf2114fc400f893b323"
+  url "https://files.pythonhosted.org/packages/83/f1/ec1f332f2832bcbcb705410cf29417669c50398618ea3bf7aacbc270fd6e/pdfalyzer-1.17.5.tar.gz"
+  sha256 "e832a6d2624dbf63c727293a644c3bc92bdd002533854bd99c845ee7ed3a05da"
   license "GPL-3.0-or-later"
   head "https://github.com/michelcrypt4d4mus/pdfalyzer.git", branch: "master"
 
@@ -47,8 +47,8 @@ class Pdfalyzer < Formula
   end
 
   resource "pypdf" do
-    url "https://files.pythonhosted.org/packages/20/ac/a300a03c3b34967c050677ccb16e7a4b65607ee5df9d51e8b6d713de4098/pypdf-6.0.0.tar.gz"
-    sha256 "282a99d2cc94a84a3a3159f0d9358c0af53f85b4d28d76ea38b96e9e5ac2a08d"
+    url "https://files.pythonhosted.org/packages/0b/ac/44d86f16b8ad9b42ea1da4b9aa145be71c89927566d9be87fe74bda1dfef/pypdf-6.1.0.tar.gz"
+    sha256 "0cba440d024da5a2a9304f03cd645346052827b84c5a461c6123e24ed5a3b0b9"
   end
 
   resource "python-dotenv" do

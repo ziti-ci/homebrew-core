@@ -1,8 +1,8 @@
 class FishLsp < Formula
   desc "LSP implementation for the fish shell language"
   homepage "https://www.fish-lsp.dev"
-  url "https://registry.npmjs.org/fish-lsp/-/fish-lsp-1.0.10.tgz"
-  sha256 "8658f4568796fbc1736774c332b6cf8199bf1218a32297930153bb1a239cd2e5"
+  url "https://registry.npmjs.org/fish-lsp/-/fish-lsp-1.0.11.tgz"
+  sha256 "81ed860fe70cc6f45cd68d86804950139a9a5c850efe473580fcb00af89f7a2e"
   license "MIT"
 
   bottle do
@@ -27,7 +27,7 @@ class FishLsp < Formula
     system "npm", "install", *std_npm_args
     bin.install_symlink libexec.glob("bin/*")
 
-    man1.install "docs/man/fish-lsp.1"
+    man1.install "man/fish-lsp.1"
     generate_completions_from_executable(bin/"fish-lsp", "complete", shells: [:fish])
 
     # Remove incompatible pre-built binaries

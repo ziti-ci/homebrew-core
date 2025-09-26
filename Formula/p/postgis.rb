@@ -4,6 +4,7 @@ class Postgis < Formula
   url "https://download.osgeo.org/postgis/source/postgis-3.6.0.tar.gz"
   sha256 "8caffef4b457ed70d5328bf4e5a21f9306b06c271662e03e1a65d30090e5f25f"
   license "GPL-2.0-or-later"
+  revision 1
 
   livecheck do
     url "https://download.osgeo.org/postgis/source/"
@@ -29,8 +30,8 @@ class Postgis < Formula
   end
 
   depends_on "pkgconf" => :build
-  depends_on "postgresql@14" => [:build, :test]
   depends_on "postgresql@17" => [:build, :test]
+  depends_on "postgresql@18" => [:build, :test]
 
   depends_on "gdal"
   depends_on "geos"
@@ -55,6 +56,8 @@ class Postgis < Formula
   end
 
   def install
+    odie "Too many postgresql dependencies!" if postgresqls.count > 2
+
     # C++17 is required.
     ENV.append "CXXFLAGS", "-std=c++17"
     # Avoid linking to libc++ on Linux due to indirect LLVM dependency

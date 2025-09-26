@@ -33,32 +33,29 @@ class Influxdb < Formula
   depends_on "rust" => :build
   depends_on "python@3.13"
 
-  uses_from_macos "llvm" => :build
+  uses_from_macos "bzip2"
 
   on_linux do
-    depends_on "lld" => :build
+    on_intel do
+      depends_on "lld" => :build
+    end
   end
 
   def install
-    py = Formula["python@3.13"].opt_bin/"python3"
-    ENV["PYO3_PYTHON"] = py
-    ENV["PYTHON_SYS_EXECUTABLE"] = py
+    python3 = which("python3.13")
+    ENV["PYO3_PYTHON"] = python3
+    ENV["PYTHON_SYS_EXECUTABLE"] = python3
 
-    # Configure rpath to locate Python framework at runtime
-    if OS.mac?
-      fwk_dir = Formula["python@3.13"].opt_frameworks/"Python3.framework/Versions/3.13"
-      ENV.append "RUSTFLAGS", "-C link-arg=-Wl,-rpath,#{fwk_dir}"
-    end
+    # Avoid upstream's default of Haswell and instead let superenv set this
+    inreplace ".cargo/config.toml", '"-C", "target-cpu=haswell",', ""
+
+    # Work around SIGKILL on arm64 linux runner from fat LTO
+    github_arm64_linux = OS.linux? && Hardware::CPU.arm? &&
+                         ENV["HOMEBREW_GITHUB_ACTIONS"].present? &&
+                         ENV["GITHUB_ACTIONS_HOMEBREW_SELF_HOSTED"].blank?
+    ENV["CARGO_PROFILE_RELEASE_LTO"] = "thin" if github_arm64_linux
 
     system "cargo", "install", *std_cargo_args(path: "influxdb3")
-  end
-
-  service do
-    run opt_bin/"influxdb3"
-    keep_alive true
-    working_dir HOMEBREW_PREFIX
-    log_path var/"log/influxdb3/influxd_output.log"
-    error_log_path var/"log/influxdb3/influxd_output.log"
   end
 
   test do

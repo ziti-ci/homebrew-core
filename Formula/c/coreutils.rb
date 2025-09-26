@@ -52,6 +52,12 @@ class Coreutils < Formula
     %w[dir dircolors vdir]
   end
 
+  # Coreutils 9.8 had a bug in `tail` that made it seek to the wrong place in
+  # files. Only update src/tail.c from the upstream commit otherwise `autoconf`
+  # will be invoked.
+  # https://github.com/coreutils/coreutils/commit/914972e80dbf82aac9ffe3ff1f67f1028e1a788b.patch?full_index=1
+  patch :DATA
+
   def install
     ENV.runtime_cpu_detection
     system "./bootstrap" if build.head?
@@ -126,3 +132,19 @@ class Coreutils < Formula
     system bin/"gln", "-f", "test", "test.sha1"
   end
 end
+
+__END__
+
+diff --git a/src/tail.c b/src/tail.c
+index b8bef1d91cdb6cde2b666b6c1575376e075eaeb8..c7779c77dfe4cf5a672a265b6e796c7153590170 100644
+--- a/src/tail.c
++++ b/src/tail.c
+@@ -596,7 +596,7 @@ file_lines (char const *prettyname, int fd, struct stat const *sb,
+           goto free_buffer;
+         }
+
+-      pos = xlseek (fd, -bufsize, SEEK_CUR, prettyname);
++      pos = xlseek (fd, -(bufsize + bytes_read), SEEK_CUR, prettyname);
+       bytes_read = read (fd, buffer, bufsize);
+       if (bytes_read < 0)
+         {

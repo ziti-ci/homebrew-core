@@ -23,16 +23,21 @@ class ZlibNgCompat < Formula
 
   keg_only :shadowed_by_macos, "macOS provides zlib"
 
+  depends_on "cmake" => :build
+
   on_linux do
     keg_only "it conflicts with zlib"
   end
 
   def install
     ENV.runtime_cpu_detection
-    # Disabling new strategies based on Fedora comment on keeping compatibility with zlib
-    # Ref: https://src.fedoraproject.org/rpms/zlib-ng/blob/rawhide/f/zlib-ng.spec#_120
-    system "./configure", "--prefix=#{prefix}", "--without-new-strategies", "--zlib-compat"
-    system "make", "install"
+    args = %w[
+      -DZLIB_COMPAT=ON
+      -DWITH_NEW_STRATEGIES=OFF
+    ]
+    system "cmake", "-S", ".", "-B", "build", *args, *std_cmake_args
+    system "cmake", "--build", "build"
+    system "cmake", "--install", "build"
   end
 
   test do

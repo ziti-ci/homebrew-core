@@ -3,8 +3,8 @@ class Awscli < Formula
 
   desc "Official Amazon AWS command-line interface"
   homepage "https://aws.amazon.com/cli/"
-  url "https://github.com/aws/aws-cli/archive/refs/tags/2.31.2.tar.gz"
-  sha256 "18c3f370f4ce2d535411866b91d1a91cce73d65d5d990b5eaadb6bf35b0816ff"
+  url "https://github.com/aws/aws-cli/archive/refs/tags/2.31.3.tar.gz"
+  sha256 "4e11e2b4c1656c9c376e69c868c3c44db6e3cc35eb38516a1a414c373589601f"
   license "Apache-2.0"
   head "https://github.com/aws/aws-cli.git", branch: "v2"
 
@@ -85,8 +85,8 @@ class Awscli < Formula
   end
 
   resource "wcwidth" do
-    url "https://files.pythonhosted.org/packages/6c/63/53559446a878410fc5a5974feb13d31d78d752eb18aeba59c7fef1af7598/wcwidth-0.2.13.tar.gz"
-    sha256 "72ea0c06399eb286d978fdedb6923a9eb47e1c486ce63e9b4e64fc18303972b5"
+    url "https://files.pythonhosted.org/packages/24/30/6b0809f4510673dc723187aeaf24c7f5459922d01e2f794277a3dfb90345/wcwidth-0.2.14.tar.gz"
+    sha256 "4d478375d31bc5395a3c55c40ccdf3354688364cd61c4f6adacaa9215d0b3605"
   end
 
   def python3

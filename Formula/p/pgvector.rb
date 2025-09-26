@@ -16,14 +16,16 @@ class Pgvector < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "aaab7b23e670c2db2ba871a2130001c2ee7448d21e0911b7b28d68fa0ce1c78a"
   end
 
-  depends_on "postgresql@14" => [:build, :test]
   depends_on "postgresql@17" => [:build, :test]
+  depends_on "postgresql@18" => [:build, :test]
 
   def postgresqls
     deps.map(&:to_formula).sort_by(&:version).filter { |f| f.name.start_with?("postgresql@") }
   end
 
   def install
+    odie "Too many postgresql dependencies!" if postgresqls.count > 2
+
     postgresqls.each do |postgresql|
       ENV["PG_CONFIG"] = postgresql.opt_bin/"pg_config"
       system "make"

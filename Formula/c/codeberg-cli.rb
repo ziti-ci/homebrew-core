@@ -1,8 +1,8 @@
 class CodebergCli < Formula
   desc "CLI for Codeberg"
   homepage "https://codeberg.org/Aviac/codeberg-cli"
-  url "https://codeberg.org/Aviac/codeberg-cli/archive/v0.5.0.tar.gz"
-  sha256 "61ef60a161e77b81cda5fcb0c2878f8d2a8acb7d47b8e9d319ba1e773644f1df"
+  url "https://codeberg.org/Aviac/codeberg-cli/archive/v0.5.1.tar.gz"
+  sha256 "6f91dd631ec630d7b558abcc783757ea189e934aee5ea645691268f859d0c197"
   license "AGPL-3.0-or-later"
   head "https://codeberg.org/Aviac/codeberg-cli.git", branch: "main"
 
@@ -32,7 +32,7 @@ class CodebergCli < Formula
 
     assert_match "Successfully created berg config", shell_output("#{bin}/berg config generate")
 
-    output = shell_output("#{bin}/berg repo info Aviac/codeberg-cli 2>&1")
+    output = shell_output("#{bin}/berg repo info Aviac/codeberg-cli 2>&1", 1)
     assert_match "Couldn't find login data", output
   end
 end

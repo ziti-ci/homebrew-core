@@ -3,8 +3,8 @@ class Gersemi < Formula
 
   desc "Formatter to make your CMake code the real treasure"
   homepage "https://github.com/BlankSpruce/gersemi"
-  url "https://files.pythonhosted.org/packages/e3/9d/db3d44c0b8ee2cefe39a0546bc72d1927387b46c53b606ce7249f0c9d7b6/gersemi-0.22.2.tar.gz"
-  sha256 "5a5fbe46962cafbf41b6fbff893d5d956a066639a7877c4f365e4d3ddfb1c226"
+  url "https://files.pythonhosted.org/packages/e7/de/baafb537f824e0585561b70d7cf896a876e7c699887dec945a9c527e02b6/gersemi-0.22.3.tar.gz"
+  sha256 "ae764e726ed2e9cefd696dc0f082fff77e2e51dd236c61739b18fee69fe406f4"
   license "MPL-2.0"
 
   bottle do
@@ -27,13 +27,13 @@ class Gersemi < Formula
   end
 
   resource "lark" do
-    url "https://files.pythonhosted.org/packages/af/60/bc7622aefb2aee1c0b4ba23c1446d3e30225c8770b38d7aedbfb65ca9d5a/lark-1.2.2.tar.gz"
-    sha256 "ca807d0162cd16cef15a8feecb862d7319e7a09bdb13aef927968e45040fed80"
+    url "https://files.pythonhosted.org/packages/1d/37/a13baf0135f348af608c667633cbe5d13aa2c5c15a56ae9ad3e6cba45ae3/lark-1.3.0.tar.gz"
+    sha256 "9a3839d0ca5e1faf7cfa3460e420e859b66bcbde05b634e73c369c8244c5fa48"
   end
 
   resource "pyyaml" do
-    url "https://files.pythonhosted.org/packages/54/ed/79a089b6be93607fa5cdaedf301d7dfb23af5f25c398d5ead2525b063e17/pyyaml-6.0.2.tar.gz"
-    sha256 "d584d9ec91ad65861cc08d42e834324ef890a082e591037abe114850ff7bbc3e"
+    url "https://files.pythonhosted.org/packages/05/8e/961c0007c59b8dd7729d542c61a4d537767a59645b82a0b521206e1e25c2/pyyaml-6.0.3.tar.gz"
+    sha256 "d76623373421df22fb4cf8817020cbb7ef15c725b9d5e45f17e189bfc384190f"
   end
 
   def install

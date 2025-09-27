@@ -1,14 +1,10 @@
 class Openmsx < Formula
   desc "MSX emulator"
   homepage "https://openmsx.org/"
+  url "https://github.com/openMSX/openMSX/releases/download/RELEASE_21_0/openmsx-21.0.tar.gz"
+  sha256 "28838bfa974a0b769b04a8820ad7953a7ad0835eb5d1764db173deac75984b6f"
   license "GPL-2.0-or-later"
-  revision 1
-
-  stable do
-    url "https://github.com/openMSX/openMSX/releases/download/RELEASE_20_0/openmsx-20.0.tar.gz"
-    sha256 "4c645e5a063e00919fa04720d39f62fb8dcb6321276637b16b5788dea5cd1ebf"
-    depends_on "tcl-tk@8"
-  end
+  head "https://github.com/openMSX/openMSX.git", branch: "master"
 
   livecheck do
     url :stable
@@ -21,7 +17,7 @@ class Openmsx < Formula
     end
   end
 
-  no_autobump! because: :requires_manual_review
+  no_autobump! because: :incompatible_version_format
 
   bottle do
     rebuild 1
@@ -35,11 +31,6 @@ class Openmsx < Formula
     sha256               x86_64_linux:  "6b4a654d5f1954125ed32caa067d7b441c384143c8a130702c68a90fd8b58e46"
   end
 
-  head do
-    url "https://github.com/openMSX/openMSX.git", branch: "master"
-    depends_on "tcl-tk"
-  end
-
   depends_on "freetype"
   depends_on "glew"
   depends_on "libogg"
@@ -47,6 +38,7 @@ class Openmsx < Formula
   depends_on "libvorbis"
   depends_on "sdl2"
   depends_on "sdl2_ttf"
+  depends_on "tcl-tk"
   depends_on "theora"
 
   uses_from_macos "python" => :build
@@ -85,7 +77,7 @@ class Openmsx < Formula
     inreplace "build/probe.py", "/usr/local", HOMEBREW_PREFIX
 
     # Help finding Tcl (https://github.com/openMSX/openMSX/issues/1082)
-    ENV["TCL_CONFIG"] = Formula[build.head? ? "tcl-tk" : "tcl-tk@8"].opt_lib
+    ENV["TCL_CONFIG"] = Formula["tcl-tk"].opt_lib
 
     system "./configure"
     system "make", "CXX=#{ENV.cxx}", "LDFLAGS=#{ENV.ldflags}"

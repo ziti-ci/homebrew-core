@@ -12,12 +12,12 @@ class PhpIntl < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_tahoe:   "e5cb70e61c1835532f99a01170482bb97067e18d18494fe6cfa32608cc12554f"
-    sha256 cellar: :any,                 arm64_sequoia: "60de5be854ae23ac77b6495361d9a3a4c1f4e16685dee3cd53a7839311c26e10"
-    sha256 cellar: :any,                 arm64_sonoma:  "a3bd8a31456bba69803e1e2ef6472cf9b667a1ed203a610336032c33b2f50747"
-    sha256 cellar: :any,                 sonoma:        "ada2842427a29ab72bad76206c2343949686771ea3135142960e9f0c378bddf0"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "84149fbe44505b5c7dc97cc1afc749fa99ed29e1d49731e9e36181dc36c4b9e6"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "82d390e9bf67059c4a7b5c99ee0917d0544568ea97923065c12d519ae42d2493"
+    sha256 cellar: :any,                 arm64_tahoe:   "d32a9dfb4a8fbc324b4587a84c94ff5553eae2206be238684651383db2ad05a8"
+    sha256 cellar: :any,                 arm64_sequoia: "f75a89b23563162140329ca7c4603beaecb98be244c2824e2fcd6609094468c9"
+    sha256 cellar: :any,                 arm64_sonoma:  "150dde154111fc7a0d9d1f74550aecd52f16d57707f95372169b227ae85f673c"
+    sha256 cellar: :any,                 sonoma:        "e2b532334da5baace1950693642c040bb7da168075f4ef4bd90a4e46695ea68b"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "4ded715bb1aa2fbae374d20ff45c6ecf31430d5a9c6548addb1dea59ce26db92"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "9443e1c15177764007e4d054956a68640f83b5d7f90890aecf089f1dab9dddd3"
   end
 
   depends_on "pkgconf" => :build

@@ -1,8 +1,8 @@
 class Treefrog < Formula
   desc "High-speed C++ MVC Framework for Web Application"
   homepage "https://www.treefrogframework.org/"
-  url "https://github.com/treefrogframework/treefrog-framework/archive/refs/tags/v2.11.1.tar.gz"
-  sha256 "64df0107f60282b8f0c9522e5e09f7b579250db6020a963867868ce8ed96f19b"
+  url "https://github.com/treefrogframework/treefrog-framework/archive/refs/tags/v2.11.2.tar.gz"
+  sha256 "2c878603e8dd609ddabb02ee0e3a74fe306ccdf93ea65f9999f9a60ad68249be"
   license "BSD-3-Clause"
   head "https://github.com/treefrogframework/treefrog-framework.git", branch: "master"
 
@@ -31,8 +31,7 @@ class Treefrog < Formula
     rm_r("3rdparty")
     # Skip unneeded CMake check
     inreplace "configure", "if ! which cmake ", "if false "
-    # Fix to error: no member named 'mode' in 'TSqlJoin<T>';
-    inreplace "src/tsqljoin.h", "_mode(other.mode)", "_mode(other._mode)"
+
     # Fix to error: call to deleted constructor of 'formatter<QByteArray, char>'
     # Force to use fallback implementation
     if DevelopmentTools.clang_build_version >= 1700

@@ -2,13 +2,12 @@ class Php < Formula
   desc "General-purpose scripting language"
   homepage "https://www.php.net/"
   license "PHP-3.01"
-  revision 1
 
   stable do
     # Should only be updated if the new version is announced on the homepage, https://www.php.net/
-    url "https://www.php.net/distributions/php-8.4.12.tar.xz"
-    mirror "https://fossies.org/linux/www/php-8.4.12.tar.xz"
-    sha256 "c1b7978cbb5054eed6c749bde4444afc16a3f2268101fb70a7d5d9b1083b12ad"
+    url "https://www.php.net/distributions/php-8.4.13.tar.xz"
+    mirror "https://fossies.org/linux/www/php-8.4.13.tar.xz"
+    sha256 "b4f27adf30bcf262eacf93c78250dd811980f20f3b90d79a3dc11248681842df"
 
     # Fix naming clash with libxml macro
     # https://github.com/php/php-src/pull/19832
@@ -28,12 +27,12 @@ class Php < Formula
   end
 
   bottle do
-    sha256 arm64_tahoe:   "9a7b8d9e1c14a62b94aea69c05333a8e63454af0b5a2b349d765681ab5e8cdcd"
-    sha256 arm64_sequoia: "7c51ce85b0a524050a90d5e8f8c985abe960a46a5a11a7b155bbceb8dfefc6e5"
-    sha256 arm64_sonoma:  "c92007dce527afcf72940f7d450572cfc1c3210dee73b82f7bc7bda6a34876bd"
-    sha256 sonoma:        "d185898ea37253e64926d8350391460f526f36785ba85770274d820db9e94860"
-    sha256 arm64_linux:   "57a5086d2200b6548270f1e99b22a5ff4b2baa0562e7bc9520b82850d3f58f87"
-    sha256 x86_64_linux:  "0f6d925696ff339639ed668d19abb3dc31bf1c97f408394822b4da2204c56ad3"
+    sha256 arm64_tahoe:   "609cfd3feabcd9c27b44e4ec70c6592474ddfb7107b93eb288a08fd392325dc3"
+    sha256 arm64_sequoia: "fc14301eb5cd4c5e11c952c0ff68b6d1337d470e2ec85457b19d6b89dd9c48d3"
+    sha256 arm64_sonoma:  "faa3f172e872cbfd34acbc3084cdc1915c2b4dc9b8630deed199b39980ea8232"
+    sha256 sonoma:        "284fdbcdccebe9036d95c73f592c44be0adec34dfa90eb2a6b8cb76bec77770f"
+    sha256 arm64_linux:   "51ac65d0b6b4b102e8a9f1204845f5a1d3cfe05f792fdf84cfd3dd125aabfea9"
+    sha256 x86_64_linux:  "f7db9f2ad43503b41e5ac7d5a339d4dd1763c695d4da5b202a9f8a8e2c06d121"
   end
 
   head do
@@ -52,9 +51,7 @@ class Php < Formula
   depends_on "curl"
   depends_on "freetds"
   depends_on "gd"
-  depends_on "gettext"
   depends_on "gmp"
-  depends_on "krb5"
   depends_on "libpq"
   depends_on "libsodium"
   depends_on "libzip"
@@ -77,6 +74,7 @@ class Php < Formula
 
   on_macos do
     depends_on "gcc" => :build # must never be a runtime dependency
+    depends_on "gettext"
   end
 
   # https://github.com/Homebrew/homebrew-core/issues/235820
@@ -310,10 +308,10 @@ class Php < Formula
         inreplace ext_config_path,
           /#{extension_type}=.*$/, "#{extension_type}=#{php_ext_dir}/#{e}.so"
       else
-        ext_config_path.write <<~EOS
+        ext_config_path.write <<~INI
           [#{e}]
           #{extension_type}="#{php_ext_dir}/#{e}.so"
-        EOS
+        INI
       end
     end
   end
@@ -391,7 +389,7 @@ class Php < Formula
         </FilesMatch>
       EOS
 
-      (testpath/"fpm.conf").write <<~EOS
+      (testpath/"fpm.conf").write <<~INI
         [global]
         daemonize=no
         [www]
@@ -401,7 +399,7 @@ class Php < Formula
         pm.start_servers = 2
         pm.min_spare_servers = 1
         pm.max_spare_servers = 3
-      EOS
+      INI
 
       (testpath/"httpd-fpm.conf").write <<~EOS
         #{main_config}
@@ -413,24 +411,16 @@ class Php < Formula
         </FilesMatch>
       EOS
 
-      pid = fork do
-        exec Formula["httpd"].opt_bin/"httpd", "-X", "-f", "#{testpath}/httpd.conf"
-      end
+      pid = spawn Formula["httpd"].opt_bin/"httpd", "-X", "-f", "#{testpath}/httpd.conf"
       sleep 10
-
       assert_match expected_output, shell_output("curl -s 127.0.0.1:#{port}")
 
       Process.kill("TERM", pid)
       Process.wait(pid)
 
-      fpm_pid = fork do
-        exec sbin/"php-fpm", "-y", "fpm.conf"
-      end
-      pid = fork do
-        exec Formula["httpd"].opt_bin/"httpd", "-X", "-f", "#{testpath}/httpd-fpm.conf"
-      end
+      fpm_pid = spawn sbin/"php-fpm", "-y", "fpm.conf"
+      pid = spawn Formula["httpd"].opt_bin/"httpd", "-X", "-f", "#{testpath}/httpd-fpm.conf"
       sleep 10
-
       assert_match expected_output, shell_output("curl -s 127.0.0.1:#{port}")
     ensure
       if pid

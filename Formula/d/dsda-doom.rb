@@ -4,6 +4,7 @@ class DsdaDoom < Formula
   url "https://github.com/kraflab/dsda-doom/archive/refs/tags/v0.29.4.tar.gz"
   sha256 "f866db79381862080718668f582b0f358811a016db17680e507abb9250afbea5"
   license "GPL-2.0-only"
+  revision 1
   head "https://github.com/kraflab/dsda-doom.git", branch: "master"
 
   livecheck do
@@ -21,10 +22,12 @@ class DsdaDoom < Formula
   end
 
   depends_on "cmake" => :build
+  depends_on "pkgconf" => :build
 
   depends_on "fluid-synth"
-  depends_on "libopenmpt"
+  depends_on "libsndfile"
   depends_on "libvorbis"
+  depends_on "libxmp"
   depends_on "libzip"
   depends_on "mad"
   depends_on "portmidi"
@@ -33,10 +36,6 @@ class DsdaDoom < Formula
   depends_on "sdl2_mixer"
 
   uses_from_macos "zlib"
-
-  on_macos do
-    depends_on "libogg"
-  end
 
   on_linux do
     depends_on "mesa"
@@ -51,12 +50,13 @@ class DsdaDoom < Formula
     system "cmake", "-S", "prboom2", "-B", "build",
                     "-DDOOMWADDIR=#{doomwaddir(HOMEBREW_PREFIX)}",
                     "-DDSDAPWADDIR=#{libexec}",
+                    "-DSTRICT_FIND=ON",
                     "-DWITH_FLUIDSYNTH=ON",
                     "-DWITH_IMAGE=ON",
-                    "-DWITH_LIBOPENMPT=ON",
                     "-DWITH_MAD=ON",
                     "-DWITH_PORTMIDI=ON",
                     "-DWITH_VORBISFILE=ON",
+                    "-DWITH_XMP=ON",
                     *std_cmake_args
     system "cmake", "--build", "build"
     system "cmake", "--install", "build"

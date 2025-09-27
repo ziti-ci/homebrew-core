@@ -4,7 +4,7 @@ class Onnx < Formula
   url "https://github.com/onnx/onnx/archive/refs/tags/v1.17.0.tar.gz"
   sha256 "8d5e983c36037003615e5a02d36b18fc286541bf52de1a78f6cf9f32005a820e"
   license "Apache-2.0"
-  revision 7
+  revision 8
 
   no_autobump! because: :requires_manual_review
 
@@ -22,6 +22,16 @@ class Onnx < Formula
   depends_on "protobuf"
 
   uses_from_macos "python" => :build
+
+  # Apply Fedora's workaround to allow `onnxruntime` to use `onnx` built without
+  # ONNX_DISABLE_STATIC_REGISTRATION[^1]. We can't use this option as it will
+  # break functionality for any dependents/users expecting the default behavior.
+  #
+  # [^1]: https://github.com/microsoft/onnxruntime/issues/8556#issuecomment-1006091632
+  patch do
+    url "https://src.fedoraproject.org/rpms/onnx/raw/4de8a450afd87b1ba1931f50d841e9c50b63d8a0/f/0004-Add-fixes-for-use-with-onnxruntime.patch"
+    sha256 "d9ddb735c065fd5dae11ab79371e62bdcca157a6d2a7705cc83ee612abeaaa98"
+  end
 
   def install
     args = %W[

@@ -57,10 +57,9 @@ class Unisonlang < Formula
 
     # Build and install the web interface
     resource("local-ui").stage do
-      with_env(npm_config_ignore_scripts: "elm,elm-format") do
-        system "npm", "install", *std_npm_args(prefix: false)
-      end
+      ENV["npm_config_ignore_scripts"] = "elm,elm-format"
 
+      system "npm", "install", *std_npm_args(prefix: false)
       # Install missing peer dependencies
       system "npm", "install", *std_npm_args(prefix: false), "favicons"
 

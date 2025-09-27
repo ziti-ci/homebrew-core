@@ -17,7 +17,10 @@ class Execstack < Formula
   depends_on "elfutils"
 
   def install
-    system "./configure", "--disable-silent-rules", *std_configure_args
+    args = ["--disable-silent-rules"]
+    args << "--build=aarch64-unknown-linux-gnu" if OS.linux? && Hardware::CPU.arch == :arm64
+
+    system "./configure", *args, *std_configure_args
     system "make", "-C", "src", "execstack"
     bin.install "src/execstack"
   end

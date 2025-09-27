@@ -18,7 +18,9 @@ class Pgstream < Formula
   depends_on "wal2json" => :test
 
   def install
-    ldflags = %W[-X github.com/xataio/pgstream/cmd.Version=#{version}]
+    ENV["CGO_ENABLED"] = "0" if OS.linux? && Hardware::CPU.arm?
+
+    ldflags = "-s -w -X github.com/xataio/pgstream/cmd.Version=#{version}"
     system "go", "build", *std_go_args(ldflags:)
   end
 

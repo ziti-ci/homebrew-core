@@ -7,6 +7,14 @@ class McpAtlassian < Formula
   sha256 "1ba6a171b5299e554d4e0eff98279e74cdc4eb1c12c8e62be924103d9cd38e5e"
   license "MIT"
 
+  bottle do
+    sha256 cellar: :any,                 arm64_tahoe:   "994ea8210adb786955554001bf1d2d093f98059e16f0d02805af76eadb1beece"
+    sha256 cellar: :any,                 arm64_sequoia: "8c7816754bf24df16a93da8385f33cb4a93de6a94a44200efb4a0cb8c33c54a7"
+    sha256 cellar: :any,                 arm64_sonoma:  "33a26c35a92454326eddd5707c1aace095664e10f64742e3d6488cdec6f07373"
+    sha256 cellar: :any,                 sonoma:        "c597ef7c74c968a5cf609cf4db72bc090fe678d98ba08f437e7e153b1418b443"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "aa0669457a7e873682b41a6d4d81137c6a01bfe88887cef74c8452b30b393060"
+  end
+
   depends_on "rust" => :build
   depends_on "certifi"
   depends_on "libyaml"

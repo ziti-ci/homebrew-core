@@ -2,6 +2,7 @@ class Php < Formula
   desc "General-purpose scripting language"
   homepage "https://www.php.net/"
   license "PHP-3.01"
+  revision 1
 
   stable do
     # Should only be updated if the new version is announced on the homepage, https://www.php.net/
@@ -27,13 +28,12 @@ class Php < Formula
   end
 
   bottle do
-    rebuild 2
-    sha256 arm64_tahoe:   "e40592e2731a866feb2b91f16d094e9c9cf605db90035762a2ee367316bc5403"
-    sha256 arm64_sequoia: "8a2728015733295d45652fd123c902301a617f5e5fc138daca5f873f58fbc6ae"
-    sha256 arm64_sonoma:  "db9c8789e22f0b191805554eaf9a2a77f84e69a9cae6cd1764b6144f4e8bbcd0"
-    sha256 sonoma:        "c3c3cfade78d29299f78825a66691f8583380cea416a3f7aa35f0abf9e8574da"
-    sha256 arm64_linux:   "ccf76dc0da52b6d72e19bbcff284628cea4c36508eaff4aa8ff614d3749686a4"
-    sha256 x86_64_linux:  "56a6b123525c3ff49a58b05d05c9e8da50cb349973f048dc1d8963f64a042bfa"
+    sha256 arm64_tahoe:   "9a7b8d9e1c14a62b94aea69c05333a8e63454af0b5a2b349d765681ab5e8cdcd"
+    sha256 arm64_sequoia: "7c51ce85b0a524050a90d5e8f8c985abe960a46a5a11a7b155bbceb8dfefc6e5"
+    sha256 arm64_sonoma:  "c92007dce527afcf72940f7d450572cfc1c3210dee73b82f7bc7bda6a34876bd"
+    sha256 sonoma:        "d185898ea37253e64926d8350391460f526f36785ba85770274d820db9e94860"
+    sha256 arm64_linux:   "57a5086d2200b6548270f1e99b22a5ff4b2baa0562e7bc9520b82850d3f58f87"
+    sha256 x86_64_linux:  "0f6d925696ff339639ed668d19abb3dc31bf1c97f408394822b4da2204c56ad3"
   end
 
   head do
@@ -54,7 +54,6 @@ class Php < Formula
   depends_on "gd"
   depends_on "gettext"
   depends_on "gmp"
-  depends_on "icu4c@77"
   depends_on "krb5"
   depends_on "libpq"
   depends_on "libsodium"
@@ -77,7 +76,7 @@ class Php < Formula
   uses_from_macos "zlib"
 
   on_macos do
-    depends_on "gcc"
+    depends_on "gcc" => :build # must never be a runtime dependency
   end
 
   # https://github.com/Homebrew/homebrew-core/issues/235820
@@ -87,12 +86,7 @@ class Php < Formula
   end
 
   def install
-    # GCC -Os performs worse than -O1 and significantly worse than -O2/-O3.
-    # We lack a DSL to enable -O2 so just use -O3 which is similar.
-    ENV.O3 if OS.mac?
-
-    # buildconf required due to system library linking bug patch
-    system "./buildconf", "--force"
+    system "./buildconf", "--force" if build.head?
 
     inreplace "configure" do |s|
       s.gsub! "$APXS_HTTPD -V 2>/dev/null | grep 'threaded:.*yes' >/dev/null 2>&1",
@@ -150,6 +144,7 @@ class Php < Formula
       --with-config-file-path=#{config_path}
       --with-config-file-scan-dir=#{config_path}/conf.d
       --with-pear=#{pkgshare}/pear
+      --disable-intl
       --enable-bcmath
       --enable-calendar
       --enable-dba
@@ -157,7 +152,6 @@ class Php < Formula
       --enable-ftp
       --enable-fpm
       --enable-gd
-      --enable-intl
       --enable-mbregex
       --enable-mbstring
       --enable-mysqlnd
@@ -283,6 +277,7 @@ class Php < Formula
     extension_dir = Utils.safe_popen_read(bin/"php-config", "--extension-dir").chomp
     php_basename = File.basename(extension_dir)
     php_ext_dir = opt_prefix/"lib/php"/php_basename
+    (pecl_path/php_basename).mkpath
 
     # fix pear config to install outside cellar
     pear_path = HOMEBREW_PREFIX/"share/pear"
@@ -325,6 +320,8 @@ class Php < Formula
 
   def caveats
     <<~EOS
+      The PHP Internationalization extension is now in the `php-intl` formula.
+
       To enable PHP in Apache add the following to httpd.conf and restart Apache:
           LoadModule php_module #{opt_lib}/httpd/modules/libphp.so
 

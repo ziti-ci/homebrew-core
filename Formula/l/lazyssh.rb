@@ -17,11 +17,10 @@ class Lazyssh < Formula
   depends_on "go" => :build
 
   def install
-    ldflags = %W[
-      -s -w
-      -X main.version=#{version}
-      -X main.gitCommit=brew
-    ]
+    ENV["CGO_ENABLED"] = "0" if OS.linux? && Hardware::CPU.arm?
+
+    # has to be `brew` for `gitCommit` due to length constraint
+    ldflags = "-s -w -X main.version=#{version} -X main.gitCommit=brew"
     system "go", "build", *std_go_args(ldflags:), "./cmd"
   end
 

@@ -9,12 +9,12 @@ class Onnx < Formula
   no_autobump! because: :requires_manual_review
 
   bottle do
-    sha256 cellar: :any, arm64_tahoe:   "3883ea6e80ead51e5d9097a01b18eb136a21dfcfe7019d8dacebe5015e128ef8"
-    sha256 cellar: :any, arm64_sequoia: "9682feab99a890a29d73ecee50511e6028315dc8567cb34db516c0bb79f6a450"
-    sha256 cellar: :any, arm64_sonoma:  "4507a220a631084813e999892eab70bddfb006919dd7b29bd183ab23855dac63"
-    sha256 cellar: :any, sonoma:        "95855fd2e9e3e78bf73a3fe128fdb41fb7009fa59b346264c857c087bd6fc75b"
-    sha256               arm64_linux:   "0060a099854db318934b3e5dc7d021cc53a88defd92e5f69c12808d719438c99"
-    sha256               x86_64_linux:  "d892372bc745cd60572e55bf2e90441e982413b63766b0eebe1b256e4d131515"
+    sha256 cellar: :any, arm64_tahoe:   "81b64f196d68c01bb740a53aae9f7c9e088b240a741389f5a5d676cb01cbc7ae"
+    sha256 cellar: :any, arm64_sequoia: "ff2c5310746525e6bc79ba0b7cbe8ce08ad826cccb3c7f937970ff342295fdc7"
+    sha256 cellar: :any, arm64_sonoma:  "56f97c1ccabbd67c20a3c6d1c4c1733bc228a018e90e6db51c69f7ea051e642d"
+    sha256 cellar: :any, sonoma:        "2dad70397d478bb86df821d42c2ce0fe195b789c3dc156868e6f208c4188438a"
+    sha256               arm64_linux:   "d81d331edfa586d1904fd3fd47f99f254967bd89de1a63bef07745b32a83066c"
+    sha256               x86_64_linux:  "962b238222306fb53e1581df8d1474e1b6bcfd0dcce0cc895cdf21862bf1aeb3"
   end
 
   depends_on "cmake" => [:build, :test]

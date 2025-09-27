@@ -31,11 +31,13 @@ class Tinysparql < Formula
   depends_on "icu4c@77"
   depends_on "json-glib"
   depends_on "libsoup"
-  depends_on "libxml2"
-  depends_on :linux # macOS fatal error: 'gio/gdesktopappinfo.h' file not found
   depends_on "sqlite"
 
-  conflicts_with "tracker", because: "both install the same libraries"
+  uses_from_macos "libxml2"
+
+  on_macos do
+    depends_on "gettext"
+  end
 
   def install
     args = %w[

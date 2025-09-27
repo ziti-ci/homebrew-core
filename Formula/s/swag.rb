@@ -6,6 +6,14 @@ class Swag < Formula
   license "MIT"
   head "https://github.com/swaggo/swag.git", branch: "master"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "d8cbf4841f7ebf8f91b1e4034211085e4671d8b9fd81ef7c0a4b774489bb6fbc"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "d8cbf4841f7ebf8f91b1e4034211085e4671d8b9fd81ef7c0a4b774489bb6fbc"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "d8cbf4841f7ebf8f91b1e4034211085e4671d8b9fd81ef7c0a4b774489bb6fbc"
+    sha256 cellar: :any_skip_relocation, sonoma:        "3755ba02cc30db9445167444bb92257957cc5c132d93ddec55d9ca1c46938c89"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "138aa1dcd9425a4656fb0939957ca7ac30affcc0ce474062e25e7a8623cbd032"
+  end
+
   depends_on "go" => :build
 
   def install

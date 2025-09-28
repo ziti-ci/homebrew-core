@@ -1,8 +1,8 @@
 class Jqp < Formula
   desc "TUI playground to experiment and play with jq"
   homepage "https://github.com/noahgorstein/jqp"
-  url "https://github.com/noahgorstein/jqp/archive/refs/tags/v0.7.0.tar.gz"
-  sha256 "e88b32aeb21b8d000e17619f23a0c00a1eb86219112204031f63fb7cdfafacf0"
+  url "https://github.com/noahgorstein/jqp/archive/refs/tags/v0.8.0.tar.gz"
+  sha256 "c70e83975edb1c1dacb0fb067a0685e9632e21360805ade3dda03e54751e4855"
   license "MIT"
 
   bottle do

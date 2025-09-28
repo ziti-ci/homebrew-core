@@ -1,8 +1,8 @@
 class Cdncheck < Formula
   desc "Utility to detect various technology for a given IP address"
   homepage "https://projectdiscovery.io"
-  url "https://github.com/projectdiscovery/cdncheck/archive/refs/tags/v1.2.2.tar.gz"
-  sha256 "19702364291050bd4be214ea2d42394aa971cbc2441cad15a8391f96cfe4907e"
+  url "https://github.com/projectdiscovery/cdncheck/archive/refs/tags/v1.2.3.tar.gz"
+  sha256 "eec13a618822efc5f48d05fa15c1b497ca3804ba2701be732106f6b10f96dfde"
   license "MIT"
   head "https://github.com/projectdiscovery/cdncheck.git", branch: "main"
 
@@ -22,6 +22,8 @@ class Cdncheck < Formula
   depends_on "go" => :build
 
   def install
+    ENV["CGO_ENABLED"] = "0" if OS.linux? && Hardware::CPU.arm?
+
     system "go", "build", *std_go_args(ldflags: "-s -w"), "./cmd/cdncheck"
   end
 

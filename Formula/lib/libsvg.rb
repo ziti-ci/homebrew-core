@@ -48,6 +48,9 @@ class Libsvg < Formula
   patch :DATA
 
   def install
+    # Workaround to avoid segfault on arm64 linux. Upstream isn't actively maintained
+    ENV.append_to_cflags "-include stdlib.h"
+
     system "autoreconf", "--force", "--install", "--verbose"
     system "./configure", *std_configure_args
     system "make", "install"

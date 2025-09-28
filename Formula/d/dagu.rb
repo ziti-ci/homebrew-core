@@ -4,6 +4,7 @@ class Dagu < Formula
   url "https://github.com/dagu-org/dagu/archive/refs/tags/v1.22.8.tar.gz"
   sha256 "e5aa1c4115d27dcd3ded0af35b27202be9c0aa42a5d7e6b2a5735f709caabcd1"
   license "GPL-3.0-only"
+  head "https://github.com/dagu-org/dagu.git", branch: "main"
 
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_tahoe:   "5f78d6a2d3f8ad41db8ad7b33bc01d1f2499ba038325024dbb3b8ad12640f6cb"
@@ -14,9 +15,15 @@ class Dagu < Formula
   end
 
   depends_on "go" => :build
+  depends_on "node" => :build
+  depends_on "pnpm" => :build
 
   def install
-    ldflags = %W[-s -w -X main.version=#{version}]
+    system "pnpm", "--dir=ui", "install", "--frozen-lockfile"
+    system "pnpm", "--dir=ui", "run", "build"
+    (buildpath/"internal/frontend/assets").install (buildpath/"ui/dist").children
+
+    ldflags = "-s -w -X main.version=#{version}"
     system "go", "build", *std_go_args(ldflags:), "./cmd"
   end
 

@@ -19,6 +19,8 @@ class GitlabReleaseCli < Formula
   depends_on "go" => :build
 
   def install
+    ENV["CGO_ENABLED"] = "0" if OS.linux? && Hardware::CPU.arm?
+
     ldflags = "-s -w -X main.VERSION=#{version}"
     system "go", "build", *std_go_args(ldflags:, output: bin/"release-cli"), "./cmd/release-cli"
   end

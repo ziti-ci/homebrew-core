@@ -14,6 +14,7 @@ class Jiratui < Formula
     sha256 cellar: :any,                 arm64_sequoia: "c49b35d17182a9ca0c2227e4d2266f9ba2f19ad7392a9329bc388387d37ac577"
     sha256 cellar: :any,                 arm64_sonoma:  "0114e26496ba2208acea1398a2c7e9620d9fd8787ce777e859514bbc968293a8"
     sha256 cellar: :any,                 sonoma:        "549cb63145f8312cd76d85104208fe75fbe3408cea249432c0dddb7aa3ef8cb2"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "76c7d3ac9a2c52e798e84c286c0dbe1505eddc73ffa95a8a421b00c10022aac2"
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "a3f9d4ca00dd3ea63e9a67b0c8bb2349361b61ba416820b376569583899eda8b"
   end
 

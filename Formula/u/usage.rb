@@ -7,12 +7,12 @@ class Usage < Formula
   head "https://github.com/jdx/usage.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "fdd242dc206be5261514aaa2ff1d58da2ab96165397b5392433048485f7db2cc"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "f2da1a0aa8c39b74ebfe6e7523c73497b0609961013d4b4c5e1021b145258ff7"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "0d24084a65e1200d771c406621bdb11bbdbbb406406b51d97d56559020e1c7d9"
-    sha256 cellar: :any_skip_relocation, sonoma:        "85353abacac48e1f858fbcbf83ea5eb7dc7668846a371623a45dddfac76981af"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "827fa5983ba16fe9546f2bf36de42cac7129e9a5ddc4ae529225d6abdb27903d"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "38742a4cab84e4067cbe5e9e4d029a3ab3746a8f3049a7a661e51da39364a108"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "98f7a5db7db83a4593624b29d23a6b86557e9008a3095ec91d5518cfd82f7a8d"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "0e1b31c02b49959fada8463ce2a6b6779d71ae8cf2ac166b53a99cb9013fdf9c"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "a0b87b5e44fcbd62597886f7aac89bcf8878edfdde1f808ef1be8e07d0022316"
+    sha256 cellar: :any_skip_relocation, sonoma:        "76303a1eb2314500f19ce1c25db035441e5397a0f5ae3376274074693efaa4d5"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "e694ed3682b39de15428552d229e6e84226c97212d8113461cc5e9ac4c9e1a8d"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "937f53feb55bdcea33e1e2d3708f044d8921e14f4bcbf48bb7a1cbeab12bba73"
   end
 
   depends_on "rust" => :build

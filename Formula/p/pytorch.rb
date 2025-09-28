@@ -103,6 +103,11 @@ class Pytorch < Formula
     # Avoid building AVX512 code
     inreplace "cmake/Modules/FindAVX.cmake", /^CHECK_SSE\(CXX "AVX512"/, "#\\0"
 
+    # Disable SVE support as it requires enabling support in `sleef` formula.
+    # This is not recommended as SLEEF is moving SVE support to unmaintained status:
+    # https://github.com/shibatch/sleef/discussions/673#discussioncomment-12610711
+    inreplace "cmake/Modules/FindARM.cmake", /^\s*CHECK_COMPILES\(CXX "SVE256"/, "#\\0"
+
     # Avoid bundling libomp
     inreplace "setup.py", /^(\s*)self\._embed_libomp\(\)$/, "\\1pass"
 
@@ -136,6 +141,10 @@ class Pytorch < Formula
 
     venv = virtualenv_create(libexec, python3)
     venv.pip_install resources
+
+    # PyTorch needs to pass `-march=armv8.2-a+fp16` to compile runtime detected code
+    ENV.runtime_cpu_detection if OS.linux? && Hardware::CPU.arch == :arm64
+
     venv.pip_install_and_link(buildpath, build_isolation: false)
 
     # Expose C++ API

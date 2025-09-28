@@ -27,7 +27,7 @@ class Deno < Formula
   depends_on "little-cms2"
   depends_on "sqlite" # needs `sqlite3_unlock_notify`
 
-  uses_from_macos "python" => :build, since: :catalina
+  uses_from_macos "python" => :build
   uses_from_macos "libffi"
 
   on_linux do

@@ -10,8 +10,7 @@ class Pciutils < Formula
     sha256 x86_64_linux: "684b1f7d95352c1d14a3a9431c7cccf4e5326e6e80c517d092afd8bd7d860fdf"
   end
 
-  depends_on :linux
-  depends_on "zlib"
+  uses_from_macos "zlib"
 
   def install
     args = ["ZLIB=yes", "DNS=yes", "SHARED=yes", "PREFIX=#{prefix}", "MANDIR=#{man}"]
@@ -21,7 +20,12 @@ class Pciutils < Formula
   end
 
   test do
-    assert_match "lspci version", shell_output("#{bin}/lspci --version")
-    assert_match(/Host bridge:|controller:/, shell_output("#{bin}/lspci"))
+    lspci = (OS.mac? ? sbin : bin)/"lspci"
+    assert_match "lspci version", shell_output("#{lspci} --version")
+    if OS.mac?
+      assert_match "run as root", shell_output("#{lspci} 2>&1", 1)
+    else
+      assert_match(/Host bridge:|controller:/, shell_output(lspci))
+    end
   end
 end

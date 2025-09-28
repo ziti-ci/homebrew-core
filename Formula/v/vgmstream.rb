@@ -1,23 +1,13 @@
 class Vgmstream < Formula
   desc "Library for playing streamed audio formats from video games"
   homepage "https://vgmstream.org"
+  url "https://github.com/vgmstream/vgmstream.git",
+      tag:      "r2055",
+      revision: "f499bf0c8b8d746ab2bd7feebd914d972ef40fec"
+  version "r2055"
   license "ISC"
-  revision 1
   version_scheme 1
   head "https://github.com/vgmstream/vgmstream.git", branch: "master"
-
-  stable do
-    url "https://github.com/vgmstream/vgmstream.git",
-        tag:      "r2023",
-        revision: "f96812ead1560b43ef56d1d388a5f01ed92a8cc0"
-    version "r2023"
-
-    # Backport CMake install support
-    patch do
-      url "https://github.com/vgmstream/vgmstream/commit/e4a00bc710e99c29b6a932ec353d8bc6ba461270.patch?full_index=1"
-      sha256 "9ee47e5b35e571a9241bcab6ebe8ae09ecffde72702cacb82b4e93f765813e0b"
-    end
-  end
 
   livecheck do
     url :stable
@@ -48,13 +38,6 @@ class Vgmstream < Formula
 
   on_macos do
     depends_on "libogg"
-  end
-
-  # Apply open PR to support FFmpeg 8
-  # PR ref: https://github.com/vgmstream/vgmstream/pull/1769
-  patch do
-    url "https://github.com/vgmstream/vgmstream/commit/3e12a08a248cfb06f776b746238ee6ba38369d02.patch?full_index=1"
-    sha256 "4d0eed438f24b0dd8fa217cf261cf8ddb8e7772d63fc51180fe79ddceb6a8914"
   end
 
   def install

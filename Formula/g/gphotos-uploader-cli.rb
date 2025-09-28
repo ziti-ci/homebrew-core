@@ -18,9 +18,11 @@ class GphotosUploaderCli < Formula
   depends_on "go" => :build
 
   def install
+    ENV["CGO_ENABLED"] = "0" if OS.linux? && Hardware::CPU.arm?
+
     ldflags = %W[
-      -X github.com/gphotosuploader/gphotos-uploader-cli/version.versionString=#{version}
       -s -w
+      -X github.com/gphotosuploader/gphotos-uploader-cli/version.versionString=#{version}
     ]
     system "go", "build", *std_go_args(ldflags: ldflags)
   end

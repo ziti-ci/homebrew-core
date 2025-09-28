@@ -17,6 +17,8 @@ class Openapi < Formula
   depends_on "go" => :build
 
   def install
+    ENV["CGO_ENABLED"] = "0" if OS.linux? && Hardware::CPU.arm?
+
     ldflags = %W[
       -s -w
       -X main.version=#{version}

@@ -14,14 +14,12 @@ class PythonAT310 < Formula
   no_autobump! because: :requires_manual_review
 
   bottle do
-    sha256 arm64_tahoe:   "c1434f7a18b7125dcfc6e3f03dd92a029fed820dbcef1bc98dfdec17aeac4e7b"
-    sha256 arm64_sequoia: "f547a93c08bb544535e41f45dc74bf8ff916b79ca1c9c117f17207863508615a"
-    sha256 arm64_sonoma:  "60651e0f85aa0bd918e322452c5cff544fde09eaf34861caedbf8256c75caaea"
-    sha256 arm64_ventura: "1ad823ba8f193ab49a45ce5969cd5e29cfe3c6346919d9085f8f1b24467d14e2"
-    sha256 sonoma:        "bda9f2688968a4fa9f008fd0e4eddfdee7fc0ac806fb7801e94d4d196b16f353"
-    sha256 ventura:       "5e0136baf35143104ea828abb82cc9e92e68c14a8e91f103cb1e4c7df3cf811c"
-    sha256 arm64_linux:   "36a9bd5b217c038bee48f64080f8e7dd2004aac35b64eaf0df2e657352ea74f9"
-    sha256 x86_64_linux:  "0a8406b5b59085c1210784103e53fb13d21fdc52c55703c3200b68aa4d11b455"
+    sha256 arm64_tahoe:   "62b598f9b0c1b0095b968366489a629ea1405b18dbd3b958a43504c72773fe3d"
+    sha256 arm64_sequoia: "6a1b9c999b7d581ccbda91bd8ff743843de5396e815a7836c67609c2ef59f977"
+    sha256 arm64_sonoma:  "f8a0736d1cd4d7629bbe2476d88bc406ca4c401fb87fbf9a1ea0e8aee32f58ea"
+    sha256 sonoma:        "235d572e0af63d43655cde6f8c37d198a488ce633d5060616771f2fcb87ab879"
+    sha256 arm64_linux:   "538dbc18ffc2b156fb9369632c6ba020e6bf141276cc21629f91f595ce177a01"
+    sha256 x86_64_linux:  "29ad21ad2018eb8f3922a9d20f38e9de3cc511c260eb026db2020c885691557f"
   end
 
   # setuptools remembers the build flags python is built with and uses them to

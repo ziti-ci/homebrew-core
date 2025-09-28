@@ -16,6 +16,7 @@ class Cdncheck < Formula
     sha256 cellar: :any_skip_relocation, arm64_sequoia: "c434ba02506fecb1fbe48ed27456a314b8fcfb4e62588a4a6578d2142a2dd004"
     sha256 cellar: :any_skip_relocation, arm64_sonoma:  "c13ce55c9125391c74044b01a4a20fb0f54aec09b41fc60bff50602d26ed90b6"
     sha256 cellar: :any_skip_relocation, sonoma:        "99216e9ed7d6f8d7d37c752803d8492ecee6368651fb35e62bc65e4cd298c7f4"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "c0e96345c84dc477c7f34cf57db3d503ce07f131ad2baebae6d7cb4007385a18"
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "2721b61aad81f062b4647be32dfe5e6610dc186be42906137f75887d306b58d5"
   end
 

@@ -46,9 +46,8 @@ class Luvit < Formula
   # To update this resource, check LUVI_VERSION in
   # https://github.com/luvit/lit/raw/$(LIT_VERSION)/get-lit.sh
   resource "luvi" do
-    url "https://github.com/luvit/luvi.git",
-        tag:      "v2.12.0",
-        revision: "5d1052f11e813ff9edc3ec75b5282b3e6cb0f3bf"
+    url "https://github.com/luvit/luvi/releases/download/v2.12.0/luvi-src-v2.12.0.tar.gz"
+    sha256 "4149c87646f487f9076c29e9861f64468637b1d1361b777b093e6204a83e1ed9"
 
     livecheck do
       url "https://raw.githubusercontent.com/luvit/luvit/#{LATEST_VERSION}/Makefile"
@@ -139,14 +138,17 @@ class Luvit < Formula
 
       system "cmake", "-S", ".", "-B", "build", *luvi_args, *std_cmake_args
       system "cmake", "--build", "build"
-      buildpath.install "build/luvi"
+      bin.install "build/luvi"
     end
+
+    # See "Sharing Luvi Across Apps": https://luvit.io/blog/alpine-luvi.html
+    (buildpath/"luvi").write "#!#{bin}/luvi --\n"
 
     resource("lit").stage do
-      system buildpath/"luvi", ".", "--", "make", ".", buildpath/"lit", buildpath/"luvi"
+      system bin/"luvi", ".", "--", "make", ".", bin/"lit", buildpath/"luvi"
     end
 
-    system "make", "install"
+    system bin/"lit", "make", ".", bin/"luvit", buildpath/"luvi"
   end
 
   test do

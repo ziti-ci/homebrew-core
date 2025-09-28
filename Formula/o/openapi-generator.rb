@@ -13,7 +13,7 @@ class OpenapiGenerator < Formula
   no_autobump! because: :requires_manual_review
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "7b58931c0f506f3d4fc0de1da0a0f9de1d0c8645440d15c455d729784c35c6a7"
+    sha256 cellar: :any_skip_relocation, all: "8768272ef3ff5e0c31ff51f5ea24e25f706a4f855bafb3a7587008cfc529a448"
   end
 
   head do

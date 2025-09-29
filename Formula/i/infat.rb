@@ -1,8 +1,8 @@
 class Infat < Formula
   desc "Tool to set default openers for file formats and url schemes on macOS"
   homepage "https://github.com/philocalyst/infat"
-  url "https://github.com/philocalyst/infat/archive/refs/tags/v3.0.2.tar.gz"
-  sha256 "c744f432ce1a5c91f083ec992024aba5274d67dbc004c42cfbf5e8d8bd73970d"
+  url "https://github.com/philocalyst/infat/archive/refs/tags/v3.0.3.tar.gz"
+  sha256 "116c0064ef15bccd358cc067ed52fefc745c6108854c6516d74c8c77a1ed437f"
   license "MIT"
   head "https://github.com/philocalyst/infat.git", branch: "main"
 

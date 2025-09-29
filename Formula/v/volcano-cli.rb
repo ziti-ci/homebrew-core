@@ -1,8 +1,8 @@
 class VolcanoCli < Formula
   desc "CLI for Volcano, Cloud Native Batch System"
   homepage "https://volcano.sh"
-  url "https://github.com/volcano-sh/volcano/archive/refs/tags/v1.12.2.tar.gz"
-  sha256 "07f89c901336bf9a85c0984c255d4600852f7465de4878bb0d530543bb7dfe97"
+  url "https://github.com/volcano-sh/volcano/archive/refs/tags/v1.13.0.tar.gz"
+  sha256 "1839c3959a05292d741e7e26b0dc33e018acfc818f5a690fa8ccaa8fe847a3d2"
   license "Apache-2.0"
   head "https://github.com/volcano-sh/volcano.git", branch: "master"
 

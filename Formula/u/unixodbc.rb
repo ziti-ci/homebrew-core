@@ -1,17 +1,15 @@
 class Unixodbc < Formula
   desc "ODBC 3 connectivity for UNIX"
   homepage "https://www.unixodbc.org/"
-  url "https://www.unixodbc.org/unixODBC-2.3.12.tar.gz"
-  mirror "https://fossies.org/linux/privat/unixODBC-2.3.12.tar.gz"
-  sha256 "f210501445ce21bf607ba51ef8c125e10e22dffdffec377646462df5f01915ec"
+  url "https://www.unixodbc.org/unixODBC-2.3.13.tar.gz"
+  mirror "https://fossies.org/linux/privat/unixODBC-2.3.13.tar.gz"
+  sha256 "119afef5f4cb04e780ca6cf763265b9fb2b99c4c11349a3f9cab14069d2c7c2b"
   license "LGPL-2.1-or-later"
 
   livecheck do
     url "https://www.unixodbc.org/download.html"
     regex(/href=.*?unixODBC[._-]v?(\d+(?:\.\d+)+)\.t/i)
   end
-
-  no_autobump! because: :requires_manual_review
 
   bottle do
     sha256 arm64_tahoe:    "ba51f9317cd046bb92c785a6976d40509035ebdecad20827b0eff3fd8177c64f"

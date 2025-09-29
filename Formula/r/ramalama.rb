@@ -3,8 +3,8 @@ class Ramalama < Formula
 
   desc "Goal of RamaLama is to make working with AI boring"
   homepage "https://github.com/containers/ramalama"
-  url "https://files.pythonhosted.org/packages/ff/d9/ccd94fabde435a22815485e68d1800bd74b57ccda51cab6528930651bca5/ramalama-0.12.2.tar.gz"
-  sha256 "a1eabbb03e2d5f926a3dfef953fcaaedbc13b58002cda81306b0f9fd1558d915"
+  url "https://files.pythonhosted.org/packages/08/31/e033911fb8c6332b1f935cfa91bfa9a2ece930e9f7150f4f8008eb9b7427/ramalama-0.12.3.tar.gz"
+  sha256 "666ce5a71c8560682a2ec9e83e97597d0d26c201e6b01222ef7d82b46f679ed7"
   license "MIT"
 
   bottle do
@@ -28,8 +28,8 @@ class Ramalama < Formula
   end
 
   resource "pyyaml" do
-    url "https://files.pythonhosted.org/packages/54/ed/79a089b6be93607fa5cdaedf301d7dfb23af5f25c398d5ead2525b063e17/pyyaml-6.0.2.tar.gz"
-    sha256 "d584d9ec91ad65861cc08d42e834324ef890a082e591037abe114850ff7bbc3e"
+    url "https://files.pythonhosted.org/packages/05/8e/961c0007c59b8dd7729d542c61a4d537767a59645b82a0b521206e1e25c2/pyyaml-6.0.3.tar.gz"
+    sha256 "d76623373421df22fb4cf8817020cbb7ef15c725b9d5e45f17e189bfc384190f"
   end
 
   def install

@@ -3,8 +3,8 @@ class Locust < Formula
 
   desc "Scalable user load testing tool written in Python"
   homepage "https://locust.io/"
-  url "https://files.pythonhosted.org/packages/55/13/c331f43b1aa8465a1a0d40b8a6c1afb8a46b871e232e13f4e5c11ca8adfa/locust-2.41.1.tar.gz"
-  sha256 "0e6165d042ac2daaf868c195ad6ade766b70979644903312be4526331c822008"
+  url "https://files.pythonhosted.org/packages/5b/fc/f60a7c924768ec1d25c0f24e6f070f7d634fb08ea4ad9ec7e37b94c579e9/locust-2.41.2.tar.gz"
+  sha256 "16238c09374871c1462f9d6035b8c969ad46f7e88e14c08295ecadd99e0ef90e"
   license "MIT"
 
   bottle do
@@ -113,8 +113,8 @@ class Locust < Formula
   end
 
   resource "markupsafe" do
-    url "https://files.pythonhosted.org/packages/b2/97/5d42485e71dfc078108a86d6de8fa46db44a1a9295e89c5d6d4a06e23a62/markupsafe-3.0.2.tar.gz"
-    sha256 "ee55d3edf80167e48ea11a923c7386f4669df67d7994554387f84e7d8b0a2bf0"
+    url "https://files.pythonhosted.org/packages/7e/99/7690b6d4034fffd95959cbe0c02de8deb3098cc577c67bb6a24fe5d7caa7/markupsafe-3.0.3.tar.gz"
+    sha256 "722695808f4b6457b320fdc131280796bdceb04ab50fe1795cd540799ebe1698"
   end
 
   resource "msgpack" do
@@ -153,8 +153,8 @@ class Locust < Formula
   end
 
   resource "python-engineio" do
-    url "https://files.pythonhosted.org/packages/ba/0b/67295279b66835f9fa7a491650efcd78b20321c127036eef62c11a31e028/python_engineio-4.12.2.tar.gz"
-    sha256 "e7e712ffe1be1f6a05ee5f951e72d434854a32fcfc7f6e4d9d3cae24ec70defa"
+    url "https://files.pythonhosted.org/packages/c9/d8/63e5535ab21dc4998ba1cfe13690ccf122883a38f025dca24d6e56c05eba/python_engineio-4.12.3.tar.gz"
+    sha256 "35633e55ec30915e7fc8f7e34ca8d73ee0c080cec8a8cd04faf2d7396f0a7a7a"
   end
 
   resource "python-socketio" do

@@ -15,6 +15,7 @@ class Luvit < Formula
     sha256 cellar: :any,                 arm64_sequoia: "50c277e8b5c4ac5d75481e09e520a8d119d997d7ab420ab01c5d2e9e700f08a7"
     sha256 cellar: :any,                 arm64_sonoma:  "0ef80abb496d68a40c367126cfc343da468e67161b18f96bd239914166ce5875"
     sha256 cellar: :any,                 sonoma:        "2a28032e61257c09d6282ae24a2e0cd64b97de9279a3337a7966b4cf36afedae"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "8c7531ea1451526770ec5f04853cc6cc1b9a9db3803418bb3d8d5e36000f8456"
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "7c7587270f4a47365d876feb28f09e2be713dea9bf8dd666e019071b93738d2c"
   end
 

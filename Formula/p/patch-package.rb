@@ -6,8 +6,7 @@ class PatchPackage < Formula
   license "MIT"
 
   bottle do
-    rebuild 2
-    sha256 cellar: :any_skip_relocation, all: "5f5aa0acb3f3dbe909a6f06181218d216342a95554c5338ca894657322ca0f31"
+    sha256 cellar: :any_skip_relocation, all: "6bc435f63e2565dd2a21b9502465d52188b934b4e926f1511fe18597d18d50ee"
   end
 
   depends_on "node"

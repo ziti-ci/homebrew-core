@@ -13,6 +13,7 @@ class SarifTools < Formula
     sha256 cellar: :any,                 arm64_sequoia: "cae1b999b0e29e66c7ba6c577cfa7f9405dd981574dea14892cabb8a5aa3fb5f"
     sha256 cellar: :any,                 arm64_sonoma:  "ead245969f50d5a6d09f63031cc48c8c2d6e69a90c12d19c11428c09aa8d17f3"
     sha256 cellar: :any,                 sonoma:        "f32e1d1c881ead6cb40e6883a3e6f248cd84f4b6cc42522219f5ea18e01ce7a5"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "281dea7525242133f5cc22df142cc088b72d1793275971e02cf52618097a1364"
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "e6066bfae92febea5bea073511f8f970c2d51f85e14525e3b51c6ea036d611d6"
   end
 

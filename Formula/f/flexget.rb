@@ -3,8 +3,8 @@ class Flexget < Formula
 
   desc "Multipurpose automation tool for content"
   homepage "https://www.flexget.com"
-  url "https://files.pythonhosted.org/packages/85/78/d34af4c7f14aa6a85b47165d17405a16c330a39fddd910a9427c52b7c1cf/flexget-3.18.11.tar.gz"
-  sha256 "54ba6f9f154a858f4503bf7898ec4f08f59cebad315a68629d66f40059605900"
+  url "https://files.pythonhosted.org/packages/0c/67/0d4de15fbc880f0aae307bdcf7c7f050d4e3cfb065800371c5ddbdc93f55/flexget-3.18.12.tar.gz"
+  sha256 "fc95f67f4aa08badf9700c4ea02d0965f46f428c81739798493d0ae405b248c2"
   license "MIT"
 
   bottle do
@@ -48,8 +48,8 @@ class Flexget < Formula
   end
 
   resource "beautifulsoup4" do
-    url "https://files.pythonhosted.org/packages/85/2e/3e5079847e653b1f6dc647aa24549d68c6addb4c595cc0d902d1b19308ad/beautifulsoup4-4.13.5.tar.gz"
-    sha256 "5e70131382930e7c3de33450a2f54a63d5e4b19386eab43a5b34d594268f3695"
+    url "https://files.pythonhosted.org/packages/77/e9/df2358efd7659577435e2177bfa69cba6c33216681af51a707193dec162a/beautifulsoup4-4.14.2.tar.gz"
+    sha256 "2a98ab9f944a11acee9cc848508ec28d9228abfd522ef0fad6a02a72e0ded69e"
   end
 
   resource "blinker" do
@@ -188,8 +188,8 @@ class Flexget < Formula
   end
 
   resource "markupsafe" do
-    url "https://files.pythonhosted.org/packages/b2/97/5d42485e71dfc078108a86d6de8fa46db44a1a9295e89c5d6d4a06e23a62/markupsafe-3.0.2.tar.gz"
-    sha256 "ee55d3edf80167e48ea11a923c7386f4669df67d7994554387f84e7d8b0a2bf0"
+    url "https://files.pythonhosted.org/packages/7e/99/7690b6d4034fffd95959cbe0c02de8deb3098cc577c67bb6a24fe5d7caa7/markupsafe-3.0.3.tar.gz"
+    sha256 "722695808f4b6457b320fdc131280796bdceb04ab50fe1795cd540799ebe1698"
   end
 
   resource "mdurl" do

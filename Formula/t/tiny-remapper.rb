@@ -12,7 +12,7 @@ class TinyRemapper < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "971ac87b9ad46551ec0fa6c3ff9a91d53a904bde4ec6a8835076f604898730a5"
+    sha256 cellar: :any_skip_relocation, all: "e39e2271aec7554aaf75991751431639c7bad8cca90cff913a9795f37279a27b"
   end
 
   depends_on "openjdk@21"

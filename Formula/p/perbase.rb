@@ -31,6 +31,7 @@ class Perbase < Formula
     sha256 cellar: :any_skip_relocation, arm64_sequoia: "6381d9e4d8d9c0bf641a3c0584c8a6bce0915afe9eaf27a373a835222fbc0174"
     sha256 cellar: :any_skip_relocation, arm64_sonoma:  "80c024e6e5ef7a68dc49aff72115ed37123c19d145ec9b629b84fda0a3dd64b5"
     sha256 cellar: :any_skip_relocation, sonoma:        "aca50eabad6b23d04cc9cf0cfb499dd80ceba95407039e389ec5c2bbca9c70c7"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "48658dda19de513ad974dc716dc990aede00119881703453d584692f29d31c34"
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "070c89be5fd7eab9c163694a9f705fa7891dbe59168bd1f33327627c94e2f52f"
   end
 

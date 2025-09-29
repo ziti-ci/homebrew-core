@@ -21,6 +21,7 @@ class Pytorch < Formula
     sha256 cellar: :any, arm64_sequoia: "3175432af2e446829b52f87cc8a83775952723d7c4e14a468150fddd6b006375"
     sha256 cellar: :any, arm64_sonoma:  "236853bcf5fb02e1bdc67d553a901fd0de4e1cd261daccf93ce41b18adf64b60"
     sha256 cellar: :any, sonoma:        "d66b647559e161462eee604e6bfc6cc5de331f664797b254b4b72fcd0260d4f4"
+    sha256               arm64_linux:   "6eb0f90e3e53baa0dfd772d2a4c237195df083ac2370e076709412359f59cb12"
     sha256               x86_64_linux:  "1bff36a2253b3fef02a583e7c6f6cf43b5ebb9465b8eab7c69f77d5b0f1a1adc"
   end
 

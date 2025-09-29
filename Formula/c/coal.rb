@@ -1,10 +1,9 @@
 class Coal < Formula
   desc "Extension of the Flexible Collision Library"
   homepage "https://github.com/coal-library/coal"
-  url "https://github.com/coal-library/coal/releases/download/v3.0.1/coal-3.0.1.tar.gz"
-  sha256 "b9609301baefbbf45b4e0f80865abc2b2dcbb69c323a55b0cd95f141959c478c"
+  url "https://github.com/coal-library/coal/releases/download/v3.0.2/coal-3.0.2.tar.gz"
+  sha256 "899eb343ee7d86ae6312401bc969d1d2cb8103a5a67af5e1f06061a9c5fb0743"
   license "BSD-2-Clause"
-  revision 3
   head "https://github.com/coal-library/coal.git", branch: "devel"
 
   livecheck do
@@ -73,10 +72,10 @@ end
 
 __END__
 diff --git a/CMakeLists.txt b/CMakeLists.txt
-index 4036e3c1..11b6b8d8 100644
+index ec28225..cdbcddc 100644
 --- a/CMakeLists.txt
 +++ b/CMakeLists.txt
-@@ -151,7 +151,7 @@ if (COAL_ENABLE_LOGGING)
+@@ -167,7 +167,7 @@ if(COAL_ENABLE_LOGGING)
    ADD_PROJECT_DEPENDENCY(Boost REQUIRED log)
  endif()
  if(BUILD_PYTHON_INTERFACE)
@@ -85,16 +84,3 @@ index 4036e3c1..11b6b8d8 100644
  endif(BUILD_PYTHON_INTERFACE)
  
  if(Boost_VERSION_STRING VERSION_LESS 1.81)
-diff --git a/python/CMakeLists.txt b/python/CMakeLists.txt
-index 38b98031..8107bf7d 100644
---- a/python/CMakeLists.txt
-+++ b/python/CMakeLists.txt
-@@ -143,7 +143,7 @@ ENDIF()
- TARGET_LINK_LIBRARIES(${PYTHON_LIB_NAME} PUBLIC
-   ${PROJECT_NAME}
-   eigenpy::eigenpy
--  Boost::system)
-+  )
- 
- SET_TARGET_PROPERTIES(${PYTHON_LIB_NAME} PROPERTIES
-   PREFIX ""

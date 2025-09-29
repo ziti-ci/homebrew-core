@@ -54,6 +54,7 @@ class Glibc < Formula
   end
 
   bottle do
+    sha256 arm64_linux:  "d62fe7730aa45aaaa6e0f3d61c12265c3f064c19acf0cee125caf505169b9c6d"
     sha256 x86_64_linux: "e462d46c498dd1ba590b11eab0f21901bc6ae2a3fac3a9fd2c730e2da7a62c8e"
   end
 

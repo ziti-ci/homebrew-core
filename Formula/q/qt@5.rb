@@ -319,6 +319,9 @@ class QtAT5 < Formula
         -webengine-webp
       ]
 
+      # Chromium in QtWebEngine needs hardware CRC32 support via `-march=armv8-a+crc`
+      ENV.runtime_cpu_detection if Hardware::CPU.arm?
+
       # Homebrew-specific workaround to ignore spurious linker warnings on Linux.
       inreplace "qtwebengine/src/3rdparty/chromium/build/config/compiler/BUILD.gn",
                 "fatal_linker_warnings = true",

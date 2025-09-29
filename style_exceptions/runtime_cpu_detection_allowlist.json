@@ -39,6 +39,7 @@
   "postgresql@18",
   "pytorch",
   "qt",
+  "qt@5",
   "spades",
   "spidermonkey",
   "svt-av1",

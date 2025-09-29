@@ -1,8 +1,8 @@
 class Mailpit < Formula
   desc "Web and API based SMTP testing"
   homepage "https://mailpit.axllent.org/"
-  url "https://github.com/axllent/mailpit/archive/refs/tags/v1.27.8.tar.gz"
-  sha256 "18e9aa228bb7074338f5ed6153c874ee0dff722893cf5f5f1134682ab00dc665"
+  url "https://github.com/axllent/mailpit/archive/refs/tags/v1.27.9.tar.gz"
+  sha256 "273bb0ed1f7ac3976c48d6e430c61740527799c036f37e1a6c698b1d7ac17c17"
   license "MIT"
 
   bottle do

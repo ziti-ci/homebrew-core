@@ -7,11 +7,11 @@ class VolcanoCli < Formula
   head "https://github.com/volcano-sh/volcano.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "c53f37770607b291e27208ac6f198b2dae8992844f0cb6600536433ca14c0b31"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "c53f37770607b291e27208ac6f198b2dae8992844f0cb6600536433ca14c0b31"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "c53f37770607b291e27208ac6f198b2dae8992844f0cb6600536433ca14c0b31"
-    sha256 cellar: :any_skip_relocation, sonoma:        "ebc76d8f9950fb6a058938a16ba38933a68128e5876fb3c02b75da4a9c92271b"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "9b731773aae2fbeb438e46c8389c5c3c4ea7de29eccb50dac7d569bb6075405e"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "d753db4b00bd45c2420176535394cdbfe05aa8cfdf9c7bfe7d5921cf40557e9c"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "aa4b9505f24d04917a6f03276e47411dcd4560629b739f13b201e668028d7452"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "b6b2364981682f4eabcda333112dae9209295536994d7223119629e6b09bbaa9"
+    sha256 cellar: :any_skip_relocation, sonoma:        "0d67f7ed570525b1eaad996edbde306095182fa3c85916c3605c6791456cac3e"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "e2d068ecba92dbdfeccc8baeadaa348e8543a24d3d34874b67051a7f01e57da4"
   end
 
   depends_on "go" => :build

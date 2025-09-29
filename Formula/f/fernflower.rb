@@ -11,6 +11,10 @@ class Fernflower < Formula
     regex(%r{<version>v?(\d+(?:\.\d+)+)</version>}i)
   end
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "c731da3b1e98202d054109812e008fe40b2936e753d7f19b39658441ee824468"
+  end
+
   depends_on "openjdk"
 
   def install

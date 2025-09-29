@@ -17,7 +17,7 @@ class Lakekeeper < Formula
 
   depends_on "cmake" => :build
   depends_on "rust" => :build
-  depends_on "postgresql@17" => :test
+  depends_on "postgresql@18" => :test
   depends_on "openssl@3"
 
   def install
@@ -31,7 +31,7 @@ class Lakekeeper < Formula
   test do
     ENV["LC_ALL"] = "C"
 
-    postgresql = Formula["postgresql@17"]
+    postgresql = Formula["postgresql@18"]
     pg_ctl = postgresql.opt_bin/"pg_ctl"
     port = free_port
 

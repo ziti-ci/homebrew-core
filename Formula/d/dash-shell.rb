@@ -1,8 +1,8 @@
 class DashShell < Formula
   desc "POSIX-compliant descendant of NetBSD's ash (the Almquist SHell)"
   homepage "http://gondor.apana.org.au/~herbert/dash/"
-  url "http://gondor.apana.org.au/~herbert/dash/files/dash-0.5.12.tar.gz"
-  sha256 "6a474ac46e8b0b32916c4c60df694c82058d3297d8b385b74508030ca4a8f28a"
+  url "http://gondor.apana.org.au/~herbert/dash/files/dash-0.5.13.tar.gz"
+  sha256 "fd8da121e306b27f59330613417b182b8844f11e269531cc4720bf523e3e06d7"
   license "BSD-3-Clause"
   head "https://git.kernel.org/pub/scm/utils/dash/dash.git", branch: "master"
 
@@ -10,8 +10,6 @@ class DashShell < Formula
     url "http://gondor.apana.org.au/~herbert/dash/files/"
     regex(/href=.*?dash[._-]v?(\d+(?:\.\d+)+)\.t/i)
   end
-
-  no_autobump! because: :requires_manual_review
 
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_tahoe:   "bb6b395b28022caed67497213f483589256a9c9d3a818bd277ab2caa699ab1b4"

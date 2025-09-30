@@ -1,8 +1,8 @@
 class Pulsarctl < Formula
   desc "CLI for Apache Pulsar written in Go"
   homepage "https://streamnative.io/"
-  url "https://github.com/streamnative/pulsarctl/archive/refs/tags/v4.1.0.2.tar.gz"
-  sha256 "9f75f3ba53711ebbcc0a0ddd7042ab295b8570c97d50c50b643fb3bc16b89014"
+  url "https://github.com/streamnative/pulsarctl/archive/refs/tags/v4.1.0.3.tar.gz"
+  sha256 "7a300770c67468762aafab5bfb6f35c1cb899508c896d6fcf4d9c5d242ce01b9"
   license "Apache-2.0"
   head "https://github.com/streamnative/pulsarctl.git", branch: "master"
 

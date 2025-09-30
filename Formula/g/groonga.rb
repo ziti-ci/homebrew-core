@@ -1,8 +1,8 @@
 class Groonga < Formula
   desc "Fulltext search engine and column store"
   homepage "https://groonga.org/"
-  url "https://github.com/groonga/groonga/releases/download/v15.1.5/groonga-15.1.5.tar.gz"
-  sha256 "7513bd4014022152651613598d5670a221087ac201ae46563523b0ce090e9e46"
+  url "https://github.com/groonga/groonga/releases/download/v15.1.7/groonga-15.1.7.tar.gz"
+  sha256 "899a414a0636f7568d1a11845fe3dd75b701f72106a7a26f30bc950af5876616"
   license "LGPL-2.1-or-later"
 
   livecheck do
@@ -47,8 +47,8 @@ class Groonga < Formula
   link_overwrite "lib/pkgconfig/groonga-normalizer-mysql.pc"
 
   resource "groonga-normalizer-mysql" do
-    url "https://github.com/groonga/groonga-normalizer-mysql/releases/download/v1.2.6/groonga-normalizer-mysql-1.2.6.tar.gz"
-    sha256 "f85b49d24f4f4559cb1c0479dcb945a6fa0571390f40aeff38bff8e8f5e84157"
+    url "https://github.com/groonga/groonga-normalizer-mysql/releases/download/v1.2.9/groonga-normalizer-mysql-1.2.9.tar.gz"
+    sha256 "153a2d814d25ae483e92541b538d468555e6fbe2c114d378adbdef6c95ab24d2"
   end
 
   def install

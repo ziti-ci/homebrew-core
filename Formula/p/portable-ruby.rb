@@ -13,6 +13,13 @@ class PortableRuby < PortableFormula
     regex(/href=.*?ruby[._-]v?(\d+\.\d+\.(?:(?!0)\d+)(?:\.\d+)*)\.t/i)
   end
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "695bdce688efbfb42c7087081d1d3e9b360383a68f518f09d5b2e7b1a94732c3"
+    sha256 cellar: :any_skip_relocation, catalina:      "0dd90decb87cf7e1060806536f132187d958410ffa307b23a66b5954c1cf894f"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "bbfaf0e8c22fb545ef914120a6e55b981889c611e97943c728c4974cb9cdf512"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "4fda7484ee4de45e40cedd46837622d98f2ae80481ea04935740177d58bbefdc"
+  end
+
   depends_on "pkgconf" => :build
   depends_on "portable-libyaml" => :build
   depends_on "portable-openssl" => :build

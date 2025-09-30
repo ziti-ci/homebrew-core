@@ -35,33 +35,17 @@ class IncludeWhatYouUse < Formula
   end
 
   def install
-    # FIXME: CMake stripped out our `llvm` rpath; work around that.
+    resource_dir = Utils.safe_popen_read(llvm.opt_bin/"clang", "-print-resource-dir").chomp
+    resource_dir.sub! llvm.prefix.realpath, llvm.opt_prefix
+
     args = %W[
-      -DCMAKE_INSTALL_RPATH=#{rpath(source: libexec/"bin", target: llvm.opt_lib)}
+      -DIWYU_RESOURCE_RELATIVE_TO=iwyu
+      -DIWYU_RESOURCE_DIR=#{Pathname(resource_dir).relative_path_from(bin)}
     ]
 
-    # We do not want to symlink clang or libc++ headers into HOMEBREW_PREFIX,
-    # so install to libexec to ensure that the resource path, which is always
-    # computed relative to the location of the include-what-you-use executable
-    # and is not configurable, is also located under libexec.
-    system "cmake", "-S", ".", "-B", "build", *std_cmake_args(install_prefix: libexec), *args
+    system "cmake", "-S", ".", "-B", "build", *args, *std_cmake_args
     system "cmake", "--build", "build"
     system "cmake", "--install", "build"
-
-    bin.write_exec_script libexec.glob("bin/*")
-    man1.install_symlink libexec.glob("share/man/man1/*")
-
-    # include-what-you-use needs a copy of the clang and libc++ headers to be
-    # located in specific folders under its resource path. These may need to be
-    # updated when new major versions of llvm are released, i.e., by
-    # incrementing the version of include-what-you-use or the revision of this
-    # formula. This would be indicated by include-what-you-use failing to
-    # locate stddef.h and/or stdlib.h when running the test block below.
-    # https://clang.llvm.org/docs/LibTooling.html#libtooling-builtin-includes
-    (libexec/"lib").mkpath
-    ln_sf (llvm.opt_lib/"clang").relative_path_from(libexec/"lib"), libexec/"lib"
-    (libexec/"include").mkpath
-    ln_sf (llvm.opt_include/"c++").relative_path_from(libexec/"include"), libexec/"include"
   end
 
   test do

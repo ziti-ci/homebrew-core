@@ -1,10 +1,9 @@
 class Openvdb < Formula
   desc "Sparse volumetric data processing toolkit"
   homepage "https://www.openvdb.org/"
-  url "https://github.com/AcademySoftwareFoundation/openvdb/archive/refs/tags/v12.1.0.tar.gz"
-  sha256 "ebb9652ad1d67274e2c85e6736cced5f04e313c5671ae1ae548f174cc76e9e64"
+  url "https://github.com/AcademySoftwareFoundation/openvdb/archive/refs/tags/v12.1.1.tar.gz"
+  sha256 "ccd0ea1669a53c7c13087a08ac5a1351041c4cdd308f6d6f591074a106fcb565"
   license "MPL-2.0"
-  revision 1
   head "https://github.com/AcademySoftwareFoundation/openvdb.git", branch: "master"
 
   bottle do

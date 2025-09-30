@@ -7,11 +7,11 @@ class Openfga < Formula
   head "https://github.com/openfga/openfga.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "f3f011031399b098d16488a3d613d7189f14f505c101979ba0c90efeabb9337d"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "d691a8ebe7ada32a9a1668638f31a92e2ed4593b83c752fcb4e87b67d1696a4f"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "008c86061f7b82f7bc8749d7ae1a8a565075c860bde29fddb290bcdb45738ce0"
-    sha256 cellar: :any_skip_relocation, sonoma:        "5973957e4bf06be1cc5b824c4d7b3be03de9f961e776170bd4ae0a9f7ab938d4"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "20b4964e75295cae85a2d9f609aa92caebaa307e303551ea470c0ef748884ccc"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "164cea839aa2b48dc80c95671cf0c469195f68688debbd7f2138ee09f44c6b11"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "da1efec8407bf629c04d16154819810dd68ab88a0fc3a6fca97859594efe3ed3"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "efb22e406fa91a35051bd7037049361ec73f9f1b00cd2fcacb9c01887bcc7fcb"
+    sha256 cellar: :any_skip_relocation, sonoma:        "b71e90ff565a321cb60c008e26378f7d341d4f71ea23460794b5cd67384fcfa5"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "68580fdec1549e38133c056ae0e4480197db82d0266994631ee4ba478919805e"
   end
 
   depends_on "go" => :build

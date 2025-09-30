@@ -1,8 +1,8 @@
 class Jackett < Formula
   desc "API Support for your favorite torrent trackers"
   homepage "https://github.com/Jackett/Jackett"
-  url "https://github.com/Jackett/Jackett/archive/refs/tags/v0.23.87.tar.gz"
-  sha256 "8d61bba5912d583b73c348681419423875e69752db0b4cff63b91e655180e93e"
+  url "https://github.com/Jackett/Jackett/archive/refs/tags/v0.24.7.tar.gz"
+  sha256 "518151516f652dbb28246e201725072f844b8a0098ca260ae99b880bca979b3b"
   license "GPL-2.0-only"
   head "https://github.com/Jackett/Jackett.git", branch: "master"
 
@@ -14,13 +14,13 @@ class Jackett < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "4c795007fffb362746bf972d761bd6dc785634f124584a9051179f48f2ad3c6b"
   end
 
-  depends_on "dotnet@8"
+  depends_on "dotnet"
 
   def install
     ENV["DOTNET_CLI_TELEMETRY_OPTOUT"] = "1"
     ENV["DOTNET_SYSTEM_GLOBALIZATION_INVARIANT"] = "1"
 
-    dotnet = Formula["dotnet@8"]
+    dotnet = Formula["dotnet"]
 
     args = %W[
       --configuration Release

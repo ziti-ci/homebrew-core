@@ -5,6 +5,10 @@ class PlaywrightMcp < Formula
   sha256 "c906bc8b1fe534196c3d6d022e81ed045113993edc3db6d0c3f4450adf269523"
   license "Apache-2.0"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "673d8bfca2a315efce67b63e247ef51fcb41bdced4eae241c7ca38f103a7bcbf"
+  end
+
   depends_on "node"
 
   def install

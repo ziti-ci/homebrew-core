@@ -1,8 +1,8 @@
 class Render < Formula
   desc "Command-line interface for Render"
   homepage "https://render.com/docs/cli"
-  url "https://github.com/render-oss/cli/archive/refs/tags/v2.3.0.tar.gz"
-  sha256 "1daaecb12aa858c001bd28277c0c390e2fe5092bb3e6189c91029aae2ae8efb8"
+  url "https://github.com/render-oss/cli/archive/refs/tags/v2.4.0.tar.gz"
+  sha256 "d261865647708509e8bd32a99e3ef4cda635b38c39f23665b0f62d6a3bb81f43"
   license "Apache-2.0"
   head "https://github.com/render-oss/cli.git", branch: "main"
 
@@ -25,7 +25,9 @@ class Render < Formula
   end
 
   test do
-    error_msg = "Error: run `render login` to authenticate"
-    assert_match error_msg, shell_output("#{bin}/render services -o json 2>&1", 1)
+    assert_match version.to_s, shell_output("#{bin}/render --version")
+
+    output = shell_output("#{bin}/render services -o json 2>&1", 1)
+    assert_match "Error: no workspace set. Use `render workspace set` to set a workspace", output
   end
 end

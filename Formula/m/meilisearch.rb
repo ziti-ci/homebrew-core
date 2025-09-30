@@ -13,6 +13,8 @@ class Meilisearch < Formula
     strategy :github_latest
   end
 
+  no_autobump! because: :bumped_by_upstream
+
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_tahoe:   "841f096e70d2270e9a317e5d7c1e19a636c7e3aa3b3c9de49dd27a3392858e8e"
     sha256 cellar: :any_skip_relocation, arm64_sequoia: "749923b3a193d318ef09a50bfe2a71d2e2496c5e1773972c57b59f67989d32bf"

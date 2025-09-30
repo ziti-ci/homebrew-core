@@ -4,6 +4,7 @@ class IncludeWhatYouUse < Formula
   url "https://include-what-you-use.org/downloads/include-what-you-use-0.25.src.tar.gz"
   sha256 "be81f9d5498881462465060ddc28b587c01254255c706d397d1a494d69eb5efd"
   license "NCSA"
+  revision 1
   head "https://github.com/include-what-you-use/include-what-you-use.git", branch: "master"
 
   # This omits the 3.3, 3.4, and 3.5 versions, which come from the older
@@ -16,12 +17,12 @@ class IncludeWhatYouUse < Formula
   end
 
   bottle do
-    sha256 arm64_tahoe:   "98c00c4267b68a7d1d7650cefdd41d3f14946f689f544c150684ba94044c4176"
-    sha256 arm64_sequoia: "e7796887269100ce17a7fd7f1f2d7d3a21a2400bf139930316783aaae3279a91"
-    sha256 arm64_sonoma:  "4413bdbe8dad5c421d4c73129d35a505ea82e2c667888f94477a9e60cec06ba6"
-    sha256 sonoma:        "2e9b3c08f005502a54aa1423710b48365aacc26425bae1c323ea160155824c09"
-    sha256 arm64_linux:   "2e4362a4b9969a76fe629ea7652c26905539643992e0b72312f95f1267f6d538"
-    sha256 x86_64_linux:  "1acf1c3309c6ac3e4730fe8c691fb80fb5191b6e2d0cad5132359895e148f13a"
+    sha256 arm64_tahoe:   "10a8ad73f9ff5ec579d6a85632d53b211365f8cd63b66e07185ce7f79cced1f5"
+    sha256 arm64_sequoia: "5cee946e76fcfc0c7e548bf6c75e19dd19cc9f5b53ba2abb49b84b497d31e93c"
+    sha256 arm64_sonoma:  "961a8e076d193d1023a186eb27cee0f0780d708f8671e14085105f8421506ec2"
+    sha256 sonoma:        "95746df4c95222659e3ad8cd70884edbc2ab73e07f3a7f8feefa90d9dec8df72"
+    sha256 arm64_linux:   "03d4580685dcfa37e09e6c826fe0550d763da0f3ed588f316e8d3ec83c67661f"
+    sha256 x86_64_linux:  "8087d239e4bf1081bf8dd0c789218bef524fcb867577a0c805218af9a28b8f55"
   end
 
   depends_on "cmake" => :build

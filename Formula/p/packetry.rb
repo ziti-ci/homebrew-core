@@ -5,8 +5,6 @@ class Packetry < Formula
   sha256 "158cd25536c6d4feab2b9e76fcbb4174fdb2fd6fb1c309775a3b2efbe84db33b"
   license "BSD-3-Clause"
 
-  no_autobump! because: :requires_manual_review
-
   bottle do
     sha256 cellar: :any,                 arm64_tahoe:   "7b44a327337008bac85d41e08c6c01d443ec193d25671791275bb846fbb49a98"
     sha256 cellar: :any,                 arm64_sequoia: "96b22357843f520ea804060b1a2016ca1597d2944bd9ba421ee18cb4400aed5f"

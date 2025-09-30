@@ -12,7 +12,7 @@ class Logtalk < Formula
     regex(/Latest stable version:.*?v?(\d+(?:\.\d+)+)/i)
   end
 
-  no_autobump! because: :requires_manual_review
+  no_autobump! because: :bumped_by_upstream
 
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_tahoe:   "b8d1adc6b8dad0f9e778bbec53705202dea06b84105c501ad53979bc2140cd29"

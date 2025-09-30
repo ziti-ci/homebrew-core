@@ -10,6 +10,8 @@ class Unciv < Formula
     regex(/^v?(\d+(?:\.\d+)+(?:[._-]?patch\d*)?)$/i)
   end
 
+  no_autobump! because: :bumped_by_upstream
+
   bottle do
     sha256 cellar: :any_skip_relocation, all: "65d683fb47f383768046cf27b8122ca9eb79952db26e05cce2fe30e63985b259"
   end

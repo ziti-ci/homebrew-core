@@ -5,7 +5,7 @@ class PhraseCli < Formula
   sha256 "407ae4113852e949ab7418d515879bfd71beec58739a01355f6c631fa0dcb1c7"
   license "MIT"
 
-  no_autobump! because: :requires_manual_review
+  no_autobump! because: :bumped_by_upstream
 
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_tahoe:   "0e9852fd561d87376838c75b1b002e6013a4ee28b82a02a3f7dfda9d5af7f350"

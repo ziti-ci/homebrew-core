@@ -3,8 +3,8 @@ class Copyparty < Formula
 
   desc "Portable file server"
   homepage "https://github.com/9001/copyparty"
-  url "https://files.pythonhosted.org/packages/61/f0/6a892f89fba128cbf1b2c212ef11c11b2d60c57d5ad0eadfaae839fe6fbe/copyparty-1.19.14.tar.gz"
-  sha256 "836f726041253470c4a5401e7f4b750a92158feba4e17072182ebfa00932e325"
+  url "https://files.pythonhosted.org/packages/bc/46/f4875c1848d6cf60fdc02d09903ce34732af64033603eb76d8314da3429e/copyparty-1.19.15.tar.gz"
+  sha256 "4bf61c00b9ea438cd44c86dfa90c08bb34822902b0f694177f7b5027e2be5437"
   license "MIT"
 
   bottle do
@@ -45,8 +45,8 @@ class Copyparty < Formula
   end
 
   resource "markupsafe" do
-    url "https://files.pythonhosted.org/packages/b2/97/5d42485e71dfc078108a86d6de8fa46db44a1a9295e89c5d6d4a06e23a62/markupsafe-3.0.2.tar.gz"
-    sha256 "ee55d3edf80167e48ea11a923c7386f4669df67d7994554387f84e7d8b0a2bf0"
+    url "https://files.pythonhosted.org/packages/7e/99/7690b6d4034fffd95959cbe0c02de8deb3098cc577c67bb6a24fe5d7caa7/markupsafe-3.0.3.tar.gz"
+    sha256 "722695808f4b6457b320fdc131280796bdceb04ab50fe1795cd540799ebe1698"
   end
 
   resource "mutagen" do
@@ -70,8 +70,8 @@ class Copyparty < Formula
   end
 
   resource "pyftpdlib" do
-    url "https://files.pythonhosted.org/packages/b4/0c/32bf0a7c88efe147bc3bc6586216d92269d196c59f149b05efa973834946/pyftpdlib-2.0.1.tar.gz"
-    sha256 "ef0d172a82bfae10e2dec222e87533514609d41bf4b0fd0f07e29d4380fb96bf"
+    url "https://files.pythonhosted.org/packages/fc/67/3299ce20585601d21e05153eb9275cb799ae408fe15ab93e48e4582ea9fe/pyftpdlib-2.1.0.tar.gz"
+    sha256 "5e92e7ba37c3e458ec458e5c201e2deb992cb6011c963e6a8512a634d8d80116"
   end
 
   resource "pyopenssl" do

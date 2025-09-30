@@ -1,8 +1,8 @@
 class Chaoskube < Formula
   desc "Periodically kills random pods in your Kubernetes cluster"
   homepage "https://github.com/linki/chaoskube"
-  url "https://github.com/linki/chaoskube/archive/refs/tags/v0.36.0.tar.gz"
-  sha256 "07cbded64e66f61452b01ae3a11f5c6192bf160d740580a504d39eb423597a8e"
+  url "https://github.com/linki/chaoskube/archive/refs/tags/v0.37.0.tar.gz"
+  sha256 "ee2db89df0136c86997aa867951010e901f59273d840ed43a826d4d5fd89bd9d"
   license "MIT"
   head "https://github.com/linki/chaoskube.git", branch: "master"
 

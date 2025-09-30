@@ -1,8 +1,8 @@
 class WhisperCpp < Formula
   desc "Port of OpenAI's Whisper model in C/C++"
   homepage "https://github.com/ggml-org/whisper.cpp"
-  url "https://github.com/ggml-org/whisper.cpp/archive/refs/tags/v1.7.6.tar.gz"
-  sha256 "166140e9a6d8a36f787a2bd77f8f44dd64874f12dd8359ff7c1f4f9acb86202e"
+  url "https://github.com/ggml-org/whisper.cpp/archive/refs/tags/v1.8.0.tar.gz"
+  sha256 "c006a5e472ee41e7a733d0bf7326e339c8b281d3a91a1c8a35468fa0a051940f"
   license "MIT"
   head "https://github.com/ggml-org/whisper.cpp.git", branch: "master"
 
@@ -49,17 +49,6 @@ class WhisperCpp < Formula
     # Expose executables and pkgconfig files
     bin.install_symlink libexec.glob("bin/*")
     (lib/"pkgconfig").install_symlink libexec.glob("lib/pkgconfig/*")
-
-    # for backward compatibility with existing installs
-    odie "Remove whisper-cpp script and libinternal" if build.stable? && version >= "1.8.0"
-    prefix.install_symlink libexec/"lib" => "libinternal"
-    (bin/"whisper-cpp").write <<~SHELL
-      #!/bin/bash
-      here="${BASH_SOURCE[0]}"
-      echo "warning: whisper-cpp is deprecated. Use whisper-cli instead." >&2
-      echo "warning: the compatibility script will be removed in 1.8.0." >&2
-      exec "$(dirname "$here")/whisper-cli" "$@"
-    SHELL
 
     pkgshare.install "models/for-tests-ggml-tiny.bin", "samples/jfk.wav"
   end

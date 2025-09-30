@@ -7,12 +7,12 @@ class McpPublisher < Formula
   head "https://github.com/modelcontextprotocol/registry.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "65d6bfc284ae7a484dbe511f4ff0df2d04eb84bbf768de34b592c4246b0d43c7"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "65d6bfc284ae7a484dbe511f4ff0df2d04eb84bbf768de34b592c4246b0d43c7"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "65d6bfc284ae7a484dbe511f4ff0df2d04eb84bbf768de34b592c4246b0d43c7"
-    sha256 cellar: :any_skip_relocation, sonoma:        "8e802b3149f966f99f905f5644fae37ceabb7c2e8a3c24cf4d07bb636bb6657e"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "cf01a889fb53632ca1956ba7821cb33d863c07bf161c0a356c439b12028603d5"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "61962de27dfe8bc18f72bb31e0360740b77ced7b784f8e61ac9fcb9cdcebf22e"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "06c9e5b234f36a2f3aa6cd838fb11ef319e4fe32fb50a74a9b2e821f9bc1db85"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "06c9e5b234f36a2f3aa6cd838fb11ef319e4fe32fb50a74a9b2e821f9bc1db85"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "06c9e5b234f36a2f3aa6cd838fb11ef319e4fe32fb50a74a9b2e821f9bc1db85"
+    sha256 cellar: :any_skip_relocation, sonoma:        "ad5e18a0941a163b90ec41c759016177fd99ef4421cda092867c6578a3d15e54"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "5103e475785bff1d39afaff1c001af6d01e001a18ea5439542559bdfba9589a5"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "171fbf9c9b671a63cbe5b1819e038fd5d5e121d631f306a3e24fc4be293b5014"
   end
 
   depends_on "go" => :build

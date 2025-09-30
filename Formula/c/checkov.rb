@@ -385,8 +385,8 @@ class Checkov < Formula
   end
 
   resource "rustworkx" do
-    url "https://github.com/Qiskit/rustworkx/archive/refs/tags/0.17.1.tar.gz"
-    sha256 "dc248da9cc364b81ac67f5d67b626ee3f03a1f6299f7a9b4d0a0501548715365"
+    url "https://files.pythonhosted.org/packages/e7/b0/66d96f02120f79eeed86b5c5be04029b6821155f31ed4907a4e9f1460671/rustworkx-0.17.1.tar.gz"
+    sha256 "59ea01b4e603daffa4e8827316c1641eef18ae9032f0b1b14aa0181687e3108e"
   end
 
   resource "s3transfer" do

@@ -5,6 +5,10 @@ class SalesforceMcp < Formula
   sha256 "d88184d8b1f359742b094e864b472f30819425a9a65c2624418fc6486c3ea2ec"
   license "Apache-2.0"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "b39eff02885a2fb552d5de8bedee0809e8945286943e24a2dce07e067c28cc07"
+  end
+
   depends_on "node"
 
   def install

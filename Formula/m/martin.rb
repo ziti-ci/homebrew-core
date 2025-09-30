@@ -1,9 +1,14 @@
 class Martin < Formula
   desc "Blazing fast tile server, tile generation, and mbtiles tooling"
   homepage "https://martin.maplibre.org"
-  url "https://github.com/maplibre/martin/archive/refs/tags/v0.18.1.tar.gz"
-  sha256 "44ce3c98b44cec0dc6526843d2f7868de54f89aed128316fc9e7044734b1a111"
+  url "https://github.com/maplibre/martin/archive/refs/tags/martin-v0.19.2.tar.gz"
+  sha256 "9dbe9dc4793b04c75f55145712eaf0619f7f282e620898ad896800461890809a"
   license any_of: ["Apache-2.0", "MIT"]
+
+  livecheck do
+    url :stable
+    regex(/^martin[._-]v?(\d+(?:\.\d+)+)$/i)
+  end
 
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_tahoe:   "11b453a57cbf3d5ee140846b9e2199af451c31c984e755d8ff5c1dc324e79703"

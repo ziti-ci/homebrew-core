@@ -6,11 +6,11 @@ class Fastbuild < Formula
   license "Zlib"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "c735d2c226ba2c3bbb273dc035f7d8d9b3e7aa209198a1fa4db81fa3bd65122d"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "9ca94517ee24158641169349e1289389c632dbe8f55fe397eb54704cbd966309"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "e9a48e0877e59ed375a4372a237fced65eff22269511616a34a02e31f00fabfe"
-    sha256 cellar: :any_skip_relocation, sonoma:        "e110cef52315db96a890215546ad3c20a47660b422f546c3333906cbeb4d4688"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "175cca470c1bbe7ba1184e8e31882b4714d56ef5c124d631e916cfe8e0c61fda"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "cbd9879162332115fa642eeb6273dd839b520fce75914d69bd7ab1f0cd221c9f"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "86e73216872ed41517e67d7f7abc234941ea7390c3c46bc7cd932e52932a6e50"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "b900fd9ba72673b94996abd308564e572f571828a892060435ab4239ba86bd15"
+    sha256 cellar: :any_skip_relocation, sonoma:        "22e1f8b3227cd461b7d63671960e51945e629712bf0bafc549796348ad44b92c"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "ccbdc2d506a0cdda24d4168923396570a3f29881fc76c4e863ad8bb86d903fa3"
   end
 
   on_linux do

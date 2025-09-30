@@ -6,7 +6,7 @@ class Ni < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "ca32fff8d3760df311a4a15a86ef1d706bc445c9c656d2427662264c556b72c8"
+    sha256 cellar: :any_skip_relocation, all: "c49cb77329ee79a52c3985ebf108be51bd106d0e3ce08e58bf5d653f05514b53"
   end
 
   depends_on "node"

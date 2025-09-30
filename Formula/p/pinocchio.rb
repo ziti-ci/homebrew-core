@@ -4,6 +4,7 @@ class Pinocchio < Formula
   url "https://github.com/stack-of-tasks/pinocchio/releases/download/v3.8.0/pinocchio-3.8.0.tar.gz"
   sha256 "aa4664d95a54af7197354a80f5ad324cb291b00593886b78dd868b1fd13636ca"
   license "BSD-2-Clause"
+  revision 1
   head "https://github.com/stack-of-tasks/pinocchio.git", branch: "devel"
 
   livecheck do
@@ -78,9 +79,9 @@ index 67dd06db..5fbe52be 100644
 @@ -286,7 +286,7 @@ if(BUILD_WITH_EXTRA_SUPPORT)
    message(STATUS "Found Qhull.")
  endif()
- 
+
 -set(BOOST_REQUIRED_COMPONENTS filesystem serialization system)
 +set(BOOST_REQUIRED_COMPONENTS filesystem serialization)
- 
+
  set_boost_default_options()
  export_boost_default_options()

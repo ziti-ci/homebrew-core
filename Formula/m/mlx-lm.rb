@@ -8,6 +8,13 @@ class MlxLm < Formula
   license "MIT"
   head "https://github.com/ml-explore/mlx-lm.git", branch: "main"
 
+  bottle do
+    sha256 cellar: :any, arm64_tahoe:   "ecab8a7a8b8cc30a3dd9f92fb1596317ef20ac51a1cb90eabba3108ceb641e1e"
+    sha256 cellar: :any, arm64_sequoia: "d0b1060db0b40e960ca8fb9a893f88fd31151bcbd81346b079e31a6951888cfb"
+    sha256 cellar: :any, arm64_sonoma:  "9f73c8edaf7ff29354314c727d6232b0094db679ec70b22bc9d672a24788c46e"
+    sha256 cellar: :any, sonoma:        "4cdad85deeac5c4aeefa5d3f09e9c068d56e1323731e0ad963e4dbb67db7c304"
+  end
+
   depends_on "pkgconf" => :build
   depends_on "rust" => :build
   depends_on "certifi"

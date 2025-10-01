@@ -410,22 +410,22 @@ class PythonAT313 < Formula
           sys.path.extend(library_packages)
           # the Cellar site-packages is a symlink to the HOMEBREW_PREFIX
           # site_packages; prefer the shorter paths
-          long_prefix = re.compile(r'#{rack}/(?:[0-9\\._abrc]+/Frameworks/Python\\.framework/Versions/#{version.major_minor}/)?lib/python#{version.major_minor}/site-packages')
+          long_prefix = re.compile(r'#{rack}/[0-9\\._abrc]+/(?:Frameworks/Python\\.framework/Versions/#{version.major_minor}/)?lib/python#{version.major_minor}/site-packages')
           sys.path = [long_prefix.sub('#{site_packages}', p) for p in sys.path]
           # Set the sys.executable to use the opt_prefix. Only do this if PYTHONEXECUTABLE is not
           # explicitly set and we are not in a virtualenv:
           if 'PYTHONEXECUTABLE' not in os.environ and sys.prefix == sys.base_prefix:
               sys.executable = sys._base_executable = '#{opt_bin}/python#{version.major_minor}'
       if 'PYTHONHOME' not in os.environ:
-          cellar_prefix = re.compile(r'#{rack}/[0-9\\._abrc]+/')
+          cellar_prefix = re.compile(r'#{rack}/[0-9\\._abrc]+(?=/|$)')
           if os.path.realpath(sys.base_prefix).startswith('#{rack}'):
-              new_prefix = cellar_prefix.sub('#{opt_prefix}/', sys.base_prefix)
+              new_prefix = cellar_prefix.sub('#{opt_prefix}', sys.base_prefix)
               site.PREFIXES[:] = [new_prefix if x == sys.base_prefix else x for x in site.PREFIXES]
               if sys.prefix == sys.base_prefix:
                   sys.prefix = new_prefix
               sys.base_prefix = new_prefix
           if os.path.realpath(sys.base_exec_prefix).startswith('#{rack}'):
-              new_exec_prefix = cellar_prefix.sub('#{opt_prefix}/', sys.base_exec_prefix)
+              new_exec_prefix = cellar_prefix.sub('#{opt_prefix}', sys.base_exec_prefix)
               site.PREFIXES[:] = [new_exec_prefix if x == sys.base_exec_prefix else x for x in site.PREFIXES]
               if sys.exec_prefix == sys.base_exec_prefix:
                   sys.exec_prefix = new_exec_prefix
@@ -498,6 +498,11 @@ class PythonAT313 < Formula
     system python3, "dbm_test.py"
 
     system bin/"pip#{version.major_minor}", "list", "--format=columns"
+
+    # Check our sitecustomize.py
+    assert_match HOMEBREW_CELLAR.to_s, shell_output("#{python3} -Sc 'import sys; print(sys.base_prefix)'")
+    refute_match HOMEBREW_CELLAR.to_s, shell_output("#{python3} -c 'import sys; print(sys.base_prefix)'")
+    refute_match site_packages_cellar.to_s, shell_output("#{python3} -c 'import sys; print(sys.path)'")
 
     # Verify our sysconfig patches
     sysconfig_path = "import sysconfig; print(sysconfig.get_paths(\"osx_framework_library\")[\"data\"])"

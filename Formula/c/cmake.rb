@@ -1,10 +1,10 @@
 class Cmake < Formula
   desc "Cross-platform make"
   homepage "https://www.cmake.org/"
-  url "https://github.com/Kitware/CMake/releases/download/v4.1.1/cmake-4.1.1.tar.gz"
-  mirror "http://fresh-center.net/linux/misc/cmake-4.1.1.tar.gz"
-  mirror "http://fresh-center.net/linux/misc/legacy/cmake-4.1.1.tar.gz"
-  sha256 "b29f6f19733aa224b7763507a108a427ed48c688e1faf22b29c44e1c30549282"
+  url "https://github.com/Kitware/CMake/releases/download/v4.1.2/cmake-4.1.2.tar.gz"
+  mirror "http://fresh-center.net/linux/misc/cmake-4.1.2.tar.gz"
+  mirror "http://fresh-center.net/linux/misc/legacy/cmake-4.1.2.tar.gz"
+  sha256 "643f04182b7ba323ab31f526f785134fb79cba3188a852206ef0473fee282a15"
   license "BSD-3-Clause"
   head "https://gitlab.kitware.com/cmake/cmake.git", branch: "master"
 

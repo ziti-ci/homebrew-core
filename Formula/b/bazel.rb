@@ -1,8 +1,8 @@
 class Bazel < Formula
   desc "Google's own build tool"
   homepage "https://bazel.build/"
-  url "https://github.com/bazelbuild/bazel/releases/download/8.4.1/bazel-8.4.1-dist.zip"
-  sha256 "c434966629e32ba370741f95f5434a8f0b5279a87991d883a354476e8062565f"
+  url "https://github.com/bazelbuild/bazel/releases/download/8.4.2/bazel-8.4.2-dist.zip"
+  sha256 "416055473d60768a94ade34a63fb9789dc01473eaf22c39b153af259ba369766"
   license "Apache-2.0"
 
   livecheck do
@@ -49,20 +49,6 @@ class Bazel < Formula
   end
 
   def install
-    # Backport newer apple_support to build LC_UUID needed by Tahoe
-    # https://github.com/bazelbuild/bazel/commit/ccd3f68dc8c0bf7fc7be8c03dd070a7672e4f2b2
-    inreplace "MODULE.bazel", '"apple_support", version = "1.18.1"', '"apple_support", version = "1.21.0"'
-    inreplace "MODULE.bazel.lock" do |s|
-      s.gsub! '/1.18.1/MODULE.bazel": "019f8538997d93ac84661ab7a55b5343d2758ddbff3a0501a78b573708de90b4"',
-              '/1.21.0/MODULE.bazel": "ac1824ed5edf17dee2fdd4927ada30c9f8c3b520be1b5fd02a5da15bc10bff3e"'
-      s.gsub! '/1.18.1/source.json": "fcfd4548abb27da98f69213a04a51cf7dab7c634f80795397f646056dab5f09f"',
-              '/1.21.0/source.json": "028d7c853f0195e21b1323ffa2792e8fc5600da3fdaaff394fe932e0e04a4322"'
-    end
-
-    # Workaround for "missing LC_UUID load command in .../xcode-locator"
-    # https://github.com/bazelbuild/bazel/pull/27014
-    inreplace "tools/osx/BUILD", " -Wl,-no_uuid ", " "
-
     java_home_env = Language::Java.java_home_env("21")
 
     ENV["EMBED_LABEL"] = "#{version}-homebrew"

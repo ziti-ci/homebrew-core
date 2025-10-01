@@ -1,16 +1,14 @@
 class Taktuk < Formula
   desc "Deploy commands to (a potentially large set of) remote nodes"
   homepage "https://taktuk.gitlabpages.inria.fr/"
-  url "https://deb.debian.org/debian/pool/main/t/taktuk/taktuk_3.7.7.orig.tar.gz"
-  sha256 "56a62cca92670674c194e4b59903e379ad0b1367cec78244641aa194e9fe893e"
+  url "https://deb.debian.org/debian/pool/main/t/taktuk/taktuk_3.7.8.orig.tar.gz"
+  sha256 "f674edd33d27760b1ee6d41abf4542e07061d049405f0203d151e1af74be9b5c"
   license "GPL-2.0-or-later"
 
   livecheck do
     url "https://deb.debian.org/debian/pool/main/t/taktuk/"
     regex(/href=.*?taktuk[._-]v?(\d+(?:\.\d+)+)\.orig\.t/i)
   end
-
-  no_autobump! because: :requires_manual_review
 
   bottle do
     sha256 cellar: :any,                 arm64_tahoe:    "e8791232c8189aa72d9a551592eceb0213dfe3e879ece00ff1f481a146d308ab"
@@ -28,16 +26,15 @@ class Taktuk < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "f799a4468de4f14fdccde850591ac6c2a213725a0fb8b8e8c427d63eae27d703"
   end
 
+  depends_on "autoconf" => :build
+  depends_on "automake" => :build
+  depends_on "libtool" => :build
+
   uses_from_macos "perl"
 
-  # Fix -flat_namespace being used on Big Sur and later.
-  patch do
-    url "https://raw.githubusercontent.com/Homebrew/formula-patches/03cf8088210822aa2c1ab544ed58ea04c897d9c4/libtool/configure-big_sur.diff"
-    sha256 "35acd6aebc19843f1a2b3a63e880baceb0f5278ab1ace661e57a502d9d78c93c"
-  end
-
   def install
-    system "./configure", "--prefix=#{prefix}"
+    system "autoreconf", "--force", "--install", "--verbose"
+    system "./configure", *std_configure_args
     system "make"
     ENV.deparallelize
     system "make", "install", "INSTALLSITEMAN3DIR=#{man3}"

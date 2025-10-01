@@ -6,7 +6,7 @@ class PlaywrightMcp < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "673d8bfca2a315efce67b63e247ef51fcb41bdced4eae241c7ca38f103a7bcbf"
+    sha256 cellar: :any_skip_relocation, all: "f2d46b637fee19900659335706ffffeb0ff11efb92bf4a4f51ca5c0349da967a"
   end
 
   depends_on "node"

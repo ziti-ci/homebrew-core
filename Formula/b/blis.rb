@@ -19,6 +19,11 @@ class Blis < Formula
 
   uses_from_macos "python" => :build
 
+  on_macos do
+    depends_on "libomp"
+    patch :DATA # patch to use libomp when CC=clang as common.mk is installed
+  end
+
   def install
     # https://github.com/flame/blis/blob/master/docs/ConfigurationHowTo.md
     ENV.runtime_cpu_detection
@@ -33,7 +38,7 @@ class Blis < Formula
       Hardware::CPU.arch
     end
 
-    system "./configure", "--prefix=#{prefix}", "--enable-cblas", config
+    system "./configure", "--prefix=#{prefix}", "--enable-cblas", "--enable-threading=openmp", config
     system "make"
     system "make", "install"
   end
@@ -64,3 +69,18 @@ class Blis < Formula
     system "./test"
   end
 end
+
+__END__
+--- a/common.mk
++++ b/common.mk
+@@ -989,8 +989,8 @@ ifeq ($(CC_VENDOR),clang)
+ #THREADING_MODEL := pthreads
+ #endif
+ ifneq ($(findstring openmp,$(THREADING_MODEL)),)
+-CTHREADFLAGS += -fopenmp
+-LDFLAGS      += -fopenmp
++CTHREADFLAGS += -I@@HOMEBREW_PREFIX@@/opt/libomp/include -Xpreprocessor -fopenmp
++LDFLAGS      += -L@@HOMEBREW_PREFIX@@/opt/libomp/lib -lomp
+ endif
+ ifneq ($(findstring pthreads,$(THREADING_MODEL)),)
+ CTHREADFLAGS += -pthread

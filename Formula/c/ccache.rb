@@ -7,12 +7,12 @@ class Ccache < Formula
   head "https://github.com/ccache/ccache.git", branch: "master"
 
   bottle do
-    sha256               arm64_tahoe:   "9b80c6e52306f9c9ac9953413182bea9b0da1feaa01f8c480328f6c87ecb2714"
-    sha256               arm64_sequoia: "61163244c523642829b5acc9dee363df1dad4b5c89c141edc368c0b0771acf98"
-    sha256 cellar: :any, arm64_sonoma:  "01fc1891ba9886bd01ed61072253de2e6fc69a73be9391c6bccb6f96bec80748"
-    sha256 cellar: :any, sonoma:        "a062a9a2ed6529a5dc7cd0d6082e064e53649c5517ba3a0ed8b27dd9ac0c0f69"
-    sha256               arm64_linux:   "e72f1363d1644a108ad331116537bdedf5fca528601aa7376175337a16092508"
-    sha256               x86_64_linux:  "71a4fb86dceb183358809fd80bc3ac7799372197a4ff584fae5323da5da2a51c"
+    sha256               arm64_tahoe:   "9d9bbdaf2d24e4cee02946fa0df0edcffca959713de36d391c383f0579690a13"
+    sha256               arm64_sequoia: "c6d3f242fa7a4cb1204acda5e505b8f025d7760afa51d4650316dbdf11d12db4"
+    sha256 cellar: :any, arm64_sonoma:  "e6627f8f75706a4b59234d48f97fa0ec7a019d5bc2c9302bd46ddec7ed9a3bf8"
+    sha256 cellar: :any, sonoma:        "7d62854d0cdc0bcd696c6c0129be01ecfd776558d7352ba2875da1aeba07c620"
+    sha256               arm64_linux:   "042b9524aa2cdd38254c075baebe661ecd34238b364078b7007427de19c8d5ad"
+    sha256               x86_64_linux:  "6daee947cfe79be34de9d7b17dea3dc6848fc32d4d2ba08a8615719e790baa60"
   end
 
   depends_on "asciidoctor" => :build

@@ -6,8 +6,6 @@ class Tlrc < Formula
   license "MIT"
   head "https://github.com/tldr-pages/tlrc.git", branch: "main"
 
-  no_autobump! because: :requires_manual_review
-
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_tahoe:   "b68b13aadec1cae951171212167def892414e7267d0f98d76e4ff35c73d4ffc8"
     sha256 cellar: :any_skip_relocation, arm64_sequoia: "80196e92b44c096505b91bf92bec2e8977fc0af0209b2fa1a3f7bb8a5418bbf4"

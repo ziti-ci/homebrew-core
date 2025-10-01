@@ -1,15 +1,10 @@
 class Clhep < Formula
   desc "Class Library for High Energy Physics"
   homepage "https://proj-clhep.web.cern.ch/proj-clhep/"
-  url "https://proj-clhep.web.cern.ch/proj-clhep/dist1/clhep-2.4.7.1.tgz"
-  sha256 "1c8304a7772ac6b99195f1300378c6e3ddf4ad07c85d64a04505652abb8a55f9"
+  url "https://gitlab.cern.ch/CLHEP/CLHEP/-/archive/CLHEP_2_4_7_2/CLHEP-CLHEP_2_4_7_2.tar.gz"
+  sha256 "c40c239fa2c5810b60f4e9ddd6a8cc2ce81b962aa170994748cd2a2b5ac87f84"
   license "GPL-3.0-only"
   head "https://gitlab.cern.ch/CLHEP/CLHEP.git", branch: "develop"
-
-  livecheck do
-    url :homepage
-    regex(%r{atest release.*?<b>v?(\d+(?:\.\d+)+)</b>}im)
-  end
 
   bottle do
     sha256 cellar: :any,                 arm64_tahoe:    "f5f65d6a038d43f07b9dfadd2303293a72aa6756a021452863ef4bf1e9f98074"
@@ -27,7 +22,8 @@ class Clhep < Formula
   depends_on "cmake" => :build
 
   def install
-    (buildpath/"CLHEP").install buildpath.children if build.head?
+    # Build directory is not allowed inside source folder
+    (buildpath/"CLHEP").install buildpath.children
     system "cmake", "-S", "CLHEP", "-B", "build", *std_cmake_args, "-DCMAKE_INSTALL_RPATH=#{rpath}"
     system "cmake", "--build", "build"
     system "cmake", "--install", "build"

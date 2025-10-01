@@ -1,8 +1,8 @@
 class StressNg < Formula
   desc "Stress test a computer system in various selectable ways"
   homepage "https://wiki.ubuntu.com/Kernel/Reference/stress-ng"
-  url "https://github.com/ColinIanKing/stress-ng/archive/refs/tags/V0.19.04.tar.gz"
-  sha256 "3761ae901b2a81dcdb3f5363b8d98f288c03ae320a697b6d7ffef01a48845f05"
+  url "https://github.com/ColinIanKing/stress-ng/archive/refs/tags/V0.19.05.tar.gz"
+  sha256 "9712c5505602c6db8017c15a2659a3185f5a4f81ddde745e9f45f9e10a9f86c4"
   license "GPL-2.0-or-later"
 
   livecheck do

@@ -1,11 +1,10 @@
 class Opencolorio < Formula
   desc "Color management solution geared towards motion picture production"
   homepage "https://opencolorio.org/"
-  url "https://github.com/AcademySoftwareFoundation/OpenColorIO/archive/refs/tags/v2.4.2.tar.gz"
-  sha256 "2d8f2c47c40476d6e8cea9d878f6601d04f6d5642b47018eaafa9e9f833f3690"
+  url "https://github.com/AcademySoftwareFoundation/OpenColorIO/archive/refs/tags/v2.5.0.tar.gz"
+  sha256 "124e2bfa8a9071959d6ddbb64ffbf78d3f6fe3c923ae23e96a6bbadde1af55b6"
   license "BSD-3-Clause"
-  revision 2
-  head "https://github.com/AcademySoftwareFoundation/OpenColorIO.git", branch: "master"
+  head "https://github.com/AcademySoftwareFoundation/OpenColorIO.git", branch: "main"
 
   bottle do
     sha256 cellar: :any,                 arm64_tahoe:   "0080d3661f13bd044dc2112df588f173165784f9626ecec6d4d1e1a613e02e5b"
@@ -21,15 +20,14 @@ class Opencolorio < Formula
   depends_on "cmake" => :build
   depends_on "pybind11" => :build
   depends_on "python@3.13" => [:build, :test] # for bindings, avoid runtime dependency due to `expat`
+  depends_on "expat"
   depends_on "imath"
   depends_on "little-cms2"
   depends_on "minizip-ng"
   depends_on "openexr"
   depends_on "pystring"
   depends_on "yaml-cpp"
-
-  uses_from_macos "expat"
-  uses_from_macos "zlib"
+  depends_on "zlib"
 
   on_arm do
     depends_on "sse2neon" => :build

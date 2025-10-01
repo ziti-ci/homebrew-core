@@ -16,6 +16,14 @@ class Qt3d < Formula
     formula "qtbase"
   end
 
+  bottle do
+    sha256 cellar: :any,                 arm64_tahoe:   "cf5228c94451de4e7c2df0149cb7b7c887a37b57b5f7bb9c4a841dc594c9e4cf"
+    sha256 cellar: :any,                 arm64_sequoia: "53c37783ee5b2d5b632f35b493123b255f2e1f9b34acaf90faa6a32a3441756f"
+    sha256 cellar: :any,                 arm64_sonoma:  "4ef3d64201bcaa81e9b1427bb3564d38820e50cbd7831fae32a98609238c1647"
+    sha256 cellar: :any,                 sonoma:        "b9d8d831b68d4821a663c2953b2fb09256e8fe11fe59b95c5577e265415b6750"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "20885f9c5119e960efa0a9a7c3900ed43ce3100ff6c7fecab2e73afb1f442821"
+  end
+
   depends_on "cmake" => [:build, :test]
   depends_on "ninja" => :build
   depends_on "pkgconf" => :test

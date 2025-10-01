@@ -3,8 +3,8 @@ class Locust < Formula
 
   desc "Scalable user load testing tool written in Python"
   homepage "https://locust.io/"
-  url "https://files.pythonhosted.org/packages/5b/fc/f60a7c924768ec1d25c0f24e6f070f7d634fb08ea4ad9ec7e37b94c579e9/locust-2.41.2.tar.gz"
-  sha256 "16238c09374871c1462f9d6035b8c969ad46f7e88e14c08295ecadd99e0ef90e"
+  url "https://files.pythonhosted.org/packages/f6/97/9e176b560152f97454aeb908ef61619ae2d8df8ad8cf2ec3829b9a29c8ca/locust-2.41.3.tar.gz"
+  sha256 "531804b6900472bad7f1123c73b81720826d502254b754f70907240d99663491"
   license "MIT"
 
   bottle do
@@ -108,8 +108,8 @@ class Locust < Formula
   end
 
   resource "locust-cloud" do
-    url "https://files.pythonhosted.org/packages/63/55/bfb342028f6942523184f7d0653b4b2047362d7c93f574803a8dd7750466/locust_cloud-1.27.1.tar.gz"
-    sha256 "ea2790fc14eb78a816852444c4eca00aeb351ebeacb88fca16b8aa0fd41b740d"
+    url "https://files.pythonhosted.org/packages/df/63/330c4a7a1d114c0687d1ad58326ad27fa128208f0166eb000331a5e9b72f/locust_cloud-1.27.2.tar.gz"
+    sha256 "0d80d63ba722a45c39dcdce66ca5a389944db2123a5fff59d1438e4ee3701258"
   end
 
   resource "markupsafe" do

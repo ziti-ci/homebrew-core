@@ -3,8 +3,8 @@ class Mapproxy < Formula
 
   desc "Accelerating web map proxy"
   homepage "https://mapproxy.org/"
-  url "https://files.pythonhosted.org/packages/1e/e1/05d53f4d5b421d6cc1d5d144d35673046ab47c6c5e48dba9725a6390272e/mapproxy-5.1.0.tar.gz"
-  sha256 "f9b00e4b213df8bebd9893f274554500892d4a4df763321332a2bebd20306dac"
+  url "https://files.pythonhosted.org/packages/08/9a/a2141736315337d427310b0d51759b67f56aef540ca3f540cad890685a54/mapproxy-5.1.1.tar.gz"
+  sha256 "df7dc32a02f8cd280b541d1ea5e7b0b0f0a4d1f3b7ca173bfad4410cec163389"
   license "Apache-2.0"
 
   bottle do

@@ -4,6 +4,7 @@ class DamaskGrid < Formula
   url "https://damask-multiphysics.org/download/damask-3.0.2.tar.xz"
   sha256 "82f9b3aefde87193c12a7c908f42b711b278438f6cad650918989e37fb6dbde4"
   license "AGPL-3.0-only"
+  revision 1
 
   # The first-party website doesn't always reflect the newest version, so we
   # check GitHub releases for now.
@@ -36,6 +37,10 @@ class DamaskGrid < Formula
   depends_on "scalapack"
 
   uses_from_macos "zlib"
+
+  # Support PETSc 3.24.x
+  # https://github.com/damask-multiphysics/DAMASK/commit/dc9aa42f04b9f5172b499c94328a22fed0ec6d9a
+  patch :DATA
 
   def install
     ENV["PETSC_DIR"] = Formula["petsc"].opt_prefix
@@ -70,3 +75,36 @@ class DamaskGrid < Formula
     end
   end
 end
+
+__END__
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 628e68d..4fb5df2 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -10,8 +10,11 @@ endif()
+ # Dummy project to determine compiler names and version
+ project(Prerequisites LANGUAGES)
+ set(ENV{PKG_CONFIG_PATH} "$ENV{PETSC_DIR}/$ENV{PETSC_ARCH}/lib/pkgconfig:$ENV{PKG_CONFIG_PATH}")
+-pkg_check_modules(PETSC_MIN REQUIRED PETSc>=3.12.0 QUIET) #CMake does not support version range
+-pkg_check_modules(PETSC REQUIRED PETSc<3.24.0)
++set(PETSC_VERSION_MINOR_MIN "15")
++set(PETSC_VERSION_MINOR_MAX "24")
++
++pkg_check_modules(PETSC_MIN REQUIRED PETSc>=3.${PETSC_VERSION_MINOR_MIN}.0 QUIET) #CMake does not support version range
++pkg_check_modules(PETSC REQUIRED PETSc<=3.${PETSC_VERSION_MINOR_MAX}.99)
+ 
+ pkg_get_variable(CMAKE_Fortran_COMPILER PETSc fcompiler)
+ pkg_get_variable(CMAKE_C_COMPILER PETSc ccompiler)
+diff --git a/src/CLI.f90 b/src/CLI.f90
+index 3bc472e..a285230 100644
+--- a/src/CLI.f90
++++ b/src/CLI.f90
+@@ -21,7 +21,7 @@
+ !> @brief Parse command line interface for PETSc-based solvers
+ !--------------------------------------------------------------------------------------------------
+ #define PETSC_MINOR_MIN 12
+-#define PETSC_MINOR_MAX 23
++#define PETSC_MINOR_MAX 24
+ 
+ module CLI
+   use, intrinsic :: ISO_fortran_env

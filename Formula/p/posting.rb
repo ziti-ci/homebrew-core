@@ -223,14 +223,8 @@ class Posting < Formula
   end
 
   resource "tree-sitter-sql" do
-    url "https://github.com/DerekStride/tree-sitter-sql/archive/refs/tags/v0.3.7.tar.gz"
-    sha256 "a4aae1eeebe31dbbf7f823ee56b3ce257f6bb3f32fc5ee732bb785bce257fd3e"
-
-    # patch to include generated artifacts, upstream pr ref, https://github.com/DerekStride/tree-sitter-sql/pull/323
-    patch do
-      url "https://github.com/DerekStride/tree-sitter-sql/commit/e4d1a34b556e31ff473cd9ed10805489646b163a.patch?full_index=1"
-      sha256 "cd69ece539701cb8dce5cabd119c705e41c901606f39bf6c700e4bb25d3a8ce8"
-    end
+    url "https://github.com/DerekStride/tree-sitter-sql/releases/download/v0.3.11/tree-sitter-sql-v0.3.11.tar.gz"
+    sha256 "a97a324eae9c81ed68f6e162b9b33f8911fc6442caa2950e57c498e2460d1387"
   end
 
   resource "tree-sitter-toml" do

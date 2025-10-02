@@ -7,11 +7,11 @@ class Benthos < Formula
   head "https://github.com/redpanda-data/benthos.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "5ac96f9298bb5ab8b9fc208a55580211bb8eaa27fff48b43e70317201a922e3f"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "5ac96f9298bb5ab8b9fc208a55580211bb8eaa27fff48b43e70317201a922e3f"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "5ac96f9298bb5ab8b9fc208a55580211bb8eaa27fff48b43e70317201a922e3f"
-    sha256 cellar: :any_skip_relocation, sonoma:        "2cc9bc18d9b3eb78fa2b11f5f97f187716ad82e8f9ab4b1f6246d2ed7c454008"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "2e80ca4135efbf72fba41c01ad9af28b3ef8535fd619b9959b6e3d2ad69568b0"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "2d3871c4ba7a7e9577eeafe34628ee9649740162976f2be28f23ae0baf406062"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "2d3871c4ba7a7e9577eeafe34628ee9649740162976f2be28f23ae0baf406062"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "2d3871c4ba7a7e9577eeafe34628ee9649740162976f2be28f23ae0baf406062"
+    sha256 cellar: :any_skip_relocation, sonoma:        "e3155ae3e5c731f215e0e6c26879378190b6712ae32d4cb1ef4bfa76b8a8605a"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "e99ebeb8a7b9ba26790b1579adfd99e3376381c9944a7854574e68a34774e16f"
   end
 
   depends_on "go" => :build

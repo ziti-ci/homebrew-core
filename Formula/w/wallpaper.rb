@@ -1,8 +1,8 @@
 class Wallpaper < Formula
   desc "Manage the desktop wallpaper"
   homepage "https://github.com/sindresorhus/macos-wallpaper"
-  url "https://github.com/sindresorhus/macos-wallpaper/archive/refs/tags/v2.3.2.tar.gz"
-  sha256 "9c65948c8d023436609ca06c86bc887e5327457136b8540ef97857efee7954c2"
+  url "https://github.com/sindresorhus/macos-wallpaper/archive/refs/tags/v2.3.3.tar.gz"
+  sha256 "07838483fe015ae9798b542c1c15e02143bbae85c5f2e6fb51e6923bd76556ed"
   license "MIT"
   head "https://github.com/sindresorhus/macos-wallpaper.git", branch: "main"
 

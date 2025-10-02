@@ -3,8 +3,8 @@ class Ns3 < Formula
 
   desc "Discrete-event network simulator"
   homepage "https://www.nsnam.org/"
-  url "https://gitlab.com/nsnam/ns-3-dev/-/archive/ns-3.45/ns-3-dev-ns-3.45.tar.gz"
-  sha256 "ea736ba7de4baf0b4fc91cfe2ff74ac3bcd94d4e3ad7055141ddbb30f8d0fc48"
+  url "https://gitlab.com/nsnam/ns-3-dev/-/archive/ns-3.46/ns-3-dev-ns-3.46.tar.gz"
+  sha256 "284c77fda5f48b43808fa218eb9ecc4c303a3a77a7b5bf89e3de5d82cef880c8"
   license "GPL-2.0-only"
 
   bottle do
@@ -28,15 +28,20 @@ class Ns3 < Formula
   uses_from_macos "sqlite"
 
   def install
+    # Fix to error: no matching function for call to ‘find...’
+    # Issue ref: https://gitlab.com/nsnam/ns-3-dev/-/issues/1264
+    inreplace "src/core/model/test.cc", "#include <vector>", "#include <vector>\n#include <algorithm>"
+
     # Fix binding's rpath
     linker_flags = ["-Wl,-rpath,#{loader_path}"]
 
-    system "cmake", "-S", ".", "-B", "build",
-                    "-DNS3_GTK3=OFF",
-                    "-DNS3_PYTHON_BINDINGS=OFF",
-                    "-DNS3_MPI=ON",
-                    "-DCMAKE_SHARED_LINKER_FLAGS=#{linker_flags.join(" ")}",
-                    *std_cmake_args
+    args = %W[
+      -DNS3_GTK3=OFF
+      -DNS3_PYTHON_BINDINGS=OFF
+      -DNS3_MPI=ON
+      -DCMAKE_SHARED_LINKER_FLAGS=#{linker_flags.join(" ")}
+    ]
+    system "cmake", "-S", ".", "-B", "build", *args, *std_cmake_args
     system "cmake", "--build", "build"
     system "cmake", "--install", "build"
 

@@ -1,11 +1,10 @@
 class Liblo < Formula
   desc "Lightweight Open Sound Control implementation"
   homepage "https://liblo.sourceforge.net/"
-  url "https://downloads.sourceforge.net/project/liblo/liblo/0.32/liblo-0.32.tar.gz"
-  sha256 "5df05f2a0395fc5ac90f6b538b8c82bb21941406fd1a70a765c7336a47d70208"
+  url "https://downloads.sourceforge.net/project/liblo/liblo/0.33/liblo-0.33.tar.gz"
+  sha256 "772edd51e5809b72413d5de7fc10422e70b08a7ffd5b0e924f555de1319accde"
   license "LGPL-2.1-or-later"
-
-  no_autobump! because: :requires_manual_review
+  head "https://git.code.sf.net/p/liblo/git.git", branch: "master"
 
   bottle do
     sha256 cellar: :any,                 arm64_tahoe:    "bc3d8a8b87f29fbb5fc1bdbf6538a1cc26e03617a4a42dcaef0f085585db5588"
@@ -20,22 +19,12 @@ class Liblo < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "62fbd9950f4178a2ec7eeb280aac525b10d483953417f750aca24b420089b157"
   end
 
-  head do
-    url "https://git.code.sf.net/p/liblo/git.git", branch: "master"
-
-    depends_on "autoconf" => :build
-    depends_on "automake" => :build
-    depends_on "libtool" => :build
-  end
+  depends_on "cmake" => :build
 
   def install
-    if build.head?
-      system "./autogen.sh", *std_configure_args
-    else
-      system "./configure", *std_configure_args
-    end
-
-    system "make", "install"
+    system "cmake", "-S", "cmake", "-B", "cmake_build", *std_cmake_args
+    system "cmake", "--build", "cmake_build"
+    system "cmake", "--install", "cmake_build"
   end
 
   test do

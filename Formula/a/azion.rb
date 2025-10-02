@@ -7,11 +7,11 @@ class Azion < Formula
   head "https://github.com/aziontech/azion.git", branch: "dev"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "254b6fff6130e404f66cc29e772c07306422d4c8d0b0b3bfbf48dba351eac094"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "254b6fff6130e404f66cc29e772c07306422d4c8d0b0b3bfbf48dba351eac094"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "254b6fff6130e404f66cc29e772c07306422d4c8d0b0b3bfbf48dba351eac094"
-    sha256 cellar: :any_skip_relocation, sonoma:        "cc397e45b96bd8e04dd3bdc8ef135993caec4533b467d8581bf7022086b96f47"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "59f3eb48c9f8431a92a18294fe51d2e29688ebe9e13a4c4d9b6bb8db6c4c28d1"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "9bdec521020505e20ab8e08526c7dafaac5c9cb965b4b35ec01ab7084c3ad17b"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "9bdec521020505e20ab8e08526c7dafaac5c9cb965b4b35ec01ab7084c3ad17b"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "9bdec521020505e20ab8e08526c7dafaac5c9cb965b4b35ec01ab7084c3ad17b"
+    sha256 cellar: :any_skip_relocation, sonoma:        "77f695fdbbb9eefd77c4746b8ec1712912d692cf5298de8d96409678d3921c12"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "aa1462983859c7380eeac62ad1bbcc2c89e9187821f7f0adff9e29c89f4a8a69"
   end
 
   depends_on "go" => :build

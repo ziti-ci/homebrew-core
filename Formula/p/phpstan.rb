@@ -6,12 +6,12 @@ class Phpstan < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "8ac96a2f55b62bbc1ac3da02ed1a1a026a045f4a2a18baaa524f73fc517d1299"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "8ac96a2f55b62bbc1ac3da02ed1a1a026a045f4a2a18baaa524f73fc517d1299"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "8ac96a2f55b62bbc1ac3da02ed1a1a026a045f4a2a18baaa524f73fc517d1299"
-    sha256 cellar: :any_skip_relocation, sonoma:        "e18fb3c63d6d68f1b20a4fc2fc8488b77d747930ad38b31ff134cd7c7156341f"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "e18fb3c63d6d68f1b20a4fc2fc8488b77d747930ad38b31ff134cd7c7156341f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "e18fb3c63d6d68f1b20a4fc2fc8488b77d747930ad38b31ff134cd7c7156341f"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "eb939eb43e231b22af8554c9f4d2cc22ca421751dbdd4bd5855453f0c4a62e8d"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "eb939eb43e231b22af8554c9f4d2cc22ca421751dbdd4bd5855453f0c4a62e8d"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "eb939eb43e231b22af8554c9f4d2cc22ca421751dbdd4bd5855453f0c4a62e8d"
+    sha256 cellar: :any_skip_relocation, sonoma:        "d879b82dbed84347af2c160862194c6754866eafb0361267adc2c9a6fee0b693"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "d879b82dbed84347af2c160862194c6754866eafb0361267adc2c9a6fee0b693"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "d879b82dbed84347af2c160862194c6754866eafb0361267adc2c9a6fee0b693"
   end
 
   depends_on "php" => :test

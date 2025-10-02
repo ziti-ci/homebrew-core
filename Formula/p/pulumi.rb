@@ -10,11 +10,11 @@ class Pulumi < Formula
   no_autobump! because: :bumped_by_upstream
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "56c95c9b19b3b8be28ffd00b882fd2d483f14ffb1c84542e237bd8a90e8ba5a9"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "b3f651d20b979daa46b717b4ee998999fc8002a74f6332412d1de780c67624ba"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "e1404286312297ea2134f8f0a407f95237d59fce6755119fdfb80af96cd75998"
-    sha256 cellar: :any_skip_relocation, sonoma:        "295ab8b87f869533671b1d24a393152d566477e97f905b5ab187717002e499fc"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "5e69171fce668ecbe8990a3f33186e1eec5dfae3ea5963ac1ac49c8ecd472b75"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "edf82e3c9419368036877319119c7da95b352283d54431d1022f1a4ee743c1e9"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "44b9cd64749ca6e9d8be48d00d59319c5d65d6200ae894ea9fe7ff6aba9a2b10"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "37a19e440cef2eae2e5c99eeb92ba7d6a9264680925755d1d0be5d56af84dea2"
+    sha256 cellar: :any_skip_relocation, sonoma:        "01095b35f9db0808d1f81aa1bbf3b2dbc2791619d7fdcaa5d36c7dec08d7b244"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "cd72da56216c596c17aff88c8b5bd31c853fab48ca6d2349d8d0ec747ed8c567"
   end
 
   depends_on "go" => :build

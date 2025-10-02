@@ -11,6 +11,7 @@ class Cagent < Formula
     sha256 cellar: :any_skip_relocation, arm64_sequoia: "447a46fb9a347e103336505f78a2dbdbacd5e615e56b5b6871b2010a23676880"
     sha256 cellar: :any_skip_relocation, arm64_sonoma:  "447a46fb9a347e103336505f78a2dbdbacd5e615e56b5b6871b2010a23676880"
     sha256 cellar: :any_skip_relocation, sonoma:        "d62fb4ab69b2c24a99d76fe7bd67e029a3e9cfe2c16fe41c0e3ad8f4e949e408"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "8729b2e6df0e1c5436db62e9fa043e0a14df57ea7423c892bb25322d7f97a88f"
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "e0f55bafebe5c29a90dba8d6877f4229668620146fdeb51726f238eef06a617a"
   end
 

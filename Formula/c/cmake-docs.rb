@@ -13,7 +13,7 @@ class CmakeDocs < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "2f37832472cb873b81463754d19e79c4e54438f0664baaaf18c3e9b15608b5ed"
+    sha256 cellar: :any_skip_relocation, all: "bee4f476ab70b8c52ab3a0ccdd50fd6d4b192657d33f23973a3e1a05c6b5ed84"
   end
 
   depends_on "cmake" => :build

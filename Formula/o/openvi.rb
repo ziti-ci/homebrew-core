@@ -1,8 +1,8 @@
 class Openvi < Formula
   desc "Portable OpenBSD vi for UNIX systems"
   homepage "https://github.com/johnsonjh/OpenVi"
-  url "https://github.com/johnsonjh/OpenVi/archive/refs/tags/7.6.31.tar.gz"
-  sha256 "75ef62fd882d8a18e388509f5fe4eca6b241f3286f6121e2bcbea65ec592ae11"
+  url "https://github.com/johnsonjh/OpenVi/archive/refs/tags/7.7.32.tar.gz"
+  sha256 "3378f371b7446708b5d909dcbf8608a74d771f2660f06014888da2163a77af81"
   license "BSD-3-Clause"
   head "https://github.com/johnsonjh/OpenVi.git", branch: "master"
 
@@ -19,10 +19,11 @@ class Openvi < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "ec194a9a4049c4c7ae786e494072d97261b1d0865661819796668caa2ad893be"
   end
 
+  depends_on "pkgconf" => :build
   depends_on "ncurses" # https://github.com/johnsonjh/OpenVi/issues/32
 
   def install
-    system "make", "install", "CHOWN=true", "LTO=1", "PREFIX=#{prefix}"
+    system "make", "install", "CURSESLIB=-lncurses", "CHOWN=true", "LTO=1", "PREFIX=#{prefix}"
   end
 
   test do

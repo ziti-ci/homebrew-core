@@ -8,8 +8,7 @@ class Scons < Formula
   license "MIT"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, all: "b11d27d96f9c7e04dd36c8f4b750c0da9c4c0f8a34c778cdb9154280cff8c1ff"
+    sha256 cellar: :any_skip_relocation, all: "5761c79c411a73e5e65e866bbefcf0c2b040ea14a75c1b607cbaec465ac7d2aa"
   end
 
   depends_on "python@3.13"

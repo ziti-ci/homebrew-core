@@ -7,7 +7,7 @@ class SonarScanner < Formula
   head "https://github.com/SonarSource/sonar-scanner-cli.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "461384188d20091347a182bc82c48f2b1b655cb1e9c734bff02d17c9fb7c701a"
+    sha256 cellar: :any_skip_relocation, all: "e6413293bda6b5cede7be37c8a86087c7bf4ca90d57fc045d1f16c441c6f939e"
   end
 
   depends_on "openjdk"

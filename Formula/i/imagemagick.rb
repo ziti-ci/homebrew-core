@@ -34,6 +34,7 @@ class Imagemagick < Formula
   depends_on "libraw"
   depends_on "libtiff"
   depends_on "libtool"
+  depends_on "libzip"
   depends_on "little-cms2"
   depends_on "openexr"
   depends_on "openjpeg"
@@ -78,6 +79,7 @@ class Imagemagick < Formula
       "--with-webp=yes",
       "--with-heic=yes",
       "--with-raw=yes",
+      "--with-zip=yes",
       "--without-gslib",
       "--with-gs-font-dir=#{HOMEBREW_PREFIX}/share/ghostscript/fonts",
       "--with-lqr",

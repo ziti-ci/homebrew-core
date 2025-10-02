@@ -20,6 +20,10 @@ class Qtwayland < Formula
     formula "qtbase"
   end
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "b64595c383ef49bbfa53f62c4b736dbfebf6037af5c85c37ee21cd5671115b8b"
+  end
+
   depends_on "cmake" => :build
   depends_on "ninja" => :build
   depends_on "vulkan-headers" => :build

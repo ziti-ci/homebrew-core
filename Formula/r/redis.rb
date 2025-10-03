@@ -1,8 +1,8 @@
 class Redis < Formula
   desc "Persistent key-value database, with built-in net interface"
   homepage "https://redis.io/"
-  url "https://download.redis.io/releases/redis-8.2.1.tar.gz"
-  sha256 "e2c1cb9dd4180a35b943b85dfc7dcdd42566cdbceca37d0d0b14c21731582d3e"
+  url "https://download.redis.io/releases/redis-8.2.2.tar.gz"
+  sha256 "4e340e8e822a82114b6fb0f7ca581b749fa876e31e36e9fbcb75416bec9d0608"
   license all_of: [
     "AGPL-3.0-only",
     "BSD-2-Clause", # deps/jemalloc, deps/linenoise, src/lzf*

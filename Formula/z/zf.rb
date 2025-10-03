@@ -1,23 +1,10 @@
 class Zf < Formula
   desc "Command-line fuzzy finder that prioritizes matches on filenames"
   homepage "https://github.com/natecraddock/zf"
+  url "https://github.com/natecraddock/zf/archive/refs/tags/0.10.3.tar.gz"
+  sha256 "ae8f088dd25a10406e8f7a27d9ddc555d28d746950fd653f4cfe42ab0b903f58"
   license "MIT"
   head "https://github.com/natecraddock/zf.git", branch: "main"
-
-  stable do
-    url "https://github.com/natecraddock/zf/archive/refs/tags/0.10.2.tar.gz"
-    sha256 "b8e41f942c7033536fd64f9edea467a7ff4f45d52885d585f0adafb7803ac0ed"
-
-    # Backport support for Zig 0.14.0
-    patch do
-      url "https://github.com/natecraddock/zf/commit/ed99ca18b02dda052e20ba467e90b623c04690dd.patch?full_index=1"
-      sha256 "00d1dc4f178fb30bb8cb1e29a517f66f5672e2024a3aaa9413f16dcb4cbdb1b1"
-    end
-    patch do
-      url "https://github.com/natecraddock/zf/commit/03176fcf23fda543cc02a8675e92c1fe3b1ee2eb.patch?full_index=1"
-      sha256 "0c3be877327fe3a2258d9f9c43fa2f6d310e5b65aa2ab35bcc9262f05242d552"
-    end
-  end
 
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_tahoe:   "c1b7c05de35a1d57833aff7309fbe7f05d98ad80686ab6233906a5c5e458c9f3"
@@ -30,12 +17,9 @@ class Zf < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "a9bfaef19e583a5409511f21a9853c0c37d5ea0067782cce94a92ea791200c4b"
   end
 
-  depends_on "zig@0.14" => :build
+  depends_on "zig" => :build
 
   def install
-    # Undo version update from patch
-    inreplace "build.zig.zon", '"0.10.3"', "\"#{version}\"" if build.stable?
-
     system "zig", "build", *std_zig_args
 
     man1.install "doc/zf.1"

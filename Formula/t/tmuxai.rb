@@ -6,13 +6,11 @@ class Tmuxai < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "04bef56cdc97d84a09c2006b5c941ad15bba4e87a43bddfce6a518ca119a78ad"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "6b09a604e48cade9d253a488e41ed82a0e734478b14654a95314edd8dcf4c7ca"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "6b09a604e48cade9d253a488e41ed82a0e734478b14654a95314edd8dcf4c7ca"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "6b09a604e48cade9d253a488e41ed82a0e734478b14654a95314edd8dcf4c7ca"
-    sha256 cellar: :any_skip_relocation, sonoma:        "f4d33c8b02837e8009107cd8d60ac177291d2ad78dae79f8c3b4db3ea28c3a81"
-    sha256 cellar: :any_skip_relocation, ventura:       "f4d33c8b02837e8009107cd8d60ac177291d2ad78dae79f8c3b4db3ea28c3a81"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "38c53e1b8d863d90e44b67d62b910dce4d0e93c755897870df1b6bc5a38487f4"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "5dc7a133131bd0d4d8ce910b93ba143dcefebd68fd48facc08c7078b37c5b7a8"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "5dc7a133131bd0d4d8ce910b93ba143dcefebd68fd48facc08c7078b37c5b7a8"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "5dc7a133131bd0d4d8ce910b93ba143dcefebd68fd48facc08c7078b37c5b7a8"
+    sha256 cellar: :any_skip_relocation, sonoma:        "9f6032c6d3e357265d83c96bec89d385d565005eabfb421091681deaf709a297"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "4cb94895edc37ef1e1d9f1575241ff02445e5de2f1931b74da083a1fc063e80c"
   end
 
   depends_on "go" => :build

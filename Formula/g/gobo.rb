@@ -1,11 +1,9 @@
 class Gobo < Formula
   desc "Free and portable Eiffel tools and libraries"
   homepage "https://www.gobosoft.com/"
-  url "https://downloads.sourceforge.net/project/gobo-eiffel/gobo-eiffel/25.09/gobo-25.09.tar.gz"
-  sha256 "40f7b64dbbeca28865c78df07194ac5da2ec701a41c53ed7e137337a03a2e38a"
+  url "https://downloads.sourceforge.net/project/gobo-eiffel/gobo-eiffel/25.10/gobo-25.10.tar.gz"
+  sha256 "09775e976891df2e118b33daa045871da0bed25df4a61bcd36ca3b44a7ac4c9c"
   license "MIT"
-
-  no_autobump! because: :requires_manual_review
 
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_tahoe:   "0aaba4f008e105ca513742945acfb21ba9a2de3bdc780f0bb8fb7a70659092a7"

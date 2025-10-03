@@ -1,8 +1,8 @@
 class Turso < Formula
   desc "Interactive SQL shell for Turso"
   homepage "https://github.com/tursodatabase/turso"
-  url "https://github.com/tursodatabase/turso/archive/refs/tags/v0.1.4.tar.gz"
-  sha256 "8be7fdd8e5f3c996a038d7676c80829b5414b07c4af14ef7de6219f03835f2d6"
+  url "https://github.com/tursodatabase/turso/archive/refs/tags/v0.2.0.tar.gz"
+  sha256 "3674566ce7115dc6ba4f3598fa9c204e229098a16388eb7ec9079451c96a2dd8"
   license "MIT"
   head "https://github.com/tursodatabase/turso.git", branch: "main"
 
@@ -25,7 +25,16 @@ class Turso < Formula
   depends_on "rust" => :build
   uses_from_macos "sqlite" => :test
 
+  # Fix to error unsupported option '-mcrypto|-maes' for target 'arm64-apple-macosx'
+  # PR ref: https://github.com/tursodatabase/turso/pull/3561
+  patch do
+    url "https://github.com/tursodatabase/turso/commit/0ef0c7587979ce3f6863599e387c9ef6e93abe75.patch?full_index=1"
+    sha256 "788ffb4a456318a16073784b940fe6c10376dc54bc4408ca6d55db068b888303"
+  end
+
   def install
+    # Workaround to build `aegis v0.9.3` for arm64 linux without -march `sha3`
+    ENV.append_to_cflags "-march=native" if OS.linux? && Hardware::CPU.arm?
     system "cargo", "install", *std_cargo_args(path: "cli")
   end
 

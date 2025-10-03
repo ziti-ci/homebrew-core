@@ -2,6 +2,7 @@ class Julia < Formula
   desc "Fast, Dynamic Programming Language"
   homepage "https://julialang.org/"
   license all_of: ["MIT", "BSD-3-Clause", "Apache-2.0", "BSL-1.0"]
+  revision 1
 
   stable do
     # Use the `-full` tarball to avoid having to download during the build.
@@ -53,7 +54,7 @@ class Julia < Formula
   depends_on "libnghttp2"
   depends_on "libssh2"
   depends_on "mpfr"
-  depends_on "openblas"
+  depends_on "openblas64"
   depends_on "openlibm"
   depends_on "p7zip"
   depends_on "pcre2"
@@ -99,11 +100,11 @@ class Julia < Formula
       USE_SYSTEM_UTF8PROC=1
       USE_SYSTEM_ZLIB=1
       VERBOSE=1
-      LIBBLAS=-lopenblas
-      LIBBLASNAME=libopenblas
-      LIBLAPACK=-lopenblas
-      LIBLAPACKNAME=libopenblas
-      USE_BLAS64=0
+      LIBBLAS=-lopenblas64_
+      LIBBLASNAME=libopenblas64_
+      LIBLAPACK=-lopenblas64_
+      LIBLAPACKNAME=libopenblas64_
+      USE_BLAS64=1
       WITH_TERMINFO=0
     ]
 

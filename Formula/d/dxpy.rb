@@ -8,14 +8,12 @@ class Dxpy < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "570f5f5b982d55578d8f24ad53992a82b0b69d5990947980f2e7b598f3947798"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "c8c0af6fb9090423fb514204e07ce77ce72ee6e537544d8d87962d04ea14c921"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "d035248538b7cf0f64992dc08426d106a2800ba6a3f2d3b95d3190520f88eb61"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "176b311f09f2cbf21d8f5316dc1f32c04040b6bdd249a071f0530a2cc374c304"
-    sha256 cellar: :any_skip_relocation, sonoma:        "6634c3c0ff84dc553b8a8a4ce617b097ff951d0d4cee78b4aeceddd0e4203cfb"
-    sha256 cellar: :any_skip_relocation, ventura:       "2b7f0d3e7926591ce789e1a7248c09f5cd36a3e1abe14b5831f567e7f6e57ded"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "30bc2e8afaf7c9da3787ced580e9f86834508d2199a35f51375adc554ab35f97"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "eddcc46514e1a84054f603d5d88c84de9872ac85f18963ecbd1dd376a69590eb"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "2f28428e1d473b45a04ca747aa9881cd5581626987d1f8a1256822c61a8ac721"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "d6c695b75640696a511d39e1de87b507bc66e4fb552a7261cc42cee90597ae04"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "1125db37e5854fa2ce1a4d05f3068b6b4cafb7d81d978c1b672e5e4f4d8a448b"
+    sha256 cellar: :any_skip_relocation, sonoma:        "ca4f2e999e03f83fe398fce7b07ff48c0095f4894325b3814f46f15d16f76e08"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "77e301546045002ea570beb451faf290187d988e8e5b84fe99f6591cd6c790c1"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "7211ee5accc21a813976897430526b0577c7f6b2a79e63147789c9f8aeb88e57"
   end
 
   depends_on "certifi"

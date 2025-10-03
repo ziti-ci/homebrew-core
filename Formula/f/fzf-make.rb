@@ -6,6 +6,8 @@ class FzfMake < Formula
   license "MIT"
   head "https://github.com/kyu08/fzf-make.git", branch: "main"
 
+  no_autobump! because: :bumped_by_upstream
+
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_tahoe:   "540a10dbfd1eba171dca9684fc9faf0319a5ca8f45928a36e52e0377c052b2ed"
     sha256 cellar: :any_skip_relocation, arm64_sequoia: "078bf964b0798c8a2a3f69139ca3042e3f508b3de2dbf9551c1784f83a359efa"

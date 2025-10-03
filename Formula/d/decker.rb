@@ -1,8 +1,8 @@
 class Decker < Formula
   desc "HyperCard-like multimedia sketchpad"
   homepage "https://beyondloom.com/decker/"
-  url "https://github.com/JohnEarnest/Decker/archive/refs/tags/v1.59.tar.gz"
-  sha256 "dfa3008810eb64d767adb2cdb73ccf1a1e54480e749ac2f82ab9de21c4a32320"
+  url "https://github.com/JohnEarnest/Decker/archive/refs/tags/v1.60.tar.gz"
+  sha256 "7ead137f20588711c50e04a432c84f1ac1ca7fa71f3e7bf547b315ce34891a9a"
   license "MIT"
 
   bottle do

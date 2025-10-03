@@ -1,8 +1,8 @@
 class Burrow < Formula
   desc "Kafka Consumer Lag Checking"
   homepage "https://github.com/linkedin/Burrow"
-  url "https://github.com/linkedin/Burrow/archive/refs/tags/v1.9.4.tar.gz"
-  sha256 "2881112e8fb4e5a662389a582c6044ed0e3359a03e26f446b8242929a7f82423"
+  url "https://github.com/linkedin/Burrow/archive/refs/tags/v1.9.5.tar.gz"
+  sha256 "9d9b7502cfbee6038af80c3bbfa651ae2437f07ec0756aa2b6c874d516b4ffae"
   license "Apache-2.0"
   head "https://github.com/linkedin/Burrow.git", branch: "master"
 

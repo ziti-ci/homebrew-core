@@ -1,8 +1,8 @@
 class Gonzo < Formula
   desc "Log analysis TUI"
   homepage "https://gonzo.controltheory.com/"
-  url "https://github.com/control-theory/gonzo/archive/refs/tags/v0.2.0.tar.gz"
-  sha256 "e8ced8e3ec429c41a0e2dfd3cc11fd1a48af36ddfdbc4fa544100b793444c92f"
+  url "https://github.com/control-theory/gonzo/archive/refs/tags/v0.2.1.tar.gz"
+  sha256 "c8a0c7d3c27049f80b725c723fa08369624615820f2a57889ec36b1156118bf0"
   license "MIT"
   head "https://github.com/control-theory/gonzo.git", branch: "main"
 

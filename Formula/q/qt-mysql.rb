@@ -12,13 +12,11 @@ class QtMysql < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_tahoe:   "b06e1ca10c15615618ceb3a503ff9c63b89ef264b251ab4ead41de02057f9fc5"
-    sha256 cellar: :any,                 arm64_sequoia: "7e0579f0cc978be57c0073d76ffc8413411cfd1bebbd84d4d7b8b6933fb453d1"
-    sha256 cellar: :any,                 arm64_sonoma:  "0ddd196d14705216cf02ad45664574808afb15fb57add74644746aab0c44a782"
-    sha256 cellar: :any,                 arm64_ventura: "4a79c721100b07f6ac9a586017d11c829f9867f750747511f703682e66d2432e"
-    sha256 cellar: :any,                 sonoma:        "ab3ed1eb9ccb3af390d36533d0efc37a4363f4c18433a549e86fdbc5f5d33fbf"
-    sha256 cellar: :any,                 ventura:       "645d832c8683a09c45b8e982c53d4ceecd427b17026fccbb7689662a4d5bd3e8"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "22997bf223fc3afb26eb702aacca8f06edf561475ef6d4e9467d8c6f8580e1d8"
+    sha256 cellar: :any,                 arm64_tahoe:   "40a0ca101e970f1d964a20ea27b2b265e7bbff20d18fe2c496e0a378e0d8a933"
+    sha256 cellar: :any,                 arm64_sequoia: "cb39625e7ecc3d831816a78ded763f008b17638f06a6b805ff073f1af0a7c25d"
+    sha256 cellar: :any,                 arm64_sonoma:  "5e657faa6c8719a3ec947b74be625ab0aa69fa8cfa300ae9abeddd7fdfe27651"
+    sha256 cellar: :any,                 sonoma:        "4eb26a9b9cc88ebb0a67577fb709b5a6695e545eca42f4031b9a04551e11bd5c"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "d512ed74acd9d1509d6d0e9ee829ca01cdb0e4d2ce96904a1a0c196587e3ad3e"
   end
 
   depends_on "cmake" => [:build, :test]

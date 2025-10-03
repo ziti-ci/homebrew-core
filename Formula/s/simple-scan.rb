@@ -1,9 +1,11 @@
 class SimpleScan < Formula
   desc "GNOME document scanning application"
   homepage "https://gitlab.gnome.org/GNOME/simple-scan"
-  url "https://download.gnome.org/sources/simple-scan/46/simple-scan-46.0.tar.xz"
-  sha256 "c16e6590142fe563be5143122b3bbb53f6b00a7da9d952f61c47fa26f7b4f0a9"
+  url "https://download.gnome.org/sources/simple-scan/49/simple-scan-49.0.1.tar.xz"
+  sha256 "e19762422663ef4bf5d39f6e75f4d61a8de1813729a96e57e04e81764e01eae2"
   license "GPL-3.0-or-later"
+
+  no_autobump! because: :incompatible_version_format
 
   bottle do
     rebuild 1

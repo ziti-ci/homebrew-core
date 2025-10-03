@@ -1,8 +1,8 @@
 class Snapcast < Formula
   desc "Synchronous multiroom audio player"
   homepage "https://github.com/badaix/snapcast"
-  url "https://github.com/badaix/snapcast/archive/refs/tags/v0.33.0.tar.gz"
-  sha256 "5da21ab4a609550308be389d6af628628a89b6beb1d6e996ad2e4960e8e36d1d"
+  url "https://github.com/badaix/snapcast/archive/refs/tags/v0.34.0.tar.gz"
+  sha256 "a2918ea4d1f9b2df9c4247fd71bd452ea03a5d20ac44f60a736df90488858944"
   license "GPL-3.0-or-later"
 
   bottle do

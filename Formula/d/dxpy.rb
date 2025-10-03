@@ -3,8 +3,8 @@ class Dxpy < Formula
 
   desc "DNAnexus toolkit utilities and platform API bindings for Python"
   homepage "https://github.com/dnanexus/dx-toolkit"
-  url "https://files.pythonhosted.org/packages/98/44/f0bd42415231c102ea570809cfa96c8ce95c9eb01b0768445c4e9c62a2f2/dxpy-0.398.0.tar.gz"
-  sha256 "9d4254f9366a2126d8c0d47fc613decde832de13875b6f4bb09e19f14b830fe3"
+  url "https://files.pythonhosted.org/packages/48/a8/e92a62d609bcc08b2e7afaf97380e50dbff8ccc3c689d3ba4cb56db2bd21/dxpy-0.399.0.tar.gz"
+  sha256 "807ec02d82e1153d95c2522403c2b363c050caeae91ec2379ffc6299fb8b9441"
   license "Apache-2.0"
 
   bottle do
@@ -39,8 +39,8 @@ class Dxpy < Formula
   end
 
   resource "psutil" do
-    url "https://files.pythonhosted.org/packages/2a/80/336820c1ad9286a4ded7e845b2eccfcb27851ab8ac6abece774a6ff4d3de/psutil-7.0.0.tar.gz"
-    sha256 "7be9c3eba38beccb6495ea33afd982a44074b78f28c434a1f51cc07fd315c456"
+    url "https://files.pythonhosted.org/packages/b3/31/4723d756b59344b643542936e37a31d1d3204bcdc42a7daa8ee9eb06fb50/psutil-7.1.0.tar.gz"
+    sha256 "655708b3c069387c8b77b072fc429a57d0e214221d01c0a772df7dfedcb3bcd2"
   end
 
   resource "python-dateutil" do

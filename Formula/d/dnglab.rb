@@ -1,8 +1,8 @@
 class Dnglab < Formula
   desc "Camera RAW to DNG file format converter"
   homepage "https://github.com/dnglab/dnglab"
-  url "https://github.com/dnglab/dnglab/archive/refs/tags/v0.7.0.tar.gz"
-  sha256 "dffe4dd94913a687184b2a453eeb170c87afbca62ecf3a4bc680e5f5bf22cacc"
+  url "https://github.com/dnglab/dnglab/archive/refs/tags/v0.7.1.tar.gz"
+  sha256 "9a62c63a0775c946ccc378dbbc0f9206f593659f2f998cfb66bf6a0f64487e2f"
   license "LGPL-2.1-only"
 
   bottle do

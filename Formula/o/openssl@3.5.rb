@@ -11,6 +11,17 @@ class OpensslAT35 < Formula
     regex(/href=.*?openssl[._-]v?(3\.5(?:\.\d+)+)\.t/i)
   end
 
+  bottle do
+    sha256 arm64_tahoe:   "3f8bedcacdb7003d1f31e3fd31934930db0d2a9a075e414db2b4e688fa0235c6"
+    sha256 arm64_sequoia: "463f3305e7169463418f6a7253d34d8fc1121ed2ea010f729b1cbaa53e725f9f"
+    sha256 arm64_sonoma:  "d8fb4693f129b1ba731f9aa45c363b27638957257fa5dce2dedae99c0200d690"
+    sha256 tahoe:         "9a1f1cefcfb5fae1a0a704a9f64f4de3566c6d7c3d4d47e1b25044a9ea6a8480"
+    sha256 sequoia:       "100f356386eac48209d0d7a5c2b862c42e510a023a834e38a5f96eaab6865279"
+    sha256 sonoma:        "63bc3e14d04134c4ffdf6a1fec48dc84afd00eab66b3524d60fda99bdb140d13"
+    sha256 arm64_linux:   "799f0fd4ae8b431cd585197a1e51f24aa7165fc41df5ce217059dc70c733924c"
+    sha256 x86_64_linux:  "1399dde9e564f3bfc422bcdc358327a075d471a75b0eb1d79a07fe2f9543538f"
+  end
+
   keg_only :versioned_formula
 
   depends_on "ca-certificates"

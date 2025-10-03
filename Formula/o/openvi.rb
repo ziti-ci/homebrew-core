@@ -9,14 +9,12 @@ class Openvi < Formula
   no_autobump! because: :requires_manual_review
 
   bottle do
-    sha256 cellar: :any,                 arm64_tahoe:   "e5817df5472053cf7d429e95a2e6e0d43acbdb10ab4eeae29a71f758659a08b8"
-    sha256 cellar: :any,                 arm64_sequoia: "7782e6ed0969f0329395994ababca79b94ea7a8e576b97cdb71ec6698f070e45"
-    sha256 cellar: :any,                 arm64_sonoma:  "3516b1e080308c873e3d03a050a07f0e0515abe4baa306cd9bc8a838371a7d1f"
-    sha256 cellar: :any,                 arm64_ventura: "51f83e5960cdae0f320dd3d9c84b0130c454bf30f834b196c0ad204d979b4b13"
-    sha256 cellar: :any,                 sonoma:        "bb4fcc6193748bca32f6d5994ac0d03305a1656ebca9ab146cffe8f2d0efbe10"
-    sha256 cellar: :any,                 ventura:       "a8f35299f732a8d44488d8dbfdcdcc697f4b2e3e0c26e3b9c20d0a00a01ede58"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "639cbb47ed0bfba8d0a0623d0a8b2cc804408088169992779c42c09d74d78206"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "ec194a9a4049c4c7ae786e494072d97261b1d0865661819796668caa2ad893be"
+    sha256 cellar: :any,                 arm64_tahoe:   "7f9f98c1766d28f774755c5504a4e0009aa9075d0810dac96a43f670543d0836"
+    sha256 cellar: :any,                 arm64_sequoia: "21592b330f84b246945cb28063a11879f1eefe50df87ac000693362cc6cbe882"
+    sha256 cellar: :any,                 arm64_sonoma:  "812ae5e06f44b6adccb233053f542332536be62b4d4dcb6d75c52aa4636ec213"
+    sha256 cellar: :any,                 sonoma:        "ab51a0599172f446d17f61bf0a1c93816100854d58bf6875fb1ae1635d97d662"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "72b16c18985eafe024d7cfe55047850f7e36375d0ca6aa42e84f2dc0b701eb36"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "070f50496b0c46cc89f50bc2884e227658778557f745a8f061cdebfe5e2c94a0"
   end
 
   depends_on "pkgconf" => :build

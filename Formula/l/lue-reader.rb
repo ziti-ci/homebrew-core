@@ -3,8 +3,8 @@ class LueReader < Formula
 
   desc "Terminal eBook reader with text-to-speech and multi-format support"
   homepage "https://github.com/superstarryeyes/lue"
-  url "https://files.pythonhosted.org/packages/2b/22/e504c7b670ba2b40444cd25a4420ca77dac3d15e12b518b96e4a9db2685d/lue_reader-0.2.0.tar.gz"
-  sha256 "707f11d7992b2512e47c5ceaf4273dc1937b2f366955caf1bf776cbd97fbf4da"
+  url "https://files.pythonhosted.org/packages/61/93/5cd6b664878f09e0f9c8e487cd7b4f91e14a5a2cc33ebe4e0641cbb9e0bc/lue_reader-0.3.0.tar.gz"
+  sha256 "f54413d8b4e689c6d676f48eb27ef277361a8ba1a75ae40d37fd0b39d4ee610b"
   license "GPL-3.0-only"
 
   bottle do

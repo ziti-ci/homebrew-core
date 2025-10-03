@@ -20,7 +20,7 @@ class Libblastrampoline < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "e90636c4edc3ae00b4dceca5182d409ab08d7327cac94274635fbcd454c4745c"
   end
 
-  depends_on "openblas" => :test
+  depends_on "openblas64" => :test
 
   def install
     system "make", "-C", "src", "install", "prefix=#{prefix}"
@@ -52,10 +52,12 @@ class Libblastrampoline < Formula
     system ENV.cc, "dgemm_test.c", "-I#{include}", "-L#{lib}", "-lblastrampoline", "-o", "dgemm_test"
     system ENV.cc, "api_test.c", "-I#{include}", "-L#{lib}", "-lblastrampoline", "-o", "api_test"
 
-    test_libs = [shared_library("libopenblas")]
+    test_libs = [shared_library("libopenblas64_")]
     if OS.mac?
       test_libs << "/System/Library/Frameworks/Accelerate.framework/Accelerate"
-      ENV["DYLD_LIBRARY_PATH"] = Formula["openblas"].opt_lib.to_s
+      ENV["DYLD_LIBRARY_PATH"] = Formula["openblas64"].opt_lib.to_s
+    else
+      ENV["LD_LIBRARY_PATH"] = Formula["openblas64"].opt_lib.to_s
     end
 
     test_libs.each do |test_lib|

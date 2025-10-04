@@ -11,16 +11,12 @@ class Nasm < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:    "d923fce503d38dfb91f3b6348b35b1ca1bd35a83db61ac45f029e135707a33f5"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:  "7f641dcb5ae03d3eebbfe11b3284a1b655f794f79a9aabf8c396003d8940d059"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "c04988e99839f591ced743c876289c18fb403b3a6826effaa3a0a9ba9385ddbc"
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "265e501fd778167b9c9122097acbf94c0d0577b8c5e2e94722d88cc89a07ba3f"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "f354fd20ce32d149d1fe08b9cc5ba1c1facdd19d6c3ee16c88ecdeaef3d012e2"
-    sha256 cellar: :any_skip_relocation, sonoma:         "81b2abb78f56dc299b3cd69a8626b04997f6fd06df71f3d56058331089a58a4e"
-    sha256 cellar: :any_skip_relocation, ventura:        "79b87e6bfcb38df38909219e8ae172e970324236074912a5a23704449e5e097b"
-    sha256 cellar: :any_skip_relocation, monterey:       "7d00b410fdb6d366f344057cb17fa58b5d65c6ee888394bd14c5e210122d0b8a"
-    sha256 cellar: :any_skip_relocation, arm64_linux:    "1b5609eb18359a83013e5dfa1371b802602d9676802736df2ed0a1cef211c582"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "138876a9a24c01fda90cecba6aaba7b6e8e94e95768215338e709cc63b80821c"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "068e7ce07b423159f2ed316cada16a18a6c0d3fa404b79ed7b6bcec4d18c3535"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "6126cc68af10ddee8770180ed769611b14bdac77f9acc1c85408011ae98fdb55"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "93b503ad90057283109124c968b2ff861b93152cbe8a28406c2a7b0d564d74d3"
+    sha256 cellar: :any_skip_relocation, sonoma:        "1f9ea5599a562f49789fd287ae73312bedab53ec52e0da9a26ca13321fbeb3e3"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "16df305a4d33ee046fe0657ad83f18218ad44c602498cfecbd784918394471af"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "d474eca8ca7672936d93a1dc01a8800dd439aaac04de37ed233a69f6b18d9c31"
   end
 
   head do

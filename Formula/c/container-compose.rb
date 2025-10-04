@@ -6,6 +6,10 @@ class ContainerCompose < Formula
   license "MIT"
   head "https://github.com/mcrich23/container-compose.git", branch: "main"
 
+  bottle do
+    sha256 arm64_tahoe: "0d34c45230d457ddb5cc2398256e90e43eb37a5d01f00d97a432f6fe7e896fc3"
+  end
+
   depends_on xcode: ["26.0", :build]
   depends_on arch: :arm64
   depends_on macos: :sequoia

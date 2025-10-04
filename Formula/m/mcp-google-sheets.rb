@@ -7,6 +7,14 @@ class McpGoogleSheets < Formula
   sha256 "9ba9d779baf47c383eec5246d52c19af580f236999a7e99f4a02e8545e31cff7"
   license "MIT"
 
+  bottle do
+    sha256 cellar: :any,                 arm64_tahoe:   "ce7513f28b1f54316530cf7bf6e3cff349c2a29b57edf92ce8506defdaa6229f"
+    sha256 cellar: :any,                 arm64_sequoia: "8a41bdd921e8c8c1b6cbb853f6b00461ad14beca89ab8b0d329935ac137806e1"
+    sha256 cellar: :any,                 arm64_sonoma:  "321c21e1a7a1702f5d04e4f5bf12f5f85389286353538d1798d4d5d8160f475d"
+    sha256 cellar: :any,                 sonoma:        "7c57342adddb46387d57757c53236812cc841cb00c0996a0ae71b4d77bae3477"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "a57ad528fb47c616d78944b77f2982d67861748f4659094ff3525b86f85ec76b"
+  end
+
   depends_on "rust" => :build # for pydantic
   depends_on "certifi"
   depends_on "python@3.13"

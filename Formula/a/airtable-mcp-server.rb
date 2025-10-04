@@ -5,6 +5,10 @@ class AirtableMcpServer < Formula
   sha256 "9f6a03d82ca85b73c6de0c7eb1fdbacda3cae123ae85c51a2d624aed582ff09e"
   license "MIT"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "46a91506a1f01d0aeafd615702426404e86ec2f9f5f198f0061c84e2189566ab"
+  end
+
   depends_on "node"
 
   def install

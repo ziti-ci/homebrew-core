@@ -10,6 +10,7 @@ class Snooze < Formula
     sha256 cellar: :any_skip_relocation, arm64_sequoia: "a242f88d5027b13edbaf3aa5bada7121f8bbe239dcb2aa4200fbb277d017fcd9"
     sha256 cellar: :any_skip_relocation, arm64_sonoma:  "574501024e100924970d083d8e18c99ac857a491513e5c5a3a2ac7328e29b626"
     sha256 cellar: :any_skip_relocation, sonoma:        "fbeda0b945fd00cd421ff125ad342fde3d205a00251a263ffca5acbc332fe4e3"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "71a32859378d3d23ceed3b0174af3fbbcbffc727acb2dc191507e2229dc864bf"
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "d1a636a409a86b9d904cf1d8a5e8aa9fc7ee94fc2015308daf907413200e8f63"
   end
 

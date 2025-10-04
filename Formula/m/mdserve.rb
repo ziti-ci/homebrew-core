@@ -11,6 +11,7 @@ class Mdserve < Formula
     sha256 cellar: :any_skip_relocation, arm64_sequoia: "9da96a7c01a54437bd45e18dcb3bdca9b7d2bf263baa09ac2810dc31b37e3ece"
     sha256 cellar: :any_skip_relocation, arm64_sonoma:  "4a99334cac55dbe1eb4976c50c6c6576cd2067ba4b29ad899ebf68604332df31"
     sha256 cellar: :any_skip_relocation, sonoma:        "830c84c66e9b3415f2f78abfbd3aab1355aec1299e2a180717f2db2e1cb09a56"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "6bab127daef99cf916e2ff494a16d208cf4146de365a3e8738f5180041dfee67"
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "29614d94f3302890b600e5aa27161ed81ccfbcce2e0dea07d3b7fdbf963ea3f5"
   end
 

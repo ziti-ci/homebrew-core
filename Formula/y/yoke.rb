@@ -3,8 +3,8 @@ class Yoke < Formula
   homepage "https://yokecd.github.io/docs/"
   # We use a git checkout since the build relies on tags for the version
   url "https://github.com/yokecd/yoke.git",
-      tag:      "v0.16.10",
-      revision: "1337bbe0c421def876bda9b712d62e78770400ce"
+      tag:      "v0.16.11",
+      revision: "d346dc566f5881ad940a88e0fe4169fe7a3f8680"
   license "MIT"
   head "https://github.com/yokecd/yoke.git", branch: "main"
 

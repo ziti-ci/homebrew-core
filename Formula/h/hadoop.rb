@@ -1,9 +1,9 @@
 class Hadoop < Formula
   desc "Framework for distributed processing of large data sets"
   homepage "https://hadoop.apache.org/"
-  url "https://www.apache.org/dyn/closer.lua?path=hadoop/common/hadoop-3.4.1/hadoop-3.4.1.tar.gz"
-  mirror "https://archive.apache.org/dist/hadoop/common/hadoop-3.4.1/hadoop-3.4.1.tar.gz"
-  sha256 "9ad5487833996dfe5514e756f4391029c90529fd22e8d002fd3dd0c14c04ba46"
+  url "https://www.apache.org/dyn/closer.lua?path=hadoop/common/hadoop-3.4.2/hadoop-3.4.2.tar.gz"
+  mirror "https://archive.apache.org/dist/hadoop/common/hadoop-3.4.2/hadoop-3.4.2.tar.gz"
+  sha256 "fe5cb5b4fd4fd0f8dad3a96eb2fdac077a619d74c018bc358ff5608815a2d40a"
   license "Apache-2.0"
 
   livecheck do

@@ -112,11 +112,6 @@ class Flexget < Formula
     sha256 "0ae13d77e7d7e4dce513970cfa9db45364aef210e99022de26d2b73eb4dbced5"
   end
 
-  resource "greenlet" do
-    url "https://files.pythonhosted.org/packages/03/b8/704d753a5a45507a7aab61f18db9509302ed3d0a27ac7e0359ec2905b1a6/greenlet-3.2.4.tar.gz"
-    sha256 "0dca0d95ff849f9a364385f36ab49f50065d76964944638be9691e1832e9f86d"
-  end
-
   resource "guessit" do
     url "https://files.pythonhosted.org/packages/d0/07/5a88020bfe2591af2ffc75841200b2c17ff52510779510346af5477e64cd/guessit-3.8.0.tar.gz"
     sha256 "6619fcbbf9a0510ec8c2c33744c4251cad0507b1d573d05c875de17edc5edbed"
@@ -322,6 +317,11 @@ class Flexget < Formula
     sha256 "abb5d9ec790cc5e4f9431778029ba3e3d9ba9bd50cb306dad824824b2b362dcd"
   end
 
+  resource "transmission-rpc" do
+    url "https://files.pythonhosted.org/packages/68/b8/dc4debf525c3bb8a676f4fd0ab8534845e3b067c78a81ad05ac39014d849/transmission_rpc-7.0.11.tar.gz"
+    sha256 "5872322e60b42e368bc9c4724773aea4593113cb19bd2da589f0ffcdabe57963"
+  end
+
   resource "typing-extensions" do
     url "https://files.pythonhosted.org/packages/72/94/1a15dd82efb362ac84269196e94cf00f187f7ed21c242792a923cdb1c61f/typing_extensions-4.15.0.tar.gz"
     sha256 "0cea48d173cc12fa28ecabc3b837ea3cf6f38c6d1136f85cbaaf598984861466"
@@ -363,6 +363,8 @@ class Flexget < Formula
   end
 
   def install
+    ENV["BUNDLE_WEBUI"] = "true"
+
     venv = virtualenv_install_with_resources without: "pyzstd"
     # We need to build separately to link to our `zstd`.
     resource("pyzstd").stage do
@@ -372,12 +374,25 @@ class Flexget < Formula
     end
   end
 
+  service do
+    run [opt_bin/"flexget", "--cron", "daemon", "start"]
+    keep_alive true
+  end
+
   test do
-    (testpath/"config.yml").write <<~END
+    (testpath/"config.yml").write <<~YAML
+      variables:
+        media_folder: ~/Downloads
+      web_server: yes
+      schedules:
+        - tasks: [task-1]
+          interval:
+            minutes: 30
       tasks:
         task-1:
           rss: https://example.com/rss
-    END
+          transmission: yes
+    YAML
     system bin/"flexget", "-c", "#{testpath}/config.yml", "check"
   end
 end

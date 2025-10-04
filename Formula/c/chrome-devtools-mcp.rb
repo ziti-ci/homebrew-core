@@ -5,6 +5,14 @@ class ChromeDevtoolsMcp < Formula
   sha256 "6a3bf7b741efc718fe2e6b75ba97b9b0d7885b957bd4bae2c2dbcb7cd1aa6ddb"
   license "Apache-2.0"
 
+  bottle do
+    sha256 cellar: :any,                 arm64_tahoe:   "12c34323b1c61898fefeef0a95110dbfce20bc6e944150007f660121ce106cde"
+    sha256 cellar: :any,                 arm64_sequoia: "893fbbd23c6bb5504b08bb6623b2ffd89584c6663f2a0856fc208f0a623fb3d6"
+    sha256 cellar: :any,                 arm64_sonoma:  "893fbbd23c6bb5504b08bb6623b2ffd89584c6663f2a0856fc208f0a623fb3d6"
+    sha256 cellar: :any,                 sonoma:        "dab866e9d85b119f75836cb17276d9e6f95c2951ae6532707371b4a6bba4d017"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "eeee5e1d7af1fbc1c5974252f1c1319df1f83f43277c2b3156e668e6bc222a49"
+  end
+
   depends_on "node"
 
   def install

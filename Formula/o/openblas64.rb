@@ -16,6 +16,15 @@ class Openblas64 < Formula
     strategy :github_latest
   end
 
+  bottle do
+    sha256 cellar: :any,                 arm64_tahoe:   "8899867d228f7316c37e782107ecb612f143972f7a2a1341e7db605655fee883"
+    sha256 cellar: :any,                 arm64_sequoia: "ea0034f6593d99bdc6ff3aee1a87230e56a68ae2fa6a7aca7035d7b5edf5c222"
+    sha256 cellar: :any,                 arm64_sonoma:  "9334ed383743828179e954dc50afcb2f23cd969b6205ac70c8edeb88e6a55c20"
+    sha256 cellar: :any,                 sonoma:        "b3cc1a88e1e76a8e78393ffa503e0589a7a11252722e1d823245f682a136e398"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "fc783506f2fc87c6ab3990e8b852f488ac342a025ee19028c0cbfec4c72ffe05"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "930cf8ef811f2bf037e07a2448db3eb339e039727b36dbc319bd630a3943db63"
+  end
+
   keg_only "the headers conflict with `openblas`"
 
   depends_on "objconv" => :build

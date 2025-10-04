@@ -14,12 +14,12 @@ class Faust < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_tahoe:   "c63ae6d26a33ecf3d9231b5ac1a75b4a9ec7c3b5e9ae38775bb91e7882ee8dd8"
-    sha256 cellar: :any,                 arm64_sequoia: "f026127aaf3d4122e4ec584c94cad7a2e705dc3a6be8bdd20862a7afca12a6c3"
-    sha256 cellar: :any,                 arm64_sonoma:  "180bac0f4952d763b8dbea74a15faa8cba738c241a082506bbc3ddb1d4e17b9e"
-    sha256                               sonoma:        "a18c9563d11c151639252e8328da865fe2cbe7f2954eabe0f2086609c00807dc"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "5658a77c19930cfef1ce154ae9495a021a018ee8e69e5698aa30c702151b5c60"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "760cb14ca664bb8556103910dae5125b2d99e8282e8439c7de3b03868a13dd9d"
+    sha256 cellar: :any,                 arm64_tahoe:   "6a353e7f551174445ed07a4bc0805d45589fb83514f39c5eae3cfa2d0b81c50d"
+    sha256 cellar: :any,                 arm64_sequoia: "8909642b7721bf43b82bedb13629ba6f91fc854a7e4966f2207581456e06686f"
+    sha256 cellar: :any,                 arm64_sonoma:  "a2c4e8ee05b22eea93c9848ffe2f8e6957423c4a92482bc2c96e2421b7e617e2"
+    sha256                               sonoma:        "507d61e03410597c2e013bab22d0c7a34dc114cc2e567e05d8a30b5431011e2c"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "2897244cb1b353185a64cc3b4ecad2bdbd1315f434bfeb83f7b9e9a3e6aecc14"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "f25b19eb6f8ef3e7b079124fec93acca9fabc8bc1f0190a42a23f887791d39be"
   end
 
   depends_on "cmake" => :build

@@ -28,6 +28,13 @@ class Alpscore < Formula
     sha256 "9cb67c3d457a99fc799a60e8fcae0af63b99ebb18b5279b449ce9c0c1445077a"
   end
 
+  # Apply open PR to support Eigen 5.0.0
+  # PR ref: https://github.com/ALPSCore/ALPSCore/pull/651
+  patch do
+    url "https://github.com/ALPSCore/ALPSCore/commit/0a7952abb3570e48d04d435d7d9d16ecbd06fb2a.patch?full_index=1"
+    sha256 "f007f65367528149ce5c4ad871aea600bbe05dd374c100588d577a07e3a05818"
+  end
+
   def install
     # Work around different behavior in CMake-built HDF5
     inreplace "common/cmake/ALPSCommonModuleDefinitions.cmake" do |s|

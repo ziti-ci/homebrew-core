@@ -6,7 +6,7 @@ class Nb < Formula
   license "AGPL-3.0-or-later"
   head "https://github.com/xwmx/nb.git", branch: "master"
 
-  no_autobump! because: :requires_manual_review
+  no_autobump! because: :bumped_by_upstream
 
   bottle do
     sha256 cellar: :any_skip_relocation, all: "1e9ae7876bc73cc4bd96c658ae4d78b87c7f521cd6b5eaacd7075c75d9e92f54"

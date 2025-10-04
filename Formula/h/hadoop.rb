@@ -12,8 +12,7 @@ class Hadoop < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, all: "95771d9e7f4affc79481feac8b3122762db71f7f508902c18f6751e33ce09838"
+    sha256 cellar: :any_skip_relocation, all: "d9a7cb536f6e189c3037e9c3ad118baa09cd9bd3e1f75df849b8bf08c862b71b"
   end
 
   # WARNING: Check https://cwiki.apache.org/confluence/display/HADOOP/Hadoop+Java+Versions before updating JDK version

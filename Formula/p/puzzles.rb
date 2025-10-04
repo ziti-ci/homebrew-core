@@ -2,9 +2,9 @@ class Puzzles < Formula
   desc "Collection of one-player puzzle games"
   homepage "https://www.chiark.greenend.org.uk/~sgtatham/puzzles/"
   # Extract https://www.chiark.greenend.org.uk/~sgtatham/puzzles/puzzles.tar.gz to get the version number
-  url "https://www.chiark.greenend.org.uk/~sgtatham/puzzles/puzzles-20250904.2376227.tar.gz"
-  version "20250904"
-  sha256 "145f91489a86321995e5049a34e06955e2204b98c071025f916d0cbdd5719cf2"
+  url "https://www.chiark.greenend.org.uk/~sgtatham/puzzles/puzzles-20250926.e00cb46.tar.gz"
+  version "20250926"
+  sha256 "0ac32b858a5a4d1333dfae24b796ff6c263aecf0a86304b9d05c70f268b64026"
   license "MIT"
   head "https://git.tartarus.org/simon/puzzles.git", branch: "main"
 
@@ -46,6 +46,9 @@ class Puzzles < Formula
   conflicts_with "samba", because: "both install `net` binaries"
 
   def install
+    # Disable universal binaries
+    inreplace "cmake/platforms/osx.cmake", "set(CMAKE_OSX_ARCHITECTURES arm64 x86_64)", "" if OS.mac?
+
     system "cmake", "-S", ".", "-B", "build", *std_cmake_args
     system "cmake", "--build", "build"
     system "cmake", "--install", "build"

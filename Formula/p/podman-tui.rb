@@ -5,7 +5,7 @@ class PodmanTui < Formula
   sha256 "7a0e89d71a18527f01be061c8d449823770cff768b6d716cef96b979f3672de7"
   license "Apache-2.0"
 
-  no_autobump! because: :requires_manual_review
+  no_autobump! because: :bumped_by_upstream
 
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_tahoe:   "159fe3cbe81cb90352a7cdd6e9fecda9ffbe0d4ed70b8238d23b28a3a577cad3"

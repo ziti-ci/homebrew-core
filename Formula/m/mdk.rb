@@ -12,16 +12,12 @@ class Mdk < Formula
   end
 
   bottle do
-    sha256 arm64_tahoe:    "1c925079e22bb29ea6e505fa7705eb3ca6c1d6586184109a4fd54b7057f2f030"
-    sha256 arm64_sequoia:  "7f8f1976f4085fd2069b0e8e36c7b4dc939a9da53776d446c5bd00587c166ba7"
-    sha256 arm64_sonoma:   "fd1a717d1a4c992880d8afd9217b46416521dbe7d4c87b6caf86efdc9e603bb7"
-    sha256 arm64_ventura:  "916131e068d96db724db7c8fb50fa406dd2847ef028222b40a2c13bd2ee4d667"
-    sha256 arm64_monterey: "82a2cadce9c1f29cd4d7b53ec2ca15b8382a964627219ed87f3cd75927f851b8"
-    sha256 sonoma:         "af8fd1f81a41417af557691fc2cd065b7f4e9bca2f84110bca43a235c066eb0b"
-    sha256 ventura:        "c2b79558a41c36b848cb8b9ef2500a82ee961c1c427a09a01fce486e5b9b2a06"
-    sha256 monterey:       "90c9293131de5a4a7533cb6a1bc613cad2d9c1750833bde1fcd795cbbc7923ae"
-    sha256 arm64_linux:    "60f4588de7ace79258c78dbbeff43ed39e97a0f3fc8dde564a88e8863ac9d05f"
-    sha256 x86_64_linux:   "baf283b8cdb2d96c284ced6a347f7754132b5f696663552bda24d45ca9ca2ca5"
+    sha256 arm64_tahoe:   "7826d050643554b4fd5b996d6d435b817f5afc3d377838c17603134ee397387f"
+    sha256 arm64_sequoia: "ad86e88bcdb7d4a02549a80945c2bf96d74c7d95ae55d3d25a654c8ce74d09bc"
+    sha256 arm64_sonoma:  "00a6b39d4f40ce43f02096c41759d5fc9603f8410e310c4151ed4ac9eb27de28"
+    sha256 sonoma:        "be057e6d7aa944047f2e2f1708dddd6bffba1fa6c937264c0a5065e11b1c1bf0"
+    sha256 arm64_linux:   "e6ec02348519a896a3cd23987ec812358ede91138da903dcfd6cad75a2cdb1ce"
+    sha256 x86_64_linux:  "11178d7f888d4b955959d12ede795d08d2af47aca254caaa3a9769b39056cdab"
   end
 
   depends_on "gettext" => :build

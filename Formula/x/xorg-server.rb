@@ -6,15 +6,12 @@ class XorgServer < Formula
   license all_of: ["MIT", "APSL-2.0"]
 
   bottle do
-    rebuild 1
-    sha256 arm64_tahoe:   "79c3e94990183152bb84ef64b9581bf7eccdf7f06d0c301db704166605ef2f2d"
-    sha256 arm64_sequoia: "e9ff9b62d898703ddca09e82b036a67351e6aa14c1f08ebe4bf2772fadbd7055"
-    sha256 arm64_sonoma:  "36fe7319a1317e7ea64b09a794a0c86d14f2066e887733dda516f23cdd05f773"
-    sha256 arm64_ventura: "725bff18ee85feaa9c758250a57fa14253cd087ab2e25805024a2758fc1c71cf"
-    sha256 sonoma:        "07f8f3a4e8e88b19c022a54f3e5512a95ca5984529ed435a0831284867e5b581"
-    sha256 ventura:       "a593137347c22716ea4098ecda532c2f9d8082c51d128de11059a78645a8e8cb"
-    sha256 arm64_linux:   "dd9f4e8d0a87b0390cf5c76ab45fec1e543cf6f7d3132dbc9cfab558cd9110e4"
-    sha256 x86_64_linux:  "ba290274fa63ac05cfb29e29e31944fe9e9f118ef5ef69b08e1b369c28f1add3"
+    sha256 arm64_tahoe:   "3524434370f78285c18e837596d01d59c1f9ed141bec77de47303045e1a155e9"
+    sha256 arm64_sequoia: "ecfb1b000e77239f5a6814207e6746ee0d47f32453586d5a79750342bc1bfce6"
+    sha256 arm64_sonoma:  "c0c5f5992fc62e5cac75c0c976d123752f9c58c524dd4458544ba35b39759042"
+    sha256 sonoma:        "f1fc26f86e7981adf3966567f0bb51c4af9d9a42998334210c1e0165a7776abf"
+    sha256 arm64_linux:   "257c9b793c7d7d005671a6b55458e26f2b93891df5ba82817e195ceb5d823fc9"
+    sha256 x86_64_linux:  "74caa7a5550debbd77ad2a4a43e8869999dc1b8b7876fe4554c87d5e49228621"
   end
 
   depends_on "font-util"   => :build

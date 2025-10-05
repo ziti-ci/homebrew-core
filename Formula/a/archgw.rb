@@ -7,6 +7,14 @@ class Archgw < Formula
   sha256 "b8c69fcb3844beaaafcbc15b151e65d7acf49951402ecd5ec468cc0c509cb943"
   license "Apache-2.0"
 
+  bottle do
+    sha256 cellar: :any,                 arm64_tahoe:   "5b9aa896aa2cbe5df37164c4dbd68c5644294780d3e1bbd7dfbedfad951d4f16"
+    sha256 cellar: :any,                 arm64_sequoia: "69fd2e59bdca6fe89eb8c54a22e4a39b62490f0b87a359912ef4fbe0f8947b89"
+    sha256 cellar: :any,                 arm64_sonoma:  "b8edd2ae80d2540e00c839243e4b99713602620835d7b247436f02fea7f02e75"
+    sha256 cellar: :any,                 sonoma:        "b24feb6be53c7b88ef90e0b3c05ab3b9d251c733bf0c1350b3cb7c18d9d80bf3"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "3805fecd91e59ff95c638ff1c58b77e8e0221d0fb5a12782486e55a72818c52b"
+  end
+
   depends_on "rust" => :build # for pydantic
   depends_on "certifi"
   depends_on "libyaml"

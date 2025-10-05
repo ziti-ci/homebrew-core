@@ -10,6 +10,7 @@ class N8nMcp < Formula
     sha256 cellar: :any_skip_relocation, arm64_sequoia: "279a5b78961cbe7ad3f32b3aa2a0b4decc57dd7d7bea7824284466655a1e6892"
     sha256 cellar: :any_skip_relocation, arm64_sonoma:  "00130919f10394807824253473c79824bb7d31ed7b04962efac4f6380923e457"
     sha256 cellar: :any_skip_relocation, sonoma:        "ab08891065a46fcb9de46309d010cad86b51639cfcf5a92fc383c7d40239da0c"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "06cbc54cfadf932371dc08325b6599f8df4b720ac91c2ce177fa1e494f02fe49"
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "7e158fc2f8faf4eb6696bdff1515ba4778d5fa2ac04d43906026fe6ffe1da804"
   end
 

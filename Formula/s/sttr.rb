@@ -11,6 +11,7 @@ class Sttr < Formula
     sha256 cellar: :any_skip_relocation, arm64_sequoia: "8f1be1d2a7eb9477f196fcfb5ffe0c8024a39a8852ed3958bc97a3fa09e679cf"
     sha256 cellar: :any_skip_relocation, arm64_sonoma:  "8f1be1d2a7eb9477f196fcfb5ffe0c8024a39a8852ed3958bc97a3fa09e679cf"
     sha256 cellar: :any_skip_relocation, sonoma:        "2a3fd1aa69df4461a58bdbd86ff2c8bcd4baf2e4f7e97e2eb172002c17e8408d"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "332f5e9d7051c1a09123d7132a408d46451a63d2430ee88ce8fd81409d3cc4fb"
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "98f1e5d2d185559e9f9072fc6e11cbcf29ac4925591b5397ae274662c1d8266f"
   end
 

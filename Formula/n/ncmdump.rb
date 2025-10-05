@@ -1,8 +1,8 @@
 class Ncmdump < Formula
   desc "Convert Netease Cloud Music ncm files to mp3/flac files"
   homepage "https://github.com/taurusxin/ncmdump"
-  url "https://github.com/taurusxin/ncmdump/archive/refs/tags/1.5.0.tar.gz"
-  sha256 "f59e4e5296b939c88a45d37844545d2e9c4c2cd3bb4f1f1a53a8c4fb72d53a2d"
+  url "https://github.com/taurusxin/ncmdump/archive/refs/tags/1.5.1.tar.gz"
+  sha256 "35062836d5210718b12fd311535f4673f5db4de18bd8e987890d89fc0e0a7e6c"
   license "MIT"
   head "https://github.com/taurusxin/ncmdump.git", branch: "main"
 
@@ -21,16 +21,7 @@ class Ncmdump < Formula
   depends_on "taglib"
 
   def install
-    # Use Homebrew's taglib
-    # See discussion: https://github.com/taurusxin/ncmdump/discussions/49
-    inreplace "CMakeLists.txt", "add_subdirectory(taglib)\n", ""
-    inreplace buildpath/"src/ncmcrypt.cpp" do |s|
-      s.gsub! "#define TAGLIB_STATIC\n", ""
-      s.gsub! "#include \"taglib/tag.h\"", "#include <taglib/tag.h>"
-      s.gsub!(%r{#include "taglib/.*/(.*)\.h"}, '#include <taglib/\1.h>')
-    end
-
-    system "cmake", "-S", ".", "-B", "build", "-DCMAKE_PREFIX_PATH=#{Formula["taglib"].opt_prefix}", *std_cmake_args
+    system "cmake", "-S", ".", "-B", "build", *std_cmake_args
     system "cmake", "--build", "build"
     system "cmake", "--install", "build"
   end

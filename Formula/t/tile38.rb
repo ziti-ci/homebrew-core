@@ -8,11 +8,11 @@ class Tile38 < Formula
   head "https://github.com/tidwall/tile38.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "55275672070b44bc51eb9a558666a2c1bd3f09198dbee5167ca83cb57a21401b"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "8d11c902aab939999f0b5dd53f9648b427546ec8dc9d5bb149a2a693404013dc"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "5726ed6a8bf99572cc38b3c753a0181263358f1f0dc3c662c225941a0bd147c5"
-    sha256 cellar: :any_skip_relocation, sonoma:        "d5a80b80d3a86c968c9a59a1601b1ecffd3e4eb27858c9d321f401d45a94de50"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "c0ed97fbcb84ce5996f4e190e8462df41fb919fd7f1f7578cbd0b3be6d83b48c"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "6c9990718f67497f27822a55596c07bf0c4ee56309e32716133d15b6f8278d25"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "ee88a236bf68b49cdfb2543dc88eb95fae293be156b07de8060dbebe107053b7"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "03f270ec38f4b69a51bf8b77db658937c01b805c289589b6dc7e23ed68c2e609"
+    sha256 cellar: :any_skip_relocation, sonoma:        "1f0498da1366d75037f12a3f4e2405c496d062930f0b57ef4b2afb230d1f0ddf"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "c89546c235af2ab22636fd440fde5344e121d36f458ece74a0589601006c8dc0"
   end
 
   depends_on "go" => :build

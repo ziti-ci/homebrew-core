@@ -10,16 +10,13 @@ class VowpalWabbit < Formula
   no_autobump! because: :requires_manual_review
 
   bottle do
-    sha256 cellar: :any,                 arm64_tahoe:    "80e1008c165e6977f7562be6c9fb83d8f1163cf5072d1b1f08ac84784ea97ecb"
-    sha256 cellar: :any,                 arm64_sequoia:  "bfef4211753bcf8837355692e4dcf46bee9de1961bd62e4b15f8f3143bf372ed"
-    sha256 cellar: :any,                 arm64_sonoma:   "073c2e2a642481bde881c5af08b53ce124d29213ee4dab14758c06dc7860b998"
-    sha256 cellar: :any,                 arm64_ventura:  "fe719b69d82bd1ca7000eea32ffa7c3a0123d4dbdba0e0e22289fb24f05e2250"
-    sha256 cellar: :any,                 arm64_monterey: "da19bcacdc1135ef3eb98109f473d22bd7753fc850d1e4e3da0eb95023b6b2ca"
-    sha256 cellar: :any,                 sonoma:         "37bd232f15d467da97b3345a617a6dbc797bc6ad8ebf872551b27fb54c5a72cd"
-    sha256 cellar: :any,                 ventura:        "3215db836a8d52db6278ffe3e3522295e16a2d55336770210f1c4eb8f9ceb1a9"
-    sha256 cellar: :any,                 monterey:       "876c07dabe88389bf4524b3686b05f20a17c4982e1ff13918bc9221e2e3c8829"
-    sha256 cellar: :any_skip_relocation, arm64_linux:    "6588a45ffb2630fde15f634aac9248eb1fa0467f227c6312c4a9a63910cbb970"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "24bc424f2e333c4995e596f13ce7b4bda399467dc711098d4fb399fc954bf6bf"
+    rebuild 1
+    sha256 cellar: :any,                 arm64_tahoe:   "8516aabb4941936660d56336990cb413df2035dff0b4151f4fde5bbcdf4faef4"
+    sha256 cellar: :any,                 arm64_sequoia: "0116181c4062c3f4e80f5a9b965a9472d10190583d39aa8e6a2a945c393166df"
+    sha256 cellar: :any,                 arm64_sonoma:  "3d4fe05b6883fe3ed161e8be03b9cccce768be141755ce8e8e5308b1ec200f88"
+    sha256 cellar: :any,                 sonoma:        "1d4db7420a6ee6db945a44a6335d260e4d0bbedd8ab02626861b17f58f74bf45"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "f07011906721b518d6e2904d121558295a65ad8f558067f7d1600168e517adc5"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "ded75008541ac17ba973dfeb483eb88f96bc0ee0c8ff1fb9b1d0432195854a18"
   end
 
   depends_on "boost" => :build

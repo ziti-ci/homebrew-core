@@ -8,8 +8,7 @@ class Pylint < Formula
   license "GPL-2.0-or-later"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, all: "d4ddb8cfcd18ad93fe22e7f0fb7d3d77dcda84e6f3c2728463caa7f494e51f21"
+    sha256 cellar: :any_skip_relocation, all: "b070034ff24d4b5255057159962530ca8e479af3f8ad14a76aae7e763266b409"
   end
 
   depends_on "python@3.13"

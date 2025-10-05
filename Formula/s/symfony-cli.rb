@@ -17,6 +17,8 @@ class SymfonyCli < Formula
   depends_on "composer" => :test
 
   def install
+    ENV["CGO_ENABLED"] = "0" if OS.linux? && Hardware::CPU.arm?
+
     system "go", "build", *std_go_args(ldflags: "-s -w -X main.version=#{version} -X main.channel=stable", output: bin/"symfony")
   end
 

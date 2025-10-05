@@ -2,19 +2,14 @@ class Rocq < Formula
   desc "Proof assistant for higher-order logic"
   homepage "https://rocq-prover.org/"
   license "LGPL-2.1-only"
-  revision 1
 
   stable do
-    url "https://github.com/rocq-prover/rocq/releases/download/V9.0.0/rocq-9.0.0.tar.gz"
-    sha256 "82f86646fd3d047f760837648195c73374beee667b1c9592d31c5426e3b43a51"
+    url "https://github.com/rocq-prover/rocq/releases/download/V9.1.0/rocq-9.1.0.tar.gz"
+    sha256 "b236dc44f92e1eeca6877c7ee188a90c2303497fe7beb99df711ed5a7ce0d824"
 
     resource "stdlib" do
       url "https://github.com/rocq-prover/stdlib/releases/download/V9.0.0/stdlib-9.0.0.tar.gz"
       sha256 "1ab6adc42dfc651ddc909604bae1a54ff5623cda837f93677a8b12aab9eec711"
-
-      livecheck do
-        formula :parent
-      end
     end
   end
 
@@ -60,7 +55,6 @@ class Rocq < Formula
     ENV.prepend_path "OCAMLPATH", Formula["ocaml-findlib"].opt_lib/"ocaml"
 
     packages = %w[rocq-runtime coq-core rocq-core coqide-server]
-    packages << "coq" if build.stable? # TODO: Remove on next release
 
     system "./configure", "-prefix", prefix,
                           "-mandir", man,

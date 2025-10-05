@@ -12,12 +12,12 @@ class Tombi < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "79bf77cbb9657c4fa00d62653e370e73ffefc108d71d483926b1586a77dcc2a0"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "8627777a65e5915632517e29fdf0e25f4b2ee24ec7bc36cb030176a3b04fd7fd"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "d0ff1c8b22d6a859b122364002af6ac0fb2d7659bf35fd1dac46ad68bddb2cfc"
-    sha256 cellar: :any_skip_relocation, sonoma:        "4d62e35e55025ded623677fc41417c2b97df8c03b6d808db73039da29b0cef68"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "6c11e8e45a8677a5f52ee35aef102ccd1cc045638d1c2d4a50a6ed37dc9f1c81"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "48073c89d05c56e433e09ddc17b9fe6b60c765ef3bcf0e3b9b26636db77fc95d"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "9a166dd2c44fd41f91b1783dfc4fb8141c059ae8985d30c4046aaa78ff3e9ddc"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "e715d5a4db683e6d70e8649af31e70f57d8e1c81e341e333ea33a8ed81b8dce8"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "6a2458a37c1602278238ed7b82dc1c16d90739dfcd334f80b5f5a1b5f86e75e2"
+    sha256 cellar: :any_skip_relocation, sonoma:        "923c4488de6c880a23dde3dc705e5b1f7fa31b620bebf349c6c0c98bb8bfc0f6"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "83bc0e0ea8d2689b6a5f15e8216bbe824cd58e2ff3fad1ed2c11c5e674db20a7"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "7c32fe5414f5269eb479d949a61d835dc3a13557ae1458e3e99cb4225b663e66"
   end
 
   depends_on "rust" => :build

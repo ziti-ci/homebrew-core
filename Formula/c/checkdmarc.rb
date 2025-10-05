@@ -3,8 +3,8 @@ class Checkdmarc < Formula
 
   desc "Command-line parser for SPF and DMARC DNS records"
   homepage "https://domainaware.github.io/checkdmarc/"
-  url "https://files.pythonhosted.org/packages/38/1d/921823a2eea15b7be2d5ef8ad8bba64946b5efec8a32e7c30e0914dd5237/checkdmarc-5.11.0.tar.gz"
-  sha256 "192baa4bb31401597d7315d3d31a56d7d84c0f74350552c174df5b88c4ebd8ae"
+  url "https://files.pythonhosted.org/packages/b6/1d/80008be65bcb9a4073543bed998bce47891f8ff140e1f27683651258d3be/checkdmarc-5.11.1.tar.gz"
+  sha256 "145d943d6168404d5cf8980a252c2f99f82b1e37243660e1de60f15cee6871b6"
   license "Apache-2.0"
   head "https://github.com/domainaware/checkdmarc.git", branch: "master"
 

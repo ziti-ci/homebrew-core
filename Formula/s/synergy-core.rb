@@ -1,8 +1,8 @@
 class SynergyCore < Formula
   desc "Synergy, the keyboard and mouse sharing tool"
   homepage "https://symless.com/synergy"
-  url "https://github.com/symless/synergy/archive/refs/tags/v1.18.1.tar.gz"
-  sha256 "f340cf6ef4762dfc7b0e04d4d0dae542db7f6fb9b9aba4eaf786446047cdb1c4"
+  url "https://github.com/symless/synergy/archive/refs/tags/v1.19.0.tar.gz"
+  sha256 "c18750b6d6b217f8439199ac90bb4633ef0611d4a962a383c6b424a984f388fa"
 
   # The synergy-core/LICENSE file contains the following preamble:
   #   This program is released under the GPL with the additional exemption
@@ -86,9 +86,6 @@ class SynergyCore < Formula
       inreplace "src/gui/CMakeLists.txt",
                 /"execute_process\(COMMAND \${MACDEPLOYQT_CMD}.*\)"/,
                 '"MESSAGE (\\"Skipping macdeployqt in Homebrew\\")"'
-    elsif OS.linux?
-      # Get rid of hardcoded installation path.
-      inreplace "cmake/Packaging.cmake", "set(CMAKE_INSTALL_PREFIX /usr)", ""
     end
 
     args = %w[

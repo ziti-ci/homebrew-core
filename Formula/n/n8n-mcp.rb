@@ -1,8 +1,8 @@
 class N8nMcp < Formula
   desc "MCP for Claude Desktop, Claude Code, Windsurf, Cursor to build n8n workflows"
   homepage "https://www.n8n-mcp.com/"
-  url "https://registry.npmjs.org/n8n-mcp/-/n8n-mcp-2.15.6.tgz"
-  sha256 "fb188fcf94c7edd72201f7323493ace693202ae2cd61265e9410e896096996dc"
+  url "https://registry.npmjs.org/n8n-mcp/-/n8n-mcp-2.16.1.tgz"
+  sha256 "873d5ba3f2a597ffa9c461675bbb3838e6a6f60425bab3fd310ad8bd5a127fd8"
   license "MIT"
 
   bottle do
@@ -28,7 +28,8 @@ class N8nMcp < Formula
     output_log = testpath/"output.log"
     pid = spawn bin/"n8n-mcp", testpath, [:out, :err] => output_log.to_s
     sleep 10
-    assert_match "n8n Documentation MCP Server running on stdio transpor", output_log.read
+    sleep 5 if OS.mac? && Hardware::CPU.intel?
+    assert_match "n8n Documentation MCP Server running on stdio transport", output_log.read
   ensure
     Process.kill("TERM", pid)
     Process.wait(pid)

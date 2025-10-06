@@ -1,19 +1,10 @@
 class VulkanTools < Formula
   desc "Vulkan utilities and tools"
   homepage "https://github.com/KhronosGroup/Vulkan-Tools"
+  url "https://github.com/KhronosGroup/Vulkan-Tools/archive/refs/tags/vulkan-sdk-1.4.328.0.tar.gz"
+  sha256 "2f4a801ca07793a478e1f4cdfbb5dc57d1810597cd8acb26ca275c78ca34655c"
   license "Apache-2.0"
   head "https://github.com/KhronosGroup/Vulkan-Tools.git", branch: "main"
-
-  stable do
-    url "https://github.com/KhronosGroup/Vulkan-Tools/archive/refs/tags/vulkan-sdk-1.4.321.0.tar.gz"
-    sha256 "f897f76b1fae6b85b567ee86d7bc1ba6f5b1a13d3bfa5fe0f07fdb81609f7b75"
-
-    # Backport fix to build on Linux
-    patch do
-      url "https://github.com/KhronosGroup/Vulkan-Tools/commit/105d6c1fede00c3a9055e5a531ebf3d99bac406e.patch?full_index=1"
-      sha256 "d3dac23d470b81b4de346c8bac377e0bf8fbf67b862be5f020cb2a11f31a6950"
-    end
-  end
 
   livecheck do
     url :stable

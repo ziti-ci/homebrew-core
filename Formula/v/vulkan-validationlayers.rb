@@ -1,8 +1,8 @@
 class VulkanValidationlayers < Formula
   desc "Vulkan layers that enable developers to verify correct use of the Vulkan API"
   homepage "https://github.com/KhronosGroup/Vulkan-ValidationLayers"
-  url "https://github.com/KhronosGroup/Vulkan-ValidationLayers/archive/refs/tags/vulkan-sdk-1.4.321.0.tar.gz"
-  sha256 "80f929ac4e9a1810401064fcd3a789a98006c7916b73b215c235a5f538daa5e9"
+  url "https://github.com/KhronosGroup/Vulkan-ValidationLayers/archive/refs/tags/vulkan-sdk-1.4.328.0.tar.gz"
+  sha256 "bc265163ad83167bcdfa6db11e2a915965414ff63e331c20864f2b499773e01f"
   license "Apache-2.0"
   head "https://github.com/KhronosGroup/Vulkan-ValidationLayers.git", branch: "main"
 
@@ -22,8 +22,10 @@ class VulkanValidationlayers < Formula
 
   depends_on "cmake" => :build
   depends_on "python@3.13" => :build
+  depends_on "spirv-headers" => :build
   depends_on "vulkan-tools" => :test
   depends_on "glslang"
+  depends_on "spirv-tools"
   depends_on "vulkan-headers"
   depends_on "vulkan-loader"
   depends_on "vulkan-utility-libraries"
@@ -36,46 +38,14 @@ class VulkanValidationlayers < Formula
     depends_on "wayland" => :build
   end
 
-  # https://github.com/KhronosGroup/Vulkan-ValidationLayers/blob/v#{version}/scripts/known_good.json#L32
-  resource "SPIRV-Headers" do
-    url "https://github.com/KhronosGroup/SPIRV-Headers.git",
-        revision: "e6d5e88c07cc66a798b668945e7fb29ec1cfee27"
-  end
-
-  # https://github.com/KhronosGroup/Vulkan-ValidationLayers/blob/v#{version}/scripts/known_good.json#L46
-  resource "SPIRV-Tools" do
-    url "https://github.com/KhronosGroup/SPIRV-Tools.git",
-        revision: "fda5a216e9d25fa2eeda73ec8436b96e395ce5d5"
-  end
-
   def install
-    resource("SPIRV-Headers").stage do
-      system "cmake", "-S", ".", "-B", "build", *std_cmake_args(install_prefix: buildpath/"third_party/SPIRV-Headers")
-      system "cmake", "--build", "build"
-      system "cmake", "--install", "build"
-    end
-
-    resource("SPIRV-Tools").stage do
-      system "cmake", "-S", ".", "-B", "build",
-                      "-DSPIRV-Headers_SOURCE_DIR=#{buildpath}/third_party/SPIRV-Headers",
-                      "-DSPIRV_WERROR=OFF",
-                      "-DSPIRV_SKIP_TESTS=ON",
-                      "-DSPIRV_SKIP_EXECUTABLES=ON",
-                      "-DCMAKE_INSTALL_RPATH=#{rpath(target: Formula["vulkan-loader"].opt_lib)}",
-                      *std_cmake_args(install_prefix: buildpath/"third_party/SPIRV-Tools")
-      system "cmake", "--build", "build"
-      system "cmake", "--install", "build"
-    end
-
     args = [
       "-DGLSLANG_INSTALL_DIR=#{Formula["glslang"].prefix}",
-      "-DSPIRV_HEADERS_INSTALL_DIR=#{buildpath}/third_party/SPIRV-Headers",
-      "-DSPIRV_TOOLS_INSTALL_DIR=#{buildpath}/third_party/SPIRV-Tools",
+      "-DSPIRV_HEADERS_INSTALL_DIR=#{Formula["spirv-headers"].opt_prefix}",
+      "-DSPIRV_TOOLS_INSTALL_DIR=#{Formula["spirv-tools"].opt_prefix}",
       "-DVULKAN_HEADERS_INSTALL_DIR=#{Formula["vulkan-headers"].prefix}",
       "-DVULKAN_UTILITY_LIBRARIES_INSTALL_DIR=#{Formula["vulkan-utility-libraries"].prefix}",
       "-DCMAKE_INSTALL_RPATH=#{rpath(target: Formula["vulkan-loader"].opt_lib)}",
-      "-DBUILD_LAYERS=ON",
-      "-DBUILD_LAYER_SUPPORT_FILES=ON",
       "-DBUILD_TESTS=OFF",
       "-DUSE_ROBIN_HOOD_HASHING=OFF",
     ]

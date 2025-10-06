@@ -1,8 +1,8 @@
 class Yutu < Formula
   desc "MCP server and CLI for YouTube"
   homepage "https://github.com/eat-pray-ai/yutu"
-  url "https://github.com/eat-pray-ai/yutu/archive/refs/tags/v0.10.2.tar.gz"
-  sha256 "4b57f005467b9ac1606b80408b9a85287366619bb84e058dcb5d259047ae8950"
+  url "https://github.com/eat-pray-ai/yutu/archive/refs/tags/v0.10.3.tar.gz"
+  sha256 "00c4ee6850705ae4557733580d9ebbd9f378a28eb39f3a261fb5df10e8764423"
   license "Apache-2.0"
   head "https://github.com/eat-pray-ai/yutu.git", branch: "main"
 
@@ -25,8 +25,8 @@ class Yutu < Formula
       -X #{mod}.Os=#{OS.mac? ? "darwin" : "linux"}
       -X #{mod}.Arch=#{Hardware::CPU.arch}
       -X #{mod}.Version=v#{version}
-      -X #{mod}.Commit=#{tap.user}
       -X #{mod}.CommitDate=#{time.iso8601}
+      -X #{mod}.Builder=#{tap.user}
     ]
     system "go", "build", *std_go_args(ldflags:)
 

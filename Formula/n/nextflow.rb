@@ -2,10 +2,9 @@ class Nextflow < Formula
   desc "Reproducible scientific workflows"
   homepage "https://nextflow.io"
   # TODO: Check if we can use `openjdk` 25+ when bumping the version.
-  url "https://github.com/nextflow-io/nextflow/archive/refs/tags/v25.04.7.tar.gz"
-  sha256 "561d55a29bbebd5c9135f82750331262bf034e0bbf56d014fa5115427fa5ed30"
+  url "https://github.com/nextflow-io/nextflow/archive/refs/tags/v25.04.8.tar.gz"
+  sha256 "56883ccbfb0d8ad786c2c4a38b379aa3db2963248ccf6056a17ea9fcd61cc407"
   license "Apache-2.0"
-  revision 1
 
   livecheck do
     url :stable

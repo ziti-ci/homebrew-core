@@ -1,11 +1,9 @@
 class Elf2uf2Rs < Formula
   desc "Convert ELF files to UF2 for USB Flashing Bootloaders"
   homepage "https://github.com/JoNil/elf2uf2-rs"
-  url "https://github.com/JoNil/elf2uf2-rs/archive/refs/tags/2.1.1.tar.gz"
-  sha256 "c6845f696112193bbe6517ab0c9b9fc85dff1083911557212412e07c506ccd7c"
+  url "https://github.com/JoNil/elf2uf2-rs/archive/refs/tags/2.2.0.tar.gz"
+  sha256 "7fd821623343bf6af63543a008caf49c1b7ad9f7e6df24403ae9c7a6bf325b54"
   license "0BSD"
-
-  no_autobump! because: :requires_manual_review
 
   bottle do
     rebuild 1
@@ -24,12 +22,6 @@ class Elf2uf2Rs < Formula
   on_linux do
     depends_on "pkgconf" => :build
     depends_on "systemd" # for libudev
-  end
-
-  # Fix compatibility issues with latest Rust: https://github.com/JoNil/elf2uf2-rs/issues/40, https://github.com/JoNil/elf2uf2-rs/pull/41
-  patch do
-    url "https://github.com/JoNil/elf2uf2-rs/commit/c1639b9e8bcaaaab653f9fa0e358fed0e8a7ce76.patch?full_index=1"
-    sha256 "3bbcfa39c01bd705f7b021c1e5117bd9a91fa51c4c13c998a43ba17adf9616a7"
   end
 
   def install

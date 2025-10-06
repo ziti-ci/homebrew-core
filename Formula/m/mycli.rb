@@ -3,8 +3,8 @@ class Mycli < Formula
 
   desc "CLI for MySQL with auto-completion and syntax highlighting"
   homepage "https://www.mycli.net/"
-  url "https://files.pythonhosted.org/packages/72/97/7c5b8d4073da7587b239855b8be2e00bd8f42625c417d0354b98f54868c8/mycli-1.39.0.tar.gz"
-  sha256 "cc756c9008623be1a6e0816d3c3fa1106c206105fa0483aedbafdfed89145c44"
+  url "https://files.pythonhosted.org/packages/53/9e/ff2e74b85acb87b5dd53e4d7f5d3723f31767e9c6239097fc0c8ce0c0b6c/mycli-1.39.1.tar.gz"
+  sha256 "d40e4343c74bc72d7b301ccdac2d1c839338794c62ba44cef46827a1252ac59f"
   license "BSD-3-Clause"
 
   bottle do
@@ -95,8 +95,8 @@ class Mycli < Formula
   end
 
   resource "openai" do
-    url "https://files.pythonhosted.org/packages/d8/5d/74fa2b0358ef15d113b1a6ca2323cee0034020b085a81a94eeddc6914de9/openai-2.0.0.tar.gz"
-    sha256 "6b9513b485f856b0be6bc44c518831acb58e37a12bed72fcc52b1177d1fb34a8"
+    url "https://files.pythonhosted.org/packages/b8/b1/8201e321a7d64a25c6f5a560320272d8be70547add40311fceb916518632/openai-2.2.0.tar.gz"
+    sha256 "bc49d077a8bf0e370eec4d038bc05e232c20855a19df0b58e5b3e5a8da7d33e0"
   end
 
   resource "pluggy" do
@@ -120,8 +120,8 @@ class Mycli < Formula
   end
 
   resource "pydantic" do
-    url "https://files.pythonhosted.org/packages/ff/5d/09a551ba512d7ca404d785072700d3f6727a02f6f3c24ecfd081c7cf0aa8/pydantic-2.11.9.tar.gz"
-    sha256 "6b8ffda597a14812a7975c90b82a8a2e777d9257aba3453f973acd3c032a18e2"
+    url "https://files.pythonhosted.org/packages/ae/54/ecab642b3bed45f7d5f59b38443dcb36ef50f85af192e6ece103dbfe9587/pydantic-2.11.10.tar.gz"
+    sha256 "dc280f0982fbda6c38fada4e476dc0a4f3aeaf9c6ad4c28df68a666ec3c61423"
   end
 
   resource "pydantic-core" do
@@ -225,8 +225,8 @@ class Mycli < Formula
   end
 
   resource "typing-inspection" do
-    url "https://files.pythonhosted.org/packages/f8/b1/0c11f5058406b3af7609f121aaa6b609744687f1d158b3c3a5bf4cc94238/typing_inspection-0.4.1.tar.gz"
-    sha256 "6ae134cc0203c33377d43188d4064e9b357dba58cff3185f22924610e70a9d28"
+    url "https://files.pythonhosted.org/packages/55/e3/70399cb7dd41c10ac53367ae42139cf4b1ca5f36bb3dc6c9d33acdb43655/typing_inspection-0.4.2.tar.gz"
+    sha256 "ba561c48a67c5958007083d386c3295464928b01faa735ab8547c5692e87f464"
   end
 
   resource "wcwidth" do

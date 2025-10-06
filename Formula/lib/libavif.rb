@@ -19,6 +19,7 @@ class Libavif < Formula
   depends_on "cmake" => :build
   depends_on "nasm" => :build
   depends_on "aom"
+  depends_on "dav1d"
   depends_on "jpeg-turbo"
   depends_on "libpng"
 
@@ -29,6 +30,7 @@ class Libavif < Formula
       -DCMAKE_INSTALL_RPATH=#{rpath}
       -DAVIF_CODEC_AOM=SYSTEM
       -DAVIF_BUILD_APPS=ON
+      -DAVIF_CODEC_DAV1D=SYSTEM
       -DAVIF_BUILD_EXAMPLES=OFF
       -DAVIF_BUILD_TESTS=OFF
       -DAVIF_LIBYUV=OFF

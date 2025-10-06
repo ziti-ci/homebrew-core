@@ -1,8 +1,8 @@
 class Fb303 < Formula
   desc "Thrift functions for querying information from a service"
   homepage "https://github.com/facebook/fb303"
-  url "https://github.com/facebook/fb303/archive/refs/tags/v2025.09.15.00.tar.gz"
-  sha256 "7b9efb7b7e50451253316a1469e5a9b19e7225346388917753ef6a50e7c47000"
+  url "https://github.com/facebook/fb303/archive/refs/tags/v2025.10.06.00.tar.gz"
+  sha256 "ec2b59b8ef24289e8a533328beb960132600f85c6878ac90c4db118d97337997"
   license "Apache-2.0"
   head "https://github.com/facebook/fb303.git", branch: "main"
 
@@ -57,7 +57,7 @@ class Fb303 < Formula
                     "-L#{Formula["folly"].opt_lib}", "-lfolly",
                     "-L#{Formula["glog"].opt_lib}", "-lglog",
                     "-L#{Formula["fbthrift"].opt_lib}", "-lthriftprotocol", "-lthriftcpp2",
-                    "-ldl"
+                    "-lthriftmetadata", "-lthrifttyperep", "-ldl"
     assert_equal "BaseService", shell_output("./test").strip
   end
 end

@@ -7,7 +7,7 @@ class Tilt < Formula
   license "Apache-2.0"
   head "https://github.com/tilt-dev/tilt.git", branch: "master"
 
-  no_autobump! because: :requires_manual_review
+  no_autobump! because: :bumped_by_upstream
 
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_tahoe:   "357caf218f22e1fe123226968702cfcb9d35e670de1a526f37a9028acb107b3f"

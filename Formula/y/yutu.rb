@@ -7,13 +7,11 @@ class Yutu < Formula
   head "https://github.com/eat-pray-ai/yutu.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "16f626d589d5da7ecdd415db8905815ea1ce6cccc682854f0048b1d41a0faced"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "16f626d589d5da7ecdd415db8905815ea1ce6cccc682854f0048b1d41a0faced"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "16f626d589d5da7ecdd415db8905815ea1ce6cccc682854f0048b1d41a0faced"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "16f626d589d5da7ecdd415db8905815ea1ce6cccc682854f0048b1d41a0faced"
-    sha256 cellar: :any_skip_relocation, sonoma:        "6536a8f3ff36d5f7f2ba61b1f332da63a9cfee977ecb46979f055abab1f4ac5e"
-    sha256 cellar: :any_skip_relocation, ventura:       "6536a8f3ff36d5f7f2ba61b1f332da63a9cfee977ecb46979f055abab1f4ac5e"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "6613bae1df484caf8f2fb51f508cf6eb38bfa99111c63db4cbae4209e5049878"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "9d33cf0182cf6ff04a769a81a44bb0945a1dd624411e7481602effd6b70020db"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "9d33cf0182cf6ff04a769a81a44bb0945a1dd624411e7481602effd6b70020db"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "9d33cf0182cf6ff04a769a81a44bb0945a1dd624411e7481602effd6b70020db"
+    sha256 cellar: :any_skip_relocation, sonoma:        "fd3c7e56880e904d1837b2ce878f7282f0a7a8fc1b665bcc25ba636ade375eb1"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "f3e5c22981d232278c70dc658e0c12218ae1e20482c7cb6cdfc5177b50078564"
   end
 
   depends_on "go" => :build

@@ -1,8 +1,8 @@
 class Lakekeeper < Formula
   desc "Apache Iceberg REST Catalog"
   homepage "https://github.com/lakekeeper/lakekeeper"
-  url "https://github.com/lakekeeper/lakekeeper/archive/refs/tags/v0.10.1.tar.gz"
-  sha256 "d41e20f785c6d1b8b68d04a2d2c1eb1b53af0a47c4d2884414695078666079aa"
+  url "https://github.com/lakekeeper/lakekeeper/archive/refs/tags/v0.10.2.tar.gz"
+  sha256 "474334f850e368a68db594d90335bb63a8b7030aa805b642d119ef63b87b5344"
   license "Apache-2.0"
   head "https://github.com/lakekeeper/lakekeeper.git", branch: "main"
 

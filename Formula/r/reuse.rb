@@ -14,16 +14,14 @@ class Reuse < Formula
   head "https://github.com/fsfe/reuse-tool.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "104abb73b19979c85494f35dd6eb89db2bd2b910cd22f21360bb96e19ba883a1"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "c41c1e334b961caf2d6bdeba3cc183ac38f11b26fc75d5feb0045a1ad8aae858"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "bbe53b00a1242c95a2845efaddd569aef3cf3b0bb0e0bec2eec34bf248238be7"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "30be032b1d2069f0270d9d890ba620c848759566368c570756c013032a844e40"
-    sha256 cellar: :any_skip_relocation, tahoe:         "b4ed13b6362397425e22388986a9ec918f4231b1ecd842af64e099c9e58bbb3a"
-    sha256 cellar: :any_skip_relocation, sequoia:       "2521d394b27b4f2b771767dfd7657ec24c20ddb07c6101a5282f637e8f8ec7d4"
-    sha256 cellar: :any_skip_relocation, sonoma:        "8982ffd07af2c12e52e2dd0791b9c2fa773d7903388f6a9c2d29022ec9993608"
-    sha256 cellar: :any_skip_relocation, ventura:       "1fda3c20986adfcf17154e0acd8930cbedbddcff869684047a0a9708c733b640"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "ba93bd516da0a8a9f48ed9be29a9a15ef3ee381a0065b0971384a1578e4269f8"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "d24d69dff5e9802d3de0c34e3a46775dfa0c0a70f05bd8e53c1234f08b4fd29e"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "1fdf33e8c967704d07d9718daf3bb5de5e5d78dcae4504406f5470cf17e85a69"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "2731f6b582ba5abc073ec0eb9fc9d49a8723ddf8ed8ce2984a4b54b709944a46"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "bbfec24dad23e06ba458756b899b57538c77c57653379d594800ad123ed515ea"
+    sha256 cellar: :any_skip_relocation, tahoe:         "31b4256f4df477844a3b1bb8f3023d4bb0b2a995e4bc8c6ce5279779456d3a9f"
+    sha256 cellar: :any_skip_relocation, sequoia:       "5b62965e86ed05165bd9e4db74a28bb1c04fbf05d54c8421cb4fed18d17c2e95"
+    sha256 cellar: :any_skip_relocation, sonoma:        "5705355b9895ce6fb216f00a9ac6666f88b110bc6c63f2973e7c1ad670c0fac8"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "8711b1a2bbe553e95bbbe23e8ad516d74dc8bfa14e32591e06614d875b557156"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "5fafd6f5372c92bffbc22c29a968f7e780bb0bba13923003be5d9f01403f68b8"
   end
 
   depends_on "python@3.13"

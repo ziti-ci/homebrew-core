@@ -1,6 +1,6 @@
 class AwsAuth < Formula
   desc "Allows you to programmatically authenticate into AWS accounts through IAM roles"
-  homepage "https://github.com/iamarkadyt/aws-auth"
+  homepage "https://github.com/iamarkadyt/aws-auth" # DANGER: GitHub repo has a new owner since September 2025. Original repo was deleted or renamed.
   url "https://registry.npmjs.org/@iamarkadyt/aws-auth/-/aws-auth-2.2.4.tgz"
   sha256 "79fd9c77a389e275f6a8e8bc08e5245c9699779da5621abd929a475322698146"
   license "MIT"
@@ -16,6 +16,7 @@ class AwsAuth < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "a60b04e342a6f7740665def07e9a7851d7214d47e1da66641e4b6692c7b67067"
   end
 
+  # DANGER: GitHub repo has a new owner since September 2025. Original repo was deleted or renamed.
   deprecate! date: "2025-03-14", because: :does_not_build # and :repo_removed
 
   depends_on "node"

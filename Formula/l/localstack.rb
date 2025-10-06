@@ -3,8 +3,8 @@ class Localstack < Formula
 
   desc "Fully functional local AWS cloud stack"
   homepage "https://localstack.cloud/"
-  url "https://files.pythonhosted.org/packages/33/3e/cf8416a2c224830a997033ca48faadce4525ff2f23659d6d6bca4f0a8ed9/localstack-4.9.1.tar.gz"
-  sha256 "09668077e94bd258ac0c00c1fa4f08e49964b91b13e37aabae17ee8af717f95b"
+  url "https://files.pythonhosted.org/packages/71/22/4eeec394941d84b01f66757213996b38787815bf38268d62f7e7801dd2fd/localstack-4.9.2.tar.gz"
+  sha256 "334a583023b4bc4257635ea4b5087e0b43a99fe6aaf68d8de3d8009de04cf0af"
   license "Apache-2.0"
 
   bottle do
@@ -74,13 +74,13 @@ class Localstack < Formula
   end
 
   resource "localstack-core" do
-    url "https://files.pythonhosted.org/packages/72/2c/bd4ecbb8d0bfed7e65bb7f276145e2a59bdde4170c1cdca35acda3223a02/localstack_core-4.9.1.tar.gz"
-    sha256 "5fed22ad0b694f9d37e46dcef13d171debb45985bb1a1ece0a5b265e47df50e0"
+    url "https://files.pythonhosted.org/packages/b6/2a/a5771e0312e153d6308bece0668d2129d9ada9bac1355b6eacf6a0f59ff6/localstack_core-4.9.2.tar.gz"
+    sha256 "7e0ceb25dd5d2c62add216f64badad1b13ae9144af5228361a39a256f3615240"
   end
 
   resource "localstack-ext" do
-    url "https://files.pythonhosted.org/packages/16/01/6b6218c05f4dbe375159a7b8b11fffcbbe83920f348087ba05729b1cd80f/localstack_ext-4.9.1.tar.gz"
-    sha256 "7e3b7d3ea9a760f505dad59edf84a3b688348240dd3ce4f907384ef4bbc83025"
+    url "https://files.pythonhosted.org/packages/6c/82/6ff87b1ba48c35703e64ffc45c5724e2ce4db5766971aaeb62c98d60c841/localstack_ext-4.9.2.tar.gz"
+    sha256 "8e9671ca47e3338bc3bf1bf24fbe33815c61ab6489c88dc2c84805b189cd95d4"
   end
 
   resource "localstack-py-avro-schema" do

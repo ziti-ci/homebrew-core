@@ -1,8 +1,8 @@
 class TddGuard < Formula
   desc "Automated TDD enforcement for Claude Code"
   homepage "https://github.com/nizos/tdd-guard"
-  url "https://registry.npmjs.org/tdd-guard/-/tdd-guard-1.0.2.tgz"
-  sha256 "48f51cd97aa68d55e8c7f63e6d1d9b039fab6053cc089977e4eaf3bdbaad0fcb"
+  url "https://registry.npmjs.org/tdd-guard/-/tdd-guard-1.1.0.tgz"
+  sha256 "f9da65d258979704097f6646190473a31080e05909ab54c814b8d902a8938087"
   license "MIT"
 
   bottle do
@@ -22,7 +22,7 @@ class TddGuard < Formula
 
     # Remove incompatible pre-built binaries
     node_modules = libexec/"lib/node_modules/tdd-guard/node_modules"
-    ripgrep_vendor_dir = node_modules/"@anthropic-ai/claude-code/vendor/ripgrep"
+    ripgrep_vendor_dir = node_modules/"@anthropic-ai/claude-agent-sdk/vendor/ripgrep"
     rm_r(ripgrep_vendor_dir)
   end
 

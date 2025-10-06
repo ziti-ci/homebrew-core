@@ -2,6 +2,7 @@ class Ruby < Formula
   desc "Powerful, clean, object-oriented scripting language"
   homepage "https://www.ruby-lang.org/"
   license "Ruby"
+  revision 1
   head "https://github.com/ruby/ruby.git", branch: "master"
 
   stable do
@@ -21,6 +22,12 @@ class Ruby < Formula
         url "https://rubygems.org/pages/download"
         regex(/href=.*?rubygems[._-]v?(\d+(?:\.\d+)+)\.t/i)
       end
+    end
+
+    # Update the bundled openssl gem for compatibility with OpenSSL 3.6+
+    resource "openssl" do
+      url "https://github.com/ruby/openssl/archive/refs/tags/v3.3.1.tar.gz"
+      sha256 "ca9b8f5940153e67b0d5e7e075ecd64b9d28b9f9b2f2c9f0748c1538734dfe10"
     end
   end
 
@@ -73,6 +80,17 @@ class Ruby < Formula
   end
 
   def install
+    if build.stable?
+      openssl_gem_version = File.read("ext/openssl/openssl.gemspec")[/spec\.version\s*=\s*"(\d+(?:\.\d+)+)/, 1]
+      odie "Remove openssl resource!" if Version.new(openssl_gem_version) >= "3.3.1"
+      rm_r(%w[ext/openssl test/openssl])
+      resource("openssl").stage do
+        (buildpath/"ext").install "ext/openssl"
+        (buildpath/"ext/openssl").install "lib", "History.md", "openssl.gemspec"
+        (buildpath/"test").install "test/openssl"
+      end
+    end
+
     # otherwise `gem` command breaks
     ENV.delete("SDKROOT")
 

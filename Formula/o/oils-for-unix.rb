@@ -1,8 +1,8 @@
 class OilsForUnix < Formula
   desc "Bash-compatible Unix shell with more consistent syntax and semantics"
   homepage "https://oils.pub/"
-  url "https://oils.pub/download/oils-for-unix-0.35.0.tar.gz"
-  sha256 "b0d1475a5d549786968786f47b15bf244e1d4c3bf9119c11714997b11f96fdca"
+  url "https://oils.pub/download/oils-for-unix-0.36.0.tar.gz"
+  sha256 "9b65fc7333708dc1dc777e8a6145ae868eac6fbe0c444a8b12bb6d6d29652902"
   license "Apache-2.0"
 
   livecheck do
@@ -36,7 +36,7 @@ class OilsForUnix < Formula
   end
 
   test do
-    system bin/"osh", "-c", "shopt -q parse_backticks"
+    system bin/"osh", "-c", "shopt -q lastpipe"
     assert_equal testpath.to_s, shell_output("#{bin}/osh -c 'echo `pwd -P`'").strip
 
     system bin/"ysh", "-c", "shopt -u parse_equals"

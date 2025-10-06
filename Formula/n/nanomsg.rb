@@ -1,8 +1,8 @@
 class Nanomsg < Formula
   desc "Socket library in C"
   homepage "https://nanomsg.org/"
-  url "https://github.com/nanomsg/nanomsg/archive/refs/tags/1.2.tar.gz"
-  sha256 "6ef7282e833df6a364f3617692ef21e59d5c4878acea4f2d7d36e21c8858de67"
+  url "https://github.com/nanomsg/nanomsg/archive/refs/tags/1.2.2.tar.gz"
+  sha256 "3ffeafa9335245a23a99827e8d389bfce5100610f44ebbe4bfaf47e8192d5939"
   license "MIT"
   head "https://github.com/nanomsg/nanomsg.git", branch: "master"
 
@@ -10,8 +10,6 @@ class Nanomsg < Formula
     url :stable
     strategy :github_latest
   end
-
-  no_autobump! because: :requires_manual_review
 
   bottle do
     sha256 cellar: :any,                 arm64_tahoe:    "cbebcfb6e3fae4e753ffa93885dd350335b7fa08092048b7189ac314748cf70f"
@@ -32,9 +30,7 @@ class Nanomsg < Formula
   depends_on "cmake" => :build
 
   def install
-    # Workaround to build with CMake 4
-    args = %w[-DCMAKE_POLICY_VERSION_MINIMUM=3.5]
-    system "cmake", "-S", ".", "-B", "build", *args, *std_cmake_args
+    system "cmake", "-S", ".", "-B", "build", *std_cmake_args
     system "cmake", "--build", "build"
     system "cmake", "--install", "build"
   end

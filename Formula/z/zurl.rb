@@ -29,7 +29,7 @@ class Zurl < Formula
   depends_on "cmake" => :test # for scikit_build_core
   depends_on "cython" => :test # use brew cython as building it in test can cause time out
   depends_on "python@3.13" => :test
-  depends_on "qt"
+  depends_on "qtbase"
   depends_on "zeromq"
 
   uses_from_macos "curl"
@@ -39,7 +39,7 @@ class Zurl < Formula
   end
 
   def install
-    args = ["--qtselect=#{Formula["qt"].version.major}"]
+    args = ["--qtselect=#{Formula["qtbase"].version.major}"]
     args << "--extraconf=QMAKE_MACOSX_DEPLOYMENT_TARGET=#{MacOS.version}" if OS.mac?
 
     system "./configure", "--prefix=#{prefix}", *args

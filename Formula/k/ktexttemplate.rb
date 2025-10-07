@@ -1,6 +1,6 @@
 class Ktexttemplate < Formula
   desc "Libraries for text templating with Qt"
-  homepage "https://api.kde.org/frameworks/ktexttemplate/html/index.html"
+  homepage "https://api.kde.org/ktexttemplate-index.html"
   url "https://download.kde.org/stable/frameworks/6.18/ktexttemplate-6.18.0.tar.xz"
   sha256 "cbb6505c35a8edc0e6fefb7d24fde8275eefdc9735407297ace02a7c40f37e06"
   license "LGPL-2.1-or-later"
@@ -16,7 +16,9 @@ class Ktexttemplate < Formula
 
   depends_on "cmake" => [:build, :test]
   depends_on "extra-cmake-modules" => :build
-  depends_on "qt"
+  depends_on "qttools" => :build
+  depends_on "qtbase"
+  depends_on "qtdeclarative"
 
   def install
     system "cmake", "-S", ".", "-B", "build", *std_cmake_args

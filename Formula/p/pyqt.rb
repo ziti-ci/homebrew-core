@@ -17,7 +17,33 @@ class Pyqt < Formula
 
   depends_on "pyqt-builder" => :build
   depends_on "python@3.13"
-  depends_on "qt"
+  depends_on "qt3d"
+  depends_on "qtbase"
+  depends_on "qtcharts"
+  depends_on "qtconnectivity"
+  depends_on "qtdatavis3d"
+  depends_on "qtdeclarative"
+  depends_on "qtmultimedia"
+  depends_on "qtnetworkauth"
+  depends_on "qtpositioning"
+  depends_on "qtquick3d"
+  depends_on "qtremoteobjects"
+  depends_on "qtscxml"
+  depends_on "qtsensors"
+  depends_on "qtserialport"
+  depends_on "qtspeech"
+  depends_on "qtsvg"
+  depends_on "qttools"
+  depends_on "qtwebchannel"
+  depends_on "qtwebsockets"
+
+  on_macos do
+    depends_on "qtshadertools"
+  end
+
+  on_system :linux, macos: :sonoma_or_newer do
+    depends_on "qtwebengine"
+  end
 
   # extra components
   resource "pyqt6-3d" do

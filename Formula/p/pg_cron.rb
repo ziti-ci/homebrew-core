@@ -41,6 +41,7 @@ class PgCron < Formula
       # The major soversion is hardcoded to at least make sure compatibility version hasn't changed.
       # If it does change, then need to confirm if API/ABI change impacts running on older PostgreSQL.
       system "make", "install", "libpq=#{Formula["libpq"].opt_lib/shared_library("libpq", 5)}",
+                                "rpathdir=#{Formula["libpq"].opt_lib}",
                                 "pkglibdir=#{lib/postgresql.name}",
                                 "datadir=#{share/postgresql.name}"
       system "make", "clean"
@@ -48,14 +49,14 @@ class PgCron < Formula
   end
 
   test do
-    ENV["LC_ALL"] = "C"
+    ENV["LC_ALL"] = "en_US.UTF-8"
     postgresqls.each do |postgresql|
       pg_ctl = postgresql.opt_bin/"pg_ctl"
       psql = postgresql.opt_bin/"psql"
       port = free_port
 
       datadir = testpath/postgresql.name
-      system pg_ctl, "initdb", "-D", datadir
+      system pg_ctl, "initdb", "-D", datadir, "-o", "--locale=en_US.UTF-8", "-o", "'-E UTF-8'"
       (datadir/"postgresql.conf").write <<~EOS, mode: "a+"
 
         shared_preload_libraries = 'pg_cron'

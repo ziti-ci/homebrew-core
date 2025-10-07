@@ -29,7 +29,7 @@ class Pcl < Formula
   depends_on "libusb"
   depends_on "lz4"
   depends_on "qhull"
-  depends_on "qt"
+  depends_on "qtbase"
   depends_on "vtk"
 
   on_macos do

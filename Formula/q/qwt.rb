@@ -23,7 +23,13 @@ class Qwt < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "13db11bcb1836554ed9d2d1be1e2a09c645f4278eeb282c1386554865915adc0"
   end
 
-  depends_on "qt"
+  depends_on "qttools" => :build
+  depends_on "qtbase"
+  depends_on "qtsvg"
+
+  on_macos do
+    depends_on "qttools"
+  end
 
   # Apply Fedora patch to fix pkgconfig file.
   # Issue ref: https://sourceforge.net/p/qwt/bugs/353/
@@ -73,7 +79,7 @@ class Qwt < Formula
     ENV.delete "CPATH"
     ENV["LC_ALL"] = "en_US.UTF-8"
 
-    system Formula["qt"].bin/"qmake", "test.pro"
+    system Formula["qtbase"].bin/"qmake", "test.pro"
     system "make"
     system "./test"
   end

@@ -26,7 +26,7 @@ class Libgr < Formula
   depends_on "libtiff"
   depends_on "pixman"
   depends_on "qhull"
-  depends_on "qt"
+  depends_on "qtbase"
   depends_on "zeromq"
 
   uses_from_macos "zlib"

@@ -18,12 +18,8 @@ class Dnote < Formula
   depends_on "go" => :build
 
   def install
-    ldflags = %W[
-      -s -w
-      -X main.versionTag=#{version}
-      -X main.apiEndpoint=http://localhost:3000/api
-    ]
-    system "go", "build", *std_go_args(ldflags:), "-tags", "fts5", "./pkg/cli"
+    ldflags = "-s -w -X main.versionTag=#{version} -X main.apiEndpoint=http://localhost:3000/api"
+    system "go", "build", *std_go_args(ldflags:, tags: "fts5"), "./pkg/cli"
   end
 
   test do

@@ -18,6 +18,7 @@ class Terragrunt < Formula
     sha256 cellar: :any_skip_relocation, arm64_sequoia: "a31cb158663058bc0c16fcdd7ca3bf021d6e13c6f394dd3e7492b4a31bc9b60c"
     sha256 cellar: :any_skip_relocation, arm64_sonoma:  "a31cb158663058bc0c16fcdd7ca3bf021d6e13c6f394dd3e7492b4a31bc9b60c"
     sha256 cellar: :any_skip_relocation, sonoma:        "aedb1f7f43d3720813db03ab4cfd4bafd0af166603d0d769718e0fbbbbcac5bc"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "a4d921e2033825da51e17c19d10f83bde85dbe71ef544b821e0c3be1d42d199a"
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "6e8ccef40f877aceaab0fd6b98bc7f51f2c297c7394879138b812e50decddfbf"
   end
 

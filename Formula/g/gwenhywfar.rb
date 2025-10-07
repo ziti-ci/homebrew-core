@@ -27,7 +27,7 @@ class Gwenhywfar < Formula
   depends_on "libgpg-error"
   depends_on "openssl@3"
   depends_on "pkgconf" # gwenhywfar-config needs pkg-config for execution
-  depends_on "qt"
+  depends_on "qtbase"
 
   on_macos do
     depends_on "gettext"

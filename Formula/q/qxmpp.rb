@@ -17,7 +17,7 @@ class Qxmpp < Formula
 
   depends_on "cmake" => :build
   depends_on xcode: :build
-  depends_on "qt"
+  depends_on "qtbase"
 
   on_macos do
     depends_on "llvm" => :build if DevelopmentTools.clang_build_version <= 1400
@@ -43,7 +43,7 @@ class Qxmpp < Formula
 
   test do
     ENV.delete "CPATH"
-    (testpath/"test.pro").write <<~EOS
+    (testpath/"test.pro").write <<~QMAKE
       TEMPLATE     = app
       CONFIG      += console
       CONFIG      -= app_bundle
@@ -54,7 +54,7 @@ class Qxmpp < Formula
       LIBPATH     += #{lib}
       LIBS        += -lQXmppQt6
       QMAKE_RPATHDIR += #{lib}
-    EOS
+    QMAKE
 
     (testpath/"test.cpp").write <<~CPP
       #include <QXmppQt6/QXmppClient.h>
@@ -64,7 +64,7 @@ class Qxmpp < Formula
       }
     CPP
 
-    system "#{Formula["qt"].bin}/qmake", "test.pro"
+    system Formula["qtbase"].bin/"qmake", "test.pro"
     system "make"
     assert_path_exists testpath/"test", "test output file does not exist!"
     system "./test"

@@ -39,7 +39,9 @@ class Metview < Formula
   depends_on "openssl@3"
   depends_on "pango"
   depends_on "proj"
-  depends_on "qt"
+  depends_on "qt5compat"
+  depends_on "qtbase"
+  depends_on "qtsvg"
 
   uses_from_macos "bison" => :build
   uses_from_macos "flex"  => :build

@@ -4,7 +4,7 @@ class Suil < Formula
   url "https://download.drobilla.net/suil-0.10.22.tar.xz"
   sha256 "d720969e0f44a99d5fba35c733a43ed63a16b0dab867970777efca4b25387eb7"
   license "ISC"
-  head "https://gitlab.com/lv2/suil.git", branch: "master"
+  head "https://gitlab.com/lv2/suil.git", branch: "main"
 
   livecheck do
     url "https://download.drobilla.net/"
@@ -40,7 +40,7 @@ class Suil < Formula
   on_linux do
     depends_on "glib"
     depends_on "gtk+3"
-    depends_on "qt"
+    depends_on "qtbase"
   end
 
   def install

@@ -16,7 +16,7 @@ class Cpi < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "ffbaf9abd3b664c754c881208938414a5abde81082e703796fc3ef1318196af4"
   end
 
-  depends_on "qt"
+  depends_on "qtbase"
 
   uses_from_macos "llvm"
 

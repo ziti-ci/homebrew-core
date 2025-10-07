@@ -9,13 +9,12 @@ class Certbot < Formula
   head "https://github.com/certbot/certbot.git", branch: "main"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any,                 arm64_tahoe:   "35ecb33584eeae2560760a8b49d02068df51e07829414cb61487f1d7f358c9d4"
-    sha256 cellar: :any,                 arm64_sequoia: "d913f2592e1efaa3c63c1b14efc1e87100322542285ee0a2a3960ad9caca5a31"
-    sha256 cellar: :any,                 arm64_sonoma:  "3234eca1fb5d1cb43dbb50ad599c1257a0f907181e7e31fa61a38329c86c576a"
-    sha256 cellar: :any,                 sonoma:        "b5e4c8b0bb5183bc1fe2843793910a4cd4809257de44da5399cc1fdc730acc62"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "70fc1d4fc1a4116c8d78a8fc6bdff4cc2c0512a74b0a558d1582cf81a879055a"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "da2355ad5c7de8067662765d4b9c92479d1cdf35576a53607a30641842cc6c8e"
+    sha256 cellar: :any,                 arm64_tahoe:   "2dafd177b02b33fb36a6afa4dd9308bc7077bb305a1ab382e742c80bd4ec665c"
+    sha256 cellar: :any,                 arm64_sequoia: "f9c768b787aa432cb583ce477ff06b5bd031413b395b4d6b06494bd44649a20e"
+    sha256 cellar: :any,                 arm64_sonoma:  "72547999b19d8772f63c20aaa49e594f52a0e601606e8cb58ea4dcfc08777e30"
+    sha256 cellar: :any,                 sonoma:        "a414ee6dd454736a4428102f6b24c40503fd4ed6342edb16e21fc32419db6a2a"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "f1bcd8e1a20bd158dd3d471ed61255414a0556b9e7231086bb3c87423acf6ab1"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "35285e2692f8416f284077f05d354556ec6bd3d603b52adcfe0dee6f545595a1"
   end
 
   depends_on "augeas"

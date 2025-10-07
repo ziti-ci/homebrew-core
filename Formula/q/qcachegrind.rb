@@ -24,7 +24,7 @@ class Qcachegrind < Formula
   end
 
   depends_on "graphviz"
-  depends_on "qt"
+  depends_on "qtbase"
 
   def install
     args = %w[-config release]
@@ -33,7 +33,7 @@ class Qcachegrind < Formula
       args += %W[-spec #{spec}]
     end
 
-    qt = Formula["qt"]
+    qt = Formula["qtbase"]
     system qt.opt_bin/"qmake", *args
     system "make"
 

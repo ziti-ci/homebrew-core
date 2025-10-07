@@ -1,8 +1,9 @@
 class Ffmate < Formula
   desc "FFmpeg automation layer"
   homepage "https://docs.ffmate.io"
-  url "https://github.com/welovemedia/ffmate/archive/refs/tags/2.0.14.tar.gz"
-  sha256 "00ed2e6bdf9186bdb7dd3061f7ec81011e2b35a0b3e9e1cbff788dfaddaf6a63"
+  url "https://github.com/welovemedia/ffmate.git",
+      tag:      "2.0.14",
+      revision: "f98cd2b31d8625e33f0196feae9355fcc6bdfb3c"
   license "AGPL-3.0-only"
 
   bottle do
@@ -15,8 +16,19 @@ class Ffmate < Formula
   end
 
   depends_on "go" => :build
+  depends_on "node" => :build
+  depends_on "pnpm" => :build
 
   def install
+    cd "ui" do
+      system "pnpm", "install"
+      system "pnpm", "run", "generate"
+    end
+
+    ui_build_path = buildpath/"internal/controller/ui/ui-build"
+    rm_r ui_build_path if ui_build_path.exist?
+    cp_r "ui/.output/public", ui_build_path
+
     system "go", "build", *std_go_args(ldflags: "-s -w")
 
     generate_completions_from_executable(bin/"ffmate", "completion", shells: [:bash, :zsh, :fish, :pwsh])
@@ -26,7 +38,6 @@ class Ffmate < Formula
     require "json"
 
     port = free_port
-
     database = testpath/".ffmate/data.sqlite"
     (testpath/".ffmate").mkpath
 
@@ -34,6 +45,7 @@ class Ffmate < Formula
       server
       --port #{port}
       --database #{database}
+      --send-telemetry false
       --no-ui
     ]
 
@@ -44,6 +56,7 @@ class Ffmate < Formula
       outputFile:  "test.mp4",
     })
 
+    ui = "http://localhost:#{port}/ui"
     api = "http://localhost:#{port}/api/v1"
     pid = spawn bin/"ffmate", *args
 
@@ -54,6 +67,7 @@ class Ffmate < Formula
       output = shell_output("curl -s -X POST #{api}/presets -H 'Content-Type: application/json' -d '#{preset}'")
       assert_match "uuid", output
       assert_match "Test Preset", shell_output("curl -s #{api}/presets")
+      assert_match "<!DOCTYPE html>", shell_output("curl -s #{ui}/index.html")
     ensure
       Process.kill "TERM", pid
     end

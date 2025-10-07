@@ -22,7 +22,7 @@ class Pushpin < Formula
 
   depends_on "openssl@3"
   depends_on "python@3.13"
-  depends_on "qt"
+  depends_on "qtbase"
   depends_on "zeromq"
   depends_on "zurl"
 

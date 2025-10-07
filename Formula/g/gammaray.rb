@@ -16,10 +16,24 @@ class Gammaray < Formula
 
   depends_on "cmake" => :build
   depends_on "graphviz"
-  depends_on "qt"
+  depends_on "qt3d"
+  depends_on "qtbase"
+  depends_on "qtconnectivity"
+  depends_on "qtdeclarative"
+  depends_on "qtpositioning"
+  depends_on "qtscxml"
+  depends_on "qtsvg"
+  depends_on "qttools"
+  depends_on "qtwebengine"
+
+  on_macos do
+    depends_on "qtlocation"
+    depends_on "qtwebchannel"
+  end
 
   on_linux do
     depends_on "elfutils"
+    depends_on "qtwayland"
     depends_on "wayland"
   end
 

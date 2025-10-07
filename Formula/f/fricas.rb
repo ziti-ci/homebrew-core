@@ -1,10 +1,24 @@
 class Fricas < Formula
   desc "Advanced computer algebra system"
   homepage "https://fricas.github.io"
-  url "https://github.com/fricas/fricas/archive/refs/tags/1.3.12.tar.gz"
-  sha256 "f201cf62e3c971e8bafbc64349210fbdc8887fd1af07f09bdcb0190ed5880a90"
   license "BSD-3-Clause"
   head "https://github.com/fricas/fricas.git", branch: "master"
+
+  stable do
+    url "https://github.com/fricas/fricas/archive/refs/tags/1.3.12.tar.gz"
+    sha256 "f201cf62e3c971e8bafbc64349210fbdc8887fd1af07f09bdcb0190ed5880a90"
+
+    # Build fricas as a SBCL core file instead of standalone executable.
+    # Avoid patchelf issue on Linux and codesign issue on macOS.
+    patch do
+      url "https://github.com/fricas/fricas/commit/4d7624b86b1f4bfff799724f878cf3933459507d.patch?full_index=1"
+      sha256 "dbfbd13da8ca3eabe73c58b716dde91e8a81975ce9cafc626bd96ae6ab893409"
+    end
+    patch do
+      url "https://github.com/fricas/fricas/commit/03e4e83288ea46bb97f23c05816a9521f14734b7.patch?full_index=1"
+      sha256 "3b9dca32f6e7502fea08fb1a139d2929c89fe7f908ef73879456cbdd1f4f0421"
+    end
+  end
 
   no_autobump! because: :requires_manual_review
 
@@ -29,19 +43,10 @@ class Fricas < Formula
   depends_on "sbcl"
   depends_on "zstd"
 
-  on_linux do
-    # Patchelf will corrupt the SBCL core which is appended to binary.
-    on_arm do
-      pour_bottle? only_if: :default_prefix
-    end
-    on_intel do
-      pour_bottle? only_if: :default_prefix
-    end
-  end
-
   def install
     args = [
       "--with-lisp=sbcl",
+      "--enable-lisp-core",
       "--enable-gmp",
     ]
 
@@ -49,24 +54,6 @@ class Fricas < Formula
       system "../configure", *std_configure_args, *args
       system "make"
       system "make", "install"
-    end
-
-    # Work around patchelf corrupting the SBCL core which is appended to binary
-    # TODO: Find a better way to handle this in brew, either automatically or via DSL
-    if OS.linux? && build.bottle?
-      cd lib/"fricas" do
-        system "tar", "-czf", "target.tar.gz", "target"
-        rm_r("target")
-      end
-    end
-  end
-
-  def post_install
-    if (lib/"fricas/target.tar.gz").exist?
-      cd lib/"fricas" do
-        system "tar", "-xzf", "target.tar.gz"
-        rm("target.tar.gz")
-      end
     end
   end
 

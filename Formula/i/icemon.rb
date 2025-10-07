@@ -26,7 +26,7 @@ class Icemon < Formula
 
   depends_on "icecream"
   depends_on "lzo"
-  depends_on "qt"
+  depends_on "qtbase"
   depends_on "zstd"
 
   on_macos do

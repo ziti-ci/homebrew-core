@@ -5,7 +5,7 @@ class Qcli < Formula
       tag:      "v1.4",
       revision: "982619270ff49987328343909ea2179d1af52004"
   license "GPL-3.0-or-later"
-  head "https://github.com/bavc/qctools.git", branch: "master"
+  head "https://github.com/bavc/qctools.git", branch: "main"
 
   bottle do
     sha256 cellar: :any,                 arm64_tahoe:   "e723aab767be3500e7f52c35e67dcb10c2dd9e1e9e9bf26f6aa36f08843f4ad1"
@@ -17,9 +17,10 @@ class Qcli < Formula
   end
 
   depends_on "pkgconf" => :build
+  depends_on "qtmultimedia" => :build
+  depends_on "qwt" => :build
   depends_on "ffmpeg@6" # Issue ref: https://github.com/bavc/qctools/issues/552
-  depends_on "qt"
-  depends_on "qwt"
+  depends_on "qtbase"
 
   uses_from_macos "zlib"
 

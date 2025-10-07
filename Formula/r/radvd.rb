@@ -10,6 +10,7 @@ class Radvd < Formula
     sha256 cellar: :any_skip_relocation, arm64_sequoia: "eec560f303de91f1806f46c6f54f4e51ec080f1dfc229fa569d2c0baab0711e2"
     sha256 cellar: :any_skip_relocation, arm64_sonoma:  "54485d998b57f3e9a199f53216530e0ca07e2da6d6a54872f5a2f4d1b4642a1b"
     sha256 cellar: :any_skip_relocation, sonoma:        "a4f4a3af815645871d6eadf2574adad2450da398f767876acdbdd06fe04fb93b"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "ad3ddab263acc0d7b55b37cb661117c8f1c72c4b3a87347bfef40e94552799b8"
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "b4e8076563de9d02831b7ebfcedca64b085732111b2363ed46da86faeb382c51"
   end
 

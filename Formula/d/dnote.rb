@@ -6,6 +6,14 @@ class Dnote < Formula
   license "GPL-3.0-only"
   head "https://github.com/dnote/dnote.git", branch: "master"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "ca0d5c2c89e54661d1acef6bec74aa22397755e502d0d692c7e355d002493f69"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "7a1d3d6358a11edae43465a046927690efbd591b87b71a2cbbe78bde802c7c2a"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "a8a29c44a56d826dca695c3307f46ebd784ad44d7c93d48b5248b8d678976c8f"
+    sha256 cellar: :any_skip_relocation, sonoma:        "f49a252c80178c5dc230dc95cfa45b4a34e748cf91ced442c1c5e9aa0e50a1d5"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "1874739a52c05c5c86480cce7c5a4e2e3ecf43f18858a5de403c74fe37264c93"
+  end
+
   depends_on "go" => :build
 
   def install

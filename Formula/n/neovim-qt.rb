@@ -19,7 +19,8 @@ class NeovimQt < Formula
   depends_on "cmake" => :build
   depends_on "msgpack"
   depends_on "neovim"
-  depends_on "qt"
+  depends_on "qtbase"
+  depends_on "qtsvg"
 
   def install
     system "cmake", "-S", ".", "-B", "build", "-DUSE_SYSTEM_MSGPACK=ON", "-DWITH_QT=Qt6", *std_cmake_args

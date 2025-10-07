@@ -4,7 +4,7 @@ class Visp < Formula
   url "https://visp-doc.inria.fr/download/releases/visp-3.6.0.tar.gz"
   sha256 "eec93f56b89fd7c0d472b019e01c3fe03a09eda47f3903c38dc53a27cbfae532"
   license "GPL-2.0-or-later"
-  revision 17
+  revision 18
 
   livecheck do
     url "https://visp.inria.fr/download/"
@@ -48,7 +48,7 @@ class Visp < Formula
     depends_on "libomp"
     depends_on "libpcap"
     depends_on "qhull"
-    depends_on "qt"
+    depends_on "qtbase"
   end
 
   on_linux do

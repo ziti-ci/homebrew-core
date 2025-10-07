@@ -20,7 +20,7 @@ class Gecode < Formula
   end
 
   depends_on "pkgconf" => :test
-  depends_on "qt"
+  depends_on "qtbase"
 
   # Backport support for Qt6 from release/6.3.0 branch
   patch do
@@ -33,7 +33,7 @@ class Gecode < Formula
     #
     # [^1]: https://github.com/Gecode/gecode/commit/19b9ec3b938f52f5ef5feef15c6be417b5b27e36
     inreplace "configure", "if test ${ac_gecode_qt_major} -eq 5;", "if test ${ac_gecode_qt_major} -ge 5;"
-    ENV["MOC"] = Formula["qt"].opt_pkgshare/"libexec/moc"
+    ENV["MOC"] = Formula["qtbase"].opt_share/"qt/libexec/moc"
     ENV.append "CXXFLAGS", "-std=c++17"
 
     args = %W[

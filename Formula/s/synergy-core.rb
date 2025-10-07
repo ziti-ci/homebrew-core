@@ -3,21 +3,7 @@ class SynergyCore < Formula
   homepage "https://symless.com/synergy"
   url "https://github.com/symless/synergy/archive/refs/tags/v1.19.0.tar.gz"
   sha256 "c18750b6d6b217f8439199ac90bb4633ef0611d4a962a383c6b424a984f388fa"
-
-  # The synergy-core/LICENSE file contains the following preamble:
-  #   This program is released under the GPL with the additional exemption
-  #   that compiling, linking, and/or using OpenSSL is allowed.
-  # This preamble is followed by the text of the GPL-2.0.
-  #
-  # The synergy-core license is a free software license but it cannot be
-  # represented with the brew `license` statement.
-  #
-  # The GitHub Licenses API incorrectly says that this project is licensed
-  # strictly under GPLv2 (rather than GPLv2 plus a special exception).
-  # This requires synergy-core to appear as an exception in:
-  #   audit_exceptions/permitted_formula_license_mismatches.json
-  # That exception can be removed if the nonfree GitHub Licenses API is fixed.
-  license :cannot_represent
+  license "GPL-2.0-only" => { with: "openvpn-openssl-exception" }
   head "https://github.com/symless/synergy-core.git", branch: "master"
 
   # This repository contains old 2.0.0 tags, one of which uses a stable tag
@@ -40,8 +26,7 @@ class SynergyCore < Formula
 
   depends_on "cmake" => :build
   depends_on "openssl@3"
-  depends_on "pugixml"
-  depends_on "qt"
+  depends_on "qtbase"
 
   on_macos do
     depends_on "llvm" => :build if DevelopmentTools.clang_build_version <= 1402
@@ -77,6 +62,9 @@ class SynergyCore < Formula
   end
 
   def install
+    # Avoid statically linking OpenSSL on macOS
+    inreplace "cmake/Libraries.cmake", "set(OPENSSL_USE_STATIC_LIBS TRUE)", ""
+
     mkdir_p buildpath/"ext/synergy-extra"
     (buildpath/"ext/synergy-extra").install resource("synergy-extra")
 
@@ -90,8 +78,6 @@ class SynergyCore < Formula
 
     args = %w[
       -DBUILD_TESTS:BOOL=OFF
-      -DCMAKE_INSTALL_DO_STRIP=1
-      -DSYSTEM_PUGIXML:BOOL=ON
       -DSYNERGY_VERSION_RELEASE=ON
     ]
     system "cmake", "-S", ".", "-B", "build", *args, *std_cmake_args

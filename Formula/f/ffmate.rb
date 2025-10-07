@@ -7,12 +7,13 @@ class Ffmate < Formula
   license "AGPL-3.0-only"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "92408d488c711fac9b49a033f429e51fb67a04a849e71d136e9e1c273e4b4721"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "47a86b907b2541137df07205bdb6f2c848b1bbaef68d3fd0eb4c80334372fef2"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "6cbc6eef9425a692ae11e80b1bc1faf000bfb40834d31b8f6abc72d11ae6f4bf"
-    sha256 cellar: :any_skip_relocation, sonoma:        "5096866c58d28d847d14b29a5fee4b971523478129f97ef8e39f065ea5dfe779"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "6f00005f35343f7f478e2d0d0a0b959b453c6ff90a25c5c8aea60da9a550c225"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "5e53bf04f8afa578f58524e236519a393106efaa8ba69ef15ce2a80d5b1a8fad"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "d276c09fdf283bda6fbe550df618744822a610e104c69e448b2ed7929105a09c"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "35d9bc2358b8bb26e6b63cd00ce6b86d15c546afbfe78dbcf21744aaa669cb42"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "56b0caebd4c34713ad0dde23e7bead63adb0d0d975b11fc330e30eac7adf5d33"
+    sha256 cellar: :any_skip_relocation, sonoma:        "3f031027c60679381df632f0ca48333d7cd6f0657072617f660bfa6b99b7d392"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "68451e9a696c37a64017719bfd1bca60d085f4735fa3dda87abad7b7d94bfa7a"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "292ad06df240b1c00213af474bb5c4bd58bc9d2345b721a0461bb4f5e039b8ea"
   end
 
   depends_on "go" => :build

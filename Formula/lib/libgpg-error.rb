@@ -1,8 +1,8 @@
 class LibgpgError < Formula
   desc "Common error values for all GnuPG components"
   homepage "https://www.gnupg.org/related_software/libgpg-error/"
-  url "https://gnupg.org/ftp/gcrypt/libgpg-error/libgpg-error-1.55.tar.bz2"
-  sha256 "95b178148863f07d45df0cea67e880a79b9ef71f5d230baddc0071128516ef78"
+  url "https://gnupg.org/ftp/gcrypt/libgpg-error/libgpg-error-1.56.tar.bz2"
+  sha256 "82c3d2deb4ad96ad3925d6f9f124fe7205716055ab50e291116ef27975d169c0"
   license "LGPL-2.1-or-later"
 
   livecheck do
@@ -25,9 +25,6 @@ class LibgpgError < Formula
     depends_on "gettext"
   end
 
-  # Declare environ - upstream bug https://dev.gnupg.org/T7169
-  patch :DATA
-
   def install
     # NOTE: gpg-error-config is deprecated upstream, so we should remove this at some point.
     # https://dev.gnupg.org/T5683
@@ -45,19 +42,3 @@ class LibgpgError < Formula
     system bin/"gpgrt-config", "--libs"
   end
 end
-
-__END__
---- a/src/spawn-posix.c
-+++ b/src/spawn-posix.c
-@@ -57,7 +57,10 @@
- 
- #include "gpgrt-int.h"
- 
-+/* (Only glibc's unistd.h declares this iff _GNU_SOURCE is used.)  */
-+extern char **environ;
-+ 
- 
- /* Definition for the gpgrt_spawn_actions_t.  Note that there is a
-  * different one for Windows.  */
- struct gpgrt_spawn_actions {
-

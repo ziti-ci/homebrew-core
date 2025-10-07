@@ -1,6 +1,6 @@
 class Ki18n < Formula
   desc "KDE Gettext-based UI text internationalization"
-  homepage "https://api.kde.org/frameworks/ki18n/html/index.html"
+  homepage "https://api.kde.org/ki18n-index.html"
   url "https://download.kde.org/stable/frameworks/6.18/ki18n-6.18.0.tar.xz"
   sha256 "d0cbfbf3427c0368daa23f9f68b3cb5b03ad37b6820591491b3ea8a0a28bea61"
   license all_of: [
@@ -27,9 +27,11 @@ class Ki18n < Formula
   depends_on "doxygen" => :build
   depends_on "extra-cmake-modules" => [:build, :test]
   depends_on "pkgconf" => :build
+  depends_on "qttools" => :build
   depends_on "gettext"
   depends_on "iso-codes"
-  depends_on "qt"
+  depends_on "qtbase"
+  depends_on "qtdeclarative"
 
   uses_from_macos "python" => :build
 
@@ -49,11 +51,11 @@ class Ki18n < Formula
   end
 
   test do
-    qt = Formula["qt"]
+    qt = Formula["qtbase"]
     qt_major = qt.version.major
 
     (testpath/"CMakeLists.txt").write <<~CMAKE
-      cmake_minimum_required(VERSION 3.5)
+      cmake_minimum_required(VERSION 4.0)
       include(FeatureSummary)
       find_package(ECM #{version} NO_MODULE)
       set_package_properties(ECM PROPERTIES TYPE REQUIRED)

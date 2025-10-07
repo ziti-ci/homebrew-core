@@ -11,6 +11,7 @@ class ConfigFileValidator < Formula
     sha256 cellar: :any_skip_relocation, arm64_sequoia: "00d8fa20356bcbc53c4ef85a293cb05510901e713d8f33d3f4c5f260afc8551e"
     sha256 cellar: :any_skip_relocation, arm64_sonoma:  "00d8fa20356bcbc53c4ef85a293cb05510901e713d8f33d3f4c5f260afc8551e"
     sha256 cellar: :any_skip_relocation, sonoma:        "84aaa61b1cc799fe5cee90dab4f458f5630912e27e5d1209f7232f49d9082afb"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "931710a4e774c8dc61d225089715b7bedfff3086713b09c1251eb1e8b612b5c4"
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "d0bcb1d4be243ae3e6606946650aec179de717df9e26654867e850993f66fbc2"
   end
 

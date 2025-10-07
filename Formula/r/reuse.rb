@@ -3,8 +3,8 @@ class Reuse < Formula
 
   desc "Tool for copyright and license recommendations"
   homepage "https://reuse.software"
-  url "https://files.pythonhosted.org/packages/05/ed/ab1d24016967e8a2363a1c0889ccd958cee92cdc894668741156ff2daceb/reuse-6.0.0.tar.gz"
-  sha256 "a2cfc8a5f843e5a682ecef4adf67d10c9b7793241cd5232bcbd9fc301a487a1b"
+  url "https://files.pythonhosted.org/packages/f8/0a/f3a83547443a659311105ff95ae20421a08c669f2b7efa3d4fc8f15d6f94/reuse-6.1.0.tar.gz"
+  sha256 "61747cbefd4537cdf06ad1a4c14a86c6a42755de34c8c6f7c7a9fe2902ea4f6b"
   license all_of: [
     "GPL-3.0-or-later",
     "CC-BY-SA-4.0",

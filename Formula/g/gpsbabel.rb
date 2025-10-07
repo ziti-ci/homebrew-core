@@ -24,8 +24,10 @@ class Gpsbabel < Formula
 
   depends_on "cmake" => :build
   depends_on "pkgconf" => :build
+  depends_on "qtserialport" => :build
   depends_on "libusb"
-  depends_on "qt"
+  depends_on "qt5compat"
+  depends_on "qtbase"
   depends_on "shapelib"
 
   uses_from_macos "zlib"
@@ -48,7 +50,7 @@ class Gpsbabel < Formula
   end
 
   test do
-    (testpath/"test.loc").write <<~EOS
+    (testpath/"test.loc").write <<~XML
       <?xml version="1.0"?>
       <loc version="1.0">
         <waypoint>
@@ -56,7 +58,7 @@ class Gpsbabel < Formula
           <coord lat="37.331695" lon="-122.030091"/>
         </waypoint>
       </loc>
-    EOS
+    XML
     system bin/"gpsbabel", "-i", "geo", "-f", "test.loc", "-o", "gpx", "-F", "test.gpx"
     assert_path_exists testpath/"test.gpx"
   end

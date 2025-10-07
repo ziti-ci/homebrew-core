@@ -1,8 +1,8 @@
 class FirebaseCli < Formula
   desc "Firebase command-line tools"
   homepage "https://firebase.google.com/docs/cli/"
-  url "https://registry.npmjs.org/firebase-tools/-/firebase-tools-14.18.0.tgz"
-  sha256 "2e556583f2d8c898d8c6f076f35d3b6ae7101b53658df211a9d08ef0b46d6128"
+  url "https://registry.npmjs.org/firebase-tools/-/firebase-tools-14.19.0.tgz"
+  sha256 "daab1c4aa306133df5b87514ca8f0af9b1a75225d7e52256187923a7e22ce0ab"
   license "MIT"
 
   bottle do
@@ -22,12 +22,8 @@ class FirebaseCli < Formula
   end
 
   test do
-    # Skip `firebase init` on self-hosted Linux as it has different behavior with nil exit status
-    if !OS.linux? || ENV["GITHUB_ACTIONS_HOMEBREW_SELF_HOSTED"].blank?
-      assert_match "Failed to authenticate", shell_output("#{bin}/firebase init", 1)
-    end
+    assert_match version.to_s, shell_output("#{bin}/firebase --version")
 
-    output = shell_output("#{bin}/firebase use dev 2>&1", 1)
-    assert_match "Failed to authenticate, have you run \e[1mfirebase login\e[22m?", output
+    assert_match "Failed to authenticate", shell_output("#{bin}/firebase projects:list", 1)
   end
 end

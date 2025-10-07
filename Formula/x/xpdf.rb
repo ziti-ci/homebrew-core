@@ -28,7 +28,8 @@ class Xpdf < Formula
   depends_on "fontconfig"
   depends_on "freetype"
   depends_on "libpng"
-  depends_on "qt"
+  depends_on "qtbase"
+  depends_on "qtsvg" => :no_linkage # for svg icons
 
   uses_from_macos "cups"
 

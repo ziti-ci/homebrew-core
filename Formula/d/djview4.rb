@@ -24,11 +24,14 @@ class Djview4 < Formula
 
   depends_on "autoconf" => :build
   depends_on "automake" => :build
+  depends_on "librsvg" => :build
   depends_on "libtool" => :build
   depends_on "pkgconf" => :build
+  depends_on "qttools" => :build
   depends_on "djvulibre"
   depends_on "libtiff"
-  depends_on "qt"
+  depends_on "qt5compat"
+  depends_on "qtbase"
 
   def install
     system "./autogen.sh", "--with-x=no",

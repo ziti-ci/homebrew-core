@@ -1,10 +1,9 @@
 class ScalaAT213 < Formula
   desc "JVM-based programming language"
   homepage "https://www.scala-lang.org/"
-  url "https://downloads.lightbend.com/scala/2.13.16/scala-2.13.16.tgz"
-  mirror "https://www.scala-lang.org/files/archive/scala-2.13.16.tgz"
-  mirror "https://downloads.typesafe.com/scala/2.13.16/scala-2.13.16.tgz"
-  sha256 "937f743be315302caad15be99ab1ca425ff7e63f15ef5790db6c81bb49543256"
+  url "https://github.com/scala/scala/releases/download/v2.13.17/scala-2.13.17.tgz"
+  mirror "https://www.scala-lang.org/files/archive/scala-2.13.17.tgz"
+  sha256 "ada6b8deb341875838cced8d32070c63f96f77a833033f4ca5e30fe2ee6a171b"
   license "Apache-2.0"
 
   livecheck do
@@ -21,8 +20,6 @@ class ScalaAT213 < Formula
   depends_on "openjdk"
 
   def install
-    # Replace `/usr/local` references for uniform bottles
-    inreplace Dir["man/man1/scala{,c}.1"], "/usr/local", HOMEBREW_PREFIX
     rm Dir["bin/*.bat"]
     doc.install (buildpath/"doc").children
     share.install "man"

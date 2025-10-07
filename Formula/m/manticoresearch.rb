@@ -21,12 +21,12 @@ class Manticoresearch < Formula
   end
 
   bottle do
-    sha256 arm64_tahoe:   "f97d83a665e43696209f5a24a2cfc8bbbf8d087ce5fc481b10b37a6fc95dae62"
-    sha256 arm64_sequoia: "e5bd4089cb77b95e1c102f8b7e1b12eb8aa52fdfc1c0f82d7099827c64a8957c"
-    sha256 arm64_sonoma:  "76ddbda78fe3f552241d9f5edd646c9738500c6c4029ca58a062a4e34a39841d"
-    sha256 sonoma:        "fd573fa8133c982535d20239a8136db3b087d049d5d8769c22d31ab066411974"
-    sha256 arm64_linux:   "4240105fd72b43939d6a9184a87535171cc0da304f54f641ee6fef6b739be46d"
-    sha256 x86_64_linux:  "1c61c468419d8e296b5cd9d57ce0a5dde8e29e9233ca2cd545a2ac04e69f9c76"
+    sha256 arm64_tahoe:   "f802cb118e6c5275cfd6b71759bbf6ba5ee34ee0c0da4ac0a92080e28a9cd0be"
+    sha256 arm64_sequoia: "e218d5c2c441d65c7c5bac74cf12567ec99bf7f4e835909bed7d55b823066253"
+    sha256 arm64_sonoma:  "8dc33db06c70b92ea8978a9b4f91e60ce309826b4d3ddc22b7c610136d167740"
+    sha256 sonoma:        "568d68a59a154897018277a23d12142aa2286d8b70c5652520d8f6fff2ffcade"
+    sha256 arm64_linux:   "eeebef58e190a603ea55698f445c562533e8407033b478104fd97e840475ff9f"
+    sha256 x86_64_linux:  "0244b11e9c1ade2dd86ad76791d686e89c44ec29ee97ee38cfc7007e677d9748"
   end
 
   depends_on "cmake" => :build

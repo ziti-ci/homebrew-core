@@ -23,9 +23,13 @@ class EcflowUi < Formula
   depends_on "boost" => :build
   depends_on "cmake" => :build
   depends_on "openssl@3"
-  depends_on "qt"
+  depends_on "qt5compat"
+  depends_on "qtbase"
+  depends_on "qtcharts"
+  depends_on "qtsvg"
 
   uses_from_macos "libxcrypt"
+  uses_from_macos "zlib"
 
   # Replace boost::asio::deadline_timer since it was removed in Boost 1.89.0
   patch do

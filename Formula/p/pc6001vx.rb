@@ -18,8 +18,10 @@ class Pc6001vx < Formula
   end
 
   depends_on "pkgconf" => :build
+  depends_on "qttools" => :build
   depends_on "ffmpeg"
-  depends_on "qt"
+  depends_on "qtbase"
+  depends_on "qtmultimedia"
   depends_on "sdl2"
 
   on_macos do

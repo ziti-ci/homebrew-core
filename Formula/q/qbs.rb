@@ -26,17 +26,15 @@ class Qbs < Formula
   end
 
   depends_on "cmake" => :build
-  depends_on "qt"
+  depends_on "qt5compat"
+  depends_on "qtbase"
 
   # Backport support for Xcode 26 from upstream commit:
   # https://github.com/qbs/qbs/commit/2f3e8254573045fab7ebd487aa773527a3da642c
   patch :DATA
 
   def install
-    qt_dir = Formula["qt"].opt_lib/"cmake/Qt6"
-
-    args = %W[
-      -DQt6_DIR=#{qt_dir}
+    args = %w[
       -DQBS_ENABLE_RPATH=NO
     ]
 

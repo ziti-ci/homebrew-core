@@ -6,12 +6,12 @@ class Frei0r < Formula
   license "GPL-2.0-or-later"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "b77d43c5e2042b04cf4aa513ec63753c24760eadead1257a2f56d059d76f720b"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "80ba393995589f0d275cef0e9164693ac5ca547b1a8c5abc3e70e6c8a649a845"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "eb5d44b4848164d04a960edf98a61002bef55ac93152dc12b10e08620243d6f5"
-    sha256 cellar: :any_skip_relocation, sonoma:        "bb8352f9b51cf905524181e89bf28c901f499a142cdea3029cf4143a3b6c75b8"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "23f82826f994b5b59bd9ffb2908a782575c2a82197b6e2f0d178ff2c3c05916e"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "4e5607cf9559c2634e731cdee0339bd5ff866e40cb3e01668b6bea3bee8a4972"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "2b41c5ad26553c1885d8d5a2f528ecb1459655c140501e6885be3e83838ae50d"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "64fe8ea2a3289791c0ecbab17632b659a0a0c3c2c3cc9129d9dad760e35729b9"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "3d37eb8709cbf2a605b8750d354526aea3a90cfeccd7fbd3f43a997e3a99be0c"
+    sha256 cellar: :any_skip_relocation, sonoma:        "e567db0ed4ceeaea6954374249b01e5da74cbd7bae67a3dccb08d6ccefe1dc9f"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "26ddbf1764a5a0f0bd842758ae93b8f1d601108387866162b8cad47624938ecd"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "5ba3a2fee270b6eed1deca727b739587a46eaefee79a06badb7c2d51acf939ec"
   end
 
   depends_on "cmake" => :build

@@ -1,6 +1,6 @@
 class Karchive < Formula
   desc "Reading, creating, and manipulating file archives"
-  homepage "https://api.kde.org/frameworks/karchive/html/index.html"
+  homepage "https://api.kde.org/karchive-index.html"
   url "https://download.kde.org/stable/frameworks/6.18/karchive-6.18.0.tar.xz"
   sha256 "fa24f703aa799e4ff5b9cc2e4a628745912ebfcc9f0c6bb6d92106ff9e02e26f"
   license all_of: [
@@ -28,8 +28,9 @@ class Karchive < Formula
   depends_on "doxygen" => :build
   depends_on "extra-cmake-modules" => [:build, :test]
   depends_on "pkgconf" => :build
+  depends_on "qttools" => :build
   depends_on "openssl@3"
-  depends_on "qt"
+  depends_on "qtbase"
   depends_on "xz"
   depends_on "zstd"
 
@@ -56,7 +57,7 @@ class Karchive < Formula
 
     examples.each do |example|
       inreplace testpath/example/"CMakeLists.txt", /^project\(/, <<~CMAKE
-        cmake_minimum_required(VERSION 3.5)
+        cmake_minimum_required(VERSION 4.0)
         \\0
       CMAKE
 

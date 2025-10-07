@@ -17,18 +17,19 @@ class Quazip < Formula
 
   depends_on "cmake" => :build
   depends_on xcode: :build
-  depends_on "qt"
+  depends_on "qt5compat"
+  depends_on "qtbase"
 
   uses_from_macos "bzip2"
   uses_from_macos "zlib"
 
   def install
-    system "cmake", "-S", ".", "-B", "build", "-DCMAKE_PREFIX_PATH=#{Formula["qt"].opt_lib}", *std_cmake_args
+    system "cmake", "-S", ".", "-B", "build", *std_cmake_args
     system "cmake", "--build", "build"
     system "cmake", "--install", "build"
 
     cd include do
-      include.install_symlink "QuaZip-Qt#{Formula["qt"].version.major}-#{version}/quazip" => "quazip"
+      include.install_symlink "QuaZip-Qt#{Formula["qtbase"].version.major}-#{version}/quazip" => "quazip"
     end
   end
 
@@ -54,7 +55,7 @@ class Quazip < Formula
       }
     CPP
 
-    system Formula["qt"].bin/"qmake", "test.pro"
+    system Formula["qtbase"].bin/"qmake", "test.pro"
     system "make"
     assert_path_exists testpath/"test", "test output file does not exist!"
     system "./test"

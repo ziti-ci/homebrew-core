@@ -4,6 +4,7 @@ class RubyAT32 < Formula
   url "https://cache.ruby-lang.org/pub/ruby/3.2/ruby-3.2.9.tar.gz"
   sha256 "abbad98db9aeb152773b0d35868e50003b8c467f3d06152577c4dfed9d88ed2a"
   license "Ruby"
+  revision 1
 
   livecheck do
     url "https://www.ruby-lang.org/en/downloads/"
@@ -50,6 +51,13 @@ class RubyAT32 < Formula
     end
   end
 
+  # Update the bundled openssl gem for compatibility with OpenSSL 3.6+
+  # Using 3.1.x series to match major/minor version of bundled gem
+  resource "openssl" do
+    url "https://github.com/ruby/openssl/archive/refs/tags/v3.1.2.tar.gz"
+    sha256 "0abb96cdeaef1c0a2bfc8e0a4557467d7f2e93cabdd00d0d387afb1d0e1569a9"
+  end
+
   def api_version
     "3.2.0"
   end
@@ -59,6 +67,15 @@ class RubyAT32 < Formula
   end
 
   def install
+    openssl_gem_version = File.read("ext/openssl/openssl.gemspec")[/spec\.version\s*=\s*"(\d+(?:\.\d+)+)/, 1]
+    odie "Remove openssl resource!" if Version.new(openssl_gem_version) >= "3.1.2"
+    rm_r(%w[ext/openssl test/openssl])
+    resource("openssl").stage do
+      (buildpath/"ext").install "ext/openssl"
+      (buildpath/"ext/openssl").install "lib", "History.md", "openssl.gemspec"
+      (buildpath/"test").install "test/openssl"
+    end
+
     # otherwise `gem` command breaks
     ENV.delete("SDKROOT")
 

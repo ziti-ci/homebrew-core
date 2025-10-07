@@ -16,7 +16,9 @@ class Codequery < Formula
   end
 
   depends_on "cmake" => :build
-  depends_on "qt"
+  depends_on "qttools" => :build
+  depends_on "qt5compat"
+  depends_on "qtbase"
   depends_on "sqlite"
 
   def install

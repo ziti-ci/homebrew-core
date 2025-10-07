@@ -14,14 +14,14 @@ class Reuse < Formula
   head "https://github.com/fsfe/reuse-tool.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "1fdf33e8c967704d07d9718daf3bb5de5e5d78dcae4504406f5470cf17e85a69"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "2731f6b582ba5abc073ec0eb9fc9d49a8723ddf8ed8ce2984a4b54b709944a46"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "bbfec24dad23e06ba458756b899b57538c77c57653379d594800ad123ed515ea"
-    sha256 cellar: :any_skip_relocation, tahoe:         "31b4256f4df477844a3b1bb8f3023d4bb0b2a995e4bc8c6ce5279779456d3a9f"
-    sha256 cellar: :any_skip_relocation, sequoia:       "5b62965e86ed05165bd9e4db74a28bb1c04fbf05d54c8421cb4fed18d17c2e95"
-    sha256 cellar: :any_skip_relocation, sonoma:        "5705355b9895ce6fb216f00a9ac6666f88b110bc6c63f2973e7c1ad670c0fac8"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "8711b1a2bbe553e95bbbe23e8ad516d74dc8bfa14e32591e06614d875b557156"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "5fafd6f5372c92bffbc22c29a968f7e780bb0bba13923003be5d9f01403f68b8"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "2f0ca9ed82555c007db7c32583b8857e2ad94c593233a0786d36d31f5d24a66b"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "68f31f49472c4cced0e134ed2995abf39f6d4a38c7ae10a1d7c37c6d94999449"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "bd2b4fbc5898300a20a244863bd8edd11f6116418145ac0c660b9b4ab3a80e49"
+    sha256 cellar: :any_skip_relocation, tahoe:         "15d1abc5ffb2852af4ebc9c823b1313e8245812a19cb3901bcc21ab46b105d5d"
+    sha256 cellar: :any_skip_relocation, sequoia:       "b92bac040604b78559691bfafa064ec38fdda8927682a0f9b44486835e2e30b0"
+    sha256 cellar: :any_skip_relocation, sonoma:        "afb41a431814e47d403a887e7a9fea5c3c02ab9310b38b401930ae6dbbf09777"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "9323a3c4052b537c90419aef04374e81bd033fb0f42e057fc719ea76ec555e7c"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "522e30820e0b1a2c7959c7f9e11c666bf93791c867e5cac3bef3bfa99820a755"
   end
 
   depends_on "python@3.13"

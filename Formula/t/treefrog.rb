@@ -12,11 +12,12 @@ class Treefrog < Formula
   end
 
   bottle do
-    sha256 arm64_tahoe:   "6c590ab7633fc8dd71ee9d3a932853153b237d933dcbc13795d17ea0f72d9ea8"
-    sha256 arm64_sequoia: "8e140e267d0786df8221a31a14f56fdac6728c1bc5f1e6fc0ae95aae1e22b6ff"
-    sha256 arm64_sonoma:  "ff256cb1df69bfd2e56379e162a100a23d175effbacafeafc932044dd614fe04"
-    sha256 sonoma:        "0914d59133798fbdf1f742ce5dbcdf2643e1d0e9bf9c0ddcb59f08dbf44f4b4a"
-    sha256 x86_64_linux:  "91ad5a3bd9ce905fc9abf6425e99544a1330cb248fbad24e5135b4a05d69aca5"
+    rebuild 1
+    sha256 arm64_tahoe:   "472dc077d93e2bdd8944a167f143a692b09b9cad986863a2f807a7a5ca0f769b"
+    sha256 arm64_sequoia: "3cd5de64e354398012b990b47e63657cdc50b676819214c2888b8b715b8679f7"
+    sha256 arm64_sonoma:  "11189ca8d064f982fb2712cc29d5687c9235d3c92c1995bb6a8c7caf522c3425"
+    sha256 sonoma:        "059630842f97bd3996453939787ea983fbe51618355cf049d7bcea551d4f9112"
+    sha256 x86_64_linux:  "891c89d4b27108e6fd7dc708bc6e4e10ee1ed2ca72af7311e38458884f7408ae"
   end
 
   depends_on "pkgconf" => :build

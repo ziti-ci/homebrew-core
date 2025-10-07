@@ -9,7 +9,7 @@ class Sqlmap < Formula
   head "https://github.com/sqlmapproject/sqlmap.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "74b980e00180652f68d66090007791ebd1a081ad58c053a4a370fe680f5e9cf7"
+    sha256 cellar: :any_skip_relocation, all: "5d77c3806d0c46ce0e482a6bf1dbbaa77950acfdcf1722b15307ddbe10131a49"
   end
 
   depends_on "python@3.13"

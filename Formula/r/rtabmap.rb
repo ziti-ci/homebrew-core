@@ -33,7 +33,8 @@ class Rtabmap < Formula
   depends_on "opencv"
   depends_on "pcl"
   depends_on "pdal"
-  depends_on "qt"
+  depends_on "qtbase"
+  depends_on "qtsvg"
   depends_on "sqlite"
   depends_on "vtk"
 

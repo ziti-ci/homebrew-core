@@ -22,21 +22,14 @@ class Treefrog < Formula
   depends_on "pkgconf" => :build
   depends_on "glog"
   depends_on "lz4"
-  depends_on "mongo-c-driver@1"
-  depends_on "qt"
+  depends_on "mongo-c-driver"
+  depends_on "qtbase"
+  depends_on "qtdeclarative"
 
   def install
     rm_r("3rdparty")
     # Skip unneeded CMake check
     inreplace "configure", "if ! which cmake ", "if false "
-
-    # Fix to error: call to deleted constructor of 'formatter<QByteArray, char>'
-    # Force to use fallback implementation
-    if DevelopmentTools.clang_build_version >= 1700
-      inreplace ["src/tglobal.h", "src/tsystemglobal.h"],
-                "#ifdef TF_HAVE_STD_FORMAT",
-                "#ifndef TF_HAVE_STD_FORMAT"
-    end
 
     system "./configure", "--prefix=#{prefix}",
                           "--enable-shared-glog",
@@ -53,7 +46,7 @@ class Treefrog < Formula
     cd "hello" do
       assert_path_exists Pathname.pwd/"hello.pro"
 
-      system Formula["qt"].opt_bin/"qmake"
+      system Formula["qtbase"].opt_bin/"qmake"
       assert_path_exists Pathname.pwd/"Makefile"
       system "make"
       system bin/"treefrog", "-v"

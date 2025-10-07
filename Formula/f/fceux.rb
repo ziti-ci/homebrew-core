@@ -35,7 +35,7 @@ class Fceux < Formula
   depends_on "ffmpeg"
   depends_on "libarchive"
   depends_on "minizip"
-  depends_on "qt"
+  depends_on "qtbase"
   depends_on "sdl2"
   depends_on "x264"
   depends_on "x265"

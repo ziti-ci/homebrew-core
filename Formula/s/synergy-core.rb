@@ -1,8 +1,8 @@
 class SynergyCore < Formula
   desc "Synergy, the keyboard and mouse sharing tool"
   homepage "https://symless.com/synergy"
-  url "https://github.com/symless/synergy/archive/refs/tags/v1.18.1.tar.gz"
-  sha256 "f340cf6ef4762dfc7b0e04d4d0dae542db7f6fb9b9aba4eaf786446047cdb1c4"
+  url "https://github.com/symless/synergy/archive/refs/tags/v1.19.0.tar.gz"
+  sha256 "c18750b6d6b217f8439199ac90bb4633ef0611d4a962a383c6b424a984f388fa"
 
   # The synergy-core/LICENSE file contains the following preamble:
   #   This program is released under the GPL with the additional exemption
@@ -31,11 +31,11 @@ class SynergyCore < Formula
   end
 
   bottle do
-    sha256                               arm64_tahoe:   "26678afbc7418065590ef6fa576ec661380275169ce64eb9b1243370844876a2"
-    sha256                               arm64_sequoia: "e3e3008c7e703c0db1d038bd27645f9479178fe14236bb16edc4960c6b27d21e"
-    sha256                               arm64_sonoma:  "8fbba2a9c2af13c41475ab2476be8020398b08962427224ee8608b7cfd0d4975"
-    sha256                               sonoma:        "36fcf36037acfd38774c2ec90b6d5dc213ba82fb34a8a0105c5bc0e84237c88f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "a2ac1cfccaafcc11cf0eb10836285efbb7a21a9d4c8a5e382bf97799056e8ce5"
+    sha256                               arm64_tahoe:   "25913ff6edf63076ea08d23df11d8a3bdd6127cdba722efddb0935f579afa48e"
+    sha256                               arm64_sequoia: "650387faa695e66321282436bd4c5ad056ef3fa228faf568c894667f950c2dd0"
+    sha256                               arm64_sonoma:  "bcebaedefbe2244aa1b13b18d89cb2d3c10e196d0122b898d563c20660865adc"
+    sha256                               sonoma:        "2a1acad3e5d1114fe68664e6b634d81f9263b60a889ebc8b1877640e15244943"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "cc936636d4ad598d9c0209aa12ee9d002ddd3c533e984466601fd24745169496"
   end
 
   depends_on "cmake" => :build
@@ -86,9 +86,6 @@ class SynergyCore < Formula
       inreplace "src/gui/CMakeLists.txt",
                 /"execute_process\(COMMAND \${MACDEPLOYQT_CMD}.*\)"/,
                 '"MESSAGE (\\"Skipping macdeployqt in Homebrew\\")"'
-    elsif OS.linux?
-      # Get rid of hardcoded installation path.
-      inreplace "cmake/Packaging.cmake", "set(CMAKE_INSTALL_PREFIX /usr)", ""
     end
 
     args = %w[

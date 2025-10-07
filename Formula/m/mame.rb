@@ -54,12 +54,12 @@ class Mame < Formula
     depends_on "libxi"
     depends_on "mesa"
     depends_on "pulseaudio"
-    depends_on "qt"
+    depends_on "qtbase"
     depends_on "sdl2_ttf"
   end
 
   def install
-    ENV["QT_HOME"] = Formula["qt"].opt_prefix if OS.linux?
+    ENV["QT_HOME"] = Formula["qtbase"].opt_prefix if OS.linux?
 
     # Cut sdl2-config's invalid option.
     inreplace "scripts/src/osd/sdl.lua", "--static", ""

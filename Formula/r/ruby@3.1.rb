@@ -7,15 +7,12 @@ class RubyAT31 < Formula
   revision 1
 
   bottle do
-    rebuild 1
-    sha256 arm64_tahoe:   "dc72852c7a776cf641d2e16f772472598d8a0f35b5ebc3858efb335fb286fd55"
-    sha256 arm64_sequoia: "0b2c994b56cc016e46c5897105ec0c68ce7a84dc755e2ffab9fbcbca55997998"
-    sha256 arm64_sonoma:  "3198d30fb1e0727f1a68f20378d7a91be4de039fb2f0ef6fe818e0be1122e36f"
-    sha256 arm64_ventura: "ccb66ea8882437d80774ca761207d8207d061958615fc5869f8a4e717950d45a"
-    sha256 sonoma:        "6fbb3535f124ecccb1a8d717d724c64d623e8622aac47c19861db79cee5119f6"
-    sha256 ventura:       "4eae88a8a7d9606e90a79a05e9dd26f95f0f3e66741361b43c6f5b09ebe87345"
-    sha256 arm64_linux:   "3ea209c0300bd00dd41982809bcdfae936e4b0dea615be35fbfbadebdeb1fa64"
-    sha256 x86_64_linux:  "09a389c668f653f5d2fbc5de2c94e5bb13591a3161731828561033c8b994db4f"
+    sha256 arm64_tahoe:   "2cc59176253bc1c01a3edd0b95755b5c3b3ae4aabe429c73f4a0258133b180e7"
+    sha256 arm64_sequoia: "92903704cc5d9d37f66230174ff388340eafc43f7066383d900699df9e5fffcc"
+    sha256 arm64_sonoma:  "510daa18857bbdfca6cd36aa19adca0ef969f422e0447be9747a38120f27aeec"
+    sha256 sonoma:        "1e58691327c76cb8e297e80738ebfac66888b4b1bfacbcf670fa7ba964d74650"
+    sha256 arm64_linux:   "ee69b92c9720d2f814ef0482746e7879ee8299d3717b8756113c2a5b4ffa68ff"
+    sha256 x86_64_linux:  "1254c0da70acc105ffc4e77233428ac5018495a4a7b03e87c62f2d326e565e9a"
   end
 
   keg_only :versioned_formula

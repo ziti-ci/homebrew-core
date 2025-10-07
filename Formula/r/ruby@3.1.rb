@@ -4,6 +4,7 @@ class RubyAT31 < Formula
   url "https://cache.ruby-lang.org/pub/ruby/3.1/ruby-3.1.7.tar.gz"
   sha256 "0556acd69f141ddace03fa5dd8d76e7ea0d8f5232edf012429579bcdaab30e7b"
   license "Ruby"
+  revision 1
 
   bottle do
     rebuild 1
@@ -39,6 +40,13 @@ class RubyAT31 < Formula
     sha256 "4521b52f843620a9fc5ca7414526b7463b0989564c3ae80b26b68fbd1304c818"
   end
 
+  # Update the bundled openssl gem for compatibility with OpenSSL 3.6+
+  # Using 3.1.x series to minimize chances of breakage from upgrading bundled 3.0.x
+  resource "openssl" do
+    url "https://github.com/ruby/openssl/archive/refs/tags/v3.1.2.tar.gz"
+    sha256 "0abb96cdeaef1c0a2bfc8e0a4557467d7f2e93cabdd00d0d387afb1d0e1569a9"
+  end
+
   def api_version
     "3.1.0"
   end
@@ -48,6 +56,13 @@ class RubyAT31 < Formula
   end
 
   def install
+    rm_r(%w[ext/openssl test/openssl])
+    resource("openssl").stage do
+      (buildpath/"ext").install "ext/openssl"
+      (buildpath/"ext/openssl").install "lib", "History.md", "openssl.gemspec"
+      (buildpath/"test").install "test/openssl"
+    end
+
     # otherwise `gem` command breaks
     ENV.delete("SDKROOT")
 

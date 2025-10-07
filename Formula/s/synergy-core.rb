@@ -17,11 +17,12 @@ class SynergyCore < Formula
   end
 
   bottle do
-    sha256                               arm64_tahoe:   "25913ff6edf63076ea08d23df11d8a3bdd6127cdba722efddb0935f579afa48e"
-    sha256                               arm64_sequoia: "650387faa695e66321282436bd4c5ad056ef3fa228faf568c894667f950c2dd0"
-    sha256                               arm64_sonoma:  "bcebaedefbe2244aa1b13b18d89cb2d3c10e196d0122b898d563c20660865adc"
-    sha256                               sonoma:        "2a1acad3e5d1114fe68664e6b634d81f9263b60a889ebc8b1877640e15244943"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "cc936636d4ad598d9c0209aa12ee9d002ddd3c533e984466601fd24745169496"
+    rebuild 1
+    sha256 cellar: :any,                 arm64_tahoe:   "84cbe86fc9c9078649380899f5efe79f500b8816ad5d0f0f6a78526328959092"
+    sha256 cellar: :any,                 arm64_sequoia: "08d10a75a4b369dd67bd04159a660d6d8ebed3a3934ecd062fae29d3afd42b51"
+    sha256 cellar: :any,                 arm64_sonoma:  "76bc87f5bedbb52183aca4f452a49a184a217a53a4f713dc1279c48882a1073c"
+    sha256 cellar: :any,                 sonoma:        "6ba729c50b1ce75370f5340183f96167daff313757d879983a4d718456717a7c"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "aec5aca73d1ddde4e6b4c708d0a9038d2b189b078699aa946279f6a41cd1de94"
   end
 
   depends_on "cmake" => :build

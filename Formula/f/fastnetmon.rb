@@ -7,12 +7,13 @@ class Fastnetmon < Formula
   revision 15
 
   bottle do
-    sha256 cellar: :any, arm64_tahoe:   "29abfa0b9dbbd0f52909a78c5b2339d4a7be0c68781b535580e533318025ce92"
-    sha256 cellar: :any, arm64_sequoia: "47d1cb7734a0ec85afbf8422e750b51afe0668865532fde1d784892425a264fe"
-    sha256 cellar: :any, arm64_sonoma:  "b0d0b6576cd0df87fb976c422d6efe890522a41a6d9f31c41ef8e87ab9ec3137"
-    sha256 cellar: :any, sonoma:        "dc16093423817326432cd26fe2eed0ed4dfdd534baf6c36875a52c47404ed5d7"
-    sha256               arm64_linux:   "010f77b6fbc003492320f6f51986661d30419546a8c2d20b7811e560ec762485"
-    sha256               x86_64_linux:  "442e110a1a82ab9b14f95ddcb0343e66f86f01ef3f68bee8a8f3cac6eeec7131"
+    rebuild 1
+    sha256 cellar: :any, arm64_tahoe:   "d750c88ec4b7166bba2e05d15035a527d728a425a29f7572a1bc19a2303bb1ae"
+    sha256 cellar: :any, arm64_sequoia: "d1a7fa0b05d7d1d845f8e0b5e4d1498d7d5f4d584ffb6944e31c89f9e62d2d44"
+    sha256 cellar: :any, arm64_sonoma:  "a8cea11417cbb8c8b3d1e19741ec60132c0faa44bbb3b92b73653d576fc1b6e7"
+    sha256 cellar: :any, sonoma:        "fb87af035db1da66639d052994521b4e9122a4cd617dafb41cf6aac38c57a5bf"
+    sha256               arm64_linux:   "f053a4e1d941ac7991b260044f9d255f9baa63181951bcefbc4a969506396fd5"
+    sha256               x86_64_linux:  "853b3baa4d2312c5c20bb54da0b990f622c22c5bfc073e2a90e0332f5496fa80"
   end
 
   depends_on "cmake" => :build

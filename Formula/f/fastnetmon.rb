@@ -23,7 +23,7 @@ class Fastnetmon < Formula
   depends_on "hiredis"
   depends_on "log4cpp"
   depends_on macos: :big_sur # We need C++ 20 available for build which is available from Big Sur
-  depends_on "mongo-c-driver@1"
+  depends_on "mongo-c-driver"
   depends_on "openssl@3"
   depends_on "protobuf"
 
@@ -53,11 +53,27 @@ class Fastnetmon < Formula
     sha256 "d879800c448a08cbe312ca5c83edfaacffadb0a74f57707240a31316275abc6d"
   end
 
+  # Backport support for mongo-c-driver 2
+  patch do
+    url "https://github.com/pavel-odintsov/fastnetmon/commit/187ef0c9d0fd7f86f24c70b5233635eecc5943cf.patch?full_index=1"
+    sha256 "30517a7eb3a07ad1aa324a6f6a31adc8d1ff936fb7ef1d0459efd1190432da65"
+  end
+  patch do
+    url "https://github.com/pavel-odintsov/fastnetmon/commit/1ef41391c7d816e9d6105271b847c68593cb4a1c.patch?full_index=1"
+    sha256 "e0e74b52906c3fb91ea0627a3d72d95ae6f2008ac14f969e609a754321015218"
+  end
+  patch do
+    url "https://github.com/pavel-odintsov/fastnetmon/commit/943d8707cea1622aa20837a232a429277acdd0a7.patch?full_index=1"
+    sha256 "5312098a590d95adf30acfee38a777de0f80d3efc7a07ea1fe68fd7eb03247a7"
+  end
+
   def install
     system "cmake", "-S", "src", "-B", "build",
                     "-DCMAKE_CXX_STANDARD=20",
                     "-DLINK_WITH_ABSL=ON",
                     "-DSET_ABSOLUTE_INSTALL_PATH=OFF",
+                    "-DBSON_DEFAULT_IMPORTED_LIBRARY_TYPE=SHARED",
+                    "-DMONGOC_DEFAULT_IMPORTED_LIBRARY_TYPE=SHARED",
                     *std_cmake_args
     system "cmake", "--build", "build"
     system "cmake", "--install", "build"

@@ -31,7 +31,7 @@ class Qscintilla2 < Formula
   depends_on "pyqt-builder" => :build
   depends_on "pyqt"
   depends_on "python@3.13"
-  depends_on "qt"
+  depends_on "qtbase"
 
   def python3
     "python3.13"
@@ -45,7 +45,7 @@ class Qscintilla2 < Formula
     end
 
     pyqt = Formula["pyqt"]
-    qt = Formula["qt"]
+    qt = Formula["qtbase"]
     site_packages = Language::Python.site_packages(python3)
 
     cd "src" do
@@ -78,7 +78,6 @@ class Qscintilla2 < Formula
 
       args = %W[
         --target-dir #{prefix/site_packages}
-
         --qsci-features-dir #{share}/qt/mkspecs/features
         --qsci-include-dir #{include}
         --qsci-library-dir #{lib}

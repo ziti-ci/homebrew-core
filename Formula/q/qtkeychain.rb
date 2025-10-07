@@ -16,7 +16,8 @@ class Qtkeychain < Formula
   end
 
   depends_on "cmake" => :build
-  depends_on "qt"
+  depends_on "pkgconf" => :build
+  depends_on "qtbase"
 
   on_linux do
     depends_on "glib"
@@ -38,17 +39,17 @@ class Qtkeychain < Formula
         return 0;
       }
     CPP
-    flags = ["-I#{Formula["qt"].opt_include}"]
+    flags = ["-I#{Formula["qtbase"].opt_include}"]
     flags += if OS.mac?
       [
-        "-F#{Formula["qt"].opt_lib}",
+        "-F#{Formula["qtbase"].opt_lib}",
         "-framework", "QtCore"
       ]
     else
       [
         "-fPIC",
-        "-L#{Formula["qt"].opt_lib}", "-lQt6Core",
-        "-Wl,-rpath,#{Formula["qt"].opt_lib}",
+        "-L#{Formula["qtbase"].opt_lib}", "-lQt6Core",
+        "-Wl,-rpath,#{Formula["qtbase"].opt_lib}",
         "-Wl,-rpath,#{lib}"
       ]
     end

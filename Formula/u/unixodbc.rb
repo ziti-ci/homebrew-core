@@ -1,9 +1,9 @@
 class Unixodbc < Formula
   desc "ODBC 3 connectivity for UNIX"
   homepage "https://www.unixodbc.org/"
-  url "https://www.unixodbc.org/unixODBC-2.3.13.tar.gz"
-  mirror "https://fossies.org/linux/privat/unixODBC-2.3.13.tar.gz"
-  sha256 "119afef5f4cb04e780ca6cf763265b9fb2b99c4c11349a3f9cab14069d2c7c2b"
+  url "https://www.unixodbc.org/unixODBC-2.3.14.tar.gz"
+  mirror "https://fossies.org/linux/privat/unixODBC-2.3.14.tar.gz"
+  sha256 "4e2814de3e01fc30b0b9f75e83bb5aba91ab0384ee951286504bb70205524771"
   license "LGPL-2.1-or-later"
 
   livecheck do
@@ -29,13 +29,6 @@ class Unixodbc < Formula
   link_overwrite "include/odbcinst.h", "include/sql.h", "include/sqlext.h",
                  "include/sqltypes.h", "include/sqlucode.h"
   link_overwrite "lib/libodbc.a", "lib/libodbc.so"
-
-  # Fix segfault where `dst` is passed to `memcpy` instead of `*dst`
-  # https://github.com/lurcher/unixODBC/commit/97add92e08ed42102234055d55e098e1c8e5c1c0
-  patch do
-    url "https://github.com/lurcher/unixODBC/commit/97add92e08ed42102234055d55e098e1c8e5c1c0.patch?full_index=1"
-    sha256 "1cc28bbc3fcc4fc170c7b806ca9c1f69c9ecb0c599c7a7a7598da202eaa797e5"
-  end
 
   def install
     system "./configure", "--disable-debug",

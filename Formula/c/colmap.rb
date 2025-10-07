@@ -29,7 +29,7 @@ class Colmap < Formula
   depends_on "metis"
   depends_on "openssl@3"
   depends_on "poselib"
-  depends_on "qt"
+  depends_on "qtbase"
   depends_on "suite-sparse"
 
   uses_from_macos "curl"

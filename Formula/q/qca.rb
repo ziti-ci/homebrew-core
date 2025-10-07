@@ -31,7 +31,8 @@ class Qca < Formula
   depends_on "nss"
   depends_on "openssl@3"
   depends_on "pkcs11-helper"
-  depends_on "qt"
+  depends_on "qt5compat"
+  depends_on "qtbase"
 
   uses_from_macos "cyrus-sasl"
 

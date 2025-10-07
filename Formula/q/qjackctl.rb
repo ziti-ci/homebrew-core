@@ -4,7 +4,7 @@ class Qjackctl < Formula
   url "https://downloads.sourceforge.net/project/qjackctl/qjackctl/1.0.4/qjackctl-1.0.4.tar.gz"
   sha256 "e3eb6f989d947dcd97b4fe774294347106a0a6829c0480a965393ebca97514ae"
   license "GPL-2.0-or-later"
-  head "https://git.code.sf.net/p/qjackctl/code.git", branch: "master"
+  head "https://git.code.sf.net/p/qjackctl/code.git", branch: "main"
 
   livecheck do
     url :stable
@@ -23,8 +23,10 @@ class Qjackctl < Formula
 
   depends_on "cmake" => :build
   depends_on "pkgconf" => :build
+  depends_on "qttools" => :build
   depends_on "jack"
-  depends_on "qt"
+  depends_on "qtbase"
+  depends_on "qtsvg"
 
   on_linux do
     depends_on "alsa-lib"

@@ -23,6 +23,7 @@ class Qmmp < Formula
 
   depends_on "cmake" => :build
   depends_on "pkgconf" => :build
+  depends_on "qttools" => :build
 
   # TODO: on linux: pipewire
   depends_on "faad2"
@@ -52,7 +53,8 @@ class Qmmp < Formula
   depends_on "opusfile"
   depends_on "projectm"
   depends_on "pulseaudio"
-  depends_on "qt"
+  depends_on "qtbase"
+  depends_on "qtmultimedia"
   depends_on "taglib"
   depends_on "wavpack"
   depends_on "wildmidi"

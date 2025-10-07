@@ -1,10 +1,9 @@
 class Camlp5 < Formula
   desc "Preprocessor and pretty-printer for OCaml"
   homepage "https://camlp5.github.io/"
-  url "https://github.com/camlp5/camlp5/archive/refs/tags/8.03.01.tar.gz"
-  sha256 "057b8e06590cf29a1bd22b6c83aa5daa816d5cbb2ba2548409d474d7dc10c5b8"
+  url "https://github.com/camlp5/camlp5/archive/refs/tags/8.04.00.tar.gz"
+  sha256 "b00579277a5f18209a33f4adc4df04a40b5ca09e1509e702b464aa68ca44fc34"
   license "BSD-3-Clause"
-  revision 1
   head "https://github.com/camlp5/camlp5.git", branch: "master"
 
   livecheck do
@@ -25,13 +24,15 @@ class Camlp5 < Formula
 
   depends_on "ocaml-findlib" => :build
   depends_on "opam" => :build
+  depends_on "pkgconf" => :build
   depends_on "camlp-streams"
   depends_on "ocaml"
+  depends_on "pcre2"
 
   uses_from_macos "m4" => :build
 
   def install
-    ENV["OPAMROOT"] = buildpath/".opam"
+    ENV["OPAMROOT"] = opamroot = buildpath/".opam"
     ENV["OPAMYES"] = "1"
 
     system "opam", "init", "--compiler=ocaml-system", "--disable-sandboxing", "--no-setup"
@@ -41,6 +42,8 @@ class Camlp5 < Formula
     system "opam", "exec", "--", "make", "world.opt"
     system "opam", "exec", "--", "make", "install"
     (lib/"ocaml/camlp5").install "etc/META"
+    libexec.install opamroot/"ocaml-system/lib/stublibs/dllpcre2_stubs.so"
+    bin.env_script_all_files libexec, CAML_LD_LIBRARY_PATH: libexec
   end
 
   test do

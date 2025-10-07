@@ -22,22 +22,16 @@ class SpirvTools < Formula
   end
 
   depends_on "cmake" => :build
+  depends_on "spirv-headers" => :build
 
   uses_from_macos "python" => :build
 
-  resource "spirv-headers" do
-    # revision number could be found as `spirv_headers_revision` in `./DEPS`
-    url "https://github.com/KhronosGroup/SPIRV-Headers.git",
-        revision: "01e0577914a75a2569c846778c2f93aa8e6feddd"
-  end
-
   def install
-    (buildpath/"external/spirv-headers").install resource("spirv-headers")
-
     system "cmake", "-S", ".", "-B", "build",
                     "-DCMAKE_INSTALL_RPATH=#{rpath}",
                     "-DBUILD_SHARED_LIBS=ON",
                     "-DPython3_EXECUTABLE=#{which("python3")}",
+                    "-DSPIRV-Headers_SOURCE_DIR=#{Formula["spirv-headers"].opt_prefix}",
                     "-DSPIRV_SKIP_TESTS=ON",
                     "-DSPIRV_TOOLS_BUILD_STATIC=OFF",
                     *std_cmake_args

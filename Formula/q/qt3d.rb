@@ -17,15 +17,18 @@ class Qt3d < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_tahoe:   "cf5228c94451de4e7c2df0149cb7b7c887a37b57b5f7bb9c4a841dc594c9e4cf"
-    sha256 cellar: :any,                 arm64_sequoia: "53c37783ee5b2d5b632f35b493123b255f2e1f9b34acaf90faa6a32a3441756f"
-    sha256 cellar: :any,                 arm64_sonoma:  "4ef3d64201bcaa81e9b1427bb3564d38820e50cbd7831fae32a98609238c1647"
-    sha256 cellar: :any,                 sonoma:        "b9d8d831b68d4821a663c2953b2fb09256e8fe11fe59b95c5577e265415b6750"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "20885f9c5119e960efa0a9a7c3900ed43ce3100ff6c7fecab2e73afb1f442821"
+    rebuild 1
+    sha256 cellar: :any,                 arm64_tahoe:   "7c4070b5517cc9d66832b3f9f86a128552326891b12a1d0305a45863a215b559"
+    sha256 cellar: :any,                 arm64_sequoia: "f5eadd6340ec9eaff1fe237276ac1c96d92d00418781ce0193c54513ccb86794"
+    sha256 cellar: :any,                 arm64_sonoma:  "65a561bf7e4b9c141f098989d559b52774f7f333cddc278bcf491a1fd9bc2a8e"
+    sha256 cellar: :any,                 sonoma:        "67afad57e2f2d4a670ccd11ca69b605c98f6667a45fcda1cce8bada408ce8418"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "04cf1968db2f3e0b069b819de7666edc18283d45623c9df19156659f3490d91e"
   end
 
   depends_on "cmake" => [:build, :test]
   depends_on "ninja" => :build
+  depends_on "vulkan-headers" => :build
+  depends_on "vulkan-loader" => :build
   depends_on "pkgconf" => :test
 
   depends_on "assimp"
@@ -46,6 +49,7 @@ class Qt3d < Formula
     args = %W[
       -DCMAKE_STAGING_PREFIX=#{prefix}
       -DFEATURE_qt3d_system_assimp=ON
+      -DFEATURE_qt3d_vulkan=ON
     ]
     args << "-DQT_NO_APPLE_SDK_AND_XCODE_CHECK=ON" if OS.mac?
 

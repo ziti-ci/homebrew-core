@@ -29,9 +29,10 @@ class Kdoctools < Formula
   depends_on "extra-cmake-modules" => [:build, :test]
   depends_on "gettext" => :build
   depends_on "ki18n" => :build
+  depends_on "qttools" => :build
   depends_on "docbook-xsl"
   depends_on "karchive"
-  depends_on "qt"
+  depends_on "qtbase"
 
   uses_from_macos "libxml2"
   uses_from_macos "libxslt"
@@ -63,11 +64,11 @@ class Kdoctools < Formula
   end
 
   test do
-    qt = Formula["qt"]
+    qt = Formula["qtbase"]
     qt_major = qt.version.major
 
     (testpath/"CMakeLists.txt").write <<~CMAKE
-      cmake_minimum_required(VERSION 3.5)
+      cmake_minimum_required(VERSION 4.0)
       include(FeatureSummary)
       find_package(ECM #{version} NO_MODULE)
       set_package_properties(ECM PROPERTIES TYPE REQUIRED)

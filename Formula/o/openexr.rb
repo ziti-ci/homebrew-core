@@ -1,10 +1,9 @@
 class Openexr < Formula
   desc "High dynamic-range image file format"
   homepage "https://www.openexr.com/"
-  url "https://github.com/AcademySoftwareFoundation/openexr/archive/refs/tags/v3.4.0.tar.gz"
-  sha256 "d7b31637d7adc359f5e5a7517ba918cb5997bc1a4ae7a808ec874cdf91da93c0"
+  url "https://github.com/AcademySoftwareFoundation/openexr/archive/refs/tags/v3.4.1.tar.gz"
+  sha256 "0d75aa277c33a4ed1fce2e272126f2d8dbd01adda82d7cf4fe67b99f6f7eedce"
   license "BSD-3-Clause"
-  revision 2
 
   bottle do
     sha256 cellar: :any,                 arm64_tahoe:   "04393e92e8b7516b7bac837c4d6083e549333aa2a1cac42d5641cdd853b0778f"
@@ -32,9 +31,6 @@ class Openexr < Formula
   link_overwrite "lib/libIlmThread.so"
 
   def install
-    # Workaround with `openjph` >= 0.23 that doesn't include the prefix for cmake files
-    inreplace "src/lib/OpenEXRCore/internal_ht.cpp", "<ojph_", "<openjph/ojph_"
-
     system "cmake", "-S", ".", "-B", "build", *std_cmake_args
     system "cmake", "--build", "build"
     system "cmake", "--install", "build"

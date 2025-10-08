@@ -3,8 +3,8 @@ class Reuse < Formula
 
   desc "Tool for copyright and license recommendations"
   homepage "https://reuse.software"
-  url "https://files.pythonhosted.org/packages/f3/42/2b5eca80e86b1927c39da926f23e36945be0c8ca4653112ea45f4a623ad0/reuse-6.1.1.tar.gz"
-  sha256 "406cca816decfb7a7c6dff7d255fa5ce89f8bc85e19e6c90b871b7b54e8f80ac"
+  url "https://files.pythonhosted.org/packages/76/b0/ffd3a8978504763982db4735b7d87fc16b57f4b511c49a38ca25a7cb9ad3/reuse-6.1.2.tar.gz"
+  sha256 "6019a75f4ca18ad5b2506e0f3ec1b926b27ba6cdc9da88492e7fc65e3ff12c39"
   license all_of: [
     "GPL-3.0-or-later",
     "CC-BY-SA-4.0",
@@ -14,14 +14,14 @@ class Reuse < Formula
   head "https://github.com/fsfe/reuse-tool.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "89afcacb4e7591efdedcb580a0ced0fddbd6a8ea18c934fc329ce50bd05345dc"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "8a65b78d934a73f08c0c463e38f0f2e685cee40db1ee4562b5d1967e7f1182c3"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "6b869a202a3ab8c760edccc936856a588c3de4e9e6c7a80c4e5e8fd430d32bf0"
-    sha256 cellar: :any_skip_relocation, tahoe:         "cf5fec3fe2816f792bb8a995d1c79328ca67196fec4aff2ccd3bd172672fa4f6"
-    sha256 cellar: :any_skip_relocation, sequoia:       "9a35582d0fee279a23b49c9b60001f9723da4a5dfe17a47c215c1e4971a16069"
-    sha256 cellar: :any_skip_relocation, sonoma:        "7bbe137e09ab915fa575bc74cb43b5a5d4ca7b646a0986b633e88d80d73f3d54"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "9723aaea0c837e6f487e416c1d2a7cb3696e8d38ea907db6295ffd44843a2409"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "f245834b9f9b282022b5556a98ed926d7d25362c54365e5f0fa7a8131788a374"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "2b94a7a4dd90f3f016586f09850c2ea673af9732240a88fe8999ee4ff11bcda9"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "15a5d532193aad234de2afd688687e443a2fed962a48e03e5177be268137b72e"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "f6f52383e243798fa8df2485ca8a6a26b0060d66f5fb67b6d20b24aa15147c1d"
+    sha256 cellar: :any_skip_relocation, tahoe:         "85dded7468eedbece5d9b0cae796dc3b59a66185471bd62b598f9fd1cb5d40bb"
+    sha256 cellar: :any_skip_relocation, sequoia:       "b97ccef2e8ac8ba187e8ee4ba2a8ee51ee2b8d43e687df3bf4d9c8472d1ae7f7"
+    sha256 cellar: :any_skip_relocation, sonoma:        "83e6b31e9d621f1a289dfd8973d7cde17767264e0b22456abc519af822c76490"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "09d9c5ba25e1e04b415f303b59bc64bc98b629088b75d934a0e2ecbe64857295"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "0658592215a02ef5ab44cd477a6b020d538c08179471884f5628ef4cdbb90301"
   end
 
   depends_on "python@3.13"

@@ -1,8 +1,8 @@
 class Jsdoc3 < Formula
   desc "API documentation generator for JavaScript"
   homepage "https://jsdoc.app/"
-  url "https://registry.npmjs.org/jsdoc/-/jsdoc-4.0.4.tgz"
-  sha256 "900416d5ed87a94ea35b886d9e2b0265c541082d904c0b1bf38cbdcbe58f7933"
+  url "https://registry.npmjs.org/jsdoc/-/jsdoc-4.0.5.tgz"
+  sha256 "a590c432d7a190fea72445db6b3e2f8d1f457832caa88e617dbb24984141f971"
   license "Apache-2.0"
 
   bottle do

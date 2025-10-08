@@ -6,12 +6,12 @@ class ChromeDevtoolsMcp < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any,                 arm64_tahoe:   "12c34323b1c61898fefeef0a95110dbfce20bc6e944150007f660121ce106cde"
-    sha256 cellar: :any,                 arm64_sequoia: "893fbbd23c6bb5504b08bb6623b2ffd89584c6663f2a0856fc208f0a623fb3d6"
-    sha256 cellar: :any,                 arm64_sonoma:  "893fbbd23c6bb5504b08bb6623b2ffd89584c6663f2a0856fc208f0a623fb3d6"
-    sha256 cellar: :any,                 sonoma:        "dab866e9d85b119f75836cb17276d9e6f95c2951ae6532707371b4a6bba4d017"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "1c23372292d3f5ad3246b1c538b7b9f5a772360290a4b5c184a859f5a3f8d266"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "eeee5e1d7af1fbc1c5974252f1c1319df1f83f43277c2b3156e668e6bc222a49"
+    sha256 cellar: :any,                 arm64_tahoe:   "153f536754dd37067af06b0e1922d58bcc3a1173c44cb1f8043e05bda1aca454"
+    sha256 cellar: :any,                 arm64_sequoia: "eab398675d3ecdceb1bd66c5d7463090587936702d4dfe09417607829818f28e"
+    sha256 cellar: :any,                 arm64_sonoma:  "eab398675d3ecdceb1bd66c5d7463090587936702d4dfe09417607829818f28e"
+    sha256 cellar: :any,                 sonoma:        "23a54b1045298b305d69f27b64a7776629625b74d89842c8e52ea6e634e0b504"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "5cd02123949e51224c93fce1683af54d6c6e3b4039d784e19d2750282b307107"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "75b83eebee0f757abff2e12d63b03fe2337b2e64af6783460acd5739fe54f864"
   end
 
   depends_on "node"

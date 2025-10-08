@@ -1,8 +1,8 @@
 class Foundry < Formula
   desc "Blazing fast, portable and modular toolkit for Ethereum application development"
   homepage "https://github.com/foundry-rs/foundry"
-  url "https://github.com/foundry-rs/foundry/archive/refs/tags/v1.3.6.tar.gz"
-  sha256 "897e70f0f96760fb49150688a231453b5aba444a2f4480360dcd677c8adaf72f"
+  url "https://github.com/foundry-rs/foundry/archive/refs/tags/v1.4.0.tar.gz"
+  sha256 "f0a4d9aaf561f380c9235aa235444d30d0802f6c42f48ea0f739f4f8cc66e45d"
   license any_of: ["MIT", "Apache-2.0"]
   head "https://github.com/foundry-rs/foundry.git", branch: "master"
 

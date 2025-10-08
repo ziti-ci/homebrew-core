@@ -1,8 +1,8 @@
 class Rv < Formula
   desc "Ruby version manager"
   homepage "https://github.com/spinel-coop/rv"
-  url "https://github.com/spinel-coop/rv/archive/refs/tags/v0.1.1.tar.gz"
-  sha256 "1548dc6411fabc6b6b91e1faca08f0f1d78b3dcbb05a0c17e42e8ec959b9c4dd"
+  url "https://github.com/spinel-coop/rv/archive/refs/tags/v0.2.0.tar.gz"
+  sha256 "828048689c60ed0d5e4d9a27fcd643821f5f2acf4b782f447f5b0b17904adee1"
   license any_of: ["Apache-2.0", "MIT"]
   head "https://github.com/spinel-coop/rv.git", branch: "main"
 
@@ -23,23 +23,19 @@ class Rv < Formula
   depends_on "rust" => :build
   depends_on macos: :sonoma
 
-  # Upstream does not provide prebuilt Ruby binaries for x86_64 macOS
-  on_macos do
-    depends_on arch: :arm64
-  end
-
   on_linux do
     depends_on "openssl@3"
   end
 
   def install
     system "cargo", "install", *std_cargo_args(path: "crates/rv")
+    generate_completions_from_executable(bin/"rv", "shell", "completions")
   end
 
   test do
     assert_match version.to_s, shell_output("#{bin}/rv --version")
 
-    assert_match "No Ruby installations found.", shell_output("#{bin}/rv ruby list 2>&1")
+    assert_match "No Ruby installations found.", shell_output("#{bin}/rv ruby list --installed-only 2>&1")
 
     system bin/"rv", "ruby", "install", "3.4.5"
     assert_match "Homebrew", shell_output("#{bin}/rv ruby run 3.4.5 -- -e 'puts \"Homebrew\"'")

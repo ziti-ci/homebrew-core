@@ -23,6 +23,7 @@ class Vis < Formula
   depends_on "libtermkey"
   depends_on "lpeg"
   depends_on "lua"
+  depends_on "tre"
 
   uses_from_macos "unzip" => :build
   uses_from_macos "ncurses"

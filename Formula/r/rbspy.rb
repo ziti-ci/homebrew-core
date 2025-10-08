@@ -1,8 +1,8 @@
 class Rbspy < Formula
   desc "Sampling profiler for Ruby"
   homepage "https://rbspy.github.io/"
-  url "https://github.com/rbspy/rbspy/archive/refs/tags/v0.37.1.tar.gz"
-  sha256 "ca5146b36c74e9bb305e3cbf9e583c4b9cff0de5c8eec821d1ec5b52008e4202"
+  url "https://github.com/rbspy/rbspy/archive/refs/tags/v0.38.0.tar.gz"
+  sha256 "ca926a7315594c4d1686f910d59cae79c6d5a3a76d136a6725dc49f5a5818f8f"
   license "MIT"
 
   bottle do

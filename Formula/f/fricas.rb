@@ -23,13 +23,13 @@ class Fricas < Formula
   no_autobump! because: :requires_manual_review
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any,                 arm64_tahoe:   "7c87044d00ac54aed75e3c74024198bfa1334da3cc66e378bb084e9bf34e8b2e"
-    sha256 cellar: :any,                 arm64_sequoia: "6a4986f527a329cda2916c92b2065ae6d41aab08377bf751195b26a88036fd50"
-    sha256 cellar: :any,                 arm64_sonoma:  "c254d2cb770eb7c6796fa9293b06d01c6ffb14be778254ab3a26fc17a8eb8bec"
-    sha256 cellar: :any,                 sonoma:        "9b27da492022588d3d26575fa5f103bfe38f6102679fce800ac4ef9ce8e76343"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "bc084992d8a884fc40ab26b670100ea7aa8e83e91baabb22a9eac3e3687ae9e1"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "8412b5815cf0fa53cadd4b4608ba229c84aa50120023fe04279f4e19a9a83360"
+    rebuild 2
+    sha256 cellar: :any,                 arm64_tahoe:   "64703bf4baf959f9012dc8496cada512031b58b458f71c1aeb8773965bc18df5"
+    sha256 cellar: :any,                 arm64_sequoia: "5bcff86fb77d75170fc7510cb6f4a085b3f11ff6cbda79bd46e8c1ee25a06e44"
+    sha256 cellar: :any,                 arm64_sonoma:  "cb0c313b4aad8554ffc5599e29ea52b3d905135fff563214b0ecdcfdc1b5a56c"
+    sha256 cellar: :any,                 sonoma:        "8d0b0b27639999be31040f8929acd4f5ab96a45df1aceaccc6a27c802784a169"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "96074a0daf94443dc1872dcfe28189e0594da59f5eab8355c82e47609100e6a6"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "0659521326a584d23e2901ef7088c8a23cc5a835f0c08642024505da1244abe5"
   end
 
   depends_on "gmp"

@@ -1,8 +1,8 @@
 class AwsCS3 < Formula
   desc "C99 library implementation for communicating with the S3 service"
   homepage "https://github.com/awslabs/aws-c-s3"
-  url "https://github.com/awslabs/aws-c-s3/archive/refs/tags/v0.9.1.tar.gz"
-  sha256 "a80f20fa751ec3dbc3d24bc01bc56424925133d01c95e67deefa107cbb75563d"
+  url "https://github.com/awslabs/aws-c-s3/archive/refs/tags/v0.9.2.tar.gz"
+  sha256 "70ddd1e69fed7788ff5499b03158f36fb8137d82bd7b1af7bcdf57facbdb1557"
   license "Apache-2.0"
 
   bottle do

@@ -6,7 +6,7 @@ class Jsdoc3 < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "940d76a15d22ce61510764ebe2464657586e7e7be3a1602f0e6cf372df6a43d4"
+    sha256 cellar: :any_skip_relocation, all: "8d86f3f9bc538cb7fa6038821e62cf8aa0bfff3a057799f3aab176894a6c8b21"
   end
 
   depends_on "node"

@@ -6,7 +6,7 @@ class FernApi < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "a8df5548bea502143bb2250a045b032f3bb851c12f039fce1fe9de1da4bd3c90"
+    sha256 cellar: :any_skip_relocation, all: "9b9a9182f27f9ea134a4b672dc4e12a4e834d1fa0d8d052992268a5ea0f08de9"
   end
 
   depends_on "node"

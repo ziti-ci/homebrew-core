@@ -1,10 +1,9 @@
 class C2rust < Formula
   desc "Migrate C code to Rust"
   homepage "https://c2rust.com/"
-  url "https://github.com/immunant/c2rust/archive/refs/tags/v0.20.0.tar.gz"
-  sha256 "482330d3f27cfe85deea207e490bebbbe9c709b4bc054e3135498b3bbb585bec"
+  url "https://github.com/immunant/c2rust/archive/refs/tags/v0.21.0.tar.gz"
+  sha256 "4b39ae895f00b046878d5f312eec11c4b7d38d08b08e9de249a4eef938750229"
   license "BSD-3-Clause"
-  revision 1
 
   bottle do
     sha256 cellar: :any,                 arm64_tahoe:   "0311c46b8082fe469b5d6ecfb12ef5d8f9ab88998b176602bd4d1e6b66fb0de8"
@@ -20,12 +19,6 @@ class C2rust < Formula
   depends_on "cmake" => [:build, :test]
   depends_on "rust" => :build
   depends_on "llvm@19" # LLVM 20 hits https://github.com/immunant/c2rust/issues/1252
-
-  # cmake 4.0 build patch, upstream pr ref, https://github.com/immunant/c2rust/pull/1214
-  patch do
-    url "https://github.com/immunant/c2rust/commit/c96c1c0e49d8be452d97b3e13c741324befd7b77.patch?full_index=1"
-    sha256 "9670a043ffade24eb014e6fee69707ab69df81ea76f9973fd7d4a68499362013"
-  end
 
   def install
     system "cargo", "install", *std_cargo_args(path: "c2rust")

@@ -1,8 +1,8 @@
 class Lazyssh < Formula
   desc "Terminal-based SSH manager"
   homepage "https://github.com/Adembc/lazyssh"
-  url "https://github.com/Adembc/lazyssh/archive/refs/tags/v0.2.1.tar.gz"
-  sha256 "ada257fb07db602e92c9c2a3183f267b63fb8e1bf80c4d3292461a003aa794d5"
+  url "https://github.com/Adembc/lazyssh/archive/refs/tags/v0.3.0.tar.gz"
+  sha256 "36cd630b3cd9447e88904171cbb64944aeacbbd62c15db66d8a0e4a4486ffe88"
   license "Apache-2.0"
   head "https://github.com/Adembc/lazyssh.git", branch: "main"
 

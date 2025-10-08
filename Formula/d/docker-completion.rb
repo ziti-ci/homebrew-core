@@ -11,7 +11,7 @@ class DockerCompletion < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "e04789b1287cfffc5db3e7a1e893ce76cb2eacf0b2fbf7a91dbcae4987037d27"
+    sha256 cellar: :any_skip_relocation, all: "603e2df56e15c43c7802a8b6873e69f2ac6e3ef74a6c1bcceff51708e95a547c"
   end
 
   conflicts_with cask: "docker-desktop"

@@ -2,11 +2,10 @@ class Pocl < Formula
   desc "Portable Computing Language"
   homepage "https://portablecl.org/"
   license "MIT"
-  revision 1
 
   stable do
-    url "https://github.com/pocl/pocl/archive/refs/tags/v7.0.tar.gz"
-    sha256 "f55caba8c3ce12bec7b683ce55104c7555e19457fc2ac72c6f035201e362be08"
+    url "https://github.com/pocl/pocl/archive/refs/tags/v7.1.tar.gz"
+    sha256 "1110057cb0736c74819ad65238655a03f7b93403a0ca60cdd8849082f515ca25"
     depends_on "llvm@20" # TODO: use `llvm` next release, https://github.com/pocl/pocl/pull/1982
   end
 

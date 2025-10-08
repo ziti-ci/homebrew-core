@@ -1,8 +1,8 @@
 class SpirvTools < Formula
   desc "API and commands for processing SPIR-V modules"
   homepage "https://github.com/KhronosGroup/SPIRV-Tools"
-  url "https://github.com/KhronosGroup/SPIRV-Tools/archive/refs/tags/vulkan-sdk-1.4.328.0.tar.gz"
-  sha256 "bdd1692ad5cba1bdf8ace0850bcacc32abc2abfaef373328689fa2809ab7027f"
+  url "https://github.com/KhronosGroup/SPIRV-Tools/archive/refs/tags/vulkan-sdk-1.4.328.1.tar.gz"
+  sha256 "d00dc47df7163c2bacd70f090441e8fad96234f0e3b96c54ee9091a49e627adb"
   license "Apache-2.0"
   version_scheme 1
   head "https://github.com/KhronosGroup/SPIRV-Tools.git", branch: "main"

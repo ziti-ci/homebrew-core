@@ -7,11 +7,11 @@ class Ov < Formula
   head "https://github.com/noborus/ov.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "dca15297eab936d53bb26dc722ff76affbb221ae7d504658008f4f78acd6c3a5"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "dca15297eab936d53bb26dc722ff76affbb221ae7d504658008f4f78acd6c3a5"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "dca15297eab936d53bb26dc722ff76affbb221ae7d504658008f4f78acd6c3a5"
-    sha256 cellar: :any_skip_relocation, sonoma:        "aeaa405442efbde6b7fee891e49b3c16b7aa1b1c0fc3c7545e4252621a35dc4c"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "bb75e838d48ba686d0f482d24af277b945006e0424a49930144a1838555c5e66"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "2596035fce4b5884d118134e4a00f02d840de1fff586146ab91483b55dc0852e"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "2596035fce4b5884d118134e4a00f02d840de1fff586146ab91483b55dc0852e"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "2596035fce4b5884d118134e4a00f02d840de1fff586146ab91483b55dc0852e"
+    sha256 cellar: :any_skip_relocation, sonoma:        "e0cd2fb3dec2cbd1cb19f467586795d583405730585fc5e738f6632486f9f62f"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "d3d763f017f988be34d4e57a30094c388ffef927a64702356d50e4050929f6eb"
   end
 
   depends_on "go" => :build

@@ -6,6 +6,14 @@ class RolesanywhereCredentialHelper < Formula
   license "Apache-2.0"
   head "https://github.com/aws/rolesanywhere-credential-helper.git", branch: "main"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "3c697318f62b446aaba0a20290ea036c71cef2ee5b424d20006dcb703458e5f6"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "5f2fe7c610c146037ec31114e3535cefb4efc67e25847e67339b79113c5bccad"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "7ba22e6393778c286860036cb314594f4932ec1ca3d8688fa71b9b42757cc2d6"
+    sha256 cellar: :any_skip_relocation, sonoma:        "c1d04d97222d42b71ba4d6f79aee94fa24531d6d1f65a54b01e6bff170ae6592"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "d331365e22b91e363c2c2978de9484349aa61b466e5ef68e62ed3b65d918dc0d"
+  end
+
   depends_on "go" => :build
 
   def install

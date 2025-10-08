@@ -1,17 +1,17 @@
 class FirebaseCli < Formula
   desc "Firebase command-line tools"
   homepage "https://firebase.google.com/docs/cli/"
-  url "https://registry.npmjs.org/firebase-tools/-/firebase-tools-14.18.0.tgz"
-  sha256 "2e556583f2d8c898d8c6f076f35d3b6ae7101b53658df211a9d08ef0b46d6128"
+  url "https://registry.npmjs.org/firebase-tools/-/firebase-tools-14.19.0.tgz"
+  sha256 "daab1c4aa306133df5b87514ca8f0af9b1a75225d7e52256187923a7e22ce0ab"
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "db9d8e740bd078d3af3f7d4e23dd6e3b1d3bf0a5107c3452a75e1ded067b091e"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "db9d8e740bd078d3af3f7d4e23dd6e3b1d3bf0a5107c3452a75e1ded067b091e"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "db9d8e740bd078d3af3f7d4e23dd6e3b1d3bf0a5107c3452a75e1ded067b091e"
-    sha256 cellar: :any_skip_relocation, sonoma:        "957c3d5e91f176487693f3a05c2b3ff8a40ca5f7d2e1dfea6d9a14cd7ac9268a"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "ddc664ab9696ea16416fdeba7bb92db386910fb0b77a266212ddc3f951a42db4"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "777a102886cbcc9cc3cbbb81d185dec3c96b09d0ee9772a885f27d37323327d5"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "0f4b0c332f9b2a1cfca082e163a0ad5fee6e8cde6cd324f3b996e51e1a7a26db"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "0f4b0c332f9b2a1cfca082e163a0ad5fee6e8cde6cd324f3b996e51e1a7a26db"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "0f4b0c332f9b2a1cfca082e163a0ad5fee6e8cde6cd324f3b996e51e1a7a26db"
+    sha256 cellar: :any_skip_relocation, sonoma:        "1929c763a2a7f8c1c63293a9c81a195d01565267f263d37f1bfaad7ec3d9644b"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "2b83d4ef34193ec6ab8da47df8b7ddbdb45e78a6b6ac3181cfeaf27361d0ee71"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "2e6114856354e7bde5c7fd8636cf0d5c645d1aa4a4f3c94419c851a888fe4e7d"
   end
 
   depends_on "node"
@@ -22,12 +22,8 @@ class FirebaseCli < Formula
   end
 
   test do
-    # Skip `firebase init` on self-hosted Linux as it has different behavior with nil exit status
-    if !OS.linux? || ENV["GITHUB_ACTIONS_HOMEBREW_SELF_HOSTED"].blank?
-      assert_match "Failed to authenticate", shell_output("#{bin}/firebase init", 1)
-    end
+    assert_match version.to_s, shell_output("#{bin}/firebase --version")
 
-    output = shell_output("#{bin}/firebase use dev 2>&1", 1)
-    assert_match "Failed to authenticate, have you run \e[1mfirebase login\e[22m?", output
+    assert_match "Failed to authenticate", shell_output("#{bin}/firebase projects:list", 1)
   end
 end

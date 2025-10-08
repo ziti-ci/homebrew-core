@@ -10,6 +10,7 @@ class Cliproxyapi < Formula
     sha256 arm64_sequoia: "77069fbbc81fa42589e0ca6022875422fe17ff7ad2bf05f9750f5a045dbce84a"
     sha256 arm64_sonoma:  "77069fbbc81fa42589e0ca6022875422fe17ff7ad2bf05f9750f5a045dbce84a"
     sha256 sonoma:        "a51792c6f9f6548f2cc6e841b839d6a31a7839edd64af9b5d1cf055b45f76ecd"
+    sha256 arm64_linux:   "9d3f62ffd9bd2fd8445e17191cc7cc46d7ebba397fefc528a5690f0b14718fd2"
     sha256 x86_64_linux:  "de8fbaa5238a34fc88ab80d7117c33e54e1e6c54ccf5a95bf10b04b84cb99f6b"
   end
 

@@ -8,7 +8,7 @@ class Onedpl < Formula
 
   livecheck do
     url :stable
-    regex(/^oneDPL[._-](\d+(?:\.\d+)+)(?:[._-]release)?$/i)
+    strategy :github_latest
   end
 
   bottle do

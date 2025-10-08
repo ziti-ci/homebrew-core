@@ -40,6 +40,7 @@ class Clisp < Formula
     sha256               x86_64_linux:   "c62c710ca923611df8d28202e49b0ca27eba36a4d0736a01e482b453d53769e1"
   end
 
+  depends_on "libffcall"
   depends_on "libsigsegv"
   depends_on "readline"
   uses_from_macos "libxcrypt"

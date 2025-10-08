@@ -96,7 +96,8 @@ class Chapel < Formula
         CHPL_GASNET_CFG_OPTIONS: "--disable-auto-conduit-detect --enable-udp",
       ) do
         system "make"
-        # C backend requires chapel-lang/chapel#27652 to be resolved
+        # C backend requires https://github.com/chapel-lang/chapel/pull/27652
+        # to be resolved
         # with_env(CHPL_TARGET_COMPILER: cbackend) do
         #   system "make"
         # end
@@ -204,7 +205,8 @@ class Chapel < Formula
           CHPL_RT_OVERSUBSCRIBED: "yes",
         ) do
           system "util/test/checkChplInstall"
-          # C backend requires chapel-lang/chapel#27652 to be resolved
+          # C backend requires https://github.com/chapel-lang/chapel/pull/27652
+          # to be resolved
           # with_env(CHPL_TARGET_COMPILER: cbackend) do
           #   system "util/test/checkChplInstall"
           # end

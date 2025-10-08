@@ -1,8 +1,8 @@
 class CucumberRuby < Formula
   desc "Cucumber for Ruby"
   homepage "https://cucumber.io"
-  url "https://github.com/cucumber/cucumber-ruby/archive/refs/tags/v10.1.0.tar.gz"
-  sha256 "7c6adb2d3124842c5dd78e27f0e620a5d780bee152144c8eccdc2b57924941ad"
+  url "https://github.com/cucumber/cucumber-ruby/archive/refs/tags/v10.1.1.tar.gz"
+  sha256 "fa45ef239cce94bf1d2455b9afa557833adfe14b0d056fff51211a0a1959c591"
   license "MIT"
 
   livecheck do
@@ -30,14 +30,19 @@ class CucumberRuby < Formula
   # List with `gem install --explain cucumber`
   # https://rubygems.org/gems/cucumber/versions/10.0.0/dependencies
 
+  resource "memoist3" do
+    url "https://rubygems.org/downloads/memoist3-1.0.0.gem"
+    sha256 "686e42402cf150a362050c23143dc57b0ef88f8c344943ff8b7845792b50d56f"
+  end
+
   resource "ffi" do
     url "https://rubygems.org/gems/ffi-1.17.2.gem"
     sha256 "297235842e5947cc3036ebe64077584bff583cd7a4e94e9a02fdec399ef46da6"
   end
 
   resource "sys-uname" do
-    url "https://rubygems.org/gems/sys-uname-1.3.1.gem"
-    sha256 "b7b3eb817a9dd4a2f26a8b616a4f150ab1b79f4682d7538ceb992c8b7346f49c"
+    url "https://rubygems.org/gems/sys-uname-1.4.1.gem"
+    sha256 "ed2278ec670ee8af5eb5420d3a98e22188051f6241180db7c779993db2739a16"
   end
 
   resource "multi_test" do
@@ -66,13 +71,13 @@ class CucumberRuby < Formula
   end
 
   resource "cucumber-html-formatter" do
-    url "https://rubygems.org/gems/cucumber-html-formatter-21.14.0.gem"
-    sha256 "7fbaeb38c76e982848cf144136544853102ed906b6e54070bba409e505742267"
+    url "https://rubygems.org/gems/cucumber-html-formatter-21.15.1.gem"
+    sha256 "a08d7c30c357bfd4ea746312ed36e75dab5ba069e5ebc364ecfd5508540920e0"
   end
 
   resource "bigdecimal" do
-    url "https://rubygems.org/gems/bigdecimal-3.1.8.gem"
-    sha256 "a89467ed5a44f8ae01824af49cbc575871fa078332e8f77ea425725c1ffe27be"
+    url "https://rubygems.org/gems/bigdecimal-3.3.0.gem"
+    sha256 "e116f692049da02a180f7b1d49859e828eb3a70d01e2efd8f78fb675738554f5"
   end
 
   resource "cucumber-cucumber-expressions" do
@@ -91,8 +96,8 @@ class CucumberRuby < Formula
   end
 
   resource "cucumber-core" do
-    url "https://rubygems.org/gems/cucumber-core-15.2.0.gem"
-    sha256 "18e45bd05d0fa44342b9f39d89b07a832063922d946c854e87013f94461b72a8"
+    url "https://rubygems.org/gems/cucumber-core-15.2.1.gem"
+    sha256 "636a329f877c7ba478b5d9090f810c1b21796f9b601fa33532133ad1910b8588"
   end
 
   resource "cucumber-ci-environment" do
@@ -124,7 +129,7 @@ class CucumberRuby < Formula
   end
 
   test do
-    assert_match "create   features", shell_output("#{bin}/cucumber --init")
+    assert_match(/creating\s+features/, shell_output("#{bin}/cucumber --init"))
     assert_path_exists testpath/"features"
   end
 end

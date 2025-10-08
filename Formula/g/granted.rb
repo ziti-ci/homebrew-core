@@ -11,6 +11,7 @@ class Granted < Formula
     sha256 cellar: :any_skip_relocation, arm64_sequoia: "826f554acd21683c694d7b3ab363aee7a5339b9f488c8672b723494557dda323"
     sha256 cellar: :any_skip_relocation, arm64_sonoma:  "4d6a65dc8bcb372ebbbdaee1ce5d47f14adec08b67b2ff8d6a6c28da6d29e8ad"
     sha256 cellar: :any_skip_relocation, sonoma:        "2082c978cba759a2f55bcaa9e1afe102dc6bd03687deba376b075b043158358a"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "9ecdd52db4973da236d1317fbcd89309dd0ec5e36da27515463e29383ac423fa"
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "bf9dfb7396fd9de587fabb3b7fa0246efdf9155a5c2ed32cf5ec2fab0d27848c"
   end
 

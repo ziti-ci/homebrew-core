@@ -11,6 +11,7 @@ class Pyscn < Formula
     sha256 cellar: :any_skip_relocation, arm64_sequoia: "82fabdabfc51c717d398d741df7417ba21aaa4d84f0e23913eb1f26847a2ae8c"
     sha256 cellar: :any_skip_relocation, arm64_sonoma:  "051fbed528a69c552aea59a89a7042b752461455908757b3358f87a32653df70"
     sha256 cellar: :any_skip_relocation, sonoma:        "a49b4b64137b7e742b4bd8bbb3431f9917d2925a14062b38d62eab7b55630e2b"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "2951b563bcd21ef32d753d93ead92dfb453c8b43bb813501b1c2ffee6eb8c923"
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "5efcaf5eaf06ba7cc521eb715eb7d7b5db12d3741cac06f089bf2b12968a23db"
   end
 

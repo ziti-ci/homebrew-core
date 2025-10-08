@@ -1,8 +1,8 @@
 class VulkanVolk < Formula
   desc "Meta loader for Vulkan API"
   homepage "https://github.com/zeux/volk"
-  url "https://github.com/zeux/volk/archive/refs/tags/vulkan-sdk-1.4.328.0.tar.gz"
-  sha256 "048161dd5c099cc52e7bd48b9131a05ff96e379e26236132a7db66424e98cafa"
+  url "https://github.com/zeux/volk/archive/refs/tags/vulkan-sdk-1.4.328.1.tar.gz"
+  sha256 "8d6a4092d5de62d0c6290394cf81cf7a99e36875934b1b75d595e76d08fcadd1"
   license "MIT"
   head "https://github.com/zeux/volk.git", branch: "master"
 

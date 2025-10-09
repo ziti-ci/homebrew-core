@@ -16,12 +16,11 @@ class Qbs < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any,                 arm64_tahoe:   "744c54ac7722c99cd35fff1243b7149bc342e722b9f730656a3f948a313018b6"
-    sha256 cellar: :any,                 arm64_sequoia: "897b6fbf6667d4ba08ccc8baed8435d2dd2710d26a7400311e407a1fed49f9ce"
-    sha256 cellar: :any,                 arm64_sonoma:  "f362ce03374da267567565ddcbc3a04a698651c1b5a0d55d18148e28c8124c60"
-    sha256 cellar: :any,                 sonoma:        "0c3d67b19b77163bebd1245fbf4111ab96ceef403a5938550790dca2e07f560b"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "8fa26c6fe79c5614f055df559f2c3aaa3f320698e52552257aa6654cfe06761d"
+    sha256 cellar: :any,                 arm64_tahoe:   "6654e37bfa8068e5b8f0d9de2168438736e0bee98cf4b5c5cf7bdc7fa3c59507"
+    sha256 cellar: :any,                 arm64_sequoia: "c5e5fb99b337335c18f46d8721b0e82ab97cd74351c4025feb075eab2727f09d"
+    sha256 cellar: :any,                 arm64_sonoma:  "e2c235f11a830f1967151e7f32424f0c006d9c12e2ddf7259bf2669a5e565018"
+    sha256 cellar: :any,                 sonoma:        "60d8ab7fac172ea142e1afc746d435735054893df4f61aab574c2fddd22a34bd"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "36e8b8723bbd9f347e6f41afdfb41de3b3c658c8860e843ba41f9adbbf3f1b48"
   end
 
   depends_on "cmake" => :build

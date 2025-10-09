@@ -1,12 +1,15 @@
 class Gost < Formula
   desc "GO Simple Tunnel - a simple tunnel written in golang"
-  homepage "https://github.com/ginuerzh/gost"
-  url "https://github.com/ginuerzh/gost/archive/refs/tags/v2.12.0.tar.gz"
-  sha256 "ed575807b0490411670556d4471338f418c326bb1ffe25f52977735012851765"
+  homepage "https://gost.run/"
+  url "https://github.com/go-gost/gost/archive/refs/tags/v3.2.4.tar.gz"
+  sha256 "893aedaaf9b701e6847d14e63a0e5609245dae099e3124f3f1095c44595f7b5e"
   license "MIT"
-  head "https://github.com/ginuerzh/gost.git", branch: "master"
+  head "https://github.com/go-gost/gost.git", branch: "master"
 
-  no_autobump! because: :requires_manual_review
+  livecheck do
+    url :stable
+    strategy :github_latest
+  end
 
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_tahoe:   "b074c277af3a33652020d02819a234f3a83154a8b3ac73ef5b99c89f5ed9958c"
@@ -35,7 +38,6 @@ class Gost < Formula
     sleep 2
     output = shell_output("curl -I -x #{bind_address} https://github.com")
     assert_match %r{HTTP/\d+(?:\.\d+)? 200}, output
-    assert_match %r{Proxy-Agent: gost/#{version}}i, output
     assert_match(/Server: GitHub.com/i, output)
   end
 end

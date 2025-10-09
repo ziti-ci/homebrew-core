@@ -57,7 +57,9 @@ class Octave < Formula
   depends_on "qhull"
   depends_on "qrupdate"
   depends_on "qscintilla2"
-  depends_on "qt"
+  depends_on "qt5compat"
+  depends_on "qtbase"
+  depends_on "qttools"
   depends_on "rapidjson"
   depends_on "readline"
   depends_on "suite-sparse"
@@ -80,6 +82,9 @@ class Octave < Formula
   end
 
   def install
+    # Workaround until release with https://hg.octave.org/octave/rev/8cf9d5e68c96
+    inreplace "configure", " --cflags-only-I $QT_", " --cflags $QT_" if build.stable?
+
     system "./bootstrap" if build.head?
     args = [
       "--disable-silent-rules",

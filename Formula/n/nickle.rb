@@ -1,8 +1,8 @@
 class Nickle < Formula
   desc "Desk calculator language"
   homepage "https://www.nickle.org/"
-  url "https://nickle.org/release/nickle-2.103.tar.xz"
-  sha256 "5ec34861d3888956bcb1d50bb3a917f6a53f228a967b88401afe8a9f0f2f36c0"
+  url "https://nickle.org/release/nickle-2.105.tar.xz"
+  sha256 "8655ce796ded4885921a1bf26992e970528ca86d7913d52b2a043bfcf72173fa"
   license "MIT"
 
   livecheck do
@@ -21,19 +21,23 @@ class Nickle < Formula
     sha256 x86_64_linux:  "3e484518933728d2e31d47c464f9ae017dd79d06221c1d47aa500010d2a6d42e"
   end
 
-  depends_on "autoconf" => :build
-  depends_on "automake" => :build
-  depends_on "flex" => :build # conflicting types for 'yyget_leng'
+  depends_on "meson" => :build
+  depends_on "ninja" => :build
   depends_on "pkgconf" => :build
-  depends_on "readline"
+  depends_on "gmp"
 
+  uses_from_macos "bc" => :build
   uses_from_macos "bison" => :build
+  uses_from_macos "flex" => :build
   uses_from_macos "libedit"
 
   def install
-    ENV["CC_FOR_BUILD"] = ENV.cc
-    system "./autogen.sh", *std_configure_args
-    system "make", "install"
+    # Fix to ERROR: None of values ['gnu23'] are supported by the C compiler
+    inreplace "meson.build", "c_std=gnu23", "c_std=gnu2x"
+
+    system "meson", "setup", "build", "-Dlibedit=true", *std_meson_args
+    system "meson", "compile", "-C", "build", "--verbose"
+    system "meson", "install", "-C", "build"
   end
 
   test do

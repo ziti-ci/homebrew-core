@@ -9,6 +9,15 @@ class PythonGdbmAT314 < Formula
     formula "python@3.14"
   end
 
+  bottle do
+    sha256 cellar: :any, arm64_tahoe:   "8381106cc45125d87bbc5f1f40f984b3875b42b0281d37913f541d6f6335d7d8"
+    sha256 cellar: :any, arm64_sequoia: "609ec5c041cab8d6ea4f46cca01272ddf3e1c307b09b0f3c3974cd1eb05e326f"
+    sha256 cellar: :any, arm64_sonoma:  "a6499f73f34d8f346df65daa50da033a33583381795743599c4cb797c0816a81"
+    sha256 cellar: :any, sonoma:        "dec0a6beebde2002d41e0a313dea1e428ed04eba37b21426ad9860dc92ae1f1f"
+    sha256               arm64_linux:   "a26ddde4afa8c96a1fb3e00a7ff3e041992021fc043f189f56c07e90062e4b5d"
+    sha256               x86_64_linux:  "4f19f6e8cbe5644b8201502069e8a43138fd9ad180115a5705b75cebb7bf33ea"
+  end
+
   depends_on "gdbm"
   depends_on "python@3.14"
 

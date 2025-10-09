@@ -6,6 +6,7 @@ class Openssh < Formula
   version "10.1p1"
   sha256 "b9fc7a2b82579467a6f2f43e4a81c8e1dfda614ddb4f9b255aafd7020bbf0758"
   license "SSH-OpenSSH"
+  revision 1
 
   livecheck do
     url "https://ftp.openbsd.org/pub/OpenBSD/OpenSSH/portable/"
@@ -45,17 +46,16 @@ class Openssh < Formula
     sha256 "a273f86360ea5da3910cfa4c118be931d10904267605cdd4b2055ced3a829774"
   end
 
-  def install
-    if OS.mac?
-      ENV.append "CPPFLAGS", "-D__APPLE_SANDBOX_NAMED_EXTERNAL__"
+  # FIXME: non-interactive sudo/stdio is broken (e.g. used by ansible)
+  # Upstream Issue (already fixed): https://bugzilla.mindrot.org/show_bug.cgi?id=3872
+  # Can be removed if the patch is included in the next release
+  patch do
+    url "https://anongit.mindrot.org/openssh.git/patch/?id=beae06f56e0d0a66ca535896149d5fb0b2e8a1b4"
+    sha256 "3dc44a12e6452df72331756c1eb3fdb78f1bd40634713728258cc1882fc86200"
+  end
 
-      # FIXME: `ssh-keygen` errors out when this is built with optimisation.
-      # Reported upstream at https://bugzilla.mindrot.org/show_bug.cgi?id=3584
-      # Also can segfault at runtime: https://github.com/Homebrew/homebrew-core/issues/135200
-      if Hardware::CPU.intel? && DevelopmentTools.clang_build_version == 1403
-        inreplace "configure", "-fzero-call-used-regs=all", "-fzero-call-used-regs=used"
-      end
-    end
+  def install
+    ENV.append "CPPFLAGS", "-D__APPLE_SANDBOX_NAMED_EXTERNAL__" if OS.mac?
 
     args = %W[
       --sysconfdir=#{etc}/ssh

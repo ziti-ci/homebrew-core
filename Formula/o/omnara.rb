@@ -10,12 +10,13 @@ class Omnara < Formula
   no_autobump! because: "contains non-PyPI resources"
 
   bottle do
-    sha256 cellar: :any,                 arm64_tahoe:   "3d8aaf0acff48cb8cbc6b91e2514c08239f5671dbb5082f1f121d49815665947"
-    sha256 cellar: :any,                 arm64_sequoia: "0a684d01dadcb54a6fb2745f1eb61ca38ff2cce809012a12cec0d553da59cf13"
-    sha256 cellar: :any,                 arm64_sonoma:  "17a21457ed59eafbdb8b5fcf717681d84e64a0485035732d68d77d44ac2b50c3"
-    sha256 cellar: :any,                 sonoma:        "51e383582a001f14ef704519a15f02b4c5374af109cb3399775036e0e7a55785"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "f1597a316e8f0fa8bebf43b17003e12fdfe2be508f6ba98850f266be3ba5ca10"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "889fc2e5a3af1c95fa9cc7f6671a6cf65f634428c5db7375a11f9c1bc021c73e"
+    rebuild 1
+    sha256 cellar: :any,                 arm64_tahoe:   "d7397983626a63d5de6efece2746ed7be265525f0451184c0b01de53c9b5ecf5"
+    sha256 cellar: :any,                 arm64_sequoia: "edeb8dfbcdaf17c1fe01d02fe5e5fca30a6daf51f5a8f4a406741cc01a48867e"
+    sha256 cellar: :any,                 arm64_sonoma:  "6156781ed61487d03e02c03b68f5b65ed66c409496e71b22fde3d15fe0e0cedb"
+    sha256 cellar: :any,                 sonoma:        "98975b0531eb47c1466fd2725c02f26adbf8aa1ea0e2cdfcf2e2f1d93e18a6b5"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "69e9db0f038687963a6ece05002d34a2aa3186268dccb9c8458c17f3390c6a85"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "0d45fdc02138e96045e03cc714e3f8dd8fca6cd5ef35b65694d9e2fb0681a5d1"
   end
 
   depends_on "rust" => :build

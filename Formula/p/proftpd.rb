@@ -26,26 +26,38 @@ class Proftpd < Formula
     sha256 x86_64_linux:  "3f9384ff1b02d1c0374398868a325d671d60bd9e8a47f7943dd4b7f799c83759"
   end
 
+  depends_on "inetutils" => :test
+
   uses_from_macos "libxcrypt"
 
+  on_macos do
+    depends_on "gettext"
+  end
+
   def install
-    # fixes unknown group 'nogroup'
-    # http://www.proftpd.org/docs/faq/linked/faq-ch4.html#AEN434
-    inreplace "sample-configurations/basic.conf", "nogroup", "nobody"
+    install_user = ENV["USER"]
+    install_group = Utils.safe_popen_read("groups").split.first
+
+    # MacOS nobody/nogroup have negative uid/gid which causes errors when running service
+    # Linux also blame about uid e.g. unable to set UID to 65534, current UID: 1000
+    # So, we replace them with the user and group used for installation
+    inreplace "sample-configurations/basic.conf" do |s|
+      s.gsub! "nobody", install_user
+      s.gsub! "nogroup", install_group
+    end
 
     system "./configure", "--prefix=#{prefix}",
                           "--sbindir=#{sbin}",
                           "--sysconfdir=#{etc}",
-                          "--localstatedir=#{var}"
+                          "--localstatedir=#{var}",
+                          "--enable-nls"
     ENV.deparallelize
-    install_user = ENV["USER"]
-    install_group = Utils.safe_popen_read("groups").split.first
     system "make", "all"
     system "make", "INSTALL_USER=#{install_user}", "INSTALL_GROUP=#{install_group}", "install"
   end
 
   service do
-    run [opt_sbin/"proftpd"]
+    run [opt_sbin/"proftpd", "--nodaemon"]
     keep_alive false
     working_dir HOMEBREW_PREFIX
     log_path File::NULL
@@ -53,6 +65,35 @@ class Proftpd < Formula
   end
 
   test do
-    assert_match "ProFTPD Version #{version}", shell_output("#{opt_sbin}/proftpd -v")
+    assert_match version.to_s, shell_output("#{opt_sbin}/proftpd --version")
+
+    port = free_port
+    install_user = ENV["USER"]
+    install_group = Utils.safe_popen_read("groups").split.first
+    (testpath/"proftpd.conf").write <<~EOS
+      ServerName      Homebrew-Test
+      ServerType      standalone
+      DefaultServer   on
+      Port            #{port}
+      UseIPv6         off
+      Umask           022
+      MaxInstances    3
+      User            #{install_user}
+      Group           #{install_group}
+      ScoreboardFile  #{testpath}/proftpd.scoreboard
+      PidFile         #{testpath}/proftpd.pid
+    EOS
+
+    pid = spawn sbin/"proftpd", "--config", testpath/"proftpd.conf", "--nodaemon"
+    sleep 2
+    output = pipe_output(
+      "#{Formula["inetutils"].opt_bin}/ftp --no-login --no-prompt --verbose",
+      "open 127.0.0.1 #{port}\nuser anonymous anonymous\nquit\n",
+      0,
+    )
+    assert_match "Connected to 127.0.0.1.\n220 ProFTPD Server (Homebrew-Test)", output
+  ensure
+    Process.kill "TERM", pid
+    Process.wait pid
   end
 end

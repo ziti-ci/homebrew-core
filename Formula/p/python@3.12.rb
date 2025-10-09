@@ -1,17 +1,14 @@
 class PythonAT312 < Formula
   desc "Interpreted, interactive, object-oriented programming language"
   homepage "https://www.python.org/"
-  url "https://www.python.org/ftp/python/3.12.11/Python-3.12.11.tgz"
-  sha256 "7b8d59af8216044d2313de8120bfc2cc00a9bd2e542f15795e1d616c51faf3d6"
+  url "https://www.python.org/ftp/python/3.12.12/Python-3.12.12.tgz"
+  sha256 "487c908ddf4097a1b9ba859f25fe46d22ccaabfb335880faac305ac62bffb79b"
   license "Python-2.0"
-  revision 1
 
   livecheck do
     url "https://www.python.org/ftp/python/"
     regex(%r{href=.*?v?(3\.12(?:\.\d+)*)/?["' >]}i)
   end
-
-  no_autobump! because: :requires_manual_review
 
   bottle do
     sha256 arm64_tahoe:   "1443684f05205bf2aca7b050fdea79c93fa4f52fdbf2f085c037aef09b19b0a0"
@@ -52,7 +49,6 @@ class PythonAT312 < Formula
   link_overwrite "lib/python3.12/site-packages/pip*"
   link_overwrite "lib/python3.12/site-packages/wheel*"
 
-  # Always update to latest release
   resource "flit-core" do
     url "https://files.pythonhosted.org/packages/69/59/b6fc2188dfc7ea4f936cd12b49d707f66a1cb7a1d2c16172963534db741b/flit_core-3.12.0.tar.gz"
     sha256 "18f63100d6f94385c6ed57a72073443e1a71a4acb4339491615d0f16d6ff01b2"

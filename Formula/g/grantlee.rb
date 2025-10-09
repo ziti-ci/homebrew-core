@@ -31,7 +31,8 @@ class Grantlee < Formula
   depends_on "doxygen" => :build
   depends_on "graphviz" => :build
 
-  depends_on "qt"
+  depends_on "qtbase"
+  depends_on "qtdeclarative"
 
   patch do
     url "https://github.com/steveire/grantlee/commit/1efeb1cb61947e69b8c99ddbfc5b75cd27013a87.patch?full_index=1"

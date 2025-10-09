@@ -10,6 +10,17 @@ class PythonAT314 < Formula
     regex(%r{href=.*?v?(3\.14(?:\.\d+)*)/?["' >]}i)
   end
 
+  bottle do
+    sha256 arm64_tahoe:   "13ecd342edad0d95e7116e0be5b1df3580f954e927b89bec4d233ccccb659052"
+    sha256 arm64_sequoia: "c987dcc68acb3578826c0b466e3716a6a1c0e3f85766e557853b270b2264968f"
+    sha256 arm64_sonoma:  "21874e66de7d1fea484b78e50cdba62831bf8f0f821a0cdc83ab1bceec13c3ef"
+    sha256 tahoe:         "a459a2a4c5e24f448ab24bb2bd01946cc8a24f4d47e99e19d80bc7dd59a5ecf5"
+    sha256 sequoia:       "d02a98206e75532e22f5ac7366bef22903df1df16c5c9fc56c5b85929943298d"
+    sha256 sonoma:        "2d7e76dca5589d4639d03fd5bfccfa820c0638c0e1bc9223c5029c63741d7c34"
+    sha256 arm64_linux:   "b50b14b814a5b15f7e7abbd25e7723ffa8a4a894aa504ce0c7c4a78023d63a4a"
+    sha256 x86_64_linux:  "2a7f164a1f1d6b6a073462761f0552312a383198135c97b355a3b57132485c48"
+  end
+
   depends_on "pkgconf" => :build
   depends_on "mpdecimal"
   depends_on "openssl@3"

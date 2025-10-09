@@ -11,12 +11,12 @@ class Libomp < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_tahoe:   "34e886a863685fa36641e14ded72866de93beb286e5ac598b7afc8e905f2e7bd"
-    sha256 cellar: :any,                 arm64_sequoia: "dc3a41b135f7ac1c5415766615d60e0fb69d167b4b8140496c917a1928d07fec"
-    sha256 cellar: :any,                 arm64_sonoma:  "ccf2740208164292f28e79c90e573c567ce743cb76a2b00ecb447f077784ebc5"
-    sha256 cellar: :any,                 sonoma:        "2a56d96c5c34196c86a1af08206079241ed32f1d619c355787beea65c34ecf2d"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "28fe46ba9f4fb3755c0845adced6bfc496e6e20cea1e46eb143bb63d5504fe3e"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "945f2173d39ad4ea8133cec3ed51a6f6c2471c7fb67379d3cd3a55a10567b41f"
+    sha256 cellar: :any,                 arm64_tahoe:   "2d22b0ec6f21b9fa1ce2fe4faf1d4fa0763e9e67f2f34c785ea3d373a3e8b6c6"
+    sha256 cellar: :any,                 arm64_sequoia: "7a8b28fff8a9400af493cb5b703bdf2bc98f880761f1555ced736a0417a63b03"
+    sha256 cellar: :any,                 arm64_sonoma:  "f816b1fcbf5dc9ab550669bfaa88113b0e5c832c6a92859b1db4d5faf979655c"
+    sha256 cellar: :any,                 sonoma:        "e2c69b6ea5127ddb60490b0d0896d739205d12acff892db611c0131ec95cf0e8"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "4439e662a2183a02851676229f93d35efc30619a75553fac1ffce28072f26f0d"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "d9faef7b7a97513c44b16835efab93269057bf095963ad7e4949395db2497681"
   end
 
   # Ref: https://github.com/Homebrew/homebrew-core/issues/112107

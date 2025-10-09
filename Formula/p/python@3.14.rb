@@ -1,24 +1,24 @@
-class PythonAT313 < Formula
+class PythonAT314 < Formula
   desc "Interpreted, interactive, object-oriented programming language"
   homepage "https://www.python.org/"
-  url "https://www.python.org/ftp/python/3.13.8/Python-3.13.8.tgz"
-  sha256 "06108fe96f4089b7d9e0096cb4ca9c81ddcd5135f779a7de94cf59abcaa4b53f"
+  url "https://www.python.org/ftp/python/3.14.0/Python-3.14.0.tgz"
+  sha256 "88d2da4eed42fa9a5f42ff58a8bc8988881bd6c547e297e46682c2687638a851"
   license "Python-2.0"
 
   livecheck do
     url "https://www.python.org/ftp/python/"
-    regex(%r{href=.*?v?(3\.13(?:\.\d+)*)/?["' >]}i)
+    regex(%r{href=.*?v?(3\.14(?:\.\d+)*)/?["' >]}i)
   end
 
   bottle do
-    sha256 arm64_tahoe:   "2665712dfe507df08a3366fafe5676dc88a87d67d1dbf317859171e852b33812"
-    sha256 arm64_sequoia: "e205133e9f93fc634b7cde2a2a82186cc8361b9e0e2bcd07b280df6c208bfe35"
-    sha256 arm64_sonoma:  "938dd450a8f87965109b117d3ce4698b12604c816447fc4c68cea54b0bb56549"
-    sha256 tahoe:         "8f6ba7a60057ebb130475175cd9934f4fde4eb978a9ed13e668b59f7bf5e2846"
-    sha256 sequoia:       "f8bdde593ac63d31af2ce6d9bd502b4205b3a59090dfbeab5788dab86102ebd1"
-    sha256 sonoma:        "fef5fe547919a98032109c998e2232a17e2b47235f9cbc721534113e89af2d73"
-    sha256 arm64_linux:   "cf78e1b421151c17d90c14d1eb5f8290a4eebe8f908e70132d9596c885fd9bc3"
-    sha256 x86_64_linux:  "0df8c441a5734b0a2388cc3cc761da3f538e48db6710f6637a3515d4814756ef"
+    sha256 arm64_tahoe:   "13ecd342edad0d95e7116e0be5b1df3580f954e927b89bec4d233ccccb659052"
+    sha256 arm64_sequoia: "c987dcc68acb3578826c0b466e3716a6a1c0e3f85766e557853b270b2264968f"
+    sha256 arm64_sonoma:  "21874e66de7d1fea484b78e50cdba62831bf8f0f821a0cdc83ab1bceec13c3ef"
+    sha256 tahoe:         "a459a2a4c5e24f448ab24bb2bd01946cc8a24f4d47e99e19d80bc7dd59a5ecf5"
+    sha256 sequoia:       "d02a98206e75532e22f5ac7366bef22903df1df16c5c9fc56c5b85929943298d"
+    sha256 sonoma:        "2d7e76dca5589d4639d03fd5bfccfa820c0638c0e1bc9223c5029c63741d7c34"
+    sha256 arm64_linux:   "b50b14b814a5b15f7e7abbd25e7723ffa8a4a894aa504ce0c7c4a78023d63a4a"
+    sha256 x86_64_linux:  "2a7f164a1f1d6b6a073462761f0552312a383198135c97b355a3b57132485c48"
   end
 
   depends_on "pkgconf" => :build
@@ -39,8 +39,22 @@ class PythonAT313 < Formula
     depends_on "berkeley-db@5"
   end
 
-  link_overwrite "lib/python3.13/site-packages/pip*"
-  link_overwrite "lib/python3.13/site-packages/wheel*"
+  link_overwrite "bin/idle3"
+  link_overwrite "bin/pip3"
+  link_overwrite "bin/pydoc3"
+  link_overwrite "bin/python3"
+  link_overwrite "bin/python3-config"
+  link_overwrite "bin/wheel3"
+  link_overwrite "share/man/man1/python3.1"
+  link_overwrite "lib/libpython3.so"
+  link_overwrite "lib/pkgconfig/python3.pc"
+  link_overwrite "lib/pkgconfig/python3-embed.pc"
+  link_overwrite "lib/python3.14/site-packages/pip*"
+  link_overwrite "lib/python3.14/site-packages/wheel*"
+  link_overwrite "Frameworks/Python.framework/Headers"
+  link_overwrite "Frameworks/Python.framework/Python"
+  link_overwrite "Frameworks/Python.framework/Resources"
+  link_overwrite "Frameworks/Python.framework/Versions/Current"
 
   resource "flit-core" do
     url "https://files.pythonhosted.org/packages/69/59/b6fc2188dfc7ea4f936cd12b49d707f66a1cb7a1d2c16172963534db741b/flit_core-3.12.0.tar.gz"
@@ -192,6 +206,7 @@ class PythonAT313 < Formula
       # Prevent third-party packages from building against fragile Cellar paths
       bad_cellar_path_files = [
         lib_cellar/"_sysconfigdata__darwin_darwin.py",
+        lib_cellar/"_sysconfig_vars__darwin_darwin.json",
         lib_cellar/"config-#{version.major_minor}-darwin/Makefile",
         pc_dir/"python-#{version.major_minor}.pc",
         pc_dir/"python-#{version.major_minor}-embed.pc",
@@ -430,14 +445,11 @@ class PythonAT313 < Formula
   def caveats
     <<~EOS
       Python is installed as
-        #{HOMEBREW_PREFIX}/bin/python#{version.major_minor}
+        #{HOMEBREW_PREFIX}/bin/python3
 
-      Unversioned and major-versioned symlinks `python`, `python3`, `python-config`, `python3-config`, `pip`, `pip3`, etc. pointing to
-      `python#{version.major_minor}`, `python#{version.major_minor}-config`, `pip#{version.major_minor}` etc., respectively, are installed into
+      Unversioned symlinks `python`, `python-config`, `pip` etc. pointing to
+      `python3`, `python3-config`, `pip3` etc., respectively, are installed into
         #{opt_libexec}/bin
-
-      If you do not need a specific version of Python, and always want Homebrew's `python3` in your PATH:
-        brew install python3
 
       `idle#{version.major_minor}` requires tkinter, which is available separately:
         brew install python-tk@#{version.major_minor}

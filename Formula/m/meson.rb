@@ -4,6 +4,7 @@ class Meson < Formula
   url "https://github.com/mesonbuild/meson/releases/download/1.9.1/meson-1.9.1.tar.gz"
   sha256 "4e076606f2afff7881d195574bddcd8d89286f35a17b4977a216f535dc0c74ac"
   license "Apache-2.0"
+  revision 1
   head "https://github.com/mesonbuild/meson.git", branch: "master"
 
   bottle do
@@ -11,10 +12,10 @@ class Meson < Formula
   end
 
   depends_on "ninja"
-  depends_on "python@3.13"
+  depends_on "python@3.14"
 
   def install
-    python3 = "python3.13"
+    python3 = "python3.14"
     system python3, "-m", "pip", "install", *std_pip_args(build_isolation: true), "."
 
     bash_completion.install "data/shell-completions/bash/meson"

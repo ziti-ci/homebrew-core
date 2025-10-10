@@ -1,8 +1,8 @@
 class Anchor < Formula
   desc "Solana Program Framework"
   homepage "https://anchor-lang.com"
-  url "https://github.com/solana-foundation/anchor/archive/refs/tags/v0.31.1.tar.gz"
-  sha256 "0c9b1e3e1f14e78cb00271171b1cfac177c7c887814b022196bcbf7e2389e089"
+  url "https://github.com/solana-foundation/anchor/archive/refs/tags/v0.32.1.tar.gz"
+  sha256 "e45fec416a1a13dd20112f3f52855b91180448b3298808d7e42c6cd57ad4ae48"
   license "Apache-2.0"
 
   bottle do
@@ -16,11 +16,20 @@ class Anchor < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "da2bad29f4d7784c6ed6ef79c00a6120963086dcc9ad17fc98e87bd7465d6fe2"
   end
 
+  depends_on "pkgconf" => :build
   depends_on "rust" => :build
   depends_on "node" => :test
   depends_on "yarn" => :test
+  depends_on "openssl@3"
+
+  on_linux do
+    depends_on "systemd" # for `libudev`
+  end
 
   def install
+    ENV["OPENSSL_DIR"] = Formula["openssl@3"].opt_prefix
+    ENV["OPENSSL_NO_VENDOR"] = "1"
+
     system "cargo", "install", "--no-default-features", *std_cargo_args(path: "cli")
   end
 

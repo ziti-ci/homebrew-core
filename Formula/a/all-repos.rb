@@ -9,7 +9,7 @@ class AllRepos < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "682d934409fcf01972765afc9625c67329d5e13ce52f3970a8fb11beaa627503"
+    sha256 cellar: :any_skip_relocation, all: "205249e8fb5e720169314b5922be721aea001596835ae8289a3e7b2639425086"
   end
 
   depends_on "python@3.14"

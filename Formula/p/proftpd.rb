@@ -16,14 +16,13 @@ class Proftpd < Formula
   end
 
   bottle do
-    sha256 arm64_tahoe:   "264aa3e8cbacb0c0be1ddb6ed2be605f69af7016cbcf916bc4f3f9aaa452cf64"
-    sha256 arm64_sequoia: "ff2411cecf1ed7c49a47ab0f432baa31b5e27b9483cc8404179fe4454d0ce186"
-    sha256 arm64_sonoma:  "47c7285cac71305d24a585f231085421221949f7e41da52c4f2d807b5c63e68d"
-    sha256 arm64_ventura: "556493e923eed83521dbf6cc4cdc92f9feb3ef635e7d00b01eabd0ade523abdb"
-    sha256 sonoma:        "56b20b6b84180fff26fa7f09d6a09a5622912eeafbe47edbdab48dc17ed5d0aa"
-    sha256 ventura:       "cbaa7686fe01b1ee6e707a15cc997cf28b34b9d6ef963ec62680f06cfb322518"
-    sha256 arm64_linux:   "183e2f2eae6a4d81a6d6c692c6fb4c367ffa0f6a1c2a3dc083d4750e7bfea96d"
-    sha256 x86_64_linux:  "3f9384ff1b02d1c0374398868a325d671d60bd9e8a47f7943dd4b7f799c83759"
+    rebuild 1
+    sha256 arm64_tahoe:   "0403d12abcf2e2503d5a0cb195188de6ad4f9276d99b7f80b39da7c5fc815ccf"
+    sha256 arm64_sequoia: "4e369912c18c4ea78435f13a74ce45180e656d04290f20ff398443de3a68ee9b"
+    sha256 arm64_sonoma:  "12eff8d0547d82048f227c50da34717e7595a7a07ac784ae5c2978ce676b0328"
+    sha256 sonoma:        "294004644b0e2d4799b1e4753c2ef6cc44a93001b017a7d177be890cf79a647a"
+    sha256 arm64_linux:   "8d1a0954158c3c5fad4e736cf9ddb60802cf8e1fe8317d70ea3ba766b3ba2c30"
+    sha256 x86_64_linux:  "cf38eeacafb8c58b2a3e5e1bc2fb67426dfe0f65ce7d13d037edacd41f834f3e"
   end
 
   depends_on "inetutils" => :test

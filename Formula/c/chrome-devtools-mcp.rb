@@ -1,17 +1,17 @@
 class ChromeDevtoolsMcp < Formula
   desc "Chrome DevTools for coding agents"
   homepage "https://github.com/chromedevtools/chrome-devtools-mcp"
-  url "https://registry.npmjs.org/chrome-devtools-mcp/-/chrome-devtools-mcp-0.7.0.tgz"
-  sha256 "e9fd5e7c46ad090102ccc7d0bb7e1f179e32ed97bf05e1685a89513917942848"
+  url "https://registry.npmjs.org/chrome-devtools-mcp/-/chrome-devtools-mcp-0.8.0.tgz"
+  sha256 "98a4fc3c43cc258401815e177e9945b6a8cb84618efa22426bbe2651fc3f5604"
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any,                 arm64_tahoe:   "e40049ef0076d7ea22d5f0902f5366d9a2cff6539a91bafd6a44bca7581c321e"
-    sha256 cellar: :any,                 arm64_sequoia: "d4cfe3c171c8ec417d55e3e494d9832a873426cbaf4f34d65d551a7a673d1559"
-    sha256 cellar: :any,                 arm64_sonoma:  "d4cfe3c171c8ec417d55e3e494d9832a873426cbaf4f34d65d551a7a673d1559"
-    sha256 cellar: :any,                 sonoma:        "9778387a771318a966111bf824cbf91cc5b83907de99b545fd093a16af168af9"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "25b863210cf88ae6550c56586e55815b9093cf35bf12d3750adcf3ba9b4bcbed"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "fecae160b2c0a637000d97939c107d1e713a310c6c6749e1a24218b351243ef0"
+    sha256 cellar: :any,                 arm64_tahoe:   "748d399672642f2449b155e2443026d78b140666d597faca9a22e6ed2e2637f6"
+    sha256 cellar: :any,                 arm64_sequoia: "350d49e580ccb8c680192824520cc6a7b4ee4e87b606933349db38cb4fcb4c80"
+    sha256 cellar: :any,                 arm64_sonoma:  "350d49e580ccb8c680192824520cc6a7b4ee4e87b606933349db38cb4fcb4c80"
+    sha256 cellar: :any,                 sonoma:        "e98677b0fad4d77f58177f051d819c0c6b80f83090c28617564d06fb1d98f034"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "3793859dbe993a7f35bc172036b48f45002de49dbebfd8c406bd5448005487a9"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "717f0baadb828494a6db1d308dd45c8ff3d21ad633010bd446e39587125f087a"
   end
 
   depends_on "node"

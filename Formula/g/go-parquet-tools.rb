@@ -11,6 +11,7 @@ class GoParquetTools < Formula
     sha256 cellar: :any_skip_relocation, arm64_sequoia: "ef1438cf6092f67ef84e9963ac1c3c537b0ca178c747851fb2ae887b45902664"
     sha256 cellar: :any_skip_relocation, arm64_sonoma:  "ef1438cf6092f67ef84e9963ac1c3c537b0ca178c747851fb2ae887b45902664"
     sha256 cellar: :any_skip_relocation, sonoma:        "e4e636f55dd1685956f1ab2fa0039745428b5ade3157bf825909ce9122bff931"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "06c0bab5523c33372205d0340e4d77790e62de233dc715b510220764c24ae19a"
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "f3b7c522fdeb17b7642f33591cf5d1251f13944d4caf606f23346830c5b82e8f"
   end
 

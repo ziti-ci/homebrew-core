@@ -6,8 +6,6 @@ class Phoneinfoga < Formula
   license "GPL-3.0-only"
   head "https://github.com/sundowndev/phoneinfoga.git", branch: "master"
 
-  no_autobump! because: :requires_manual_review
-
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_tahoe:    "b7316887d8845053c38148a82d7958524d9f9f4ccf0d3016ce7f92c11387c410"
     sha256 cellar: :any_skip_relocation, arm64_sequoia:  "7753aee0c8aa77f686eff25f3c74b9f53d620dee4f7be890afc31bddb631c95d"
@@ -24,8 +22,16 @@ class Phoneinfoga < Formula
   depends_on "yarn" => :build
   depends_on "node"
 
+  # Bump `node-gyp` to v10+ to avoid requiring distutils
+  # https://github.com/sundowndev/phoneinfoga/pull/1512
+  patch do
+    url "https://github.com/sundowndev/phoneinfoga/commit/6a5b3cc849f989fe390170a127e22d990ba5c122.patch?full_index=1"
+    sha256 "07ec8c3255c2183f6f42286ae498625cd51041c27a7c44130151a772d31bfcd6"
+  end
+
   def install
     cd "web/client" do
+      ENV["npm_config_build_from_source"] = "true"
       system "yarn", "install", "--immutable"
       system "yarn", "build"
     end
@@ -35,7 +41,6 @@ class Phoneinfoga < Formula
       -X github.com/sundowndev/phoneinfoga/v2/build.Version=v#{version}
       -X github.com/sundowndev/phoneinfoga/v2/build.Commit=brew
     ]
-
     system "go", "build", *std_go_args(ldflags:)
   end
 

@@ -1,8 +1,8 @@
 class Nickle < Formula
   desc "Desk calculator language"
   homepage "https://www.nickle.org/"
-  url "https://nickle.org/release/nickle-2.103.tar.xz"
-  sha256 "5ec34861d3888956bcb1d50bb3a917f6a53f228a967b88401afe8a9f0f2f36c0"
+  url "https://nickle.org/release/nickle-2.105.tar.xz"
+  sha256 "8655ce796ded4885921a1bf26992e970528ca86d7913d52b2a043bfcf72173fa"
   license "MIT"
 
   livecheck do
@@ -11,29 +11,31 @@ class Nickle < Formula
   end
 
   bottle do
-    sha256 arm64_tahoe:   "1818a06976026ce98ac8e7e22ad60736a11bc3f578e975fb9138958095c35fd6"
-    sha256 arm64_sequoia: "05fe04bd87e1683f8ade70c6b9ad53b59b958322151516fcbbc41b79fb9f2ad4"
-    sha256 arm64_sonoma:  "c6c317696897c7ec062413e912e0c1826b05c1156bd8d824cd0d304fc66da361"
-    sha256 arm64_ventura: "0fd866fe7d1ce93c062602166bdb78f23d361e2878d21484271d1779491d8151"
-    sha256 sonoma:        "2b5f09ba8a23cebb6a8eeedc8b925b583ffb84dc3adc323be1c7ac97e50abbc3"
-    sha256 ventura:       "97d9d0a48b9cd94f5b740fb2b4a7105807a0c38ace4362c681392fb34ba94ce8"
-    sha256 arm64_linux:   "3ca75636c5293bde54e93fb922b6f3c34b0a9d698cffac1452902e0caff1033f"
-    sha256 x86_64_linux:  "3e484518933728d2e31d47c464f9ae017dd79d06221c1d47aa500010d2a6d42e"
+    sha256 arm64_tahoe:   "bfec5a0ba022f746b7bf07a47616856a641bdc10a7c2fc63e436373efa6287f5"
+    sha256 arm64_sequoia: "d795c478ea9cebd51a2dfaa98493be6132402d271e01fbd0e1881218d507616e"
+    sha256 arm64_sonoma:  "a240259d5c42e30da73493db37fe85e04f3f4f9f027ba047ebb0e10db691dda4"
+    sha256 sonoma:        "4d858d31970a642e413fae2bac4d169a361b45ddd3692062178f1700e58efe47"
+    sha256 arm64_linux:   "fe85b05054f41287647a07354456fc3509257d95ac90c03aa0ef1d19f5fcb9d4"
+    sha256 x86_64_linux:  "4ee7ea96b7faf9c9685e2d5db2955c0cfc56bd475219d8beb6b2b388a671a998"
   end
 
-  depends_on "autoconf" => :build
-  depends_on "automake" => :build
-  depends_on "flex" => :build # conflicting types for 'yyget_leng'
+  depends_on "meson" => :build
+  depends_on "ninja" => :build
   depends_on "pkgconf" => :build
-  depends_on "readline"
+  depends_on "gmp"
 
+  uses_from_macos "bc" => :build
   uses_from_macos "bison" => :build
+  uses_from_macos "flex" => :build
   uses_from_macos "libedit"
 
   def install
-    ENV["CC_FOR_BUILD"] = ENV.cc
-    system "./autogen.sh", *std_configure_args
-    system "make", "install"
+    # Fix to ERROR: None of values ['gnu23'] are supported by the C compiler
+    inreplace "meson.build", "c_std=gnu23", "c_std=gnu2x"
+
+    system "meson", "setup", "build", "-Dlibedit=true", *std_meson_args
+    system "meson", "compile", "-C", "build", "--verbose"
+    system "meson", "install", "-C", "build"
   end
 
   test do

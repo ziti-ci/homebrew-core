@@ -20,6 +20,7 @@ class Superfile < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura: "851d247dd23aa52231ea96cc9540811df8e410d205df8971f8cc4064a3f90ca4"
     sha256 cellar: :any_skip_relocation, sonoma:        "9d0a12f90d183d1790101dd58b524550046b93a46e334d87a2dac2611447d4ab"
     sha256 cellar: :any_skip_relocation, ventura:       "f0d0a9b2f4ea1cedc0a54e58eb5b09942d4ca5ad6bf56e7144afe08597791b76"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "b45bb0c01d31676d8f18f0065bf338e16859ec236f00494d7aee8ac88afbfe3f"
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "49271ebc391f9d5ea927c28f45cebb7ab8378d31952fd6fd2743c04b935ef828"
   end
 

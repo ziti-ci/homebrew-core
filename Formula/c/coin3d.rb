@@ -24,6 +24,7 @@ class Coin3d < Formula
     sha256 cellar: :any,                 arm64_sequoia: "76d0ae79918784f18c79e3148c919516ade76ee681ae05145eca1c76b4c6ea95"
     sha256 cellar: :any,                 arm64_sonoma:  "d413285777da406be2ca5a63640c0a5fe1c9de4106cb070319e76099d2e5d3dd"
     sha256 cellar: :any,                 sonoma:        "f87eaf2b4565796ac4167a98383f041367242b8159e5101f8a930ed69296e658"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "738616b5e3b6502e6319c2c5bc85f9345e3c1109eb2ca3e7ee8d15ea7b7df3c9"
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "f75296237d2e535a06e7851d3030d2d6715692b4dda2d5dbabfc84fdf338c6a5"
   end
 

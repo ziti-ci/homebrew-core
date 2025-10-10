@@ -2,8 +2,8 @@ class Ollama < Formula
   desc "Create, run, and share large language models (LLMs)"
   homepage "https://ollama.com/"
   url "https://github.com/ollama/ollama.git",
-      tag:      "v0.12.3",
-      revision: "b04e46da3ebca69a2b1216b3943d8a463e8b4a14"
+      tag:      "v0.12.5",
+      revision: "3d32249c749c6f77c1dc8a7cb55ae74fc2f4c08b"
   license "MIT"
   head "https://github.com/ollama/ollama.git", branch: "main"
 
@@ -30,13 +30,15 @@ class Ollama < Formula
   conflicts_with cask: "ollama-app"
 
   def install
+    ENV["CGO_ENABLED"] = "1"
+
     # Silence tens of thousands of SDK warnings
     ENV["SDKROOT"] = MacOS.sdk_path if OS.mac?
 
     ldflags = %W[
       -s -w
-      -X=github.com/ollama/ollama/version.Version=#{version}
-      -X=github.com/ollama/ollama/server.mode=release
+      -X github.com/ollama/ollama/version.Version=#{version}
+      -X github.com/ollama/ollama/server.mode=release
     ]
 
     system "go", "generate", "./..."

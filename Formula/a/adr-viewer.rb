@@ -6,7 +6,7 @@ class AdrViewer < Formula
   url "https://files.pythonhosted.org/packages/1b/72/0f787da38d0f9d69c06b31d8f412735ed4fad383edd7f7d2286f4fc7b5b0/adr_viewer-1.4.0.tar.gz"
   sha256 "9a2f02a9feb3a6d03d055dd8599b20d34126f8e755b4b4ee1a353ecbbd590cef"
   license "MIT"
-  revision 3
+  revision 4
 
   bottle do
     rebuild 1
@@ -20,7 +20,7 @@ class AdrViewer < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "f0be24b13a206caaeaa1ab085627c82aed37e3e646c7b59ff159444464ec2143"
   end
 
-  depends_on "python@3.13"
+  depends_on "python@3.14"
 
   resource "beautifulsoup4" do
     url "https://files.pythonhosted.org/packages/f0/3c/adaf39ce1fb4afdd21b611e3d530b183bb7759c9b673d60db0e347fd4439/beautifulsoup4-4.13.3.tar.gz"

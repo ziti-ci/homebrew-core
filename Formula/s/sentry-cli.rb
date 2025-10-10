@@ -1,8 +1,8 @@
 class SentryCli < Formula
   desc "Command-line utility to interact with Sentry"
   homepage "https://docs.sentry.io/cli/"
-  url "https://github.com/getsentry/sentry-cli/archive/refs/tags/2.56.0.tar.gz"
-  sha256 "2e9ca2e51b240363468142308f3596b181d7136c7fd5cf8cb8fa9947ae1c03f1"
+  url "https://github.com/getsentry/sentry-cli/archive/refs/tags/2.56.1.tar.gz"
+  sha256 "402913b8ddb19aa999bf213f97bd047425ac7140c9989128540ac1e0e5ab7340"
   license "BSD-3-Clause"
   head "https://github.com/getsentry/sentry-cli.git", branch: "master"
 
@@ -17,16 +17,13 @@ class SentryCli < Formula
 
   depends_on "pkgconf" => :build
   depends_on "rust" => :build
+  depends_on "openssl@3"
 
   uses_from_macos "bzip2"
   uses_from_macos "zlib"
 
   on_ventura :or_older do
     depends_on "swift" => :build
-  end
-
-  on_linux do
-    depends_on "openssl@3"
   end
 
   def install

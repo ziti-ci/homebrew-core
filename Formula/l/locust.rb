@@ -6,14 +6,15 @@ class Locust < Formula
   url "https://files.pythonhosted.org/packages/96/d1/f6731c8c9af1279542698b93cdea1ed8f1a9f4266914ec5f666fea960481/locust-2.41.5.tar.gz"
   sha256 "f37338b0016382fd4341fc9b8a8f15a37dbfadaa86512195bef69a8e79c39c24"
   license "MIT"
+  revision 1
 
   bottle do
-    sha256 cellar: :any,                 arm64_tahoe:   "37c2a27991d005a5b3c27f6f78deda871b3d62cb8fca98c8631f3ea9c2b12f7c"
-    sha256 cellar: :any,                 arm64_sequoia: "b6fb59c73ce7704fe46e1c615cc2b1c3446932a1d13599e9babae7911f15a70f"
-    sha256 cellar: :any,                 arm64_sonoma:  "8f2716ced110d14220084a2a8024a62b5bb449320c1f80f602149ce28ae9f031"
-    sha256 cellar: :any,                 sonoma:        "d255784e79809fbb7bcd370766a9bf6c49af326472fc0794acb4a77288ec4122"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "63c62e47f2b39b99871860ba44b43639ae0dc9bbbb3f0bfd9c366f7064235639"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "e4f9b912f33db07bd50664cf1d2cbf6b2342612d7f9fe51b3837e755d2442f02"
+    sha256 cellar: :any,                 arm64_tahoe:   "b184e54c20f33cfb1f68d2ec09fc39b07c3a2b822a90c53c0eee8f790e91a0af"
+    sha256 cellar: :any,                 arm64_sequoia: "ec7406beb0c4f6106f455e3bf1640c385fb23fbe2c877fc60860e1eac5d72780"
+    sha256 cellar: :any,                 arm64_sonoma:  "01e3609747fec1738977bcb6ecd42645a999151a140d572b1ecdd13b514d3854"
+    sha256 cellar: :any,                 sonoma:        "69ccc894880a61379f8c3a876cef915d8737ad1ce10da3797ccb977dbcf43a6a"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "d47c6391faef69ba2bbe6d696060b6353d881e90bd2a69a013b39e67555546e4"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "e089d38248ee95f9b7741ac9a9b439c3c821391cdc96541d8e270a69bcc8ebf2"
   end
 
   depends_on "cmake" => :build # for pyzmq
@@ -108,8 +109,8 @@ class Locust < Formula
   end
 
   resource "locust-cloud" do
-    url "https://files.pythonhosted.org/packages/df/63/330c4a7a1d114c0687d1ad58326ad27fa128208f0166eb000331a5e9b72f/locust_cloud-1.27.2.tar.gz"
-    sha256 "0d80d63ba722a45c39dcdce66ca5a389944db2123a5fff59d1438e4ee3701258"
+    url "https://files.pythonhosted.org/packages/68/26/37c152a8ae0dfa942133a2d08bad8510b4bb4ebeca93927cb39c7a026e48/locust_cloud-1.27.4.tar.gz"
+    sha256 "43eb59df594f7b386f6a3955b1886ea986c20cac7b2a9fca017620d58bedb06a"
   end
 
   resource "markupsafe" do
@@ -118,8 +119,8 @@ class Locust < Formula
   end
 
   resource "msgpack" do
-    url "https://files.pythonhosted.org/packages/45/b1/ea4f68038a18c77c9467400d166d74c4ffa536f34761f7983a104357e614/msgpack-1.1.1.tar.gz"
-    sha256 "77b79ce34a2bdab2594f490c8e80dd62a02d650b91a75159a63ec413b8d104cd"
+    url "https://files.pythonhosted.org/packages/4d/f2/bfb55a6236ed8725a96b0aa3acbd0ec17588e6a2c3b62a93eb513ed8783f/msgpack-1.1.2.tar.gz"
+    sha256 "3b60763c1373dd60f398488069bcdc703cd08a711477b5d480eecc9f9626f47e"
   end
 
   resource "packaging" do
@@ -128,8 +129,8 @@ class Locust < Formula
   end
 
   resource "platformdirs" do
-    url "https://files.pythonhosted.org/packages/23/e8/21db9c9987b0e728855bd57bff6984f67952bea55d6f75e055c46b5383e8/platformdirs-4.4.0.tar.gz"
-    sha256 "ca753cf4d81dc309bc67b0ea38fd15dc97bc30ce419a7f58d13eb3bf14c4febf"
+    url "https://files.pythonhosted.org/packages/61/33/9611380c2bdb1225fdef633e2a9610622310fed35ab11dac9620972ee088/platformdirs-4.5.0.tar.gz"
+    sha256 "70ddccdd7c99fc5942e9fc25636a8b34d04c24b335100223152c2803e4063312"
   end
 
   resource "pluggy" do
@@ -158,8 +159,8 @@ class Locust < Formula
   end
 
   resource "python-socketio" do
-    url "https://files.pythonhosted.org/packages/21/1a/396d50ccf06ee539fa758ce5623b59a9cb27637fc4b2dc07ed08bf495e77/python_socketio-5.13.0.tar.gz"
-    sha256 "ac4e19a0302ae812e23b712ec8b6427ca0521f7c582d6abb096e36e24a263029"
+    url "https://files.pythonhosted.org/packages/05/c2/a9ae3d0eb4488748a2d9c15defddb7277a852234e29e50c73136834dff1b/python_socketio-5.14.1.tar.gz"
+    sha256 "bf49657073b90ee09e4cbd6651044b46bb526694276621e807a1b8fcc0c1b25b"
   end
 
   resource "pyzmq" do
@@ -188,8 +189,8 @@ class Locust < Formula
   end
 
   resource "websocket-client" do
-    url "https://files.pythonhosted.org/packages/e6/30/fba0d96b4b5fbf5948ed3f4681f7da2f9f64512e1d303f94b4cc174c24a5/websocket_client-1.8.0.tar.gz"
-    sha256 "3239df9f44da632f96012472805d40a23281a991027ce11d2f45a6f24ac4c3da"
+    url "https://files.pythonhosted.org/packages/2c/41/aa4bf9664e4cda14c3b39865b12251e8e7d239f4cd0e3cc1b6c2ccde25c1/websocket_client-1.9.0.tar.gz"
+    sha256 "9e813624b6eb619999a97dc7958469217c3176312b3a16a4bd1bc7e08a46ec98"
   end
 
   resource "werkzeug" do

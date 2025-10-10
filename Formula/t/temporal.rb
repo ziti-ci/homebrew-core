@@ -18,6 +18,7 @@ class Temporal < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura: "2ee908edeb7247b254f6180eb6f5e874c8d1a823dd4d229ec8e7ad88da73bc66"
     sha256 cellar: :any_skip_relocation, sonoma:        "f2ae710e94a4cf9d7411aa998c9eaab2616887d4d3006b603e0838734a5e1ec3"
     sha256 cellar: :any_skip_relocation, ventura:       "82442ed6e1f331be954ec61bd2ed6654d606d03b0349794cdbed4e087256dd2a"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "75a8a1c88744477d66e54afee69643d891f2fb95bad09b179e6215af40adf624"
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "cd506c2296ee2d9dc1030d994bfc6614362eea028ca02d52245831f62042d409"
   end
 

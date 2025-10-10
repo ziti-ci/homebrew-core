@@ -1,8 +1,8 @@
 class Loki < Formula
   desc "Horizontally-scalable, highly-available log aggregation system"
   homepage "https://grafana.com/loki"
-  url "https://github.com/grafana/loki/archive/refs/tags/v3.5.5.tar.gz"
-  sha256 "caae437c5add69761a3772c51b4bd32a5d5f03440fdf16966ab27c7036eb2701"
+  url "https://github.com/grafana/loki/archive/refs/tags/v3.5.6.tar.gz"
+  sha256 "4deb052c2bac06b1509298d232c83740e71040f4e6c6c823329d3c44fc5c8b64"
   license "AGPL-3.0-only"
   head "https://github.com/grafana/loki.git", branch: "main"
 

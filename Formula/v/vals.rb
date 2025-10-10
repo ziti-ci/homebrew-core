@@ -11,6 +11,7 @@ class Vals < Formula
     sha256 cellar: :any_skip_relocation, arm64_sequoia: "1dd0677f69ee1118d5e8c42339f0e0987cc9affa4f05cec4d9c64c6deb8c0164"
     sha256 cellar: :any_skip_relocation, arm64_sonoma:  "1dd0677f69ee1118d5e8c42339f0e0987cc9affa4f05cec4d9c64c6deb8c0164"
     sha256 cellar: :any_skip_relocation, sonoma:        "6238133f4742520903f5a085623763f002afe5db5225382c3f29d7d39a869847"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "447e3de3a5efbabe9db5808509e05c916f0a0d65de592318ef8627bb13462b2c"
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "3790cbb12224b2ee0e6ef548dd9810381a2aa704f0cbb86ff74934ff2fd79ba4"
   end
 

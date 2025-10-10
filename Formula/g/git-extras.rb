@@ -22,6 +22,7 @@ class GitExtras < Formula
 
   def install
     system "make", "PREFIX=#{prefix}", "COMPL_DIR=#{bash_completion}", "INSTALL_VIA=brew", "install"
+    fish_completion.install "etc/git-extras.fish"
     pkgshare.install "etc/git-extras-completion.zsh"
   end
 

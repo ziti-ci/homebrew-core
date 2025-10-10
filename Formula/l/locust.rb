@@ -3,10 +3,9 @@ class Locust < Formula
 
   desc "Scalable user load testing tool written in Python"
   homepage "https://locust.io/"
-  url "https://files.pythonhosted.org/packages/96/d1/f6731c8c9af1279542698b93cdea1ed8f1a9f4266914ec5f666fea960481/locust-2.41.5.tar.gz"
-  sha256 "f37338b0016382fd4341fc9b8a8f15a37dbfadaa86512195bef69a8e79c39c24"
+  url "https://files.pythonhosted.org/packages/72/7b/f7701a357d08fe10ed0d0cc7c9d5ee550e79ea624a4799c9a02989981d9b/locust-2.41.6.tar.gz"
+  sha256 "1fd76545f41639ba8c1ee57b5cafdf8bd426a264a0656fd927a99040bb86150b"
   license "MIT"
-  revision 1
 
   bottle do
     sha256 cellar: :any,                 arm64_tahoe:   "b184e54c20f33cfb1f68d2ec09fc39b07c3a2b822a90c53c0eee8f790e91a0af"
@@ -109,8 +108,8 @@ class Locust < Formula
   end
 
   resource "locust-cloud" do
-    url "https://files.pythonhosted.org/packages/68/26/37c152a8ae0dfa942133a2d08bad8510b4bb4ebeca93927cb39c7a026e48/locust_cloud-1.27.4.tar.gz"
-    sha256 "43eb59df594f7b386f6a3955b1886ea986c20cac7b2a9fca017620d58bedb06a"
+    url "https://files.pythonhosted.org/packages/0f/25/a3e17ad9c2321ab81cdc8e423749df99801a0464e8333ec166ebd6df94a6/locust_cloud-1.27.5.tar.gz"
+    sha256 "49a05d84977feeeff958d9e87aeacd88b3b3968f8c11dfd2873be705fef36e65"
   end
 
   resource "markupsafe" do
@@ -227,12 +226,11 @@ class Locust < Formula
       class HelloWorldUser(HttpUser):
           @task
           def hello_world(self):
-              self.client.get("/headers")
-              self.client.get("/ip")
+              self.client.get("/api/formula/gh.json")
     PYTHON
 
     ENV["LOCUST_LOCUSTFILE"] = testpath/"locustfile.py"
-    ENV["LOCUST_HOST"] = "http://httpbin.org"
+    ENV["LOCUST_HOST"] = "https://formulae.brew.sh"
     ENV["LOCUST_USERS"] = "2"
 
     system bin/"locust", "--headless", "--run-time", "3s"

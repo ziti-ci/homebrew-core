@@ -20,6 +20,7 @@ class Dnscontrol < Formula
     sha256 cellar: :any_skip_relocation, arm64_sequoia: "c65534a35178427c4c4aeea09ac462bb040128f0566b75e95f9186fee60aeaa1"
     sha256 cellar: :any_skip_relocation, arm64_sonoma:  "c65534a35178427c4c4aeea09ac462bb040128f0566b75e95f9186fee60aeaa1"
     sha256 cellar: :any_skip_relocation, sonoma:        "4c46381571f24fdffa4f45b81968af7bdc4956e792d88bcc3df191b983fe81a9"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "5da8fe95517d9c316666fa33d48706f0b3448d8d857510d395a9d9cc57eac66c"
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "428b5bf05d0361184ad8e6860a07448609c94f7d694ec552a901162db98ec5de"
   end
 

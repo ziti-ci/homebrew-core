@@ -5,6 +5,7 @@ class Aflxx < Formula
   version "4.34c"
   sha256 "b500b3d8012757ba6f3435814f7f36a474a1b722efce464216c87af0c515888c"
   license "Apache-2.0"
+  revision 1
 
   livecheck do
     url :stable
@@ -22,7 +23,7 @@ class Aflxx < Formula
 
   depends_on "coreutils" => :build
   depends_on "llvm"
-  depends_on "python@3.13"
+  depends_on "python@3.14"
 
   uses_from_macos "zlib"
 

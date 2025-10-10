@@ -22,7 +22,7 @@ class Acronym < Formula
   depends_on "meson" => :build
   depends_on "ninja" => :build
   depends_on "numpy"
-  depends_on "python@3.13"
+  depends_on "python@3.14"
 
   on_linux do
     depends_on "patchelf" => :build

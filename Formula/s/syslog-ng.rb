@@ -41,7 +41,7 @@ class SyslogNg < Formula
   depends_on "openssl@3"
   depends_on "pcre2"
   depends_on "protobuf"
-  depends_on "python@3.12"
+  depends_on "python@3.14"
   depends_on "rabbitmq-c"
   depends_on "riemann-client"
 
@@ -54,7 +54,10 @@ class SyslogNg < Formula
   def install
     ENV["VERSION"] = version
 
-    python3 = "python3.12"
+    # Workaround to allow Python 3.13+
+    inreplace "requirements.txt", "PyYAML==6.0.1", "PyYAML==6.0.2"
+
+    python3 = "python3.14"
     venv = virtualenv_create(libexec, python3)
     # FIXME: we should use resource blocks but there is no upstream pip support besides this requirements.txt
     # https://github.com/syslog-ng/syslog-ng/blob/master/requirements.txt
@@ -62,9 +65,9 @@ class SyslogNg < Formula
     system python3, "-m", "pip", "--python=#{venv.root}/bin/python",
                           "install", *args, "--requirement=#{buildpath}/requirements.txt"
 
-    system "./configure", *std_configure_args,
-                          "CXXFLAGS=-std=c++17",
-                          "--disable-silent-rules",
+    ENV.append "CXXFLAGS", "-std=c++17"
+
+    system "./configure", "--disable-silent-rules",
                           "--enable-all-modules",
                           "--sysconfdir=#{pkgetc}",
                           "--localstatedir=#{var/name}",
@@ -74,7 +77,8 @@ class SyslogNg < Formula
                           "--disable-example-modules",
                           "--disable-java",
                           "--disable-java-modules",
-                          "--disable-smtp"
+                          "--disable-smtp",
+                          *std_configure_args
     system "make", "install"
   end
 

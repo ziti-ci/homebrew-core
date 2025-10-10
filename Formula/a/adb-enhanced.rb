@@ -6,6 +6,7 @@ class AdbEnhanced < Formula
   url "https://files.pythonhosted.org/packages/b6/c9/11f95027ba0bf13938abe329809154e6342181380d3530f26018325b79e7/adb_enhanced-2.7.1.tar.gz"
   sha256 "2f09d6edc663fd7fe34b9cb65232e5b85238c7c53bd8284b826fe62fbb039ae1"
   license "Apache-2.0"
+  revision 1
 
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_tahoe:   "081f2ef20fd6be3e1bb0d8840a3e57de4f76dacaef8b3c58a147d6b4a3220c63"
@@ -16,7 +17,7 @@ class AdbEnhanced < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "fa25013ba903c83b84e26cfd7011d9121ff37dda6c5a69287401c1dece74ff04"
   end
 
-  depends_on "python@3.13"
+  depends_on "python@3.14"
 
   resource "docopt" do
     url "https://files.pythonhosted.org/packages/a2/55/8f8cab2afd404cf578136ef2cc5dfb50baa1761b68c9da1fb1e4eed343c9/docopt-0.6.2.tar.gz"

@@ -2,8 +2,8 @@ class Cgrep < Formula
   desc "Context-aware grep for source code"
   homepage "https://github.com/awgn/cgrep"
   # TODO: Check if `rawfilepath` workaround can be removed
-  url "https://github.com/awgn/cgrep/archive/refs/tags/v8.1.2.tar.gz"
-  sha256 "1b705013a432e6ea90247f03e4cfeceb5a37f795d879178e4bf0085ce6191316"
+  url "https://github.com/awgn/cgrep/archive/refs/tags/v8.2.0.tar.gz"
+  sha256 "e874b3b2ce4c8a4a01d5bbf52269d25da631b18c39bfe1b261052bcde1b62240"
   license "GPL-2.0-or-later"
   head "https://github.com/awgn/cgrep.git", branch: "master"
 
@@ -37,6 +37,11 @@ class Cgrep < Formula
     end
   end
 
+  # Import missing `toShortByteString` function.
+  # The upstream fixed this https://github.com/awgn/cgrep/commit/42016a46e4aebe6db37a084016d2f49a9627face
+  # but the tarball is still missing it
+  patch :DATA
+
   def install
     # Work around "error: call to undeclared function 'execvpe'" by imitating part of removed
     # hack in https://github.com/haskell/unix/commit/b8eb2486b15d564e73ef9307e175ac24a186acd2
@@ -65,3 +70,16 @@ class Cgrep < Formula
     assert_match ":2", shell_output("#{bin}/cgrep --count puts t.rb")
   end
 end
+__END__
+diff --git a/src/CGrep/Output.hs b/src/CGrep/Output.hs
+index 8312e39..a751fff 100644
+--- a/src/CGrep/Output.hs
++++ b/src/CGrep/Output.hs
+@@ -91,6 +91,7 @@ import Options (
+  )
+ import Data.ByteString.Short (ShortByteString)
+ import System.OsString.Data.ByteString.Short (fromShort)
++import OsPath (toShortByteString)
+ 
+ data Output = Output
+     { outFilePath :: OsPath

@@ -3,8 +3,8 @@ class Osc < Formula
 
   desc "Command-line interface to work with an Open Build Service"
   homepage "https://openbuildservice.org"
-  url "https://files.pythonhosted.org/packages/a8/54/f8f8fe028883d7ebe78912d001ca23147199ad116d078e4872d914fd98a2/osc-1.20.0.tar.gz"
-  sha256 "c35375e3ceb382dd771c286f20ccbbde0d94454c0a8c04985bfb27832a9a1cc7"
+  url "https://files.pythonhosted.org/packages/11/85/c7fc2a78daeb2ff8faba56a8955fdb06f9edf653799332828584953b4644/osc-1.21.0.tar.gz"
+  sha256 "47511ab565af21d4ce7ffb38bfb0cffda6ee453b142b76ca89b8c9240c26e14f"
   license "GPL-2.0-or-later"
   head "https://github.com/openSUSE/osc.git", branch: "master"
 
@@ -34,8 +34,8 @@ class Osc < Formula
   end
 
   resource "ruamel-yaml-clib" do
-    url "https://files.pythonhosted.org/packages/20/84/80203abff8ea4993a87d823a5f632e4d92831ef75d404c9fc78d0176d2b5/ruamel.yaml.clib-0.2.12.tar.gz"
-    sha256 "6c8fbb13ec503f99a91901ab46e0b07ae7941cd527393187039aec586fdfd36f"
+    url "https://files.pythonhosted.org/packages/d8/e9/39ec4d4b3f91188fad1842748f67d4e749c77c37e353c4e545052ee8e893/ruamel.yaml.clib-0.2.14.tar.gz"
+    sha256 "803f5044b13602d58ea378576dd75aa759f52116a0232608e8fdada4da33752e"
   end
 
   resource "urllib3" do
@@ -62,7 +62,7 @@ class Osc < Formula
     INI
 
     output = shell_output("#{bin}/osc status 2>&1", 1).chomp
-    assert_match "Directory '.' is not a working copy", output
+    assert_match "Directory '.' is not a Git SCM working copy", output
     assert_match "Please specify a command", shell_output("#{bin}/osc 2>&1", 2)
   end
 end

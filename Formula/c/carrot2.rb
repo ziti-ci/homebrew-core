@@ -2,8 +2,8 @@ class Carrot2 < Formula
   desc "Search results clustering engine"
   homepage "https://search.carrot2.org/"
   url "https://github.com/carrot2/carrot2.git",
-      tag:      "release/4.8.2",
-      revision: "7095f6f97895668ad6bcc6bcf5689ed748c9945e"
+      tag:      "release/4.8.3",
+      revision: "e2e57a553b8d6015af23f43dfff245157a267bc8"
   license "Apache-2.0"
 
   bottle do
@@ -17,7 +17,7 @@ class Carrot2 < Formula
   depends_on "gradle" => :build
   depends_on "node@22" => :build
   depends_on "yarn" => :build
-  depends_on "openjdk@21"
+  depends_on "openjdk"
 
   on_linux do
     on_arm do
@@ -44,7 +44,7 @@ class Carrot2 < Formula
     end
 
     (bin/"carrot2").write_env_script "#{libexec}/dcs/dcs",
-      JAVA_CMD:    "exec '#{Formula["openjdk@21"].opt_bin}/java'",
+      JAVA_CMD:    "exec '#{Formula["openjdk"].opt_bin}/java'",
       SCRIPT_HOME: libexec/"dcs"
   end
 
@@ -55,7 +55,7 @@ class Carrot2 < Formula
 
   test do
     port = free_port
-    fork { exec bin/"carrot2", "--port", port.to_s }
+    spawn bin/"carrot2", "--port", port.to_s
     sleep 20
     assert_match "Lingo", shell_output("curl -s localhost:#{port}/service/list")
   end

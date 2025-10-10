@@ -11,6 +11,7 @@ class KubernetesMcpServer < Formula
     sha256 cellar: :any_skip_relocation, arm64_sequoia: "764ce7c4ac4e2853cdd2898efd2bd162f67d5299ea16e9cb4b525d3177687f28"
     sha256 cellar: :any_skip_relocation, arm64_sonoma:  "d77c669a2506b8dc7e2fd27107435b76f0dcdb909ee6998d096525c8df0c4e5c"
     sha256 cellar: :any_skip_relocation, sonoma:        "f0af45313354f2c1ba241d523d976758481de8e117d0c829fce8826b60afdeba"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "b69aaf0cfaf5b69e21a2acda57d27bbe673f4aad21d31ab504f42270a7b7785e"
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "bd23d6dff91a62a0e4b99ce76b5bf1d0fc8a5b5b1995be6b5609f973da83fe31"
   end
 

@@ -23,7 +23,7 @@ class Afflib < Formula
   depends_on "automake" => :build
   depends_on "libtool" => :build
   depends_on "pkgconf" => :build
-  depends_on "python@3.13" => [:build, :test] # for bindings, avoid runtime dependency due to `expat`
+  depends_on "python@3.14" => [:build, :test] # for bindings, avoid runtime dependency due to `expat`
   depends_on "openssl@3"
   depends_on "readline"
 
@@ -32,7 +32,7 @@ class Afflib < Formula
   uses_from_macos "zlib"
 
   def python3
-    which("python3.13")
+    which("python3.14")
   end
 
   def install

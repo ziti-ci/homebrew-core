@@ -21,6 +21,13 @@ class Chafa < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "6137876e39395029f5a2f8ac4980a08acd60b4a29ccf92a6ea3dcc1564c4461b"
   end
 
+  head do
+    url "https://github.com/hpjansson/chafa.git", branch: "master"
+    depends_on "autoconf" => :build
+    depends_on "automake" => :build
+    depends_on "libtool" => :build
+  end
+
   depends_on "pkgconf" => :build
   depends_on "cairo"
   depends_on "freetype"
@@ -38,9 +45,10 @@ class Chafa < Formula
   end
 
   def install
+    with_env(NOCONFIGURE: "1") { system "./autogen.sh" } if build.head?
     system "./configure", "--disable-silent-rules", *std_configure_args
     system "make", "install"
-    man1.install "docs/chafa.1"
+    man1.install "docs/chafa.1" if build.stable?
   end
 
   test do

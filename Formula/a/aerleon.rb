@@ -6,6 +6,7 @@ class Aerleon < Formula
   url "https://files.pythonhosted.org/packages/aa/59/bdfba424f08f2942bac1c630653ef8177938421e0cfd00ccaf358744bbed/aerleon-1.11.0.tar.gz"
   sha256 "51ece6e194b802a21213a66a502e8b8f227b09542571c2b0d42b924750ec2dbb"
   license "Apache-2.0"
+  revision 1
   head "https://github.com/aerleon/aerleon.git", branch: "main"
 
   bottle do
@@ -20,7 +21,7 @@ class Aerleon < Formula
   end
 
   depends_on "libyaml"
-  depends_on "python@3.13"
+  depends_on "python@3.14"
 
   conflicts_with "cgrep", because: "both install `cgrep` binaries"
 

@@ -6,6 +6,14 @@ class Precice < Formula
   license "LGPL-3.0-or-later"
   head "https://github.com/precice/precice.git", branch: "develop"
 
+  bottle do
+    sha256 cellar: :any,                 arm64_tahoe:   "eb0cd637e274ce5e83c95d940a1d930efe1b41bcb363dec56defd2280a9b0346"
+    sha256 cellar: :any,                 arm64_sequoia: "bbdb841b40a0eddac119d9e1034c12066800022dc4d891daf8b373b8ddd2b1fb"
+    sha256 cellar: :any,                 arm64_sonoma:  "910052a11fe80c822d84800165b986dde31d6ca79e5504cae71fd68a15ddb08f"
+    sha256 cellar: :any,                 sonoma:        "e13276e0dfd3205a484d27c6ebcbd057f8d963c79caf8f950b5b2de4f89a7263"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "11aaba40a9bc9c18462d0cada723347e40cfcca836ac2a9514edaabea220b69b"
+  end
+
   depends_on "cmake" => :build
 
   depends_on "boost"

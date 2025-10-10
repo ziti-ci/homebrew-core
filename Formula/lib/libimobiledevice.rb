@@ -7,15 +7,12 @@ class Libimobiledevice < Formula
   head "https://github.com/libimobiledevice/libimobiledevice.git", branch: "master"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any,                 arm64_tahoe:   "143f1a7ff777e30e4737bd1dfb8a706d0a9f35c4ba878a02b7ea54a037b44acb"
-    sha256 cellar: :any,                 arm64_sequoia: "9bc550fcfb5ee4613073831691cda4cc54a88180e833a0f754886f1a34af4134"
-    sha256 cellar: :any,                 arm64_sonoma:  "2fc25461e9305a7cadd0ec50326048641a67a6231d73a4ccf69e0d90c4783a19"
-    sha256 cellar: :any,                 arm64_ventura: "7017a85a4322e960abb9cc122ed45cf159eddc90c45a30d4a24aef14173ea0c6"
-    sha256 cellar: :any,                 sonoma:        "7ca1985300a97b783b50752ff9110cb9b02dc7d278a62451b36fa5b98d359708"
-    sha256 cellar: :any,                 ventura:       "c811173f433f58df573afeb557308c55be71309442e6088f0b2b93cafffb39cb"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "871739207d85ff9dafe6c8f24f7ac24242216bc6154ed5d3b0c8e238ab62f24a"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "d38d4434dc756c8153d4a0ed23ba0e68c643c7e9e1086cf08c5497700867cdb4"
+    sha256 cellar: :any,                 arm64_tahoe:   "57e9ce8270a268ce61766da57305ddf8adef5310556992f97534a0c6b8dc2112"
+    sha256 cellar: :any,                 arm64_sequoia: "17e3e2fa9618cfdc21a0e87c97ae8d1ffb02de19f88ef5cc886a0663b6c1b66c"
+    sha256 cellar: :any,                 arm64_sonoma:  "ac0a39864d542e1b5d248efe7ee1bbb5dc58a2739dd248ec987dc7b794ef9fd9"
+    sha256 cellar: :any,                 sonoma:        "aa40670dbbdadabc7f035fe2ea17da68a1dab8937a4f1c0429c0a7fd58c108f5"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "d54c686502da56b005f514e052d5d6f24242acc99236309da37854d573fd0206"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "8d22c1f4fccc06261e4e1775f3d56864ddbe37ba3980b28b5d17898d74662307"
   end
 
   depends_on "autoconf" => :build

@@ -11,6 +11,8 @@ class KosliCli < Formula
     regex(/^v?(\d+(?:\.\d+)+)$/i)
   end
 
+  no_autobump! because: :bumped_by_upstream
+
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_tahoe:   "4e9d6d0b72bc9ca13a5c63ca64643eee71c849f371aa62fde4740ef1d4b5ceaf"
     sha256 cellar: :any_skip_relocation, arm64_sequoia: "a747088534ce6aedbfeff367afcab04946f32d7fcdae045ee1ba9abc9a75ad90"

@@ -19,12 +19,12 @@ class Tbb < Formula
   depends_on "cmake" => :build
   depends_on "pkgconf" => :build
   depends_on "python-setuptools" => :build
-  depends_on "python@3.13" => [:build, :test]
+  depends_on "python@3.14" => [:build, :test]
   depends_on "swig" => :build
   depends_on "hwloc"
 
   def python3
-    "python3.13"
+    "python3.14"
   end
 
   def install

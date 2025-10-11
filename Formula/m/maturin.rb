@@ -4,6 +4,7 @@ class Maturin < Formula
   url "https://github.com/PyO3/maturin/archive/refs/tags/v1.9.6.tar.gz"
   sha256 "c8aef8af6cd3d5b3331191b21191ec92d7b4ee0633e0799351a01af1c5ea2a6c"
   license any_of: ["Apache-2.0", "MIT"]
+  revision 1
   head "https://github.com/PyO3/maturin.git", branch: "main"
 
   bottle do
@@ -15,7 +16,7 @@ class Maturin < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "709f2ff8786982d0fddfbe2558d3b218a1a9838022869f9b981679078f47e57b"
   end
 
-  depends_on "python@3.13" => :test
+  depends_on "python@3.14" => :test
   depends_on "rust"
 
   uses_from_macos "bzip2"
@@ -48,10 +49,10 @@ class Maturin < Formula
   end
 
   test do
-    python = "python3.13"
+    python3 = "python3.14"
     system "cargo", "init", "--name=brew", "--bin"
     system bin/"maturin", "build", "-o", "dist", "--compatibility", "off"
-    system python, "-m", "pip", "install", "brew", "--prefix=./dist", "--no-index", "--find-links=./dist"
-    system python, "-c", "import maturin"
+    system python3, "-m", "pip", "install", "brew", "--prefix=./dist", "--no-index", "--find-links=./dist"
+    system python3, "-c", "import maturin"
   end
 end

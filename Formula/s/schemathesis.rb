@@ -3,8 +3,8 @@ class Schemathesis < Formula
 
   desc "Testing tool for web applications with specs"
   homepage "https://schemathesis.readthedocs.io/"
-  url "https://files.pythonhosted.org/packages/2a/6c/86649815eb63dd52cc3f571bb594b59066728a69839da99ef9fc448df1cb/schemathesis-4.2.1.tar.gz"
-  sha256 "cb30ed17c6425a7740bae2164973e2fdf97fb90893004b85964c157d6df0bd64"
+  url "https://files.pythonhosted.org/packages/73/68/6e54cf0764896434e9dbba4898ce16829ea39b651ce8a1c48f247b174cd1/schemathesis-4.2.2.tar.gz"
+  sha256 "83e520258e9f34d3d085f688d0d9624ad7b21e8d916a14ddec7259d767da1c7e"
   license "MIT"
 
   bottle do
@@ -19,7 +19,7 @@ class Schemathesis < Formula
   depends_on "rust" => :build # for rpds-py
   depends_on "certifi"
   depends_on "libyaml"
-  depends_on "python@3.13"
+  depends_on "python@3.14"
 
   conflicts_with "st", because: "both install `st` binaries"
 
@@ -214,8 +214,8 @@ class Schemathesis < Formula
   end
 
   resource "rich" do
-    url "https://files.pythonhosted.org/packages/fe/75/af448d8e52bf1d8fa6a9d089ca6c07ff4453d86c65c145d0a300bb073b9b/rich-14.1.0.tar.gz"
-    sha256 "e497a48b844b0320d45007cdebfeaeed8db2a4f4bcf49f15e455cfc4af11eaa8"
+    url "https://files.pythonhosted.org/packages/fb/d2/8920e102050a0de7bfabeb4c4614a49248cf8d5d7a8d01885fbb24dc767a/rich-14.2.0.tar.gz"
+    sha256 "73ff50c7c0c1c77c8243079283f4edb376f0f6442433aecb8ce7e6d0b92d1fe4"
   end
 
   resource "rpds-py" do

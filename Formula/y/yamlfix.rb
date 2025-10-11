@@ -8,14 +8,13 @@ class Yamlfix < Formula
   license "GPL-3.0-or-later"
 
   bottle do
-    sha256 cellar: :any,                 arm64_tahoe:   "7161524c4085fc0d1602ea091732478a4825c9bb45cdbf9a838f0344f7b8319a"
-    sha256 cellar: :any,                 arm64_sequoia: "89e72af7bf19e17ab91d8796f45169665c8d2d489b48a8d0bb6b6bdc3634ebce"
-    sha256 cellar: :any,                 arm64_sonoma:  "6bd054a555112cdb75e6371516ffa5796b080840bc0e66dedb976ff1a3c52394"
-    sha256 cellar: :any,                 arm64_ventura: "f7dae85206da0cab3d12898f71d3c817ad28e17d44cfc4ffc8f3da87c9643a14"
-    sha256 cellar: :any,                 sonoma:        "844e573dab50d9edf05d8c994f3133a7dda966ddc59d20446d202cbef1789994"
-    sha256 cellar: :any,                 ventura:       "4f4a922da262f8ed6e700999b250cf25a142f0863f22def5b28ba2f15487d532"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "7f85ce06a2f02aa2c8b4af8ea1116d2b17c1367079246f89a8a0106d4dd2283b"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "84f99be5b6ce0809cfc46036dcb734475eb9bfc26ee953d1096b26df30a8ffd4"
+    rebuild 1
+    sha256 cellar: :any,                 arm64_tahoe:   "e720c2c592f6efb91c0ab63a956de72110017788bb42a3e7d9ec2d988afeea11"
+    sha256 cellar: :any,                 arm64_sequoia: "6fb7eae99ec3c289369789bfee26275d62e12a0aeae64ad3657fab8bf5d57a66"
+    sha256 cellar: :any,                 arm64_sonoma:  "c5f8d226531fe1558c55a6fbf1bb4b06d20171bcb598638664c19a3c284043c7"
+    sha256 cellar: :any,                 sonoma:        "7bec11971ee93f9afc4e28cd72cef317ede224a01a5cb6654e669b3003a777fd"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "e3b2b6e086af7d6de8a90400b8f0a9f0441884c1ba97d63246eb2b78ffdfd96f"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "153c4438e2255b6bcfbb2fa8d2be85d7e417b412b1b7925d11276db549a36c6b"
   end
 
   depends_on "rust" => :build # for pydantic_core

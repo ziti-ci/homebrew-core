@@ -9,15 +9,13 @@ class Tarsnapper < Formula
   revision 1
 
   bottle do
-    rebuild 7
-    sha256 cellar: :any,                 arm64_tahoe:   "5b483044ca29435c157ed891eec207b7e0fbc9142183b6b8db883636739e69d2"
-    sha256 cellar: :any,                 arm64_sequoia: "a3f3c24d9015ea8c6e555746211e7af56deb8ce020c047776cd06166f70c77d2"
-    sha256 cellar: :any,                 arm64_sonoma:  "feef9a3a01ccc2d8f7e5c7ed0ae91a68c60e0d23e0a80c79a92cd52898e7cb33"
-    sha256 cellar: :any,                 arm64_ventura: "4e2dabbd85a18274fc49ff1fbb31c21c6f4e020d796d0630a67d3a404774a715"
-    sha256 cellar: :any,                 sonoma:        "553bf81ba1e5331ec8dbc1c0d26bfcc023882d7c71e9815b513623ac330ffece"
-    sha256 cellar: :any,                 ventura:       "cf90d02ba37a6bd37df704e14912f700cdd9d2e5c5c107979240bf2a46c8c791"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "ddd8e4ed77a1a8d407b5f16e35f8701926d07cbe8d25e26333698ae15e536800"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "53e2d180f17f2f51cfd069e23eed736bd4ddbc71e930b83e66b2d6c1efb66456"
+    rebuild 8
+    sha256 cellar: :any,                 arm64_tahoe:   "32c13f98b225238a1c36beb4aea44cc7aa9fc5f0ea6916836e9f24c9009a759a"
+    sha256 cellar: :any,                 arm64_sequoia: "aede490b7d29991225df23efd94e0c740fc0a179b2625a54e026865ac4916f78"
+    sha256 cellar: :any,                 arm64_sonoma:  "4a553095ec22748abec5bdab416bd67fc74865d373b20d36befb36afe40ba08f"
+    sha256 cellar: :any,                 sonoma:        "4368cf715ad3a98e93ae54bcd6df1532199927753a4bb5915155141a183ea5a0"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "4a08f2b3ac06f061600d9a402ac6ffca74de70f9e973699fbf14e9f3dfaa7a08"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "ba5eacaf4328d52c8277a96a4befdcac0570cb99372882717562683797c677c5"
   end
 
   depends_on "libyaml"

@@ -23,7 +23,7 @@ class Trailscraper < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "a71e88ae77f4070955e0fefcbd3523577597a1790a9fd7e9a2365a6d596a8021"
   end
 
-  depends_on "python@3.13"
+  depends_on "python@3.14"
 
   resource "boto3" do
     url "https://files.pythonhosted.org/packages/32/f7/b870fb8d2ca96a996db97c9d30d1eb087b341cec1004722e99672a79800d/boto3-1.37.9.tar.gz"
@@ -61,8 +61,8 @@ class Trailscraper < Formula
   end
 
   resource "regex" do
-    url "https://files.pythonhosted.org/packages/8e/5f/bd69653fbfb76cf8604468d3b4ec4c403197144c7bfe0e6a5fc9e02a07cb/regex-2024.11.6.tar.gz"
-    sha256 "7ab159b063c52a0333c884e4679f8d7a85112ee3078fe3d9004b2dd875585519"
+    url "https://files.pythonhosted.org/packages/49/d3/eaa0d28aba6ad1827ad1e716d9a93e1ba963ada61887498297d3da715133/regex-2025.9.18.tar.gz"
+    sha256 "c5ba23274c61c6fef447ba6a39333297d0c247f53059dba0bca415cac511edc4"
   end
 
   resource "ruamel-yaml" do

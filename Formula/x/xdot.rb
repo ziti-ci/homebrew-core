@@ -11,15 +11,8 @@ class Xdot < Formula
   no_autobump! because: "`update-python-resources` cannot determine dependencies"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "d5ad1a1ace75de95e1ff9f68e30e32392e9122a300e434abe522ecedbe3ee7d6"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "8f3a6484db099186946f2e3fca16c51cd622e70030959554352b1128c1169d07"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "8f3a6484db099186946f2e3fca16c51cd622e70030959554352b1128c1169d07"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "8f3a6484db099186946f2e3fca16c51cd622e70030959554352b1128c1169d07"
-    sha256 cellar: :any_skip_relocation, sonoma:        "8f3a6484db099186946f2e3fca16c51cd622e70030959554352b1128c1169d07"
-    sha256 cellar: :any_skip_relocation, ventura:       "8f3a6484db099186946f2e3fca16c51cd622e70030959554352b1128c1169d07"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "4b3962fef1f997c4e28a6ee0684728d9be91070c1ffee7e974dcabdf556839b1"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "f9784e3d92d41e7cc137ec42897898b98428120f7107e168ec24b8b97ea0f8fb"
+    rebuild 2
+    sha256 cellar: :any_skip_relocation, all: "31da3f49cb2d321330f9caf9ead425cc46dfb18b4bb9b85b572a4b985131dfa9"
   end
 
   depends_on "adwaita-icon-theme"

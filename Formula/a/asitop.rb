@@ -8,11 +8,10 @@ class Asitop < Formula
   license "MIT"
 
   bottle do
-    rebuild 3
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "07ddc141b17540236645cb9e57d16e9a13db84deaa395ee4a1cc9952d456f0ab"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "9c1e7fc9030b7f6c0d68368093a95b6eb04a5aea4da0cf482ff7fd0929907dad"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "a7e47b9f4b8cddd211162e0c6f6f3df826c24af7c5af20fac83e4cbda1a00495"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "a7aa18d47f90cffa03a4854dc5317182544dbe09b4e0bead5134a53a8593488d"
+    rebuild 4
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "de255de46d14df3c89b457ed3e18d402a63a6a24b47da228084646a20e6b9db0"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "a40878e9b51a199368c3647e227773c8a8fa2413f64167630cb05e92fe3b4bb7"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "73ede524bcc50e849a3568afe14f6a2469e5a439f79dd284b21cc0a4b1f41ab5"
   end
 
   depends_on arch: :arm64

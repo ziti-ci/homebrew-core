@@ -13,12 +13,13 @@ class Suricata < Formula
   end
 
   bottle do
-    sha256 arm64_tahoe:   "b3a196d85bd926566c6cfe7e02025d7945f8e3b5adedf7a94add7baf176b2164"
-    sha256 arm64_sequoia: "be02fc4c799a4b4071a88c6bde2468b38ba6422345aa1b917a4ee5c41e8745c2"
-    sha256 arm64_sonoma:  "7a8c8fc1c63b9772a45034931bbdbdcafb7fedb5add6f4af62f9cdb0c3033309"
-    sha256 sonoma:        "b3f28b8f229a545ac5b53f6810c9ce6c76988bf71962ffb8803f2925a71761cd"
-    sha256 arm64_linux:   "8505ae87ec61c010f5cc69ef4f174d4817953646c49b6ba5f4c82f6db62dbc87"
-    sha256 x86_64_linux:  "b14e8bdae8de848e0c3a4423e3f51e1cd03bba3ddb58327371a2e84ed7fb41ce"
+    rebuild 1
+    sha256 arm64_tahoe:   "c7614d5858c970c4bdb411b2428f7868d5d88fe9db003a3e06dbecb1d052d7c4"
+    sha256 arm64_sequoia: "24c6f6cd338b991aee18768e87ee7d2fa40254f430c4fafe427f7872f6bf405a"
+    sha256 arm64_sonoma:  "716907bd5264fda67875c5a8426c3dae30e72f2e8ff0ee99f308cba93bf0f8a6"
+    sha256 sonoma:        "5d1f384de269d59b3ddd3125772b4b85895432382a1a19576dd45f7b5049ce59"
+    sha256 arm64_linux:   "ac27e5f2b572c671028da99106addc3b6d62a0295a741d478ce2d7857cd155eb"
+    sha256 x86_64_linux:  "53bcbaadb56416d5b4bf6c80c99638fb942d78ade39f542d5ec506c6090e1ad9"
   end
 
   depends_on "pkgconf" => :build

@@ -8,14 +8,13 @@ class Volk < Formula
   license "LGPL-3.0-or-later"
 
   bottle do
-    sha256 cellar: :any,                 arm64_tahoe:   "64ad0d85029c24beceeedc790aecdbfe863aadd4974a84a4181abd8ca4215c76"
-    sha256 cellar: :any,                 arm64_sequoia: "1f910c4f27cfbd4419f857c369337c1fcce0068b05d01391fa1f6b5d9db00055"
-    sha256 cellar: :any,                 arm64_sonoma:  "7a2efd35a0db458e5afe369c40a303b561a34df77d1fae9c11378afc31d2fedf"
-    sha256 cellar: :any,                 arm64_ventura: "46b4a7e08f105a3348f4ac8007b8718c76715dbc35dd2f6da818031ffef214e8"
-    sha256 cellar: :any,                 sonoma:        "791c5ee148b98b0707ebe2fa57f66d6310be6ef0eeb6b16925edea23c9b92f2d"
-    sha256 cellar: :any,                 ventura:       "17265b6ad8a1b44a34f0ed8a9acb52abfdc6d3021adeb44b692022cc80376200"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "20ff379409a40837f19708efd3b69898f858a7b158726db713457bcba18c4ba8"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "7a453a467d9e9fcd933395cb567e39e003e3ec7f294bd422757f209e7ba418eb"
+    rebuild 1
+    sha256 cellar: :any,                 arm64_tahoe:   "0101fc34bd0194f1b696b1a18febd7e4e53784c9fac00bbd238839cebd818c80"
+    sha256 cellar: :any,                 arm64_sequoia: "e11bbb09bdccdc73383832a358473a026e4e47df07403047173e0bc2a951ef19"
+    sha256 cellar: :any,                 arm64_sonoma:  "c8a7cb1121c51fa06ac8c1549c1f3e51cc16f1eda40ef1234a4e83f24d0bd27d"
+    sha256 cellar: :any,                 sonoma:        "71a9d3ea9e5aea62969977a769049643b60e8fcf60784dbb2baa7819072f8f8a"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "5e7a7b3d137b539988f0393dd47a6a4f118066252d1f2b06da93edb7a0eb9014"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "f02bd47c23ba777669675e79e099e91047a23924cdb4a4f850a0fca6c19250c9"
   end
 
   depends_on "cmake" => :build

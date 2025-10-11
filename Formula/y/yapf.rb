@@ -9,8 +9,8 @@ class Yapf < Formula
   head "https://github.com/google/yapf.git", branch: "main"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, all: "f18f6eead958807f6b3df31f4a022c850efe1566b585dea3605c27c1b829ca42"
+    rebuild 2
+    sha256 cellar: :any_skip_relocation, all: "55fb914de2771f27f304ac0b8fcdd5da19472f19ab59f9eacd8431e8dbaa4ec7"
   end
 
   depends_on "python@3.14"

@@ -29,15 +29,15 @@ class Uhd < Formula
   depends_on "pkgconf" => :build
   depends_on "boost"
   depends_on "libusb"
-  depends_on "python@3.13"
+  depends_on "python@3.14"
 
   on_linux do
     depends_on "ncurses"
   end
 
   resource "mako" do
-    url "https://files.pythonhosted.org/packages/5f/d9/8518279534ed7dace1795d5a47e49d5299dd0994eed1053996402a8902f9/mako-1.3.8.tar.gz"
-    sha256 "577b97e414580d3e088d47c2dbbe9594aa7a5146ed2875d4dfa9075af2dd3cc8"
+    url "https://files.pythonhosted.org/packages/9e/38/bd5b78a920a64d708fe6bc8e0a2c075e1389d53bef8413725c63ba041535/mako-1.3.10.tar.gz"
+    sha256 "99579a6f39583fa7e5630a28c3c1f440e4e97a414b80372649c0ce338da2ea28"
   end
 
   resource "markupsafe" do
@@ -50,7 +50,7 @@ class Uhd < Formula
   patch :DATA
 
   def python3
-    "python3.13"
+    "python3.14"
   end
 
   def install
@@ -58,10 +58,11 @@ class Uhd < Formula
     venv.pip_install resources
     ENV.prepend_path "PYTHONPATH", venv.site_packages
 
-    system "cmake", "-S", "host", "-B", "build",
-                    "-DENABLE_TESTS=OFF",
-                    "-DUHD_VERSION=#{version}",
-                    *std_cmake_args
+    args = %W[
+      -DENABLE_TESTS=OFF
+      -DUHD_VERSION=#{version}
+    ]
+    system "cmake", "-S", "host", "-B", "build", *args, *std_cmake_args
     system "cmake", "--build", "build"
     system "cmake", "--install", "build"
   end

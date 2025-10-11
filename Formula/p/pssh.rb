@@ -13,7 +13,7 @@ class Pssh < Formula
     sha256 cellar: :any_skip_relocation, all: "518c2915f02b92510bef30b6a5826e8165fb9cdd3405e2355292e872fae6cc40"
   end
 
-  depends_on "python@3.13"
+  depends_on "python@3.14"
 
   conflicts_with "putty", because: "both install `pscp` binaries"
 

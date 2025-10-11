@@ -10,17 +10,15 @@ class Trailscraper < Formula
   head "https://github.com/flosell/trailscraper.git", branch: "master"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "19022743cbcf07520da48b7339f760f7d0e78f1fc58afe0980a69d335f426b7d"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "59024c08d9d88aa1211efa7f644efa0db475733418be871dcc2cd0f61671d45d"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "4bb31c987d5e4afd7a5b41f070f01ae5fe16ba645b1ed6230dc568c187119f9b"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "395b8a25ea0d058516b32d6d2693805cc72a7f3e7f68298aeed14895aef9d7d8"
-    sha256 cellar: :any_skip_relocation, tahoe:         "eca112f6b4359a9b77c4bc25a9bc10c1c157367a12d293edd030eaee341fffe0"
-    sha256 cellar: :any_skip_relocation, sequoia:       "130e4ea5fd7b1ec80cb2e1cea65084d18bbcaf76a8ccc23171dbe5c4a5e47c7d"
-    sha256 cellar: :any_skip_relocation, sonoma:        "d4d4fbf044800fcfa9545d203715cf3ed81eda18904009bd33decee0e88e2e4d"
-    sha256 cellar: :any_skip_relocation, ventura:       "817ae180fdc8ed0e1ab691a3e4d6e66ae61af83a77d30a509554887f28a6b4b8"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "c1c62900b368af894d14847492ce4b5a703426c0f232ad996f1eb02f57573c88"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "a71e88ae77f4070955e0fefcbd3523577597a1790a9fd7e9a2365a6d596a8021"
+    rebuild 2
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "8da913c5b8d0e449868e097ecb12c2f33d7dee6c0f026385c5a13faad6d30c04"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "4910ab0b8fbc98ce496cd35e4a725771cf741ea1edc1e9824659bd6641536f76"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "f159c66daf496cf9e137d8154891355a2ed8892c0d665d86c8c86226812edf28"
+    sha256 cellar: :any_skip_relocation, tahoe:         "02c4cbd4cb133ae5d892cd7f0cb3274dde7af9773b5c218dc3e85bc3748aed3c"
+    sha256 cellar: :any_skip_relocation, sequoia:       "7f5bf17e597c820e7c00df37b3e663754421a53c5359485b5a5860018109e45b"
+    sha256 cellar: :any_skip_relocation, sonoma:        "41c66b04cdbd8eb317d87073d4c659df3bff97c0df5c804cdf09b3e7076b09ab"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "c069a63cedf9c96bd0482566cc611c0b54b9eeb7aa96924cd4bf77360b07342d"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "944dd3d39133adc61186caefc9dda00ab262a95122760272e01ab8fd972f62c3"
   end
 
   depends_on "python@3.14"

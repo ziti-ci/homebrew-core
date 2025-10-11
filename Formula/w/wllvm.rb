@@ -14,7 +14,7 @@ class Wllvm < Formula
   end
 
   depends_on "llvm" => :test
-  depends_on "python@3.13"
+  depends_on "python@3.14"
 
   def install
     virtualenv_install_with_resources

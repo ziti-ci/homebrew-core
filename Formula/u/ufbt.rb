@@ -8,8 +8,8 @@ class Ufbt < Formula
   license "GPL-3.0-or-later"
 
   bottle do
-    rebuild 2
-    sha256 cellar: :any_skip_relocation, all: "561e844026e50a7d961338d459851e9d62bca87f7449fc9404234b31a24e73d2"
+    rebuild 3
+    sha256 cellar: :any_skip_relocation, all: "2bd8cb39ff223bce351824caed83bc909b0b7bea6e61b7c8e91cc2c000bef32c"
   end
 
   depends_on "python@3.14"

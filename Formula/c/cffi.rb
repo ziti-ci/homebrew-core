@@ -4,6 +4,7 @@ class Cffi < Formula
   url "https://files.pythonhosted.org/packages/eb/56/b1ba7935a17738ae8453301356628e8147c79dbb825bcbc73dc7401f9846/cffi-2.0.0.tar.gz"
   sha256 "44d1b5909021139fe36001ae048dbdde8214afa20200eda0f64c068cac5d5529"
   license "MIT"
+  revision 1
 
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_tahoe:   "c06da1533a0a813e2d83ccab8bdcbd5f2fd8e8e7a90dfa1854b8e5bc6c4e4627"
@@ -18,6 +19,7 @@ class Cffi < Formula
 
   depends_on "python@3.12" => [:build, :test]
   depends_on "python@3.13" => [:build, :test]
+  depends_on "python@3.14" => [:build, :test]
   depends_on "pycparser"
 
   uses_from_macos "libffi"

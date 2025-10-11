@@ -9,8 +9,8 @@ class Bashate < Formula
   revision 1
 
   bottle do
-    rebuild 2
-    sha256 cellar: :any_skip_relocation, all: "449cf9d326f271eac44f60170e6614b7d19b7585b0a9fa78024c30660bdb2ee7"
+    rebuild 3
+    sha256 cellar: :any_skip_relocation, all: "3599931c38b9118981d0e25270b4b625b998f7b88a37d9579115be3f1547beeb"
   end
 
   depends_on "python-setuptools" => :build

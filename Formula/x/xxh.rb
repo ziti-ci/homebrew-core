@@ -8,15 +8,13 @@ class Xxh < Formula
   license "BSD-2-Clause"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any,                 arm64_tahoe:   "118bfd01a9e09afe9c5bbc70b95eafab17cb126e541a07e641f2c66d9b2f3fbb"
-    sha256 cellar: :any,                 arm64_sequoia: "91c67ed304dd2ff1703b87750f81b35238e051b999837ad62b1fdef026b8681f"
-    sha256 cellar: :any,                 arm64_sonoma:  "90fe8579c1a9494c3cd230237c8858e907f8d609dee2d467b04b7f3386a4d765"
-    sha256 cellar: :any,                 arm64_ventura: "58f728daf50085a2789ff3e60aaa79c9bdf8311d81a72229db17845339d27b23"
-    sha256 cellar: :any,                 sonoma:        "e84bf6a6f1ec3a8c64808143699230cd051658b93e41392229f89b435dc935ba"
-    sha256 cellar: :any,                 ventura:       "21ede13f1c2be72389b89d535d878bb67df550bad7ac5e738117fd0517b10802"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "3040b653b3eeec14c4875be095568480975c537ea9bcbd8db3f2f9f3b2a2326d"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "2335bd805b3ec23dfbc6f32bef599e4da99420c48b0676d055050ca3d5f7de04"
+    rebuild 2
+    sha256 cellar: :any,                 arm64_tahoe:   "07ed49c087bd4b82099ff25d213a71627a53d0c86bce7f95938a0072cf1e05ac"
+    sha256 cellar: :any,                 arm64_sequoia: "9d00fc1786130a6714ae9b87c8d2477b4487605bc921fe37666c22d2794a73d1"
+    sha256 cellar: :any,                 arm64_sonoma:  "15847d147ad2cc7806d50a69f2df443ca95a081a99222eac211d809047e57583"
+    sha256 cellar: :any,                 sonoma:        "8a1313dff05fbd4a04345cc3c5782d2142eb07ad9ba0dfa21761d58363ac76c7"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "f69ba9f8e23d52efd349c6d51cdfcd2dec59c8828b76589ba2a2a94765b58301"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "4fe168ea7da7ddf85fba4193337c1c4e60d52f0005fdc48c3510de8c35cef67b"
   end
 
   depends_on "libyaml"

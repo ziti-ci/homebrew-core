@@ -20,7 +20,7 @@ class Uhdm < Formula
   end
 
   depends_on "cmake" => :build
-  depends_on "python@3.13" => :build
+  depends_on "python@3.14" => :build
   depends_on "pkgconf" => :test
   depends_on "capnp"
 
@@ -30,28 +30,29 @@ class Uhdm < Formula
   end
 
   resource "six" do
-    url "https://files.pythonhosted.org/packages/71/39/171f1c67cd00715f190ba0b100d606d440a28c93c7714febeca8b79af85e/six-1.16.0.tar.gz"
-    sha256 "1e61c37477a1626458e36f7b1d82aa5c9b094fa4802892072e49de9c60c4c926"
+    url "https://files.pythonhosted.org/packages/94/e7/b2c673351809dca68a0e064b6af791aa332cf192da575fd474ed7d6f16a2/six-1.17.0.tar.gz"
+    sha256 "ff70335d468e7eb6ec65b95b99d3a2836546063f63acc5171de367e834932a81"
   end
 
   def python3
-    which("python3.13")
+    which("python3.14")
   end
 
   def install
     venv = virtualenv_create(buildpath/"venv", python3)
     venv.pip_install resources
 
-    system "cmake", "-S", ".", "-B", "build_shared",
-                    "-DBUILD_SHARED_LIBS=ON",
-                    "-DUHDM_BUILD_TESTS=OFF",
-                    "-DUHDM_USE_HOST_GTEST=ON",
-                    "-DUHDM_USE_HOST_CAPNP=ON",
-                    "-DCMAKE_INSTALL_RPATH=#{rpath}",
-                    "-DPython3_EXECUTABLE=#{buildpath}/venv/bin/python",
-                    *std_cmake_args
-    system "cmake", "--build", "build_shared"
-    system "cmake", "--install", "build_shared"
+    args = %W[
+      -DBUILD_SHARED_LIBS=ON
+      -DUHDM_BUILD_TESTS=OFF
+      -DUHDM_USE_HOST_GTEST=ON
+      -DUHDM_USE_HOST_CAPNP=ON
+      -DCMAKE_INSTALL_RPATH=#{rpath}
+      -DPython3_EXECUTABLE=#{buildpath}/venv/bin/python
+    ]
+    system "cmake", "-S", ".", "-B", "build", *args, *std_cmake_args
+    system "cmake", "--build", "build"
+    system "cmake", "--install", "build"
   end
 
   test do

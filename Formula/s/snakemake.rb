@@ -3,8 +3,8 @@ class Snakemake < Formula
 
   desc "Pythonic workflow system"
   homepage "https://snakemake.readthedocs.io/"
-  url "https://files.pythonhosted.org/packages/07/c7/f28b279a865fb1f4955f7abc21d23eb2ebea342c2f80ba2c76e0391f168f/snakemake-9.13.0.tar.gz"
-  sha256 "90bcf9cd17264ce80f9ab388a936c3b71676a5234aa0fa0e8837482e118064d1"
+  url "https://files.pythonhosted.org/packages/47/76/1264d6c95a0ed34329243c48c9b21c794b9ef592de65a74134f76dbc9b98/snakemake-9.13.1.tar.gz"
+  sha256 "9d9edec24b6707d948b37a84b90b5af77a48ea133d511a82b5c6dfc6ab9add7b"
   license "MIT"
   head "https://github.com/snakemake/snakemake.git", branch: "main"
 
@@ -21,7 +21,7 @@ class Snakemake < Formula
   depends_on "cbc"
   depends_on "certifi"
   depends_on "libyaml"
-  depends_on "python@3.13"
+  depends_on "python@3.14"
 
   resource "appdirs" do
     url "https://files.pythonhosted.org/packages/d7/d8/05696357e0311f5b5c316d7b95f46c669dd9c15aaeecbb48c7d0aeb88c40/appdirs-1.4.4.tar.gz"

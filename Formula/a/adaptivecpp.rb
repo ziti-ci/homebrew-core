@@ -28,14 +28,21 @@ class Adaptivecpp < Formula
   end
 
   on_linux do
-    depends_on "llvm@20"
+    depends_on "llvm"
+
+    # Backport support for LLVM 21
+    patch do
+      url "https://github.com/AdaptiveCpp/AdaptiveCpp/commit/623aa0b1840c5ccd7a45d3e8b228f1bff5257056.patch?full_index=1"
+      sha256 "d3b8708ded954f04b87ad22254fd949c1d584d6de7a3f8a7e978ff715ca1a33d"
+    end
   end
 
   def install
-    args = []
-    if OS.mac?
+    args = if OS.mac?
       libomp_root = Formula["libomp"].opt_prefix
-      args << "-DOpenMP_ROOT=#{libomp_root}"
+      ["-DOpenMP_ROOT=#{libomp_root}"]
+    else
+      ["-DACPP_EXPERIMENTAL_LLVM=ON"]
     end
 
     system "cmake", "-S", ".", "-B", "build", *args, *std_cmake_args
@@ -61,7 +68,7 @@ class Adaptivecpp < Formula
 
     (testpath/"hellosycl.cpp").write <<~C
       #include <sycl/sycl.hpp>
-      int main(){
+      int main() {
           sycl::queue q{};
       }
     C

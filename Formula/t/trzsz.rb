@@ -19,7 +19,7 @@ class Trzsz < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "9410ef829e189c035a0bec3e9bd8dad0ee5c106d0b3da9ae48fb8dbb7a27f820"
   end
 
-  depends_on "python@3.13"
+  depends_on "python@3.14"
 
   conflicts_with "trzsz-go", because: "both install `trz`, `tsz` binaries"
 
@@ -29,8 +29,8 @@ class Trzsz < Formula
   end
 
   resource "protobuf" do
-    url "https://files.pythonhosted.org/packages/52/f3/b9655a711b32c19720253f6f06326faf90580834e2e83f840472d752bc8b/protobuf-6.31.1.tar.gz"
-    sha256 "d8cac4c982f0b957a4dc73a80e2ea24fab08e679c0de9deb835f4a12d69aca9a"
+    url "https://files.pythonhosted.org/packages/fa/a4/cc17347aa2897568beece2e674674359f911d6fe21b0b8d6268cd42727ac/protobuf-6.32.1.tar.gz"
+    sha256 "ee2469e4a021474ab9baafea6cd070e5bf27c7d29433504ddea1a4ee5850f68d"
   end
 
   resource "trzsz-iterm2" do

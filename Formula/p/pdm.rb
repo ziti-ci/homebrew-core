@@ -9,7 +9,8 @@ class Pdm < Formula
   head "https://github.com/pdm-project/pdm.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "eb47d7421341beacbdd12fce90e87c2fe5ed9ff4a6f984b09a019acb58eb54e4"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, all: "62fe473543052b1362925dc20767f4973183e6c78da778210c23117b15e09883"
   end
 
   depends_on "certifi"

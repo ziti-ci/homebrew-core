@@ -1,8 +1,8 @@
 class GnomePapers < Formula
   desc "Document viewer for PDF and other document formats aimed at the GNOME desktop"
   homepage "https://apps.gnome.org/Papers/"
-  url "https://download.gnome.org/sources/papers/49/papers-49.0.tar.xz"
-  sha256 "7a2b4dc405dc1cffdb865e2d9433cb5b74a94c6d141ae51f4146be21a7749a9a"
+  url "https://download.gnome.org/sources/papers/49/papers-49.1.tar.xz"
+  sha256 "4ab23a67897bddd6be2d6298210fff602cfec0f35688bc5bff270360b0784c29"
   license "GPL-2.0-or-later"
 
   bottle do
@@ -22,7 +22,7 @@ class GnomePapers < Formula
   depends_on "meson" => :build
   depends_on "ninja" => :build
   depends_on "pkgconf" => [:build, :test]
-  depends_on "python@3.13" => :build # For blueprint-compiler
+  depends_on "python@3.14" => :build # For blueprint-compiler
   depends_on "rust" => :build
 
   depends_on "adwaita-icon-theme"
@@ -45,11 +45,6 @@ class GnomePapers < Formula
   on_macos do
     depends_on "gettext"
     depends_on "harfbuzz"
-  end
-
-  patch do
-    url "https://gitlab.gnome.org/nibon7/papers/-/commit/2ce41a255f5a75d4ec0c75b3a95a0bb198e1f06e.diff"
-    sha256 "84a3fd9fd4249edf82583f8a45e57f8c6ea8091dfff44377a21501133047eb43"
   end
 
   def install

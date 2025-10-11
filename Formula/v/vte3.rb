@@ -1,8 +1,8 @@
 class Vte3 < Formula
   desc "Terminal emulator widget used by GNOME terminal"
   homepage "https://wiki.gnome.org/Apps/Terminal/VTE"
-  url "https://download.gnome.org/sources/vte/0.82/vte-0.82.0.tar.xz"
-  sha256 "b0718db3254730701b43bf5e113cbf8cdb2c14715d32ee1e8a707dc6eb70535f"
+  url "https://download.gnome.org/sources/vte/0.82/vte-0.82.1.tar.xz"
+  sha256 "79376d70402d271e2d38424418e1aea72357934d272e321e3906b71706a78e3a"
   license "LGPL-2.0-or-later"
 
   bottle do
@@ -61,15 +61,6 @@ class Vte3 < Formula
     cause "Requires C++23 basic_string::resize_and_overwrite()"
   end
 
-  # Backport removal of constexpr
-  patch do
-    url "https://gitlab.gnome.org/GNOME/vte/-/commit/3d9f771b895ab2e9904466aebe5ec74438e6f363.diff"
-    sha256 "35d4b558f3c5908638dc59621cf154ee35e318e601d4e9540b7daed98fff7814"
-  end
-
-  # submitted upstream as https://gitlab.gnome.org/tschoonj/vte/merge_requests/1
-  patch :DATA
-
   def install
     ENV["XML_CATALOG_FILES"] = etc/"xml/catalog"
 
@@ -102,54 +93,3 @@ class Vte3 < Formula
     system "./test"
   end
 end
-
-__END__
-diff --git a/meson.build b/meson.build
-index e2200a75..df98872f 100644
---- a/meson.build
-+++ b/meson.build
-@@ -78,6 +78,8 @@ lt_age = vte_minor_version * 100 + vte_micro_version - lt_revision
- lt_current = vte_major_version + lt_age
-
- libvte_gtk3_soversion = '@0@.@1@.@2@'.format(libvte_soversion, lt_current, lt_revision)
-+osx_version_current = lt_current + 1
-+libvte_gtk3_osxversions = [osx_version_current, '@0@.@1@.0'.format(osx_version_current, lt_revision)]
- libvte_gtk4_soversion = libvte_soversion.to_string()
-
- # i18n
-diff --git a/src/meson.build b/src/meson.build
-index 79d4a702..0495dea8 100644
---- a/src/meson.build
-+++ b/src/meson.build
-@@ -224,6 +224,7 @@ if get_option('gtk3')
-     vte_gtk3_api_name,
-     sources: libvte_gtk3_sources,
-     version: libvte_gtk3_soversion,
-+    darwin_versions: libvte_gtk3_osxversions,
-     include_directories: incs,
-     dependencies: libvte_gtk3_deps,
-     cpp_args: libvte_gtk3_cppflags,
-diff --git a/src/boxed.hh b/src/boxed.hh
-index 4d4b07b..a526b59 100644
---- a/src/boxed.hh
-+++ b/src/boxed.hh
-@@ -19,6 +19,7 @@
- // but we need this for non-enum/integral/floating types.
-
- #include <type_traits>
-+#include <utility>
-
- namespace vte {
-
-diff --git a/src/parser.hh b/src/parser.hh
-index 071e506..27c6d8f 100644
---- a/src/parser.hh
-+++ b/src/parser.hh
-@@ -18,6 +18,7 @@
-
- #pragma once
-
-+#include <algorithm>
- #include <cstdint>
- #include <cstdio>
- #include <optional>

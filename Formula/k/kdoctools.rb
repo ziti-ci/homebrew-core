@@ -1,8 +1,8 @@
 class Kdoctools < Formula
   desc "Create documentation from DocBook"
   homepage "https://l10n.kde.org/docs/doc-primer/"
-  url "https://download.kde.org/stable/frameworks/6.18/kdoctools-6.18.0.tar.xz"
-  sha256 "e73ddb2dfb1b061e02d37861ef58c2d58daf1817e1ce543737ff7abf284bc984"
+  url "https://download.kde.org/stable/frameworks/6.19/kdoctools-6.19.0.tar.xz"
+  sha256 "c2048b2979247540f9ba22fd7c6f372ce869699c3a3e81a97af2fa2f733c74bc"
   license all_of: [
     "BSD-3-Clause",
     "GPL-2.0-or-later",
@@ -41,8 +41,8 @@ class Kdoctools < Formula
 
   resource "URI::Escape" do
     on_linux do
-      url "https://cpan.metacpan.org/authors/id/O/OA/OALDERS/URI-5.32.tar.gz"
-      sha256 "9632067d34e14e0dae2da94631c4f25a387fcc48d06fa29330e8b3c04c4e913d"
+      url "https://cpan.metacpan.org/authors/id/O/OA/OALDERS/URI-5.34.tar.gz"
+      sha256 "de64c779a212ff1821896c5ca2bb69e74767d2674cee411e777deea7a22604a8"
     end
   end
 

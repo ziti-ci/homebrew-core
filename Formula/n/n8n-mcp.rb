@@ -6,12 +6,12 @@ class N8nMcp < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "7c538c3b4c13feb7bb566b1a0fde838570fdd13fe1ebb60d26ccd88788bd79db"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "d75ceefb582c177f2833d9bf3f1faf37fb967bc66e50a65950f7e3d7a389662c"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "b8167dea2ae9a2cce7b861464df8f26a39043a29cefc7e0ce638b5e837e378d6"
-    sha256 cellar: :any_skip_relocation, sonoma:        "7f3544332fb6f2d167c1a36debfd3a35abbfa10b2bc5ae257c4b7a27bfe8e0e6"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "95d1cd35d442bc8a01797563320dc17cc993e5dea30f908e84ab8f8a2c9828a1"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "a36449004f901a47c1e901a858778cfe56bd66549301f59036966225ea638f9e"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "b9a5d86be826862a96c4c68002d1dc75d4cb6c67b19d6afd1af1c2269f130ad9"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "07d8a0af2403ad0bb0fac9544e6db44410714141c283972c4d88407486edc3ea"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "f9c524b6c6026ac97913afe8c65233959f0a3c1ae91703654e3b3c35b574157f"
+    sha256 cellar: :any_skip_relocation, sonoma:        "ea9d7da6d4e0c28ccf5120c3dbd28c68e544ed4d5f6c485f2a39098ecb0e58cc"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "937ebb298a12779edbe61cd19c1fbe9b2ec9b5fd767e8cddf13e2894b6542828"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "b7e2e770b359738045bf49618fde86a595467d9a4925009dff8dfd915c410401"
   end
 
   depends_on "node"

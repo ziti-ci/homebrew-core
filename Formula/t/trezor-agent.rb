@@ -12,14 +12,13 @@ class TrezorAgent < Formula
   revision 7
 
   bottle do
-    sha256 cellar: :any,                 arm64_tahoe:   "b15ea6e2853d9de1b2a6c7ceff76056e482d0a1d91b1548c90ab6dd781a5c9c5"
-    sha256 cellar: :any,                 arm64_sequoia: "6b23b65aed9a20adc1193f1b07f212d15ec1cc63fe4063f812215269bf4469ac"
-    sha256 cellar: :any,                 arm64_sonoma:  "e7b9a2a27fd2238cde20aed214f6cb064007042259c15c1957fccbf665186f87"
-    sha256 cellar: :any,                 arm64_ventura: "55f846a42ee2c928e2f66ea869bb7917140c48e840d44b45b0d6647075f5bcba"
-    sha256 cellar: :any,                 sonoma:        "c0f8bbc7635eda97aa25146ca2e17549ede47f1e30419838d9990799bafdbf4a"
-    sha256 cellar: :any,                 ventura:       "bab1f3dfe9854c67284980c76694ddcdf0cf710daddf1500f8307db4da493c50"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "ddc51755c0f96548ca7185eec4295f81842e78f5610d63707ea41650532c5224"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "fe96b06a580d7571359bcd236c58a2eeb85f67983734a598f4775aaf7e916eb8"
+    rebuild 1
+    sha256 cellar: :any,                 arm64_tahoe:   "eacf3b2cc29eb355e0e86ba40df6005aa8f1aa8e39419500a22cc2b557377773"
+    sha256 cellar: :any,                 arm64_sequoia: "73a1579e72b264ebd779ecf359d286aecb62319983c451bc8eb7aa7c3c0a0ef0"
+    sha256 cellar: :any,                 arm64_sonoma:  "37527d676d0ed75edf43729ca9b40c27cdeadd9d90145777377eb1457b819942"
+    sha256 cellar: :any,                 sonoma:        "4731593bbf393c868553a5209027a4503263b557e7806cdbcf50d9103d0cf835"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "d502901f599f98daae8babce06856edb473691259576a0184ffb29f2cf0d0ba0"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "822b6ca6e8131a09891ff37fe50f61eb437f44f2a3b58661e54c2957a0c58654"
   end
 
   depends_on "pkgconf" => :build # for hidapi resource

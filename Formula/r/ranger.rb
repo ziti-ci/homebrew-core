@@ -13,7 +13,7 @@ class Ranger < Formula
     sha256 cellar: :any_skip_relocation, all: "1dd7a31ff1d0f7726b6f8f4cd73e741886d6bb15b23d81dc2592a1eaa756edd9"
   end
 
-  depends_on "python@3.13"
+  depends_on "python@3.14"
 
   def install
     virtualenv_install_with_resources
@@ -26,7 +26,7 @@ class Ranger < Formula
     (testpath/"test.py").write code
     assert_equal code, shell_output("#{bin}/rifle -w cat test.py")
 
-    ENV.prepend_path "PATH", Formula["python@3.13"].opt_libexec/"bin"
+    ENV.prepend_path "PATH", Formula["python@3.14"].opt_libexec/"bin"
     assert_equal "Hello World!\n", shell_output("#{bin}/rifle -p 2 test.py")
   end
 end

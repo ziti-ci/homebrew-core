@@ -117,6 +117,9 @@
   "bandcamp-dl": {
     "exclude_packages": ["certifi"]
   },
+  "bashate": {
+    "exclude_packages": ["setuptools"]
+  },
   "bazarr": {
     "package_name": "",
     "extra_packages": ["lxml", "setuptools", "webrtcvad-wheels"]

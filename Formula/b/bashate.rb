@@ -13,7 +13,8 @@ class Bashate < Formula
     sha256 cellar: :any_skip_relocation, all: "449cf9d326f271eac44f60170e6614b7d19b7585b0a9fa78024c30660bdb2ee7"
   end
 
-  depends_on "python@3.13"
+  depends_on "python-setuptools" => :build
+  depends_on "python@3.14"
 
   resource "pbr" do
     url "https://files.pythonhosted.org/packages/ad/8d/23253ab92d4731eb34383a69b39568ca63a1685bec1e9946e91a32fc87ad/pbr-7.0.1.tar.gz"

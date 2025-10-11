@@ -13,7 +13,7 @@ class Px < Formula
     sha256 cellar: :any_skip_relocation, all: "e7d351ce49d6956f7096cdbabb9a5b87e4242cb781e7231c4b228ca1f2377b51"
   end
 
-  depends_on "python@3.13"
+  depends_on "python@3.14"
 
   uses_from_macos "lsof"
 

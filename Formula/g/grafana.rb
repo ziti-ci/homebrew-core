@@ -17,6 +17,7 @@ class Grafana < Formula
     sha256 cellar: :any_skip_relocation, arm64_sequoia: "6681636017aabc873be6c0c2d2a096f4a9f00bd83227f58871a1124937237eba"
     sha256 cellar: :any_skip_relocation, arm64_sonoma:  "e9a86301fb03157e5c6d087ad83636a80a37463fd920db0a0f7942a38c1f2f16"
     sha256 cellar: :any_skip_relocation, sonoma:        "d66dcdf170d155600a270419fe1986d755f7e84e5d1b631a52050c1b9533fa93"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "bcced86eab069abc3a45b714994665272f7df2e6fda2ccf4ea281cf1b4b2ab22"
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "c4eab71243a16f295f00aaea2050c7542c1a4cc091c9a86b927e7e8ab1df691a"
   end
 

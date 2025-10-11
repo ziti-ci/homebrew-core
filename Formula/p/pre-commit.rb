@@ -9,14 +9,13 @@ class PreCommit < Formula
   head "https://github.com/pre-commit/pre-commit.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any,                 arm64_tahoe:   "43edc617080f7dffe1319f7de8dc182e0cfc6719b2b0ce3c4cf94a23f0bcee4c"
-    sha256 cellar: :any,                 arm64_sequoia: "5003a9e507228ba2e1cab97878504c7aebee61c9832a9cd30fd21019eca42b9c"
-    sha256 cellar: :any,                 arm64_sonoma:  "9cc0ffb7e8e73cdda810e8dc723db227d808907f9919fcab60d627b4b4118d91"
-    sha256 cellar: :any,                 arm64_ventura: "2265e0c22132c9e20cb6a0c98d9ee815669fef0a00e4494e952478d5fcdff413"
-    sha256 cellar: :any,                 sonoma:        "2a8095a8a1c1ee05a97eb03d6779d48e55c89ed2b1b04a9870e60a61e6c6afc9"
-    sha256 cellar: :any,                 ventura:       "36ada427dbca0b40ba4055948ef7f5bb0577baf3ad04fe2be56c3837d0bc94dd"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "02683330b0260a6fd99ed9822751a36bd5235e5abe0e4b7a7c750401a0f8027f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "b06638faa4357af75024c04285840b21c3878ab8657e3c6e850191e6676cccfb"
+    rebuild 1
+    sha256 cellar: :any,                 arm64_tahoe:   "68539bbf76255e4ad5fc5a17964ba30501238cb093a7dd7dfe43b2194e68f9eb"
+    sha256 cellar: :any,                 arm64_sequoia: "49391e8a3fced6ef0771634063b4d3fb3652cf34956571b13bcc7494fc086d05"
+    sha256 cellar: :any,                 arm64_sonoma:  "14203088fd2ff4ec749112ebb5d76ee45da5ef748e74d837b5a864d925e75bf8"
+    sha256 cellar: :any,                 sonoma:        "94bd944ac86f44ae5969ae93aa5ec1397afd330ab6826e34c0731bf540039e7a"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "67d35d7e19d9537bb070d6293a98dd9ec3c45ece7c0a02479384cc8e88058942"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "0569196fdb4a85648ce0d89f369ed96033538aef91a81f6c6c1335a0350832e0"
   end
 
   depends_on "libyaml"

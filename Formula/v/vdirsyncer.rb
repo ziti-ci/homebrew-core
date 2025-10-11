@@ -9,16 +9,15 @@ class Vdirsyncer < Formula
   head "https://github.com/pimutils/vdirsyncer.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "af221ee46a6cb2cb0e5f9cc7f4d511014cb0c6c349e6025d31373403a7f97cab"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "bc57571024d407086066c3f78a09120ecf270565cf276cfc6b5c3d527429452e"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "e72ac8e2abc60d1ec9f5c25e9bcb5234a377f4443cc5cec8642b7bfafb747232"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "c9586dd233fa9a3b34a3bdfc538d93d04f1a11fffe03f3f12f2fd9c7035a982c"
-    sha256 cellar: :any_skip_relocation, tahoe:         "67555602c82f29d9f3506011e03a10305a3ee4745a593be0f93e9030b205d825"
-    sha256 cellar: :any_skip_relocation, sequoia:       "4bfff9faaf8fe5ef1d707fa3fa6b7441eba68cd086410aa6db31e5c53809ec6b"
-    sha256 cellar: :any_skip_relocation, sonoma:        "b6409d94c610a11c44c081432e703c8fe10f86a2dee6a509bff513f1c69cc2a6"
-    sha256 cellar: :any_skip_relocation, ventura:       "f0de31a8bf0faa2cb04e912902c2b3a8bce229865eec6c5570ba37cc17ceba82"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "f736f0c58a9827971d357ff4f9334c0707b59a1415fe213268235ed4d9569e4c"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "d48858ed37bf30a02d459ffc89d4f170cfccb382747ce215f1798c1f06acec15"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "75ab31ff785fba1735d79baea47e6d38838d18785582a45fc68bb5d42657d3b5"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "c91b81a552b82994bb1aeb26469d33d0dcffb25b1a48028d3cff35ff4dcabfd8"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "30230a16cfd07581a92e4d1b529f94677d2f6f0cbfbb4014604e496e623a9b5b"
+    sha256 cellar: :any_skip_relocation, tahoe:         "60056fb254bc02d0a06b38eff09fe8db64a4024713779ba1ed13e1ed774f47d8"
+    sha256 cellar: :any_skip_relocation, sequoia:       "1bf072ade0401bba421e2d5f47294721014c6ac45960cdc2b8f2e02d4396eb0c"
+    sha256 cellar: :any_skip_relocation, sonoma:        "50f047aa9305c8335bbc586b55db5c02c15cfdbe71b3a19ca9e95464ab9ab997"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "bd0cfa246d0eb9cbaecae07a26a88566288b402627c69789f8979bd5326791aa"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "6d885fef88156092f417a482cf0daa9e986704c527392450b080308f35170689"
   end
 
   depends_on "certifi"

@@ -32,7 +32,7 @@ class AstrometryNet < Formula
   depends_on "libpng"
   depends_on "netpbm"
   depends_on "numpy"
-  depends_on "python@3.13"
+  depends_on "python@3.14"
   depends_on "wcslib"
 
   resource "fitsio" do
@@ -49,7 +49,7 @@ class AstrometryNet < Formula
     ENV["NETPBM_INC"] = "-I#{Formula["netpbm"].opt_include}/netpbm"
     ENV["NETPBM_LIB"] = "-L#{Formula["netpbm"].opt_lib} -lnetpbm"
     ENV["SYSTEM_GSL"] = "yes"
-    ENV["PYTHON"] = python3 = which("python3.13")
+    ENV["PYTHON"] = python3 = which("python3.14")
 
     venv = virtualenv_create(libexec, python3)
     venv.pip_install(resources, build_isolation: false)

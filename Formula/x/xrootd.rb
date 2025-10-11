@@ -18,7 +18,7 @@ class Xrootd < Formula
 
   depends_on "cmake" => :build
   depends_on "pkgconf" => :build
-  depends_on "python@3.13" => [:build, :test]
+  depends_on "python@3.14" => [:build, :test]
   depends_on "davix"
   depends_on "krb5"
   depends_on "openssl@3"
@@ -34,7 +34,7 @@ class Xrootd < Formula
   end
 
   def python3
-    "python3.13"
+    "python3.14"
   end
 
   def install

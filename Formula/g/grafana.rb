@@ -27,24 +27,27 @@ class Grafana < Formula
   uses_from_macos "zlib"
 
   on_linux do
+    # Workaround for old `node-gyp` that needs distutils.
+    # TODO: Remove when `node-gyp` is v10+
+    depends_on "python-setuptools" => :build
     depends_on "fontconfig"
     depends_on "freetype"
   end
 
   def install
+    ENV["COMMIT_SHA"] = tap.user
     ENV["NODE_OPTIONS"] = "--max-old-space-size=8000"
+    ENV["npm_config_build_from_source"] = "true"
 
     system "make", "gen-go"
     system "go", "run", "build.go", "build"
 
-    system "yarn", "install"
+    system "yarn", "install", "--immutable"
     system "yarn", "build"
 
     os = OS.kernel_name.downcase
     arch = Hardware::CPU.intel? ? "amd64" : Hardware::CPU.arch.to_s
-    bin.install "bin/#{os}-#{arch}/grafana"
-    bin.install "bin/#{os}-#{arch}/grafana-cli"
-    bin.install "bin/#{os}-#{arch}/grafana-server"
+    bin.install buildpath.glob("bin/#{os}-#{arch}/grafana{,-cli,-server}")
 
     cp "conf/sample.ini", "conf/grafana.ini.example"
     pkgetc.install "conf/sample.ini" => "grafana.ini"
@@ -72,46 +75,15 @@ class Grafana < Formula
   end
 
   test do
-    require "pty"
-    require "timeout"
+    assert_match version.to_s, shell_output("#{bin}/grafana --version")
+    assert_match version.to_s, shell_output("#{bin}/grafana server --version")
 
-    # first test
-    system bin/"grafana", "server", "-v"
-
-    # avoid stepping on anything that may be present in this directory
-    tdir = File.join(Dir.pwd, "grafana-test")
-    Dir.mkdir(tdir)
-    logdir = File.join(tdir, "log")
-    datadir = File.join(tdir, "data")
-    plugdir = File.join(tdir, "plugins")
-    [logdir, datadir, plugdir].each do |d|
-      Dir.mkdir(d)
-    end
-    Dir.chdir(pkgshare)
-
-    res = PTY.spawn(bin/"grafana", "server",
-      "cfg:default.paths.logs=#{logdir}",
-      "cfg:default.paths.data=#{datadir}",
-      "cfg:default.paths.plugins=#{plugdir}",
-      "cfg:default.server.http_port=50100")
-    r = res[0]
-    w = res[1]
-    pid = res[2]
-
-    listening = Timeout.timeout(10) do
-      li = false
-      r.each do |l|
-        if l.include?("HTTP Server Listen")
-          li = true
-          break
-        end
-      end
-      li
-    end
-
+    cp_r pkgshare.children, testpath
+    port = free_port
+    pid = spawn bin/"grafana", "server", "cfg:server.http_port=#{port}", "cfg:log.mode=file"
+    sleep 15
+    assert_equal "Ok", shell_output("curl --silent localhost:#{port}/healthz")
+  ensure
     Process.kill("TERM", pid)
-    w.close
-    r.close
-    listening
   end
 end

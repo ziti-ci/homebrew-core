@@ -19,7 +19,7 @@ class Ykdl < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "eb541b86eded5d4bcc6262795c769d284a9e3c37f42f70121d43864f4066dc1d"
   end
 
-  depends_on "python@3.13"
+  depends_on "python@3.14"
 
   resource "jsengine" do
     url "https://files.pythonhosted.org/packages/bc/0a/1321515de90de02f9c98ac12dfa9763ae93d658ed662261758dc5e902986/jsengine-1.0.7.post1.tar.gz"

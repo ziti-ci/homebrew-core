@@ -14,7 +14,7 @@ class XkeyboardConfig < Formula
   depends_on "meson" => :build
   depends_on "ninja" => :build
   depends_on "pkgconf" => [:build, :test]
-  depends_on "python@3.13" => :build
+  depends_on "python@3.14" => :build
 
   uses_from_macos "libxslt" => :build
 

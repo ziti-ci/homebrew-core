@@ -8,15 +8,13 @@ class Johnnydep < Formula
   license "MIT"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any,                 arm64_tahoe:   "dfb64922d55bb3c439ad6b4530ba5529033b1398127243c196eceaf6eeaebaf7"
-    sha256 cellar: :any,                 arm64_sequoia: "f8a1c7e9a1e998a436515dee6d884184825809cb8b28e0e3ada0535741623cd2"
-    sha256 cellar: :any,                 arm64_sonoma:  "0129fb3e931ed3daf34bc8a3f8ee2f8c977f5bca3715e2217bcebf4b892cee40"
-    sha256 cellar: :any,                 arm64_ventura: "e2db6a6d86bd35707bcb6c59374ec6c2e2028762608f277765c5c231ef7968f5"
-    sha256 cellar: :any,                 sonoma:        "91989a32152c46c1679308e47df4f09324d553c367bb6a8831e10c28d6219d9e"
-    sha256 cellar: :any,                 ventura:       "16c7f002b8f7e9b8c62f364bd7eef09fd86d1b97d71527eae9fd3ceba81a7840"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "abf004439db78ed17e882aabbaea88c03f86de37985d2cc31673fcffcee291e2"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "9e599029b28fd894192f6cc5fc57df31f6e1b3bf3d2ceae69aa8763c3037a352"
+    rebuild 2
+    sha256 cellar: :any,                 arm64_tahoe:   "6c203112106922fb1e46d8002128cd66734fb5adfa3d0d0a72e7f1186a6b7198"
+    sha256 cellar: :any,                 arm64_sequoia: "8bec8ae2d8725c123a9cf211047d10efbf47a3e454a9d31cff1f862e8d06d995"
+    sha256 cellar: :any,                 arm64_sonoma:  "f514171f90b831271b976c76a33a9ef71cfeeca5a6a761b053ec333bde0e5925"
+    sha256 cellar: :any,                 sonoma:        "70a32a8773be96c92c27c938b6eba4fc20e8bef8799c34ec330ff635b407a692"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "13e6ad48bf9f17579c0c21d2c397581bdd8e5669bab2b7795e39be831e80422d"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "5c1f6f72a599fa4b9edb63a6b36c62213ba36780489cc602d638d37c94f1edca"
   end
 
   depends_on "libyaml"

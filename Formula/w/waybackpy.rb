@@ -9,8 +9,8 @@ class Waybackpy < Formula
   revision 8
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, all: "996bcc65b772b98507b7d5134217d463b69bc65948cd0276f0afefb89e0becf9"
+    rebuild 2
+    sha256 cellar: :any_skip_relocation, all: "f6673cd10763f043abc56210eafdf1512c4fe5016179ce2a4043d02463723e0e"
   end
 
   depends_on "certifi"

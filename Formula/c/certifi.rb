@@ -28,16 +28,14 @@ class Certifi < Formula
     rm site_packages/"certifi/cacert.pem"
     (site_packages/"certifi").install_symlink Formula["ca-certificates"].pkgetc/"cert.pem" => "cacert.pem"
 
-    link_dirs = site_packages.children - [site_packages/"certifi"]
     python.versioned_formulae.each do |extra_python|
       next if extra_python.version < oldest_python.version
 
       # Cannot use Python.site_packages as that requires formula to be installed
       extra_site_packages = lib/"python#{extra_python.version.major_minor}/site-packages"
-      extra_site_packages.install_symlink link_dirs
-
-      # Symlink grandchildren so cache ends up in correct directory
-      (extra_site_packages/"certifi").install_symlink site_packages.glob("certifi/*")
+      site_packages.find do |path|
+        (extra_site_packages/path.relative_path_from(site_packages)).dirname.install_symlink path if path.file?
+      end
     end
   end
 

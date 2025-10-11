@@ -9,7 +9,8 @@ class Restview < Formula
   head "https://github.com/mgedmin/restview.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "5207c409839c90c9be97716a6349e1f988af6a3ad9a74eabab636ac3f91c4c88"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, all: "f2254c6aeaa7538ce7a7885a2054fbeee886748c1b28aa98af5d73217281389a"
   end
 
   depends_on "python@3.14"

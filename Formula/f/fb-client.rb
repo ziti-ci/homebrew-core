@@ -30,13 +30,13 @@ class FbClient < Formula
 
   depends_on "curl"
   depends_on "openssl@3"
-  depends_on "python@3.13"
+  depends_on "python@3.14"
 
   conflicts_with "spotbugs", because: "both install a `fb` binary"
 
   resource "pycurl" do
-    url "https://files.pythonhosted.org/packages/71/35/fe5088d914905391ef2995102cf5e1892cf32cab1fa6ef8130631c89ec01/pycurl-7.45.6.tar.gz"
-    sha256 "2b73e66b22719ea48ac08a93fc88e57ef36d46d03cb09d972063c9aa86bb74e6"
+    url "https://files.pythonhosted.org/packages/e3/3d/01255f1cde24401f54bb3727d0e5d3396b67fc04964f287d5d473155f176/pycurl-7.45.7.tar.gz"
+    sha256 "9d43013002eab2fd6d0dcc671cd1e9149e2fc1c56d5e796fad94d076d6cb69ef"
   end
 
   resource "pyxdg" do
@@ -45,7 +45,7 @@ class FbClient < Formula
   end
 
   def install
-    venv = virtualenv_create(libexec, "python3.13")
+    venv = virtualenv_create(libexec, "python3.14")
     venv.pip_install resources
 
     rw_info = python_shebang_rewrite_info(libexec/"bin/python")

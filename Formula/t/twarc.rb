@@ -9,7 +9,8 @@ class Twarc < Formula
   revision 11
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "615f61acd8924f02a4c8dc0c1f905c59b1f8083afa54c7876490b33ad0cae1d7"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, all: "cea309e5331b3208409e132cd34353eaa6e93bca03243dfd1d62347b69c6d5b2"
   end
 
   depends_on "certifi"

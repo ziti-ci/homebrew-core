@@ -7,6 +7,15 @@ class TerraformLocal < Formula
   sha256 "2cfaeb283a1753083f3f59be1a2e08d225286913633694d695b04bba9913ae91"
   license "Apache-2.0"
 
+  bottle do
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "02003d3379322362954e861be100d4a7a6739c57a9fea59d367aa703fd1cd7eb"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "18800188bee9dc2358e6216a1caae2ab4830ca148579485e6be7b1568a18a386"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "3d63ec41c396ee5ee40ed6d3c6b57b1af040aa8f0b5e1daafc44b7fbbb251582"
+    sha256 cellar: :any_skip_relocation, sonoma:        "805d1ee675ff6223d939eb35bfa08deed14d71fff27cffcf05e3cabc71eb2e0b"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "8b8631e5c95a7741c03479efbc1daf2fed887328e0971476e9795cb37be8dd5d"
+  end
+
   depends_on "localstack"
   depends_on "python@3.14"
 

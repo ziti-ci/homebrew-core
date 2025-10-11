@@ -8,8 +8,8 @@ class Virtualenvwrapper < Formula
   license "MIT"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, all: "11c07d0473e9177377e77fd5d9e15e0a6c63b3aa1c87e031bbf8f9ed179badfa"
+    rebuild 2
+    sha256 cellar: :any_skip_relocation, all: "30d8dfe8f228e972af05832eb995dbe6d4027d3539cab05dd1fce36c6d0183bf"
   end
 
   depends_on "python@3.14"

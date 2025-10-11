@@ -11,7 +11,7 @@ class Unoserver < Formula
     sha256 cellar: :any_skip_relocation, all: "3798493d9ba959645c4fe719e058992a090777eafbe662100eba66aad1f5b13c"
   end
 
-  depends_on "python@3.13"
+  depends_on "python@3.14"
 
   def install
     virtualenv_install_with_resources

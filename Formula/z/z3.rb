@@ -26,10 +26,10 @@ class Z3 < Formula
   depends_on "cmake" => :build
   # Has Python bindings but are supplementary to the main library
   # which does not need Python.
-  depends_on "python@3.13" => [:build, :test]
+  depends_on "python@3.14" => [:build, :test]
 
   def python3
-    which("python3.13")
+    which("python3.14")
   end
 
   def install

@@ -9,11 +9,12 @@ class Pdm < Formula
   head "https://github.com/pdm-project/pdm.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "eb47d7421341beacbdd12fce90e87c2fe5ed9ff4a6f984b09a019acb58eb54e4"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, all: "62fe473543052b1362925dc20767f4973183e6c78da778210c23117b15e09883"
   end
 
   depends_on "certifi"
-  depends_on "python@3.13"
+  depends_on "python@3.14"
 
   resource "anyio" do
     url "https://files.pythonhosted.org/packages/c6/78/7d432127c41b50bccba979505f272c16cbcadcc33645d5fa3a738110ae75/anyio-4.11.0.tar.gz"
@@ -153,6 +154,12 @@ class Pdm < Formula
   resource "socksio" do
     url "https://files.pythonhosted.org/packages/f8/5c/48a7d9495be3d1c651198fd99dbb6ce190e2274d0f28b9051307bdec6b85/socksio-1.0.0.tar.gz"
     sha256 "f88beb3da5b5c38b9890469de67d0cb0f9d494b78b106ca1845f96c10b91c4ac"
+
+    # Unpin flit-core<3 to support 3.14+
+    patch do
+      url "https://github.com/sethmlarson/socksio/commit/b326406915fd98a8185c1c160165c5b8963b30c1.patch?full_index=1"
+      sha256 "7aefa906b62e2c9a8df255ea742ca97e155ac2e1238e49ce11e3e56e37ee1f8b"
+    end
   end
 
   resource "tomlkit" do
@@ -181,12 +188,11 @@ class Pdm < Formula
   end
 
   def install
-    virtualenv_install_with_resources
+    venv = virtualenv_install_with_resources
     generate_completions_from_executable(bin/"pdm", "completion")
 
     # Build an `:all` bottle by replacing homebrew prefix on the comment block
-    site_packages = libexec/Language::Python.site_packages("python3")
-    inreplace site_packages/"findpython-#{resource("findpython").version}.dist-info/METADATA",
+    inreplace venv.site_packages/"findpython-#{resource("findpython").version}.dist-info/METADATA",
               "/opt/homebrew",
               "/usr/local"
   end

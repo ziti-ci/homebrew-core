@@ -9,7 +9,8 @@ class Principalmapper < Formula
   revision 5
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "92bf9195e8e64c0c3a776f4375e99b3aa236c82b374255be01d3b8fc3db67449"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, all: "47b833ae3377b5c3b707df350aea43caba38636553ae5ce0549dbdb2c634b72f"
   end
 
   depends_on "python@3.14"

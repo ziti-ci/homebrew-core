@@ -9,8 +9,8 @@ class Ranger < Formula
   head "https://github.com/ranger/ranger.git", branch: "master"
 
   bottle do
-    rebuild 2
-    sha256 cellar: :any_skip_relocation, all: "1dd7a31ff1d0f7726b6f8f4cd73e741886d6bb15b23d81dc2592a1eaa756edd9"
+    rebuild 3
+    sha256 cellar: :any_skip_relocation, all: "cf9392090a9110d00d4c95026536ef2a5988dd9375db3139c20c23f1e79eb74f"
   end
 
   depends_on "python@3.14"

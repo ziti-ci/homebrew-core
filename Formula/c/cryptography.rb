@@ -4,6 +4,7 @@ class Cryptography < Formula
   url "https://files.pythonhosted.org/packages/4a/9b/e301418629f7bfdf72db9e80ad6ed9d1b83c487c471803eaa6464c511a01/cryptography-46.0.2.tar.gz"
   sha256 "21b6fc8c71a3f9a604f028a329e5560009cc4a3a828bfea5fcba8eb7647d88fe"
   license any_of: ["Apache-2.0", "BSD-3-Clause"]
+  revision 1
   head "https://github.com/pyca/cryptography.git", branch: "main"
 
   bottle do
@@ -20,6 +21,7 @@ class Cryptography < Formula
   depends_on "python-setuptools" => :build
   depends_on "python@3.12" => [:build, :test]
   depends_on "python@3.13" => [:build, :test]
+  depends_on "python@3.14" => [:build, :test]
   depends_on "rust" => :build
   depends_on "cffi"
   depends_on "openssl@3"

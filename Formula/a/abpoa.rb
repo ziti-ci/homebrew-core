@@ -1,12 +1,10 @@
 class Abpoa < Formula
   desc "SIMD-based C library for fast partial order alignment using adaptive band"
   homepage "https://github.com/yangao07/abPOA"
-  url "https://github.com/yangao07/abPOA/releases/download/v1.5.4/abPOA-v1.5.4.tar.gz"
-  sha256 "15fc8c1ae07891d276009cf86d948105c2ba8a4a94823581f93744351c2fcf4a"
+  url "https://github.com/yangao07/abPOA/releases/download/v1.5.5/abPOA-v1.5.5.tar.gz"
+  sha256 "2e2919dcadbc6713a6e248514e2d9e9cb93c53c5b36dd953a2909ad2e3fa6349"
   license "MIT"
   head "https://github.com/yangao07/abPOA.git", branch: "main"
-
-  no_autobump! because: :requires_manual_review
 
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_tahoe:   "44928800cfa6cfc490c4c3099c2908d8d69d4a40be057ab916b8754b54576466"

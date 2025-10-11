@@ -1,8 +1,8 @@
 class Nasm < Formula
   desc "Netwide Assembler (NASM) is an 80x86 assembler"
   homepage "https://www.nasm.us/"
-  url "https://www.nasm.us/pub/nasm/releasebuilds/3.00/nasm-3.00.tar.xz"
-  sha256 "85c51ffc7d2804274b16d1821e1dd84c1b9164120b0b1221b95bd57a89d278f2"
+  url "https://www.nasm.us/pub/nasm/releasebuilds/3.01/nasm-3.01.tar.xz"
+  sha256 "b7324cbe86e767b65f26f467ed8b12ad80e124e3ccb89076855c98e43a9eddd4"
   license "BSD-2-Clause"
 
   livecheck do
@@ -28,10 +28,6 @@ class Nasm < Formula
   end
 
   def install
-    # Work around upstream bug
-    # https://github.com/netwide-assembler/nasm/commit/dc247c9f9913e336200ecf8bb72152fdabdb3585#r167178007
-    inreplace "include/bytesex.h", "l32toh(", "le32toh("
-
     system "./autogen.sh" if build.head?
     system "./configure", "--prefix=#{prefix}"
     system "make", "manpages" if build.head?

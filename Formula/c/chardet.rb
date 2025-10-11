@@ -12,7 +12,7 @@ class Chardet < Formula
     sha256 cellar: :any_skip_relocation, all: "5abd9f3f6191b67dd5c0a9912225873d1aea2371883c7aee8fcc3077e414dc96"
   end
 
-  depends_on "python@3.13"
+  depends_on "python@3.14"
 
   def install
     virtualenv_install_with_resources

@@ -1,8 +1,8 @@
 class Dolt < Formula
   desc "Git for Data"
   homepage "https://github.com/dolthub/dolt"
-  url "https://github.com/dolthub/dolt/archive/refs/tags/v1.59.18.tar.gz"
-  sha256 "1b5b43a5b36ed5efbe1d7070d1f58f089843b89da33ee794bd23e4612aac34d9"
+  url "https://github.com/dolthub/dolt/archive/refs/tags/v1.59.19.tar.gz"
+  sha256 "5fc6db64b2eb80a592ad2b80fed72843dde1971c35d1d72d2b0ce374859c746c"
   license "Apache-2.0"
   version_scheme 1
   head "https://github.com/dolthub/dolt.git", branch: "main"
@@ -25,6 +25,8 @@ class Dolt < Formula
   depends_on "icu4c@77"
 
   def install
+    ENV["CGO_ENABLED"] = "1"
+
     chdir "go" do
       system "go", "build", *std_go_args(ldflags: "-s -w"), "./cmd/dolt"
     end

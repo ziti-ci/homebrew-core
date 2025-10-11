@@ -9,8 +9,8 @@ class Proselint < Formula
   head "https://github.com/amperser/proselint.git", branch: "main"
 
   bottle do
-    rebuild 3
-    sha256 cellar: :any_skip_relocation, all: "64dfc964e1a9bb4f8b7ad0f4c2387f8bf86cce14f14513575979cc6400557767"
+    rebuild 4
+    sha256 cellar: :any_skip_relocation, all: "eca80d4fc32861309f11f5a4c36ae7b2ec898d803e5dba3bb4ac7eed0be5902b"
   end
 
   depends_on "python@3.14"

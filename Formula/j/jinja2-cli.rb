@@ -9,14 +9,13 @@ class Jinja2Cli < Formula
   revision 3
 
   bottle do
-    sha256 cellar: :any,                 arm64_tahoe:   "debb7f9c49fe654cddbddd4dfe0d59ee488fac4c11e15c4ee300cfb343dc4a65"
-    sha256 cellar: :any,                 arm64_sequoia: "69847d8dd63445895938e9a787d879a81c933764fea8b3df683ae18a3c0465e9"
-    sha256 cellar: :any,                 arm64_sonoma:  "883bb7f1ecae9adf6e224cec532dac1738f95c82e3a414d2d29be0d6555eed31"
-    sha256 cellar: :any,                 arm64_ventura: "81a8d22c74237ad6b2117cd41b7d21ee621d6c6cfad796408300b09c298f6e0f"
-    sha256 cellar: :any,                 sonoma:        "fab5b3eb00bbcd5be43140b924899df658422035a7480014310701456637fa67"
-    sha256 cellar: :any,                 ventura:       "8d5a194592d04897522819d11b4983d8ed5580726ab8133318c73c4c47eea334"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "f0c9dfceb1281a4939a5ce38733836fdc431e8ed9cfcee1141b02cffa59a245f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "3614f38dc9f33988fbdb1e3a5bce147e5e315f6a1aafa54bbf8252723e7d79a0"
+    rebuild 1
+    sha256 cellar: :any,                 arm64_tahoe:   "157e6a406008cdc0be4df1286a88c2c950a37aa9d3c1d91b132aa51618f3bdd3"
+    sha256 cellar: :any,                 arm64_sequoia: "5ca7098ef9032def0541e94247d55465e1da685d0e96485bd92b7b91f91b8fd4"
+    sha256 cellar: :any,                 arm64_sonoma:  "2317ec1250bc8823be5988d3d033e1db2809984f0ee28fdf678e663e67ff0935"
+    sha256 cellar: :any,                 sonoma:        "ff49c01c6798c5bb2e9dd9079248450d156b24c55a0ec975587521233aaeb829"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "b963413db8832b24396afebe937648fbcd6e2135d10329ed324df7600ec8fdf3"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "c284b0eee62b02969ce0b167081fd1b77f0d50647c32d17f65b7173b6d61dfd7"
   end
 
   depends_on "libyaml"

@@ -37,7 +37,7 @@ class Vim < Formula
   depends_on "libsodium"
   depends_on "lua"
   depends_on "ncurses"
-  depends_on "python@3.13"
+  depends_on "python@3.14"
   depends_on "ruby"
 
   uses_from_macos "perl"
@@ -53,7 +53,7 @@ class Vim < Formula
     because: "vim and macvim both install vi* binaries"
 
   def install
-    ENV.prepend_path "PATH", Formula["python@3.13"].opt_libexec/"bin"
+    ENV.prepend_path "PATH", Formula["python@3.14"].opt_libexec/"bin"
 
     # https://github.com/Homebrew/homebrew-core/pull/1046
     ENV.delete("SDKROOT")

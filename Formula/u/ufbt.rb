@@ -12,11 +12,11 @@ class Ufbt < Formula
     sha256 cellar: :any_skip_relocation, all: "561e844026e50a7d961338d459851e9d62bca87f7449fc9404234b31a24e73d2"
   end
 
-  depends_on "python@3.13"
+  depends_on "python@3.14"
 
   resource "mslex" do
-    url "https://files.pythonhosted.org/packages/b7/ec/530f1098d88f2076038799ddfe29d9b6e4d982df938ef6288e67d18b3f68/mslex-1.2.0.tar.gz"
-    sha256 "79e2abc5a129dd71cdde58a22a2039abb7fa8afcbac498b723ba6e9b9fbacc14"
+    url "https://files.pythonhosted.org/packages/e0/97/7022667073c99a0fe028f2e34b9bf76b49a611afd21b02527fbfd92d4cd5/mslex-1.3.0.tar.gz"
+    sha256 "641c887d1d3db610eee2af37a8e5abda3f70b3006cdfd2d0d29dc0d1ae28a85d"
   end
 
   resource "oslex" do

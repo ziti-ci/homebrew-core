@@ -9,16 +9,15 @@ class Twtxt < Formula
   revision 6
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "ac01d94b2e9e13b01afa2131612096aaad0b554289a66561f379a03f638697d3"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "29cc2de20dc895c385ac0a63e44855b00dbde6e2bc5731b8a2e1a7cfc032e928"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "d5b10bcf1dbbaab2d9a31cac9ac6aeace17f927b3962940c772229213675f1de"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "45ccbfb3032ae02b0c63bb81cb193951b02686289a3c9587b7ef4f2ff1555e4e"
-    sha256 cellar: :any_skip_relocation, tahoe:         "1fdfedf772bd24d132bbd7aadcda7f1971c2f8f4783c738ca4cf3e709b8d9006"
-    sha256 cellar: :any_skip_relocation, sequoia:       "657122f063434a21eda3925652a7308c196fdef8cb9f492aa758142fa76097f6"
-    sha256 cellar: :any_skip_relocation, sonoma:        "d70b5429efc89db1aa8820be9b1d89a7a80d9e4c139279650529006ba071d5a6"
-    sha256 cellar: :any_skip_relocation, ventura:       "38eba811f1499a3bfe7ee08315da847d3cc9c2f83e26fec1c321bb5736042a77"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "17a929882929f239219e1e9325a9dd9a845a3a811467b470db31d7e4e0cc984e"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "abcbe4536337494e6441e9d3abbbe8d16de129ca6a9f37096f3e5fe5344718ce"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "770eca225a0a54216e7df9eeabc1f62662ad7c3e843ec7932fe5f8fa9dc3ebfd"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "65084f6db31ebe76cb66b50614e0efc3fc33ce5d5b2d8b7b5b95c6b41301cbae"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "98acc47c361296e7cd9d4d6d85e355b81bc91f6418ab7425c8868b5faf7d167e"
+    sha256 cellar: :any_skip_relocation, tahoe:         "cc6acc2cf1214951a2fa8c20f71559d3a7bb1964f04067c38459026db532c608"
+    sha256 cellar: :any_skip_relocation, sequoia:       "f3786d5fb528221022304c98473b3a95b99a9a97075ef2423b4ba70b7fa130b7"
+    sha256 cellar: :any_skip_relocation, sonoma:        "68cce3972d43daca56824086ee5abe882b5e48dfb176f54adfbe48a32271c09a"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "7e56165f0ffc1993594d02f626a9fba47a06d26237f702e9fb47fff1df48f5a5"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "40b14baf842363c7ec3cfb9a64196afc01fb7d6d35b11c2678a87d9adcf33047"
   end
 
   depends_on "python@3.14"

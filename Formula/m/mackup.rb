@@ -9,7 +9,8 @@ class Mackup < Formula
   head "https://github.com/lra/mackup.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "f0d80fa9efb59208a386293d95384f3440291ba11121fc43dd4c69707b515fce"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, all: "0f4b53a009f1f8c1bddb2cae808be6fae141d85107700c6b3bbe4c3ad955b887"
   end
 
   depends_on "python@3.14"

@@ -4,6 +4,7 @@ class Fastfetch < Formula
   url "https://github.com/fastfetch-cli/fastfetch/archive/refs/tags/2.53.0.tar.gz"
   sha256 "1488d9b738474e8ef8e8d78e2463722bf706e435857c849b3f480354ad62366e"
   license "MIT"
+  revision 1
   head "https://github.com/fastfetch-cli/fastfetch.git", branch: "dev"
 
   livecheck do
@@ -25,7 +26,7 @@ class Fastfetch < Formula
   depends_on "glib" => :build
   depends_on "imagemagick" => :build
   depends_on "pkgconf" => :build
-  depends_on "python@3.13" => :build
+  depends_on "python@3.14" => :build
   depends_on "vulkan-loader" => :build
   depends_on "yyjson"
 

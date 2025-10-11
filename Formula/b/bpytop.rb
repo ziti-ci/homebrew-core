@@ -7,8 +7,7 @@ class Bpytop < Formula
   url "https://github.com/aristocratos/bpytop/archive/refs/tags/v1.0.68.tar.gz"
   sha256 "3a936f8899efb66246e82bbcab33249bf94aabcefbe410e56f045a1ce3c9949f"
   license "Apache-2.0"
-
-  no_autobump! because: :requires_manual_review
+  head "https://github.com/aristocratos/bpytop.git", branch: "master"
 
   bottle do
     rebuild 5
@@ -22,7 +21,7 @@ class Bpytop < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "77c98ef152d8a32a13e5dded91db1efd998925ffffbab5456062d67f358d7394"
   end
 
-  depends_on "python@3.13"
+  depends_on "python@3.14"
 
   on_macos do
     depends_on "osx-cpu-temp"
@@ -41,7 +40,7 @@ class Bpytop < Formula
   end
 
   def install
-    venv = virtualenv_create(libexec, "python3.13")
+    venv = virtualenv_create(libexec, "python3.14")
     venv.pip_install resources
     system "make", "install", "PREFIX=#{prefix}"
     pkgshare.install "themes"
@@ -68,7 +67,7 @@ class Bpytop < Formula
 
     r, w, pid = PTY.spawn(bin/"bpytop")
     r.winsize = [80, 130]
-    sleep 5
+    sleep 15
     w.write "\cC"
 
     log = (config/"error.log").read

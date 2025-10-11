@@ -8,8 +8,8 @@ class Jtbl < Formula
   license "MIT"
 
   bottle do
-    rebuild 2
-    sha256 cellar: :any_skip_relocation, all: "649e15e7c82c20e93b6227e694bcf623dd7e289efe6920fa00bd19d4747e49fd"
+    rebuild 3
+    sha256 cellar: :any_skip_relocation, all: "72309a9ade71950be9675e9b57c336177ffd5a84b058634d0b4bdcb6466b7e9a"
   end
 
   depends_on "python@3.14"

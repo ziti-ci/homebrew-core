@@ -14,14 +14,13 @@ class Uhd < Formula
   end
 
   bottle do
-    sha256                               arm64_tahoe:   "dcbe0e1ab47f4df406a67c2ba36054b073b2b66f0b1477dd2c60b5b04f264dd6"
-    sha256                               arm64_sequoia: "bd097193791e63281d066ec0d9f09ce00854f3d4f175acf2c8f7de2e97bd9711"
-    sha256                               arm64_sonoma:  "42f3015de22c4c0df1c0c0ddbc3f4cbf2f8fc6d5c46a9f4b3e3605ca19d1ae1f"
-    sha256                               arm64_ventura: "42838c978555ceedc54abad930c4736964281a77f095a85e240a6cf610db19d4"
-    sha256                               sonoma:        "126644d2dd8f755098164f18dcc0c203eedfc68f3d1291e2ac3f6e4e08f16114"
-    sha256                               ventura:       "854851a3278513211d5e60512a140e73e9da82de03340e4e8a132593a462fdf4"
-    sha256                               arm64_linux:   "c520b7e380d1573fab48e2d62fc63725e61522a25ca7258132c5c034e465e53b"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "1ced0f9be25f913ec6bec008639b7d37c64437de7e10651010d809842234144d"
+    rebuild 1
+    sha256                               arm64_tahoe:   "3085e0b5f7f06a02d2d87463fdde8dfcfaa0c759b59390642f266eb57ecd4341"
+    sha256                               arm64_sequoia: "f9c4f3d415a8ba15cb24dcda5658fa12e187daf9326917c2a45307968ff421ea"
+    sha256                               arm64_sonoma:  "01b70f03d78f980439ba453ce3bc0563445c53be8ce37fd30b2fa0ad3af1f9a9"
+    sha256                               sonoma:        "7efa662510ab15847e9906037a9dfdee4ed169f673324636375b215113661741"
+    sha256                               arm64_linux:   "7ec118566c3e56e68d47bb7f59ec2467e52f12a6b0f2781533d0defdeda4c168"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "7c7600beea0f32580f1176451a7b34489b5ae9061950e73dc40819e26c581303"
   end
 
   depends_on "cmake" => :build

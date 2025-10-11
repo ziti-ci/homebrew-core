@@ -29,14 +29,14 @@ class Znc < Formula
   depends_on "cctz"
   depends_on "icu4c@77"
   depends_on "openssl@3"
-  depends_on "python@3.13"
+  depends_on "python@3.14"
 
   uses_from_macos "zlib"
 
   def install
     rm_r(["third_party/cctz", "third_party/googletest"])
 
-    python3 = "python3.13"
+    python3 = "python3.14"
     xy = Language::Python.major_minor_version python3
 
     # Fixes: CMake Error: Problem with archive_write_header(): Can't create 'swigpyrun.h'

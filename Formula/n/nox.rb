@@ -8,8 +8,8 @@ class Nox < Formula
   license "Apache-2.0"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, all: "dfe6707c09a9fed17147b7876d9682feb20eea8f2b1ef95169b36bca661492a3"
+    rebuild 2
+    sha256 cellar: :any_skip_relocation, all: "315c4cad64ba15ee2887092c481030399a14b1f26eff0c8dc4cb25fac6215ae7"
   end
 
   depends_on "python@3.14"

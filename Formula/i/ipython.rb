@@ -12,7 +12,7 @@ class Ipython < Formula
     sha256 cellar: :any_skip_relocation, all: "dc5c496ca724048abbd5fd5d4ed3dcd7b12551c9e47e61d875ccae9e7dee9e89"
   end
 
-  depends_on "python@3.13"
+  depends_on "python@3.14"
 
   resource "asttokens" do
     url "https://files.pythonhosted.org/packages/4a/e7/82da0a03e7ba5141f05cce0d302e6eed121ae055e0456ca228bf693984bc/asttokens-3.0.0.tar.gz"
@@ -90,11 +90,10 @@ class Ipython < Formula
   end
 
   def install
-    virtualenv_install_with_resources
+    venv = virtualenv_install_with_resources
 
     # Build an `:all` bottle
-    prefix = libexec/Language::Python.site_packages("python3")
-    inreplace prefix/"IPython/core/application.py", "/usr/local", HOMEBREW_PREFIX
+    inreplace venv.site_packages/"IPython/core/application.py", "/usr/local", HOMEBREW_PREFIX
   end
 
   test do

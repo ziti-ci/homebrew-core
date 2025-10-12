@@ -22,7 +22,7 @@ class Xapian < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "f87d97371ec436679abfd002d828ff14a00b4e4355faeef1e385f67a2c25412d"
   end
 
-  depends_on "python@3.13" => [:build, :test]
+  depends_on "python@3.14" => [:build, :test]
   depends_on "sphinx-doc" => :build
 
   uses_from_macos "zlib"
@@ -43,7 +43,7 @@ class Xapian < Formula
   end
 
   def python3
-    "python3.13"
+    "python3.14"
   end
 
   def install

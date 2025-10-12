@@ -699,7 +699,7 @@
   },
   "osc": {
     "package_name": "",
-    "extra_packages": ["rpm", "ruamel-yaml", "urllib3"],
+    "extra_packages": ["ruamel-yaml", "urllib3"],
     "exclude_packages": ["cryptography"]
   },
   "osc-cli": {

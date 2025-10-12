@@ -38,7 +38,7 @@ class Swift < Formula
   # is higher then that is likely why.
   depends_on xcode: ["14.3", :build]
 
-  depends_on "python@3.13"
+  depends_on "python@3.14"
 
   uses_from_macos "llvm" => :build
   uses_from_macos "rsync" => :build
@@ -470,7 +470,7 @@ class Swift < Formula
         --swift-include-tests=0
         --llvm-include-tests=0
         --lldb-configure-tests=0
-        --lldb-extra-cmake-args=-DPython3_EXECUTABLE=#{which("python3.13")}
+        --lldb-extra-cmake-args=-DPython3_EXECUTABLE=#{which("python3.14")}
         --skip-build-benchmarks
         --build-swift-private-stdlib=0
         --install-swift

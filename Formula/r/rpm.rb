@@ -41,7 +41,7 @@ class Rpm < Formula
 
   depends_on "cmake" => :build
   depends_on "gettext" => :build
-  depends_on "python@3.13" => [:build, :test]
+  depends_on "python@3.14" => [:build, :test]
   depends_on "rust" => :build # for rpm-sequoia
 
   depends_on "gmp"
@@ -88,7 +88,7 @@ class Rpm < Formula
   end
 
   def python3
-    "python3.13"
+    "python3.14"
   end
 
   def install

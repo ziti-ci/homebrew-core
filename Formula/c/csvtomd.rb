@@ -15,7 +15,7 @@ class Csvtomd < Formula
 
   deprecate! date: "2025-01-10", because: :repo_archived
 
-  depends_on "python@3.13"
+  depends_on "python@3.14"
 
   # ValueError: invalid mode: 'rU'
   patch :DATA

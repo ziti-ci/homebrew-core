@@ -4,7 +4,7 @@ class Tfel < Formula
   url "https://github.com/thelfer/tfel/archive/refs/tags/TFEL-5.0.1.tar.gz"
   sha256 "820b2f9d54e237b2c2d9d6f06aaf7d4a1d3f34fb373e6549bee4fd8b55ecfad1"
   license "GPL-1.0-or-later"
-  revision 1
+  revision 2
   head "https://github.com/thelfer/tfel.git", branch: "master"
 
   bottle do
@@ -21,7 +21,7 @@ class Tfel < Formula
   depends_on "cmake" => :build
   depends_on "gcc" => :build # for gfortran
   depends_on "boost-python3"
-  depends_on "python@3.13"
+  depends_on "python@3.14"
 
   def install
     args = [

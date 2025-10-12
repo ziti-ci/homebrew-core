@@ -14,7 +14,8 @@ class RuffLsp < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "3eb98e50688bf67252e5779a8948914ae7d063ba511672001fb12d2f498d5316"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, all: "c88a2f5b966aadd8114418e1e38eac7504373c4d7bddc3ecfd37944fa7976e85"
   end
 
   deprecate! date: "2025-02-06", because: :deprecated_upstream, replacement_formula: "ruff"

@@ -17,7 +17,7 @@ class Sip < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "fe1acd4a2a80307f1a8f310695b0978afc56e209fbb67a77a9f25fc857bbcec3"
   end
 
-  depends_on "python@3.13"
+  depends_on "python@3.14"
 
   resource "packaging" do
     url "https://files.pythonhosted.org/packages/a1/d4/1fc4078c65507b51b96ca8f8c3ba19e6a61c8253c72794544580a7b6c24d/packaging-25.0.tar.gz"
@@ -30,7 +30,7 @@ class Sip < Formula
   end
 
   def python3
-    "python3.13"
+    "python3.14"
   end
 
   def install

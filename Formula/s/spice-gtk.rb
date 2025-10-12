@@ -35,7 +35,7 @@ class SpiceGtk < Formula
   depends_on "meson" => :build
   depends_on "ninja" => :build
   depends_on "pkgconf" => [:build, :test]
-  depends_on "python@3.13" => :build
+  depends_on "python@3.14" => :build
   depends_on "vala" => :build
 
   depends_on "at-spi2-core"
@@ -73,13 +73,13 @@ class SpiceGtk < Formula
   end
 
   resource "pyparsing" do
-    url "https://files.pythonhosted.org/packages/46/3a/31fd28064d016a2182584d579e033ec95b809d8e220e74c4af6f0f2e8842/pyparsing-3.1.2.tar.gz"
-    sha256 "a1bac0ce561155ecc3ed78ca94d3c9378656ad4c94c1270de543f621420f94ad"
+    url "https://files.pythonhosted.org/packages/bb/22/f1129e69d94ffff626bdb5c835506b3a5b4f3d070f17ea295e12c2c6f60f/pyparsing-3.2.3.tar.gz"
+    sha256 "b9c13f1ab8b3b542f72e28f634bad4de758ab3ce4546e4301970ad6fa77c38be"
   end
 
   resource "six" do
-    url "https://files.pythonhosted.org/packages/71/39/171f1c67cd00715f190ba0b100d606d440a28c93c7714febeca8b79af85e/six-1.16.0.tar.gz"
-    sha256 "1e61c37477a1626458e36f7b1d82aa5c9b094fa4802892072e49de9c60c4c926"
+    url "https://files.pythonhosted.org/packages/94/e7/b2c673351809dca68a0e064b6af791aa332cf192da575fd474ed7d6f16a2/six-1.17.0.tar.gz"
+    sha256 "ff70335d468e7eb6ec65b95b99d3a2836546063f63acc5171de367e834932a81"
   end
 
   # Backport fix for "ld: unknown file type in '.../spice-gtk-0.42/src/spice-glib-sym-file'"
@@ -92,7 +92,7 @@ class SpiceGtk < Formula
   patch :DATA
 
   def install
-    venv = virtualenv_create(buildpath/"venv", "python3.13")
+    venv = virtualenv_create(buildpath/"venv", "python3.14")
     venv.pip_install resources
     ENV.prepend_path "PATH", venv.root/"bin"
 
@@ -111,7 +111,7 @@ class SpiceGtk < Formula
     CPP
     ENV.prepend_path "PKG_CONFIG_PATH", "#{Formula["icu4c"].lib}/pkgconfig"
     system ENV.cc, "test.cpp",
-                   *shell_output("pkgconf --cflags --libs spice-client-gtk-3.0 ").chomp.split,
+                   *shell_output("pkgconf --cflags --libs spice-client-gtk-3.0").chomp.split,
                    "-o", "test"
     system "./test"
   end

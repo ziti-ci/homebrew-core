@@ -3,8 +3,8 @@ class Yamlfix < Formula
 
   desc "Simple and configurable YAML formatter that keeps comments"
   homepage "https://lyz-code.github.io/yamlfix/"
-  url "https://files.pythonhosted.org/packages/55/df/75a9e3d05e56813d9ccc15db39627fc571bb7526586bbfb684ee9f488795/yamlfix-1.18.0.tar.gz"
-  sha256 "ae35891e08aa830e7be7abed6ca25e020aa5998551e4d76e2dc8909bf3c35d7e"
+  url "https://files.pythonhosted.org/packages/e8/5f/cea9f9a9027f3f7ac6b5345e654255518013e94d5c3146746a139be5c865/yamlfix-1.19.0.tar.gz"
+  sha256 "22f95ed2a5b88f46f06cf7922c616b6706d3596f23a0553138796ab909e5fa96"
   license "GPL-3.0-or-later"
 
   bottle do

@@ -19,8 +19,7 @@ class Remarshal < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "74fc20a69b574a806c2bf6dcb2a6aabc90d2835bbfc9ba2b28937161ae93d3ba"
   end
 
-  depends_on "libyaml"
-  depends_on "python@3.13"
+  depends_on "python@3.14"
 
   conflicts_with "msgpack-tools", because: "both install 'json2msgpack' binary"
   conflicts_with "toml2json", because: "both install `toml2json` binaries"
@@ -52,8 +51,8 @@ class Remarshal < Formula
   end
 
   resource "rich" do
-    url "https://files.pythonhosted.org/packages/fe/75/af448d8e52bf1d8fa6a9d089ca6c07ff4453d86c65c145d0a300bb073b9b/rich-14.1.0.tar.gz"
-    sha256 "e497a48b844b0320d45007cdebfeaeed8db2a4f4bcf49f15e455cfc4af11eaa8"
+    url "https://files.pythonhosted.org/packages/fb/d2/8920e102050a0de7bfabeb4c4614a49248cf8d5d7a8d01885fbb24dc767a/rich-14.2.0.tar.gz"
+    sha256 "73ff50c7c0c1c77c8243079283f4edb376f0f6442433aecb8ce7e6d0b92d1fe4"
   end
 
   resource "rich-argparse" do
@@ -64,11 +63,6 @@ class Remarshal < Formula
   resource "ruamel-yaml" do
     url "https://files.pythonhosted.org/packages/3e/db/f3950f5e5031b618aae9f423a39bf81a55c148aecd15a34527898e752cf4/ruamel.yaml-0.18.15.tar.gz"
     sha256 "dbfca74b018c4c3fba0b9cc9ee33e53c371194a9000e694995e620490fd40700"
-  end
-
-  resource "ruamel-yaml-clib" do
-    url "https://files.pythonhosted.org/packages/20/84/80203abff8ea4993a87d823a5f632e4d92831ef75d404c9fc78d0176d2b5/ruamel.yaml.clib-0.2.12.tar.gz"
-    sha256 "6c8fbb13ec503f99a91901ab46e0b07ae7941cd527393187039aec586fdfd36f"
   end
 
   resource "tomlkit" do

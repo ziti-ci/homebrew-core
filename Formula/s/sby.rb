@@ -14,11 +14,11 @@ class Sby < Formula
   end
 
   depends_on "yices2" => :test
-  depends_on "python@3.13"
+  depends_on "python@3.14"
   depends_on "yosys"
 
   def install
-    venv = virtualenv_create(libexec, "python3.13")
+    venv = virtualenv_create(libexec, "python3.14")
     venv.pip_install "click"
 
     system "make", "install", "PREFIX=#{prefix}"

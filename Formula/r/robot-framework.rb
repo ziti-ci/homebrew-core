@@ -10,14 +10,13 @@ class RobotFramework < Formula
   head "https://github.com/robotframework/robotframework.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_tahoe:   "bb5b099a598853fe44d13b23825f6796b6a3c0851b598fd5435c4afea59e3bd0"
-    sha256 cellar: :any,                 arm64_sequoia: "dee08b9039b51544dc8d8d92110a78edac250580fbdf9f17d26d9e3dc689841a"
-    sha256 cellar: :any,                 arm64_sonoma:  "faba84da2842d75f82d7ab84d4cfacb21da15c08492025b83481b640399f7100"
-    sha256 cellar: :any,                 arm64_ventura: "fb74021835d28cec74c02f1974d231f5f27328a9d7349a55e056e7084c6a6996"
-    sha256 cellar: :any,                 sonoma:        "757e44d1cfdbf16e1aa32f75c917bc3ac04451b1e257139a6763d75566a6073c"
-    sha256 cellar: :any,                 ventura:       "d2df5f1caddd90ac5a17ba9168de69e8c5e21e61bfd30c4e826e3bfb93f2d85d"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "b2ab9240c993935971f2034566f37d658629a2d125383109bc6a4b5c1691d712"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "8bd187c5cb82d6c678f3ae13e907f4c65d437df7146b83afa30c97efbd52309c"
+    rebuild 1
+    sha256 cellar: :any,                 arm64_tahoe:   "d4d3fa4429d2a4134e70fea873b823f303c9f85d59826020fad5e6da9e80d664"
+    sha256 cellar: :any,                 arm64_sequoia: "0b60d12a295be2bd3593b1940f2b3dd94c94527a6b13e6fd98489259b158a2a7"
+    sha256 cellar: :any,                 arm64_sonoma:  "e789ed8bb3e729e636a776d815b57d9b69875da852d4b08f580387ab8ec6f7ea"
+    sha256 cellar: :any,                 sonoma:        "20db06c96b0b26cd6e278c7c8f8eaa175c5c56a0f8589be8c67ac738df3315dc"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "0ab45993f051778c0b5949348571f5e4e744be0211c1850efb6d6ecec8a1eac7"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "9f68ba25e2df8e4a021fd4bd5a5d2bc95fda68b733815bf620b33a074bc33e1a"
   end
 
   depends_on "rust" => :build # for bcrypt

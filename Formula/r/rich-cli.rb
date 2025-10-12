@@ -8,8 +8,8 @@ class RichCli < Formula
   license "MIT"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, all: "f89856adb5d14ec4c41e49a1c06f1e6ee34978b3541a888f78f7b5a6db6febd4"
+    rebuild 2
+    sha256 cellar: :any_skip_relocation, all: "60c3d881c9c423dc3479c6ef1f6d1e090975a5e14a76ee683616a99293c3e734"
   end
 
   depends_on "certifi" => :no_linkage

@@ -9,14 +9,13 @@ class Snakeviz < Formula
   revision 2
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "4bb5d14171dc9d9c197c522a4e2dc8fbcf5a918ea9ea9e9c539c4e1be8413683"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "b4d4520c17ede830a4b318dc3e58676447f2cb0e5810ad8ebc4cf28cc01d090d"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "fac8bd6ed2a0deb2b93c66d3f7a1e7d45cd97ed3401644100ca5ed5bb6b99c45"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "1e0e2b75a9317bdf6f00b62efd40979d04ef3cb7d9d09fb4fc5141425e113bda"
-    sha256 cellar: :any_skip_relocation, sonoma:        "93f50659ccb85e4fd236fbbf11c789b14d06e79ea0e01ff9b99bdbf8f503a9ab"
-    sha256 cellar: :any_skip_relocation, ventura:       "fe459ebc55f218ca933081e52990141c0ed1c83f8dd92d1b170fbd6e188b1a1b"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "69f916e637ecc77844e6ca4de1bc87abf662e112f13418e2dc561d44e649ceed"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "704638b72520fd6f9a35b271b1a428a0fe2afd82958e06297ccd7ed609af03ff"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "eefaa7c2dadc370f5ccca63450201f68b10163e61d6dc50ae3c26c16bd686c57"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "318c17f514d98735d7577c6df4229ac07e50f83ee24149412c096c62dd4d6235"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "fc79d16f3d26870ab474010e32658e3f042a12726ea82e3899adf75541d25f4b"
+    sha256 cellar: :any_skip_relocation, sonoma:        "f619789876c65dd82de1630d89ed6fc4cb9521d67c15d9955edca63f00079dff"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "333d060ac20fa6c1ff54c80a5bb1243187f658fb60356bc56c47c2c074450bae"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "7db4646f3bcfb62c5e601aa8e14ea8bbae28b1eefab03156f80764acc2778cc1"
   end
 
   depends_on "python@3.14"

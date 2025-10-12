@@ -1,12 +1,10 @@
 class Ecoji < Formula
   desc "Encodes (and decodes) data as emojis"
   homepage "https://github.com/keith-turner/ecoji"
-  url "https://github.com/keith-turner/ecoji/archive/refs/tags/v2.0.1.tar.gz"
-  sha256 "59c78ddaef057bbfb06ea8522dfc51ea8bce3e8f149a3231823a37f6de0b4ed2"
+  url "https://github.com/keith-turner/ecoji/archive/refs/tags/v2.0.2.tar.gz"
+  sha256 "2f5de343c4e1032b328efe6a3a61d9ba6aae5ef668f99f0d06a16a9dda22e52e"
   license "Apache-2.0"
   head "https://github.com/keith-turner/ecoji.git", branch: "main"
-
-  no_autobump! because: :requires_manual_review
 
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_tahoe:    "16791a0cf0bc9900357ddad7220c7a3b5e350cb384391b397535a46ff9a316fa"
@@ -25,8 +23,14 @@ class Ecoji < Formula
 
   depends_on "go" => :build
 
+  # Add missing go.sum file needed for module verification, upstream PR, https://github.com/keith-turner/ecoji/pull/39
+  patch do
+    url "https://github.com/keith-turner/ecoji/commit/ecc62c2cea558c776400b1da8161cef97848316c.patch?full_index=1"
+    sha256 "b66530592062f64a03858633d85029271cc83a2b41bb84d31ce31667abcca71e"
+  end
+
   def install
-    cd "cmd" do
+    cd "cmd/ecoji" do
       system "go", "build", *std_go_args(ldflags: "-s -w")
     end
   end

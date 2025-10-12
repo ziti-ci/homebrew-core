@@ -8,7 +8,8 @@ class GitDeleteMergedBranches < Formula
   license "GPL-3.0-or-later"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "014ca6e4ca551c4756e5cc79940da71ae98d777b45d5539e98dc43276edeeee9"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, all: "d031da08a17767a8c6fb2204c53fa19ca4f46d5c4d8fb0a5970e55a34133196d"
   end
 
   depends_on "python@3.14"

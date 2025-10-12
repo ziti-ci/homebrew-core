@@ -7,14 +7,12 @@ class Lunarml < Formula
   head "https://github.com/minoki/LunarML.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_tahoe:   "0c1edf1f88f646259b6eda606ecbe2b94b5ce281a531f40f9dc41b1cf315041a"
-    sha256 cellar: :any,                 arm64_sequoia: "99d7c42200ec770420de1ee83f8e2a2948510dc5585df1eb3a7fa3a8c4952224"
-    sha256 cellar: :any,                 arm64_sonoma:  "8ce3a6d12a55a1977c4c39491f52742814da9dd6b1d007271c81d666ef62c912"
-    sha256 cellar: :any,                 arm64_ventura: "b9e15d9780dc25de4e2fd6292365fad7aae3e0250b2ee15e7fbcc827e861ffdf"
-    sha256 cellar: :any,                 sonoma:        "bfe37be13b868f9cc63813d9fed1fe3018e291816f45ba8eaf5c59876b36fb2c"
-    sha256 cellar: :any,                 ventura:       "95588395c2dcfa6363cc5e5d9c2fa8d1241cdc85a2e47baddce0e4cb4b1dd9b3"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "63f392dc71b8c035f4e078aa4b7ca0e15ad1a7e20145a2769a3d1ec29aa243e1"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "6e0c9969d0590e2023d69b3ff8a4cfcad0392ce07aafe299882648b76373c43c"
+    sha256 cellar: :any,                 arm64_tahoe:   "2df11728ca3fb49958d60145918c3dba582f0d87c1491bcfd9c2f8407cf241f8"
+    sha256 cellar: :any,                 arm64_sequoia: "7750dd7c517dbbb3b0ab429db707b9c804ed7686a859c98f1430f0c086886123"
+    sha256 cellar: :any,                 arm64_sonoma:  "bdbc062f5d379d8611977746b014f9984b3b68f76188b3ab752e37b512e54cca"
+    sha256 cellar: :any,                 sonoma:        "030100cb16de338080fd919a41f4048e90ef9d692209950feefe052ccdab0972"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "b0dbe810a70d79fb20e22676a8ca6112e83f46755704d38e3ca6c1d720490faf"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "afc712f980e20f4c0d9ddc3222ad101737c55c0baae2d394564510349c4bbf11"
   end
 
   depends_on "mlton" => :build

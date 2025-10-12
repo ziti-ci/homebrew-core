@@ -6,12 +6,12 @@ class Vte3 < Formula
   license "LGPL-2.0-or-later"
 
   bottle do
-    sha256 arm64_tahoe:   "4be86ff0c3effae53e376ef410389724b3742bc465865e98c8940ea5565fdf21"
-    sha256 arm64_sequoia: "553e798e90e775ca7f92eef0cd3598c7e3f5665a9e615b3cc218ec8ab4cdec42"
-    sha256 arm64_sonoma:  "1b648685eaa217374b62f0e8fc3745fe64f69e197c5be17b9f87a006c8ba39de"
-    sha256 sonoma:        "ca4dffe8c311488908e7536ea48f40a93f19b6af8a14ea46f299bfcf980b367f"
-    sha256 arm64_linux:   "8dcf49395109d138f6982b192abdd47a3aaae58ee5e9b1345fbb3ec65a8951b6"
-    sha256 x86_64_linux:  "03d235d294b1965a645540f9d1a28b8409f717921408b935dae2d1f9f39b7b98"
+    sha256 arm64_tahoe:   "37d2eb956de7a8beb0540657cf3471b96a3fa3ab6150a5d1ec86a39efaa6a213"
+    sha256 arm64_sequoia: "992d26e6ec3d23cb92dabea3a4032cbcc04b0dda024f2996e0e8017de66d4324"
+    sha256 arm64_sonoma:  "ac4705c0fc9400258e1f3b1c62ce43432664fa65497bb980261f03e2bc2dae07"
+    sha256 sonoma:        "5f29b5f9a83e3241d4a37d298bb24dde336713a332fca3d3100f623f897230b8"
+    sha256 arm64_linux:   "938c84d2152f38ecfc249997217c9fba1beb1e0d5ad98ff91e6957128f497adb"
+    sha256 x86_64_linux:  "0d62a36ba16a82c878ed11625776e8c0a1b74df33589c39a2a1e0e7dbdc96fcf"
   end
 
   depends_on "fast_float" => :build

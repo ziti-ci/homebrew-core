@@ -4,6 +4,7 @@ class Ldns < Formula
   url "https://nlnetlabs.nl/downloads/ldns/ldns-1.8.4.tar.gz"
   sha256 "838b907594baaff1cd767e95466a7745998ae64bc74be038dccc62e2de2e4247"
   license "BSD-3-Clause"
+  revision 1
 
   # https://nlnetlabs.nl/downloads/ldns/ since the first-party site has a
   # tendency to lead to an `execution expired` error.
@@ -26,7 +27,7 @@ class Ldns < Formula
 
   depends_on "swig" => :build
   depends_on "openssl@3"
-  depends_on "python@3.13"
+  depends_on "python@3.14"
 
   conflicts_with "drill", because: "both install a `drill` binary"
 
@@ -37,7 +38,7 @@ class Ldns < Formula
   end
 
   def python3
-    "python3.13"
+    "python3.14"
   end
 
   def install

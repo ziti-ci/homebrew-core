@@ -10,7 +10,8 @@ class GitRemoteCodecommit < Formula
   head "https://github.com/aws/git-remote-codecommit.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "6403e992fba39a49e3faa313955b9066ec7459930147d24d3ba1e325de4d4855"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, all: "66afe42cbc7c5d898a9ea177dce0c84f610870c453788b51d57caea4735c3d82"
   end
 
   depends_on "python@3.14"

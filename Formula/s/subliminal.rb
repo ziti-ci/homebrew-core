@@ -9,14 +9,13 @@ class Subliminal < Formula
   head "https://github.com/Diaoul/subliminal.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any,                 arm64_tahoe:   "ffeb18bfc19b0b565e51f3f538e2221b8e1dbf15bfb8634376630301c83b8876"
-    sha256 cellar: :any,                 arm64_sequoia: "44b7e56396000cc9e645619408e589d2da11ed6cccb3108944326ba2f6527eb8"
-    sha256 cellar: :any,                 arm64_sonoma:  "fffd967abacc525827f2cb9559283fb4af68349d0d57d99b21191d07d7d0ec33"
-    sha256 cellar: :any,                 arm64_ventura: "ac1c7261e5e6a2786acf6b5b0c9e0f6b4d913ff1dbff63bad89f5d47b7fee0dd"
-    sha256 cellar: :any,                 sonoma:        "0400fa0ea9530919e9edfe038bed5c2d1bfea64bb07bc11672c1fa3d9df0c7d3"
-    sha256 cellar: :any,                 ventura:       "003d43d8c3d8bad8a6d586c5f2a3bb9f623d2111c1d977ba1431a917787758be"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "ab2ab54d3ea4ec8b71d37e928b95de694199dd90511fb1eef3ccca1ce333d414"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "f677db3683d441e0cf6fddf05e68f903e3aeadc7d9609cbe2935732e57b002d2"
+    rebuild 1
+    sha256 cellar: :any,                 arm64_tahoe:   "ba6fc8a608c7da11cbcd3e4905b24be8bfb0fd4b2a842ba3562b176e3ba3a0a5"
+    sha256 cellar: :any,                 arm64_sequoia: "a1e8f36bb6bbe701952772e06ac8170204abb062510b5f529a429ac69601a33f"
+    sha256 cellar: :any,                 arm64_sonoma:  "7be5bf0de7e000f9a9e0d0f4d3c6e4d3b836a18c9322b5526ca769116014fb2c"
+    sha256 cellar: :any,                 sonoma:        "eb8030de4f1de8dcf493b31ca1816d6769cc8d5d823da98e4a8e2ce34803ff74"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "94a26521f0eb3c6b5a4c0b262c6e009f82ad2257775760403650475807a8acfc"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "604e9531849d1cd9f4818ce8f09b1f6f01e326c3e02e2686e44a5e86bf050841"
   end
 
   depends_on "certifi" => :no_linkage

@@ -11,7 +11,7 @@ class LizardAnalyzer < Formula
     sha256 cellar: :any_skip_relocation, all: "fae29ca25d368f861992d85a8ded8abb7afc64e4b9f6fdcb883e40d12149d587"
   end
 
-  depends_on "python@3.13"
+  depends_on "python@3.14"
 
   conflicts_with "lizard", because: "both install `lizard` binaries"
 

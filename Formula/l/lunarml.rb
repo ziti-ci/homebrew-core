@@ -1,8 +1,8 @@
 class Lunarml < Formula
   desc "Standard ML compiler that produces Lua/JavaScript"
   homepage "https://github.com/minoki/LunarML"
-  url "https://github.com/minoki/LunarML/archive/refs/tags/v0.2.1.tar.gz"
-  sha256 "f4efce99a17f2f7a479d0ab9d858d1c79624ddaba85f8bc08c06e186fd57ed9e"
+  url "https://github.com/minoki/LunarML/archive/refs/tags/v0.3.0.tar.gz"
+  sha256 "459719f7b462ae3bb1485d2055fe9a62bdd1bc91f569cfd0480757c48054d8ee"
   license "MIT"
   head "https://github.com/minoki/LunarML.git", branch: "master"
 

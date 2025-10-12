@@ -4,6 +4,7 @@ class Coal < Formula
   url "https://github.com/coal-library/coal/releases/download/v3.0.2/coal-3.0.2.tar.gz"
   sha256 "899eb343ee7d86ae6312401bc969d1d2cb8103a5a67af5e1f06061a9c5fb0743"
   license "BSD-2-Clause"
+  revision 1
   head "https://github.com/coal-library/coal.git", branch: "devel"
 
   livecheck do
@@ -29,14 +30,14 @@ class Coal < Formula
   depends_on "eigen"
   depends_on "eigenpy"
   depends_on "octomap"
-  depends_on "python@3.13"
+  depends_on "python@3.14"
 
   # Workaround for Boost 1.89.0 until upstream fix.
   # Issue ref: https://github.com/coal-library/coal/issues/743
   patch :DATA
 
   def python3
-    "python3.13"
+    "python3.14"
   end
 
   def install

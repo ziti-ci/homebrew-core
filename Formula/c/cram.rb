@@ -11,7 +11,7 @@ class Cram < Formula
     sha256 cellar: :any_skip_relocation, all: "380d5fde8323ac893ae796f88c68426acda8933ef993101014a5ab839a8abcfd"
   end
 
-  depends_on "python@3.13"
+  depends_on "python@3.14"
 
   def install
     virtualenv_install_with_resources

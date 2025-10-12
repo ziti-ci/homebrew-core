@@ -10,8 +10,8 @@ class Cxxtest < Formula
   revision 3
 
   bottle do
-    rebuild 5
-    sha256 cellar: :any_skip_relocation, all: "643d46c6ac246d2b736860fd8e318a1a25fb4c2b659a18fead5db9fbe6dc9298"
+    rebuild 6
+    sha256 cellar: :any_skip_relocation, all: "aa6fedcd740d5f396b372bfae35f71164499faf2b62c1737befbcada3ea4d7f8"
   end
 
   depends_on "python@3.14"

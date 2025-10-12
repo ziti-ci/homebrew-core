@@ -22,7 +22,7 @@ class Wxpython < Formula
   depends_on "sip" => :build
   depends_on "numpy"
   depends_on "pillow"
-  depends_on "python@3.13"
+  depends_on "python@3.14"
   depends_on "wxwidgets@3.2" # issue ref: https://github.com/wxWidgets/Phoenix/issues/2764
 
   on_linux do
@@ -31,7 +31,7 @@ class Wxpython < Formula
   end
 
   def python
-    "python3.13"
+    "python3.14"
   end
 
   def install

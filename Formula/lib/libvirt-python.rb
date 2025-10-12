@@ -4,6 +4,7 @@ class LibvirtPython < Formula
   url "https://download.libvirt.org/python/libvirt-python-11.7.0.tar.gz"
   sha256 "f65f80fe7dabb47c2ea887bec5f62509b756282acac4fa958ab74706c0b76c11"
   license "LGPL-2.1-or-later"
+  revision 1
 
   livecheck do
     url "https://download.libvirt.org/python/"
@@ -23,7 +24,7 @@ class LibvirtPython < Formula
 
   depends_on "pkgconf" => :build
   depends_on "libvirt"
-  depends_on "python@3.13"
+  depends_on "python@3.14"
 
   def pythons
     deps.map(&:to_formula)

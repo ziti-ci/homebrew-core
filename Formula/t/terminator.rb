@@ -18,8 +18,8 @@ class Terminator < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "7453996d0c7658caae13ae6dbe0ec99c8d7944f7b5c7b154f21359c4c9a8fc7e"
   end
 
-  depends_on "pygobject3"
-  depends_on "python@3.13"
+  depends_on "pygobject3" => :no_linkage
+  depends_on "python@3.14"
   depends_on "vte3"
 
   on_linux do
@@ -32,13 +32,13 @@ class Terminator < Formula
   end
 
   resource "psutil" do
-    url "https://files.pythonhosted.org/packages/2a/80/336820c1ad9286a4ded7e845b2eccfcb27851ab8ac6abece774a6ff4d3de/psutil-7.0.0.tar.gz"
-    sha256 "7be9c3eba38beccb6495ea33afd982a44074b78f28c434a1f51cc07fd315c456"
+    url "https://files.pythonhosted.org/packages/b3/31/4723d756b59344b643542936e37a31d1d3204bcdc42a7daa8ee9eb06fb50/psutil-7.1.0.tar.gz"
+    sha256 "655708b3c069387c8b77b072fc429a57d0e214221d01c0a772df7dfedcb3bcd2"
   end
 
   resource "setuptools" do
-    url "https://files.pythonhosted.org/packages/8d/d2/ec1acaaff45caed5c2dedb33b67055ba9d4e96b091094df90762e60135fe/setuptools-80.8.0.tar.gz"
-    sha256 "49f7af965996f26d43c8ae34539c8d99c5042fbff34302ea151eaa9c207cd257"
+    url "https://files.pythonhosted.org/packages/18/5d/3bf57dcd21979b887f014ea83c24ae194cfcd12b9e0fda66b957c69d1fca/setuptools-80.9.0.tar.gz"
+    sha256 "f36b47402ecde768dbfafc46e8e4207b4360c654f1f3bb84475f0a28628fb19c"
   end
 
   resource "six" do

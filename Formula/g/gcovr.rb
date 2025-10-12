@@ -17,7 +17,7 @@ class Gcovr < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "6af0f56c662192c902dbf1a334676fbc7f0fdae86461e7b3d659fa38b28e6729"
   end
 
-  depends_on "python@3.13"
+  depends_on "python@3.14"
 
   uses_from_macos "libxml2", since: :ventura
   uses_from_macos "libxslt"

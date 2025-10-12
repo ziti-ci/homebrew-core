@@ -20,7 +20,7 @@ class Distcc < Formula
     sha256 x86_64_linux:  "92bb7674804a00828013b7a43534c3875624168e13934e3b099afcc8b50698a8"
   end
 
-  depends_on "python@3.13"
+  depends_on "python@3.14"
 
   resource "libiberty" do
     url "https://ftp.debian.org/debian/pool/main/libi/libiberty/libiberty_20250315.orig.tar.xz"
@@ -45,7 +45,7 @@ class Distcc < Formula
   end
 
   def install
-    ENV["PYTHON"] = python3 = which("python3.13")
+    ENV["PYTHON"] = python3 = which("python3.14")
     site_packages = prefix/Language::Python.site_packages(python3)
 
     build_venv = virtualenv_create(buildpath/"venv", python3)

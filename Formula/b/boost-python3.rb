@@ -4,6 +4,7 @@ class BoostPython3 < Formula
   url "https://github.com/boostorg/boost/releases/download/boost-1.89.0/boost-1.89.0-b2-nodocs.tar.xz"
   sha256 "875cc413afa6b86922b6df3b2ad23dec4511c8a741753e57c1129e7fa753d700"
   license "BSL-1.0"
+  revision 1
   head "https://github.com/boostorg/boost.git", branch: "master"
 
   livecheck do
@@ -25,10 +26,10 @@ class BoostPython3 < Formula
 
   depends_on "numpy" => :build
   depends_on "boost"
-  depends_on "python@3.13"
+  depends_on "python@3.14"
 
   def python3
-    "python3.13"
+    "python3.14"
   end
 
   def install

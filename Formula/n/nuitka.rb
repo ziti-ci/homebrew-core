@@ -3,8 +3,8 @@ class Nuitka < Formula
 
   desc "Python compiler written in Python"
   homepage "https://nuitka.net"
-  url "https://files.pythonhosted.org/packages/e5/87/36bae02fb19e98cdfa5778faf14f90acff396b9b17586355fbefbe971631/Nuitka-2.7.16.tar.gz"
-  sha256 "768909faf365b21ae4777727fc4ae88efc29239c664bd177061fc907e263e0fa"
+  url "https://files.pythonhosted.org/packages/94/c0/96857354765e9024825b7ac29b8c81b12e9dfe310f9ddc3786cd0f0d07b5/Nuitka-2.8.1.tar.gz"
+  sha256 "456fd55c25292252f2dfb26da2c1ee0c0dbeb00106669979b8a2a1f3ae653cb0"
   license "Apache-2.0"
 
   bottle do
@@ -49,7 +49,7 @@ class Nuitka < Formula
       if __name__ == "__main__":
           main()
     EOS
-    assert_match "Talk Hello World", shell_output("python3 test.py")
+    assert_match "Talk Hello World", shell_output("#{libexec}/bin/python test.py")
     system bin/"nuitka", "--onefile", "-o", "test", "test.py"
     assert_match "Talk Hello World", shell_output("./test")
   end

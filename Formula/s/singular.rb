@@ -56,13 +56,13 @@ class Singular < Formula
   depends_on "gmp"
   depends_on "mpfr"
   depends_on "ntl"
-  depends_on "python@3.13"
+  depends_on "python@3.14"
   depends_on "readline"
 
   def install
     system "./autogen.sh" if build.head?
     system "./configure", "--disable-silent-rules",
-                          "--with-python=#{which("python3.13")}",
+                          "--with-python=#{which("python3.14")}",
                           "CXXFLAGS=-std=c++11",
                           *std_configure_args
     system "make", "install"

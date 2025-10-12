@@ -8,7 +8,8 @@ class B2Tools < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "7a853a02cddfe2a39eba1e730affe5a073b691b332bbff3f4051ccbd57c8215d"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, all: "e9367aabbecfaa1ec9f43be2ee3e02a8a6bc0bcaa372eb4ddb3a0a3ddaaabe6c"
   end
 
   depends_on "certifi"

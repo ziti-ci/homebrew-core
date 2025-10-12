@@ -18,7 +18,7 @@ class Cppman < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "3bdb4b1df81dcbf31ee521271f510c565492921d31ce2d3d1070e1a708f53715"
   end
 
-  depends_on "python@3.13"
+  depends_on "python@3.14"
 
   uses_from_macos "libxml2", since: :ventura
   uses_from_macos "libxslt"
@@ -40,6 +40,12 @@ class Cppman < Formula
   resource "html5lib" do
     url "https://files.pythonhosted.org/packages/ac/b6/b55c3f49042f1df3dcd422b7f224f939892ee94f22abcf503a9b7339eaf2/html5lib-1.1.tar.gz"
     sha256 "b2e5b40261e20f354d198eae92afc10d750afb487ed5e50f9c4eaf07c184146f"
+
+    # Avoid ast.Str removed in 3.14+: https://github.com/html5lib/html5lib-python/pull/583
+    patch do
+      url "https://github.com/html5lib/html5lib-python/commit/379f9476c2a5ee370cd7ec856ee9092cace88499.patch?full_index=1"
+      sha256 "97ae2474704eedf72dc5d5c46ad86e2144c10022ea950cb1c42a9ad894705014"
+    end
   end
 
   resource "lxml" do

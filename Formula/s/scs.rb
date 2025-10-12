@@ -1,8 +1,8 @@
 class Scs < Formula
   desc "Conic optimization via operator splitting"
   homepage "https://web.stanford.edu/~boyd/papers/scs.html"
-  url "https://github.com/cvxgrp/scs/archive/refs/tags/3.2.8.tar.gz"
-  sha256 "22d2d785b7c7a9ee8a260d2684cf17ae4733271b8421fdbc78f281d19910ca1b"
+  url "https://github.com/cvxgrp/scs/archive/refs/tags/3.2.9.tar.gz"
+  sha256 "f3d9095fb01fd634d12ccbe6f79ed2acbb7101ad57b723157d44a49cbe187669"
   license "MIT"
 
   bottle do

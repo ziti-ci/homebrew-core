@@ -8,8 +8,8 @@ class Gitlint < Formula
   license "MIT"
 
   bottle do
-    rebuild 6
-    sha256 cellar: :any_skip_relocation, all: "36439a03cc83049977c6ff628f75a76a33dd727ebbfc7f824f46329f6f880440"
+    rebuild 7
+    sha256 cellar: :any_skip_relocation, all: "9bdd4315c315138d33b927f220ba855762f9d46e87e264b7665fa3cb3407fa72"
   end
 
   depends_on "python@3.14"

@@ -1106,6 +1106,6 @@
   },
   "zim": {
     "package_name": "",
-    "extra_packages": ["pyxdg", "setuptools"]
+    "extra_packages": ["pyxdg"]
   }
 }

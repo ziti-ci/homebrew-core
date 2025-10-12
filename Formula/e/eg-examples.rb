@@ -12,7 +12,7 @@ class EgExamples < Formula
     sha256 cellar: :any_skip_relocation, all: "b6a6f858143973b765badaf959c4b582872b80e2af1a0bd6d1d6d3e92a460add"
   end
 
-  depends_on "python@3.13"
+  depends_on "python@3.14"
 
   conflicts_with "eg", because: "both install `eg` binaries"
 

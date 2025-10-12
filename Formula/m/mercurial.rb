@@ -6,6 +6,7 @@ class Mercurial < Formula
   url "https://www.mercurial-scm.org/release/mercurial-7.1.1.tar.gz"
   sha256 "47cf66ba89c175536faf844c9b4cd962eb432afb516c073e51f436bf3f0bc148"
   license "GPL-2.0-or-later"
+  revision 1
 
   livecheck do
     url "https://www.mercurial-scm.org/release/"
@@ -21,10 +22,10 @@ class Mercurial < Formula
     sha256 x86_64_linux:  "46654ab14b457ed78df2d327fd37b6dd139b630ceab624bfb6ffc914543eb324"
   end
 
-  depends_on "python@3.13"
+  depends_on "python@3.14"
 
   def install
-    python3 = "python3.13"
+    python3 = "python3.14"
     system python3, "-m", "pip", "install", *std_pip_args(build_isolation: true), "."
 
     # Install chg (see https://www.mercurial-scm.org/wiki/CHg)

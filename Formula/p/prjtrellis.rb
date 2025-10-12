@@ -4,7 +4,7 @@ class Prjtrellis < Formula
   url "https://github.com/YosysHQ/prjtrellis/archive/refs/tags/1.4.tar.gz"
   sha256 "46fe9d98676953e0cccf1d6332755d217a0861e420f1a12dabfda74d81ccc147"
   license all_of: ["ISC", "MIT"]
-  revision 6
+  revision 7
 
   no_autobump! because: :requires_manual_review
 
@@ -22,7 +22,7 @@ class Prjtrellis < Formula
   depends_on "cmake" => :build
   depends_on "boost"
   depends_on "boost-python3"
-  depends_on "python@3.13"
+  depends_on "python@3.14"
 
   resource "prjtrellis-db" do
     url "https://github.com/YosysHQ/prjtrellis/releases/download/1.4/prjtrellis-db-1.4.zip"

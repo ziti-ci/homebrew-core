@@ -6,6 +6,7 @@ class RpdsPy < Formula
   url "https://files.pythonhosted.org/packages/e9/dd/2c0cbe774744272b0ae725f44032c77bdcab6e8bcf544bffa3b6e70c8dba/rpds_py-0.27.1.tar.gz"
   sha256 "26a1c73171d10b7acccbded82bf6a586ab8203601e565badc74bbbf8bc5a10f8"
   license "MIT"
+  revision 1
 
   bottle do
     sha256 cellar: :any,                 arm64_tahoe:   "1dfdc2a23b9a10d279609cea5f703e604254089dd772ac9fcb30d8aa867421ce"
@@ -19,24 +20,9 @@ class RpdsPy < Formula
   end
 
   depends_on "maturin" => :build
-  depends_on "python@3.12" => [:build, :test]
   depends_on "python@3.13" => [:build, :test]
+  depends_on "python@3.14" => [:build, :test]
   depends_on "rust" => :build
-
-  resource "semantic-version" do
-    url "https://files.pythonhosted.org/packages/7d/31/f2289ce78b9b473d582568c234e104d2a342fd658cc288a7553d83bb8595/semantic_version-2.10.0.tar.gz"
-    sha256 "bdabb6d336998cbb378d4b9db3a4b56a1e3235701dc05ea2690d9a997ed5041c"
-  end
-
-  resource "setuptools" do
-    url "https://files.pythonhosted.org/packages/18/5d/3bf57dcd21979b887f014ea83c24ae194cfcd12b9e0fda66b957c69d1fca/setuptools-80.9.0.tar.gz"
-    sha256 "f36b47402ecde768dbfafc46e8e4207b4360c654f1f3bb84475f0a28628fb19c"
-  end
-
-  resource "setuptools-rust" do
-    url "https://files.pythonhosted.org/packages/e0/92/bf8589b1a2b6107cf9ec8daa9954c0b7620643fe1f37d31d75e572d995f5/setuptools_rust-1.11.1.tar.gz"
-    sha256 "7dabc4392252ced314b8050d63276e05fdc5d32398fc7d3cce1f6a6ac35b76c0"
-  end
 
   def pythons
     deps.map(&:to_formula)
@@ -45,17 +31,7 @@ class RpdsPy < Formula
   end
 
   def install
-    ENV.append_path "PATH", buildpath/"bin"
     pythons.each do |python3|
-      ENV.append_path "PYTHONPATH", buildpath/Language::Python.site_packages(python3)
-
-      deps = %w[setuptools setuptools-rust semantic-version]
-      deps.each do |r|
-        resource(r).stage do
-          system python3, "-m", "pip", "install", *std_pip_args(prefix: buildpath), "."
-        end
-      end
-
       system python3, "-m", "pip", "install", *std_pip_args, "."
     end
   end

@@ -9,8 +9,8 @@ class ShallowBackup < Formula
   head "https://github.com/alichtman/shallow-backup.git", branch: "main"
 
   bottle do
-    rebuild 3
-    sha256 cellar: :any_skip_relocation, all: "2535687934a62fcb42d9fd9edd6ef479aa04d95056c555abf5f894c8062c80a2"
+    rebuild 4
+    sha256 cellar: :any_skip_relocation, all: "797ae0a4c0401a17cf0f0c11c4d709361fbe99b5c3c08fda31000fda397c9eed"
   end
 
   depends_on "python@3.14"

@@ -174,7 +174,9 @@ class Node < Formula
     ln_s libexec/"lib/node_modules/npm/bin/npm-cli.js", bin/"npm"
     ln_s libexec/"lib/node_modules/npm/bin/npx-cli.js", bin/"npx"
 
-    bash_completion.install bootstrap/"lib/utils/completion.sh" => "npm"
+    generate_completions_from_executable(bin/"npm", "completion",
+                                         shells:                 [:bash, :zsh],
+                                         shell_parameter_format: :none)
   end
 
   def post_install

@@ -2,7 +2,7 @@ class Stp < Formula
   desc "Simple Theorem Prover, an efficient SMT solver for bitvectors"
   homepage "https://stp.github.io/"
   license "MIT"
-  revision 5
+  revision 6
   head "https://github.com/stp/stp.git", branch: "master"
 
   stable do
@@ -40,7 +40,7 @@ class Stp < Formula
   depends_on "cryptominisat"
   depends_on "gmp"
   depends_on "minisat"
-  depends_on "python@3.13"
+  depends_on "python@3.14"
 
   uses_from_macos "perl"
 
@@ -51,7 +51,7 @@ class Stp < Formula
   end
 
   def install
-    python = "python3.13"
+    python = "python3.14"
     site_packages = prefix/Language::Python.site_packages(python)
     site_packages.mkpath
     inreplace "lib/Util/GitSHA1.cpp.in", "@CMAKE_CXX_COMPILER@", ENV.cxx
@@ -113,6 +113,6 @@ class Stp < Formula
       print(s.check())
     PYTHON
 
-    assert_equal "True\n", shell_output("python3.13 test.py")
+    assert_equal "True\n", shell_output("python3.14 test.py")
   end
 end

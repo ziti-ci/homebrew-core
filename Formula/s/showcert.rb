@@ -9,14 +9,13 @@ class Showcert < Formula
   head "https://github.com/yaroslaff/showcert.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "e7db65d5003888d91d5882209b1cd9b0bf6dee69b8e125454c56ffbfc766c2ee"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "e7db65d5003888d91d5882209b1cd9b0bf6dee69b8e125454c56ffbfc766c2ee"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "e7db65d5003888d91d5882209b1cd9b0bf6dee69b8e125454c56ffbfc766c2ee"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "e7db65d5003888d91d5882209b1cd9b0bf6dee69b8e125454c56ffbfc766c2ee"
-    sha256 cellar: :any_skip_relocation, sonoma:        "6aad6faee5150e4a343d9ca196f1b25970053c7938d80b897a86df9e23f206b9"
-    sha256 cellar: :any_skip_relocation, ventura:       "6aad6faee5150e4a343d9ca196f1b25970053c7938d80b897a86df9e23f206b9"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "2643a5f9d6dd150b412ac9f2135c12f04bb49013e5d03d0e7c4707db8cdcfa82"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "2643a5f9d6dd150b412ac9f2135c12f04bb49013e5d03d0e7c4707db8cdcfa82"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "2e24000cf619635b4af6d7d095368311ce2cbb2598e6a5550b8e657e10b50ff0"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "2e24000cf619635b4af6d7d095368311ce2cbb2598e6a5550b8e657e10b50ff0"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "2e24000cf619635b4af6d7d095368311ce2cbb2598e6a5550b8e657e10b50ff0"
+    sha256 cellar: :any_skip_relocation, sonoma:        "46634e159c5f912a853c9b687de60856fe0007904e0ec3fcc817ab0f3f46d2f1"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "c8324bf217fde187a53feceebec72fc573bd09d4a5b98b7cf9cc2a67b2719d22"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "c8324bf217fde187a53feceebec72fc573bd09d4a5b98b7cf9cc2a67b2719d22"
   end
 
   depends_on "certifi" => :no_linkage

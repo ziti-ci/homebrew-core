@@ -13,7 +13,7 @@ class Netaddr < Formula
     sha256 cellar: :any_skip_relocation, all: "956b7206ec84b8593a134a61a6239ebd708be777740155aee63d8f8d0731c2d9"
   end
 
-  depends_on "python@3.13"
+  depends_on "python@3.14"
 
   def install
     virtualenv_install_with_resources

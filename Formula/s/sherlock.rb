@@ -9,12 +9,13 @@ class Sherlock < Formula
   head "https://github.com/sherlock-project/sherlock.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "3b84e6a681ce5db486e84127f2c620b58b76bb01a9e053f6e74879cc0eefbb50"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "53c29c5a5a6b52b94b59b6b3660899b946d1d0c4c921f9b60049d9ededaeb2a4"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "c8e37d60cb36cb0df09455c2a18b9620fc34fb26596df02198d287689ea708da"
-    sha256 cellar: :any_skip_relocation, sonoma:        "8ada94c9bf439a4df419a62d1c7f614c93649029cb58162be2d7c58774528472"
-    sha256                               arm64_linux:   "84b9236277f2066cc45fe688c28270f4337061556e4f16396fd78bfbd313b75f"
-    sha256                               x86_64_linux:  "54244961ea304bfc767bf32529fa338b0951e03c2d8fc8ad70a2584379d1d71c"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "546ab96e57d0eef4dc2b99ec4a9126ba08b9faca69e55e015de53e14efc17337"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "46b8b01169dd4a487fb00b7ca808ff49ef819af7220f3e3893895c6c33c4e9fb"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "1fdae1e28ea3628384765aa80a1867d311042d0205d0bb8b1ba4720f4cb9cfad"
+    sha256 cellar: :any_skip_relocation, sonoma:        "b497b27e94d81c4bb959d3fa45dbf78626f97a59706f0e7929668262f2a2eaab"
+    sha256                               arm64_linux:   "f8f5d3eaed92e75faa70746e9331ed24d8c026f8969965be78e2447786b5dc1b"
+    sha256                               x86_64_linux:  "a8d16c92f125af39e85fed332bcc0749f144c8962be49e312b18939f081fd7f2"
   end
 
   depends_on "cmake" => :build

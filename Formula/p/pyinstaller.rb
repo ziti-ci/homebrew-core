@@ -17,7 +17,7 @@ class Pyinstaller < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "57aacbe48d2cc7d832eb552fa8cdecddc769affb4d50d126c80737c7cfa30a0f"
   end
 
-  depends_on "python@3.13"
+  depends_on "python@3.14"
 
   uses_from_macos "zlib"
 
@@ -37,8 +37,8 @@ class Pyinstaller < Formula
   end
 
   resource "pyinstaller-hooks-contrib" do
-    url "https://files.pythonhosted.org/packages/71/d6/e5b378b7d4add8c879295c531309b0320e9c07a70458665d091760ffdc87/pyinstaller_hooks_contrib-2025.8.tar.gz"
-    sha256 "3402ad41dfe9b5110af134422e37fc5d421ba342c6cb980bd67cb30b7415641c"
+    url "https://files.pythonhosted.org/packages/7d/83/be0f57c0b77b66c33c2283ebd4ea341022b5a743e97c5fb3bebab82b38b9/pyinstaller_hooks_contrib-2025.9.tar.gz"
+    sha256 "56e972bdaad4e9af767ed47d132362d162112260cbe488c9da7fee01f228a5a6"
   end
 
   resource "setuptools" do
@@ -48,7 +48,7 @@ class Pyinstaller < Formula
 
   def install
     cd "bootloader" do
-      system "python3.13", "./waf", "all", "--no-universal2", "STRIP=/usr/bin/strip"
+      system "python3.14", "./waf", "all", "--no-universal2", "STRIP=/usr/bin/strip"
     end
     virtualenv_install_with_resources
   end

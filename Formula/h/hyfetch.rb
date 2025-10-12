@@ -20,14 +20,14 @@ class Hyfetch < Formula
   end
 
   depends_on "rust" => :build
-  depends_on "python@3.13"
+  depends_on "python@3.14"
 
   def install
     # Install to `buildpath` first or else `virtualenv_install_with_resources` will overwrite it.
     system "cargo", "install", *std_cargo_args(path: "crates/hyfetch", root: buildpath)
-    virtualenv_install_with_resources
+    venv = virtualenv_install_with_resources
     # Install the rust executable where the Python package expects it.
-    (libexec/Language::Python.site_packages("python3")/"hyfetch/rust").install "bin/hyfetch"
+    (venv.site_packages/"hyfetch/rust").install "bin/hyfetch"
   end
 
   test do

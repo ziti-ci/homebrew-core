@@ -11,8 +11,6 @@ class Mono < Formula
     regex(/^mono[._-]v?(\d+(?:\.\d+)+)$/i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   bottle do
     sha256 arm64_tahoe:   "6c0de84fd9b870f03ad8a42adbecbc6857128d52b5235273e4fa8dd419fb42ae"
     sha256 arm64_sequoia: "41128a9161b2880c1ff0da606a970a610255f46426ea970ac505c7f7cc77c817"
@@ -30,7 +28,7 @@ class Mono < Formula
   depends_on "libtool" => :build
   depends_on "pkgconf" => :build
 
-  depends_on "python@3.13"
+  depends_on "python@3.14"
 
   uses_from_macos "unzip" => :build
   uses_from_macos "krb5"

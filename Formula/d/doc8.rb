@@ -13,7 +13,7 @@ class Doc8 < Formula
     sha256 cellar: :any_skip_relocation, all: "fc572afecb02dbdabef0f28dcdfee67d507561751e4e8a1f0bd5dac689e773d4"
   end
 
-  depends_on "python@3.13"
+  depends_on "python@3.14"
 
   resource "docutils" do
     url "https://files.pythonhosted.org/packages/ae/ed/aefcc8cd0ba62a0560c3c18c33925362d46c6075480bfa4df87b28e169a9/docutils-0.21.2.tar.gz"

@@ -8,7 +8,8 @@ class Darker < Formula
   license "BSD-3-Clause"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "32b956ff31dab57b624e2ead8863eabb56cc9447dee37707d523183167fa10f6"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, all: "2c171dadbb8488ede92f3763ecf9fd9e3a06e706363c1f4661d5394280035a4e"
   end
 
   depends_on "python@3.14"

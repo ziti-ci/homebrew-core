@@ -7,6 +7,7 @@ class VirtManager < Formula
   url "https://releases.pagure.org/virt-manager/virt-manager-5.1.0.tar.xz"
   sha256 "ccfc44b6c1c0be8398beb687c675d9ea4ca1c721dfb67bd639209a7b0dec11b1"
   license "GPL-2.0-or-later"
+  revision 1
   head "https://github.com/virt-manager/virt-manager.git", branch: "main"
 
   bottle do
@@ -19,19 +20,19 @@ class VirtManager < Formula
   depends_on "ninja" => :build
   depends_on "pkgconf" => :build
   depends_on "adwaita-icon-theme"
-  depends_on "certifi"
+  depends_on "certifi" => :no_linkage
   depends_on "cpio"
   depends_on "gtk-vnc"
   depends_on "gtksourceview4"
   depends_on "libosinfo"
   depends_on "libvirt-glib"
-  depends_on "libvirt-python"
+  depends_on "libvirt-python" => :no_linkage
   depends_on "libxml2" # can't use from macos, since we need python3 bindings
   depends_on :macos
   depends_on "osinfo-db"
-  depends_on "py3cairo"
-  depends_on "pygobject3"
-  depends_on "python@3.13"
+  depends_on "py3cairo" => :no_linkage
+  depends_on "pygobject3" => :no_linkage
+  depends_on "python@3.14"
   depends_on "spice-gtk"
   depends_on "vte3"
 
@@ -56,7 +57,7 @@ class VirtManager < Formula
   end
 
   def install
-    python3 = "python3.13"
+    python3 = "python3.14"
     venv = virtualenv_create(libexec, python3)
     venv.pip_install resources
     ENV.prepend_path "PATH", venv.root/"bin"

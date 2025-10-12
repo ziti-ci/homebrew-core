@@ -11,8 +11,6 @@ class Jailkit < Formula
     regex(/href=.*?jailkit[._-]v?(\d+(?:\.\d+)+)\.t/i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   bottle do
     rebuild 3
     sha256 arm64_tahoe:   "c3373e998c53469c64e3937a835f5b9540a594f2e8ed1d8f2260d255fd6f5def"
@@ -25,10 +23,10 @@ class Jailkit < Formula
     sha256 x86_64_linux:  "d8f26d192338a7f45ef9a376c983cc97d873249106c78807cacd7964c7007b8e"
   end
 
-  depends_on "python@3.13"
+  depends_on "python@3.14"
 
   def install
-    ENV["PYTHONINTERPRETER"] = which("python3.13")
+    ENV["PYTHONINTERPRETER"] = which("python3.14")
 
     system "./configure", *std_configure_args
     system "make", "install"

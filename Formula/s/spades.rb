@@ -26,7 +26,7 @@ class Spades < Formula
   end
 
   depends_on "cmake" => :build
-  depends_on "python@3.13"
+  depends_on "python@3.14"
 
   uses_from_macos "bzip2" => :build
 
@@ -35,7 +35,7 @@ class Spades < Formula
   end
 
   def install
-    system "cmake", "-S", "src", "-B", "build", "-DCMAKE_POLICY_VERSION_MINIMUM=3.5", *std_cmake_args
+    system "cmake", "-S", "src", "-B", "build", *std_cmake_args
     # Build bundled zlib-ng with runtime detection
     with_env(HOMEBREW_CCCFG: ENV["HOMEBREW_CCCFG"]) do
       ENV.runtime_cpu_detection

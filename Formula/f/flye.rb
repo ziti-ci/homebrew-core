@@ -19,7 +19,7 @@ class Flye < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "5455c6f8c306bc89512b1878b75b5140b98875e24a37f3154ad1a7ff66b49c0b"
   end
 
-  depends_on "python@3.13"
+  depends_on "python@3.14"
 
   uses_from_macos "zlib"
 

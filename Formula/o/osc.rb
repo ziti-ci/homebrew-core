@@ -17,25 +17,16 @@ class Osc < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "2339eda684ccde9a5a00bf8b9b30b1862fdcdc626485a9e64e86d02ff9d7d2cf"
   end
 
-  depends_on "cryptography"
-  depends_on "python@3.13"
+  depends_on "cryptography" => :no_linkage
+  depends_on "python@3.14"
+  depends_on "rpm"
 
   uses_from_macos "curl"
   uses_from_macos "libffi"
 
-  resource "rpm" do
-    url "https://files.pythonhosted.org/packages/bd/ce/8db44d2b8fd6713a59e391d12b6816854b7bee8121ae7370c2d565de4265/rpm-0.4.0.tar.gz"
-    sha256 "79adbefa82318e2625d6e4fa16666cf88543498a1f2c10dc3879165d1dc3ecee"
-  end
-
   resource "ruamel-yaml" do
     url "https://files.pythonhosted.org/packages/3e/db/f3950f5e5031b618aae9f423a39bf81a55c148aecd15a34527898e752cf4/ruamel.yaml-0.18.15.tar.gz"
     sha256 "dbfca74b018c4c3fba0b9cc9ee33e53c371194a9000e694995e620490fd40700"
-  end
-
-  resource "ruamel-yaml-clib" do
-    url "https://files.pythonhosted.org/packages/d8/e9/39ec4d4b3f91188fad1842748f67d4e749c77c37e353c4e545052ee8e893/ruamel.yaml.clib-0.2.14.tar.gz"
-    sha256 "803f5044b13602d58ea378576dd75aa759f52116a0232608e8fdada4da33752e"
   end
 
   resource "urllib3" do

@@ -10,8 +10,8 @@ class Shodan < Formula
   head "https://github.com/achillean/shodan-python.git", branch: "master"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, all: "ff244c9ab8a940086f91f9a2f08a8266d74053755103ce3dab77680ed7b2c2f4"
+    rebuild 2
+    sha256 cellar: :any_skip_relocation, all: "30b58fa71489ce93a8873b2b94871ddabc8017e1e3a940e93ef662108eaaa374"
   end
 
   depends_on "certifi" => :no_linkage

@@ -30,10 +30,10 @@ class Soapysdr < Formula
 
   depends_on "cmake" => :build
   depends_on "swig" => :build
-  depends_on "python@3.13"
+  depends_on "python@3.14"
 
   def python3
-    "python3.13"
+    "python3.14"
   end
 
   def install

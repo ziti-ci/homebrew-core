@@ -19,11 +19,11 @@ class Snakeviz < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "704638b72520fd6f9a35b271b1a428a0fe2afd82958e06297ccd7ed609af03ff"
   end
 
-  depends_on "python@3.13"
+  depends_on "python@3.14"
 
   resource "tornado" do
-    url "https://files.pythonhosted.org/packages/63/c4/bb3bd68b1b3cd30abc6411469875e6d32004397ccc4a3230479f86f86a73/tornado-6.5.tar.gz"
-    sha256 "c70c0a26d5b2d85440e4debd14a8d0b463a0cf35d92d3af05f5f1ffa8675c826"
+    url "https://files.pythonhosted.org/packages/09/ce/1eb500eae19f4648281bb2186927bb062d2438c2e5093d1360391afd2f90/tornado-6.5.2.tar.gz"
+    sha256 "ab53c8f9a0fa351e2c0741284e06c7a45da86afb544133201c5cc8578eb076a0"
   end
 
   def install
@@ -33,7 +33,7 @@ class Snakeviz < Formula
   test do
     require "cgi"
     system bin/"snakeviz", "--version"
-    system "python3.13", "-m", "cProfile", "-o", "output.prof", "-m", "cProfile"
+    system "python3.14", "-m", "cProfile", "-o", "output.prof", "-m", "cProfile"
 
     port = free_port
 

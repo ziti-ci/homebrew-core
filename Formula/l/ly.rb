@@ -9,10 +9,10 @@ class Ly < Formula
     sha256 cellar: :any_skip_relocation, all: "9a28dcdb3270423db13b9b8eb52ef1b65beffa23cd684672e6ebfa8b992cd413"
   end
 
-  depends_on "python@3.13"
+  depends_on "python@3.14"
 
   def python3
-    "python3.13"
+    "python3.14"
   end
 
   def install

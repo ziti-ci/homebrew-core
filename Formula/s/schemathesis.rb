@@ -3,8 +3,8 @@ class Schemathesis < Formula
 
   desc "Testing tool for web applications with specs"
   homepage "https://schemathesis.readthedocs.io/"
-  url "https://files.pythonhosted.org/packages/73/68/6e54cf0764896434e9dbba4898ce16829ea39b651ce8a1c48f247b174cd1/schemathesis-4.2.2.tar.gz"
-  sha256 "83e520258e9f34d3d085f688d0d9624ad7b21e8d916a14ddec7259d767da1c7e"
+  url "https://files.pythonhosted.org/packages/ab/77/c32c2e2f976516c4a3b2c4b48c59f98fa4699aa7208ae2ee1b981c02a935/schemathesis-4.3.0.tar.gz"
+  sha256 "5039be9ede185ce261f963d7c3e06f6089c6e3e0407437bceef701fa5b123f27"
   license "MIT"
 
   bottle do
@@ -17,7 +17,7 @@ class Schemathesis < Formula
   end
 
   depends_on "rust" => :build # for rpds-py
-  depends_on "certifi"
+  depends_on "certifi" => :no_linkage
   depends_on "libyaml"
   depends_on "python@3.14"
 
@@ -104,8 +104,8 @@ class Schemathesis < Formula
   end
 
   resource "idna" do
-    url "https://files.pythonhosted.org/packages/f1/70/7703c29685631f5a7590aa73f1f1d3fa9a380e654b86af429e0934a32f7d/idna-3.10.tar.gz"
-    sha256 "12f65c9b470abda6dc35cf8e63cc574b1c52b11df2c86030af0ac09b01b13ea9"
+    url "https://files.pythonhosted.org/packages/6f/6d/0703ccc57f3a7233505399edb88de3cbd678da106337b9fcde432b65ed60/idna-3.11.tar.gz"
+    sha256 "795dafcc9c04ed0c1fb032c2aa73654d8e8c5023a7df64a53f39190ada629902"
   end
 
   resource "iniconfig" do

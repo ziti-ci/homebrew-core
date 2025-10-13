@@ -1,9 +1,9 @@
 class GoAT124 < Formula
   desc "Open source programming language to build simple/reliable/efficient software"
   homepage "https://go.dev/"
-  url "https://go.dev/dl/go1.24.8.src.tar.gz"
-  mirror "https://fossies.org/linux/misc/go1.24.8.src.tar.gz"
-  sha256 "b1ff32c5c4a50ddfa1a1cb78b60dd5a362aeb2184bb78f008b425b62095755fb"
+  url "https://go.dev/dl/go1.24.9.src.tar.gz"
+  mirror "https://fossies.org/linux/misc/go1.24.9.src.tar.gz"
+  sha256 "c72f81ba54fe00efe7f3e7499d400979246881b13b775e9a9bb85541c11be695"
   license "BSD-3-Clause"
 
   livecheck do
@@ -88,7 +88,7 @@ class GoAT124 < Formula
 
     # Try running a sample using cgo without CC or CXX set to ensure that the
     # toolchain's default choice of compilers work
-    with_env(CC: nil, CXX: nil) do
+    with_env(CC: nil, CXX: nil, CGO_ENABLED: "1") do
       assert_equal "Hello from cgo!\n", shell_output("#{bin}/go run hello_cgo.go")
     end
   end

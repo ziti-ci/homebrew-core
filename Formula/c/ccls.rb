@@ -6,36 +6,10 @@ class Ccls < Formula
   #       https://github.com/Homebrew/homebrew-core/pull/106939
   #       https://github.com/MaskRay/ccls/issues/786
   #       https://github.com/MaskRay/ccls/issues/895
+  url "https://github.com/MaskRay/ccls/archive/refs/tags/0.20250815.tar.gz"
+  sha256 "179eff95569faca76a1cdbd0d8f773c2cbbafa90e0fcce3d67a8a680066dce7a"
   license "Apache-2.0"
-  revision 2
   head "https://github.com/MaskRay/ccls.git", branch: "master"
-
-  stable do
-    url "https://github.com/MaskRay/ccls/archive/refs/tags/0.20241108.tar.gz"
-    sha256 "76224663c3554eef9102dca66d804874d0252312d7c7d02941c615c87dcb68af"
-
-    # Backport support for LLVM 20
-    patch do
-      url "https://github.com/MaskRay/ccls/commit/4331c8958698d42933bf4e132f8a7d61f3cedb8c.patch?full_index=1"
-      sha256 "5420b53cf912268688953a2863e86f6b88334ed548852eaedb9f8ce4871ee034"
-    end
-
-    # Backport reformat commit to cleanly apply later patches
-    patch do
-      url "https://github.com/MaskRay/ccls/commit/48f1a006b78944a944cdc0c98fb4b447e19fce7d.patch?full_index=1"
-      sha256 "2fa14b78e00b455138324034f876979f40c34e253b5b254ea794e60a38ac657b"
-    end
-
-    # Backport support for LLVM 21
-    patch do
-      url "https://github.com/MaskRay/ccls/commit/44fb405d00dead04de43891c9818d798f10fc41e.patch?full_index=1"
-      sha256 "40229b6bc013a6daf510b980a7b032bad159f43e95796467705042beeb70fe49"
-    end
-    patch do
-      url "https://github.com/MaskRay/ccls/commit/4427527ed8107719457b5260443e8cad024e446f.patch?full_index=1"
-      sha256 "16ba1cd3c18441054fcc54716e44e013ee01c21b25b796adc480620df511abe0"
-    end
-  end
 
   bottle do
     sha256                               arm64_tahoe:   "bab741b9cdf3a65b32a9ded56977041854ea84233156e2a2cc6844d368c4fd46"

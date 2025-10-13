@@ -10,14 +10,13 @@ class PipAudit < Formula
   version_scheme 1
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "c5f7ca049cc47db003e05805a3f35e30b2c0d719073f704dbd663e0b8ca377f2"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "e34f921d9921943a4a123987c874df5c89d07ba0a5d4c60065251644a3fe9868"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "5981e7986ddafa011aece4428eb735d6d6ea162765fe6d3597a2d5a118c87e64"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "95ad2d03de26f4252cc219a6a351b7a31883bbed4c6d6a74ad770ca63de52852"
-    sha256 cellar: :any_skip_relocation, sonoma:        "bf496524833d2b510d3fdd320876a5766fdf20622b13a356b611db5b76271f86"
-    sha256 cellar: :any_skip_relocation, ventura:       "1f8639ea60cceb9dc3912f78abb26acdb9492825c33cba6044d078e52dfd0cb3"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "172c0c9419ac34fe517ddcdaa80802657345c3684707ac71ee8a8c742df62839"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "28269bf77c15509cc8863faf46258790bdda6cec4d0c7321137188773b0053d8"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "017e8e28f5b008268a3758cd3a4f298bd3ff6989d27cc8cf2bec06b6a6ab3b28"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "5da23007467c4c8c6b6f10e4caf0070e922a53f29065ac69b4bc64657796fef8"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "2be5f69a14ce581fe424f22df5940cc07c815a577a3e250e70c3c1b8712b93a7"
+    sha256 cellar: :any_skip_relocation, sonoma:        "b93880459ced676a57b313c60acbf6513cb2261d402c09d627c4f22ceafe8b48"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "8037699fecf2b10d29613b26915465e2612f6956019f78433be0e28cd8a36793"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "f5881e06137a7145b196061ba8cf62ef86c571d8f8a211b749815e1431049719"
   end
 
   depends_on "certifi" => :no_linkage

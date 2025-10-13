@@ -8,14 +8,13 @@ class Peru < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any,                 arm64_tahoe:   "b2b558447cc50f00af4576472d41b9e0943ca67009dda28c0c869f2bb60ceaaa"
-    sha256 cellar: :any,                 arm64_sequoia: "beeb4f77adc52280a01149f9cdfd3b4100d6c7dd92c51aa6fb59b4a4c1d50bd9"
-    sha256 cellar: :any,                 arm64_sonoma:  "6bcea08bb842546b71b214f6390e8cc31eff4b778000d178472526199a231b66"
-    sha256 cellar: :any,                 arm64_ventura: "b013421dad16894ef27b69c705cc52b729eaa7b404c70cd926b755c6ec11c461"
-    sha256 cellar: :any,                 sonoma:        "374514a3186c7992d46046a34c5293d75ca9681b767cd2a4a39d112a7e2ddc15"
-    sha256 cellar: :any,                 ventura:       "1ade107c73338fe0a62805099cc16d53e59ba95009055c01d6def097c4928dfc"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "7fe0da4736ccecc7dd1b2609e57f76e1eeeddbac408f7d3cd83bb204220173e9"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "55ed2401a2819caa9197b706d000b153c1893036ff291ca64e6b65bd949248ef"
+    rebuild 1
+    sha256 cellar: :any,                 arm64_tahoe:   "0e6db76fb7d9e625270f674647f7ffc117be781df15b587aa4eecfb7a23677ae"
+    sha256 cellar: :any,                 arm64_sequoia: "6c44172cb1bb4e9f68b248aeed7058107e48ec3b7b6920b1e4fdb8f98adbf822"
+    sha256 cellar: :any,                 arm64_sonoma:  "ae877adc898be55ea289ec5996aca6f9039ac44cc3a2c484b81f23f1be763816"
+    sha256 cellar: :any,                 sonoma:        "e063ed53447b77f612299323fda24cd5e34c8ff3713e3accd1e766e5d632e9ab"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "18f0fd3c6af85d2ade9e26a75f0d8b444d42a1f41952c1aac1864fa9b8dcb7c9"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "f6f2ea8109ac0a0061e8ecd68292e2d7858ce4e1c061a55bd8c4514e38cc39b6"
   end
 
   depends_on "libyaml"

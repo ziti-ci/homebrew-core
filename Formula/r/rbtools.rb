@@ -9,8 +9,8 @@ class Rbtools < Formula
   head "https://github.com/reviewboard/rbtools.git", branch: "master"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, all: "202baa3e362372f9c0fdf783ec395bd6ebe053db05ffbebe56b0ff98cdea59f4"
+    rebuild 2
+    sha256 cellar: :any_skip_relocation, all: "f6a0487b407bae3c316c0342ac52c6912e8dac8ec3c8ed37bd345fc3747dbdb6"
   end
 
   depends_on "certifi" => :no_linkage

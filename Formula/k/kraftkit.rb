@@ -1,10 +1,9 @@
 class Kraftkit < Formula
   desc "Build and use highly customized and ultra-lightweight unikernel VMs"
   homepage "https://unikraft.org/docs/cli"
-  url "https://github.com/unikraft/kraftkit/archive/refs/tags/v0.11.6.tar.gz"
-  sha256 "7a0cd9b656c34ec801c8bef6716787292f7ab8eada15f6919002e2db267b0801"
+  url "https://github.com/unikraft/kraftkit/archive/refs/tags/v0.12.2.tar.gz"
+  sha256 "b2efe5630f2baec5900d8a1926df650d056ed761f8e7ed9df3e76d5c33f735ba"
   license "BSD-3-Clause"
-  revision 1
   head "https://github.com/unikraft/kraftkit.git", branch: "staging"
 
   livecheck do
@@ -32,6 +31,8 @@ class Kraftkit < Formula
   end
 
   def install
+    ENV["CGO_ENABLED"] = "1"
+
     ldflags = %W[
       -s -w
       -X kraftkit.sh/internal/version.version=#{version}

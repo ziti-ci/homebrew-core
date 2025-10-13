@@ -20,7 +20,7 @@ class Pushpin < Formula
   depends_on "rust" => :build
 
   depends_on "openssl@3"
-  depends_on "python@3.13"
+  depends_on "python@3.14"
   depends_on "qtbase"
   depends_on "zeromq"
   depends_on "zurl"
@@ -110,7 +110,7 @@ class Pushpin < Formula
     sleep 5
 
     begin
-      system Formula["python@3.13"].opt_bin/"python3.13", runfile
+      system Formula["python@3.14"].opt_bin/"python3.14", runfile
     ensure
       Process.kill("TERM", pid)
       Process.wait(pid)

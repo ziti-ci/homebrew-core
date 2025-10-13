@@ -9,14 +9,13 @@ class Pferd < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "123ae2519e027b7895909e131a0e1eedbdd0c01c7c43e44e537028f564496eda"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "034191f1d548ab6cfacd6bfc7b8e2e23191402ceeb11c6cfb6acaf0a80b211ce"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "0b627dd3fcef6fa428fd23835a2c56b5c6106109cfd0903ddfb89867df40c60e"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "7e6e298ddb9aee9e8b21de2b1ba43b53303decdaa17ef72823dc6aa8b4fe21c7"
-    sha256 cellar: :any_skip_relocation, sonoma:        "2ebeb05cc7a5760cb38a5be0d8e6507bb2c3385bdc2f858111655901e600cd5a"
-    sha256 cellar: :any_skip_relocation, ventura:       "e68b702dd96107e597ecbecd7b9a46aa326edd9f01f131e2869c76fcdc136d74"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "b49556f0d550935c3188458ba715c6a4d8bcaca0f69dd5d8f351dd6d09646f92"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "fea4c17a5b28186e1ba98b339603c77c069d737981e273506e579c917a7e04b4"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "cccc4044b038218b198a7f0abdfef9ee253c1597cb69782959b12fe8be38c443"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "1be2005073b985441e6704395f62ecc83609e14dc90ec122ec9bd6421c3b7b94"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "ca4a33d7c2f29bb90b17da8986581fdd84ace4e94548f1bfb196741ea1e96e55"
+    sha256 cellar: :any_skip_relocation, sonoma:        "9d23db850c5d20373c34b81608c80c6790457d6fd88afb2621f89ff9c496b322"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "4f0ef070378339423e3145c1befd05283fa29ff1b8e9a4028132260706bdad33"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "d6b0f888cf46686fa95f6e0409f9fdf2a8ba2989685db1843d4c07fcc9d894b6"
   end
 
   depends_on "certifi" => :no_linkage

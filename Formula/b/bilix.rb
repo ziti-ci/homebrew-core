@@ -9,14 +9,13 @@ class Bilix < Formula
   revision 4
 
   bottle do
-    sha256 cellar: :any,                 arm64_tahoe:   "3e941eba47cfc0241016e4892d73af60f5def7d3fb29c468902dc609be91e0e4"
-    sha256 cellar: :any,                 arm64_sequoia: "27e0df695ef340bf8113aee57033083388dbf19a8d0666cfde1dcdf0db841e97"
-    sha256 cellar: :any,                 arm64_sonoma:  "03f0770dcc1002686aeecc199652235ef5f3d9f0f69de83d158b9d7aee90edc0"
-    sha256 cellar: :any,                 arm64_ventura: "63f3dcbec398232a56bf091ca76946c3a8fd874938372510070d5e6f81694ff9"
-    sha256 cellar: :any,                 sonoma:        "12db2172dd5c9c9ed5a1eb9e35701bf0d818403e01b6722519d3f07f5b36d370"
-    sha256 cellar: :any,                 ventura:       "5adc935ca8301ba890b69d5890ce237257220aaac3ef57d58bc1c13f18f38f1f"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "9304733a38ff7c7b5a15c8b1325bb87eacb79070022ff437381afb0082933403"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "4bd5637e2da7eb5189b56f8ff3cd9373d53b804f17f4cb094f244095614f0a4a"
+    rebuild 1
+    sha256 cellar: :any,                 arm64_tahoe:   "624837b801a1cdcbed29c504f639ee2629240413ac4577b0c5bd8db4d603a10e"
+    sha256 cellar: :any,                 arm64_sequoia: "c3c1120055f3ace0b3b1b7f3c76f4a1443c329c492de4af1ad6ff603d274f401"
+    sha256 cellar: :any,                 arm64_sonoma:  "4f71fc94cf1657e3b3e79b864dab1c09233dc746b73a87a1014e07ae95ce3fb9"
+    sha256 cellar: :any,                 sonoma:        "3cfcbeb42919a7d62216fb766ad0722eee856c318f244a46ba42cbd1d5487368"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "f5ca0d43eb4d3551827f472433497ad64783f744b4c507ea8525f9bf93984a16"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "d85159f999fdfe70eba160cc4010b44a246e0fd5eee4f05770af718044631f97"
   end
 
   depends_on "rust" => :build # for pydantic_core

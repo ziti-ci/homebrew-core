@@ -8,8 +8,8 @@ class Pyvim < Formula
   license "BSD-3-Clause"
 
   bottle do
-    rebuild 5
-    sha256 cellar: :any_skip_relocation, all: "6a7ce4395310057c95bf1d59ed1b7872109c49109ecd7b7156b974008a9b7826"
+    rebuild 6
+    sha256 cellar: :any_skip_relocation, all: "1d60636ec54fbcaad3250b79216de6541628e84b08c9bf60d4956ff2c1e0d768"
   end
 
   depends_on "python@3.14"

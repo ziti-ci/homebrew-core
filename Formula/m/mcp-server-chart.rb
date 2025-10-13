@@ -6,7 +6,7 @@ class McpServerChart < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "7e41e62bba63eca45a9be778f3dce98e8c9bb5d4a20f47b91b55d43f0ad23c1f"
+    sha256 cellar: :any_skip_relocation, all: "838b713d4f2b0df0f8d29bdd7b91e59a9feeeb9320d4859c4f5594e0576347d1"
   end
 
   depends_on "node"

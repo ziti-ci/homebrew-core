@@ -20,7 +20,7 @@ class Prestodb < Formula
   end
 
   depends_on "openjdk@17"
-  depends_on "python@3.13"
+  depends_on "python@3.14"
 
   resource "presto-cli" do
     url "https://github.com/prestodb/presto/releases/download/0.294/presto-cli-0.294-executable.jar"

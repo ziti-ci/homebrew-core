@@ -24,7 +24,7 @@ class Otf2 < Formula
   depends_on "python-setuptools" => :build
   depends_on "sphinx-doc" => :build
   depends_on "open-mpi"
-  depends_on "python@3.13"
+  depends_on "python@3.14"
 
   resource "six" do
     url "https://files.pythonhosted.org/packages/94/e7/b2c673351809dca68a0e064b6af791aa332cf192da575fd474ed7d6f16a2/six-1.17.0.tar.gz"
@@ -44,7 +44,7 @@ class Otf2 < Formula
   end
 
   def python3
-    "python3.13"
+    "python3.14"
   end
 
   def install

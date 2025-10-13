@@ -16,10 +16,10 @@ class Ramalama < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "b9b1510fbf63728768b3915d0c969834587a573f1bc873b57f4de770c306f2fd"
   end
 
-  depends_on "rust" => :build # for rpds-py
   depends_on "libyaml"
   depends_on "llama.cpp"
-  depends_on "python@3.13"
+  depends_on "python@3.14"
+  depends_on "rpds-py" => :no_linkage
 
   resource "argcomplete" do
     url "https://files.pythonhosted.org/packages/16/0f/861e168fc813c56a78b35f3c30d91c6757d1fd185af1110f1aec784b35d0/argcomplete-3.6.2.tar.gz"
@@ -59,11 +59,6 @@ class Ramalama < Formula
   resource "referencing" do
     url "https://files.pythonhosted.org/packages/2f/db/98b5c277be99dd18bfd91dd04e1b759cad18d1a338188c936e92f921c7e2/referencing-0.36.2.tar.gz"
     sha256 "df2e89862cd09deabbdba16944cc3f10feb6b3e6f18e902f7cc25609a34775aa"
-  end
-
-  resource "rpds-py" do
-    url "https://files.pythonhosted.org/packages/e9/dd/2c0cbe774744272b0ae725f44032c77bdcab6e8bcf544bffa3b6e70c8dba/rpds_py-0.27.1.tar.gz"
-    sha256 "26a1c73171d10b7acccbded82bf6a586ab8203601e565badc74bbbf8bc5a10f8"
   end
 
   def install

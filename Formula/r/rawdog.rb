@@ -10,13 +10,13 @@ class Rawdog < Formula
   head "https://github.com/AbanteAI/rawdog.git", branch: "main"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any,                 arm64_tahoe:   "c2b27e1b3c9d42bc7887ea8f75237e9c871adee8af354ca5e4be274ddc352d2d"
-    sha256 cellar: :any,                 arm64_sequoia: "81b58d31224d456a93fbca1f0ac958eb1f5d22a750f581b7d6921c8a2f934a20"
-    sha256 cellar: :any,                 arm64_sonoma:  "c42b9c796464b60c9dd3c09091e88782f638950a886613d4f6d754233eeb1fa5"
-    sha256 cellar: :any,                 sonoma:        "2e2abf2f8771d21c5a7a3f831dc02d926f53a10a25fc5ec1a5fa547f589ccf30"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "04d1f3daa8d4944a27ed553c68ff87152507d69b3b1ab802710be5a5b5c9037a"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "db65ffb24dab9edd6f45ea094b8de4c86967dc526b7ee64c7e50d5cca9c76538"
+    rebuild 2
+    sha256 cellar: :any,                 arm64_tahoe:   "9cbb7c73d516ad3a78db3f1f40798c9b7883ad225baac1216df2c870d112d783"
+    sha256 cellar: :any,                 arm64_sequoia: "c4ecee0d66a983345fb065a8051177fdbf59c7e0329f8f31e041acd60f7e8916"
+    sha256 cellar: :any,                 arm64_sonoma:  "46e643f7cbec4347a10ac94baf1824c95f51840b62afa90fa52b794ee1b42e19"
+    sha256 cellar: :any,                 sonoma:        "1835c27b0f277885ffe22b1659b23df12046e93f5ca4ec85367165b85419be20"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "703cba17c970e03198ecbe6539676c1eac336725919820c630d5f9201062f7c5"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "25f52160771ed0076464099a98538fbbbd4d23bbe1b1a561d1f022e4bd381ead"
   end
 
   depends_on "pkgconf" => :build

@@ -18,9 +18,9 @@ class PulpCli < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "c9a7383f097564bdaee324749555421b7240516dfef19c499f70fa10769d877c"
   end
 
-  depends_on "certifi"
+  depends_on "certifi" => :no_linkage
   depends_on "libyaml"
-  depends_on "python@3.13"
+  depends_on "python@3.14"
 
   resource "charset-normalizer" do
     url "https://files.pythonhosted.org/packages/83/2d/5fd176ceb9b2fc619e63405525573493ca23441330fcdaee6bef9460e924/charset_normalizer-3.4.3.tar.gz"
@@ -50,6 +50,8 @@ class PulpCli < Formula
   resource "pulp-glue" do
     url "https://files.pythonhosted.org/packages/b7/6d/d8bac57d69902a0836f1d5be9ebf14da4c401b638913a393725cadfe3fc0/pulp-glue-0.36.0.tar.gz"
     sha256 "627f6b42a612c4542850a9b5719255373c2399565c779a78d5468378ea584b7c"
+
+    patch :DATA
   end
 
   resource "pyyaml" do
@@ -78,6 +80,8 @@ class PulpCli < Formula
   end
 
   def install
+    # Unpin python for 3.14
+    inreplace "pyproject.toml", 'requires-python = ">=3.9,<3.14"', 'requires-python = ">=3.9"'
     virtualenv_install_with_resources
   end
 
@@ -95,3 +99,18 @@ class PulpCli < Formula
     assert_match "valid pulp-cli config", output
   end
 end
+
+__END__
+diff --git a/pyproject.toml b/pyproject.toml
+index 349a206..7db9eab 100644
+--- a/pyproject.toml
++++ b/pyproject.toml
+@@ -7,7 +7,7 @@ name = "pulp-glue"
+ version = "0.36.0"
+ description = "Version agnostic glue library to talk to pulpcore's REST API."
+ readme = "README.md"
+-requires-python = ">=3.9,<3.14"
++requires-python = ">=3.9,<3.15"
+ license = {text = "GPLv2+"}
+ authors = [
+   {name = "Pulp Team", email = "pulp-list@redhat.com"},

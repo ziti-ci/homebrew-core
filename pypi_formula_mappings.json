@@ -734,7 +734,7 @@
     "exclude_packages": ["certifi", "cryptography"]
   },
   "pieces-cli": {
-    "exclude_packages": ["certifi"]
+    "exclude_packages": ["certifi", "rpds-py"]
   },
   "pip-audit": {
     "exclude_packages": ["certifi"]

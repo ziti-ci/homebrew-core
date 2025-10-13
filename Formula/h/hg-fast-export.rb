@@ -10,7 +10,7 @@ class HgFastExport < Formula
   head "https://github.com/frej/fast-export.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "b1030f2a360f970ad4d58c661adb4793be8e4abcf4f602e0d0e217a601542e0b"
+    sha256 cellar: :any_skip_relocation, all: "a5bb15dd75663590054cdcdd88d472155e5cea8f520ddd1ecd234b957bb733d5"
   end
 
   depends_on "mercurial"

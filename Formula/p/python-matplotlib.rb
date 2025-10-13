@@ -16,13 +16,14 @@ class PythonMatplotlib < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "b534740911e2d14a73ec80079ae5cbabe7410589873a0b4780576b0f20b3898f"
   end
 
+  depends_on "cmake" => :build # for contourpy
   depends_on "meson" => :build
   depends_on "ninja" => :build
   depends_on "pkgconf" => :build
   depends_on "freetype"
   depends_on "numpy"
-  depends_on "pillow"
-  depends_on "python@3.13"
+  depends_on "pillow" => :no_linkage
+  depends_on "python@3.14"
   depends_on "qhull"
 
   on_linux do
@@ -70,7 +71,7 @@ class PythonMatplotlib < Formula
   end
 
   def python3
-    which("python3.13")
+    which("python3.14")
   end
 
   def install

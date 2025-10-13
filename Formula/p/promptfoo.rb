@@ -1,8 +1,8 @@
 class Promptfoo < Formula
   desc "Test your LLM app locally"
   homepage "https://promptfoo.dev/"
-  url "https://registry.npmjs.org/promptfoo/-/promptfoo-0.118.14.tgz"
-  sha256 "296edab7fddacc7bdf021641e36617b4de544397695e3c3af8ca6a4fcbd3be4d"
+  url "https://registry.npmjs.org/promptfoo/-/promptfoo-0.118.15.tgz"
+  sha256 "719646d44c2b16b82a061eb9c1933458dade4558a1e163ef56aadde4d3b747ff"
   license "MIT"
 
   bottle do
@@ -19,6 +19,11 @@ class Promptfoo < Formula
   def install
     system "npm", "install", *std_npm_args
     bin.install_symlink Dir["#{libexec}/bin/*"]
+
+    # Remove incompatible pre-built binaries
+    node_modules = libexec/"lib/node_modules/promptfoo/node_modules"
+    ripgrep_vendor_dir = node_modules/"@anthropic-ai/claude-agent-sdk/vendor/ripgrep"
+    rm_r(ripgrep_vendor_dir)
   end
 
   test do

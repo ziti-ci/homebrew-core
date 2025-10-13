@@ -12,8 +12,8 @@ class Grc < Formula
   no_autobump! because: :requires_manual_review
 
   bottle do
-    rebuild 4
-    sha256 cellar: :any_skip_relocation, all: "c53a320fd40831dbfd74a3add881c94b5d8bca074b6826c190f35c1a3316d96d"
+    rebuild 5
+    sha256 cellar: :any_skip_relocation, all: "7a9655993b72c5fa50ecd3e530cdb69ab9da8c0fc4f9352786b10c9529d26cc8"
   end
 
   depends_on "python@3.14"

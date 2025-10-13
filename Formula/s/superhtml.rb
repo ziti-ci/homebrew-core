@@ -1,8 +1,8 @@
 class Superhtml < Formula
   desc "HTML Language Server & Templating Language Library"
   homepage "https://github.com/kristoff-it/superhtml"
-  url "https://github.com/kristoff-it/superhtml/archive/refs/tags/v0.6.1.tar.gz"
-  sha256 "e84b0f4c95187561c16d216fb520c1fb7362b4d8f0ff1cec8d4a3694fbd379b2"
+  url "https://github.com/kristoff-it/superhtml/archive/refs/tags/v0.6.2.tar.gz"
+  sha256 "431d7189501e1b2e8da53c3ca8d6e7f1c642b523f3715c21cb8bfd2f8eef3971"
   license "MIT"
 
   bottle do

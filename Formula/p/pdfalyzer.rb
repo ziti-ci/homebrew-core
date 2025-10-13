@@ -19,7 +19,7 @@ class Pdfalyzer < Formula
 
   depends_on "openssl@3"
   depends_on "pillow"
-  depends_on "python@3.13"
+  depends_on "python@3.14"
 
   resource "anytree" do
     url "https://files.pythonhosted.org/packages/bc/a8/eb55fab589c56f9b6be2b3fd6997aa04bb6f3da93b01154ce6fc8e799db2/anytree-2.13.0.tar.gz"
@@ -47,8 +47,8 @@ class Pdfalyzer < Formula
   end
 
   resource "pypdf" do
-    url "https://files.pythonhosted.org/packages/0b/ac/44d86f16b8ad9b42ea1da4b9aa145be71c89927566d9be87fe74bda1dfef/pypdf-6.1.0.tar.gz"
-    sha256 "0cba440d024da5a2a9304f03cd645346052827b84c5a461c6123e24ed5a3b0b9"
+    url "https://files.pythonhosted.org/packages/a6/85/4c0f12616db83c2e3ef580c3cfa98bd082e88fc8d02e136bad3bede1e3fa/pypdf-6.1.1.tar.gz"
+    sha256 "10f44d49bf2a82e54c3c5ba3cdcbb118f2a44fc57df8ce51d6fb9b1ed9bfbe8b"
   end
 
   resource "python-dotenv" do
@@ -57,8 +57,8 @@ class Pdfalyzer < Formula
   end
 
   resource "rich" do
-    url "https://files.pythonhosted.org/packages/fe/75/af448d8e52bf1d8fa6a9d089ca6c07ff4453d86c65c145d0a300bb073b9b/rich-14.1.0.tar.gz"
-    sha256 "e497a48b844b0320d45007cdebfeaeed8db2a4f4bcf49f15e455cfc4af11eaa8"
+    url "https://files.pythonhosted.org/packages/fb/d2/8920e102050a0de7bfabeb4c4614a49248cf8d5d7a8d01885fbb24dc767a/rich-14.2.0.tar.gz"
+    sha256 "73ff50c7c0c1c77c8243079283f4edb376f0f6442433aecb8ce7e6d0b92d1fe4"
   end
 
   resource "rich-argparse-plus" do

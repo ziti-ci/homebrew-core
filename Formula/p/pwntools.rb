@@ -19,11 +19,11 @@ class Pwntools < Formula
 
   depends_on "rust" => :build # for bcrypt
   depends_on "capstone"
-  depends_on "certifi"
-  depends_on "cryptography"
+  depends_on "certifi" => :no_linkage
+  depends_on "cryptography" => :no_linkage
   depends_on "libsodium" # for pynacl
-  depends_on "python@3.13"
-  depends_on "unicorn" # for unicorn resource
+  depends_on "python@3.14"
+  depends_on "unicorn" => :no_linkage # for unicorn resource
 
   uses_from_macos "libffi"
 

@@ -691,7 +691,7 @@
       "python-magnumclient", "python-manilaclient", "python-mistralclient",
       "python-octaviaclient"
     ],
-    "exclude_packages": ["certifi", "cryptography"]
+    "exclude_packages": ["certifi", "cryptography", "gnureadline", "rpds-py"]
   },
   "organize-tool": {
     "exclude_packages": ["cryptography"],

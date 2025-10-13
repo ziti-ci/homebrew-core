@@ -849,6 +849,9 @@
     "package_name": "",
     "extra_packages": ["html5lib"]
   },
+  "ramalama": {
+    "exclude_packages": ["rpds-py"]
+  },
   "rasterio": {
     "exclude_packages": ["certifi", "numpy"]
   },

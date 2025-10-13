@@ -9,8 +9,8 @@ class Censys < Formula
   head "https://github.com/censys/censys-python.git", branch: "main"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, all: "bfa1a843b0537c428be308252a702ff639e44b469924ce91855a53f6847b52b8"
+    rebuild 2
+    sha256 cellar: :any_skip_relocation, all: "8b16246c6a82f70061e1f50c491d96780a2e0cca4935d533719e9106453a4263"
   end
 
   depends_on "certifi"

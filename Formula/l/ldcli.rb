@@ -1,8 +1,8 @@
 class Ldcli < Formula
   desc "CLI for managing LaunchDarkly feature flags"
   homepage "https://launchdarkly.com/docs/home/getting-started/ldcli"
-  url "https://github.com/launchdarkly/ldcli/archive/refs/tags/v1.18.0.tar.gz"
-  sha256 "aa7fbdc5c952abfa49c6391f1f4f8307da598cef9305178b0785cc4d50ec597c"
+  url "https://github.com/launchdarkly/ldcli/archive/refs/tags/v2.0.1.tar.gz"
+  sha256 "63fb0ffef7947dc8602cb362887e2b0b880f10033f66b75f027329c01a3ad876"
   license "Apache-2.0"
   head "https://github.com/launchdarkly/ldcli.git", branch: "main"
 
@@ -18,6 +18,8 @@ class Ldcli < Formula
   depends_on "go" => :build
 
   def install
+    ENV["CGO_ENABLED"] = "1"
+
     ldflags = %W[
       -s -w
       -X main.version=#{version}

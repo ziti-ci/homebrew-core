@@ -12,14 +12,12 @@ class Ccls < Formula
   head "https://github.com/MaskRay/ccls.git", branch: "master"
 
   bottle do
-    sha256                               arm64_tahoe:   "bab741b9cdf3a65b32a9ded56977041854ea84233156e2a2cc6844d368c4fd46"
-    sha256                               arm64_sequoia: "e9e2dfa3d50fed8794c77ca54c01ab922d40fed4d9e43b7374c1b9982fb1265f"
-    sha256                               arm64_sonoma:  "9a6fb61ff9eee5a3122dfcccdc7d64b0fc63d720e79a4a7c5d60824c0acf7459"
-    sha256                               arm64_ventura: "b12c07bff01f2db44152df2553711dd86848351f0f0d16b372289c90908cc592"
-    sha256                               sonoma:        "b6d124927fb776640e9528947b6e52ec816e1f3ec7229dd2cbb647e274c32ab2"
-    sha256                               ventura:       "20517554c04b283944ae28892e0b88139029873a45c45b19895bf4488d4878b0"
-    sha256                               arm64_linux:   "773f2ac0a01f92f7473ddf0fd932d3b8be93efa1c39f261bb51a9cce64eccd40"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "f81e657e1923108992eb11bfe532fbc0e6753066924fd7906cc6b713b930e3a3"
+    sha256                               arm64_tahoe:   "cedfe8609cd57d53caafa870ced7749a053d17120f8217c674a348024584afa9"
+    sha256                               arm64_sequoia: "74dbcee249ebd76e4622ebb433e037d3cadb84c441ca1f4c8933de00faa43051"
+    sha256                               arm64_sonoma:  "b498e68e4856fd358cf8c9d3dffcb31f2ff419912e078c39924f284c4e951690"
+    sha256                               sonoma:        "85fc2afb1dc84dcffda8178a99831864564dd839cd03874d5d1613c84ff72634"
+    sha256                               arm64_linux:   "66532e0dd148b2300b52e6999b7907f59931938b8422703dbef2c52fcc86724f"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "001beaf77e3e2f2b127a5755ec07f3076fc7cf89ab8d3f78cd689a2f05fef240"
   end
 
   depends_on "cmake" => :build

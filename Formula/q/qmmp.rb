@@ -11,12 +11,11 @@ class Qmmp < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any,                 arm64_tahoe:   "c604a65283991e1125a2dc60a7551b16436aa5697dec016a505f1b0758d41468"
-    sha256 cellar: :any,                 arm64_sequoia: "7719e3c694b28f9d492a7526b010fbc73e59a7a479269bc4a3417f48c6e47d78"
-    sha256 cellar: :any,                 arm64_sonoma:  "7e77fc19feca00f30339cf58f7224fb79c96b8d64ad65dcc264c1acf420084f7"
-    sha256 cellar: :any,                 sonoma:        "8b7f19774a1354a3cfdcb20d017a91b0075c0d106ab42dfc80a6d5e4f275f0f2"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "f2a46156648497b211069783e0cd1d0e393c9bfc8b65dc50d52d34496c113da4"
+    sha256 cellar: :any,                 arm64_tahoe:   "e6da5eb38b48ffe1d8f40676be1444e840c833c3311f7a631ca9762694e81aad"
+    sha256 cellar: :any,                 arm64_sequoia: "7fa781c7162c07690e998ab6c9d598f24115ceedca718bd12528c15b96d243ed"
+    sha256 cellar: :any,                 arm64_sonoma:  "3fc459eb502ada770aa7fbfcc3e0e311bdea4f39d6ff4d4b341453b01ba4a948"
+    sha256 cellar: :any,                 sonoma:        "0a74c8a1511f9c9347723a0d6a478fb0d9a93604649804f5011310ea4a5b4a2b"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "a643156b0ee13bbeb993e38550a14fe2c367de12828fa8a18cf7db7e5e083531"
   end
 
   depends_on "cmake" => :build

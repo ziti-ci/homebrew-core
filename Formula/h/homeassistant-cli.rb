@@ -10,16 +10,15 @@ class HomeassistantCli < Formula
   head "https://github.com/home-assistant-ecosystem/home-assistant-cli.git", branch: "dev"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "411a5a679ecc1988d9a92d5dce3d9fa66afb1c52e73f81f18c31f25148674758"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "c70c109dbe8a719046abfe9dd8701ec19acb5785b75b8cbda6543c44489203eb"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "a9afe1a08a27165e7cd251f1e6d6f5ccc5ae840bdee7196c1561c70c1b80c64a"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "a1016fedb7ae69aa83a9b1db34d0a835d7a9eb3c4039f78710eff145e9da44b1"
-    sha256 cellar: :any_skip_relocation, tahoe:         "4b1c7d98c874103f20827b9db99ffd87edb88590939cffe7e103715aa1558eb9"
-    sha256 cellar: :any_skip_relocation, sequoia:       "4a76332c9f46fb87efd6241e487f60a44ab9c17eb0f503cf2ce4825564a895d7"
-    sha256 cellar: :any_skip_relocation, sonoma:        "f9ec858a192f9721dbf242878a439c036927ad5d5ce2609b28d1b8e5b3400045"
-    sha256 cellar: :any_skip_relocation, ventura:       "5c89229366ba414f829f9a3373aba7679b923eed5850ee64345efb0ae7be2385"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "39a41ee6be09f00c5ccb241090c1a1ac28dd174df7b6e85b3e181a3349de8fbf"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "a2efcba7e61fa4b380937d4e09aaa834925847db7248d36cf2c66973175054c0"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "8d31960fac41375bb51717af837c5f2d5d8cabb70f9b7f5341e9cf8385e7c0e0"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "532668aea10eef3d09c6ec94cb358aebc607a1c8d102e8228d887b99ca49469d"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "3fcec8cca999e3f2436ceff07889cea777ece6a10f49ce71388027d16319404d"
+    sha256 cellar: :any_skip_relocation, tahoe:         "6b0f1a08ba19f1b769c3ff11c18bbfabe7d30c2365e9628c362ac12e8ae026e6"
+    sha256 cellar: :any_skip_relocation, sequoia:       "595fb2bd4cc4b605b9ce4972a8558cdda21e76fc9c4914734801af246984b2fe"
+    sha256 cellar: :any_skip_relocation, sonoma:        "657400743c908f10e2304ccf83704ee1add3d599406e8d2edbcad40ebbb5dc94"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "f5b769a6303521232f61a796f30c07ec0729aaa3c906f60b5182ef6e4684aaee"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "b41fe4881c196d2a659d1eebfb0e260e700336b1ea5dd5050fa196b39332adaf"
   end
 
   depends_on "python@3.14"

@@ -3,13 +3,13 @@ class Checkdmarc < Formula
 
   desc "Command-line parser for SPF and DMARC DNS records"
   homepage "https://domainaware.github.io/checkdmarc/"
-  url "https://files.pythonhosted.org/packages/c3/69/fc37199a1636ac972e8a4d15fc7139941fdd6d6cc4b774463c29ee95fbb8/checkdmarc-5.11.6.tar.gz"
-  sha256 "d7ef34efdee782e800e8df6d59397d6ab6bd2ac76eb82a3bfc7d1014644265ba"
+  url "https://files.pythonhosted.org/packages/46/d4/ab9fc36d050bb0b59853270fa265653f97d989945f71cb2aa38103b624e2/checkdmarc-5.12.2.tar.gz"
+  sha256 "eab2adc4c1fb0280351cb39745215329ddcbc8210a23adb1aeb787f39076e358"
   license "Apache-2.0"
   head "https://github.com/domainaware/checkdmarc.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "57b843b1e0c41da6832e39cd7240107f0780c7153a0b7dea8d5f152c6eeefbae"
+    sha256 cellar: :any_skip_relocation, all: "ea5565ae7d594e9bb4a8c03a2c7871e5e58dcb176ae44fa9e51328eb9864ffba"
   end
 
   depends_on "certifi"
@@ -32,8 +32,8 @@ class Checkdmarc < Formula
   end
 
   resource "idna" do
-    url "https://files.pythonhosted.org/packages/f1/70/7703c29685631f5a7590aa73f1f1d3fa9a380e654b86af429e0934a32f7d/idna-3.10.tar.gz"
-    sha256 "12f65c9b470abda6dc35cf8e63cc574b1c52b11df2c86030af0ac09b01b13ea9"
+    url "https://files.pythonhosted.org/packages/6f/6d/0703ccc57f3a7233505399edb88de3cbd678da106337b9fcde432b65ed60/idna-3.11.tar.gz"
+    sha256 "795dafcc9c04ed0c1fb032c2aa73654d8e8c5023a7df64a53f39190ada629902"
   end
 
   resource "importlib-resources" do

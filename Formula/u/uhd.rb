@@ -3,8 +3,8 @@ class Uhd < Formula
 
   desc "Hardware driver for all USRP devices"
   homepage "https://files.ettus.com/manual/"
-  url "https://github.com/EttusResearch/uhd/archive/refs/tags/v4.9.0.0.tar.gz"
-  sha256 "c2288998dc0eeece287934e016d1501d5c200aa8047553d7405f3c3e0e5edac8"
+  url "https://github.com/EttusResearch/uhd/archive/refs/tags/v4.9.0.1.tar.gz"
+  sha256 "0be26a139f23041c1fb6e9666d84cba839460e3c756057dc48dc067cc356a7bc"
   license all_of: ["GPL-3.0-or-later", "LGPL-3.0-or-later", "MIT", "BSD-3-Clause", "Apache-2.0"]
   head "https://github.com/EttusResearch/uhd.git", branch: "master"
 
@@ -44,10 +44,6 @@ class Uhd < Formula
     sha256 "ee55d3edf80167e48ea11a923c7386f4669df67d7994554387f84e7d8b0a2bf0"
   end
 
-  # Workaround for Boost 1.89.0 until fixed upstream.
-  # Issue ref: https://github.com/EttusResearch/uhd/issues/869
-  patch :DATA
-
   def python3
     "python3.14"
   end
@@ -70,28 +66,3 @@ class Uhd < Formula
     assert_match version.to_s, shell_output("#{bin}/uhd_config_info --version")
   end
 end
-
-__END__
-diff --git a/host/CMakeLists.txt b/host/CMakeLists.txt
-index 746a977bd..815c2a2c8 100644
---- a/host/CMakeLists.txt
-+++ b/host/CMakeLists.txt
-@@ -306,7 +306,6 @@ set(UHD_BOOST_REQUIRED_COMPONENTS
-     date_time
-     filesystem
-     program_options
--    system
-     serialization
-     thread
-     unit_test_framework
-diff --git a/host/uhd.pc.in b/host/uhd.pc.in
-index 4a5f67c96..e1a8115a9 100644
---- a/host/uhd.pc.in
-+++ b/host/uhd.pc.in
-@@ -11,5 +11,5 @@ Requires:
- Requires.private: @UHD_PC_REQUIRES@
- Conflicts:
- Cflags: -I${includedir} @UHD_PC_CFLAGS@
--Libs: -L${libdir} -luhd -lboost_system
-+Libs: -L${libdir} -luhd
- Libs.private: @UHD_PC_LIBS@

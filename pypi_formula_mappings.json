@@ -672,7 +672,7 @@
     "exclude_packages": ["certifi"]
   },
   "omnara": {
-    "exclude_packages": ["certifi", "cryptography"]
+    "exclude_packages": ["certifi", "cryptography", "rpds-py"]
   },
   "onionprobe": {
     "exclude_packages": ["certifi", "cryptography"]

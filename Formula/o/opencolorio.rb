@@ -4,6 +4,7 @@ class Opencolorio < Formula
   url "https://github.com/AcademySoftwareFoundation/OpenColorIO/archive/refs/tags/v2.5.0.tar.gz"
   sha256 "124e2bfa8a9071959d6ddbb64ffbf78d3f6fe3c923ae23e96a6bbadde1af55b6"
   license "BSD-3-Clause"
+  revision 1
   head "https://github.com/AcademySoftwareFoundation/OpenColorIO.git", branch: "main"
 
   bottle do
@@ -17,7 +18,7 @@ class Opencolorio < Formula
 
   depends_on "cmake" => :build
   depends_on "pybind11" => :build
-  depends_on "python@3.13" => [:build, :test] # for bindings, avoid runtime dependency due to `expat`
+  depends_on "python@3.14" => [:build, :test] # for bindings, avoid runtime dependency due to `expat`
   depends_on "expat"
   depends_on "imath"
   depends_on "little-cms2"
@@ -32,7 +33,7 @@ class Opencolorio < Formula
   end
 
   def python3
-    "python3.13"
+    "python3.14"
   end
 
   def install

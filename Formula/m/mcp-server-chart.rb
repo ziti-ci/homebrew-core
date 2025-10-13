@@ -1,8 +1,8 @@
 class McpServerChart < Formula
   desc "MCP with 25+ @antvis charts for visualization, generation, and analysis"
   homepage "https://github.com/antvis/mcp-server-chart"
-  url "https://registry.npmjs.org/@antv/mcp-server-chart/-/mcp-server-chart-0.9.0.tgz"
-  sha256 "fce8f5edc722e7e78da36237fddd0226c37ff4a8a778a84d26d9b0a51a47943d"
+  url "https://registry.npmjs.org/@antv/mcp-server-chart/-/mcp-server-chart-0.9.1.tgz"
+  sha256 "3c0411a18b61ba14a9f9686913520b3c0746be048eeb123390eaee51db422949"
   license "MIT"
 
   bottle do

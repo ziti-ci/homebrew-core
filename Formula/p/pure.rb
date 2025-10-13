@@ -1,8 +1,8 @@
 class Pure < Formula
   desc "Pretty, minimal and fast ZSH prompt"
   homepage "https://github.com/sindresorhus/pure"
-  url "https://github.com/sindresorhus/pure/archive/refs/tags/v1.23.0.tar.gz"
-  sha256 "b316fe5aa25be2c2ef895dcad150248a43e12c4ac1476500e1539e2d67877921"
+  url "https://github.com/sindresorhus/pure/archive/refs/tags/v1.24.0.tar.gz"
+  sha256 "9f6822357e21567eb946ad4de867bc7aea32db3fd58d1d14076604daae305608"
   license "MIT"
 
   bottle do

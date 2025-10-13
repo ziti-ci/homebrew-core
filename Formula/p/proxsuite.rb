@@ -22,12 +22,12 @@ class Proxsuite < Formula
   depends_on "pkgconf" => :build
   depends_on "eigen"
   depends_on "numpy"
-  depends_on "python@3.13"
-  depends_on "scipy"
+  depends_on "python@3.14"
+  depends_on "scipy" => :no_linkage
   depends_on "simde"
 
   def python3
-    "python3.13"
+    "python3.14"
   end
 
   def install

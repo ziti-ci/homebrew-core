@@ -17,9 +17,9 @@ class NicotinePlus < Formula
   depends_on "adwaita-icon-theme"
   depends_on "gtk4"
   depends_on "libadwaita"
-  depends_on "py3cairo"
-  depends_on "pygobject3"
-  depends_on "python@3.13"
+  depends_on "py3cairo" => :no_linkage
+  depends_on "pygobject3" => :no_linkage
+  depends_on "python@3.14"
 
   on_linux do
     depends_on "gettext" => :build # for `msgfmt`

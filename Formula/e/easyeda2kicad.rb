@@ -10,14 +10,13 @@ class Easyeda2kicad < Formula
   head "https://github.com/uPesy/easyeda2kicad.py.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_tahoe:   "0b99e1fab064fc0d855bfc64c8bc84473f5807a0a8b616f14e0a3c71bba875e1"
-    sha256 cellar: :any,                 arm64_sequoia: "ca4a1da140fed0775fce219fdc949815dbc2f40caeb84265e2a68b630ad79a9c"
-    sha256 cellar: :any,                 arm64_sonoma:  "0e4978fcf4183050761e4b428e20c5458aaa9f1985a75fa8705b30691e62c18f"
-    sha256 cellar: :any,                 arm64_ventura: "77002318fed574154a9d70f276b74ed051c394b6f10b534ec7229ebec4136a40"
-    sha256 cellar: :any,                 sonoma:        "eba8a9cac3e6abf87eca3821848aebff82f63f189689fdc4f38c5a167b241fc8"
-    sha256 cellar: :any,                 ventura:       "097bbdd985c8b6c1a6f6f40b060b45edf4d92b2551b7acb4dd815559d2e15e02"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "b0c1e471d05a94eb20b07b1ed2c49689f07c48fd48642652f7c2a8b78d96724a"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "a821a9287213946bbe364302f95659ab250a1aea2a69a1a661d9398d0efd9e40"
+    rebuild 1
+    sha256 cellar: :any,                 arm64_tahoe:   "9b83dbf5701b8228675a060d8b9a870b1b8cc5e83fdc653d8a350f3af37c7cdd"
+    sha256 cellar: :any,                 arm64_sequoia: "8ebff805bcc3f7615345f1207e3360de164b0eec09dbd2ca44dcda299c24a591"
+    sha256 cellar: :any,                 arm64_sonoma:  "c586cc40d90ad06e69ddf46bb5f5da80115c78846126c67c39bc94e5f435707a"
+    sha256 cellar: :any,                 sonoma:        "7052b9941fe5f08a0f5632e863c31ed46283958911e9aa275b48a0a521b11ecb"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "6dff931eda2b6d312200c66e2669b30fbff313e73b0cde9e26e70370ea0b0054"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "8b20fe03657abc811d960b9a6c961d24e8ae0f778a4434e96e1071f42e19d836"
   end
 
   depends_on "rust" => :build

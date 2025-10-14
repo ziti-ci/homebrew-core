@@ -4,6 +4,7 @@ class Vapoursynth < Formula
   url "https://github.com/vapoursynth/vapoursynth/archive/refs/tags/R72.tar.gz"
   sha256 "650f77feebfd08842b521273f59e0c88f7ba9d7cb5f151d89b79b8dfdd4ce633"
   license "LGPL-2.1-or-later"
+  revision 1
   head "https://github.com/vapoursynth/vapoursynth.git", branch: "master"
 
   livecheck do
@@ -28,7 +29,7 @@ class Vapoursynth < Formula
   depends_on "libtool" => :build
   depends_on "nasm" => :build
   depends_on "pkgconf" => :build
-  depends_on "python@3.13"
+  depends_on "python@3.14"
   depends_on "zimg"
 
   # std::to_chars requires at least MACOSX_DEPLOYMENT_TARGET=13.3
@@ -74,7 +75,7 @@ class Vapoursynth < Formula
   end
 
   test do
-    system Formula["python@3.13"].opt_bin/"python3.13", "-c", "import vapoursynth"
+    system Formula["python@3.14"].opt_bin/"python3.14", "-c", "import vapoursynth"
     system bin/"vspipe", "--version"
   end
 end

@@ -30,7 +30,7 @@ class Nmap < Formula
   depends_on "lua"
   depends_on "openssl@3"
   depends_on "pcre2"
-  depends_on "python@3.13" # for ndiff
+  depends_on "python@3.14" # for ndiff
 
   uses_from_macos "bison" => :build
   uses_from_macos "flex" => :build

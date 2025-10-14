@@ -10,7 +10,8 @@ class Credstash < Formula
   head "https://github.com/fugue/credstash.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "4e56325504c62536d06570183ad8d7251a003c40685ad6196ffed97f02276958"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, all: "2c0a44cd0e973c1d8e9d7d0dd2f07a4f952d6cb57a323adb598e603d5fa45567"
   end
 
   depends_on "cryptography" => :no_linkage

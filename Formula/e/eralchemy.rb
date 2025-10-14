@@ -9,12 +9,13 @@ class Eralchemy < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any,                 arm64_tahoe:   "c1d31eba95b0fdfb714a74504e9740db4a43f0a651e765c71c7fc01759a6b66e"
-    sha256 cellar: :any,                 arm64_sequoia: "7d82a6d90f3541ae9f2e7a5c61081d15f751dff3c153755b3d6484195c3a8874"
-    sha256 cellar: :any,                 arm64_sonoma:  "5ce015f1099edbc09359683d2fc1a680df406d6a1a0234fa8222e7f3b25ca432"
-    sha256 cellar: :any,                 sonoma:        "f59434c6e3b43e4945b2618631c31fabe8aaa5767ac294a748c635f642a0f4e9"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "ce3c3223aaae7be9c17bb87d5c9960f33390962ed855f2a9b1566a3e1fadd71a"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "89c19b543fbf3ced88b2fa81590da847c312149a6d5ac63f38dbf851bb4f5fd4"
+    rebuild 1
+    sha256 cellar: :any,                 arm64_tahoe:   "49a346cfaa425cda1007f4fc5cccca83546f2297770cb007d63d9f3b0f84e2e6"
+    sha256 cellar: :any,                 arm64_sequoia: "1ee8ae85a57cbceefb97b74b20b7471e107569152e7bb44708e9a44398a7ddb0"
+    sha256 cellar: :any,                 arm64_sonoma:  "7d5f1101a875838e742fb2649d37be7e22705606ee1b3256117cd8e82a000d5b"
+    sha256 cellar: :any,                 sonoma:        "d8d2db3e30495966876ddd5e78cd9105333ce3d89f88b71515a87eca3997b051"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "c79fa38699df65ebad7ff99554d7775d9fe5b91a4a5c94e0ceccce3a2663d2d9"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "17c170fcb2656f9089d5142b82ca21c6b9b2793cadd458505714b65803b237c9"
   end
 
   depends_on "pkgconf" => :build

@@ -7,8 +7,8 @@ class Ifuse < Formula
   head "https://github.com/libimobiledevice/ifuse.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_linux:  "734a650c8068975a04496c7efc513167c327b7202a112698745cea919ad75a6d"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "1c1e2348ff0c16c8d70685fb9112a77739aec3317e21079527dcb2abb0f99e8e"
+    sha256 cellar: :any_skip_relocation, arm64_linux:  "22167141508080750debc73ef0718dee5bcf9fa06266e7620764ce5e4d2a7c75"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "61d48166f2afbac7409f38dc618df93dd97dee916fc6d0c32410d4c112bcf282"
   end
 
   depends_on "autoconf" => :build

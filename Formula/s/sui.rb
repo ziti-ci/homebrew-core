@@ -1,8 +1,8 @@
 class Sui < Formula
   desc "Next-generation smart contract platform powered by the Move programming language"
   homepage "https://sui.io"
-  url "https://github.com/MystenLabs/sui/archive/refs/tags/testnet-v1.58.1.tar.gz"
-  sha256 "a97edd3a9ab55271f95c8aeb9969229088eb6156dcb1a261d71d2effe824689e"
+  url "https://github.com/MystenLabs/sui/archive/refs/tags/testnet-v1.58.2.tar.gz"
+  sha256 "70608177d3d6938db36351618630e9c144f37fa1c62b1c18a3c19555e067d76e"
   license "Apache-2.0"
 
   livecheck do

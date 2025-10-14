@@ -4,6 +4,7 @@ class Networkit < Formula
   url "https://github.com/networkit/networkit/archive/refs/tags/11.1.tar.gz"
   sha256 "c8db0430f6d7503eaf1e59fbf181374dc9eaa70f572c56d2efa75dd19a3548a9"
   license "MIT"
+  revision 1
 
   no_autobump! because: :requires_manual_review
 
@@ -26,7 +27,7 @@ class Networkit < Formula
 
   depends_on "libnetworkit"
   depends_on "numpy"
-  depends_on "python@3.13"
+  depends_on "python@3.14"
   depends_on "scipy"
 
   on_macos do
@@ -34,7 +35,7 @@ class Networkit < Formula
   end
 
   def python3
-    which("python3.13")
+    which("python3.14")
   end
 
   def install

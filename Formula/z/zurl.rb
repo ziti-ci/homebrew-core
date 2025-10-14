@@ -11,6 +11,7 @@ class Zurl < Formula
     "curl", # src/verifyhost.cpp
     "MIT", # src/qzmq/
   ]
+  revision 1
 
   no_autobump! because: :requires_manual_review
 
@@ -27,7 +28,7 @@ class Zurl < Formula
   depends_on "pkgconf" => :build
   depends_on "cmake" => :test # for scikit_build_core
   depends_on "cython" => :test # use brew cython as building it in test can cause time out
-  depends_on "python@3.13" => :test
+  depends_on "python@3.14" => :test
   depends_on "qtbase"
   depends_on "zeromq"
 
@@ -48,8 +49,8 @@ class Zurl < Formula
 
   test do
     resource "packaging" do
-      url "https://files.pythonhosted.org/packages/51/65/50db4dda066951078f0a96cf12f4b9ada6e4b811516bf0262c0f4f7064d4/packaging-24.1.tar.gz"
-      sha256 "026ed72c8ed3fcce5bf8950572258698927fd1dbda10a5e981cdf0ac37f4f002"
+      url "https://files.pythonhosted.org/packages/a1/d4/1fc4078c65507b51b96ca8f8c3ba19e6a61c8253c72794544580a7b6c24d/packaging-25.0.tar.gz"
+      sha256 "d443872c98d677bf60f6a1f2f8c1cb748e8fe762d2bf9d3148b5599295b0fc4f"
     end
 
     resource "pathspec" do
@@ -58,8 +59,8 @@ class Zurl < Formula
     end
 
     resource "pyzmq" do
-      url "https://files.pythonhosted.org/packages/fd/05/bed626b9f7bb2322cdbbf7b4bd8f54b1b617b0d2ab2d3547d6e39428a48e/pyzmq-26.2.0.tar.gz"
-      sha256 "070672c258581c8e4f640b5159297580a9974b026043bd4ab0470be9ed324f1f"
+      url "https://files.pythonhosted.org/packages/04/0b/3c9baedbdf613ecaa7aa07027780b8867f57b6293b6ee50de316c9f3222b/pyzmq-27.1.0.tar.gz"
+      sha256 "ac0765e3d44455adb6ddbf4417dcce460fc40a05978c08efdf2948072f6db540"
     end
 
     resource "scikit-build-core" do
@@ -68,11 +69,11 @@ class Zurl < Formula
     end
 
     resource "setuptools" do
-      url "https://files.pythonhosted.org/packages/27/b8/f21073fde99492b33ca357876430822e4800cdf522011f18041351dfa74b/setuptools-75.1.0.tar.gz"
-      sha256 "d59a21b17a275fb872a9c3dae73963160ae079f1049ed956880cd7c09b120538"
+      url "https://files.pythonhosted.org/packages/18/5d/3bf57dcd21979b887f014ea83c24ae194cfcd12b9e0fda66b957c69d1fca/setuptools-80.9.0.tar.gz"
+      sha256 "f36b47402ecde768dbfafc46e8e4207b4360c654f1f3bb84475f0a28628fb19c"
     end
 
-    python3 = "python3.13"
+    python3 = "python3.14"
 
     conffile = testpath/"zurl.conf"
     ipcfile = testpath/"zurl-req"

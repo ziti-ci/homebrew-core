@@ -6,6 +6,7 @@ class Condure < Formula
   url "https://github.com/fanout/condure/archive/refs/tags/1.10.1.tar.gz"
   sha256 "eb2df8e1a80d9fe4f66c41d2e9fbcd1205d8239ccd9b6cd914de5567356b7c70"
   license "Apache-2.0"
+  revision 1
 
   bottle do
     sha256 cellar: :any,                 arm64_tahoe:    "c4aad788eb15d3d312d7048f8a3e278c56b2461b42686d2d6965827ab95ff3f2"
@@ -28,7 +29,7 @@ class Condure < Formula
   depends_on "pkgconf" => :build
   depends_on "rust" => :build
   depends_on "cython" => :test # use brew cython as building it in test can cause time out
-  depends_on "python@3.13" => :test
+  depends_on "python@3.14" => :test
   depends_on "openssl@3"
   depends_on "zeromq"
 
@@ -66,7 +67,7 @@ class Condure < Formula
     ipcfile = testpath/"client"
     runfile = testpath/"test.py"
 
-    python3 = "python3.13"
+    python3 = "python3.14"
     ENV.append_path "PYTHONPATH", Formula["cython"].opt_libexec/Language::Python.site_packages(python3)
     venv = virtualenv_create(testpath/"vendor", python3)
     venv.pip_install resources.reject { |r| r.name == "pyzmq" }

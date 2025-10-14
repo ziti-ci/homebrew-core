@@ -640,7 +640,7 @@
   },
   "moto": {
     "package_name": "moto[all,server]",
-    "exclude_packages": ["certifi", "cryptography"]
+    "exclude_packages": ["certifi", "cryptography", "rpds-py"]
   },
   "mvt": {
     "exclude_packages": ["certifi", "cryptography"]

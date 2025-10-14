@@ -11,7 +11,7 @@ class Nanobind < Formula
   end
 
   depends_on "cmake" => [:build, :test]
-  depends_on "python@3.13" => [:build, :test]
+  depends_on "python@3.14" => [:build, :test]
   depends_on "robin-map" => [:build, :test]
 
   def install
@@ -33,7 +33,7 @@ class Nanobind < Formula
   end
 
   test do
-    python = "python3.13"
+    python = "python3.14"
 
     (testpath/"my_ext.cpp").write <<~CPP
       #include <nanobind/nanobind.h>

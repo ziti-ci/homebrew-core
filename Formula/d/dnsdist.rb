@@ -13,12 +13,13 @@ class Dnsdist < Formula
   end
 
   bottle do
-    sha256 arm64_tahoe:   "b2a19faf91fba7dbca19a619586d17fbab39375bb46ca880894857cbb5deed4a"
-    sha256 arm64_sequoia: "739932f49271509daf66a2d2fa4e266d21b40a3b43a389ff52ded7560b6fa9e7"
-    sha256 arm64_sonoma:  "8a33c281897ce7bcd3434044154b3cab918557ea651a55d429ffd064ae128341"
-    sha256 sonoma:        "986c3bd17146b58c0fec946e4595e27533bdcd8943265d5972adb79d5b6c4c2f"
-    sha256 arm64_linux:   "36b33dec50fb212992280bf256d4c57ee3489c72099e8f03a369115d2832788d"
-    sha256 x86_64_linux:  "b4b1d35c579951796aea9f9b84050f692c34f85fd5eb5cfe25b2ff95eb79d0d9"
+    rebuild 1
+    sha256 arm64_tahoe:   "dfea90bdb98efc4b827ed4c32ea6efbb1417e57623120ea43ab97d4a3d1f22da"
+    sha256 arm64_sequoia: "fc32d06a35b1611c4bb3ed43712359fc095d0c68b7772b9e48355728ce6494da"
+    sha256 arm64_sonoma:  "8ed1785bf9262c314b75defbcf3fac20972d70f430fbfa1cb5765e416cdedd08"
+    sha256 sonoma:        "d593835bf6940fa880d91beb34e8aa02e0ce0986abd9bdec8f3149882a2cee6c"
+    sha256 arm64_linux:   "6b0d88620b7c47cc49ffa88da13b9ccf1eb7ab03c2511ad80fd67bde8a06a07b"
+    sha256 x86_64_linux:  "1d32e7c0ec893b6233949e76ca6b9af53eec64290f506d93dfd6ec4ad9a5e0c4"
   end
 
   depends_on "boost" => :build

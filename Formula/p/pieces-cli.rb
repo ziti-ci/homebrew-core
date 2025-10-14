@@ -18,11 +18,10 @@ class PiecesCli < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "ef8d5c104588234ce517535326d81e09cce5084f18b957df6458be9bf80bb2fa"
   end
 
-  depends_on "cython" => :build # for python-multipart
   depends_on "rust" => :build
   depends_on "certifi" => :no_linkage
   depends_on "libyaml"
-  depends_on "python@3.13"
+  depends_on "python@3.14"
   depends_on "rpds-py" => :no_linkage
 
   resource "aenum" do

@@ -9,15 +9,13 @@ class Fiona < Formula
   revision 1
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any,                 arm64_tahoe:   "24ef6b90e3e2778d6289d1c1eb78189099db3f54c8ecd00070a652142cd6c03f"
-    sha256 cellar: :any,                 arm64_sequoia: "00b95ac4bf7772eb38a49123a2bda485fabb21c0e1c92ba49fb4630ddf9f0a8c"
-    sha256 cellar: :any,                 arm64_sonoma:  "00eadb2d61339a282cff600a0b0914decfc4ae1cb53ac1d4546b40528811147c"
-    sha256 cellar: :any,                 arm64_ventura: "3887127436fd935145d865af7549a050e7ad7b1b307ea295b412060beef310f7"
-    sha256 cellar: :any,                 sonoma:        "2a2cf6a51c01bc67a4bc2e661d0e0c2e0ffe0b09bb8b661e4071d6dab6d613a6"
-    sha256 cellar: :any,                 ventura:       "f13fc2f8c11c0f918f2761725e7483cdd91948d21041fa51c15a73bb3182bf13"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "3a306357c631c92a7f61e46b0211ea0d910a6883e849edc8c400e0bb122a804d"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "16820e10169e49e3787ff5c4507ce74a9fd95188d045fdd0173e00f4a08e9880"
+    rebuild 2
+    sha256 cellar: :any,                 arm64_tahoe:   "16703d2ca315cdbe991282fc708b1a57993e80ca3d5a4f7dc9ee6df0dc0feef1"
+    sha256 cellar: :any,                 arm64_sequoia: "f755ce1b5f43038af674e4f365911bcbb9fd48cca160ee90d908815112c381df"
+    sha256 cellar: :any,                 arm64_sonoma:  "ae0fc9040c71d69e67c65a8d7df5a9c94e8061f9eb1f2e53d1d2bc866cce0248"
+    sha256 cellar: :any,                 sonoma:        "f7aa8391aebbb211b90798fa7b1c5bf5283a412975a1e1a3a5bd785cfbb66385"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "027935ae5cbd4255b5eae9e26067c17f7081e248505536b72cdd8f61580154a6"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "b1da83baacb14a990f4b5065cdeccda6aa0bf5f75360ebe96e48d9d44c6bf7be"
   end
 
   depends_on "certifi" => :no_linkage

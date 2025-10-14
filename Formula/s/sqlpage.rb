@@ -1,8 +1,8 @@
 class Sqlpage < Formula
   desc "Web app builder using SQL queries to create dynamic webapps quickly"
   homepage "https://sql-page.com/"
-  url "https://github.com/sqlpage/SQLpage/archive/refs/tags/v0.37.1.tar.gz"
-  sha256 "262ba8afda8b6849fe775cd7142566873200f811ba40e1f922781fe110f5fcec"
+  url "https://github.com/sqlpage/SQLpage/archive/refs/tags/v0.38.0.tar.gz"
+  sha256 "08f4a7be79fe602009aea653725f4d1ae6fde01bf57dcf418f9c9fc8669a98de"
   license "MIT"
   head "https://github.com/sqlpage/SQLpage.git", branch: "main"
 
@@ -16,6 +16,7 @@ class Sqlpage < Formula
   end
 
   depends_on "rust" => :build
+  depends_on "unixodbc"
 
   def install
     system "cargo", "install", *std_cargo_args

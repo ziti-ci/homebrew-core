@@ -2,16 +2,15 @@ class Gstreamer < Formula
   desc "Development framework for multimedia applications"
   homepage "https://gstreamer.freedesktop.org/"
   license all_of: ["LGPL-2.0-or-later", "LGPL-2.1-or-later", "MIT"]
-  revision 5
 
   stable do
-    url "https://gitlab.freedesktop.org/gstreamer/gstreamer/-/archive/1.26.5/gstreamer-1.26.5.tar.bz2"
-    sha256 "7f2c3016cec832170c1a1e6e9ede087282770955894c0cabf4637ee877a69941"
+    url "https://gitlab.freedesktop.org/gstreamer/gstreamer/-/archive/1.26.7/gstreamer-1.26.7.tar.bz2"
+    sha256 "e6cd9267afc3d2c30f35a24567bdd1b3021034da8f7dc7533a10bd8870f23169"
 
     # When updating this resource, use the tag that matches the GStreamer version.
     resource "rs" do
-      url "https://gitlab.freedesktop.org/gstreamer/gst-plugins-rs/-/archive/gstreamer-1.26.5/gst-plugins-rs-gstreamer-1.26.5.tar.bz2"
-      sha256 "19182e58c29a9c777f4d8325253560c6481a0c9d75819e81870c711916740b93"
+      url "https://gitlab.freedesktop.org/gstreamer/gst-plugins-rs/-/archive/gstreamer-1.26.7/gst-plugins-rs-gstreamer-1.26.7.tar.bz2"
+      sha256 "f7310ffcd37822e538e64cb6ca37858069c73eae10a19a96117824035facd33c"
 
       livecheck do
         formula :parent
@@ -98,7 +97,7 @@ class Gstreamer < Formula
   depends_on "orc"
   depends_on "pango"
   depends_on "pygobject3"
-  depends_on "python@3.13"
+  depends_on "python@3.14"
   depends_on "rtmpdump"
   depends_on "speex"
   depends_on "srt"
@@ -138,13 +137,13 @@ class Gstreamer < Formula
   end
 
   def python3
-    which("python3.13")
+    which("python3.14")
   end
 
   # These paths used to live in various `gst-*` formulae.
   link_overwrite "bin/gst-*", "lib/ligst*", "lib/libges*", "lib/girepository-1.0/Gst*-1.0.typelib"
   link_overwrite "lib/girepository-1.0/GES-1.0.typelib", "lib/gst-validate-launcher/*", "lib/gstreamer-1.0/*"
-  link_overwrite "lib/pkgconfig/gst*.pc", "lib/python3.13/site-packages/gi/overrides/*", "include/gstreamer-1.0/*"
+  link_overwrite "lib/pkgconfig/gst*.pc", "lib/python3.14/site-packages/gi/overrides/*", "include/gstreamer-1.0/*"
   link_overwrite "share/gir-1.0/Gst*.gir", "share/gir-1.0/GES-1.0.gir", "share/gstreamer-1.0/*"
   link_overwrite "share/locale/*/LC_MESSAGES/gst-*.mo", "share/man/man1/g*"
 

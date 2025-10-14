@@ -262,6 +262,9 @@
   "cryptography": {
     "exclude_packages": ["cffi", "pycparser"]
   },
+  "cyclonedx-python": {
+    "exclude_packages": ["rpds-py"]
+  },
   "cycode": {
     "exclude_packages": ["certifi"]
   },

@@ -8,12 +8,13 @@ class Mycli < Formula
   license "BSD-3-Clause"
 
   bottle do
-    sha256 cellar: :any,                 arm64_tahoe:   "4d90e4b6ec5aa971902ff2f25b859f3c99a19730f063931d550d926f2f039311"
-    sha256 cellar: :any,                 arm64_sequoia: "a2b62b673363b2de3b1c18555659958c147cba7faa09993257bc8cd5ce651f9d"
-    sha256 cellar: :any,                 arm64_sonoma:  "b0dcae8dc64cd79ec7b7d3c942fef5d231127828213ee7e48fba6495a5c87045"
-    sha256 cellar: :any,                 sonoma:        "586a6fba56112353c191433bbef80819a250ee5f4d9d771661e7d25977bff662"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "8a48234f7093e333830309b3bd5f1846efa1fc4b09a6098b3dfdde3ba8e0e363"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "a9866fde06dc4285d0cce3158160a7843ebd410458e64c1e72f0e8d6b18d94fe"
+    rebuild 1
+    sha256 cellar: :any,                 arm64_tahoe:   "d5ae66ed913dc38799525c397ac15195ebba2691b94254cb2217852a55ab5a70"
+    sha256 cellar: :any,                 arm64_sequoia: "3fd8f24cc77cd2c31fd79e55587dbda55de4983729440b6b0b5f1f0d223d88b1"
+    sha256 cellar: :any,                 arm64_sonoma:  "346a4ddccf39a2e9cd5d8edeace0c1f9ae2e9cf28fdbf9b4a8b9f95b0cc69d65"
+    sha256 cellar: :any,                 sonoma:        "4fdfdd75ae04484410d6072e93ca6453c475343caa2330edad6a61c69a7a17ec"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "3b1d0027bf8802bead911d28c9287c19c40f6f2f6d9106d835e0904972d0aabc"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "f85b9267594ab8bc3c609715e9d42154bdd1e00683ed453d2d5ff32d1dde2fd8"
   end
 
   depends_on "rust" => :build # for pydantic-core, sqlglotrs

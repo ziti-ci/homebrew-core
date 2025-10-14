@@ -19,9 +19,9 @@ class Copyparty < Formula
   depends_on "cmake" => :build
   depends_on "ninja" => :build
   depends_on "pkgconf" => :build
-  depends_on "cryptography"
+  depends_on "cryptography" => :no_linkage
   depends_on "glib"
-  depends_on "python@3.13"
+  depends_on "python@3.14"
   depends_on "vips"
   depends_on "zeromq"
 

@@ -1,11 +1,9 @@
 class Sylph < Formula
   desc "Ultrafast taxonomic profiling and genome querying for metagenomic samples"
   homepage "https://github.com/bluenote-1577/sylph"
-  url "https://github.com/bluenote-1577/sylph/archive/refs/tags/v0.8.1.tar.gz"
-  sha256 "9dceb4e2302ece3ca225218dfb8367c88a88c98d1eb4e8eac82a202195584099"
+  url "https://github.com/bluenote-1577/sylph/archive/refs/tags/v0.9.0.tar.gz"
+  sha256 "c11fbe5720500c43e7102a359dd9ec59b09b93a15a8ce6f6a3bb917430c3059e"
   license "MIT"
-
-  no_autobump! because: :requires_manual_review
 
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_tahoe:   "fc6a20c53d0740489fbbcb63a8dba4895e3932c65d59ad7d1c4376e0908bdb4e"

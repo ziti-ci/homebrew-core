@@ -6,12 +6,12 @@ class GsettingsDesktopSchemas < Formula
   license "LGPL-2.1-or-later"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "255a40e813d02911612c36c9602cbe065d551e7be32379df9023ad32db901cc2"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "255a40e813d02911612c36c9602cbe065d551e7be32379df9023ad32db901cc2"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "255a40e813d02911612c36c9602cbe065d551e7be32379df9023ad32db901cc2"
-    sha256 cellar: :any_skip_relocation, sonoma:        "255a40e813d02911612c36c9602cbe065d551e7be32379df9023ad32db901cc2"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "2beaede732944a32b29d9320e49b3f19ceb29d757272b7fec7afc32b57bf7f0b"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "2beaede732944a32b29d9320e49b3f19ceb29d757272b7fec7afc32b57bf7f0b"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "e48c2263a6b10990898745fbed2b7ba91ec78053a53d4f3c8a6598b567adbf39"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "e48c2263a6b10990898745fbed2b7ba91ec78053a53d4f3c8a6598b567adbf39"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "e48c2263a6b10990898745fbed2b7ba91ec78053a53d4f3c8a6598b567adbf39"
+    sha256 cellar: :any_skip_relocation, sonoma:        "e48c2263a6b10990898745fbed2b7ba91ec78053a53d4f3c8a6598b567adbf39"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "58faeed213ad74ce4c486cd1744443efa5d764d34e64aaa8dafc6a043f90186b"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "58faeed213ad74ce4c486cd1744443efa5d764d34e64aaa8dafc6a043f90186b"
   end
 
   depends_on "gettext" => :build

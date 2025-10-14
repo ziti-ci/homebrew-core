@@ -14,7 +14,7 @@ class Fprettify < Formula
   end
 
   depends_on "gcc" => :test
-  depends_on "python@3.13"
+  depends_on "python@3.14"
 
   resource "configargparse" do
     url "https://files.pythonhosted.org/packages/85/4d/6c9ef746dfcc2a32e26f3860bb4a011c008c392b83eabdfb598d1a8bbe5d/configargparse-1.7.1.tar.gz"

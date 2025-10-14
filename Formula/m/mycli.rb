@@ -3,18 +3,17 @@ class Mycli < Formula
 
   desc "CLI for MySQL with auto-completion and syntax highlighting"
   homepage "https://www.mycli.net/"
-  url "https://files.pythonhosted.org/packages/53/9e/ff2e74b85acb87b5dd53e4d7f5d3723f31767e9c6239097fc0c8ce0c0b6c/mycli-1.39.1.tar.gz"
-  sha256 "d40e4343c74bc72d7b301ccdac2d1c839338794c62ba44cef46827a1252ac59f"
+  url "https://files.pythonhosted.org/packages/58/7f/0bde88308d169717c27e15f58276fbab83d35d236971f8652f53c573df47/mycli-1.40.0.tar.gz"
+  sha256 "7f8eedc2176eacd3369bcb596d1f4d58a0fbd332065a089f65db57efc6f27db8"
   license "BSD-3-Clause"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any,                 arm64_tahoe:   "d5ae66ed913dc38799525c397ac15195ebba2691b94254cb2217852a55ab5a70"
-    sha256 cellar: :any,                 arm64_sequoia: "3fd8f24cc77cd2c31fd79e55587dbda55de4983729440b6b0b5f1f0d223d88b1"
-    sha256 cellar: :any,                 arm64_sonoma:  "346a4ddccf39a2e9cd5d8edeace0c1f9ae2e9cf28fdbf9b4a8b9f95b0cc69d65"
-    sha256 cellar: :any,                 sonoma:        "4fdfdd75ae04484410d6072e93ca6453c475343caa2330edad6a61c69a7a17ec"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "3b1d0027bf8802bead911d28c9287c19c40f6f2f6d9106d835e0904972d0aabc"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "f85b9267594ab8bc3c609715e9d42154bdd1e00683ed453d2d5ff32d1dde2fd8"
+    sha256 cellar: :any,                 arm64_tahoe:   "43f24b9ddb351f9cd17c0828997bd58f6c7ca28a9927ea82f622332b2efb3447"
+    sha256 cellar: :any,                 arm64_sequoia: "3d5c72b5e3d8b6d41e72d79efe8d9d27d3d6398c6148076c288e2c7deb434bfd"
+    sha256 cellar: :any,                 arm64_sonoma:  "db6966841eeb6e35beb5949ee54185233625908d0fbd3a4e0848299ab13c5ddc"
+    sha256 cellar: :any,                 sonoma:        "1fca3a8e3d8b96b6f746f293d4d4da685fdde97546f89da4c22815ceab8b4741"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "8aebecf69d98d98f1df04dc04a45be832a5d1b45fca3b0cf9726587177a47215"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "4125f0acb83e444f847a076612be2361f0355983427d050224da7709b0b8d37f"
   end
 
   depends_on "rust" => :build # for pydantic-core, sqlglotrs
@@ -115,9 +114,9 @@ class Mycli < Formula
     sha256 "f9ff7ac157d54e9cf3bff1addfd97233548e75e685282d84ae11e7ffee1614c9"
   end
 
-  resource "pyaes" do
-    url "https://files.pythonhosted.org/packages/44/66/2c17bae31c906613795711fc78045c285048168919ace2220daa372c7d72/pyaes-1.6.1.tar.gz"
-    sha256 "02c1b1405c38d3c370b085fb952dd8bea3fadcee6411ad99f312cc129c536d8f"
+  resource "pycryptodomex" do
+    url "https://files.pythonhosted.org/packages/c9/85/e24bf90972a30b0fcd16c73009add1d7d7cd9140c2498a68252028899e41/pycryptodomex-3.23.0.tar.gz"
+    sha256 "71909758f010c82bc99b0abf4ea12012c98962fbf0583c2164f8b84533c2e4da"
   end
 
   resource "pydantic" do
@@ -181,13 +180,13 @@ class Mycli < Formula
   end
 
   resource "sqlglot" do
-    url "https://files.pythonhosted.org/packages/25/9d/fcd59b4612d5ad1e2257c67c478107f073b19e1097d3bfde2fb517884416/sqlglot-26.33.0.tar.gz"
-    sha256 "2817278779fa51d6def43aa0d70690b93a25c83eb18ec97130fdaf707abc0d73"
+    url "https://files.pythonhosted.org/packages/eb/75/9c9a42415ff8b03b7307252f6edf70fb3555ad45dd69d5e03a9236e92bfa/sqlglot-27.27.0.tar.gz"
+    sha256 "c1ce8a3b7ce9b3c9d5a0fc26f202d7ed6a203b7398ae834c979e0c455a99d9ce"
   end
 
   resource "sqlglotrs" do
-    url "https://files.pythonhosted.org/packages/59/13/e77dcfd72b849a113bea7ccee79329f77751704e66560410176b1f4657f9/sqlglotrs-0.6.1.tar.gz"
-    sha256 "f638a7a544698ade8b0c992c8c67feae17bd5c2c760114ab164bd0b7dc8911e1"
+    url "https://files.pythonhosted.org/packages/87/5a/46d8efeda45be6ce1c630229455f000cafedea6129b47e6cfab39ff462f5/sqlglotrs-0.7.3.tar.gz"
+    sha256 "caadc572c8a194f99d6ba44d02f9ada0110e3d47cca3330c81f4aa608f1143eb"
   end
 
   resource "sqlite-fts4" do

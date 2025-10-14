@@ -9,15 +9,8 @@ class Notifiers < Formula
   revision 2
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any,                 arm64_tahoe:   "c4aa0e7a6606ec58a94c84d3fa2505ee51ecdf1bb424165e31b47b248409888e"
-    sha256 cellar: :any,                 arm64_sequoia: "03a4d55a52e0b9cd1652e49663dca00f3441e027ea5bd0a19c56ab8971bc8fec"
-    sha256 cellar: :any,                 arm64_sonoma:  "b5a47821d8ade65c156518e45316c3a918311b2f2623550a97dbaf7445e9b6b4"
-    sha256 cellar: :any,                 arm64_ventura: "b091fa5ef1add6aaecdcff15cfc62232c4ee281f76e97226ae2f59846b0f6d07"
-    sha256 cellar: :any,                 sonoma:        "5284cf90de776e21fbff97d38b1d0cefa0b3ada4164eb36dd0cf079ff709ad7a"
-    sha256 cellar: :any,                 ventura:       "06ad0cee96d5b1a3b07eb6cccd96e410613ada9579b2825c51b13abb98c2612e"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "c8f66db9e845994de0ddce6a44f485729034f2d43eb9b6d049ba96e4263f0369"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "9a7957576a6d2f9d2fdba6aac44a9353d20c72899f3724ebed0a630fbd78160c"
+    rebuild 2
+    sha256 cellar: :any_skip_relocation, all: "541994eadb8a17ee11b2f9fa68059a4f6e73d23f10d8ac7780ffeab606c8251c"
   end
 
   depends_on "certifi" => :no_linkage

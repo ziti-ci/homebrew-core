@@ -7,12 +7,12 @@ class Zizmor < Formula
   head "https://github.com/zizmorcore/zizmor.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "bcb938e10fd9a400c50214f8c5dcb3a95d0a5ebee7149f8d6a03d70d48a1a822"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "c77972552e106a28f78b8c89a410afe276b52e07876ac5eb8d2a359e704cb8d6"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "f94c5b71e6a3af92d6a0ab1999acf9b8a8c37f6ee5087f97d83a464cc8ff3114"
-    sha256 cellar: :any_skip_relocation, sonoma:        "0172e0bfd08e8cab96c97113470a2f92128373f86b660302a24cdaf9d3e3d9b8"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "53ce7682bb3717c945ad051fbd135603afeb1b21dba7aaf89f3078233a25d5d1"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "13f203fc37f10f0c1760a3a2602c8da195b0843c07c1c10245883fd8899f13f9"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "ed86cb4e9bb083ee777b33bf9a6dcfbbe153c0499ad9b7cf817aeebf4041e18e"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "4154c90e679632960d100b329e80d2e6b87cfa71ed20782b96b1286945c2509b"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "8332f528f0bc1e4134c87905ee97acc2aa0c50aca26875b3f1e108046438fb9e"
+    sha256 cellar: :any_skip_relocation, sonoma:        "bca4a3791b5e93b0ac35154035ee221c33bf6c273aab1279e03f97da35438e31"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "d952d660821f2fed2be1c21580ec60e948e29f4cdce840c161d8f590a9de7997"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "f7456677a6c5ce1f5b4a665084e5e811d41f29bf8f53c5769d8ecadd88c0f622"
   end
 
   depends_on "pkgconf" => :build

@@ -16,13 +16,12 @@ class Zurl < Formula
   no_autobump! because: :requires_manual_review
 
   bottle do
-    rebuild 3
-    sha256 cellar: :any,                 arm64_tahoe:   "41d2079d1fd2a900dca1029713552185f15f4e6d4823927a2b2be50f7c20a7db"
-    sha256 cellar: :any,                 arm64_sequoia: "bbd753d9817b81765da1018bbf987e927a8456e14fe2fff6c515ed985089f51f"
-    sha256 cellar: :any,                 arm64_sonoma:  "959deca1f83b07706a5e7975f8ecefc5d344a2377c3f963ca92f1c0b5d38266e"
-    sha256 cellar: :any,                 sonoma:        "7641342f8a326d2ea9bfe5a763e2619c8e9bcf4075752a1f228ee32c1eba14af"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "b7287eb439760c980839125aee5e253893fb5f2ef1be23830f1637bc995160a9"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "65d8a25744f4bdcf31b030aa132632d5be92c7a0d9c89e6c0f59d29bfce5a146"
+    sha256 cellar: :any,                 arm64_tahoe:   "eb2c86141ca65e087181c6d802dad72bb3d0b3ecd75286663077b29ef5ee8ed6"
+    sha256 cellar: :any,                 arm64_sequoia: "6b0d185ef6601a9a7feb2712ac0b7d4242e8e35e4572cb8aca3c88109461f1fd"
+    sha256 cellar: :any,                 arm64_sonoma:  "b75dbe6b4c8eb60c671c68c1adeb4bf0fd4ec011051c34bae3342ee49bb3a1a3"
+    sha256 cellar: :any,                 sonoma:        "318fd22b894af157b9a54a874d13c805b1474d97a43cd50e0e39f15262472b40"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "591a82d1ae225eeab0cd35808e860c1b69b9cf84d13ef87962aa4f0b24c0ddfc"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "fd9298662889e90ecfc5078599cfeab0862621e9839b92af94a93b32b5db4430"
   end
 
   depends_on "pkgconf" => :build

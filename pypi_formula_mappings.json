@@ -263,7 +263,7 @@
     "exclude_packages": ["cffi", "pycparser"]
   },
   "cycode": {
-    "exclude_packages": ["certifi"]
+    "exclude_packages": ["certifi", "rpds-py"]
   },
   "darker": {
     "package_name": "darker[black]"

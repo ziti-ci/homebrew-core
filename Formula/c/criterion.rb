@@ -1,13 +1,10 @@
 class Criterion < Formula
   desc "Cross-platform C and C++ unit testing framework for the 21st century"
   homepage "https://github.com/Snaipe/Criterion"
-  url "https://github.com/Snaipe/Criterion/releases/download/v2.4.2/criterion-2.4.2.tar.xz"
-  sha256 "e3c52fae0e90887aeefa1d45066b1fde64b82517d7750db7a0af9226ca6571c0"
+  url "https://github.com/Snaipe/Criterion/releases/download/v2.4.3/criterion-2.4.3.tar.xz"
+  sha256 "8ec64e482a70b3bfc1836ace0988b3316e6c3cfeac883fb5a674dcea5083ea16"
   license "MIT"
-  revision 2
   head "https://github.com/Snaipe/Criterion.git", branch: "bleeding"
-
-  no_autobump! because: :requires_manual_review
 
   bottle do
     sha256 cellar: :any, arm64_tahoe:   "887468387265728572404ff3ffc2486528e7898fdffa1213d5094ae0071f7285"

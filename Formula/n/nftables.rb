@@ -18,7 +18,7 @@ class Nftables < Formula
   end
 
   depends_on "pkgconf" => :build
-  depends_on "python@3.13" => :build
+  depends_on "python@3.14" => :build
   depends_on "gmp"
   depends_on "jansson"
   depends_on "libedit"
@@ -29,7 +29,7 @@ class Nftables < Formula
   depends_on "readline"
 
   def install
-    venv = virtualenv_create(libexec, "python3.13")
+    venv = virtualenv_create(libexec, "python3.14")
     system "./configure", "--disable-silent-rules",
                           "--with-python-bin=#{venv.root}/bin/python3",
                           *std_configure_args

@@ -1,8 +1,8 @@
 class Libdrm < Formula
   desc "Library for accessing the direct rendering manager"
   homepage "https://dri.freedesktop.org"
-  url "https://dri.freedesktop.org/libdrm/libdrm-2.4.126.tar.xz"
-  sha256 "6cab16d4d259b6abc9f485233863454114a3c307eca806679aad3edbe967bf42"
+  url "https://dri.freedesktop.org/libdrm/libdrm-2.4.127.tar.xz"
+  sha256 "051aeb3e542a57621018ffc443fb088dd69b78eef0ce4808b604ce0feac9f47f"
   license "MIT"
 
   livecheck do

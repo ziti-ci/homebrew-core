@@ -1,8 +1,8 @@
 class Vet < Formula
   desc "Policy driven vetting of open source dependencies"
   homepage "https://safedep.io/"
-  url "https://github.com/safedep/vet/archive/refs/tags/v1.12.6.tar.gz"
-  sha256 "d1a21d8f2ca1b6bdf1e582d1d9a2971605162f3f4a5ac241d60707b0eecf0e23"
+  url "https://github.com/safedep/vet/archive/refs/tags/v1.12.7.tar.gz"
+  sha256 "9e34169f37784728656affffb3e67a9b11d4b0bb622b410df620392ab667667f"
   license "Apache-2.0"
 
   bottle do
@@ -17,6 +17,7 @@ class Vet < Formula
   depends_on "go"
 
   def install
+    ENV["CGO_ENABLED"] = "1"
     ldflags = "-s -w -X main.version=#{version} -X main.commit=#{tap.user}"
     system "go", "build", *std_go_args(ldflags:)
 

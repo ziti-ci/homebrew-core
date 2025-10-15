@@ -1,8 +1,8 @@
 class OpenapiDiff < Formula
   desc "Utility for comparing two OpenAPI specifications"
   homepage "https://github.com/OpenAPITools/openapi-diff"
-  url "https://github.com/OpenAPITools/openapi-diff/archive/refs/tags/2.1.3.tar.gz"
-  sha256 "8530a1242f5ed96e60323d313503cd92da2197fcdf833ba8d12fa24375d94e4e"
+  url "https://github.com/OpenAPITools/openapi-diff/archive/refs/tags/2.1.4.tar.gz"
+  sha256 "227fe086ae967aa0c36121b815fbaa3d01c853e050dd87b967915143ce420664"
   license "Apache-2.0"
 
   bottle do

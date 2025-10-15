@@ -12,11 +12,11 @@ class Netdata < Formula
   end
 
   bottle do
-    sha256 arm64_tahoe:   "217d174723b4cd5a29dbcc4c5c48d5c1d1e636fb7e471804599cbb915333ee98"
-    sha256 arm64_sequoia: "9cb201e12b076bba2fcc411b6f3be01724123c5201c6b6886dcdf021a3d15591"
-    sha256 arm64_sonoma:  "9e96f037bbab593e4da6aaf9efc89dc376eb1c1050f1c66639a9931a05cda4e8"
-    sha256 sonoma:        "af6f9fdbb9cc78f026f52ac5cb9a105eab4d328f2ff6255a3f64b927cd2cd4d7"
-    sha256 x86_64_linux:  "706a70e30cd25b07520f67a6457bd391a7777dc7ad014094431a7f27ae08141e"
+    sha256 arm64_tahoe:   "b1e01e0d4efa4cf7fe72ab4faafe713477378afc0597e578436905522b114452"
+    sha256 arm64_sequoia: "3d0ba3edf68ba5bc5226cf3bde045a69ea21af8e3c6b2e9cb7eb8eb55700d449"
+    sha256 arm64_sonoma:  "a3e70b819a6786526979f6c2506a31a860a2f916a473369e36572bcea9ae5f9a"
+    sha256 sonoma:        "6f8f74030450006a1ca24e604bf682be7fa4c2b5d9dc0256a4e0e50bf655e878"
+    sha256 x86_64_linux:  "33ff2db58a1cdaff402c4fa2a1f4c2a8cef7164ae2b19bd71106f98dcc2b2204"
   end
 
   depends_on "cmake" => :build

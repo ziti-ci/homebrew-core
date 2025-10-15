@@ -26,10 +26,10 @@ class Itstool < Formula
   end
 
   depends_on "libxml2"
-  depends_on "python@3.13"
+  depends_on "python@3.14"
 
   def python3
-    "python3.13"
+    "python3.14"
   end
 
   def install
@@ -45,7 +45,12 @@ class Itstool < Formula
     man1.install_symlink libexec/"share/man/man1/itstool.1"
 
     # Check for itstool data files in HOMEBREW_PREFIX. This also ensures uniform bottles.
-    inreplace libexec/"bin/itstool", "/usr/local", HOMEBREW_PREFIX
+    inreplace libexec/"bin/itstool" do |s|
+      s.sub! "'.local', 'share'", "'.local', 'share', 'itstool'"
+      s.sub! "/usr/local/share", "#{HOMEBREW_PREFIX}/share/itstool"
+      s.sub! "/usr/share", "/usr/share/itstool"
+      s.sub! "ddir, 'itstool', 'its'", "ddir, 'its'"
+    end
   end
 
   test do

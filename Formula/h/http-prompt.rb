@@ -10,15 +10,13 @@ class HttpPrompt < Formula
   head "https://github.com/httpie/http-prompt.git", branch: "master"
 
   bottle do
-    rebuild 2
-    sha256 cellar: :any,                 arm64_tahoe:   "adfd0d5847f7dfd9c00fb52169e4d39c4b99ecdf4a4d137abd3376ada383d515"
-    sha256 cellar: :any,                 arm64_sequoia: "8fb96b2aaf910e390ac7e12f7268f8679311a7782648ddcb066322eccfa43ef5"
-    sha256 cellar: :any,                 arm64_sonoma:  "ad2764c7662bfbc1f34e93161f87981ad2ff41166f75b9c244704d9bb7598264"
-    sha256 cellar: :any,                 arm64_ventura: "0532a8228129394bf13ee6f053858ffd7954404bd53dbb5b7da5da0274f10a6a"
-    sha256 cellar: :any,                 sonoma:        "dacf348561198beea4d248bd7a9d816a30399f707d08ec4fec8342db6fc05f28"
-    sha256 cellar: :any,                 ventura:       "9e0a279b469685fc81daaaa65b61b25d0869e797fc161972152529a585260b5b"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "64128e8649f032b5515f1692641730b1a18b01c8f8526e7ec7f71df02ca2fb6b"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "16bd9aa4d0b7cbaa76f7a09fd2ab89e5d5d61aa7529175ac213e592a1d8d1970"
+    rebuild 3
+    sha256 cellar: :any,                 arm64_tahoe:   "3b7427c5017247d51bd7ffa5956aeb48545736a5c0d112a7aa654b6617553621"
+    sha256 cellar: :any,                 arm64_sequoia: "488bed828e2b6ce8261857f541637dd4bda2e5979555601fbac08691267c6842"
+    sha256 cellar: :any,                 arm64_sonoma:  "06b458e46ce0dfeb5730442a0e5d92da7fc54403eb8c9cf81a5a507955739ccc"
+    sha256 cellar: :any,                 sonoma:        "42d9d1b3570ee353fce40a7e84f80538084c3d69e5faadcb67db095ba264ba19"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "4c15847815eb5e9914e42c52d1af7eb5bf96cbeaeb239e01c1cc23bc8eeee750"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "5b6018233f37db61725f43f0ab44cd40c78cae4aa505b4430a7db5778be3b2c8"
   end
 
   depends_on "certifi" => :no_linkage

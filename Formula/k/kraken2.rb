@@ -22,7 +22,7 @@ class Kraken2 < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "2ca100381d28e5c0780b3cd4f765c895132d187a205a7345a3c6f880ab31cd82"
   end
 
-  depends_on "python@3.13"
+  depends_on "python@3.14"
   depends_on "wget"
 
   uses_from_macos "perl"

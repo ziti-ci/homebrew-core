@@ -798,10 +798,6 @@
       "pyqtnetworkauth", "pyqtpurchasing", "pyqtwebengine"
     ]
   },
-  "python@3.8": {
-    "package_name": "",
-    "extra_packages": ["setuptools", "pip", "wheel"]
-  },
   "python@3.9": {
     "package_name": "",
     "extra_packages": ["flit-core", "setuptools", "pip", "wheel"]

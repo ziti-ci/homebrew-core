@@ -1,17 +1,17 @@
 class Cliproxyapi < Formula
   desc "Wrap Gemini CLI, Codex, Claude Code, Qwen Code as an API service"
   homepage "https://github.com/router-for-me/CLIProxyAPI"
-  url "https://github.com/router-for-me/CLIProxyAPI/archive/refs/tags/v6.2.8.tar.gz"
-  sha256 "0eb90b4e456f37e89f85b5a1015a410ac7af70ce14ae14063289f6a40b9e939f"
+  url "https://github.com/router-for-me/CLIProxyAPI/archive/refs/tags/v6.2.9.tar.gz"
+  sha256 "01a595dcc4cbd9e3ea31015a95290e1f7cb662aa053101b0701a2142c26bc82f"
   license "MIT"
 
   bottle do
-    sha256                               arm64_tahoe:   "27421642f933e1e4ee76675679015c687c2a819829a886eb7c1f5657ddc18133"
-    sha256                               arm64_sequoia: "27421642f933e1e4ee76675679015c687c2a819829a886eb7c1f5657ddc18133"
-    sha256                               arm64_sonoma:  "27421642f933e1e4ee76675679015c687c2a819829a886eb7c1f5657ddc18133"
-    sha256 cellar: :any_skip_relocation, sonoma:        "5a39b4831c18be7f5f9272c0cdb4471c2c4b46deda4796631be58bb9fe107b38"
-    sha256                               arm64_linux:   "cc949b99cc17f6f1673e91d081479c1e27080588fe19224827866fd6b9e820df"
-    sha256                               x86_64_linux:  "24e76d27c45bb4946193977156629d8000e2a4c25d50a11662686ec222edf449"
+    sha256                               arm64_tahoe:   "0f774f0df1638c29078d2a8d131ae949af0c2948b2deb527745746bd6f647f7f"
+    sha256                               arm64_sequoia: "0f774f0df1638c29078d2a8d131ae949af0c2948b2deb527745746bd6f647f7f"
+    sha256                               arm64_sonoma:  "0f774f0df1638c29078d2a8d131ae949af0c2948b2deb527745746bd6f647f7f"
+    sha256 cellar: :any_skip_relocation, sonoma:        "7796f54fa9b25691e67939d3ca6731a11e6fb936a25993e064b30883f86788bd"
+    sha256                               arm64_linux:   "d00dd7d9bc8848fe4ba8066ed7d647c206c3fa0314b71d3d25b2ac599dd02a3b"
+    sha256                               x86_64_linux:  "2666690efa5e34768549757bea239b2e55950ed713fd564018a030e77b5788dd"
   end
 
   depends_on "go" => :build

@@ -6,12 +6,12 @@ class Scooter < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "85be54bf201ca92bf50cf958310afe006f7534df6405d081175b18fdb64e452a"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "1659211605d243bd3b11615a35b1ecebe30ea636964e2a49a9be9249546b9a13"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "f0bdb621199b0bb673765f018ec85bb759cfb5f847163d1f54336b8c2b3cdae0"
-    sha256 cellar: :any_skip_relocation, sonoma:        "365593febe47b04e5347cc9b3ba4525292d7f7da24480b057f7842e93f843bff"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "db0bfc1a4b9df236a37982fd40990814afa20985463009857a42edd2270e84fd"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "7d44630b28af8068c15c037ac324af5a5edadefe2e796352e91b570e36e43ba1"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "10b632d61cf600afe40726ab3fc6b9cbef070dd39363ddbd1e4235072bfd7563"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "4ebc8812c6c8695dd7a7506ba895562649717ec50e8d4f4db73034bfdfb8712e"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "d465d494109ae528a34758bfc44d0f4989215abfec3b54c6ec1795269884f008"
+    sha256 cellar: :any_skip_relocation, sonoma:        "121ac5306d296c22ac21cf75d1aee4a8599c560b1c7c0fe112f7a8f4d6c16677"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "298472651f6f36cce3abe6a522854e30a950bc1c1b27f793932dbbe76ffcee76"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "b1c919f6e7bc92fc84aa9a98c356b625711ecf1e707e1929cbe3212b7f2b5cb8"
   end
 
   depends_on "rust" => :build

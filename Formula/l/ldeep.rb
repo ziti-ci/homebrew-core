@@ -17,8 +17,8 @@ class Ldeep < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "a7614508aaa8f5c4aacba8d7549938652e1f627eb510e1a016305ef6e14ca02c"
   end
 
-  depends_on "cryptography"
-  depends_on "python@3.13"
+  depends_on "cryptography" => :no_linkage
+  depends_on "python@3.14"
 
   uses_from_macos "krb5"
 
@@ -43,8 +43,8 @@ class Ldeep < Formula
   end
 
   resource "gssapi" do
-    url "https://files.pythonhosted.org/packages/72/c8/90912e90208bd20ed9384f299384cc9ee8f354758bd8650155eba33d4655/gssapi-1.10.0.tar.gz"
-    sha256 "f1495e0dc20bee3ad2839724d98ae723c7dae78c1ddea37a7c861c3c4bd77763"
+    url "https://files.pythonhosted.org/packages/b7/bf/95eed332e3911e2b113ceef5e6b0da807b22e45dbf897d8371e83b0a4958/gssapi-1.10.1.tar.gz"
+    sha256 "7b54335dc9a3c55d564624fb6e25fcf9cfc0b80296a5c51e9c7cf9781c7d295b"
   end
 
   resource "ldap3-bleeding-edge" do
@@ -88,6 +88,10 @@ class Ldeep < Formula
   end
 
   def install
+    # Unpin python for 3.14
+    # Issue ref: https://github.com/franc-pentest/ldeep/issues/143
+    inreplace "pyproject.toml", 'requires-python = ">=3.8.1,<3.14"', 'requires-python = ">=3.8.1"'
+
     virtualenv_install_with_resources
   end
 

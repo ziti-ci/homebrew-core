@@ -3,8 +3,8 @@ class Datalad < Formula
 
   desc "Data distribution geared toward scientific datasets"
   homepage "https://www.datalad.org"
-  url "https://files.pythonhosted.org/packages/e8/ef/a22547a720692171574ee5660eb70fcdd34a336c918d47baec6edd48e0b5/datalad-1.2.1.tar.gz"
-  sha256 "4d9f7ffe7a8a7b7eced97ba3d2d2257d527d4218c73ddf7e74eb343cf970d925"
+  url "https://files.pythonhosted.org/packages/14/6b/6788f64f89d05cb58865c635162b8bb2ec991f026fb37921f6a420f49eeb/datalad-1.2.2.tar.gz"
+  sha256 "df98d91004c1189ca22b0883d26946bd581b76b7bd08bede27acb9a00e5b8a8c"
   license "MIT"
   head "https://github.com/datalad/datalad.git", branch: "maint"
 
@@ -35,13 +35,13 @@ class Datalad < Formula
   end
 
   resource "boto3" do
-    url "https://files.pythonhosted.org/packages/70/02/d3ee174681961dc2ebfe81f326e1b5e1ba338b7ff939e1e94eef76e7c65a/boto3-1.40.51.tar.gz"
-    sha256 "ed1b7750df07b2f2ece0141ff2ed0489db2ec2b5311a956d00a496b05fd4fadb"
+    url "https://files.pythonhosted.org/packages/a0/5a/8ba08c979926326d961e2384d994d789a2eda3ed281bb6cb333b36e92310/boto3-1.40.52.tar.gz"
+    sha256 "96ee720b52be647d8ef5ba92fccfce6b65d6321769430fe6edd10d57ec43c25b"
   end
 
   resource "botocore" do
-    url "https://files.pythonhosted.org/packages/ca/33/9e197d872adf1eadf8ecc259d0f451143326ff044d236b8971ff8bf980ee/botocore-1.40.51.tar.gz"
-    sha256 "a06de20408c3009e59e8f161a1146f1801d279d0923ab950349154900951bb20"
+    url "https://files.pythonhosted.org/packages/83/74/3449d77c002d82586786b91dff6dd2e6fd52c5cdc1793d1ac7ea690ea52c/botocore-1.40.52.tar.gz"
+    sha256 "b65d970ca4ccd869639332083da17c3a933bcf495120dcc4f5c7723cb3f6216c"
   end
 
   resource "chardet" do
@@ -50,8 +50,8 @@ class Datalad < Formula
   end
 
   resource "charset-normalizer" do
-    url "https://files.pythonhosted.org/packages/83/2d/5fd176ceb9b2fc619e63405525573493ca23441330fcdaee6bef9460e924/charset_normalizer-3.4.3.tar.gz"
-    sha256 "6fce4b8500244f6fcb71465d4a4930d132ba9ab8e71a7859e6a5d59851068d14"
+    url "https://files.pythonhosted.org/packages/13/69/33ddede1939fdd074bce5434295f38fae7136463422fe4fd3e0e89b98062/charset_normalizer-3.4.4.tar.gz"
+    sha256 "94537985111c35f28720e43603b8e7b43a6ecfb2ce1d3058bbe955b73404e21a"
   end
 
   resource "distro" do
@@ -65,8 +65,8 @@ class Datalad < Formula
   end
 
   resource "humanize" do
-    url "https://files.pythonhosted.org/packages/98/1d/3062fcc89ee05a715c0b9bfe6490c00c576314f27ffee3a704122c6fd259/humanize-4.13.0.tar.gz"
-    sha256 "78f79e68f76f0b04d711c4e55d32bebef5be387148862cb1ef83d2b58e7935a0"
+    url "https://files.pythonhosted.org/packages/b6/43/50033d25ad96a7f3845f40999b4778f753c3901a11808a584fed7c00d9f5/humanize-4.14.0.tar.gz"
+    sha256 "2fa092705ea640d605c435b1ca82b2866a1b601cdf96f076d70b79a855eba90d"
   end
 
   resource "idna" do
@@ -135,8 +135,8 @@ class Datalad < Formula
   end
 
   resource "patool" do
-    url "https://files.pythonhosted.org/packages/93/c7/f9d5c6f9c51433d95399e40c9dd214f2b44bdcb79cbbd86028f55535725e/patool-4.0.1.tar.gz"
-    sha256 "41f7ee21be337a5baf07b2cb4796e9d94397ab741d2379c622f98fc001099802"
+    url "https://files.pythonhosted.org/packages/26/3e/9537c0921cddfb84f786ad6808d7b9edcee1cf606a53d0d7272fb27487d5/patool-4.0.2.tar.gz"
+    sha256 "e7f62d222f4a8a6c48dbfb38056dc7f9e5778ccc07c1f16d9653a316812f83ba"
   end
 
   resource "platformdirs" do

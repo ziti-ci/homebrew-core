@@ -27,7 +27,7 @@ class Halide < Formula
   depends_on "libpng"
   depends_on "lld"
   depends_on "llvm"
-  depends_on "python@3.13"
+  depends_on "python@3.14"
   depends_on "wabt"
 
   on_macos do
@@ -35,7 +35,7 @@ class Halide < Formula
   end
 
   def python3
-    "python3.13"
+    "python3.14"
   end
 
   def install

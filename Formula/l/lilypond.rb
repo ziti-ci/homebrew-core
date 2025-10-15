@@ -55,7 +55,7 @@ class Lilypond < Formula
   depends_on "glib"
   depends_on "guile"
   depends_on "pango"
-  depends_on "python@3.13"
+  depends_on "python@3.14"
 
   uses_from_macos "flex" => :build
   uses_from_macos "perl" => :build

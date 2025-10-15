@@ -78,7 +78,7 @@ class Ledger < Formula
   depends_on "gpgme"
   depends_on "gpgmepp"
   depends_on "mpfr"
-  depends_on "python@3.13"
+  depends_on "python@3.14"
 
   uses_from_macos "mandoc" => :build
   uses_from_macos "libedit"
@@ -100,7 +100,7 @@ class Ledger < Formula
       end
     end
 
-    ENV.prepend_path "PATH", Formula["python@3.13"].opt_libexec/"bin"
+    ENV.prepend_path "PATH", Formula["python@3.14"].opt_libexec/"bin"
 
     args = %W[
       --jobs=#{ENV.make_jobs}

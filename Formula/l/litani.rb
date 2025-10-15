@@ -9,14 +9,12 @@ class Litani < Formula
   license "Apache-2.0"
 
   bottle do
-    rebuild 4
-    sha256 cellar: :any,                 arm64_tahoe:   "1a69906fafb4f4289f3c2ca0a938334648d92b6863fe98f04674de2c3cec8e23"
-    sha256 cellar: :any,                 arm64_sequoia: "676d02c0c841d8cdc51aec96856046bebcae3ab16964e0c87db010854e0693b3"
-    sha256 cellar: :any,                 arm64_sonoma:  "b0f81f3f3209d4e7734802ccc252c2e24fc60a744c3abb8240c57633fd8c1dd9"
-    sha256 cellar: :any,                 arm64_ventura: "e715dee1f738cefc1bfd130c464c9ef91788ff16b53a48ac53c5fe7d20e74fbb"
-    sha256 cellar: :any,                 sonoma:        "aa8fe441a8999774f2d3b0d26e1c0b94b1572ff439de16767d3f825a282f7ace"
-    sha256 cellar: :any,                 ventura:       "91594078221ca286cb43744cf228b1d727641fdbe4a21b85dad430bc3aa24031"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "d9deebc99467682582aeb8c6dd2465f98363a06cfde6e1375c08b9b547c422d3"
+    rebuild 5
+    sha256 cellar: :any,                 arm64_tahoe:   "9759632a6582af9013d067c4461d07a5cd713405b2325593dcbbcd80dba1dee5"
+    sha256 cellar: :any,                 arm64_sequoia: "e90d4268066cfc34e1324f2b65fbc83ebd8b2c13727a8e5bb9fe2720fd7335bc"
+    sha256 cellar: :any,                 arm64_sonoma:  "d3e1a4ef297c94137c6ee223fa246f89c45b11a2dd92a3778415efb923f8ec08"
+    sha256 cellar: :any,                 sonoma:        "aa07f4bd06cfef36b6c1aeb00f0399dde3a5f2757905891ca77ba4ffaca0127e"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "0331320a1a3ab0d6b7564b35460c0b455824aaadc7f9d0f757c73aee894e71c2"
   end
 
   depends_on "coreutils" => :build

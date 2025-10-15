@@ -7,6 +7,14 @@ class Nox < Formula
   sha256 "2f839d2b071a54ede549f59ff7017c3752b636f7a10f6cbe3d7dedfe4c7d3ce8"
   license "Apache-2.0"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "a7073f5ca7b40ff797b5ecf07c95850750752d06c771e8b5add6c68806e85b90"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "1f76001ca9eab5d88f5d5f5d297e63c65b19769826d8aae7014b6fd025ee724d"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "8640481d3ac7d29c915401af532a2badacd74854ded3fff2a0111e4b160741b2"
+    sha256 cellar: :any_skip_relocation, sonoma:        "0cafc0cfd539a391501e1cbac75ce9a12c41a68a2c27540771fd52dbb4245cbb"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "86372cc56d90a8d382d989be53c2890670d1c8b9dcc90998b6654a9e6428694d"
+  end
+
   depends_on "certifi" => :no_linkage
   depends_on "python@3.14"
 

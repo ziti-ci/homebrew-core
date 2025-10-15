@@ -3,8 +3,8 @@ class Hatch < Formula
 
   desc "Modern, extensible Python project management"
   homepage "https://hatch.pypa.io/latest/"
-  url "https://files.pythonhosted.org/packages/04/7a/6ad202db77fc02f2368836604942926b57db6c5b76808ac1a2b1874f0bcd/hatch-1.14.2.tar.gz"
-  sha256 "b522c7463198c6e24bd9d9c83252327502e3cc3509844141de0aad7b0aa1967d"
+  url "https://files.pythonhosted.org/packages/45/ae/95e5ee8affdded894a5174e72cc22ef24ed7cae77f8462e756f620f1407a/hatch-1.15.0.tar.gz"
+  sha256 "c687fb8ab2a9fa2ebdb4689823e6ab9f6eb21943426310cad60f650cec14acd9"
   license "MIT"
 
   bottle do
@@ -92,6 +92,11 @@ class Hatch < Formula
     sha256 "cfd13ad0dd2c47a3600b439ef72d8615d482cedcff1632930d6f28924d92f294"
   end
 
+  resource "jeepney" do
+    url "https://files.pythonhosted.org/packages/7b/6f/357efd7602486741aa73ffc0617fb310a29b588ed0fd69c2399acbb85b0c/jeepney-0.9.0.tar.gz"
+    sha256 "cf0e9e845622b81e4a28df94c40345400256ec608d0e55bb8a3feaa9163f5732"
+  end
+
   resource "keyring" do
     url "https://files.pythonhosted.org/packages/70/09/d904a6e96f76ff214be59e7aa6ef7190008f52a0ab6689760a98de0bf37d/keyring-25.6.0.tar.gz"
     sha256 "0b39998aa941431eb3d9b0d4b2460bc773b9df6fed7621c2dfb291a7e0187a66"
@@ -150,6 +155,11 @@ class Hatch < Formula
   resource "rich" do
     url "https://files.pythonhosted.org/packages/fb/d2/8920e102050a0de7bfabeb4c4614a49248cf8d5d7a8d01885fbb24dc767a/rich-14.2.0.tar.gz"
     sha256 "73ff50c7c0c1c77c8243079283f4edb376f0f6442433aecb8ce7e6d0b92d1fe4"
+  end
+
+  resource "secretstorage" do
+    url "https://files.pythonhosted.org/packages/31/9f/11ef35cf1027c1339552ea7bfe6aaa74a8516d8b5caf6e7d338daf54fd80/secretstorage-3.4.0.tar.gz"
+    sha256 "c46e216d6815aff8a8a18706a2fbfd8d53fcbb0dce99301881687a1b0289ef7c"
   end
 
   resource "shellingham" do

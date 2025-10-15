@@ -1,8 +1,8 @@
 class Xk6 < Formula
   desc "Build k6 with extensions"
   homepage "https://k6.io"
-  url "https://github.com/grafana/xk6/archive/refs/tags/v1.2.1.tar.gz"
-  sha256 "fcb6f27d8c8458854f9d5c76771cd8633b6b0867d6092428c6ae7b5c6d880ad1"
+  url "https://github.com/grafana/xk6/archive/refs/tags/v1.2.2.tar.gz"
+  sha256 "32b6b7c5cdea86cf59b909d0a2be47a00b37cbef3e242842f4eb6aacf7b28fac"
   license "Apache-2.0"
   head "https://github.com/grafana/xk6.git", branch: "master"
 
@@ -32,7 +32,12 @@ class Xk6 < Formula
     assert_match "xk6 version #{version}", shell_output("#{bin}/xk6 version")
     assert_match "xk6 has now produced a new k6 binary", shell_output("#{bin}/xk6 build")
     system bin/"xk6", "new", "github.com/grafana/xk6-testing"
-    chdir "xk6-testing" do
+    cd "xk6-testing" do
+      system "git", "init"
+      system "git", "add", "."
+      system "git", "commit", "-m", "init commit"
+      system "git", "tag", "v0.0.1"
+
       lint_output = shell_output("#{bin}/xk6 lint")
       assert_match "✔ security", lint_output
       assert_match "✔ vulnerability", lint_output

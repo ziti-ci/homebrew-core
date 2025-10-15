@@ -21,19 +21,20 @@ class LtexLs < Formula
   end
 
   depends_on "maven" => :build
-  depends_on "python@3.13" => :build
-  depends_on "openjdk"
+  depends_on "python@3.14" => :build
+  # Do not bump, 25+ is not working with an error: java.lang.IllegalArgumentException: 25
+  depends_on "openjdk@21"
 
   def install
     # Fix build with `openjdk` 20.
     # Reported upstream at https://github.com/valentjn/ltex-ls/issues/244.
     inreplace "pom.xml", "<arg>-Werror</arg>", ""
 
-    ENV.prepend_path "PATH", Formula["python@3.13"].opt_libexec/"bin"
-    ENV["JAVA_HOME"] = Language::Java.java_home
+    ENV.prepend_path "PATH", Formula["python@3.14"].opt_libexec/"bin"
+    ENV["JAVA_HOME"] = Language::Java.java_home(Formula["openjdk@21"].version.major.to_s)
     ENV["TMPDIR"] = buildpath
 
-    system "python3.13", "-u", "tools/createCompletionLists.py"
+    system "python3.14", "-u", "tools/createCompletionLists.py"
 
     system "mvn", "-B", "-e", "-DskipTests", "package"
 
@@ -48,7 +49,7 @@ class LtexLs < Formula
 
     # Fix run with `openjdk` 24.
     # Reported upstream at https://github.com/valentjn/ltex-ls/issues/322.
-    envs = Language::Java.overridable_java_home_env.merge({
+    envs = Language::Java.overridable_java_home_env("21").merge({
       "JAVA_OPTS" => "${JAVA_OPTS:--Djdk.xml.totalEntitySizeLimit=50000000}",
     })
     bin.env_script_all_files libexec/"bin", envs

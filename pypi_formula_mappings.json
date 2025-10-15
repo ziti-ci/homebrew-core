@@ -551,6 +551,9 @@
     "exclude_packages": ["cryptography"],
     "extra_packages": ["jeepney", "secretstorage"]
   },
+  "langgraph-cli": {
+    "exclude_packages": ["certifi"]
+  },
   "ldeep": {
     "exclude_packages": ["cryptography"]
   },

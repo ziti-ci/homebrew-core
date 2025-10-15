@@ -3,8 +3,8 @@ class AwsSamCli < Formula
 
   desc "CLI tool to build, test, debug, and deploy Serverless applications using AWS SAM"
   homepage "https://aws.amazon.com/serverless/sam/"
-  url "https://files.pythonhosted.org/packages/3d/bf/180d48e2ce509ff84970a7ca2a68510b7e43d504d98b591508fe2dff7e8c/aws_sam_cli-1.145.0.tar.gz"
-  sha256 "e23bb15dc22ea4e9f799d9f8cfd183ca3bfc09ea0f504d11c471bd297f82e631"
+  url "https://files.pythonhosted.org/packages/19/79/c33c8d9f5544a6d8a190919dcff68a3ee38625b05ec6e4277b6bd614bf8e/aws_sam_cli-1.145.1.tar.gz"
+  sha256 "5799740d9e8c033986c9e66db35a4f2c5ae4bc0682302727147fdb0894ee05da"
   license "Apache-2.0"
 
   bottle do
@@ -61,8 +61,8 @@ class AwsSamCli < Formula
   end
 
   resource "boto3" do
-    url "https://files.pythonhosted.org/packages/a0/5a/8ba08c979926326d961e2384d994d789a2eda3ed281bb6cb333b36e92310/boto3-1.40.52.tar.gz"
-    sha256 "96ee720b52be647d8ef5ba92fccfce6b65d6321769430fe6edd10d57ec43c25b"
+    url "https://files.pythonhosted.org/packages/d2/4c/9c4d855d05d1c2c42a889feee3aa91fa4bee7d5c4a6d67a0c38194dc4ae4/boto3-1.40.53.tar.gz"
+    sha256 "3f8cf56034cfde20dd0abca01349f64ab65734d90c3fbf7357e8a84cb64a62ee"
   end
 
   resource "boto3-stubs" do
@@ -71,13 +71,13 @@ class AwsSamCli < Formula
   end
 
   resource "botocore" do
-    url "https://files.pythonhosted.org/packages/83/74/3449d77c002d82586786b91dff6dd2e6fd52c5cdc1793d1ac7ea690ea52c/botocore-1.40.52.tar.gz"
-    sha256 "b65d970ca4ccd869639332083da17c3a933bcf495120dcc4f5c7723cb3f6216c"
+    url "https://files.pythonhosted.org/packages/c7/bd/c569fc1705188f6302775bff551fbb68dd23b41bfd068933feee3ad4867d/botocore-1.40.53.tar.gz"
+    sha256 "4ebb9e6648c4896d3f0cdda5ff30b5de9a83aeb591be89a16f98cc5ee3cd371c"
   end
 
   resource "botocore-stubs" do
-    url "https://files.pythonhosted.org/packages/70/e5/a3a7ad9b45e6612989bb52dd1b586a2e2b9539ce5b097c15d15a6b0d54cb/botocore_stubs-1.40.52.tar.gz"
-    sha256 "9e9809e563eb2c925051d849257bdc7605760bcbb62b3d5fe3117f9385345488"
+    url "https://files.pythonhosted.org/packages/e9/e9/eb177f3e2fd2f133a98db76709ff79884446f7a6fa89fe924d686eca5449/botocore_stubs-1.40.53.tar.gz"
+    sha256 "c5cba2e1f1fb4b41945a73cdf999a5444481e4ad009ca54d2c0d96b0f473522f"
   end
 
   resource "cfn-lint" do

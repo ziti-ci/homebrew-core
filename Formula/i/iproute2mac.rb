@@ -14,7 +14,7 @@ class Iproute2mac < Formula
   end
 
   depends_on :macos
-  depends_on "python@3.13"
+  depends_on "python@3.14"
 
   def install
     libexec.install "src/iproute2mac.py"

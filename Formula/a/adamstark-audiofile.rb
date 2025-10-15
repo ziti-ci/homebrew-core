@@ -1,8 +1,8 @@
 class AdamstarkAudiofile < Formula
   desc "C++ Audio File Library by Adam Stark"
   homepage "https://github.com/adamstark/AudioFile"
-  url "https://github.com/adamstark/AudioFile/archive/refs/tags/1.1.3.tar.gz"
-  sha256 "abc22bbe798cb552048485ce19278f35f587340bf0d5c68ac0028505eaf70dfe"
+  url "https://github.com/adamstark/AudioFile/archive/refs/tags/1.1.4.tar.gz"
+  sha256 "e3749f90a9356b5206ef8928fa0a9c039e7db49e46bb7f32c3963d6c44c5bea8"
   license "MIT"
   head "https://github.com/adamstark/AudioFile.git", branch: "master"
 

@@ -566,7 +566,7 @@
     "extra_packages": ["jinja2", "markupsafe", "pyyaml"]
   },
   "litecli": {
-    "exclude_packages": ["setuptools"]
+    "exclude_packages": ["certifi", "setuptools"]
   },
   "literate-git": {
     "exclude_packages": ["pygit2"]

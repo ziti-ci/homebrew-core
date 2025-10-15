@@ -17,11 +17,11 @@ class I2cTools < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux: "d20107422ff757ff511d2a8099bb04f96cba86e4a0a81081efe7a7c49d02b118"
   end
 
-  depends_on "python@3.13" => [:build, :test]
+  depends_on "python@3.14" => [:build, :test]
   depends_on :linux
 
   def python3
-    "python3.13"
+    "python3.14"
   end
 
   def install

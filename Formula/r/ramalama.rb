@@ -3,8 +3,8 @@ class Ramalama < Formula
 
   desc "Goal of RamaLama is to make working with AI boring"
   homepage "https://github.com/containers/ramalama"
-  url "https://files.pythonhosted.org/packages/50/ae/851f7ac73052be022c35a6df560877d57ad289bfc774b479e7bd549ed6d2/ramalama-0.12.4.tar.gz"
-  sha256 "789dfac29ea429533f383ab15c662265b23e31891360e1650c0dcc982f645645"
+  url "https://files.pythonhosted.org/packages/c0/36/c246b8a9f08ee3aa7d3012733a17829c242f044b6bc6b2f81a5b196eb289/ramalama-0.13.0.tar.gz"
+  sha256 "1d69b179c19f33bac7c4910d70949796a059ce4977538448ddf33c4f7549ef93"
   license "MIT"
 
   bottle do
@@ -58,8 +58,8 @@ class Ramalama < Formula
   end
 
   resource "referencing" do
-    url "https://files.pythonhosted.org/packages/2f/db/98b5c277be99dd18bfd91dd04e1b759cad18d1a338188c936e92f921c7e2/referencing-0.36.2.tar.gz"
-    sha256 "df2e89862cd09deabbdba16944cc3f10feb6b3e6f18e902f7cc25609a34775aa"
+    url "https://files.pythonhosted.org/packages/22/f5/df4e9027acead3ecc63e50fe1e36aca1523e1719559c499951bb4b53188f/referencing-0.37.0.tar.gz"
+    sha256 "44aefc3142c5b842538163acb373e24cce6632bd54bdb01b21ad5863489f50d8"
   end
 
   def install

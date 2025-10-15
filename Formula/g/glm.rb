@@ -1,8 +1,8 @@
 class Glm < Formula
   desc "C++ mathematics library for graphics software"
   homepage "https://glm.g-truc.net/"
-  url "https://github.com/g-truc/glm/archive/refs/tags/1.0.1.tar.gz"
-  sha256 "9f3174561fd26904b23f0db5e560971cbf9b3cbda0b280f04d5c379d03bf234c"
+  url "https://github.com/g-truc/glm/archive/refs/tags/1.0.2.tar.gz"
+  sha256 "f972c5f02cd9fff4d76351268d5ea62518c8972e1e9de5d1dd4910261b50ef54"
   # GLM is licensed under The Happy Bunny License or MIT License
   license "MIT"
   head "https://github.com/g-truc/glm.git", branch: "master"
@@ -27,12 +27,6 @@ class Glm < Formula
 
   depends_on "cmake" => :build
   depends_on "doxygen" => :build
-
-  # Fix deprecated attribute handling with older Clang versions
-  patch do
-    url "https://github.com/g-truc/glm/commit/c00e7251e699dfb6ca61935b5a1fb0495093269a.patch?full_index=1"
-    sha256 "fba2d342643c4fcf586ed0da073c36d829a56bd41e04d9f63d9e06d2fc9777db"
-  end
 
   def install
     args = %w[

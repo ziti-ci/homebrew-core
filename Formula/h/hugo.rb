@@ -1,8 +1,8 @@
 class Hugo < Formula
   desc "Configurable static site generator"
   homepage "https://gohugo.io/"
-  url "https://github.com/gohugoio/hugo/archive/refs/tags/v0.151.0.tar.gz"
-  sha256 "b41d6e3da741c8d5637e016a1fa98f36e47dbfa9e213ff2d73ced66fb5b770ea"
+  url "https://github.com/gohugoio/hugo/archive/refs/tags/v0.151.1.tar.gz"
+  sha256 "7750d644c5ea762ba400001d753a9d37dc4f1467ca470f01cffff2b2a87c9232"
   license "Apache-2.0"
   head "https://github.com/gohugoio/hugo.git", branch: "master"
 
@@ -23,6 +23,9 @@ class Hugo < Formula
   depends_on "go" => :build
 
   def install
+    # Needs CGO (which is disabled by default on Linux Arm)
+    ENV["CGO_ENABLED"] = "1" if OS.linux? && Hardware::CPU.arm?
+
     ldflags = %W[
       -s -w
       -X github.com/gohugoio/hugo/common/hugo.commitHash=#{tap.user}

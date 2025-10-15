@@ -1,8 +1,8 @@
 class McpGrafana < Formula
   desc "MCP server for Grafana"
   homepage "https://github.com/grafana/mcp-grafana"
-  url "https://github.com/grafana/mcp-grafana/archive/refs/tags/v0.7.3.tar.gz"
-  sha256 "cae77d9958adb2f1db95d2d9711d1559760bbd2124aceaf749981e39fd318a47"
+  url "https://github.com/grafana/mcp-grafana/archive/refs/tags/v0.7.4.tar.gz"
+  sha256 "800c4709282c0794e85945647bdc3596000a8d68dd52027d2054c4a058ea3bda"
   license "Apache-2.0"
   head "https://github.com/grafana/mcp-grafana.git", branch: "main"
 

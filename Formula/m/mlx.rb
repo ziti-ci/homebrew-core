@@ -9,6 +9,7 @@ class Mlx < Formula
     "MIT", # main license
     "Apache-2.0", # metal-cpp resource
   ]
+  revision 1
   head "https://github.com/ml-explore/mlx.git", branch: "main"
 
   bottle do
@@ -26,7 +27,7 @@ class Mlx < Formula
   depends_on "robin-map" => :build
   depends_on :macos
   depends_on macos: :ventura
-  depends_on "python@3.13"
+  depends_on "python@3.14"
 
   on_arm do
     depends_on xcode: ["15.0", :build] # for metal
@@ -52,7 +53,7 @@ class Mlx < Formula
   end
 
   def python3
-    "python3.13"
+    "python3.14"
   end
 
   def install

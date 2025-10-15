@@ -9,12 +9,12 @@ class Moor < Formula
   no_autobump! because: :bumped_by_upstream
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "7ac1abbbcae8cd7c3cd655474bc1dee3f4b5bba57e8dc50aaa65144f5216a31d"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "7ac1abbbcae8cd7c3cd655474bc1dee3f4b5bba57e8dc50aaa65144f5216a31d"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "7ac1abbbcae8cd7c3cd655474bc1dee3f4b5bba57e8dc50aaa65144f5216a31d"
-    sha256 cellar: :any_skip_relocation, sonoma:        "e0d241aadb14970b70d9394b817cbb29c2e177561f2fb8d41d9d8d0d714da46f"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "c29446716c06ec95ff5d6259d8518ad89b483df258715a50d9dfb79bad29907f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "ef6bfaf99e30ec6e3acb277b18391d9272e64ee02a34c0437dedab08604bb7e3"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "2b82c06f771c38a1b3f39d9f31eca15a2187d51c8682915611b82024a7502fa4"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "2b82c06f771c38a1b3f39d9f31eca15a2187d51c8682915611b82024a7502fa4"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "2b82c06f771c38a1b3f39d9f31eca15a2187d51c8682915611b82024a7502fa4"
+    sha256 cellar: :any_skip_relocation, sonoma:        "f3078bf5d5add1fd6f30ac6004f67aafe5d86cdc9a2b54478dc2b9e9aefa6b09"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "b9ea35c6f99de3ff3c913b76b71be9a51df607055bd8451b76641b5144fb6fde"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "f2abf24387d33debd945fb68733f9e3ab353ed7730ab30f6e2aee9d1eaa4af3d"
   end
 
   depends_on "go" => :build

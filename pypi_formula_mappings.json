@@ -661,6 +661,9 @@
   "notifiers": {
     "exclude_packages": ["certifi", "rpds-py"]
   },
+  "nox": {
+    "exclude_packages": ["certifi"]
+  },
   "nvchecker": "nvchecker[pypi]",
   "oci-cli": {
     "exclude_packages": ["certifi", "cryptography"]

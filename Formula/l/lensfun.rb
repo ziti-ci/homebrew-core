@@ -39,14 +39,14 @@ class Lensfun < Formula
   depends_on "pkgconf" => :build
   depends_on "glib"
   depends_on "libpng"
-  depends_on "python@3.13"
+  depends_on "python@3.14"
 
   on_macos do
     depends_on "gettext"
   end
 
   def python3
-    "python3.13"
+    "python3.14"
   end
 
   def install

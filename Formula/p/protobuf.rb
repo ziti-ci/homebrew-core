@@ -1,8 +1,8 @@
 class Protobuf < Formula
   desc "Protocol buffers (Google's data interchange format)"
   homepage "https://protobuf.dev/"
-  url "https://github.com/protocolbuffers/protobuf/releases/download/v32.1/protobuf-32.1.tar.gz"
-  sha256 "3feeabd077a112b56af52519bc4ece90e28b4583f4fc2549c95d765985e0fd3c"
+  url "https://github.com/protocolbuffers/protobuf/releases/download/v33.0/protobuf-33.0.tar.gz"
+  sha256 "7a796fd9a7947d51e098ebb065d8f8b45ea0ac313ac89cc083456b3005329a1a"
   license "BSD-3-Clause"
 
   livecheck do
@@ -23,13 +23,6 @@ class Protobuf < Formula
   depends_on "googletest" => :build
   depends_on "abseil"
   uses_from_macos "zlib"
-
-  # Apply open PR to fix CRC32 usage on arm64 linux
-  # https://github.com/protocolbuffers/protobuf/pull/23164
-  patch do
-    url "https://github.com/protocolbuffers/protobuf/commit/1cd12a573b8d629ae69f6123e24db5c71e92e18c.patch?full_index=1"
-    sha256 "b1676b4c8a4a20dec9a7c0fe2c6e10ccf35673d6f3f6dce1ef303f37d0a0aa5b"
-  end
 
   def install
     # Keep `CMAKE_CXX_STANDARD` in sync with the same variable in `abseil.rb`.

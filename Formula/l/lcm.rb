@@ -28,10 +28,10 @@ class Lcm < Formula
   depends_on "glib"
   depends_on "lua"
   depends_on "openjdk"
-  depends_on "python@3.13"
+  depends_on "python@3.14"
 
   def python3
-    which("python3.13")
+    which("python3.14")
   end
 
   def install

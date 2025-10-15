@@ -22,7 +22,7 @@ class Ktoblzcheck < Formula
   end
 
   depends_on "cmake" => :build
-  depends_on "python@3.13"
+  depends_on "python@3.14"
   depends_on "sqlite"
 
   uses_from_macos "curl"
@@ -44,7 +44,7 @@ class Ktoblzcheck < Formula
   end
 
   def python3
-    "python3.13"
+    "python3.14"
   end
 
   def install

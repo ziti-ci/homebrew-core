@@ -1,8 +1,8 @@
 class HelmLs < Formula
   desc "Language server for Helm"
   homepage "https://github.com/mrjosh/helm-ls"
-  url "https://github.com/mrjosh/helm-ls/archive/refs/tags/v0.5.1.tar.gz"
-  sha256 "b00eff8853b33d12d0e2b02e49a5a63e1273ff4decaf63ca2afbe066a12d4f0b"
+  url "https://github.com/mrjosh/helm-ls/archive/refs/tags/v0.5.2.tar.gz"
+  sha256 "c3884704cbe556b7092929111a9791e290afe75fc3f6ecee7ff21f7794f85101"
   license "MIT"
   head "https://github.com/mrjosh/helm-ls.git", branch: "master"
 
@@ -18,6 +18,8 @@ class HelmLs < Formula
   depends_on "go" => :build
 
   def install
+    ENV["CGO_ENABLED"] = "1" if OS.linux? && Hardware::CPU.arm?
+
     ldflags = %W[
       -s -w
       -X main.Version=#{version}

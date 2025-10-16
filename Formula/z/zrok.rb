@@ -1,8 +1,8 @@
 class Zrok < Formula
   desc "Geo-scale, next-generation sharing platform built on top of OpenZiti"
   homepage "https://zrok.io"
-  url "https://github.com/openziti/zrok/releases/download/v1.1.8/source-v1.1.8.tar.gz"
-  sha256 "d0b82199ea0e92e1e7a628e63405f0adee3857009730a355db90f428d4a53dbe"
+  url "https://github.com/openziti/zrok/releases/download/v1.1.9/source-v1.1.9.tar.gz"
+  sha256 "b0c0aed2bf78df89f57a505006d9edd5b67a9c041a348b50a68d0c640800d6e8"
   # The main license is Apache-2.0. ACKNOWLEDGEMENTS.md lists licenses for parts of code
   license all_of: ["Apache-2.0", "BSD-3-Clause", "MIT"]
   head "https://github.com/openziti/zrok.git", branch: "main"
@@ -55,6 +55,6 @@ class Zrok < Formula
     assert_match(/[[a-f0-9]{40}]/, version_output)
 
     status_output = shell_output("#{bin}/zrok controller validate #{testpath}/ctrl.yml 2>&1")
-    assert_match("expiration_timeout = 24h0m0s", status_output)
+    assert_match(/expiration_timeout\s+:\s+24h0m0s/, status_output)
   end
 end

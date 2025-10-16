@@ -4,6 +4,7 @@ class Rlwrap < Formula
   url "https://github.com/hanslub42/rlwrap/archive/refs/tags/v0.47.1.tar.gz"
   sha256 "944bc0e4812e61b2b7c4cd17b1b37b41325deffa0b84192aff8c0eace1a5da4c"
   license "GPL-2.0-or-later"
+  revision 1
   head "https://github.com/hanslub42/rlwrap.git", branch: "master"
 
   livecheck do
@@ -24,13 +25,12 @@ class Rlwrap < Formula
 
   depends_on "autoconf" => :build
   depends_on "automake" => :build
+  depends_on "libptytty"
   depends_on "readline"
 
   def install
     system "autoreconf", "--force", "--install", "--verbose"
-
-    # TODO: add `libptytty` as a formula, there is a fallback for now
-    system "./configure", "--without-libptytty", *std_configure_args
+    system "./configure", *std_configure_args
     system "make", "install"
   end
 

@@ -6,8 +6,7 @@ class DockerfileLanguageServer < Formula
   license "MIT"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, all: "d93ccb51f69dcfaa89b2dcd54b62d468a053adc4c9ffe382e7e1aff58e402980"
+    sha256 cellar: :any_skip_relocation, all: "7e63595a7c55824a185f84aeef01ba0c0ad797c217fcbabd23a0990614ff7795"
   end
 
   depends_on "node"

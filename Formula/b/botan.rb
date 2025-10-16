@@ -4,6 +4,7 @@ class Botan < Formula
   url "https://botan.randombit.net/releases/Botan-3.9.0.tar.xz"
   sha256 "8c3f284b58ddd42e8e43e9fa86a7129d87ea7c3f776a80d3da63ec20722b0883"
   license "BSD-2-Clause"
+  revision 1
   head "https://github.com/randombit/botan.git", branch: "master"
 
   livecheck do
@@ -24,7 +25,7 @@ class Botan < Formula
 
   depends_on "pkgconf" => :build
   depends_on "ca-certificates"
-  depends_on "python@3.13"
+  depends_on "python@3.14"
   depends_on "sqlite"
 
   uses_from_macos "bzip2"
@@ -40,7 +41,7 @@ class Botan < Formula
   end
 
   def python3
-    which("python3.13")
+    which("python3.14")
   end
 
   def install

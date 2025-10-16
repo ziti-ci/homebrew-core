@@ -7,14 +7,12 @@ class Csvtk < Formula
   head "https://github.com/shenwei356/csvtk.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "e6fefa362ad2faa9abbb5c9b55b5fd6cc48f8bb4d5b37c576ec8abf8cbc4b7eb"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "fac1f71c7cd43fdf92ee9c4142af9df200117e097ba4e2c6b14610bd6f1f956e"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "fac1f71c7cd43fdf92ee9c4142af9df200117e097ba4e2c6b14610bd6f1f956e"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "fac1f71c7cd43fdf92ee9c4142af9df200117e097ba4e2c6b14610bd6f1f956e"
-    sha256 cellar: :any_skip_relocation, sonoma:        "f8aa4654478d26a028ff613490fa86e603ca73cedcab65d8680b9bef5ac4026d"
-    sha256 cellar: :any_skip_relocation, ventura:       "f8aa4654478d26a028ff613490fa86e603ca73cedcab65d8680b9bef5ac4026d"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "3445b7f132b1d5348b9486735e9456cf3025df4aac09a168c9050def50246e74"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "4cb6c6db444aad11c72af872e744a396562da0d2a27f08456b910354e2f18a2f"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "0ba1d0a8b8cc3fdbeb287117d25f6bdc0af13885f4a5b86720a74182410bee8a"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "0ba1d0a8b8cc3fdbeb287117d25f6bdc0af13885f4a5b86720a74182410bee8a"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "0ba1d0a8b8cc3fdbeb287117d25f6bdc0af13885f4a5b86720a74182410bee8a"
+    sha256 cellar: :any_skip_relocation, sonoma:        "85b122875a0c82ed4864a5a27276508bbf36dcff24487e124970749018fdd19e"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "c577606d627853521966817c24d4bdc5a24519288fde79de5079bc8f72c9bd8d"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "50207f4035d14dc12d0b0ca5f7acc39900d43c24a9b5c2cd31964c6b157c42e7"
   end
 
   depends_on "go" => :build

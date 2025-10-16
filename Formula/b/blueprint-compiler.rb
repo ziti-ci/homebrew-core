@@ -19,10 +19,10 @@ class BlueprintCompiler < Formula
 
   depends_on "gtk4"
   depends_on "pygobject3"
-  depends_on "python@3.13"
+  depends_on "python@3.14"
 
   def install
-    python3 = "python3.13"
+    python3 = "python3.14"
     venv = virtualenv_create(libexec, python3)
 
     system "meson", "setup", "build", "-Dpython.platlibdir=#{venv.site_packages}",

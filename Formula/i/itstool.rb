@@ -14,8 +14,8 @@ class Itstool < Formula
   no_autobump! because: :requires_manual_review
 
   bottle do
-    rebuild 5
-    sha256 cellar: :any_skip_relocation, all: "789a00622218d97cded8fbc0e82b043478c693b62f25a372769f4d0cd8eb7cb6"
+    rebuild 6
+    sha256 cellar: :any_skip_relocation, all: "6a85d08730bddc99c0d9b2aef09627193c8b7fcc432a5bdc64fd04da448ee2ad"
   end
 
   head do

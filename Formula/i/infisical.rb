@@ -1,18 +1,18 @@
 class Infisical < Formula
   desc "CLI for Infisical"
   homepage "https://infisical.com/docs/cli/overview"
-  url "https://github.com/Infisical/cli/archive/refs/tags/v0.43.8.tar.gz"
-  sha256 "e0e4a529f6b3ac11de9b9fb271f019e1681fd9dde86b7a2481e006d9dfcf1435"
+  url "https://github.com/Infisical/cli/archive/refs/tags/v0.43.9.tar.gz"
+  sha256 "49765d5e0b8aa399e6b4ff6695cd642c2346fb2c76a8730e9c9314c10e6e705c"
   license "MIT"
   head "https://github.com/Infisical/cli.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "8cdaf40d8c7a3756cd191472106d3163d76da7f8c1eb6b8059773d5ad63d6931"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "8cdaf40d8c7a3756cd191472106d3163d76da7f8c1eb6b8059773d5ad63d6931"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "8cdaf40d8c7a3756cd191472106d3163d76da7f8c1eb6b8059773d5ad63d6931"
-    sha256 cellar: :any_skip_relocation, sonoma:        "2f2f103eae9407d5016f935839e8cd986e768464a1e10ec6d7b07afb7586ca8c"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "6bca2dcddf82adf824f8199686fa7acfdf350390176606d174adac4ffdf77ab7"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "4644b259e8a61138366f3474d2e3a6a7f5ebcf59c434899dde84258d5629b4a3"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "465a5080910e91d3e1290b4a4f4c0adeb6ea7c98c0b3a108d33309a57af24317"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "465a5080910e91d3e1290b4a4f4c0adeb6ea7c98c0b3a108d33309a57af24317"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "465a5080910e91d3e1290b4a4f4c0adeb6ea7c98c0b3a108d33309a57af24317"
+    sha256 cellar: :any_skip_relocation, sonoma:        "9309990d6f4152aebce6ec6c1e488637cc9324c11e55fb95feb62b25056e7c92"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "0dc38d739753bef60d1308977a7916412a08bf97616e7544f9a9a9f64017a3f0"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "a31b6f4c7525e13923433aa57f0eb60b6d75e56d1498aa65c28039509b3efbbd"
   end
 
   depends_on "go" => :build

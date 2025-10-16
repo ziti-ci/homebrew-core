@@ -1,8 +1,8 @@
 class Kissat < Formula
   desc "Bare metal SAT solver"
   homepage "https://github.com/arminbiere/kissat"
-  url "https://github.com/arminbiere/kissat/archive/refs/tags/rel-4.0.3.tar.gz"
-  sha256 "53ad0c86a3854cdbf16e871599de4eaaaf33a039c1fd3460e43c89ae2a8a0971"
+  url "https://github.com/arminbiere/kissat/archive/refs/tags/rel-4.0.4.tar.gz"
+  sha256 "bfe93eaa6323b48011e4b1fcf74b3f2e20f9de544767e728009e5b2018296193"
   license "MIT"
 
   livecheck do

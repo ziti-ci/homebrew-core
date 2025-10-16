@@ -6,12 +6,12 @@ class Cliproxyapi < Formula
   license "MIT"
 
   bottle do
-    sha256                               arm64_tahoe:   "bb63b007795411c3a1168aecee9d1a15685c45ba1a303756378d935263fc40ff"
-    sha256                               arm64_sequoia: "bb63b007795411c3a1168aecee9d1a15685c45ba1a303756378d935263fc40ff"
-    sha256                               arm64_sonoma:  "bb63b007795411c3a1168aecee9d1a15685c45ba1a303756378d935263fc40ff"
-    sha256 cellar: :any_skip_relocation, sonoma:        "8ecfda19ae65351a801000855c6884fad213d9edf4df648fc5682a7e9abf75a3"
-    sha256                               arm64_linux:   "69cb9d107db5af0946be4b51fa1ce41f4fe6a9f5be25bca59a0cd73ed8344504"
-    sha256                               x86_64_linux:  "fb5ff0e233f8dfb1f4d7cb8f6aa140c28b383f48986297f2fc72ddfe99d82965"
+    sha256                               arm64_tahoe:   "68605004e42b7f8067150f240c80715375e24dfb8c59700e9f9b74916d37795f"
+    sha256                               arm64_sequoia: "68605004e42b7f8067150f240c80715375e24dfb8c59700e9f9b74916d37795f"
+    sha256                               arm64_sonoma:  "68605004e42b7f8067150f240c80715375e24dfb8c59700e9f9b74916d37795f"
+    sha256 cellar: :any_skip_relocation, sonoma:        "eb2c269975750eacbe7430f4cfbd5533798fcdffb968fb5b883c82c9aab36ec2"
+    sha256                               arm64_linux:   "1dcedd45e6acd0d0915e95e0223868918b45e9204ac454139a8f40d88ff559ce"
+    sha256                               x86_64_linux:  "54c73d359fa77206192e095852a510cafcddbf86766231661289976ae24f8cb8"
   end
 
   depends_on "go" => :build

@@ -35,7 +35,7 @@ class Vtk < Formula
   depends_on "proj"
   depends_on "pugixml"
   depends_on "pyqt"
-  depends_on "python@3.13"
+  depends_on "python@3.14"
   depends_on "qtbase"
   depends_on "qtdeclarative"
   depends_on "sqlite"
@@ -64,7 +64,7 @@ class Vtk < Formula
       ENV.remove "HOMEBREW_DEPENDENCIES", "expat"
     end
 
-    python = "python3.13"
+    python = "python3.14"
     qml_plugin_dir = lib/"qml/VTK.#{version.major_minor}"
     vtkmodules_dir = prefix/Language::Python.site_packages(python)/"vtkmodules"
     rpaths = [rpath, rpath(source: qml_plugin_dir), rpath(source: vtkmodules_dir)]

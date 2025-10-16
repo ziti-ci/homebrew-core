@@ -19,7 +19,7 @@ class Bazel < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "9cb748a775bdb587987c9976817b9be3f460e21ccf04c2ee020477611f036871"
   end
 
-  depends_on "python@3.13" => :build
+  depends_on "python@3.14" => :build
   depends_on "openjdk@21"
 
   uses_from_macos "unzip"

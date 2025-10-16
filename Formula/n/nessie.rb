@@ -6,12 +6,12 @@ class Nessie < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "84bce255a4dd7a1b9699c4529f4c101aad64ab46e038bace8193efadf056089c"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "a99c643012cb3f080b82a1796f3f94be8ffbaf023d33a6c3fb40f76ded278a05"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "fa1154a80be1bdf946d543097408cc4647c88c130e1a26b7c12d1084805d670c"
-    sha256 cellar: :any_skip_relocation, sonoma:        "3929082ae5daee37f336f38816af1ba82d83ef391e44243a069ecaf77149fb13"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "f0f2d0165fc7c25ee16f49d9998e6ba71394ebe29cf0cbfbd692ebdced81a680"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "3b504c7deca06c4b21ed1234103ceef293a5ac9554f1cc78ca82aec5c2752534"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "2bbcc7d0c6ba9649a6daa03db17f005d801748c856d9e626200689877c15f468"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "cb4ca38414a01fd65d35918d99da53f6568a31dc3bf82741d3e2d0bfadfb04fa"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "654bfd78e84d71c3507dd8ee5f375f5e41ca541eca6b59ddeca5d3501d9f4ff9"
+    sha256 cellar: :any_skip_relocation, sonoma:        "a0e286e0042669ca69299218cb60900b4d45560db7ffc4f570567a243f68deb6"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "fa93b49d080430974993e01ac05b0735f82745807ed9c8c093845c604223134a"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "b907f94f3b40465fd870c89bd8ffa209f8ebc713798222233e623669619f03ea"
   end
 
   depends_on "gradle@8" => :build

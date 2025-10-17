@@ -3,8 +3,8 @@ class Azqr < Formula
   homepage "https://azure.github.io/azqr/"
   # pull from git tag to get submodules
   url "https://github.com/Azure/azqr.git",
-      tag:      "v.2.10.1",
-      revision: "fa98f674ba626c40115afd569a12ecb7ef164a40"
+      tag:      "v.2.11.0",
+      revision: "2e3bd6ccbfad2af7952f308a982631e510227b41"
   license "MIT"
   head "https://github.com/Azure/azqr.git", branch: "main"
 

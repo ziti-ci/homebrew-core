@@ -10,14 +10,12 @@ class Memray < Formula
   no_autobump! because: "`update-python-resources` cannot update resource blocks"
 
   bottle do
-    sha256 cellar: :any,                 arm64_tahoe:   "cfa7ddf4a2e1c5fa3960a358f097217cce818f1f5a488d9945bcbbc466cc592e"
-    sha256 cellar: :any,                 arm64_sequoia: "cd0439fff78a5c49d5cea6e7321a9b7404991438c23776f681691867ade37f88"
-    sha256 cellar: :any,                 arm64_sonoma:  "b5ea82255520487810154a5cf20db5e833473c0174d88eba6eedf686335c2d23"
-    sha256 cellar: :any,                 arm64_ventura: "0a8536ebe247d7ed088dd1e5e954237ffd8f42f29ee3efea216e1fb769ce1ef2"
-    sha256 cellar: :any,                 sonoma:        "f34c00d0568b1a40f0d9cba6f4df8e17328033eecab665eff1497730f47d4a49"
-    sha256 cellar: :any,                 ventura:       "331c7c45f561009b4d04ff24802d9399628d535913fc29552c48f387ecf205c5"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "0c62e6340493f396a5c00d2fba19f8f38e2dec604b72aa482f6a2b337572e337"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "9226db594d6ed6bb4c2bd1501f8307a34a6b1e7395c70f4ed16e3bb63484d5ae"
+    sha256 cellar: :any,                 arm64_tahoe:   "d2d072fad3df8ecf71559500dd07394143b8049f6f2ac0fa6e7a68c448409dd9"
+    sha256 cellar: :any,                 arm64_sequoia: "435b44b2071742f5b6dd01b1f3c11e5e1c1f3766e02dcc6df71b42ecab24d385"
+    sha256 cellar: :any,                 arm64_sonoma:  "df666e1456e9cb1eb5dc2ade2e7b502291bd24d1821eae2d2126bdb010061e9f"
+    sha256 cellar: :any,                 sonoma:        "39e3599c7842e1d7e4a317f4276cc2de6ad778208825a2ead26b3719a035ee3d"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "4bac4073dc761cb244574af394a24ee6c7018cc0315ec223702808b4dfaf294a"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "d75359949ca5cb8466cd6bab8cbfc9af0236bea2bd2972c32ca8139892260729"
   end
 
   depends_on "lz4"

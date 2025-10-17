@@ -24,7 +24,7 @@ class ArcadeLearningEnvironment < Formula
   depends_on "pybind11" => :build
   depends_on "numpy"
   depends_on "opencv"
-  depends_on "python@3.13"
+  depends_on "python@3.14"
   depends_on "sdl2"
 
   uses_from_macos "zlib"
@@ -46,17 +46,17 @@ class ArcadeLearningEnvironment < Formula
   end
 
   resource "gymnasium" do
-    url "https://files.pythonhosted.org/packages/fd/17/c2a0e15c2cd5a8e788389b280996db927b923410de676ec5c7b2695e9261/gymnasium-1.2.0.tar.gz"
-    sha256 "344e87561012558f603880baf264ebc97f8a5c997a957b0c9f910281145534b0"
+    url "https://files.pythonhosted.org/packages/b3/de/b923d09654df8f8ee29a3cc7ec7829ac057efd0d969cc3da0c8a7b219d59/gymnasium-1.2.1.tar.gz"
+    sha256 "4e6480273528523a90b3db99befb6111b13f15fa0866de88c4b675770495b66c"
   end
 
   resource "typing-extensions" do
-    url "https://files.pythonhosted.org/packages/98/5a/da40306b885cc8c09109dc2e1abd358d5684b1425678151cdaed4731c822/typing_extensions-4.14.1.tar.gz"
-    sha256 "38b39f4aeeab64884ce9f74c94263ef78f3c22467c8724005483154c26648d36"
+    url "https://files.pythonhosted.org/packages/72/94/1a15dd82efb362ac84269196e94cf00f187f7ed21c242792a923cdb1c61f/typing_extensions-4.15.0.tar.gz"
+    sha256 "0cea48d173cc12fa28ecabc3b837ea3cf6f38c6d1136f85cbaaf598984861466"
   end
 
   def python3
-    "python3.13"
+    "python3.14"
   end
 
   def install

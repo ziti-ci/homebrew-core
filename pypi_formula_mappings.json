@@ -166,11 +166,7 @@
     "extra_packages": ["setuptools"]
   },
   "c7n": {
-    "package_name": "",
-    "extra_packages": [
-      "argcomplete", "boto3", "docutils", "importlib-metadata", "jsonschema",
-      "python-dateutil", "pyyaml", "referencing", "tabulate", "urllib3"
-    ]
+    "exclude_packages": ["cryptography", "rpds-py"]
   },
   "cassandra": {
     "package_name": "",

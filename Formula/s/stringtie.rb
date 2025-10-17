@@ -1,12 +1,10 @@
 class Stringtie < Formula
   desc "Transcript assembly and quantification for RNA-Seq"
   homepage "https://github.com/gpertea/stringtie"
-  url "https://github.com/gpertea/stringtie/archive/refs/tags/v3.0.1.tar.gz"
-  sha256 "1e5cdc7a739d2cffa6dbbb4c28c1029476cc5002531a1438a1274ac381487a4f"
+  url "https://github.com/gpertea/stringtie/archive/refs/tags/v3.0.2.tar.gz"
+  sha256 "8fc429eb7437cb62cd95440a3e28529719cc72133592ce8e02f5cf249ce3142e"
   license "MIT"
   head "https://github.com/gpertea/stringtie.git", branch: "master"
-
-  no_autobump! because: :requires_manual_review
 
   bottle do
     rebuild 1

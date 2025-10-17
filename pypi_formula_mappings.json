@@ -364,8 +364,7 @@
   },
   "fdroidserver": {
     "package_name": "fdroidserver[optional]",
-    "exclude_packages": ["certifi", "cryptography", "numpy", "pillow", "puremagic"],
-    "extra_packages": ["androguard<4", "python-magic"]
+    "exclude_packages": ["certifi", "cryptography", "frida", "numpy", "pillow", "puremagic"]
   },
   "fiona": {
     "exclude_packages": ["certifi"]

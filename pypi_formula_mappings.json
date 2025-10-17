@@ -110,6 +110,9 @@
   "badkeys": {
     "exclude_packages": ["cryptography"]
   },
+  "badread": {
+    "exclude_packages": ["numpy", "scipy"]
+  },
   "backgroundremover": {
     "exclude_packages": ["certifi", "numpy", "torch", "torchvision", "pillow", "scipy", "scikit-image"],
     "extra_packages": ["imageio"]

@@ -6,7 +6,7 @@ class Asciidoctor < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "2ad2e1d90df04248145b5569ce45d72bb8d4ffe74dac1ed85a8d66c9c2bd0a0b"
+    sha256 cellar: :any_skip_relocation, all: "39a3d69e1a5aa72f1b29d6afc26eba71a261639771a03daecf3b873817211059"
   end
 
   # Some gems require >= ruby 2.7

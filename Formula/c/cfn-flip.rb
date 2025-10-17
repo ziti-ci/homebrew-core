@@ -9,15 +9,13 @@ class CfnFlip < Formula
   revision 2
 
   bottle do
-    rebuild 3
-    sha256 cellar: :any,                 arm64_tahoe:   "a6bb4fdeea106ef3adb9a4aa1658829e681271f06700817e6382a101b7628ed1"
-    sha256 cellar: :any,                 arm64_sequoia: "5442b8b312ae32f1f553fb978ccf09c63a8faec827d97d1c0ee6c25e6b8bec69"
-    sha256 cellar: :any,                 arm64_sonoma:  "e34be5905def03dfd1a3b2e978175a2a20c04c9a707526437f747f290f72d575"
-    sha256 cellar: :any,                 arm64_ventura: "0f477d1324b35e9d08f22bf9440d350dbef9eb7064a4a349dc61634037ccdc38"
-    sha256 cellar: :any,                 sonoma:        "8621b8bd4592dbff5713e74fe7ba0e2df3e49ed586b11dd29f28c8cd3a716579"
-    sha256 cellar: :any,                 ventura:       "0cbd0c1da955391882c5993e2c5ca0673b31aa9e96ccfa4735efe0bd179ec41d"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "0cfc26cd8e493d0423d00e49da1185a278aa84b79e3cd4325678fb161856607a"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "f22cd5a684f506f67a27cb9bcd7c4a9192909ec3222ae9b87eacba18776f43c8"
+    rebuild 4
+    sha256 cellar: :any,                 arm64_tahoe:   "91cf666b7be505945d1297f00adaae08f845a5949371a5575a3b6f05877bdd47"
+    sha256 cellar: :any,                 arm64_sequoia: "beb6acb08ffbc695cd400c5fce04973519ba0cf0521562134de52d76c2a6a8d1"
+    sha256 cellar: :any,                 arm64_sonoma:  "b1c4ca4f9eb9015da077c27998e7b4e4406607566eb1a366327cb4d65b9700f5"
+    sha256 cellar: :any,                 sonoma:        "50abc0dcca0ad672acefca8f38926dbe775070472bb28b96f4d899755399256f"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "2fc33742bd230258121b4e247daea5aec24567465769ab928f4fcb270630cd7f"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "1aa60a3fda02c52177a0b6497ba0c7e35a00972d0126a9f78bd2ac179893d22c"
   end
 
   depends_on "libyaml"

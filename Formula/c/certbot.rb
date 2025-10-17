@@ -18,10 +18,10 @@ class Certbot < Formula
   end
 
   depends_on "augeas"
-  depends_on "certifi"
-  depends_on "cryptography"
+  depends_on "certifi" => :no_linkage
+  depends_on "cryptography" => :no_linkage
   depends_on "libyaml"
-  depends_on "python@3.13"
+  depends_on "python@3.14"
 
   uses_from_macos "libffi"
 
@@ -133,7 +133,7 @@ class Certbot < Formula
   def install
     if build.head?
       head_packages = %w[acme certbot certbot-apache certbot-nginx certbot-dns-cloudflare]
-      venv = virtualenv_create(libexec, "python3.13")
+      venv = virtualenv_create(libexec, "python3.14")
       venv.pip_install resources.reject { |r| head_packages.include? r.name }
       venv.pip_install_and_link head_packages.map { |pkg| buildpath/pkg }
       pkgshare.install buildpath/"certbot/examples"

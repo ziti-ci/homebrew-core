@@ -20,7 +20,7 @@ class Bup < Formula
   depends_on "pandoc" => :build
   depends_on "pkgconf" => :build
 
-  depends_on "python@3.13"
+  depends_on "python@3.14"
   depends_on "readline"
 
   on_linux do
@@ -28,7 +28,7 @@ class Bup < Formula
   end
 
   def python3
-    which("python3.13")
+    which("python3.14")
   end
 
   def install

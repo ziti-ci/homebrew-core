@@ -19,8 +19,8 @@ class Badread < Formula
   end
 
   depends_on "numpy"
-  depends_on "python@3.13"
-  depends_on "scipy"
+  depends_on "python@3.14"
+  depends_on "scipy" => :no_linkage
 
   resource "edlib" do
     url "https://files.pythonhosted.org/packages/0c/dd/caa71ef15b46375e01581812e52ec8e3f4da0686f370e8b9179eb5f748fb/edlib-1.3.9.post1.tar.gz"

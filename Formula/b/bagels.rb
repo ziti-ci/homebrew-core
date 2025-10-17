@@ -9,14 +9,13 @@ class Bagels < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any,                 arm64_tahoe:   "bdacf9820f05c732bb171c8696e5abb9751c58fae96fa7d0ba814f539561e2fc"
-    sha256 cellar: :any,                 arm64_sequoia: "6ba3175e3d1388e82d17cb6f79f2f833dcf7674f13c776f6765d29a413c048dd"
-    sha256 cellar: :any,                 arm64_sonoma:  "e7036081585b4b6c39f92c414d2686ffe02efd4fad7269ec567a68ffd1d1358b"
-    sha256 cellar: :any,                 arm64_ventura: "024614f1b7a2b2c0bba630b0884c1f000a47ab8ffc842c6849a407becd166c3a"
-    sha256 cellar: :any,                 sonoma:        "f7aa53a44186967045a7cf0e5263c8ac7ebbd32bb115e73130d917725af449ab"
-    sha256 cellar: :any,                 ventura:       "9b332134cda64cb2e6e5cd9967fd2d4ecb8022786d2cd3e0a2629726bb79597f"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "e742481862a7dc6a4ab78f655c1a79d5b8262483445c6a826f817547aade3e09"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "a74656acfced0378c3ab77be2810c44ca2eb659b967e1e43e37ede9bceb3cc76"
+    rebuild 1
+    sha256 cellar: :any,                 arm64_tahoe:   "58782e5ca783941d5b48ed7137ec5d630d1c41ec9c8e8258dc15ef00bbb5cbe2"
+    sha256 cellar: :any,                 arm64_sequoia: "a5cdc43bce9fb23ee27812a5592f29b37aa60f08b533fba1c4cf44c512a1070a"
+    sha256 cellar: :any,                 arm64_sonoma:  "d625a1f53febd13520b1a9e5ba61afd39678c46eb587a56190419dad190f7b3e"
+    sha256 cellar: :any,                 sonoma:        "da554a3a41a16a9e48c0ec02d2ac970791804f1f78177190a7119b03ea2326c7"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "321d723881599b7037882acce517857502a35cb3c80154d14c858dc856af5be0"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "005a4dc1bb275d2af141c61cc628f865e42cc549f993320e01adb85d64978b8f"
   end
 
   depends_on "rust" => :build # for pydantic_core

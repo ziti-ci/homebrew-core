@@ -32,7 +32,7 @@ class Fontforge < Formula
   depends_on "libtool"
   depends_on "libuninameslist"
   depends_on "pango"
-  depends_on "python@3.13"
+  depends_on "python@3.14"
   depends_on "readline"
   depends_on "woff2"
 
@@ -45,7 +45,7 @@ class Fontforge < Formula
   end
 
   def python3
-    "python3.13"
+    "python3.14"
   end
 
   def install

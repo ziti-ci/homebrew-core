@@ -1,11 +1,9 @@
 class Hss < Formula
   desc "Interactive parallel SSH client"
   homepage "https://github.com/six-ddc/hss"
-  url "https://github.com/six-ddc/hss/archive/refs/tags/1.9.tar.gz"
-  sha256 "d7846ee657fe6a600c7d6f8e91f17ffa238efcaeb6f79856caa9fdedd96e3bca"
+  url "https://github.com/six-ddc/hss/archive/refs/tags/1.10.tar.gz"
+  sha256 "570585d660e64ba29e574f68bae5f2e38905d9a5f6ce0e9e36d82c5342fddf2b"
   license "MIT"
-
-  no_autobump! because: :requires_manual_review
 
   bottle do
     sha256 cellar: :any,                 arm64_tahoe:    "1b621e61c1dd2300dbb4b7670523818c737a73b810393b4d23e78ed8013e7692"

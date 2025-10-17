@@ -1,8 +1,8 @@
 class Opencode < Formula
   desc "AI coding agent, built for the terminal"
   homepage "https://opencode.ai"
-  url "https://registry.npmjs.org/opencode-ai/-/opencode-ai-0.15.6.tgz"
-  sha256 "6dadb99f5817b39ebe954bffeec256f0df4dc1733e29b6aa36dcec6548fd956f"
+  url "https://registry.npmjs.org/opencode-ai/-/opencode-ai-0.15.7.tgz"
+  sha256 "652d0550cd662c1770283c9b9e93ab4c01cd9895d8bcc9b7b4533f9da4ade241"
   license "MIT"
 
   bottle do

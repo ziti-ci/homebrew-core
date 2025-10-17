@@ -8,12 +8,12 @@ class Ns3 < Formula
   license "GPL-2.0-only"
 
   bottle do
-    sha256                               arm64_tahoe:   "7e1c4ae53154eb0c4d19dd4b38470727cfe69b75eb5b64fd4b81b96e0f95afaf"
-    sha256                               arm64_sequoia: "b82a111ac2af1a20221bf78d88ce60f84e75c8269ab91d13bf8662d9a405eed0"
-    sha256                               arm64_sonoma:  "ce9fe7fcea0f60ad6c1c67b8ddcc41a54ee80048bf25a80af83f629c632e3595"
-    sha256                               sonoma:        "ad49a316a753cf240d6b236eb870d506c96d175bf1cd706d5d12a31ceac527d5"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "2d6d2e71bd75d9977aa9cde1c91c2fc0aaac6809b539f3ff952c907993d493f3"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "b6de224113cbfc085d1983108919af9296bb860020dabb67bcf65636a4f7247c"
+    sha256                               arm64_tahoe:   "056ad158ebdcf047c7326fdf17a978fcc6d4163d76ab8d6ce8e9f307f9ebeeb0"
+    sha256                               arm64_sequoia: "d22d30dcce8d6c063c9ed33b784fc5a83615e1ee9a4870e6cd8f8e6a104cf75e"
+    sha256                               arm64_sonoma:  "77bda72c0389cbc365aae61b2184047cc3f6eed1a6c1bc8fc056f96884d626ad"
+    sha256                               sonoma:        "1bfca6a9c11da394758d98720f00ac08737f100600e6512975f889f8088fcf56"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "f210ed90adcdfc7243fd9a6058ca6723f6ce7c5f1c28adacd99fe3ac2a4bd871"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "d809b943bc13cb7e20247616806148a3fcbe5ef7d99adcf5e7f3e5ecdfd52f09"
   end
 
   depends_on "boost" => :build
